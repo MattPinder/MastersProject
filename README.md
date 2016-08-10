@@ -32,3 +32,8 @@ Downloaded Excel spreadsheet of RAST results and compared with Oskar's most
 recent .gbk file; contrary to his observations, a small proportion of the
 genes predicted by RAST had names. These names sometimes conflicted with the
 names found by Oskar, however, despite consistent locations and functions.
+
+Using output from myRAST, compared EC number of random protein with the KEGG
+database. Several gene names found (species-dependent), but unsure how to
+determine which is the appropriate name for Kordia. In any case, would be too
+time-consuming to name all 4000+ Kordia genes in this way...

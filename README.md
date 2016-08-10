@@ -25,4 +25,10 @@ installed on my computer, so may attempt on Albiorix at a later date.
 Uploaded fasta to RAST web service using default settings, for comparison
 with results obtained by Oskar.
 
-Attempting to get GitHub to work
+Attempting to get GitHub to work - succeeded in syncing local git repository
+with online GitHub account.
+
+Downloaded Excel spreadsheet of RAST results and compared with Oskar's most
+recent .gbk file; contrary to his observations, a small proportion of the
+genes predicted by RAST had names. These names sometimes conflicted with the
+names found by Oskar, however, despite consistent locations and functions.

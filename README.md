@@ -65,3 +65,48 @@ inconsistent; I don't get the same name as was found previously...
 List of annotation pipelines which might be useful:
 https://omictools.com/genome-annotation-category
 
+	12 August 2016
+
+While browsing the online version of RAST, I found that there are some
+indications of gene names to be found, although these may contradict the
+list of genes that Oskar made. For example, online RAST identifies two copies
+of RNA polymerase sigma factor RpoE, whereas Oskar notes 6 copies.
+
+Process:
+*Take the first identified gene from the V5 genbank file: rpsU.
+*According to the Excel exported from RAST, it is classified as 'Ribosome SSU
+bacterial', so go to this page in the RAST analysis, and look at 'Subsystem
+Spreadsheet'.
+*No rpsU heading, so look under S21p (the product) - one hit, labelled 1, as
+this is the first 'pegged' result.
+*After clicking on '1', run Psi-Blast; this opens a Psi-Blast window (first
+hit Kordia jejudonensis) which identifies rpsU as a specific hit (with E-value
+of 4.63e-14).
+
+Test the above process with the next gene in the genbank file - an unnamed
+alpha-amylase gene.
+Two hits in conserved domains database with very high E-values:
+*AmyAc_arch_bac_plant_AmyA has an E-value of 6.62e-121, and is labelled as
+a specific hit, BUT has a Ca binding site missing...
+*PRK09441 covers a wider part of the protein, and has an E-value of 3.29e-165
+
+Found reason for conflict between gene list and genbank files - Oskar's V2
+gene list was compiled early in the project, so doesn't sync up with later
+findings in the more recent genbank files...
+Made an alphabetical list of genes from V5 genbank, and uploaded to github.
+
+Investigating InterPro, could shed light on potential functions of the many
+'hypothetical proteins' from previous analyses; as it is still in active
+development, hopefully it should provide SOME insight.
+Thus far, 'insight' has been rare, as the web tool is providing only small
+amounts of information regarding the hypothetical proteins, such as an
+occasional matching domain...
+
+Still unsure how the previously-used software comes to some of its conclusions
+about gene identities; PSI-BLASTing glpE_1 seems to show PspE as a better
+match for the gene...
+
+Questions after week 1:
+*Oskar's software - PROKKA, System Tools, etc. - yielded certain results,
+whereas I am able to find apparent results in addition to these which seem
+to obtain better E-values in a RAST -> PSI-BLAST -> CDD search. Why?

@@ -110,3 +110,33 @@ Questions after week 1:
 *Oskar's software - PROKKA, System Tools, etc. - yielded certain results,
 whereas I am able to find apparent results in addition to these which seem
 to obtain better E-values in a RAST -> PSI-BLAST -> CDD search. Why?
+
+	15 August 2016
+
+Attempted to use the myRAST Shell on Windows to generate a list of gene
+aliases, however operating this is not as intuitive as it would be on Linux,
+so may have to wait until myRAST is installed on Albiorix...
+
+myRAST acting up on my computer; have uninstalled but must wait until website
+is back online before I can reinstall...
+
+If PROKKA etc. can be installed on Albiorix, if the databases have been
+updated in the last few months since Oskar's work was done, then perhaps more
+information can be obtained.
+
+Manual PfamScan can give at least a general idea of what the hypothetical
+proteins may be in some cases, e.g. PROKKA_00107 from 'PROKKA_K-sp_V5.gbk'
+apparently contains a 'Cro/C1-type HTH DNA-binding domain'. Again, this would
+be time-consuming to check manually for all of the proteins labelled as
+hypothetical in the .gbk file...
+
+Some K. algicida protein sequences are present on NCBI, including some with
+gene names. Checking manually (yet again), I found that PROKKA_01500 from the
+aforemetioned .gbk file bears a resemblance to the preprotein translocase
+subunit YajC found on NCBI (http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
+Judging by where the alignment starts and ends vs. the K. algicida sequence,
+the gene predictor MAY have made a mistake in the alignment...
+K. sp.:
+MIAVLYFLIIAPSLKKQKKEKKFMASVKKGDRVITKSGIHGKIVELNDKDFTCVIETGAGKIKFERAALSVEASARLNNPPAKK
+K. alg.:
+MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKPPSEKK

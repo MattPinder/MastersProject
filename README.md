@@ -143,4 +143,24 @@ MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKP
 
 	16 August 2016
 
+Small victory?
+Took a partial list of proteins labelled 'Hypothetical protein' in
+myRAST_export.xls, and ran it through Batch Web CD-Search Tool
+(http://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi); some of those
+labelled as specific hits included gene names; after comparing a few of these
+to Oskar's V5 genbank file, found one of his with no gene name but which
+identified a heavy metal-associated domain, which agrees with the CD search's
+claim that the gene is the copper chaperone CopZ. Subsequent BLASTP gave a
+(perhaps tenuous) match - 68% identity, 4e-37 E-value, 100% coverage - to
+K. zhangzhouensis's 'heavy metal transporter' gene. Right now, CopZ is my
+best guess. Once again, however, this gene-by-gene checking is too slow to
+be very useful...
 
+Copied the V5 genbank file and deleted all named genes to give me a full list
+of those I need to name.
+
+To do:
+1.) Pathway Tools webinars, paper and installation
+2.) Start updating genbank file (/note field to give reason why)
+3.) Potentially restructure the Kordia directory; add updated version of
+genbank file to, e.g. '01_Annotation' folder

@@ -164,3 +164,15 @@ To do:
 2.) Start updating genbank file (/note field to give reason why)
 3.) Potentially restructure the Kordia directory; add updated version of
 genbank file to, e.g. '01_Annotation' folder
+
+	17 August 2016
+
+Cut apart the genbank file, now contains only the products and sequences of
+the unnamed proteins (filename: AUP2). Also copied the V5 genbank file and
+renamed V6, so all genes named hereafter will be added to this file; the
+note field of the genbank file should be used to justify the naming of each
+gene.
+
+Running the new file through NCBI batch CD-Search Tool again, and will make
+a note of any promising results.
+(Still running; Search-ID QM3-qcdsearch-29D17B06C7A6E9DA)

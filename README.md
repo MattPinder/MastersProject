@@ -176,3 +176,20 @@ gene.
 Running the new file through NCBI batch CD-Search Tool again, and will make
 a note of any promising results.
 (Still running; Search-ID QM3-qcdsearch-29D17B06C7A6E9DA)
+
+	18 August 2016
+
+Searching 'Kordia' under NCBI's protein search reveals ~8000 non-hypothetical
+results, some of which are named. I am installing Blast+ on my local computer so
+that I can query the fasta file of these results with the unnamed proteins file.
+
+Read up on HGAP - Alvar's thesis
+Set up new Kordia folder on Bioinformatics Group Github page
+Note: md5sum software for ensuring files are copied correctly
+
+Made several updates to PROKKA V6 based on local BLAST (including one gene name!),
+using an e-value cutoff of 0.01 to get rid of some of the worse results. To get
+more gene names, however, perhaps attempt to use a (nucleotide?) database for a
+more well-annotated bacterium?
+
+

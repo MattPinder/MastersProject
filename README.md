@@ -192,4 +192,23 @@ using an e-value cutoff of 0.01 to get rid of some of the worse results. To get
 more gene names, however, perhaps attempt to use a (nucleotide?) database for a
 more well-annotated bacterium?
 
+	24 August 2016
 
+Rerunning local BLASTP with more stringent e-value criterion:
+C:\Users\Matt\Desktop\PROJECT\blast-2.4.0+\bin> blastp -db ../db/Kordia -query
+../../AUP2_reformatted_2.txt -out AUP_Test_Results_2 -evalue 1e-040
+
+*Check how to set up and configure PROKKA databases
+Appears to be possible: https://github.com/tseemann/prokka/issues/95
+
+Created new branch in the kordia_pathway_analysis repository in which to store my
+own work.
+
+Have written a script to test the workings of PROKKA, output, etc.
+Require tbl2asn 23.0 or higher...
+
+*Create editable folder to store PROKKA DBs (confirm where!)
+
+*Download 3x .gbk files for Kordia and make a PROKKA database (see Oskar's readme for
+details)
+Find out why the database creation didn't work!

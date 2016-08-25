@@ -212,3 +212,25 @@ Require tbl2asn 23.0 or higher...
 *Download 3x .gbk files for Kordia and make a PROKKA database (see Oskar's readme for
 details)
 Find out why the database creation didn't work!
+
+	25 August 2016
+
+prokka-genbank_to_fasta_db does not run because it is looking for parent.pm in the
+wrong place. Check how to edit @INC to look at
+/usr/local/packages/perl-5.14.4/lib/5.14.4/parent.pm
+
+Downloaded Blast2GO, in case this can give any useful information.
+Exporting a DNA fasta file from myRAST for use as input.
+Running blastn first to see if anything new comes up.
+
+Local BLAST vs database of species shown as similar in Blast2GO?
+e.g. Flavobacterium psychrophilum, Lutibacter, etc.
+
+Downloading and installing Pathway Tools...
+IMPORTANT: Pathway Tools does NOT require gene NAMES to construct pathways; it only
+requires protein products. Therefore, NAMING the unnamed genes is not as important
+as finding a function for the proteins listed as hypothetical.
+
+Try and finish running Blast2GO and Pathway Tools overnight; currently only part of
+the way through...
+

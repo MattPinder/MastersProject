@@ -234,3 +234,33 @@ as finding a function for the proteins listed as hypothetical.
 Try and finish running Blast2GO and Pathway Tools overnight; currently only part of
 the way through...
 
+	26 August 2016
+
+Pathway Tools finished; obtain pathway overview to see current state of play
+Blast2GO crashed in the night; continue and see how far it gets today
+
+Pathway Tools has finished creating the Pathway Overview; as expected, a lot
+still to do.
+
+Potential task - write a Python script which defines the region 'CDS' to 'CDS'
+as an object, and extracts it if the term 'hypothetical' or 'putative' appears.
+OR
+Find out if I can extract certain records using BioPython...
+
+Converted V5 .gbk to fasta online; can now extract hypothetical protein
+sequences more easily for analysis (hopefully...)
+
+/db/prokka - writeable folder for PROKKA databases
+
+Read HGAP paper, SMRT portal manual
+
+http://albiorix.bioenv.gu.se:8081
+
+/nobackup/data5/Skeletonema_marinoi_microbiome_project
+Create 01_Assemblies
+Add subdirectories for each sample, and a further subdirectory for each
+assembly run; once there is a README.md in each folder, can push to GitLab.
+
+For Monday:
+Scrutinise results of #6; potential problems with data transfer...
+Run jobs 7 and 8

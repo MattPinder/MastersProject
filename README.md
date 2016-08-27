@@ -264,3 +264,8 @@ assembly run; once there is a README.md in each folder, can push to GitLab.
 For Monday:
 Scrutinise results of #6; potential problems with data transfer...
 Run jobs 7 and 8
+
+	27 August 2016
+
+Started jobs 7 and 8; will wait until Monday to check over all results from
+first assembly attempts.

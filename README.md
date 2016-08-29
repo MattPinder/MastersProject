@@ -269,3 +269,36 @@ Run jobs 7 and 8
 
 Started jobs 7 and 8; will wait until Monday to check over all results from
 first assembly attempts.
+
+	29 August 2016
+
+Downloaded reports of first assembly attempts and uploaded them to GitLab.
+
+Number of bases in #6 same on both preliminary and first assembly; should
+be okay...
+
+Add fasta files to repository; check which... Polished reads
+
+Added Sum of Contig Lengths table to 01_assemblies readme
+
+#1 - 25k - Started
+#2 - 12k and 10k - Started
+#3 - 25k - Started
+#4 - Leave
+#5 - 15k and 18k - Started
+#6 - 10k, 9k, 8k - Started
+#7 - 25k - Started
+#8 - Leave
+
+DL log files - DONE
+
+BLAST search of single-unitig samples 4 & 8
+
+Folder structure changed to simplify BLAST script syntax
+
+FOR THESIS - M&M - difference between HGAP2 & 3
+
+Check Google Docs for making start of Thesis...?
+
+BLAST search appears to be stuck in the queue - double-check when /nobackup
+is brought back online...

@@ -302,3 +302,83 @@ Check Google Docs for making start of Thesis...?
 
 BLAST search appears to be stuck in the queue - double-check when /nobackup
 is brought back online...
+
+	30 August 2016
+
+runBlast_16442.sge still stuck in queue. Will have to remove and retry...
+
+Tried rearranging two of the commands in the script to match the previous
+scripts, but still appears to be stuck...
+
+SMRT Portal on Albiorix ALSO seems to be down...
+
+SMRT Portal back up and running; only two jobs completed successfully, must rerun the rest:
+
+| Sample | Job # | New Job # | New Job Status |
+|--------|-------|-----------|----------------|
+| 1 #2   | 16447 | 16457     | Failed         |
+| 2 #2   | 16448 | 16458     |                |
+| 2 #3   | 16449 | 16459     | Failed         |
+| 3 #2   | 16450 | N/A       | -              |
+| 5 #2   | 16451 | 16460     | Failed         |
+| 5 #3   | 16452 | 16461     |                |
+| 6 #2   | 16453 | 16462     | Failed         |
+| 6 #3   | 16454 | 16463     | Failed         |
+| 6 #4   | 16455 | 16464     | Failed         |
+| 7 #2   | 16456 | N/A       | -              |
+
+Checked completed results of samples 3 and 7. Both show a dramatic spike in unitig numbers;
+3 jumped from 5 back up to 28, and 7 jumped from 4 to 30...
+
+Also - update 01_assemblies README to incorporate Sum of Contig Lengths into same
+design of table as # of Polished Contigs table
+
+Run sample #3 @ 18k	Failed
+Run sample #7 @ 19k
+
+* Assembly jobs seem to take around 7 hours.
+
+Both sample 4 and sample 8 BLASTs are now running on Annotation-1, now permissions have been
+altered; may take a very long time...
+
+Check PROKKA output...
+
+prokka-genbank_to_fasta_db still giving some very strange errors... Check?
+
+In order to use prokka-genbank_to_fasta_db, must install CD-HIT program...
+
+Created new HMM database from TIGR; placed in /db/prokka so must use --hmms flag in Prokka
+to point to it; have attempted this with Prokka_Test_2...
+
+Assembly jobs to rerun:
+
+* 16457 - pb_359_1-25000_Rerun *
+* 16459 - pb_359_2-10000_Rerun *
+* 16460 - pb_359_5-15000_Rerun
+* 16462 - pb_359_6-10000_Rerun
+* 16463 - pb_359_6-9000_Rerun
+* 16464 - pb_359_6_8000_Rerun
+* 16465 - pb_359_3-18000
+
+* Only 3 jobs now running...
+
+All of the above jobs have failed; perhaps I have overtaxed Albiorix, so will wait until the
+other jobs have finished running (completing/failing) before retrying the above...
+
+In addition, Prokka_Test_2 has been pushed back into Pending, and node0 is showing an error...
+When rerun, Prokka_Test_2 showed no difference to original Prokka_Test; TIGR HMM database
+seems to have been ignored... May have to put the files into the read-only Prokka db folder,
+or rewrite a line in the Prokka files to look elsewhere for db files:
+https://github.com/tseemann/prokka/issues/95
+
+To do:
+
+* Rerun the five [six] outstanding jobs which crashed earlier - job 16468 crashed AGAIN...
+
+	* Jobs that need to be rerun: 16460, 16462, 16463, 16464, 16465, 16468
+	* Potentially check in the evening if other jobs are complete...
+
+* Get Prokka file redirected to look at /db/prokka for its databases (move whole folder?), as
+--hmms option doesn't work in getting Prokka to search the TIGR database
+
+* Get cd-hit installed in order to create Kordia database from NCBI .gbk files

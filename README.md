@@ -382,3 +382,9 @@ To do:
 --hmms option doesn't work in getting Prokka to search the TIGR database
 
 * Get cd-hit installed in order to create Kordia database from NCBI .gbk files
+
+Evening:
+
+* Restarted jobs 16460 (now 16469) and 16462 (now 16470) - REMEMBER TO UPDATE READMES IN THE MORNING!
+
+* 16467 has completed; download relevant files in the morning!

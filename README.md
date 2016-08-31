@@ -493,3 +493,15 @@ jobs appear to have been spread across multiple nodes)
  
 * Jobs to repeat - 16476, 16477, 16478, 16479, 16480
                    6 10k| 6 9k | 6 8k | 2 10k| 5 15k
+
+Evening: ADD TO LOGS IN THE MORNING AND DOWNLOAD FILES!
+
+Completed jobs - 16472, 16474, 16475
+
+Restarting the other jobs: 
+
+* (16476) #6: 10000 - 16481
+* (16477) #6: 9000 - 16482
+* (16478) #6: 8000 - 16483
+* (16479) #2: 10000 - 16484
+* (16780) #5: 15000 - 16485

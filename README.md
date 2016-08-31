@@ -385,9 +385,9 @@ To do:
 
 Evening:
 
-* Restarted jobs 16460 (now 16469) and 16462 (now 16470) - REMEMBER TO UPDATE READMES IN THE MORNING!
+Restarted jobs 16460 (now 16469) and 16462 (now 16470) - REMEMBER TO UPDATE READMES IN THE MORNING!
 
-* 16467 has completed; download relevant files in the morning!
+16467 has completed; download relevant files in the morning!
 
 	31 August 2016
 
@@ -398,13 +398,98 @@ Started jobs 16471, 16472 and 16473 - wait for these to complete before proceedi
 
 Jobs to submit:
 
-| Type of job  | Title                  | ID of job to copy |
-|--------------|------------------------|-------------------|
-| New          | pb_359_1-18000         | N/A               |
-| New          | pb_359_7-21000         | N/A               |
-| Resubmission | pb_359_6-10000_Rerun_3 | 16470             |
-| Resubmission | pb_359_6-9000_Rerun_2  | 16463             |
-| Resubmission | pb_359_6-8000_Rerun_2  | 16464             |
+| Type of job     | Title                  | ID of job to copy | Submitted? | Result |
+|-----------------|------------------------|-------------------|------------|--------|
+| New             | pb_359_1-18000         | N/A               | 16474      |        |
+| New             | pb_359_7-21000         | N/A               | 16475      |        |
+| Resubmission    | pb_359_6-10000_Rerun_3 | 16470             | 16476      | Failed |
+| Resubmission    | pb_359_6-9000_Rerun_2  | 16463             | 16477      | Failed |
+| Resubmission    | pb_359_6-8000_Rerun_2  | 16464             | 16478      | Failed |
+| Resubmission    | pb_359_2-10000_Rerun_4 | 16471             | 16479      | Failed |
+| Resubmission    | pb_359_5-15000_Rerun_4 | 16473             | 16480      | Failed |
+| (Still running) | pb_359_3-18000_Rerun   | N/A               | 16472      |        |
 
 With luck, jobs 16471-3 SHOULD be done ~5pm, so could potentially kick off new jobs before going
 home this evening; failing that, kick off tonight...
+
+Still waiting on blastx jobs to complete...
+
+16471 and 16473 failed... 16472 still running
+
+'df -h' command checks disk space; 'ls -l /tmp' to check files in the /tmp folder (possible that
+files aren't being deleted after a crash...?)
+
+Looking at 'ls -ltr /tmp', it appears that some temporary files aren't even being removed
+after a SUCCESSFUL assembly!
+
+Log files of both successful and unsuccessful assemblies make no reference to removing old
+files...
+
+SMRT analysis temporary directory has been moved, so will start all outstanding jobs in an
+attempt to test the system
+
+New jobs started since the change - 16474, 16475, 16476, 16477, 16478, 16479, 16480
+Still running - 16472
+
+Note - cd-hit is already installed! cd-hit/v4.6.5
+
+* Double-check syntax for running Python jobs on Albiorix.
+
+Tweaked Create_PROKKA_Database.sge to load cd-hit, as this seemed to be causing problems previously.
+
+Create_PROKKA_Database.sge still throws an error message, so have posted on the Prokka GitHub page
+to request assistance from the developer...
+
+Job 16477, 16476, 16478, 16479 and 16480 failed...
+
+Out of curiosity, which stage did the above jobs crash on?
+
+|  Job  | Failure stage                              | Duration before fail |
+|-------|--------------------------------------------|----------------------|
+| 16476 | PreAssemblerDagcon/hgapCorrection_002of006 | 200.29 minutes       |
+| 16477 | PreAssemblerDagcon/hgapCorrection_001of006 | 189.18 minutes       |
+| 16478 | PreAssemblerDagcon/hgapCorrection_004of006 | 204.54 minutes       |
+| 16479 | PreAssemblerDagcon/hgapCorrection_003of006 | 206.60 minutes       |
+| 16480 | PreAssemblerDagcon/hgapCorrection_003of006 | 212.24 minutes       |
+
+I've seen other failures at different stages, but all of these have failed at the same major phase...
+Does the hgapCorrection process require a huge number of cores?
+
+Places at which other jobs have failed:
+
+|  Job  | Failure stage                              | Duration before fail |
+|-------|--------------------------------------------|----------------------|
+| 16447 | Mapping/align_002of003 *                   | 304.89 minutes *     |
+| 16448 | PreAssemblerDagcon/hgapCorrection_003of006 | 262.79 minutes       |
+| 16449 | PreAssemblerDagcon/hgapCorrection_001of006 | 276.99 minutes       |
+| 16451 | PreAssemblerDagcon/hgapCorrection_004of006 | 314.72 minutes       |
+| 16452 | No obvious error... *                      | 1013.47 minutes *    |
+| 16453 | PreAssemblerDagcon/hgapCorrection_001of006 | 260.06 minutes       |
+| 16454 | PreAssemblerDagcon/hgapCorrection_002of006 | 287.36 minutes       |
+| 16455 | PreAssemblerDagcon/hgapCorrection_003of006 | 279.02 minutes       |
+| 16457 | Mapping/align_001of003 *                   | 291.89 minutes *     |
+| 16459 | PreAssemblerDagcon/hgapCorrection_005of006 | 191.43 minutes       |
+| 16460 | PreAssemblerDagcon/hgapCorrection_006of006 | 247.81 minutes       |
+| 16462 | PreAssemblerDagcon/hgapCorrection_001of006 | 229.72 minutes       |
+| 16463 | PreAssemblerDagcon/hgapCorrection_003of006 | 252.81 minutes       |
+| 16464 | PreAssemblerDagcon/hgapCorrection_005of006 | 256.72 minutes       |
+| 16465 | PreAssemblerDagcon/hgapCorrection_004of006 | 194.30 minutes       |
+| 16468 | PreAssemblerDagcon/hgapCorrection_006of006 | 68.10 minutes        |
+| 16469 | PreAssemblerDagcon/hgapCorrection_001of006 | 92.18 minutes        |
+| 16470 | PreAssemblerDagcon/hgapCorrection_003of006 | 74.36 minutes        |
+| 16471 | PreAssemblerDagcon/hgapCorrection_003of006 | 85.34 minutes        |
+| 16473 | PreAssemblerDagcon/hgapCorrection_005of006 | 104.05 minutes       |
+
+For Thursday:
+
+* Search smrtanalysis home directory (sudo su smrtanalysis) for log files (check SMRT Portal manual)
+to determine source of crashes
+
+* Also search SGE manual to see if it possible to make a process ONLY go to a single host (as some
+jobs appear to have been spread across multiple nodes)
+
+* Jobs still running - 16472, 16474, 16475
+                       3 18k| 1 18k| 7 21k
+ 
+* Jobs to repeat - 16476, 16477, 16478, 16479, 16480
+                   6 10k| 6 9k | 6 8k | 2 10k| 5 15k

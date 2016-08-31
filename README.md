@@ -388,3 +388,23 @@ Evening:
 * Restarted jobs 16460 (now 16469) and 16462 (now 16470) - REMEMBER TO UPDATE READMES IN THE MORNING!
 
 * 16467 has completed; download relevant files in the morning!
+
+	31 August 2016
+
+Of yesterday's assembly jobs, only 16466 and 16467 completed... Make an Excel spreadsheet for personal
+reference as to which jobs have worked and not.
+
+Started jobs 16471, 16472 and 16473 - wait for these to complete before proceeding with more.
+
+Jobs to submit:
+
+| Type of job  | Title                  | ID of job to copy |
+|--------------|------------------------|-------------------|
+| New          | pb_359_1-18000         | N/A               |
+| New          | pb_359_7-21000         | N/A               |
+| Resubmission | pb_359_6-10000_Rerun_3 | 16470             |
+| Resubmission | pb_359_6-9000_Rerun_2  | 16463             |
+| Resubmission | pb_359_6-8000_Rerun_2  | 16464             |
+
+With luck, jobs 16471-3 SHOULD be done ~5pm, so could potentially kick off new jobs before going
+home this evening; failing that, kick off tonight...

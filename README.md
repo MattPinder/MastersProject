@@ -1,18 +1,20 @@
 	9 August 2016
-Useful tools to install:
-PROKKA
-Pathway Tools
-RAST
 
-Things to try:
-Submission to NCBI Prokaryotic Genome Annotation Pipeline?
-PANNZER
-AGeS
+Useful tools to install:  
+* PROKKA  
+* Pathway Tools  
+* RAST  
 
-Raw data:
-combined-revcomp-unitig-1-2.fasta
+Things to try:  
+* Submission to NCBI Prokaryotic Genome Annotation Pipeline?  
+* PANNZER  
+* AGeS  
+
+Raw data:  
+* combined-revcomp-unitig-1-2.fasta  
 
 	10 August 2016
+
 NCBI PGAP seems to be only for those ready to submit a genome - unsuitable
 
 Downloaded myRAST to my laptop, will compare results with those obtained
@@ -72,32 +74,32 @@ indications of gene names to be found, although these may contradict the
 list of genes that Oskar made. For example, online RAST identifies two copies
 of RNA polymerase sigma factor RpoE, whereas Oskar notes 6 copies.
 
-Process:
-*Take the first identified gene from the V5 genbank file: rpsU.
-*According to the Excel exported from RAST, it is classified as 'Ribosome SSU
+Process:  
+* Take the first identified gene from the V5 genbank file: rpsU.  
+* According to the Excel exported from RAST, it is classified as 'Ribosome SSU
 bacterial', so go to this page in the RAST analysis, and look at 'Subsystem
-Spreadsheet'.
-*No rpsU heading, so look under S21p (the product) - one hit, labelled 1, as
-this is the first 'pegged' result.
-*After clicking on '1', run Psi-Blast; this opens a Psi-Blast window (first
+Spreadsheet'.  
+* No rpsU heading, so look under S21p (the product) - one hit, labelled 1, as
+this is the first 'pegged' result.  
+* After clicking on '1', run Psi-Blast; this opens a Psi-Blast window (first
 hit Kordia jejudonensis) which identifies rpsU as a specific hit (with E-value
-of 4.63e-14).
+of 4.63e-14).  
 
 Test the above process with the next gene in the genbank file - an unnamed
-alpha-amylase gene.
-Two hits in conserved domains database with very high E-values:
-*AmyAc_arch_bac_plant_AmyA has an E-value of 6.62e-121, and is labelled as
-a specific hit, BUT has a Ca binding site missing...
-*PRK09441 covers a wider part of the protein, and has an E-value of 3.29e-165
+alpha-amylase gene.  
+Two hits in conserved domains database with very high E-values:  
+* AmyAc_arch_bac_plant_AmyA has an E-value of 6.62e-121, and is labelled as
+a specific hit, BUT has a Ca binding site missing...  
+* PRK09441 covers a wider part of the protein, and has an E-value of 3.29e-165  
 
 Found reason for conflict between gene list and genbank files - Oskar's V2
 gene list was compiled early in the project, so doesn't sync up with later
-findings in the more recent genbank files...
+findings in the more recent genbank files...  
 Made an alphabetical list of genes from V5 genbank, and uploaded to github.
 
 Investigating InterPro, could shed light on potential functions of the many
 'hypothetical proteins' from previous analyses; as it is still in active
-development, hopefully it should provide SOME insight.
+development, hopefully it should provide SOME insight.  
 Thus far, 'insight' has been rare, as the web tool is providing only small
 amounts of information regarding the hypothetical proteins, such as an
 occasional matching domain...
@@ -106,8 +108,9 @@ Still unsure how the previously-used software comes to some of its conclusions
 about gene identities; PSI-BLASTing glpE_1 seems to show PspE as a better
 match for the gene...
 
-Questions after week 1:
-*Oskar's software - PROKKA, System Tools, etc. - yielded certain results,
+### Questions after week 1
+
+* Oskar's software - PROKKA, System Tools, etc. - yielded certain results,
 whereas I am able to find apparent results in addition to these which seem
 to obtain better E-values in a RAST -> PSI-BLAST -> CDD search. Why?
 
@@ -135,15 +138,15 @@ gene names. Checking manually (yet again), I found that PROKKA_01500 from the
 aforemetioned .gbk file bears a resemblance to the preprotein translocase
 subunit YajC found on NCBI (http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
 Judging by where the alignment starts and ends vs. the K. algicida sequence,
-the gene predictor MAY have made a mistake in the alignment...
-K. sp.:
-MIAVLYFLIIAPSLKKQKKEKKFMASVKKGDRVITKSGIHGKIVELNDKDFTCVIETGAGKIKFERAALSVEASARLNNPPAKK
-K. alg.:
-MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKPPSEKK
+the gene predictor MAY have made a mistake in the alignment...  
+K. sp.:  
+MIAVLYFLIIAPSLKKQKKEKKFMASVKKGDRVITKSGIHGKIVELNDKDFTCVIETGAGKIKFERAALSVEASARLNNPPAKK  
+K. alg.:  
+MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKPPSEKK  
 
 	16 August 2016
 
-Small victory?
+Small victory?  
 Took a partial list of proteins labelled 'Hypothetical protein' in
 myRAST_export.xls, and ran it through Batch Web CD-Search Tool
 (http://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi); some of those
@@ -159,10 +162,10 @@ be very useful...
 Copied the V5 genbank file and deleted all named genes to give me a full list
 of those I need to name.
 
-To do:
-1.) Pathway Tools webinars, paper and installation
-2.) Start updating genbank file (/note field to give reason why)
-3.) Potentially restructure the Kordia directory; add updated version of
+### To do  
+1. Pathway Tools webinars, paper and installation  
+2. Start updating genbank file (/note field to give reason why)  
+3. Potentially restructure the Kordia directory; add updated version of
 genbank file to, e.g. '01_Annotation' folder
 
 	17 August 2016
@@ -174,7 +177,7 @@ note field of the genbank file should be used to justify the naming of each
 gene.
 
 Running the new file through NCBI batch CD-Search Tool again, and will make
-a note of any promising results.
+a note of any promising results.  
 (Still running; Search-ID QM3-qcdsearch-29D17B06C7A6E9DA)
 
 	18 August 2016
@@ -183,9 +186,9 @@ Searching 'Kordia' under NCBI's protein search reveals ~8000 non-hypothetical
 results, some of which are named. I am installing Blast+ on my local computer so
 that I can query the fasta file of these results with the unnamed proteins file.
 
-Read up on HGAP - Alvar's thesis
-Set up new Kordia folder on Bioinformatics Group Github page
-Note: md5sum software for ensuring files are copied correctly
+* Read up on HGAP - Alvar's thesis  
+* Set up new Kordia folder on Bioinformatics Group Github page  
+* Note: md5sum software for ensuring files are copied correctly 
 
 Made several updates to PROKKA V6 based on local BLAST (including one gene name!),
 using an e-value cutoff of 0.01 to get rid of some of the worse results. To get
@@ -194,12 +197,11 @@ more well-annotated bacterium?
 
 	24 August 2016
 
-Rerunning local BLASTP with more stringent e-value criterion:
+Rerunning local BLASTP with more stringent e-value criterion:  
 C:\Users\Matt\Desktop\PROJECT\blast-2.4.0+\bin> blastp -db ../db/Kordia -query
 ../../AUP2_reformatted_2.txt -out AUP_Test_Results_2 -evalue 1e-040
 
-*Check how to set up and configure PROKKA databases
-Appears to be possible: https://github.com/tseemann/prokka/issues/95
+* Check how to set up and configure PROKKA databases; appears to be possible (https://github.com/tseemann/prokka/issues/95)
 
 Created new branch in the kordia_pathway_analysis repository in which to store my
 own work.
@@ -207,11 +209,9 @@ own work.
 Have written a script to test the workings of PROKKA, output, etc.
 Require tbl2asn 23.0 or higher...
 
-*Create editable folder to store PROKKA DBs (confirm where!)
-
-*Download 3x .gbk files for Kordia and make a PROKKA database (see Oskar's readme for
-details)
-Find out why the database creation didn't work!
+* Create editable folder to store PROKKA DBs (confirm where!)
+* Download 3x .gbk files for Kordia and make a PROKKA database (see Oskar's readme for details)
+* Find out why the database creation didn't work!
 
 	25 August 2016
 
@@ -219,14 +219,14 @@ prokka-genbank_to_fasta_db does not run because it is looking for parent.pm in t
 wrong place. Check how to edit @INC to look at
 /usr/local/packages/perl-5.14.4/lib/5.14.4/parent.pm
 
-Downloaded Blast2GO, in case this can give any useful information.
-Exporting a DNA fasta file from myRAST for use as input.
-Running blastn first to see if anything new comes up.
+Downloaded Blast2GO, in case this can give any useful information.  
+Exporting a DNA fasta file from myRAST for use as input.  
+Running blastn first to see if anything new comes up.  
 
-Local BLAST vs database of species shown as similar in Blast2GO?
+Local BLAST vs database of species shown as similar in Blast2GO?  
 e.g. Flavobacterium psychrophilum, Lutibacter, etc.
 
-Downloading and installing Pathway Tools...
+Downloading and installing Pathway Tools...  
 IMPORTANT: Pathway Tools does NOT require gene NAMES to construct pathways; it only
 requires protein products. Therefore, NAMING the unnamed genes is not as important
 as finding a function for the proteins listed as hypothetical.
@@ -236,15 +236,15 @@ the way through...
 
 	26 August 2016
 
-Pathway Tools finished; obtain pathway overview to see current state of play
+Pathway Tools finished; obtain pathway overview to see current state of play  
 Blast2GO crashed in the night; continue and see how far it gets today
 
 Pathway Tools has finished creating the Pathway Overview; as expected, a lot
 still to do.
 
 Potential task - write a Python script which defines the region 'CDS' to 'CDS'
-as an object, and extracts it if the term 'hypothetical' or 'putative' appears.
-OR
+as an object, and extracts it if the term 'hypothetical' or 'putative' appears.  
+OR  
 Find out if I can extract certain records using BioPython...
 
 Converted V5 .gbk to fasta online; can now extract hypothetical protein
@@ -256,12 +256,13 @@ Read HGAP paper, SMRT portal manual
 
 http://albiorix.bioenv.gu.se:8081
 
-/nobackup/data5/Skeletonema_marinoi_microbiome_project
-Create 01_Assemblies
-Add subdirectories for each sample, and a further subdirectory for each
+* /nobackup/data5/Skeletonema_marinoi_microbiome_project
+* Create 01_Assemblies
+* Add subdirectories for each sample, and a further subdirectory for each
 assembly run; once there is a README.md in each folder, can push to GitLab.
 
-For Monday:
+### For Monday
+
 Scrutinise results of #6; potential problems with data transfer...
 Run jobs 7 and 8
 
@@ -281,13 +282,13 @@ Add fasta files to repository; check which... Polished reads
 
 Added Sum of Contig Lengths table to 01_assemblies readme
 
-1 - 25k - Started
-2 - 12k and 10k - Started
-3 - 25k - Started
-4 - Leave
-5 - 15k and 18k - Started
-6 - 10k, 9k, 8k - Started
-7 - 25k - Started
+1 - 25k - Started  
+2 - 12k and 10k - Started  
+3 - 25k - Started  
+4 - Leave  
+5 - 15k and 18k - Started  
+6 - 10k, 9k, 8k - Started  
+7 - 25k - Started  
 8 - Leave
 
 DL log files - DONE
@@ -333,7 +334,7 @@ Checked completed results of samples 3 and 7. Both show a dramatic spike in unit
 Also - update 01_assemblies README to incorporate Sum of Contig Lengths into same
 design of table as # of Polished Contigs table
 
-Run sample #3 @ 18k	Failed
+Run sample #3 @ 18k	Failed  
 Run sample #7 @ 19k
 
 * Assembly jobs seem to take around 7 hours.
@@ -369,27 +370,23 @@ seems to have been ignored... May have to put the files into the read-only Prokk
 or rewrite a line in the Prokka files to look elsewhere for db files:
 https://github.com/tseemann/prokka/issues/95
 
-To do:
+### To do
 
 * Rerun the five [six] outstanding jobs which crashed earlier - job 16468 crashed AGAIN...
-
 	* Jobs that need to be rerun: 16460, 16462, 16463, 16464, 16465, 16468
 	* Potentially check in the evening if other jobs are complete...
-
 * Get Prokka file redirected to look at /db/prokka for its databases (move whole folder?), as
 --hmms option doesn't work in getting Prokka to search the TIGR database
-
 * Get cd-hit installed in order to create Kordia database from NCBI .gbk files
 
-Evening:
+## Evening
 
-Restarted jobs 16460 (now 16469) and 16462 (now 16470) - REMEMBER TO UPDATE READMES IN THE MORNING!
-
-16467 has completed; download relevant files in the morning!
+*Restarted jobs 16460 (now 16469) and 16462 (now 16470)
+*16467 has completed; download relevant files in the morning!
 
 	31 August 2016
 
-Of yesterday's assembly jobs, only 16466 and 16467 completed... Make an Excel spreadsheet for personal
+Of yesterday's assembly jobs, only 16466 and 16467 completed... Made an Excel spreadsheet for personal
 reference as to which jobs have worked and not.
 
 Started jobs 16471, 16472 and 16473 - wait for these to complete before proceeding with more.
@@ -426,7 +423,7 @@ files...
 SMRT analysis temporary directory has been moved, so will start all outstanding jobs in an
 attempt to test the system
 
-New jobs started since the change - 16474, 16475, 16476, 16477, 16478, 16479, 16480
+New jobs started since the change - 16474, 16475, 16476, 16477, 16478, 16479, 16480  
 Still running - 16472
 
 Note - cd-hit is already installed! cd-hit/v4.6.5
@@ -450,7 +447,7 @@ Out of curiosity, which stage did the above jobs crash on?
 | 16479 | PreAssemblerDagcon/hgapCorrection_003of006 | 206.60 minutes       |
 | 16480 | PreAssemblerDagcon/hgapCorrection_003of006 | 212.24 minutes       |
 
-I've seen other failures at different stages, but all of these have failed at the same major phase...
+I've seen other failures at different stages, but all of these have failed at the same major phase...  
 Does the hgapCorrection process require a huge number of cores?
 
 Places at which other jobs have failed:
@@ -478,7 +475,7 @@ Places at which other jobs have failed:
 | 16471 | PreAssemblerDagcon/hgapCorrection_003of006 | 85.34 minutes        |
 | 16473 | PreAssemblerDagcon/hgapCorrection_005of006 | 104.05 minutes       |
 
-For Thursday:
+### For Thursday
 
 * Search smrtanalysis home directory (sudo su smrtanalysis) for log files (check SMRT Portal manual)
 to determine source of crashes
@@ -490,7 +487,7 @@ jobs appear to have been spread across multiple nodes)
  
 * Jobs to repeat - 16476 (6 10k), 16477 (6 9k), 16478 (6 8k), 16479 (2 10k), 16480 (5 15k)
 
-Evening: ADD TO LOGS IN THE MORNING AND DOWNLOAD FILES!
+## Evening
 
 Completed jobs - 16472 (3 18k), 16474 (1 18k), 16475 (7 21k)
 
@@ -506,15 +503,14 @@ Restarting the other jobs:
 
 All other running jobs failed; attempting to troubleshoot the issue of persistent failures...
 
-Logs for failed processes share this error:
-
-* IOError: [Errno 28] No space left on device
+Logs for failed processes share this error:  
+__IOError: [Errno 28] No space left on device__
 
 Is it possible to move the tmpdir folder to somewhere other than /tmp?
 
 Regarding assemblies that have been successful: three pb_359_7 assemblies have returned
 a result of 4 polished unitigs. Investigate further to determine which of these should
-be analysed further.
+be analysed further.  
 My first impression is that I should go down the middle and use the 20k (16445) result.
 
 Jobs to rerun:
@@ -529,12 +525,12 @@ Jobs to rerun:
 | pb_359_1-???           |             |         |
 | pb_359_3-???           |             |         |
 
-Jobs 16490 (+ 16492) and 16491 insta-failed with no log...
+Jobs 16490 (+ 16492) and 16491 insta-failed with no log...  
 Apparent cause - redirecting tmpdir was moving it to another drive, so the mkdir command
 was pointing somewhere that didn't exist.
 
-Rather than redirecting tmpdir into another folder, making a tmpdir directory.
-Attempting to run pb_359_6-10000_Rerun_8 (16493) using this configuration...
+Rather than redirecting tmpdir into another folder, making a tmpdir directory.  
+Attempting to run pb_359_6-10000_Rerun_8 (16493) using this configuration...  
 Cautiously attempting pb_359_2-10000_Rerun_8 (16494)
 
 Summary of current status of the samples
@@ -550,5 +546,3 @@ Summary of current status of the samples
 | pb_359_7   | Will run blastx once _4 and _8 are complete (16445)                 |
 | pb_359_8   | Waiting for rough phylogeny indicator from blastx (still running)   |
 | Kordia sp. | Attempting to identify remaining hypothetical proteins using Prokka |
-
-`Test`

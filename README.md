@@ -1,4 +1,4 @@
-	9 August 2016
+# 9 August 2016
 
 Useful tools to install:  
 * PROKKA  
@@ -13,7 +13,7 @@ Things to try:
 Raw data:  
 * combined-revcomp-unitig-1-2.fasta  
 
-	10 August 2016
+# 10 August 2016
 
 NCBI PGAP seems to be only for those ready to submit a genome - unsuitable
 
@@ -40,7 +40,7 @@ database. Several gene names found (species-dependent), but unsure how to
 determine which is the appropriate name for Kordia. In any case, would be too
 time-consuming to name all 4000+ Kordia genes in this way...
 
-	11 August 2016
+# 11 August 2016
 
 Had to stop myRAST's final step - Compute correspondences - part-way yesterday,
 so re-running the analysis while I look at yesterday's output, which looks
@@ -67,7 +67,7 @@ inconsistent; I don't get the same name as was found previously...
 List of annotation pipelines which might be useful:
 https://omictools.com/genome-annotation-category
 
-	12 August 2016
+# 12 August 2016
 
 While browsing the online version of RAST, I found that there are some
 indications of gene names to be found, although these may contradict the
@@ -109,12 +109,11 @@ about gene identities; PSI-BLASTing glpE_1 seems to show PspE as a better
 match for the gene...
 
 ### Questions after week 1
-
-* Oskar's software - PROKKA, System Tools, etc. - yielded certain results,
+Oskar's software - PROKKA, System Tools, etc. - yielded certain results,
 whereas I am able to find apparent results in addition to these which seem
-to obtain better E-values in a RAST -> PSI-BLAST -> CDD search. Why?
+to obtain better E-values in a RAST -> PSI-BLAST -> CDD search. Why?  
 
-	15 August 2016
+# 15 August 2016
 
 Attempted to use the myRAST Shell on Windows to generate a list of gene
 aliases, however operating this is not as intuitive as it would be on Linux,
@@ -144,7 +143,7 @@ MIAVLYFLIIAPSLKKQKKEKKFMASVKKGDRVITKSGIHGKIVELNDKDFTCVIETGAGKIKFERAALSVEASARLNNP
 K. alg.:  
 MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKPPSEKK  
 
-	16 August 2016
+# 16 August 2016
 
 Small victory?  
 Took a partial list of proteins labelled 'Hypothetical protein' in
@@ -166,9 +165,9 @@ of those I need to name.
 1. Pathway Tools webinars, paper and installation  
 2. Start updating genbank file (/note field to give reason why)  
 3. Potentially restructure the Kordia directory; add updated version of
-genbank file to, e.g. '01_Annotation' folder
+genbank file to, e.g. '01_Annotation' folder  
 
-	17 August 2016
+# 17 August 2016
 
 Cut apart the genbank file, now contains only the products and sequences of
 the unnamed proteins (filename: AUP2). Also copied the V5 genbank file and
@@ -180,7 +179,7 @@ Running the new file through NCBI batch CD-Search Tool again, and will make
 a note of any promising results.  
 (Still running; Search-ID QM3-qcdsearch-29D17B06C7A6E9DA)
 
-	18 August 2016
+# 18 August 2016
 
 Searching 'Kordia' under NCBI's protein search reveals ~8000 non-hypothetical
 results, some of which are named. I am installing Blast+ on my local computer so
@@ -195,13 +194,13 @@ using an e-value cutoff of 0.01 to get rid of some of the worse results. To get
 more gene names, however, perhaps attempt to use a (nucleotide?) database for a
 more well-annotated bacterium?
 
-	24 August 2016
+# 24 August 2016
 
 Rerunning local BLASTP with more stringent e-value criterion:  
 C:\Users\Matt\Desktop\PROJECT\blast-2.4.0+\bin> blastp -db ../db/Kordia -query
 ../../AUP2_reformatted_2.txt -out AUP_Test_Results_2 -evalue 1e-040
 
-* Check how to set up and configure PROKKA databases; appears to be possible (https://github.com/tseemann/prokka/issues/95)
+* Check how to set up and configure PROKKA databases; [appears to be possible] (https://github.com/tseemann/prokka/issues/95)
 
 Created new branch in the kordia_pathway_analysis repository in which to store my
 own work.
@@ -211,9 +210,9 @@ Require tbl2asn 23.0 or higher...
 
 * Create editable folder to store PROKKA DBs (confirm where!)
 * Download 3x .gbk files for Kordia and make a PROKKA database (see Oskar's readme for details)
-* Find out why the database creation didn't work!
+* Find out why the database creation didn't work!  
 
-	25 August 2016
+# 25 August 2016
 
 prokka-genbank_to_fasta_db does not run because it is looking for parent.pm in the
 wrong place. Check how to edit @INC to look at
@@ -234,7 +233,7 @@ as finding a function for the proteins listed as hypothetical.
 Try and finish running Blast2GO and Pathway Tools overnight; currently only part of
 the way through...
 
-	26 August 2016
+# 26 August 2016
 
 Pathway Tools finished; obtain pathway overview to see current state of play  
 Blast2GO crashed in the night; continue and see how far it gets today
@@ -266,12 +265,12 @@ assembly run; once there is a README.md in each folder, can push to GitLab.
 Scrutinise results of #6; potential problems with data transfer...
 Run jobs 7 and 8
 
-	27 August 2016
+# 27 August 2016
 
 Started jobs 7 and 8; will wait until Monday to check over all results from
 first assembly attempts.
 
-	29 August 2016
+# 29 August 2016
 
 Downloaded reports of first assembly attempts and uploaded them to GitLab.
 
@@ -282,34 +281,18 @@ Add fasta files to repository; check which... Polished reads
 
 Added Sum of Contig Lengths table to 01_assemblies readme
 
-1 - 25k - Started  
-2 - 12k and 10k - Started  
-3 - 25k - Started  
-4 - Leave  
-5 - 15k and 18k - Started  
-6 - 10k, 9k, 8k - Started  
-7 - 25k - Started  
-8 - Leave
-
-DL log files - DONE
-
-BLAST search of single-unitig samples 4 & 8
+Blastx of single-unitig samples 4 & 8
 
 Folder structure changed to simplify BLAST script syntax
 
-FOR THESIS - M&M - difference between HGAP2 & 3
-
-Check Google Docs for making start of Thesis...?
+Startd a Google Docs page to make [notes for my thesis] (https://docs.google.com/document/d/1_l0IFS5Dkj8g38A57gzm-sVaJx63IGsWnzQb567rwWc/edit?usp=sharing).
 
 BLAST search appears to be stuck in the queue - double-check when /nobackup
 is brought back online...
 
-	30 August 2016
+# 30 August 2016
 
 runBlast_16442.sge still stuck in queue. Will have to remove and retry...
-
-Tried rearranging two of the commands in the script to match the previous
-scripts, but still appears to be stuck...
 
 SMRT Portal on Albiorix ALSO seems to be down...
 
@@ -331,18 +314,13 @@ SMRT Portal back up and running; only two jobs completed successfully, must reru
 Checked completed results of samples 3 and 7. Both show a dramatic spike in unitig numbers;
 3 jumped from 5 back up to 28, and 7 jumped from 4 to 30...
 
-Also - update 01_assemblies README to incorporate Sum of Contig Lengths into same
-design of table as # of Polished Contigs table
-
 Run sample #3 @ 18k	Failed  
 Run sample #7 @ 19k
 
-* Assembly jobs seem to take around 7 hours.
+__Assembly jobs seem to take around 7 hours__
 
-Both sample 4 and sample 8 BLASTs are now running on Annotation-1, now permissions have been
-altered; may take a very long time...
-
-Check PROKKA output...
+__blastx jobs for pb_359_4 and pb_459_8 are now running on Annotation-1, now permissions have been
+altered; may take a very long time...__
 
 prokka-genbank_to_fasta_db still giving some very strange errors... Check?
 
@@ -366,9 +344,8 @@ other jobs have finished running (completing/failing) before retrying the above.
 
 In addition, Prokka_Test_2 has been pushed back into Pending, and node0 is showing an error...
 When rerun, Prokka_Test_2 showed no difference to original Prokka_Test; TIGR HMM database
-seems to have been ignored... May have to put the files into the read-only Prokka db folder,
-or rewrite a line in the Prokka files to look elsewhere for db files:
-https://github.com/tseemann/prokka/issues/95
+seems to have been ignored... [May have to put the files into the read-only Prokka db folder,
+or rewrite a line in the Prokka files to look elsewhere for db files] (https://github.com/tseemann/prokka/issues/95).
 
 ### To do
 
@@ -381,10 +358,10 @@ https://github.com/tseemann/prokka/issues/95
 
 ## Evening
 
-*Restarted jobs 16460 (now 16469) and 16462 (now 16470)
-*16467 has completed; download relevant files in the morning!
+* Restarted jobs 16460 (now 16469) and 16462 (now 16470)
+* 16467 has completed; download relevant files in the morning!
 
-	31 August 2016
+# 31 August 2016
 
 Of yesterday's assembly jobs, only 16466 and 16467 completed... Made an Excel spreadsheet for personal
 reference as to which jobs have worked and not.
@@ -406,8 +383,6 @@ Jobs to submit:
 
 With luck, jobs 16471-3 SHOULD be done ~5pm, so could potentially kick off new jobs before going
 home this evening; failing that, kick off tonight...
-
-Still waiting on blastx jobs to complete...
 
 16471 and 16473 failed... 16472 still running
 
@@ -432,7 +407,7 @@ Note - cd-hit is already installed! cd-hit/v4.6.5
 
 Tweaked Create_PROKKA_Database.sge to load cd-hit, as this seemed to be causing problems previously.
 
-Create_PROKKA_Database.sge still throws an error message, so have posted on the Prokka GitHub page
+Create_PROKKA_Database.sge still throws an error message, so have [posted on the Prokka GitHub page] (https://github.com/tseemann/prokka/issues/192)
 to request assistance from the developer...
 
 Job 16477, 16476, 16478, 16479 and 16480 failed...
@@ -499,7 +474,7 @@ Restarting the other jobs:
 * (16479) #2: 10000 - 16484
 * (16780) #5: 15000 - 16485
 
-	1 September 2016
+# 1 September 2016
 
 All other running jobs failed; attempting to troubleshoot the issue of persistent failures...
 
@@ -525,7 +500,7 @@ Jobs to rerun:
 | pb_359_1-???           |             |         |
 | pb_359_3-???           |             |         |
 
-Jobs 16490 (+ 16492) and 16491 insta-failed with no log...  
+Jobs 16490 (+ 16492) and 16491 insta-failed with no log after redirecting tmpdir to another partition.  
 Apparent cause - redirecting tmpdir was moving it to another drive, so the mkdir command
 was pointing somewhere that didn't exist.
 

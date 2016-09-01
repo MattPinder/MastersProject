@@ -281,14 +281,14 @@ Add fasta files to repository; check which... Polished reads
 
 Added Sum of Contig Lengths table to 01_assemblies readme
 
-#1 - 25k - Started
-#2 - 12k and 10k - Started
-#3 - 25k - Started
-#4 - Leave
-#5 - 15k and 18k - Started
-#6 - 10k, 9k, 8k - Started
-#7 - 25k - Started
-#8 - Leave
+1 - 25k - Started
+2 - 12k and 10k - Started
+3 - 25k - Started
+4 - Leave
+5 - 15k and 18k - Started
+6 - 10k, 9k, 8k - Started
+7 - 25k - Started
+8 - Leave
 
 DL log files - DONE
 
@@ -352,15 +352,13 @@ to point to it; have attempted this with Prokka_Test_2...
 
 Assembly jobs to rerun:
 
-* 16457 - pb_359_1-25000_Rerun *
-* 16459 - pb_359_2-10000_Rerun *
+* 16457 - pb_359_1-25000_Rerun
+* 16459 - pb_359_2-10000_Rerun
 * 16460 - pb_359_5-15000_Rerun
 * 16462 - pb_359_6-10000_Rerun
 * 16463 - pb_359_6-9000_Rerun
 * 16464 - pb_359_6_8000_Rerun
 * 16465 - pb_359_3-18000
-
-* Only 3 jobs now running...
 
 All of the above jobs have failed; perhaps I have overtaxed Albiorix, so will wait until the
 other jobs have finished running (completing/failing) before retrying the above...
@@ -488,15 +486,13 @@ to determine source of crashes
 * Also search SGE manual to see if it possible to make a process ONLY go to a single host (as some
 jobs appear to have been spread across multiple nodes)
 
-* Jobs still running - 16472, 16474, 16475
-                       3 18k| 1 18k| 7 21k
+* Jobs still running - 16472 (3 18k), 16474 (1 18k), 16475 (7 21k)
  
-* Jobs to repeat - 16476, 16477, 16478, 16479, 16480
-                   6 10k| 6 9k | 6 8k | 2 10k| 5 15k
+* Jobs to repeat - 16476 (6 10k), 16477 (6 9k), 16478 (6 8k), 16479 (2 10k), 16480 (5 15k)
 
 Evening: ADD TO LOGS IN THE MORNING AND DOWNLOAD FILES!
 
-Completed jobs - 16472, 16474, 16475
+Completed jobs - 16472 (3 18k), 16474 (1 18k), 16475 (7 21k)
 
 Restarting the other jobs: 
 
@@ -505,3 +501,54 @@ Restarting the other jobs:
 * (16478) #6: 8000 - 16483
 * (16479) #2: 10000 - 16484
 * (16780) #5: 15000 - 16485
+
+	1 September 2016
+
+All other running jobs failed; attempting to troubleshoot the issue of persistent failures...
+
+Logs for failed processes share this error:
+
+* IOError: [Errno 28] No space left on device
+
+Is it possible to move the tmpdir folder to somewhere other than /tmp?
+
+Regarding assemblies that have been successful: three pb_359_7 assemblies have returned
+a result of 4 polished unitigs. Investigate further to determine which of these should
+be analysed further.
+My first impression is that I should go down the middle and use the 20k (16445) result.
+
+Jobs to rerun:
+
+|    Job                 | Rerun of ID | New  ID |
+|------------------------|-------------|---------|
+| pb_359_2-10000_Rerun_6 | 16484       | 16490   |
+| pb_359_5-15000_Rerun_6 | 16485       |         |
+| pb_359_6-10000_Rerun_7 | 16489       | 16491   |
+| pb_359_6-9000_Rerun_5  | 16487       |         |
+| pb_359_6-8000_Rerun_5  | 16488       |         |
+| pb_359_1-???           |             |         |
+| pb_359_3-???           |             |         |
+
+Jobs 16490 (+ 16492) and 16491 insta-failed with no log...
+Apparent cause - redirecting tmpdir was moving it to another drive, so the mkdir command
+was pointing somewhere that didn't exist.
+
+Rather than redirecting tmpdir into another folder, making a tmpdir directory.
+Attempting to run pb_359_6-10000_Rerun_8 (16493) using this configuration...
+Cautiously attempting pb_359_2-10000_Rerun_8 (16494)
+
+Summary of current status of the samples
+
+| Sample     | Status                                                              |
+|------------|---------------------------------------------------------------------|
+| pb_359_1   | Requires additional assembly job(s)                                 |
+| pb_359_2   | Running assembly job                                                |
+| pb_359_3   | Requires additional assembly job(s)                                 |
+| pb_359_4   | Waiting for rough phylogeny indicator from blastx (still running)   |
+| pb_359_5   | Waiting to run assembly job                                         |
+| pb_359_6   | Running assembly job; more waiting to be run                        |
+| pb_359_7   | Will run blastx once _4 and _8 are complete (16445)                 |
+| pb_359_8   | Waiting for rough phylogeny indicator from blastx (still running)   |
+| Kordia sp. | Attempting to identify remaining hypothetical proteins using Prokka |
+
+`Test`

@@ -521,3 +521,45 @@ Summary of current status of the samples
 | pb_359_7   | Will run blastx once _4 and _8 are complete (16445)                 |
 | pb_359_8   | Waiting for rough phylogeny indicator from blastx (still running)   |
 | Kordia sp. | Attempting to identify remaining hypothetical proteins using Prokka |
+
+# 2 September 2016
+
+New jobs are taking hours longer than previously. Why...?
+
+How to proceed with remaining samples?
+* 1 - 9 polished contigs at 18k and 20k seed read length; push up a little to 21k?
+* 2 - 10k seed read length gives 3 polished contigs, number has fallen along with SRL; retry at 8k?
+* 3 - 5 polished contigs at 18k and 20k seed read length; push up a little to 21k also?
+* 5 - 16495 failed; rerun
+* 6 - 8k, 9k and 10k SRL all give 9 polished contigs; step down to 7k?
+
+Initiated the following jobs:
+* pb_359_1-21000 (ID - 16498)
+* pb_359_2-8000 (ID - 16499)
+* pb_359_3-21000 (ID - 16500)
+* pb_359_6-7000 (ID - 16501)
+
+Removed '|quiver' from the fasta files as this can apparently cause some issues.  
+__Keep an eye on the blastx jobs; this may cause the job to fail inadvertently...__
+
+Rerun pb_359_5-15000 (Rerun 7)
+
+P_CeleraAssembler.runCaHgap previously took ~85 minutes; now takes __~552__ minutes
+
+blastx command notes:
+* -query_loc command:
+ * `-query_loc X-Y`, where X and Y are the limits
+ * For fasta files with a single contig, set an arbitrary number of bases to check (e.g. first 5%?)
+ * For fastas with multiple contigs, use fp.py --length --header <NAME_OF_FASTA_FILE> | sort -n -r > <NAME_OF_OUTPUT_FILE>
+to determine the length of the contigs, then set -query_loc slightly longer than the second contig
+* Use 40 cores each to speed things along (progress has been too slow when working with the WHOLE genome
+__and__ using only 10 cores, so using less material and more cores should give us faster results
+
+## To Do
+* __Reformat 01_assemblies readme with job ID numbers in seed read length columns as with the other tables__
+* Blastx for pb_359_7
+
+### Blastx:
+* _4: -query_loc 1-175000
+* _7 (ID 16445): -query_loc 1-275000
+* _8: -query_loc 1-300000

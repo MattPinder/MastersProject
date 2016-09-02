@@ -542,7 +542,7 @@ Initiated the following jobs:
 Removed '|quiver' from the fasta files as this can apparently cause some issues.  
 __Keep an eye on the blastx jobs; this may cause the job to fail inadvertently...__
 
-Rerun pb_359_5-15000 (Rerun 7)
+Rerun pb_359_5-15000 (Rerun 7) (ID - 16502)
 
 P_CeleraAssembler.runCaHgap previously took ~85 minutes; now takes __~552__ minutes
 
@@ -563,3 +563,15 @@ __and__ using only 10 cores, so using less material and more cores should give u
 * _4: -query_loc 1-175000
 * _7 (ID 16445): -query_loc 1-275000
 * _8: -query_loc 1-300000
+
+## Evening
+
+* pb_359_1-21000 (ID - 16498) - Done - Retry with 19k
+* pb_359_3-21000 (ID - 16500) - Done - Retry with 19k
+
+* pb_359_2-8000 (ID - 16499)
+* pb_359_6-7000 (ID - 16501)
+* pb_359_5-15000_Rerun_7 (ID - 16502)
+
+* Started pb_359_1-19000 (ID - 16503) - Will be final attempt
+* Started pb_359_3-19000 (ID - 16504) - Will be final attempt

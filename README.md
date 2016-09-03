@@ -575,3 +575,41 @@ __and__ using only 10 cores, so using less material and more cores should give u
 
 * Started pb_359_1-19000 (ID - 16503) - Will be final attempt
 * Started pb_359_3-19000 (ID - 16504) - Will be final attempt
+
+# 3 September 2016
+
+Job statuses
+
+| Job ID | Job name               | Status | Downloaded? |
+|--------|------------------------|--------|-------------|
+| 16499  | pb_359_2-8000          | Done   | Yes         |
+| 16501  | pb_359_6-7000          | Done   | Yes         |
+| 16502  | pb_359_5-15000_Rerun_7 | Failed | ...         |
+| 16503  | pb_359_1-19000         | Done   | Yes         |
+| 16504  | pb_359_3-19000         | Done   | Yes         |
+
+Resubmitted 16502 as 16505; changed Genome Size to 4.7m instead of 4.4m, in case erroneous input here
+was the cause of the persistent failure even after the hardware problems had been addressed
+
+Try _2 and _6 at 6k - Will be final attempt
+
+Low point of 1 - 9 contigs
+Low point of 3 - 5 contigs
+
+Running jobs:
+* pb_359_5-15000_Rerun_8 - 16505
+* pb_359_2-6000 - 16506
+* pb_359_6-6000 - 16507
+
+## Current status of samples
+* _1 - contigs have reached a low; examine
+* _2 - one final assembly attempt
+* _3 - contigs have reached a low; examine
+* _4 - blastx (check results)
+* _5 - still assembling...
+* _6 - one final assembly attempt
+* _7 - blastx (check results)
+* _8 - blastx (check results)
+
+### Reminder  
+Reformat Job ID table

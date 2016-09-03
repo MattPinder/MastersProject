@@ -611,5 +611,9 @@ Running jobs:
 * _7 - blastx (check results)
 * _8 - blastx (check results)
 
+## Blastx  
+Rerun the three blastx jobs with double (10%) the query length to try and get more conclusive results;
+currently seem to be spread across a wide number of species...
+
 ### Reminder  
 Reformat Job ID table

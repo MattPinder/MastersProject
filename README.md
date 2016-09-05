@@ -666,7 +666,7 @@ at least up to the family Flavobacteriaceae.
 * pb_359_1 - Assembly will go no lower than 9 polished contigs
  * Try assembling with seed read length 16k/17k, or attempt blastx analysis?
 * pb_359_2 - Assembly will go no lower than 3 polished contigs
- * Try assembling with seed read length 5k, or attempt blastx analysis?
+ * Try assembling with seed read length 5k, or __attempt blastx analysis__?
 * pb_359_3 - Assembly will go no lower than 5 polished contigs (with a 6 in between...)
  * Attempt blastx analysis with 18k/20k seed read length results?
 * pb_359_4 - After blastx analysis, appears to belong to the order Sphingomonadales
@@ -683,3 +683,39 @@ at least up to the family Flavobacteriaceae.
 
 Unable to find any good reason in the log files as to why pb_359_5-15000 continually fails; will
 wait on the results of the pb_359_5-18000 test rerun before deciding how to proceed...
+
+Cancelled blastx jobs with 20% of query length; taking a long time and unlikely to yield any
+better results, when all I wanted was a rough phylogeny.  
+Will run pb_359_2 at 5% and 10%, as 3 polished contigs seems somewhat reasonable.  
+Will use 16458, as the shortest contig in this instance is shorter than in the other three assemblies in which
+three contigs were present.
+
+Assembly Job 16509 - copy of 16445 (used for the pb_359_7 blastx), but with a target coverage
+of 25 instead of 30; hopefully this will help to bridge the gaps between contigs, in case the
+problem lies in areas of low coverage.
+
+Made blastn database of pb_359_7 assembly 16445 (`makeblastdb -in 16445.fasta -dbtype nucl`),
+and queried it with itself. Awaiting results to see if contigs match themselves and each other...
+
+Read up on minimus(?) circularisation program in Alvar's thesis
+
+__To try:__ During the next blastx analysis, precede `blastx` with `time`; this should
+output information regarding how long the job took.  
+Can achieve this in retrospect with `qacct -j ####`
+
+Time to complete 5% jobs:
+ * _4: ~2 hours
+ * _7: ~9.5 hours
+ * _8: ~3 hours
+
+Time to complete 10% jobs:
+ * _4: ~4 hours
+ * _7: ~14 hours
+ * _8: ~6 hours
+
+Time taken is roughly equivalent to the number of contigs in the file, therefore estimate that
+the three contigs of pb_359_2 will take ~6 hours and ~12 hours respectively.
+
+__Useful commands:__
+* `qstat -j [Job#]` - get information on a specific job in the queue
+* `qalter [Job#] -q [New queue name]` - moves a job from its current queue to a new one

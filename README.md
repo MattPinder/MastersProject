@@ -617,3 +617,60 @@ currently seem to be spread across a wide number of species...
 
 ### Reminder  
 Reformat Job ID table
+
+# 5 September 2016
+
+Investigate why pb_359_5-15000 STILL fails (16505)  
+'Unable to verify output' during Celera Assembler stage...  
+Rerunning the 18000 run (16508) to see whether sample 5 still assembles
+
+One last resubmission of the three blastx jobs, this time querying 20% of the sum of contig lengths.
+
+Summary of findings from 5% and 10% queries:
+* pb_359_4
+ * Both 5% and 10% queries returned the same top results; with a bit score of 2220,
+__Sphingorhabdus sp. M41__ appears to be the closest match (hit #3 was from the same species,
+with a bit score of 1757); hit #2 was from Sphingomonadales bacterium EhC05 (bit score 1843).
+ * __Current hypothesis - member of the order Sphingomonadales, potential family
+Sphingomonadaceae, potential genus Sphingorhabdus.__
+  * Hits lower in the list (e.g. Sphingobium sp. C100 and Erythrobacter) support at least up to
+the order Sphingomonadales.
+ * Discovery of Sphingorhabdus sp. M41 published just a few months ago
+(http://www.sciencedirect.com/science/article/pii/S0168165616301961).
+
+* pb_359_7
+ * Analysis of the longest contig returned numerous hits to different genera, however the top
+three hits for both the 5% and 10% query fell under the family Rhodobacteraceae.
+ * __Current hypothesis - member of the family Rhodobacteraceae.__
+ * Top hits for the second and third longest contig also all fall under the Rhodobacteraceae
+family, along with most of the top hits from the shortest contig; the one that didn't was still
+a member of the class Alphaproteobacteria.
+ * __Further attempts at assembly may be necessary, as this results is very inconclusive.__
+
+* pb_359_8
+ * Both 5% and 10% queries returned the same top results; with a bit score of 2962,
+__Arenibacter algicola__ appears to be the closest match (hit #2 was from the same species,
+with a bit score of 2777); hit #3 was from Cellulophaga baltica (bit score 2770).
+ * __Current hypothesis - member of the family Flavobacteriaceae, potential
+genus Arenibacter.__
+  * Hits lower in the list (e.g. Muricauda sp. MAR_2010_75 and Sediminicola sp. YIK13) support
+at least up to the family Flavobacteriaceae.
+ * A. algicola known to associate with Skeletonema costatum based on its initial discovery
+(http://aem.asm.org/content/early/2013/11/04/AEM.03104-13).
+
+### Status:
+* pb_359_1 - Assembly will go no lower than 9 polished contigs
+ * Try assembling with seed read length 16k/17k, or attempt blastx analysis?
+* pb_359_2 - Assembly will go no lower than 3 polished contigs
+ * Try assembling with seed read length 5k, or attempt blastx analysis?
+* pb_359_3 - Assembly will go no lower than 5 polished contigs (with a 6 in between...)
+ * Attempt blastx analysis with 18k/20k seed read length results?
+* pb_359_4 - After blastx analysis, appears to belong to the order Sphingomonadales
+ * Potential family Sphingomonadaceae, potetial genus Sphingorhabdus)
+* pb_359_5 - Still waiting for assemblies to complete on account of errors...
+* pb_359_6 - Assemby will go no lower than 9 polished contigs
+ * Try assembling with seed read length 5k, or attempt blastx analysis?
+* pb_359_7 - After blastx analysis, appears to belong to the famiy Rhodobacteraceae
+ * May need to attempt reassembly, as genus identity is far from certain...
+* pb_359_8 - After blastx analysis, appears to belong to the family Flavobacteriaceae
+ * Potential genus Arenibacter (known to associate with Skeletonema)

@@ -637,6 +637,8 @@ Sphingomonadaceae, potential genus Sphingorhabdus.__
 the order Sphingomonadales.
  * Discovery of Sphingorhabdus sp. M41 published just a few months ago
 (http://www.sciencedirect.com/science/article/pii/S0168165616301961).
+ * Sphingorhabdus sp. M41 genome size - 3,339,521 bp
+ * pb_359_4 genome size - 3,492,548 bp
 
 * pb_359_7
  * Analysis of the longest contig returned numerous hits to different genera, however the top
@@ -657,6 +659,8 @@ genus Arenibacter.__
 at least up to the family Flavobacteriaceae.
  * A. algicola known to associate with Skeletonema costatum based on its initial discovery
 (http://aem.asm.org/content/early/2013/11/04/AEM.03104-13).
+ * Arenibacter algicola genome size - 5,550,230 bp
+ * pb_359_8 genome size - 5,839,016 bp
 
 ### Status:
 * pb_359_1 - Assembly will go no lower than 9 polished contigs
@@ -666,7 +670,8 @@ at least up to the family Flavobacteriaceae.
 * pb_359_3 - Assembly will go no lower than 5 polished contigs (with a 6 in between...)
  * Attempt blastx analysis with 18k/20k seed read length results?
 * pb_359_4 - After blastx analysis, appears to belong to the order Sphingomonadales
- * Potential family Sphingomonadaceae, potetial genus Sphingorhabdus)
+ * Potential family Sphingomonadaceae, potential genus Sphingorhabdus)
+ * Consistent with prediction in 00_data/pb_359 readme
 * pb_359_5 - Still waiting for assemblies to complete on account of errors...
 * pb_359_6 - Assemby will go no lower than 9 polished contigs
  * Try assembling with seed read length 5k, or attempt blastx analysis?
@@ -674,3 +679,7 @@ at least up to the family Flavobacteriaceae.
  * May need to attempt reassembly, as genus identity is far from certain...
 * pb_359_8 - After blastx analysis, appears to belong to the family Flavobacteriaceae
  * Potential genus Arenibacter (known to associate with Skeletonema)
+ * Consistent with prediction in 00_data/pb_359 readme
+
+Unable to find any good reason in the log files as to why pb_359_5-15000 continually fails; will
+wait on the results of the pb_359_5-18000 test rerun before deciding how to proceed...

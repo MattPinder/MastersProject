@@ -654,12 +654,12 @@ a member of the class Alphaproteobacteria.
 * pb_359_8
  * Both 5% and 10% queries returned the same top results; with a bit score of 2962,
 ___Arenibacter algicola___ appears to be the closest match (hit #2 was from the same species,
-with a bit score of 2777); hit #3 was from _Cellulophaga baltica) (bit score 2770).
+with a bit score of 2777); hit #3 was from _Cellulophaga baltica_) (bit score 2770).
  * __Current hypothesis - member of the family Flavobacteriaceae, potential
 genus Arenibacter.__
   * Hits lower in the list (e.g. _Muricauda sp. MAR_2010_75_ and _Sediminicola sp. YIK13_) support
 at least up to the family Flavobacteriaceae.
- * _Arenibacter algicola_ known to associate with Skeletonema costatum based on its initial discovery
+ * _Arenibacter algicola_ known to associate with _Skeletonema costatum_ based on its initial discovery
 (http://aem.asm.org/content/early/2013/11/04/AEM.03104-13).
  * _Arenibacter algicola_ genome size - 5,550,230 bp
  * pb_359_8 genome size - 5,839,016 bp
@@ -771,3 +771,30 @@ blasting shortest fragment of _2 to nr database to try and identify it (redundan
 
 N50 read length from raw data often gives a ballpark figure for a suitable seed read length,
 so will run assembly jobs for _1 and _3 at 16k SRL (16512 and 16513 respectively).
+
+### Status:
+* pb_359_1 - Attempting an assembly at 16k SRL to try and get less than 9 polished contigs
+* pb_359_2 - After blastx analysis, appears to belong to the genus Roseovarius
+ * Consistent with prediction in 00_data/pb_359 readme
+ * Second-longest contig matches well to the longest; shortest contig matches to neither...
+* pb_359_3 - Attempting an assembly at 16k SRL to try and get less than 5 polished contigs
+* pb_359_4 - Potentially identified; see yesterday's status
+* pb_359_5 - As 15k SRL resulted in persistent failure, yet 18k continues to work,
+attempting with 16k to see if this gives any results
+* pb_359_6 - ???
+* pb_359_7 - All four contigs match well to each other when blastn-ed to themselves; new
+approach needed in assembly...?
+* pb_359_8 - Potentially identified; see yesterday's status
+
+Started a pb_359_6-5000 job (16514) to see whether going any lower will yield a better result
+thank 9 polished contigs.  
+At the same time, will run a blastx analysis (5% and 10%) on one of the other pb_359_6 jobs
+(16496) just in case the number of contigs really won't go any lower.  
+Rerunning previous self-blasts (_2 and _7) for .xml output
+
+__Tomorrow - check up on FALCON__
+
+Extract some matched regions in multi-contig samples and blast for identity
+
+2x _6 jobs running
+5 assembly jobs running

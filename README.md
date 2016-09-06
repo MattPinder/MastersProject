@@ -37,12 +37,12 @@ names found by Oskar, however, despite consistent locations and functions.
 
 Using output from myRAST, compared EC number of random protein with the KEGG
 database. Several gene names found (species-dependent), but unsure how to
-determine which is the appropriate name for Kordia. In any case, would be too
+determine which is the appropriate name for _Kordia_. In any case, would be too
 time-consuming to name all 4000+ Kordia genes in this way...
 
 # 11 August 2016
 
-Had to stop myRAST's final step - Compute correspondences - part-way yesterday,
+Had to stop myRAST's final step - 'Compute correspondences' - part-way yesterday,
 so re-running the analysis while I look at yesterday's output, which looks
 alright so far.
 
@@ -59,8 +59,8 @@ As with GeneMarkS, this returns only location predictions, not names.
 
 BLASTP search of 2053006..2053860 (Periplasmic binding protein-like II; no name)
 returned a hit spanning almost the whole protein with an E-value of 4.12e-160
-for 'PBP2_Ca3427_like' (a hypothetical protein...).
-When performing a similar search with Kordia sp. proteins which have already
+for 'PBP2_Ca3427_like' (a hypothetical protein...).  
+When performing a similar search with _Kordia sp._ proteins which have already
 been given names in the previous analysis, the results I receive are
 inconsistent; I don't get the same name as was found previously...
 
@@ -82,7 +82,7 @@ Spreadsheet'.
 * No rpsU heading, so look under S21p (the product) - one hit, labelled 1, as
 this is the first 'pegged' result.  
 * After clicking on '1', run Psi-Blast; this opens a Psi-Blast window (first
-hit Kordia jejudonensis) which identifies rpsU as a specific hit (with E-value
+hit _Kordia jejudonensis_) which identifies rpsU as a specific hit (with E-value
 of 4.63e-14).  
 
 Test the above process with the next gene in the genbank file - an unnamed
@@ -132,15 +132,15 @@ apparently contains a 'Cro/C1-type HTH DNA-binding domain'. Again, this would
 be time-consuming to check manually for all of the proteins labelled as
 hypothetical in the .gbk file...
 
-Some K. algicida protein sequences are present on NCBI, including some with
+Some _K. algicida_ protein sequences are present on NCBI, including some with
 gene names. Checking manually (yet again), I found that PROKKA_01500 from the
 aforemetioned .gbk file bears a resemblance to [the preprotein translocase
 subunit YajC found on NCBI] (http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
-Judging by where the alignment starts and ends vs. the K. algicida sequence,
+Judging by where the alignment starts and ends vs. the _K. algicida_ sequence,
 the gene predictor MAY have made a mistake in the alignment...  
-K. sp.:  
+_Kordia sp._:  
 MIAVLYFLIIAPSLKKQKKEKKFMASVKKGDRVITKSGIHGKIVELNDKDFTCVIETGAGKIKFERAALSVEASARLNNPPAKK  
-K. alg.:  
+_Kordia algicida_:  
 MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKPPSEKK  
 
 # 16 August 2016
@@ -154,7 +154,7 @@ to Oskar's V5 genbank file, found one of his with no gene name but which
 identified a heavy metal-associated domain, which agrees with the CD search's
 claim that the gene is the copper chaperone CopZ. Subsequent BLASTP gave a
 (perhaps tenuous) match - 68% identity, 4e-37 E-value, 100% coverage - to
-K. zhangzhouensis's 'heavy metal transporter' gene. Right now, CopZ is my
+_Kordia zhangzhouensis_'s 'heavy metal transporter' gene. Right now, CopZ is my
 best guess. Once again, however, this gene-by-gene checking is too slow to
 be very useful...
 
@@ -210,7 +210,7 @@ Have written a script to test the workings of PROKKA, output, etc.
 Require tbl2asn 23.0 or higher...
 
 * Create editable folder to store PROKKA DBs (confirm where!)
-* Download 3x .gbk files for Kordia and make a PROKKA database (see Oskar's readme for details)
+* Download 3x .gbk files for _Kordia_ and make a PROKKA database (see Oskar's readme for details)
 * Find out why the database creation didn't work!  
 
 # 25 August 2016
@@ -224,7 +224,7 @@ Exporting a DNA fasta file from myRAST for use as input.
 Running blastn first to see if anything new comes up.  
 
 Local BLAST vs database of species shown as similar in Blast2GO?  
-e.g. Flavobacterium psychrophilum, Lutibacter, etc.
+e.g. _Flavobacterium psychrophilum_, _Lutibacter_, etc.
 
 Downloading and installing Pathway Tools...  
 IMPORTANT: Pathway Tools does NOT require gene NAMES to construct pathways; it only
@@ -512,17 +512,17 @@ Cautiously attempting pb_359_2-10000_Rerun_8 (16494)
 
 Summary of current status of the samples
 
-| Sample     | Status                                                              |
-|------------|---------------------------------------------------------------------|
-| pb_359_1   | Requires additional assembly job(s)                                 |
-| pb_359_2   | Running assembly job                                                |
-| pb_359_3   | Requires additional assembly job(s)                                 |
-| pb_359_4   | Waiting for rough phylogeny indicator from blastx (still running)   |
-| pb_359_5   | Waiting to run assembly job                                         |
-| pb_359_6   | Running assembly job; more waiting to be run                        |
-| pb_359_7   | Will run blastx once _4 and _8 are complete (16445)                 |
-| pb_359_8   | Waiting for rough phylogeny indicator from blastx (still running)   |
-| Kordia sp. | Attempting to identify remaining hypothetical proteins using Prokka |
+| Sample       | Status                                                              |
+|--------------|---------------------------------------------------------------------|
+| pb_359_1     | Requires additional assembly job(s)                                 |
+| pb_359_2     | Running assembly job                                                |
+| pb_359_3     | Requires additional assembly job(s)                                 |
+| pb_359_4     | Waiting for rough phylogeny indicator from blastx (still running)   |
+| pb_359_5     | Waiting to run assembly job                                         |
+| pb_359_6     | Running assembly job; more waiting to be run                        |
+| pb_359_7     | Will run blastx once _4 and _8 are complete (16445)                 |
+| pb_359_8     | Waiting for rough phylogeny indicator from blastx (still running)   |
+| _Kordia sp._ | Attempting to identify remaining hypothetical proteins using Prokka |
 
 # 2 September 2016
 
@@ -552,7 +552,7 @@ blastx command notes:
 * -query_loc command:
  * `-query_loc X-Y`, where X and Y are the limits
  * For fasta files with a single contig, set an arbitrary number of bases to check (e.g. first 5%?)
- * For fastas with multiple contigs, use fp.py --length --header <NAME_OF_FASTA_FILE> | sort -n -r > <NAME_OF_OUTPUT_FILE>
+ * For fastas with multiple contigs, use `fp.py --length --header <NAME_OF_FASTA_FILE> | sort -n -r > <NAME_OF_OUTPUT_FILE>`
 to determine the length of the contigs, then set -query_loc slightly longer than the second contig
 * Use 40 cores each to speed things along (progress has been too slow when working with the WHOLE genome
 __and__ using only 10 cores, so using less material and more cores should give us faster results
@@ -631,15 +631,15 @@ One last resubmission of the three blastx jobs, this time querying 20% of the su
 Summary of findings from 5% and 10% queries:
 * pb_359_4
  * Both 5% and 10% queries returned the same top results; with a bit score of 2220,
-__Sphingorhabdus sp. M41__ appears to be the closest match (hit #3 was from the same species,
+___Sphingorhabdus sp. M41___ appears to be the closest match (hit #3 was from the same species,
 with a bit score of 1757); hit #2 was from Sphingomonadales bacterium EhC05 (bit score 1843).
  * __Current hypothesis - member of the order Sphingomonadales, potential family
 Sphingomonadaceae, potential genus Sphingorhabdus.__
-  * Hits lower in the list (e.g. Sphingobium sp. C100 and Erythrobacter) support at least up to
+  * Hits lower in the list (e.g. _Sphingobium sp. C100_ and _Erythrobacter_) support at least up to
 the order Sphingomonadales.
- * Discovery of Sphingorhabdus sp. M41 published just a few months ago
+ * Discovery of _Sphingorhabdus sp. M41_ published just a few months ago
 (http://www.sciencedirect.com/science/article/pii/S0168165616301961).
- * Sphingorhabdus sp. M41 genome size - 3,339,521 bp
+ * _Sphingorhabdus sp. M41_ genome size - 3,339,521 bp
  * pb_359_4 genome size - 3,492,548 bp
 
 * pb_359_7
@@ -653,15 +653,15 @@ a member of the class Alphaproteobacteria.
 
 * pb_359_8
  * Both 5% and 10% queries returned the same top results; with a bit score of 2962,
-__Arenibacter algicola__ appears to be the closest match (hit #2 was from the same species,
-with a bit score of 2777); hit #3 was from Cellulophaga baltica (bit score 2770).
+___Arenibacter algicola___ appears to be the closest match (hit #2 was from the same species,
+with a bit score of 2777); hit #3 was from _Cellulophaga baltica) (bit score 2770).
  * __Current hypothesis - member of the family Flavobacteriaceae, potential
 genus Arenibacter.__
-  * Hits lower in the list (e.g. Muricauda sp. MAR_2010_75 and Sediminicola sp. YIK13) support
+  * Hits lower in the list (e.g. _Muricauda sp. MAR_2010_75_ and _Sediminicola sp. YIK13_) support
 at least up to the family Flavobacteriaceae.
- * A. algicola known to associate with Skeletonema costatum based on its initial discovery
+ * _Arenibacter algicola_ known to associate with Skeletonema costatum based on its initial discovery
 (http://aem.asm.org/content/early/2013/11/04/AEM.03104-13).
- * Arenibacter algicola genome size - 5,550,230 bp
+ * _Arenibacter algicola_ genome size - 5,550,230 bp
  * pb_359_8 genome size - 5,839,016 bp
 
 ### Status:
@@ -736,21 +736,21 @@ before considering alternatives.
 
 Check results for pb_359_2 blastx tests:
 * Both 5% and 10% queries returned the same top results; with a bit score of 1892 and 4826
-respectively, __Roseovarius sp. TM1035__ appears to be the closest match (hit #2 of the 10%
+respectively, ___Roseovarius sp. TM1035___ appears to be the closest match (hit #2 of the 10%
 query was from the same species, with a bit score of 4812); other hits in the top 3 were:
- * Roseovarius mucosus (hit #2 in 5% query; bit score 1847)
- * Roseovarius sp. 217 (hit #3 in 5% query; bit score 1800)
- * Roseovarius mucosus DSM 17069 (hit #3 in 10% query; bit score 2498)
+ * _Roseovarius mucosus_ (hit #2 in 5% query; bit score 1847)
+ * _Roseovarius sp. 217_ (hit #3 in 5% query; bit score 1800)
+ * _Roseovarius mucosus DSM 17069_ (hit #3 in 10% query; bit score 2498)
 * __Current hypothesis - member of the genus Roseovarius.__
- * Hits lower in the list (e.g. Actibacterium atlanticum and Methyloligella halotolerans)
+ * Hits lower in the list (e.g. _Actibacterium atlanticum_ and _Methyloligella halotolerans_)
 support at least up to the class Alphaproteobacteria.
  * [Found associated with dinoflagellates] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/),
-involved in dimethylsulfoniopropionate metabolism ([DMSP metabolism in S. marinoi]
+involved in dimethylsulfoniopropionate metabolism ([DMSP metabolism in _S. marinoi_]
 (http://www.sciencedirect.com/science/article/pii/S0022098111005429)).
- * Roseovarius sp. TM1035 genome size - 4,209,812 bp
+ * _Roseovarius sp. TM1035_ genome size - 4,209,812 bp
  * pb_359_2 genome size - 4,188,132 bp (longest contig)/ 4,415,183 (sum of polished contigs)
-* Roseovarius sp. TM1035 also appears as the top result for the second longest contig, and
-the top result of the third - P. aquimaris - shares Roseovarius' family of Rhodobacteraceae.
+* _Roseovarius sp. TM1035_ also appears as the top result for the second longest contig, and
+the top result of the third - _P. aquimaris_ - shares Roseovarius' family of Rhodobacteraceae.
  * __Possible need for reassembly?__
 
 Results for pb_359_2, _4 and _8 have thus far been consistent with the preliminary 16S analyses.

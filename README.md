@@ -64,8 +64,8 @@ When performing a similar search with Kordia sp. proteins which have already
 been given names in the previous analysis, the results I receive are
 inconsistent; I don't get the same name as was found previously...
 
-List of annotation pipelines which might be useful:
-https://omictools.com/genome-annotation-category
+[List of annotation pipelines which might be useful]
+(https://omictools.com/genome-annotation-category)
 
 # 12 August 2016
 
@@ -134,8 +134,8 @@ hypothetical in the .gbk file...
 
 Some K. algicida protein sequences are present on NCBI, including some with
 gene names. Checking manually (yet again), I found that PROKKA_01500 from the
-aforemetioned .gbk file bears a resemblance to the preprotein translocase
-subunit YajC found on NCBI (http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
+aforemetioned .gbk file bears a resemblance to [the preprotein translocase
+subunit YajC found on NCBI] (http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
 Judging by where the alignment starts and ends vs. the K. algicida sequence,
 the gene predictor MAY have made a mistake in the alignment...  
 K. sp.:  
@@ -147,7 +147,7 @@ MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKP
 
 Small victory?  
 Took a partial list of proteins labelled 'Hypothetical protein' in
-myRAST_export.xls, and ran it through Batch Web CD-Search Tool
+myRAST_export.xls, and ran it through [Batch Web CD-Search Tool]
 (http://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi); some of those
 labelled as specific hits included gene names; after comparing a few of these
 to Oskar's V5 genbank file, found one of his with no gene name but which
@@ -200,7 +200,8 @@ Rerunning local BLASTP with more stringent e-value criterion:
 C:\Users\Matt\Desktop\PROJECT\blast-2.4.0+\bin> blastp -db ../db/Kordia -query
 ../../AUP2_reformatted_2.txt -out AUP_Test_Results_2 -evalue 1e-040
 
-* Check how to set up and configure PROKKA databases; [appears to be possible] (https://github.com/tseemann/prokka/issues/95)
+* Check how to set up and configure PROKKA databases; [appears to be possible]
+(https://github.com/tseemann/prokka/issues/95)
 
 Created new branch in the kordia_pathway_analysis repository in which to store my
 own work.
@@ -262,7 +263,7 @@ assembly run; once there is a README.md in each folder, can push to GitLab.
 
 ### For Monday
 
-Scrutinise results of #6; potential problems with data transfer...
+Scrutinise results of #6; potential problems with data transfer...  
 Run jobs 7 and 8
 
 # 27 August 2016
@@ -285,7 +286,8 @@ Blastx of single-unitig samples 4 & 8
 
 Folder structure changed to simplify BLAST script syntax
 
-Startd a Google Docs page to make [notes for my thesis] (https://docs.google.com/document/d/1_l0IFS5Dkj8g38A57gzm-sVaJx63IGsWnzQb567rwWc/edit?usp=sharing).
+Startd a Google Docs page to make [notes for my thesis]
+(https://docs.google.com/document/d/1_l0IFS5Dkj8g38A57gzm-sVaJx63IGsWnzQb567rwWc/edit?usp=sharing)
 
 BLAST search appears to be stuck in the queue - double-check when /nobackup
 is brought back online...
@@ -719,3 +721,53 @@ the three contigs of pb_359_2 will take ~6 hours and ~12 hours respectively.
 __Useful commands:__
 * `qstat -j [Job#]` - get information on a specific job in the queue
 * `qalter [Job#] -q [New queue name]` - moves a job from its current queue to a new one
+
+# 6 September 2016
+
+Cloned Skeletonema_marinoi_microbiome_project to my home directory, so that nobackup can be
+taken offline; __remember to include this clone in push/pulls.__
+
+Job 16508 (copy of older pb_359_5-18000 job) worked, so apparently SMRT doesn't like the
+combination of sample 5 and a 15k seed read length. Retry with 16k (job 16510).
+
+Target coverage 25 test for pb_359_7 (job 16509) returned exactly the same results as
+with a target coverage of 30; retry one more time with target coverage 20 (job 16511)
+before considering alternatives.
+
+Check results for pb_359_2 blastx tests:
+* Both 5% and 10% queries returned the same top results; with a bit score of 1892 and 4826
+respectively, __Roseovarius sp. TM1035__ appears to be the closest match (hit #2 of the 10%
+query was from the same species, with a bit score of 4812); other hits in the top 3 were:
+ * Roseovarius mucosus (hit #2 in 5% query; bit score 1847)
+ * Roseovarius sp. 217 (hit #3 in 5% query; bit score 1800)
+ * Roseovarius mucosus DSM 17069 (hit #3 in 10% query; bit score 2498)
+* __Current hypothesis - member of the genus Roseovarius.__
+ * Hits lower in the list (e.g. Actibacterium atlanticum and Methyloligella halotolerans)
+support at least up to the class Alphaproteobacteria.
+ * [Found associated with dinoflagellates] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/),
+involved in dimethylsulfoniopropionate metabolism ([DMSP metabolism in S. marinoi]
+(http://www.sciencedirect.com/science/article/pii/S0022098111005429)).
+ * Roseovarius sp. TM1035 genome size - 4,209,812 bp
+ * pb_359_2 genome size - 4,188,132 bp (longest contig)/ 4,415,183 (sum of polished contigs)
+* Roseovarius sp. TM1035 also appears as the top result for the second longest contig, and
+the top result of the third - P. aquimaris - shares Roseovarius' family of Rhodobacteraceae.
+ * __Possible need for reassembly?__
+
+Results for pb_359_2, _4 and _8 have thus far been consistent with the preliminary 16S analyses.
+
+__Results of pb_359_7 self-blastn:__ Results blast very well to themselves; implies that there
+was an issue with the assembly?
+
+blastn _2 to itself, to try and clarify identity of fragments  
+`makeblastdb -in 16458.fasta -dbtype nucl`  
+Two longest fragments blast very well to each other, but shortest does not; only one of the
+fragments is from an outside source
+
+Extracting sequences from fasta files:  
+`samtools faidx [filename].fasta`  
+`samtools faidx [filename].fasta [sequence name]:[start-end]`
+
+blasting shortest fragment of _2 to nr database to try and identify it (redundant, in retrospect)
+
+N50 read length from raw data often gives a ballpark figure for a suitable seed read length,
+so will run assembly jobs for _1 and _3 at 16k SRL (16512 and 16513 respectively).

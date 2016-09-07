@@ -787,7 +787,7 @@ approach needed in assembly...?
 * pb_359_8 - Potentially identified; see yesterday's status
 
 Started a pb_359_6-5000 job (16514) to see whether going any lower will yield a better result
-thank 9 polished contigs.  
+than 9 polished contigs.  
 At the same time, will run a blastx analysis (5% and 10%) on one of the other pb_359_6 jobs
 (16496) just in case the number of contigs really won't go any lower.  
 Rerunning previous self-blasts (_2 and _7) for .xml output
@@ -798,3 +798,46 @@ Extract some matched regions in multi-contig samples and blast for identity
 
 2x _6 jobs running
 5 assembly jobs running
+
+# 7 September 2016
+
+All 5 assembly jobs from yesterday failed; restarted around 8am, will keep a close watch
+* A lot of the jobs failed at unusual times; possible issue with the node?
+
+| Job   | First error                  |
+|-------|------------------------------|
+| 16510 | 23:49 (no error reported...) |
+| 16511 | 00:09                        |
+| 16512 | 03:25                        |
+| 16513 | 03:26                        |
+| 16514 | 04:23                        |
+
+The first of the two _6 blast jobs is STILL running...  
+Still running, but some results have already been printed to the output file
+
+Considering how long the _6 blast is taking for 5%, 10% job has been deleted; 5% results
+so far aren't promising, in any case...  
+__Current hypothesis:__ Species of Sulfitobacter, however this contradicts the results
+found in the 16S analysis (_1 WAS predicted to be Sulfitobacter, however...)
+* Some Sulfitobacter species __are__ known to associate with diatoms, however, including
+_Sulfitobacter pseudonitzschiae_, which was the the second-highest blastx result for the
+longest contig ([see article] (http://www.ncbi.nlm.nih.gov/pubmed/25278561)).
+
+__Note on blastx:__ Jobs seem to take ~1 hour per 100,000 bases
+
+Jobs 16516, 16517, 16519 failed; 16515 and 16518 still running for now...
+
+__Falcon__
+* Three core files - fc_run.cfg, input.fofn and runFALCON.sge - copied to directory.
+* Uncorrected reads taken from SMRT Portal, in this case the filtered subreads fasta file.
+* input.fofn edited with name of the above fasta file.
+* Subdirectories made for seed read lengths of 14k, 15k, 16k, 17k and 18k
+* Changed fc_run.cfg `length_cutoff` and `length_cutoff_pr` parameters to the respective
+seed read lengths; will leave other parameters as they are for now, and see how these
+assemblies compare to the Hgap assemblies
+
+Falcon jobs have been submitted, will examine output tomorrow.  
+Falcon jobs finished __very__ quickly in comparison to the jobs from Hgap...
+
+Git seems to be having some problems, either with file sizes or with the directory; will have
+to investigate...

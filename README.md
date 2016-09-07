@@ -838,6 +838,3 @@ assemblies compare to the Hgap assemblies
 
 Falcon jobs have been submitted, will examine output tomorrow.  
 Falcon jobs finished __very__ quickly in comparison to the jobs from Hgap...
-
-Git seems to be having some problems, either with file sizes or with the directory; will have
-to investigate...

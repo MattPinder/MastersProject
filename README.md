@@ -838,3 +838,91 @@ assemblies compare to the Hgap assemblies
 
 Falcon jobs have been submitted, will examine output tomorrow.  
 Falcon jobs finished __very__ quickly in comparison to the jobs from Hgap...
+
+# 8 September 2016
+
+SMRT Portal now reports that only 16515, in fact, failed yesterday; rerunning now as 16520. 
+Download 16516-9.
+
+No change in the number of polished contigs for any of the results downloaded...  
+Will most likely move on to Falcon after the final HGAP job has completed.
+
+### Observations from Falcon run of _1:
+* Used subreads from job 16439
+* Five runs tried - 14k, 15k, 16k, 17k and 18k seed read length; all other options left as default
+* If I have interpreted the output correctly, all runs gave 8 contigs rather than 9 or 10 as with HGAP
+ * 18k has 15 contigs...
+* Aside from SRL 18k (1.1 Mb), the other runs estimated a longest contig length of ~3.6 Mb.
+ * Max contig length of HGAP assembly of _1 - ~3.6 Mb.
+ * Second-longest contigs range in size from ~100 Kb to 1 Mb
+
+| SRL | Note                  |
+|-----|-----------------------|
+| 14k | 2 linear, 6 circular  |
+| 15k | 1 linear, 7 circular  |
+| 16k | 2 linear, 6 circular  |
+| 17k | 3 linear, 5 circular  |
+| 18k | 10 linear, 5 circular |
+
+Attempt Falcon run of _3 (16472)  
+Double-check parameters to see whether anything other than SRL ought to be changed  
+Range: 15k-22k (28, 6, 5, 6, 5, 8, ? contigs respectively)
+
+Notes on Falcon config options added to 01_assembles folder
+
+Get information on longest contig  
+`head -n1 seed_read_*/2-asm-falcon/p_ctg.fa > longest_contig.txt`
+
+### Observations from Falcon run of _3:
+* Eight runs tried - 15k, 16k, 17k, 18k, 19k, 20k, 21k and 22k seed read length; all other options
+left as default
+* The following results were obtained:
+
+| SRL   | Contigs | Longest contig | Note                  |
+|-------|---------|----------------|-----------------------|
+| 15k   | 5       | 3757283        | 3 linear, 2 circular  |
+| 16k   | 6       | 3771166        | 4 linear, 2 circular  |
+| 16.5k | 4       | 3842929        | 2 linear, 2 circular  |
+| 17k   | 3       | 3822374        | 1 linear, 2 circular  |
+| 17.5k | 4       | 3464551        | 3 linear, 1 circular  |
+| 18k   | 8       | 1067916        | 7 linear, 1 circular  |
+| 19k   | 21      | 426820         | 20 linear, 1 circular |
+| 20k   | 26      | 290208         | All linear            |
+| 21k   | 21      | 100997         | All linear            |
+| 22k   | 6       | 96084          | All linear            |
+
+ * Max contig length of HGAP assembly of _3 between 2.1 Mb and 3.8 Mb (most results sit at 2.4 Mb)
+ * Second-longest contigs from Falcon range from ~23 Kb to ~0.8 Mb
+
+Experimental attempt at 16,500 seed read length...  
+Results added to the above table.
+
+Another experimental attempt at 17,500 seed read length...  
+Results added to the above table.
+
+The 17k result of 3 contigs is a definite improvement over the ~5/6 from the HGAP assembly...
+
+Attempting a Falcon run with sample _2, using subreads from 16458
+
+### Observations from Falcon run of _2:
+* Six runs tried - 5k, 6k, 7k, 8k, 9k and 10k seed read length; all other options left as default
+* The following results were obtained:
+
+| SRL | Contigs | Longest contig | Note                    |
+|-----|---------|----------------|-------------------------|
+| 5k  | 3       | 4187685        | 1 linear, 2 circular... |
+| 6k  | 3       | 4185067        | 1 linear, 2 circular... |
+| 7k  |       |          |
+| 8k  |       |          |
+| 9k  |       |          |
+| 10k |       |          |
+
+ * Max contig length of HGAP assembly of _2 ~4.2 Mb
+ * Second-longest contigs from Falcon range from ... to ...
+
+__Try:__ Run a blastx of the 17k pb_359_3 result; see whether the results from the 'linear'
+contig are much different to those of the 'circular' ones
+
+### For tomorrow:
+* Check remaining results from _2 Falcon test
+* Check results from _3 Falcon blastx analysis (if complete)

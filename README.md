@@ -912,17 +912,156 @@ Attempting a Falcon run with sample _2, using subreads from 16458
 |-----|---------|----------------|-------------------------|
 | 5k  | 3       | 4187685        | 1 linear, 2 circular... |
 | 6k  | 3       | 4185067        | 1 linear, 2 circular... |
-| 7k  |       |          |
-| 8k  |       |          |
-| 9k  |       |          |
-| 10k |       |          |
+| 7k  | 3       | 4204009        | 1 linear, 2 circular... |
+| 8k  | 3       | 4183327        | 1 linear, 2 circular... |
+| 9k  | 3       | 4171540        | 1 linear, 2 circular... |
+| 10k | 3       | 4176707        | 1 linear, 2 circular... |
 
  * Max contig length of HGAP assembly of _2 ~4.2 Mb
- * Second-longest contigs from Falcon range from ... to ...
+ * Second-longest contigs from Falcon 180,096 bp for all SRLs
+  * Shortest contigs all 30,281 bp
 
 __Try:__ Run a blastx of the 17k pb_359_3 result; see whether the results from the 'linear'
 contig are much different to those of the 'circular' ones
 
 ### For tomorrow:
 * Check remaining results from _2 Falcon test
+ * Results added to the above table
 * Check results from _3 Falcon blastx analysis (if complete)
+
+# 9 September 2016
+
+16520 succeeded with a single contig!
+200k bases appear to have gone missing...
+
+blastx _5 1-contig result; two jobs running, 5% and 10%, as usual
+* Jobs seem to take ~1 hour per 100,000 bases, so jobs should take ~2 and ~4 hours, respectively.
+
+_3 blastx analysis
+
+* Attempt _1 Falcon down to ~7/5k SRL
+* Check coverage of contigs that have disappeared, e.g. in _8
+* blastx Falcon results
+
+Check blastx results from Falcon run of _3
+* With a bit score of 1859, __Loktanella vestfoldensis__ appears to be the closest match
+(hit #2 was from the same species, with a bit score of 1840); hit #3 was from Roseobacter
+sp. CCS2.
+* __Current hypothesis - member of the family Rhodobacteraceae, potential genus Loktanella.__
+ * Hits lower in the list (e.g. Sulfitobacter) support placement in the Rhodobacteraceae.
+ * [Discovery paper] (http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.0300$
+ * Loktanella vestfoldensis genome size - 3,063,691 bp
+ * pb_359_2 longest contig size - 3,834,127 bp
+* Consistent with 16S analysis.
+
+| Job              | Job ID | Status  |
+|------------------|--------|---------|
+| _5 blastx - 5%   | 5301   | Done    |
+| _5 blastx - 10%  | 5302   | Running | *
+|------------------|--------|---------|
+| _2 Falcon blastx | 5326   | Waiting |
+|------------------|--------|---------|
+| _1 Falcon - 13k  | 5305   | Done    |
+| _1 Falcon - 12k  | 5306   | Done    |
+| _1 Falcon - 11k  | 5307   | Done    |
+| _1 Falcon - 10k  | 5308   | Done    |
+| _1 Falcon - 9k   | 5309   | Done    | 
+| _1 Falcon - 8k   | 5310   | Done    |
+| _1 Falcon - 7k   | 5311   | Done    |
+| _1 Falcon - 6k   | 5313   | Done    |
+| _1 Falcon - 5k   | 5315   | Done    |
+|------------------|--------|---------|
+| _3 Falcon - 14k  | 5316   | Done    |
+| _3 Falcon - 13k  | 5317   | Done    |
+| _3 Falcon - 12k  | 5318   | Done    |
+| _3 Falcon - 11k  | 5319   | Done    |
+| _3 Falcon - 10k  | 5320   | Done    |
+| _3 Falcon - 9k   | 5321   | Done    |
+| _3 Falcon - 8k   | 5322   | Running | *
+| _3 Falcon - 7k   | 5323   | Waiting |
+| _3 Falcon - 6k   | 5324   | Waiting |
+| _3 Falcon - 5k   | 5325   | Waiting |
+
+Where single contigs have been obtained, where did the additional contigs go...?
+* pb_359_4
+ * Both the SciLifeLab assembly and our own had 1 contig and were within a kilobase of
+one another in size; this should be okay.
+* pb_359_5
+ * The single-contig assembly size was 4,406 Kb; the two-contig assembly size was 4,670 Kb
+  * Over 250 Kb lost
+ * Compare 16520 (1 contig) and 16461 (2 contigs)
+  * The second contig in 16461 has a very high coverage (~350 vs. 200), and length ~250 Kb
+  * __Seems likely that a repeat region is the culprit, but perhaps blastn 16461 to itself to confirm?__
+* pb_359_8
+ * The single-contig assembly size was 5,829 Kb; the two-contig assembly size was 5,924 Kb
+  * Around 100 Kb lost
+ * Compare 16446 (1 contig) and SciLifeLab (2 contigs)
+  * The second contig from SciLifeLab has a very high coverage (~500 vs. 150), and length ~90 Kb
+  * __Seems likely that a repeat region is the culprit.__
+
+__To do:__
+* Write a tutorial for use of Quiver from the command line
+* Blast two-contig results to themselves to determine where the other contig disappeared
+to in the one-contig results
+
+Blastx results from pb_359_5:  
+Based on 5% results, appears to be a species of Marinobacter, which is consistent with
+the 16S analysis. Still waiting on 10%...
+
+Blastn pb_359_5 two-contig assembly (16461) to itself to see whether the high-coverage region
+maps well to the larger contig.
+* The match isn't perfect (bit score 1836), and some gaps are present...
+
+New _1 Falcon runs complete - 13k to 5k
+* Longest contig - new results still 3.5-3.6 Mb
+* Number of contigs - still drops no lower than 8 or 9
+
+| Sample   | One contig?                    | Next step                 |
+|----------|--------------------------------|---------------------------|
+| pb_359_1 | No - assemblers give 8/9       | ???                       |
+| pb_359_2 | No - assemblers give 3         | Check ongoing blastx jobs |
+| pb_359_3 | No - assemblers give 3+        | Check ongoing Falcon jobs |
+| pb_359_4 | Yes                            | Circularise?              |
+| pb_359_5 | Yes + self-blast on old contig | Circularise?              |
+| pb_359_6 | No - HGAP gives 9              | Try Falcon assembly       |
+| pb_359_7 | No - HGAP gives 4              | Try Falcon assembly       |
+| pb_359_8 | Yes                            | Try to blastx vs. SSL     |
+
+_6 - 16444: 12k -> 5k
+
+_7 - 16445: 21k -> 5k
+
+| Job    | Queue ID |
+|--------|----------|
+| _6 12k | 5333     | 
+| _6 11k | 5334     |
+| _6 10k | 5335     |
+| _6  9k | 5336     |
+| _6  8k | 5337     |
+| _6  7k | 5338     |
+| _6  6k | 5339     |
+| _6  5k | 5340     |
+|--------|----------|
+| _7 21k | 5341     |
+| _7 20k | 5342     |
+| _7 19k | 5343     |
+| _7 18k | 5344     |
+| _7 17k | 5345     |
+| _7 16k | 5346     |
+| _7 15k | 5347     |
+| _7 14k | 5348     |
+| _7 13k | 5349     |
+| _7 12k | 5350     |
+| _7 11k | 5351     |
+| _7 10k | 5352     |
+| _7  9k | 5353     |
+| _7  8k | 5354     |
+| _7  7k | 5355     |
+| _7  6k | 5356     |
+| _7  5k | 5357     |
+
+__Note:__ Prokka databases now storeable in public folder
+
+[Useful page for Quiver] (http://bioinfo-master.ird.fr:8080/smrtanalysis/doc/bioinformatics-tools/GenomicConsensus/doc/HowToQuiver.html)?
+
+Remember to update Git on Monday morning!

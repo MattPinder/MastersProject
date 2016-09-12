@@ -815,7 +815,7 @@ All 5 assembly jobs from yesterday failed; restarted around 8am, will keep a clo
 The first of the two _6 blast jobs is STILL running...  
 Still running, but some results have already been printed to the output file
 
-Considering how long the _6 blast is taking for 5%, 10% job has been deleted; 5% results
+Considering how long the sample 6 blast is taking for 5%, 10% job has been deleted; 5% results
 so far aren't promising, in any case...  
 __Current hypothesis:__ Species of Sulfitobacter, however this contradicts the results
 found in the 16S analysis (_1 WAS predicted to be Sulfitobacter, however...)
@@ -1065,3 +1065,153 @@ __Note:__ Prokka databases now storeable in public folder
 [Useful page for Quiver] (http://bioinfo-master.ird.fr:8080/smrtanalysis/doc/bioinformatics-tools/GenomicConsensus/doc/HowToQuiver.html)?
 
 Remember to update Git on Monday morning!
+
+# 12 September 2016
+
+Check new sample 6 and 7 assemblies
+
+_6:  
+* 12k to 5k
+ * Results range from 8 contigs to 22...
+ * Perhaps try a few higher SRL?
+  * Perhaps investigate around 11k; longest contig 'circular'
+
+_7:  
+* 21k to 5k
+ * Results bottom out at 4 contigs...
+
+Check sample 2 Blastx:  
+* Repeats the findings of the HGAP assembly's Blastx; likely Roseovarius
+
+Check new sample 3 Falcon assembly:  
+* 14k to 5k
+* Updated longest_contig, number_of_contigs and second_longest_contig files
+ * Still no single-contig result, and seem to have passed over the low point
+ * Investigate more values around 17k, e.g. 16750 and 17250?
+  * Or change other parameters?
+
+Check sample 5 10% Blastx:  
+* Results also suggest that the bacterium belongs to genus Marinobacter
+
+__Current Falcon results:__
+
+| Sample   | Lowest # of contigs | Longest contig | Second-longest contig |
+|----------|---------------------|----------------|-----------------------|
+| pb_359_1 | 8 (14k-17k)         | ~3.58 Mb       | ~427 Kb               |
+| pb_359_2 | 3 (all [5k-10k])    | ~4.2 Mb        | 180,096 bp            |
+| pb_359_3 | 3 (17k)             | ~3.8 Mb        | ~110 Kb               |
+| pb_359_4 | ---                 | ---            | ---                   |
+| pb_359_5 | ---                 | ---            | ---                   |
+| pb_359_6 | 8 (11k)             | ~3.5 Mb        | ~428 Kb               |
+| pb_359_7 | 4 (5k-16k)          | ~4.7 Mb        | ~372 Kb               |
+| pb_359_8 | ---                 | ---            | ---                   |
+
+May be a pointless attempt, but will try to assemble _3 at SRL 16750 and 17250,
+just on the off-chance that they yield better results.
+
+Attempt lowering the seed read length of _7 (4k, 3k, 2k), and see whether it
+has any effect on the number of contigs.
+
+Attept raising and lowering the seed read length of _2 (2-4k, 11-15k), and see
+whether it has any effect on the number of contigs.
+
+Among the 8-contig results for _1, 17k gives the shortest second contig (~400 Kb
+vs. ~427 Kb). Try 16500 and 17500 SRL, just in case.
+
+Attempt raising and lowering the seed read length of _6 (2-4k, 13-15k), and see
+whether it has any effect on the number of contigs.
+
+__Waiting for...__
+* 2x _1 jobs
+* 8x _2 jobs
+* 2x _3 jobs
+* 6x _6 jobs
+* 3x _7 jobs
+
+_3 Results:
+* Both 16750 and 17250 yielded 3 contigs, so must decide whether to try more jobs in
+smaller and smaller increments, or to change some more parameters.
+* Longest contig and 16S analysis both support placement in the genus Loktanella,
+and the second and third contigs seem to confirm placement in the family
+Rhodobacteraceae (the best result in the second and third contigs come from a plasmid...)
+* __Compare size of longest contig and Loktanella.__
+ * Longest contig ~3.8 Mb
+ * Loktanella vestfoldensis genome size ~3.1 Mb, so MUCH shorter
+ * L. cinnabarina genome size ~3.9 Mb
+ * L. hongkongensis genome size ~3.2 Mb, 2x plasmids (85 Kb and 103 Kb)
+ * (Loktanella phage ~57 Kb...)
+* __Started a self-blast job as the second and third contigs appear to match the same
+ region; will see if they also match any region on the longest contig.__
+
+_7 Results:
+* 
+* 
+* 
+
+_2 Results:
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+
+_1 Results:
+* 
+* 
+
+_6 Results:
+* 
+* 
+* 
+* 
+* 
+* 
+
+__Regarding PROKKA:__
+Must update from 1.11 to git HEAD version.
+
+Results of _3 Falcon self-blast:
+* The two shorter contigs appear to be regions of the longest one, as they appear to be
+almost identical.
+* Question - how to resolve this so that the genome is assembled as a whole?
+* Observation - move from 17,250 SRL up to 17,500 breaks around 10% of the longest contig
+off to form the fourth contig...
+
+Results of _2 Falcon (7k) self-blast:
+* The longest and second-longest contigs match each other well, whereas the shortest
+matches neither.
+* Question - does this matching imply an error in assembly, or merely conserved regions
+between two different genomes?
+
+Results of _7 Falcon (6k) self-blast:
+* All four contigs appear to match each other fairly well, with the exception of the
+two shortest, which have a slightly lower match to one another
+* Question - as above, does this mean that the matching areas are conserved regions between
+genomes, or mis-assembled parts of the same genome?
+
+Results of _1 Falcon (15k) self-blast:
+* __Summarise findings__ 
+
+
+__To run__:  
+Results of _6 Falcon () self-blast:
+* 
+
+
+
+
+
+/usr/local/packages - clone latest PROKKA repository (sudo git clone)
+Find out which script includes hmmsearch (RNAmmer) variable
+* Ensure that TIGR HMM loads
+
+__Important:__ If you change the contents of a database folder, in order to push
+to the nodes, run the `rsyncToNodes.sh` script
+
+__On Tuesday:__
+* Update Git!  
+* Attempt to run `prokka-genbank_to_fasta_db` again with the Kordia genbank files
+ * Be sure to load Prokka vX.XX (1.12-beta...) and NOT 1.11

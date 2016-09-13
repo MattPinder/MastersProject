@@ -1144,31 +1144,20 @@ Rhodobacteraceae (the best result in the second and third contigs come from a pl
  region; will see if they also match any region on the longest contig.__
 
 _7 Results:
-* 
-* 
-* 
+* All yielded 4 contigs, as before...
 
 _2 Results:
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
+* All yielded either 3 or 4 contigs; in the cases of 4 contigs (13k and 14k), a ~7k portion
+was shaved from the longest contig.
 
 _1 Results:
-* 
-* 
+* 16.5k - gives 8 contigs, the same as previously
+* 17.5k - gives 11 contigs, more than before
+* Required seed read length seems to lie between ~14k and ~17k, or lower than 5?
 
 _6 Results:
-* 
-* 
-* 
-* 
-* 
-* 
+* The 15k result gives 2 contigs, however these are VERY short, so apparently 15k is much
+too high...
 
 __Regarding PROKKA:__
 Must update from 1.11 to git HEAD version.
@@ -1193,20 +1182,16 @@ two shortest, which have a slightly lower match to one another
 genomes, or mis-assembled parts of the same genome?
 
 Results of _1 Falcon (15k) self-blast:
-* __Summarise findings__ 
+* Still much too fragmented to draw any useful conclusions...
 
-
-__To run__:  
-Results of _6 Falcon () self-blast:
-* 
-
-
-
-
+---
 
 /usr/local/packages - clone latest PROKKA repository (sudo git clone)
 Find out which script includes hmmsearch (RNAmmer) variable
 * Ensure that TIGR HMM loads
+
+Use the command `rsync -hav` to update a directory with the contents of another
+(will overwrite any changes, and leave other things as they are.
 
 __Important:__ If you change the contents of a database folder, in order to push
 to the nodes, run the `rsyncToNodes.sh` script
@@ -1215,3 +1200,86 @@ __On Tuesday:__
 * Update Git!  
 * Attempt to run `prokka-genbank_to_fasta_db` again with the Kordia genbank files
  * Be sure to load Prokka vX.XX (1.12-beta...) and NOT 1.11
+
+# 13 September 2016
+
+Yesterday's results added above and committed to repository.  
+Run _6 self-blast? - If yesterday's sample 1 run is any indication, this would
+yield nothing of value...
+
+Is there any value in trying some assemblies in HGAP again using new SRLS,
+tested in Falcon and giving good results, but previously untried in HGAP?
+ * _1: In HGAP, tested between 15k and 25k with a minimum between 16k and 20k (9 contigs)
+  * In Falcon, a minimum of 8 contigs was found between 14k and 17k
+ * Try 17k in HGAP and 16.75k/17.25k in Falcon?
+
+ * _2: In HGAP, tested between 6k and 20k, with a minimum between 6k and 12k (3 contigs)
+  * In Falcon, a minimum of 3 contigs was found between 2k and 12k, and at 15k
+ * Try 7k and 9k in HGAP and some intermediate values in Falcon?
+
+ * _3: In HGAP, tested between 15k and 25k, with a minimum between 16k and 20k (5/6 contigs)
+  * In Falcon, a minimum of 3/4 contigs was found between 16.5k and 17.5k
+ * Try 17k in HGAP and maybe more intermediate values in Falcon?
+
+ * _6: In HGAP, tested between 5k and 15k, with a minimum between 5k and 10k (9 contigs)
+  * In Falcon, a minimum of 8 contigs was found at 11k (9 contigs between 2k and 10k)
+ * Try 11k in HGAP and 10.5k/11.5k in Falcon?
+
+ * _7: In HGAP, tested between 18k and 25k, with a minimum between 19k and 21k (4 contigs)
+  * In Falcon, a minimum of 4 contigs was found between 2k and 16k
+ * Try some lower values in HGAP (~10k?) and maybe more intermediate values in Falcon?
+
+* Jobs for HGAP (save for this evening)
+ * pb_359_1 - 17k - saved
+ * pb_359_2 - 7k, 9k - both saved
+ * pb_359_3 - 17k - saved
+ * pb_359_6 - 11k - saved
+ * pb_359_7 - 10k - saved
+
+* Jobs for Falcon
+ * pb_359_1 - 16.75k, 17.25k - Submitted - no improvement...
+ * pb_359_2 - Intermediates
+ * pb_359_3 - Intermediates
+ * pb_359_6 - 10.5k, 11.5k - Submitted - both gave the same result as 11k (8 contigs, a low)
+ * pb_359_7 - Intermediates
+
+Falcon - based on areas of minimal contigs, attempt the following:
+* _1 - 13.5k, 14.5k, 15.5k - submitted
+* _2 - 8.5k, 9.5k, 10.5k, 16k - submitted
+* _3 - 16.6k, 16.7k, 16.8k, 16.9k, 17.1k, 17.2k, 17.3k, 17.4k - submitted
+* _6 - 10.6k, 10.7k, 10.8k, 10.9k, 11.1k, 11.2k, 11.3k, 11.4k - submitted
+* _7 - 8.5k, 9.5k, 10.5k, 11.5k - submitted
+
+Results:
+* _1: Still yielded no better results...
+ * Wait until .6, .7, .8, etc. jobs for other samples have completed before deciding
+whether it is worth trying something similar with _1.
+
+* _2: Still yielded no better results, but after 15k the number of contigs begins to
+spike again.
+
+* _3: Still yielded no better results...
+
+* _6: Still yielded no better results...
+
+* _7: [Add on Wednesday]
+
+__Thought:__ Try running 4, 5 or 8 through Falcon with a seed read length equal
+to the one that yielded a single contig in HGAP, and check the output?
+
+Possible problem with the previous attempts at Prokka, aside from potentially
+outdated version - the K. algicida genbank file didn't have a sequence at the end...  
+Genbank has been updated, and database has been created; __error message appeared about
+using invalid initiator or terminator codons,__ but will attempt to use this database
+and see what happens.
+
+Kordia database files copied to `/db/prokka/genus` and RSynced to nodes
+
+Problem - tbl2asn not loading correctly again. This occurred with the previous
+prokka installation; find what was changed and amend it
+
+__Tomorrow:__
+* Check results of additional _7 Falcon assemblies
+* Check results of HGAP assemblies on SMRT Portal
+* Try and get new Prokka working
+* Update Falcon observations table

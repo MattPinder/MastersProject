@@ -1207,7 +1207,7 @@ Yesterday's results added above and committed to repository.
 Run _6 self-blast? - If yesterday's sample 1 run is any indication, this would
 yield nothing of value...
 
-Is there any value in trying some assemblies in HGAP again using new SRLS,
+Is there any value in trying some assemblies in HGAP again using new SRLs,
 tested in Falcon and giving good results, but previously untried in HGAP?
  * _1: In HGAP, tested between 15k and 25k with a minimum between 16k and 20k (9 contigs)
   * In Falcon, a minimum of 8 contigs was found between 14k and 17k
@@ -1262,7 +1262,7 @@ spike again.
 
 * _6: Still yielded no better results...
 
-* _7: [Add on Wednesday]
+* _7: Still yielded no better results...
 
 __Thought:__ Try running 4, 5 or 8 through Falcon with a seed read length equal
 to the one that yielded a single contig in HGAP, and check the output?
@@ -1283,3 +1283,53 @@ __Tomorrow:__
 * Check results of HGAP assemblies on SMRT Portal
 * Try and get new Prokka working
 * Update Falcon observations table
+
+# 14 September 2016
+
+Download files from SMRT; pb_359_7 run failed and will be abandoned in favour of Falcon
+
+__How does Falcon deal with circular sequences?__
+
+Check whether Falcon can assess coverage...
+
+Check HGAP circular options? - check literature, ask on forum...
+
+Run results through BlastViewer as xml
+
+Tweak project summary to send to Anders...
+
+#### Status
+
+| Sample   | Status                                 | Range (SRL)   | Next step           |
+|----------|----------------------------------------|---------------|---------------------|
+| pb_359_1 | 8 contigs ('1-3 linear, 7-5 circular') | 14k-17k       | |
+| pb_359_2 | 3 contigs ('1 linear, 2 circular')     | 2k-12k, 15k   | View in BlastViewer |
+| pb_359_3 | 3 contigs ('1 linear, 2 circular')     | 16.75k-17.25k | View in BlastViewer |
+| pb_359_4 | Primary assembly done                  | 10k           | |
+| pb_359_5 | Primary assembly done                  | 16k           | |
+| pb_359_6 | 8 contigs ('2-5 linear, 3-6 circular') | 10.5k-11.5k   | |
+| pb_359_7 | 4 contigs ('1/2 linear, 3/2 circular') | 2k-16k        | View in BlastViewer |
+| pb_359_8 | Primary assembly done                  | 20k           | |
+
+BlastViewer incredibly slow-moving on my machine...
+
+Something to try - copy the first and last X bp from the long contig into separate, new contigs,
+and see how they match up to one another?
+
+The answer to the linear-circular problem in the Falcon output may lie in the ctg_paths file
+(see [Falcon manual] (https://github.com/PacificBiosciences/FALCON/wiki/Manual)).  
+"In some case, even a contig is marked as "ctg_linear", it can be still a circular contig
+if the beginning node and the ending node are the same but it is not a "simple" path.
+One can detect that by checking the beginning and ending nodes if necessary."
+
+Sizes used for self-blasts:
+* _2: 7k
+* _3: 17k
+* _7: 6k
+
+__Observation:__ Appears that start and end node of sample 3 linear contig  are the same; will investigate others...  
+(May be relevant - sample 3 has a non-zero `a_ctg.fa` file, which may be relevant to the 'simple' path comment above)
+* Same seems to be true of sample 2 (`a_ctg.fa` has size 0)
+* Same seems to be true of sample 7
+* __Must check that I am understanding the Falcon files correctly; for example, check against the erroneous 2-contig
+result from one of the other analyses...__

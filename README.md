@@ -1333,3 +1333,104 @@ __Observation:__ Appears that start and end node of sample 3 linear contig  are 
 * Same seems to be true of sample 7
 * __Must check that I am understanding the Falcon files correctly; for example, check against the erroneous 2-contig
 result from one of the other analyses...__
+
+# 15 September 2016
+
+Cutting the first 10000 characters from pb_359_2 7k Falcon assembly into Sample_2_circular_test;
+blast this against the standard 7k assembly and see whether it hits twice, to the beginning and end of the longest contig
+* Results - failure; only one hit found, a perfect match at the start of the contig as expected; no match at the end...
+
+Will upload the 2-asm-falcon folder of the three aforementioned self-blasted files to the repository and sync to nodata,
+not TOO big to sync to my laptop and will facilitate analyses.
+
+Retry circular test with 7000 bases, just in case
+* Results - failure; again, only a single hit was found...
+
+_May be misunderstanding the meaning of the term 'node'..._
+
+Comparing long contig of _2 7k Falcon and HGAP assemblies:
+* Longest contig of Falcon assembly: ~4,204,009
+* Longest contig of HGAP assembly: ~4,183,457
+ * Discrepancy of ~20k, BUT spike in the middle of the log contig's coverage, which could be evidence of a collapsed repeat?
+ * Longest contig of 12k HGAP assembly: ~4,188,132
+  *Longer contig generates longer sequence, adding support to the idea of collapsed repeats (though spike remains)
+
+### To try
+Falcon indicates that the long 'linear' sequences of samples 2, 3 and 7 may in fact be circular; this should be testable in HGAP:
+* Cut the long contig of the Falcon assembly in half, then reattach them in reverse: A----B -> A--|--B -> --BA--
+* Upload this file as a 'reference' onto SMRT Portal
+* Re-run the HGAP 2 assembler, and look at the resulting report; if the construct is truly circular, then coverage should
+remain uniform, even over the breakpoint.
+
+For a sequence of, for example 10,000 bases:
+* `head -n2 filename | tail -n1 > sequence.fasta` (probably a faster way to do this)
+* `cut -c-5000 sequence.fasta > first_half.fasta`
+* `cut -c5001- sequence.fasta > second_half.fasta`
+* `cat second_half.fasta first_half.fasta > reversed_sequence.fasta`
+* Go into the file, remove the newline character (may be possible from command line) and add fasta sequence header.
+
+__Changing from 17k Falcon assembly of sample 3 to 17.1k, as this gives a longer assembly (by 20 Kb) which may resolve repeat regions better__
+
+Files created:
+* pb_359_2_Falcon_7k_reversed_halves.fasta
+* pb_359_3_Falcon_17.1k_reversed_halves.fasta
+* pb_359_7_Falcon_6k_reversed_halves.fasta
+
+__Note:__ May be a single-base indel around the join...
+
+Creating new jobs on SMRT Portal using the references:
+* 16531 - pb_359_2-Circularisation_Test
+* 16532 - pb_359_3-Circularisation_Test (used 17.1k SRL for HGAP)
+* 16533 - pb_359_7-Circularisation_Test (used 20k SRL for HGAP)
+
+Probably a good idea to try the same thing using the single-contigs from samples 4,5 and 8, as these have
+not been confirmed as circular yet.
+* 4 - Rerun job 16442 with a reference.
+ * Reference file name: pb_359_4_HGAP_reversed_halves.fasta
+ * 16537 - pb_359_4-Circularisation_Test
+* 5 - Rerun job 16520 with a reference.
+ * Reference file name: pb_359_5_HGAP_reversed_halves.fasta
+ * 16538 - pb_359_5-Circularisation_Test
+* 8 - Rerun job 16446 with a reference.
+ * Reference file name: pb_359_8_HGAP_reversed_halves.fasta
+ * 16539 - pb_359_8-Circularisation_Test
+
+The first step of the process for creating the reversed-halves sequence file is slightly different:
+* `tr -d '\n' < filename > sequence.fasta
+* Go into the file and remove the fasta header
+
+Waiting on jobs for samples 2, 3, 4, 5, 7 and 8; this still leaves the problematic samples 1 and 6.  
+Even in Falcon, these can't be brought to lower than 8 contigs.  
+* Check the 15k for _1, as this gives the longest contig.
+ * By the node logic used above (explained in the Falcon manual), the long contig appears circular.
+* Check the 10.6k for _6, as this gives the longest contig.
+ * By the node logic used above (explained in the Falcon manual), the long contig appears circular
+(including a second 'linear' contig about 10% of the size of the longest).
+  * The two 'linear' contigs also have a simpler unitig path according to the ctg_paths file.
+
+Contig lengths:
+
+| Sample   | Contig length        |
+|----------|----------------------|
+| pb_359_1 | 3,581,194 (linear)   |
+|          |   427,863 (circular) |
+|          |   292,780 (circular) |
+|          |   284,602 (circular) |
+|          |   209,030 (circular) |
+|          |   141,938 (circular) |
+|          |    99,191 (circular) |
+|          |    92,749 (circular) |
+|----------|----------------------|
+| pb_359_6 | 3,573,472 (linear)   |
+|          |   427,989 (linear)   |
+|          |   292,881 (circular) |
+|          |   284,711 (circular) |
+|          |   209,198 (circular) |
+|          |   142,087 (circular) |
+|          |    92,692 (circular) |
+|          |    99,190 (circular) |
+
+Sample 1 has not yet been blastx-ed, whereas sample 6 has, with the suggestion that it is a Sulfitobacter.
+Blast two longest contigs from both assemblies?
+* Job 6161 - pb_359_1 15k job
+* Job 6162 - pb_359_6 10.6k job

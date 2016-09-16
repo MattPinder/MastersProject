@@ -1434,3 +1434,53 @@ Sample 1 has not yet been blastx-ed, whereas sample 6 has, with the suggestion t
 Blast two longest contigs from both assemblies?
 * Job 6161 - pb_359_1 15k job
 * Job 6162 - pb_359_6 10.6k job
+
+# 16 September 2016
+
+Results from assembly jobs with template:
+* _2: Results identical to the previous assembly; reference seemingly ignored.
+* _3: As above, reference ignored.
+* _7: As above, reference ignored.
+* _4: As above, reference ignored.
+* _5: Assembly failed...
+* _8: As above, reference ignored.
+
+Test - rerunning the sample 4 circularisation job, but using the *RS_Resequencing.1* protocol instead
+(filtering parameters changed to match HGAP parameters for consistency). If method shows promise,
+will repeat with the other samples that failed.
+
+Blastx results: pb_359_1 complete, pb_359_6 should complete around 4.30pm.
+* pb_359_1
+ * Seems likely that this is a species of __Sulfitobacter__, consistent with the 16S predictions.
+ * Suspiciously similar to the pb_359_6 results from previously...
+  * Second contig in particular, where hits are found for the SAME protein - formate dehydrogenase -
+in the SAME species...
+
+* pb_359_6
+ * Awaiting results...
+
+Resequencing complete; results are once again IDENTICAL to the original HGAP assembly, from a look
+at the coverage graph...  
+blastn of regular and flipped sequences to confirm that the reversal has been successful?
+Perfect match; halves have not been reversed...  
+Halves now reversed, reference being reuploaded.  
+Job being rerun as 16542
+
+Double-check other assemblies; all appear to be okay. Will put the issue with sample 4's reversal
+down to human error.
+
+Job 16542 complete. Massive trough in the results around the break point, seems to suggest that this
+isn't truly a circular molecule? Will have to investigate...  
+Will try samples 5 and 8 in the same way to double-check if the results are the same.
+* Sample 5: 16543 - pb_359_5-Circularisation_Test - Result same as before, with a massive trough at the break point.
+* Sample 8: 16544 - pb_359_8-Circularisation_Test_2 - As above.  
+Will retry with samples 2, 3 and 7:
+* Sample 2: 16545 - pb_359_2-Circularisation_Test_2
+* Sample 3: 16546 - pb_359_3-Circularisation_Test_2
+* Sample 7: 16547 - pb_359_7-Circularisation_Test_2
+
+__Observation:__  
+Around the area of the trough, the reports say that there are one or two single-base insertions. Is it
+possible that there is a base missing from the end of the assembly which would seal the loop?  
+__Something to try__ - run a Falcon job on one of the one-contig HGAP data sets, and see whether the
+assembly starts and ends in the same places as the HGAP job.

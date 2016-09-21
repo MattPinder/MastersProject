@@ -1484,3 +1484,109 @@ Around the area of the trough, the reports say that there are one or two single-
 possible that there is a base missing from the end of the assembly which would seal the loop?  
 __Something to try__ - run a Falcon job on one of the one-contig HGAP data sets, and see whether the
 assembly starts and ends in the same places as the HGAP job.
+
+# 19 September 2016
+
+* Summarise pb_359_6 Blast results
+ * Results very similar to those of the HGAP assembly, AND similar to those of 
+* DL three circularisation reports
+ * pb_359_2 - Coverage over centre not terrible
+ * pb_359_3 - Drop in the centre, but still ~50x coverage
+ * pb_359_7 - Drop in the centre, but still ~100x coverage
+
+| Sample   | Reference    | Circularisation summary   |
+|----------|--------------|---------------------------|
+| pb_359_2 | Falcon 7k    | Seems to circularise      |
+| pb_359_3 | Falcon 17.1k | Coverage drops to ~50...  |
+| pb_359_4 | HGAP 16442   | Coverage drops to ~10...  |
+| pb_359_5 | HGAP 16520   | Coverage drops to ~10...  |
+| pb_359_7 | Falcon 6k    | Coverage drops to ~100... |
+| pb_359_8 | HGAP 16446   | Coverage drops to ~10...  |
+
+Saved consensus sequences to the repository; removing newline characters so that line breaks don't
+interfere with searches.
+
+HGAP assemblies are consistently worse than Falcon when it comes to coverage upon flipping halves.
+Rerun HGAP jobs in Falcon?  
+Run #4 first as a test, and observe results
+* Download subread fasta for #4 - Done
+* Run in Falcon with the same SRL parameters as for HGAP - Done
+ * 40 'linear' contigs obtained from Falcon; attempt other SRL parameters
+ * 5k SRL gives a single contig. Will try a few more values to see if longer contigs attainable
+  * 3k-7k SRL - 3,487 Kb (or 3,488 Kb) vs 3,492 Kb from HGAP
+* Ensure that only a single contig is obtained, and ensure size is comparable
+ * Single contig, but ~5k discrepancy...
+* Split and reverse-rejoin the two halves of the contig
+* Run the result through the resequencer on SMRT Portal
+* Check the coverage report
+
+__Note:__ Previous sample 4, 5 and 8 references incorrectly labelled as Falcon; names changed to HGAP,
+but ID remains erroneous...
+
+Started job for sample 4 - 16549 - Downloaded  
+First two jobs from samples 5 and 8 yielded multiple contigs; going down to 5k SRL
+
+# 20 September 2016
+
+## Falcon
+
+Check 5 and 8 Falcons...
+* No success with 5k - try with 3k and 7k
+
+Falcon jobs:
+* Sample 5:
+ * 3k - 2 contigs, longest 4,384,754 bp
+ * 7k - 2 contigs, longest 4,384,754 bp
+  * Given the current pattern, should probably go up to 20k SRL
+ * 20k - 5 contigs, longest ~1,812k bp
+ * 2k - As above (2 contig result)
+* Sample 8:
+ * 3k - 2 contigs, longest 5,822,105 bp
+ * 7k - 2 contigs, longest ~5,822k bp
+ * 15k - As above
+
+## SMRT Portal
+
+Regarding sample 4 - massive drop around 1/4 of the way through the sequence, despite cutting
+the sequence down the centre; try resequencing using the original sequence as a reference?
+* Note - Reference fastas cannot have whitespace in the header line
+
+Running sample 4 resequencing with original, un-inverted Falcon assembly as reference
+* Job 16551
+ * Obtained a similar coverage pattern for the original Falcon file as for the inverted file.
+However, there is a sharp drop in coverage to around ~20x (cf. ~110x) in both results; why?
+* SMRT View: 
+ * Very low coverage around the area; not sure if this can be trusted...
+ * Falcon assembled something that the reads don't back up... How?
+
+## Prokka
+
+Regarding Prokka - tbl2asn still giving problems in the new version; last time the new version
+had to be downloaded, so:
+* Rename old version just in case
+* Copy the new version from prokka-1.11/binaries/linux into prokka-head/binaries/linux
+* See if Prokka works, and if so, delete the old version
+
+Prokka now loads tbl2asn, BUT fails during the HMM check and leaves a lot of large files behind...
+ * Retry with old PROKKA build...
+  * Old version passes the first sets of HMMs, but fails on my custom one...
+ * Tried manually loading HMM module
+  * No improvement
+ * Try resetting the databases using --cleandb and --setupdb (and use old PROKKA build)
+  * (May need to try again as root user, as comes up with some issues...)
+  * Same error as before, failing on custom DB
+
+Check SMRTView results for circularisation coverage at break points
+
+Blastn samples 1 and 6 against each other
+* Sample 1: 15k SRL
+* Sample 6: 10.6k SRL
+
+Any noted phenomenon of extra-chromosomal material in Sulfitobacter? e.g. lots of plasmids...
+* S. guttiformis - 3 plasmids
+ * Only species that seems to have plasmids (according to NCBI...)
+
+Tonight:
+* Git push from home directory to nobackup
+* Finish blast script
+* Run job

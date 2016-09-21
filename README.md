@@ -1590,3 +1590,116 @@ Tonight:
 * Git push from home directory to nobackup
 * Finish blast script
 * Run job
+
+# 21 September 2016
+
+## 1 vs 6 Blast results
+Similarity between the results is INCREDIBLY HIGH! Bit scores:
+* 5.2763+06
+* 6.328e+05
+* 1.405e+05
+* 4.607e+05
+* 3.836e+05
+* 3.069e+05
+* 2.396e+05
+* 1.267e+05
+
+## pb_359_2
+Barring a correction step (must research command-line quiver), this appears to be fine.
+* Try original Falcon file for pb_359_2, as after the issues with sample 4 I don't fully trust Falcon...
+ * Longest ('linear') contig only
+* Job 16555 - circularisation appears to have been successful; will check the area of lowest coverage in
+SMRT View to confirm...
+ * Aside from the large spike (unresolved repeat region?), __the circular molecule appears to be sound__.
+* (Meanwhile, for the remaining two results, check whether Roseovarius sp. have any known plasmids)
+ * R. mucosus possesses [4 plasmids] (https://standardsingenomics.biomedcentral.com/articles/10.1186/1944-3277-10-17)
+  * Second-highest match in the results for the longest contig
+ * Contig 2 - highest hit to Roseovarius sp. TM1035
+ * Contig 3 - highest hit to Pseudorhodobacter aquimaris (some lower hits to Roseovarius)
+
+## Status of samples
+
+| Sample       | Status                                                                                      |
+|--------------|---------------------------------------------------------------------------------------------|
+| pb_359_1     | Assembly still stuck at 8 contigs...                                                        |
+| **pb_359_2** | **Long contig appears to be circular; must Quiver-correct the whole assembly**              |
+| pb_359_3     | Region of low coverage in the longest contig needs investigating...                         |
+| pb_359_4     | Falcon insists that it has found a circular contig, but HGAP reassembly disputes this...    |
+| pb_359_5     | Trying to find a single contig Falcon assembly, as circularity of HGAP assembly is disputed |
+| pb_359_6     | Assembly still stuck at 8 contigs... Suspiciously similar to pb_359_1                       |
+| pb_359_7     | Region of low coverage in the longest contig needs investigating...                         |
+| pb_359_8     | Trying to find a single contig Falcon assembly, as circularity of HGAP assembly is disputed |
+
+## Edit Albiorix wiki page (subdivide the manual, etc.)
+
+__To try:__ On sample 8, take 40k from each end of the HGAP assembly and blast them to each other...
+* Overlap of ~14400 bases
+ * Score = 26504 bits (14352),  Expect = 0.0
+ * Identities = 14422/14450 (99%), Gaps = 28/14450 (0%)
+
+* Retry with sample 4 and sample 5 to confirm
+
+ * Sample 4 - More fragmented, but the pattern remains
+  * Subject base 1-10163 of Last_40k
+  * Query base 27173-37325 of First_40k
+   * Score = 18582 bits (10062),  Expect = 0.0
+   * Identities = 10138/10170 (99%), Gaps = 24/10170 (0%)
+  * Subject base 4014-10163 of Last_40k
+  * Query base 20759-26908 of First_40k
+   * Score = 11313 bits (6126),  Expect = 0.0
+   * Identities = 6142/6150 (99%), Gaps = 0/6150 (0%)
+  * Subject base 1-2424 of Last_40k
+  * Query base 37588-40000 of First_40k
+   * Score = 4394 bits (2379),  Expect = 0.0
+   * Identities = 2412/2425 (99%), Gaps = 13/2425 (1%)
+
+ * Sample 5 - Overlap of ~ 19500 bases
+  * Score = 35763 bits (19366),  Expect = 0.0
+  * Identities = 19536/19605 (99%), Gaps = 63/19605 (0%)
+
+__Useful code for removing newlines from a file__  
+`tr -d '\n' < filename > output`
+
+* Run sample 4 blast_ends test again, with xml output to view in BlastViewer?
+ * For good measure, rerun all with xml output
+
+## Falcon
+
+Try pb_359_8 at 16k
+* Same result as 15k, etc.
+
+__Created a .gitignore file to thin out `git status` by removing Falcon output files__
+
+## pb_359_1 and pb_359_6:
+* The results so far:
+
+ * pb_359_1
+  * Minimum # of contigs: 8 (between 14k and 17k SRL)
+  * Between 1 and 3 'linear' contigs
+   * 1 found between 14.5k and 15.5k SRL
+   * Looking at the ctg_paths files for the above, the start and end nodes are the same, implying 'circularity'
+
+ * pb_359_6
+  * Minimum # of contigs: 8 (between 10.5k and 11.5k SRL)
+  * Between 2 and 5 'linear' contigs
+   * 2 found between 10.5k and 10.6k
+   * Looking at the ctg_paths files for the above, the start and end nodes are the same, implying 'circularity'
+
+* Expected size of a _Sulfitobacter_ genome ranges between 3.45 and 4.95 Mb:
+ * _S. pontiacus_: ~3.45 Mb
+ * _S. mediterraneus_: ~4.13 Mb
+ * _S. donghicola_: ~3.54 Mb
+ * _S. guttiformis_: ~3.98 Mb (+ plasmids)
+ * _S. noctilucicola_: ~4.09 Mb
+ * _S. noctilucae_: ~3.91 Mb
+ * _S. geojensis_: ~4.23 Mb
+ * _S. pseudonitzschiae_: ~4.95 Mb
+
+* Compare size of longest contig from Falcon assemblies:
+ * pb_359_1: ~3.57 Mb - would be a reasonable size for a _Sulfitobacter_ genome
+  * Second longest = ~0.43 Mb
+ * pb_359_6: ~3.57 Mb - would be a reasonable size for a
+  * Second longest = ~0.43 Mb
+
+__Check Alvar's thesis re: handling overlap__  
+Otherwise, manually trim one end of the overlap, reverse and correct using Resequencing.

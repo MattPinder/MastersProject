@@ -1703,3 +1703,101 @@ __Created a .gitignore file to thin out `git status` by removing Falcon output f
 
 __Check Alvar's thesis re: handling overlap__  
 Otherwise, manually trim one end of the overlap, reverse and correct using Resequencing.
+
+# 22 September 2016
+
+To do:
+* Attempt to trim samples 4, 5 and 8 to enable true circularisation
+* Try to resolve the issue with samples 1 and 6 similarity
+* Find out how to Quiver-correct sample 2
+* Check low-coverage areas of 3 and 7
+
+**Making new directory for trimming attempts - 01_assemblies/pb_359_*/Trim**
+
+## pb_359_8
+* Where to trim the ends...
+ * First_40k-----------------Last_40k
+ * --14431                    25560--
+ * -14431 from start or -14440 from end
+ * Remove less bases; more bases can always be removed later
+* **Remove the first 14431 of assembly 16446 and use as reference for Resequencing**
+ * Assembly is 5,839,016 bases long, so trimmed assembly should be 5,824,585
+ * Should begin 'GATATAGCCTACATG'
+* Standard reference: job 16558 - results positive (one big spike...)
+* Reversed reference: job 16559 - results positive (as above, one big spike...)
+
+## pb_359_5
+* Where to trim ends...
+ * First_40k-----------------Last_40k
+ * --19556                    20410--
+ * -19556 from start or -19590 from end
+ * Remove less bases; more bases can always be removed later
+* **Remove the first 19556 of assembly 16520 and use as reference for Resequencing**
+ * Assembly is 4,406,446 bases long, so trimmed assembly should be 4,386,890
+ * Should begin 'TCAAAGCGGGAGGTG'
+* Standard reference: job 16562 - results positive (one big spike...)
+* Reversed reference: job 16563 - results positive (as above, one big spike...)
+
+## pb_359_4
+* Where to trim ends...
+ * First_40k-----------------Last_40k
+ * 1-10163                27173-37325 ?
+ * 4014-10163             20759-26908
+ * 1-2424                 37588-40000 X
+ * --2424                     37588--
+ * -2424 from start or -2412 from end
+ * Remove less bases; more bases can always be removed later
+* **Remove last 2412 bases of assembly 16442 and use as reference for Resequencing**
+ * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,490,136
+ * Should end 'gaagtgccttgcggg'
+  * This makes an assembly of 3,490,135; be aware in case there are any single-base problems
+ * Standard reference: job 16566 - results positive - constant ~100x coverage
+ * Reversed reference: job 16567 - **results negative - huge dip at the breakpoint**
+
+## pb_359_7
+* 'Low coverage area' at centre point of reversed-reference Resequencing run not well-reflected
+in SMRT View; in any case, the coverage is still ~100x, so not a clear break point as in some
+of the other samples (e.g. pb_359_4/5/8 before trimming overlap); potentially an accetable assembly?
+
+## pb_359_3
+* Reference used - 17.1k Falcon assembly
+ * SRLs giving 3 contigs range from 16600 to 17250
+ * Attempt circularisation with another of these, in case results differ?
+
+## pb_359_4
+* Circularisation attempt failed; apparently more trimming is required, at a different point...
+* Checking the first 96 bases reveals three hits:
+ * Position 1
+ * Position 3,479,721
+ * Position 3,490,136
+* As the trimming from the last of these (2,412 bases) didn't work, attempt to trim from the
+first of these (12,827 bases); this would also be of a similar magnitude to the other trims
+ * First_40k-----------------Last_40k
+ * --10163              27173-37325--
+ * -10163 from start or -12827 from end
+ * Remove less bases; more bases can always be removed later
+* **Remove first 10163 bases of assembly 16442 and use as reference for Resequencing**
+ * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,482,385
+ * Should begin 'TAGTTTTTGCATTTT'
+ * **Not totally convinced on this overlap, considering the Blast results...**
+* Standard reference: job 16570 - 
+* Reversed reference: job 16571 - 
+
+__Question:__ After the instance of the questionable assembly of pb_359_4 in Falcon should the
+suspected plasmids be subjected to an HGAP resequencing attempt to confirm their circularity?
+
+* pb_359_1 -
+* pb_359_2 - Longest contig appears to circularise; requires Quiver-correction
+ * 'Plasmids' require circularisation test...
+* pb_359_3 -
+* pb_359_4 - Having trouble resolving the overlap issue; awaiting Resequencing...
+* pb_359_5 - Appears to circularise; quality check -> annotation
+* pb_359_6 -
+* pb_359_7 - Seems to circularise in spite of a questionable drop found in SOME analyses...
+ * 'Plasmids' require circularisation test...
+* pb_359_8 - Appears to circularise; quality check -> annotation
+
+__Tomorrow:__
+* Run 1_vs_6 again with .xml output and examine
+* Download the rest of the pb_359_4 second circularisation attempt files
+* Pull then push git files (03 folder has been uploaded now)

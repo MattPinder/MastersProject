@@ -1738,7 +1738,7 @@ To do:
 * Standard reference: job 16562 - results positive (one big spike...)
 * Reversed reference: job 16563 - results positive (as above, one big spike...)
 
-## pb_359_4
+## pb_359_4 (1st)
 * Where to trim ends...
  * First_40k-----------------Last_40k
  * 1-10163                27173-37325 ?
@@ -1764,7 +1764,7 @@ of the other samples (e.g. pb_359_4/5/8 before trimming overlap); potentially an
  * SRLs giving 3 contigs range from 16600 to 17250
  * Attempt circularisation with another of these, in case results differ?
 
-## pb_359_4
+## pb_359_4 (2nd)
 * Circularisation attempt failed; apparently more trimming is required, at a different point...
 * Checking the first 96 bases reveals three hits:
  * Position 1
@@ -1780,8 +1780,8 @@ first of these (12,827 bases); this would also be of a similar magnitude to the 
  * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,482,385
  * Should begin 'TAGTTTTTGCATTTT'
  * **Not totally convinced on this overlap, considering the Blast results...**
-* Standard reference: job 16570 - 
-* Reversed reference: job 16571 - 
+* Standard reference: job 16570 - X
+* Reversed reference: job 16571 - X
 
 __Question:__ After the instance of the questionable assembly of pb_359_4 in Falcon should the
 suspected plasmids be subjected to an HGAP resequencing attempt to confirm their circularity?
@@ -1801,3 +1801,97 @@ __Tomorrow:__
 * Run 1_vs_6 again with .xml output and examine
 * Download the rest of the pb_359_4 second circularisation attempt files
 * Pull then push git files (03 folder has been uploaded now)
+
+# 23 September 2016
+
+Downloaded files for the second pb_359_4 trim + circularisation attempt - another failure...  
+
+Git now up-to-date  
+
+1_vs_6 .xml output obtained and checked - contig for contig, the results are almost identical
+* Line up the contigs and check for differences?
+
+### Summary
+
+* Circularised, require quality check
+ * pb_359_5
+ * pb_359_8
+
+* Appears to circularise, additional genetic material needs to be checked
+ * pb_359_2
+ * pb_359_7
+
+* Appear to be identical, must decide how to proceed
+ * pb_359_1
+ * pb_359_6
+
+* Still having trouble circularising, explore other assemblies?
+ * pb_359_4 - one last trim attempt
+
+* Doesn't circularise well, explore low-coverage region
+ * pb_359_3
+
+## pb_359_4 (3rd)
+* Gap in the circularisation of ~2 Kb
+* Gap in first circularisation attempt had a gap of ~7+ Kb
+
+* Where to trim ends...
+ * First_40k-----------------Last_40k
+ * --10163              27173-37325--
+ * -10163 from start or -12827 from end
+* **Remove last 12827 bases of assembly 16442 and use as reference for Resequencing**
+ * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,479,721 bases
+ * Should end 'AAGTGCCCTTGCGGG'
+  * This makes an assembly of 3,479,720; be aware in case there are any single-base problems
+ * Standard reference: job 16574 - Appears to have been successful
+ * Reversed reference: job 16575 - Appears to have been successful 
+
+## pb_359_3
+* Upon checking the breakpoint in SMRT View, the break isn't entirely clear-cut...
+ * However, a LOT of reads break off at that point...
+* Assembly used: Falcon 17.1k (range of 3-contig: 16.6k - 17.25k)
+ * Start: TCTCACCGCTGATTGGCAAG
+ * End: ACCTTGCAAAGCAATTCCGA
+* Search for the sequence 'ACCTTGCAAAGCAATTCCGATCTCACCGCTGATTGGCAAG' in other assemblies:
+ * 16.6k - start and end match 17.1k
+ * 16.7k - present in the middle
+ * 16.75k - present in the middle
+ * 16.8k - present in the middle *
+ * 16.9k - present in the middle
+ * 17k - present in the middle
+ * 17.1k - **current assembly**
+ * 17.2k - present in the middle
+ * 17.25k - present in the middle
+* 16.8k has the second-longest of the long contigs in the 3-contig range, after 17.1k, so will
+ attempt to circularise that and compare.
+ * Standard reference: job 16578 - Still the peculiar high-low spike...
+ * Reversed reference: job 16579 - Still the peculiar high-low spike...
+
+>Sample_1_Contig_1
+GCTTTTTGATGCCTGCACAATATCTTGCGGCGCGCCCCTCACTTAGGCGG
+
+>Sample_1_Contig_2
+TGATTTGCCGCAACCGGATTCACCCACCAGCCCCAGTGCCTCGCCTGCTG
+[Reverse]
+
+>Sample_1_Contig_3
+CTTGATCCCGTATTCGGGCACCCAAATCCCGTCATCAGACTGAAACCAAA
+[Reverse]
+
+>Sample_1_Contig_4
+TGCCGTGAAAAGACGAGCGTAACGCCTCACTGATAGGCCCACGCTCGATA
+
+>Sample_1_Contig_5
+TGAAGAGTCTGATCCAATCTCTTGCGGTAGCGGAATCATCAGAGACCTGT
+
+>Sample_1_Contig_6
+ATTCCCCTGTCCCGCCAAGACATGCGTCGGCGTGGATCAGCGTGCCCCCA
+[Reverse]
+
+>Sample_1_Contig_7
+GCGTTGATATCGCCGGACTTCATCCGGCGGTATTCGTCGGCGATCCAGAT
+[Reverse]
+
+>Sample_1_Contig_8
+GTTGAGCATCCGCGACAGCCTCTTGCGCCTTAACATGCGCCGCTGCCTTG
+[Reverse]

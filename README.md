@@ -1895,3 +1895,73 @@ GCGTTGATATCGCCGGACTTCATCCGGCGGTATTCGTCGGCGATCCAGAT
 >Sample_1_Contig_8
 GTTGAGCATCCGCGACAGCCTCTTGCGCCTTAACATGCGCCGCTGCCTTG
 [Reverse]
+
+# 26 September 2016
+
+## pb_359_3
+
+Could Falcon have accidentally fused the chromosomal DNA to a plasmid sequence? If so, could a
+four-contig assembly be a better fit?
+* 16.5k SRL assembly has 4 contigs
+ * Sizes of the contigs:
+  * 3,834,018
+  * 110,986
+  * 39,367
+  * 1,870
+ * Size of the contigs from the 17.1k SRL assembly
+  * 3,834,121
+  * 110,980
+  * 39,376
+* Sizes almost identical... Falcon is convinced that this assembly is correct, so where is the
+discrepancy...?
+ * Compare to the contig sizes from the 5-contig assembly from HGAP:
+  * 2,388,684
+  * 1,487,285
+  * 46,106
+  * 103,565
+  * 69,473
+ * Size difference barely comparable...
+
+**Note:** For the HGAP assemblies yielding a single contig, the best SRL was within 2k of the
+N50 read length. Same appears to be generally true for Falcon, albeit over a wider range.
+
+To this end - try a ~12k SRL assembly for pb_359_3, and see if this generates a good result
+ * Could the 28 contig result at 15k SRL have been a localised peak?
+ * Job ID - 16580
+  * Awaiting results...
+
+## pb_359_1 vs pb_359_6
+* If the samples are going to be spliced to match up, will need to obtain some reverse complement
+sequences...
+ * Relevant sample 6 sequences reverse-transcribed, start points aligned with sample 1, and new
+blastn jobs submitted.
+* Result - all samples showed 99% identity, <1% gaps
+* Combined with the revelation that their 16S sequences are identical - **These two appear to
+belong to the same species, or at least very closely-related species**
+
+This being the case, pb_359_1 would be the best choice for testing circularisation, as this
+matches the initial prediction for pb_359_1's identity (*Sulfitobacter*), as opposed to pb_359_6
+(16S prediction - *Mari.*).
+* pb_359_1 also has a result with a single 'linear' contig and multiple 'circular' contigs;
+pb_359_6 has at least two 'linear' contigs in all results.
+
+## pb_359_1
+* Sample to use - 15k SRL
+ * According to the ctg_paths file, the starting and ending nodes are the same; potentially circular
+ * Standard job - 16584 - Several tall peaks, but no severe dips
+ * Reversed job - 16585 - One relatively deep dip in the middle (~120x down to ~60x)
+  * Definite gap in the coverage, despite a decent number of supporting reads...
+  * As with sample 3, there is a large peak beside the dip...
+
+## Observation regarding Quiver
+Standard and reversed circularisation jobs using the SMRT Portal Resequencing protocol contain a
+Quiver step; is it necessary to run Quiver separately afterwards for further correction...?
+
+## Python
+Started work on a Python script to automatically reverse the halves of a sequence. The file is at:  
+/home/matt/MastersProject/Sequence_Reverse.py
+
+Tomorrow:
+* Check sample 3 assembly job
+* Continue to check sample 1
+* Attempt to fix Prokka?

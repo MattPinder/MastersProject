@@ -1965,3 +1965,37 @@ Tomorrow:
 * Check sample 3 assembly job
 * Continue to check sample 1
 * Attempt to fix Prokka?
+
+# 27 September 2016
+
+**Databases now added to Annotation-4; can run Blast on Annotation-4**
+
+## pb_359_3
+Assembly job gave 5 contigs, including a dip in the middle of the longest contig...
+* Confirms that the 28 contig result before was merely a local minimum
+* Compare to other jobs to see if dip is repeated - coverage dip IS present in another 5-contig assembly
+* Consider - **potential issue with contamination, according to Oskar**
+* Attempt builds at 11k and 14k SRL?
+ * 11k job: 16585
+ * 14k job: 16586
+
+## pb_359_1 and pb_359_6
+As pb_359_1 has failed to give a circularised chromosome, could pb_359_6 give a better result? Or
+would it be the same?
+* Compare coverage in reports from pb_359_1 and pb_359_6
+ * No steep drops in either, but sample 1 has much higher overall coverage than sample 6
+ * Dissimilar enough to at least attempt to circularise 6?
+  * According to the 10.6k SRL ctg_paths file, theoretically circularisable...
+* Will attempt two circularisation of pb_359_6 10.6k
+ * Standard job: 16590 **(not started yet)**
+ * Reversed job: 16591 **(not started yet)**
+
+## Python
+Have completed and tested my Sequence_Reverse.py script
+* Location: Skeletonema_marinoi_microbiome_project/Scripts/Sequence_Reverse.py
+* Syntax: `./Sequence_Reverse.py [input file] [output file]`
+
+**Tomorrow**:
+* Run two pb_359_6 jobs after adding the relevant references
+* Tweak Python script to accept multiple sequences?
+* Edit Albiorix wiki/manual page?

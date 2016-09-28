@@ -1987,8 +1987,8 @@ would it be the same?
  * Dissimilar enough to at least attempt to circularise 6?
   * According to the 10.6k SRL ctg_paths file, theoretically circularisable...
 * Will attempt two circularisation of pb_359_6 10.6k
- * Standard job: 16590 **(not started yet)**
- * Reversed job: 16591 **(not started yet)**
+ * Standard job: 16590
+ * Reversed job: 16591
 
 ## Python
 Have completed and tested my Sequence_Reverse.py script
@@ -1999,3 +1999,34 @@ Have completed and tested my Sequence_Reverse.py script
 * Run two pb_359_6 jobs after adding the relevant references
 * Tweak Python script to accept multiple sequences?
 * Edit Albiorix wiki/manual page?
+
+# 28 September 2016
+
+## pb_359_3
+pb_359_3 jobs failed - rerun:
+ * 11k - 16592 - **running**
+ * 14k - 16593 - **will run after 11k is complete; many jobs currently running, and suspicious that the last
+attempt may have timed out...**
+
+## pb_359_6
+Start pb_359_6 jobs once templates are uploaded
+ * Standard job: 16590 - As mentioned below, a dip exists which does not appear to be clear-cut. Could be a good assembly?
+ * Reversed job: 16591 - Appears to be a dip from ~150x to ~75x, BUT no clean break; could well be a legitimate circularisation
+  * Also, break not in the centre of the sequence, as one would expect of the reverse job.
+  * High peak of ~140bp at ~230x coverage right before dip.
+
+## Next steps
+* **Samples 4, 5 and 8** have single-contig, Quiver-corrected assemblies (initial assembly + Resequencer consensus)
+* The longest contig for **samples 2 and 7** has been circularised; must repeat this process for the plasmids
+* **Samples 1 and 6** come from, presumably, the same species; must decide which to work with
+* **Sample 3** still isn't circularising well; must resolve this
+
+## Prokka
+* Retry original script (for Prokka v1.11); renamed PROKKA_Test_1.5.sge
+ * Breaks at custom TIGR HMM database...
+ * Do I need to run `prokka --cleandb` and `prokka --setupdb` as admin to get them to work...?
+  * *sudo* does not seem to recognise the 'module' command?
+
+## To do
+* Modify ./bashrc to include path to my Scripts folder, so I can run Sequence_Reverse.py without having to
+specify the path each time?

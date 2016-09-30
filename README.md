@@ -2030,3 +2030,73 @@ Start pb_359_6 jobs once templates are uploaded
 ## To do
 * Modify ./bashrc to include path to my Scripts folder, so I can run Sequence_Reverse.py without having to
 specify the path each time?
+
+# 29 September 2016
+
+"You could try combining the reads from sample #1 and #6 in a FALCON assembly to see if that has an effect on the resulting number of contigs."
+
+## pb_359_3
+* 14k - 16593 - **running**
+* 11k - 16592 - completed:
+ * Contigs - 5
+ * Sum of contig lengths - 4,198,061
+
+* 11k shows massive dip in the centre of the longest contig of the ** HGAP** assembly. Compare to other 5-contig assemblies:
+ * (11k - Coverage rises, massive dip just after peak, then slow fall from peak)
+ * 20k - No significant drop aside from those at the ends of the assembly.
+ * 18k - Sharp drop just before the end of the assembly...
+ * 12k - Same sharp drop as 11k
+* Blast 20k or 18k against itself, and see if there are overlaps at the end which could be removed,
+and circularisation tested?
+ * 20k/18k contig lengths vs contig lengths in 3-contig Falcon assemblies:
+  * Falcon
+   * 3,834k + 110k + 39k
+  * HGAP
+   * 2,388k + 1,487k + 46k + 103k + 69k
+* Try Blasting the HGAP assembly (~250 Kb), and see whether the two longest contigs BOTH match Loktanella;
+genome could have been split as in Alvar's investigation...
+
+## pb_359_1 and pb_359_6
+Running a Falcon job (11k SRL) for samples 1 and 6 together, to see what kind of assembly results.
+* Result was 9 contigs, almost the lowest result seen (same as pb_359_1 at this SRL, but one higher than
+pb_359_6 at this SRL)
+* Compare contig lengths:
+ * pb_359_1 - 11k: 3,580k (L), 142k (L), 99k (L), 43k (C), 209k (C), 427k (C), 284k (C), 92k (C), 292k (C)
+ * pb_359_6 - 11k: 428k (L), 73k (L), 67k (L), 284k (C), 209k (C), 3,571k (C), 142k (C), 292k (C)
+ * Fusion - 11k: 3,566k (L), 427k (L), 291k (L), 142k (L) 99k (L), 30k (L), 284k (C), 92k (C), 209k (C)
+  * VERY similar sizes to the pb_359_1 11k assembly
+  * Attempt an assembly with higher SRL, similar to pb_359_1 8-contig assemblies - 15k
+* Result of 15k combined Falcon run - 9 contigs (compared to 8 and 2, respectively)
+ * Compare contig lengths:
+  * pb_359_1 - 15k: 3,581k (L), 292k (C), 99k (C), 92k (C), 284k (C), 141k (C), 209k (C), 427k (C)
+  * pb_359_6 - 15k: 10k (L), 6k (L) - **This was a dud result**
+  * Fusion - 15k: 3,573k (L), 427k (L), 292k (L), 8k (L), 209k (C), 92k (C), 99k (C), 284k (C), 141k (C)
+* Out of curiosity, run a 20k assembly as this hasn't been run on either of the samples individually
+ * Fusion - 20k: 40 contigs...
+* Run a 13k assembly, as this is midway between 11k and 15k
+ * Fusion - 13k: 9 contigs
+  * Contig sizes: 3,573k (L), 427k (L), 292k (L), 142k (L), 110k (L), 30k (L), 92k (C), 284k (C), 209k (C)
+  * Contig sizes very similar to 11k and 15k
+* Run a 17k assembly; pb_359_1 gave 8 contigs with this SRL
+ * Number of contigs: 
+ * Compare contig sizes:
+  * pb_359_1 - 17k: 3,532k (L), 399k (L), 257k (L), 284k (C), 92k (C), 142k (C), 99k (C), 209k (C)
+  * pb_359_6 - 17k assembly not attempted
+  * Fusion - 17k: 
+
+## Prokka
+**Databases now re-done**  
+In future:
+* `sudo su` (become root user)
+* `module load PROKKA/vX.XX`
+* `prokka --cleandb`
+* `prokka --setupdb`
+* `exit`
+
+**Note:** Considering the similarities between pb_359_1 and pb_359_6, treat them as two samples of the
+same organism; continue the pipeline using only one, with potential input from the other if problems
+are encountered.
+
+## Tomorrow
+* Get results from Fusion 17k assembly
+* Attempt to get Prokka working again

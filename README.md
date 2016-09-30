@@ -823,7 +823,7 @@ found in the 16S analysis (_1 WAS predicted to be Sulfitobacter, however...)
 _Sulfitobacter pseudonitzschiae_, which was the the second-highest blastx result for the
 longest contig ([see article] (http://www.ncbi.nlm.nih.gov/pubmed/25278561)).
 
-__Note on blastx:__ Jobs seem to take ~1 hour per 100,000 bases
+__Note on blastx:__ Jobs seem to take ~1 hour per 100,000 bases (with 40 cores)
 
 Jobs 16516, 16517, 16519 failed; 16515 and 16518 still running for now...
 
@@ -2082,7 +2082,7 @@ pb_359_6 at this SRL)
  * Compare contig sizes:
   * pb_359_1 - 17k: 3,532k (L), 399k (L), 257k (L), 284k (C), 92k (C), 142k (C), 99k (C), 209k (C)
   * pb_359_6 - 17k assembly not attempted
-  * Fusion - 17k: 
+  * Fusion - 17k: **see 30 September**
 
 ## Prokka
 **Databases now re-done**  
@@ -2100,3 +2100,71 @@ are encountered.
 ## Tomorrow
 * Get results from Fusion 17k assembly
 * Attempt to get Prokka working again
+
+# 30 September 2016
+
+## pb_359_3
+pb_359_3 14k HGAP assembly (job 16593) failed once again. Will retry one more time, and if that fails will
+attempt a 13k assembly - the 15k assembly of pb_359_5 failed, only for the 16k run to give the one-contig
+assembly I had been hoping for.
+* Job 16598 - **running**
+
+__Note on blastx:__ Jobs seem to take ~1 hour per 100,000 bases (with 40 cores)
+
+* 250,000 bp for each contig
+* 250k + 250k + 46k + 103k + 69k = 718k = ~7 hours @ 40 cores
+ * Currently at 8 cores - 7*5 = 35 hours
+ * Started at 13:19 on 29 Sept, should be finished at ~midnight on Friday night
+  * Job completed earlier than anticipated
+
+* Results:
+ * Incredibly similar results, with _Loktanella vestfoldensis_ still the supposed identity of the longest contig
+ * DDE transposase still found on the shorter contigs (with one exception), again with _Confluentimicrobium_
+the most likely candidate.
+* Now just a case of getting as good an assembly as possible...
+
+## pb_359_1 + pb_359_6 fusion
+Final assembly attempt - 17k - completed yesterday.
+* Number of contigs: 9
+ * Contig sizes: 3,572k (L), 399k (L), 260k (L), 8k (L), 99k (C), 209k (C), 92k (C), 141k (C), 284k (C)
+As mentioned above, will treat pb_359_1 and pb_359_6 as two samples of a single species from now on.
+
+## Prokka
+
+Now that the databases have been updated, will attempt to run the Prokka jobs from previously to test whether
+it will now run as intended.
+
+* Running Prokka v1.11 - gets stuck at my custom TIGR database.
+ * Solution - try re-pressing TIGR database, then retry --cleandb and --setupdb (as sudo)
+  * Failed
+ * Solution 2 - try implementing [this workaround] (https://github.com/tseemann/prokka/issues/44)
+  * Failed
+ * Solution 3 - Post a message on the Github Issues page for Prokka, wait for response
+
+## pb_359_1 and pb_359_6 circularisation
+Considering the similarities between the two, the best indicator of which assembly to continue with
+would probably be which one circularises the best
+* pb_359_1 - There appears to be a fairly well-supported break in this assembly
+* pb_359_6 - This break is less clear-cut, so this may be the better assembly
+
+## State of circularisation attempts
+
+| Sample(s)     | Current state                                                                                |
+|---------------|----------------------------------------------------------------------------------------------|
+| pb_359_1 + _6 | 8 contigs _6 appears to circularise better than _1; attempt to circularise plasmids          |
+| pb_359_2      | 3 contigs, longest appears to circularise; attempt to circularise plasmids                   |
+| pb_359_3      | 3 contigs, big trough in centre of longest; circularisation unsuccessful                     |
+| pb_359_4      | Single contig, **seems to circularises**                                                     |
+| pb_359_5      | Single contig, **circularises**                                                              |
+| pb_359_7      | 4 contigs, longest appears to circularise; check patch near spike, then circularise plasmids |
+| pb_359_8      | Single contig, **circularises**                                                              |
+
+## Note
+[This] (https://clydeandforth.wordpress.com/2014/06/15/de-novo-bacterial-genome-assembly-part-3/) calls the
+'quality' aspect of HGAP2 into question...
+
+## To do
+* Check back for reply from TSeemann re: Prokka
+ * Check the feedback from the PROKKA_Test_1.5 file
+* Wait for results from pb_359_3 14k assembly; if this fails, retry at 13k
+* Seek guidance re: 'gaps' in circularised assemblies and need to Quiver circularised assemblies

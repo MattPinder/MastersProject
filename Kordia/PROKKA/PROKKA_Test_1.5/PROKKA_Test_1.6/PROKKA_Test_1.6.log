@@ -1,0 +1,613 @@
+[09:45:37] This is prokka 1.12-beta
+[09:45:37] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[09:45:37] Homepage is https://github.com/tseemann/prokka
+[09:45:37] Local time is Mon Oct  3 09:45:37 2016
+[09:45:37] You are matt
+[09:45:37] Operating system is linux
+[09:45:37] You have BioPerl 1.006924
+[09:45:37] System has 64 cores.
+[09:45:37] Will use maximum of 8 cores.
+[09:45:37] Annotating as >>> Bacteria <<<
+[09:45:37] Generating locus_tag from '../../combined-revcomp-unitig-1-2.fasta' contents.
+[09:45:37] Setting --locustag KMMLEFCK from MD5 4665efc4892890835e22b91426ed6972
+[09:45:37] Creating new output folder: PROKKA_Test_1.6
+[09:45:37] Running: mkdir -p PROKKA_Test_1\.6
+[09:45:37] Using filename prefix: PROKKA_Test_1.6.XXX
+[09:45:37] Setting HMMER_NCPU=1
+[09:45:37] Writing log to: PROKKA_Test_1.6/PROKKA_Test_1.6.log
+[09:45:37] Command: /usr/local/packages/prokka-head/bin/prokka --outdir PROKKA_Test_1.6 --prefix PROKKA_Test_1.6 ../../combined-revcomp-unitig-1-2.fasta
+[09:45:37] Appending to PATH: /home/local/packages/prokka-head/bin/../binaries/linux
+[09:45:37] Appending to PATH: /home/local/packages/prokka-head/bin/../binaries/linux/../common
+[09:45:37] Appending to PATH: /home/local/packages/prokka-head/bin
+[09:45:37] Looking for 'aragorn' - found /usr/local/packages/prokka-head/binaries/linux/aragorn
+[09:45:37] Determined aragorn version is 1.2
+[09:45:37] Looking for 'blastp' - found /usr/local/packages/prokka-head/binaries/linux/blastp
+[09:45:37] Determined blastp version is 2.4
+[09:45:37] Looking for 'cmpress' - found /usr/local/packages/prokka-head/binaries/linux/cmpress
+[09:45:37] Determined cmpress version is 1.1
+[09:45:37] Looking for 'cmscan' - found /usr/local/packages/prokka-head/binaries/linux/cmscan
+[09:45:37] Determined cmscan version is 1.1
+[09:45:37] Looking for 'egrep' - found /bin/egrep
+[09:45:37] Looking for 'find' - found /bin/find
+[09:45:37] Looking for 'grep' - found /bin/grep
+[09:45:37] Looking for 'hmmpress' - found /usr/local/packages/prokka-head/binaries/linux/hmmpress
+[09:45:37] Determined hmmpress version is 3.1
+[09:45:37] Looking for 'hmmscan' - found /usr/local/packages/prokka-head/binaries/linux/hmmscan
+[09:45:37] Determined hmmscan version is 3.1
+[09:45:37] Looking for 'less' - found /usr/bin/less
+[09:45:37] Looking for 'makeblastdb' - found /usr/local/packages/prokka-head/binaries/linux/makeblastdb
+[09:45:38] Determined makeblastdb version is 2.4
+[09:45:38] Looking for 'minced' - found /home/local/packages/prokka-head/bin/../binaries/linux/../common/minced
+[09:45:38] Determined minced version is 2.0
+[09:45:38] Looking for 'parallel' - found /home/local/packages/prokka-head/bin/../binaries/linux/../common/parallel
+[09:45:38] Determined parallel version is 20150122
+[09:45:38] Looking for 'prodigal' - found /usr/local/packages/prokka-head/binaries/linux/prodigal
+[09:45:38] Determined prodigal version is 2.6
+[09:45:38] Looking for 'prokka-genbank_to_fasta_db' - found /usr/local/packages/prokka-head/bin/prokka-genbank_to_fasta_db
+[09:45:38] Looking for 'sed' - found /bin/sed
+[09:45:38] Looking for 'tbl2asn' - found /usr/local/packages/prokka-head/binaries/linux/tbl2asn
+[09:45:39] Determined tbl2asn version is 25.0
+[09:45:39] Using genetic code table 11.
+[09:45:39] Loading and checking input file: ../../combined-revcomp-unitig-1-2.fasta
+[09:45:39] Wrote 1 contigs totalling 5493758 bp.
+[09:45:39] Predicting tRNAs and tmRNAs
+[09:45:39] Running: aragorn -l -gc11  -w PROKKA_Test_1\.6\/PROKKA_Test_1\.6\.fna
+[09:45:43] 1 tRNA-Gly c[182750,182823] 34 (tcc)
+[09:45:43] 2 tRNA-Arg c[347361,347435] 35 (tcg)
+[09:45:43] 3 tRNA-Leu c[493715,493797] 35 (tag)
+[09:45:43] 4 tRNA-Asp c[521386,521460] 35 (gtc)
+[09:45:43] 5 tRNA-Leu c[586330,586414] 35 (taa)
+[09:45:43] 6 tRNA-Gly c[586430,586503] 34 (gcc)
+[09:45:43] 7 tmRNA c[783873,784267] 97,126 GENNYALAA*
+[09:45:43] 8 tRNA-Glu [877616,877688] 34 (ttc)
+[09:45:43] 9 tRNA-Glu [877759,877831] 34 (ttc)
+[09:45:43] 10 tRNA-Arg c[935330,935404] 35 (acg)
+[09:45:43] 11 tRNA-Ile [1079548,1079622] 35 (gat)
+[09:45:43] 12 tRNA-Ala [1079709,1079783] 35 (tgc)
+[09:45:43] 13 tRNA-Ser [1271811,1271893] 33 (gct)
+[09:45:43] 14 tRNA-Pro [1272033,1272108] 36 (tgg)
+[09:45:43] 15 tRNA-Arg [1272290,1272364] 35 (tct)
+[09:45:43] 16 tRNA-Tyr [2199700,2199782] 35 (gta)
+[09:45:43] 17 tRNA-Ala c[2506587,2506661] 35 (tgc)
+[09:45:43] 18 tRNA-Ile c[2506748,2506822] 35 (gat)
+[09:45:43] 19 tRNA-Lys [2544854,2544927] 34 (ttt)
+[09:45:43] 20 tRNA-Lys [2545044,2545117] 34 (ttt)
+[09:45:43] 21 tRNA-Leu [2545267,2545351] 35 (gag)
+[09:45:43] 22 tRNA-Ser c[2582258,2582343] 35 (tga)
+[09:45:43] 23 tRNA-His c[2904636,2904710] 35 (gtg)
+[09:45:43] 24 tRNA-Met [2973223,2973297] 35 (cat)
+[09:45:43] 25 tRNA-Pro c[3172723,3172798] 36 (tgg)
+[09:45:43] 26 tRNA-Thr c[3456603,3456677] 35 (tgt)
+[09:45:43] 27 tRNA-Trp c[3513795,3513868] 34 (cca)
+[09:45:43] 28 tRNA-Thr c[3515173,3515245] 33 (ggt)
+[09:45:43] 29 tRNA-Gly c[3515258,3515331] 34 (tcc)
+[09:45:43] 30 tRNA-Tyr c[3515341,3515423] 35 (gta)
+[09:45:43] 31 tRNA-Thr c[3515497,3515571] 35 (tgt)
+[09:45:43] 32 tRNA-Gln [3589552,3589625] 34 (ttg)
+[09:45:43] 33 tRNA-Val c[3875601,3875676] 36 (tac)
+[09:45:43] 34 tRNA-Val c[3875701,3875776] 36 (tac)
+[09:45:43] 35 tRNA-Ala c[3919651,3919725] 35 (tgc)
+[09:45:43] 36 tRNA-Ile c[3919812,3919886] 35 (gat)
+[09:45:43] 37 tRNA-Met c[4125092,4125165] 34 (cat)
+[09:45:43] 38 tRNA-Phe [4207098,4207171] 34 (gaa)
+[09:45:43] 39 tRNA-Cys [4241364,4241442] 39 (gca)
+[09:45:43] 40 tRNA-Met [4241476,4241548] 35 (cat)
+[09:45:43] 41 tRNA-Val [4241563,4241639] 35 (aac)
+[09:45:43] 42 tRNA-Gly [4241658,4241730] 34 (acc)
+[09:45:43] 43 tRNA-Asp [4241744,4241820] 35 (gtc)
+[09:45:43] 44 tRNA-Lys [4244846,4244921] 36 (ttt)
+[09:45:43] 45 tRNA-Ser [4244927,4245014] 35 (tga)
+[09:45:43] 46 tRNA-Ser [4245024,4245111] 37 (gct)
+[09:45:43] 47 tRNA-Asn [4245253,4245325] 33 (gtt)
+[09:45:43] 48 tRNA-Cys [4245329,4245402] 34 (gca)
+[09:45:43] 49 tRNA-Tyr [4245450,4245533] 35 (gta)
+[09:45:43] 50 tRNA-Trp [4245539,4245611] 34 (cca)
+[09:45:43] 51 tRNA-Asp [4245800,4245872] 33 (gtc)
+[09:45:43] 52 tRNA-Pro [4245878,4245951] 34 (tgg)
+[09:45:43] 53 tRNA-Glu [4246042,4246114] 34 (ttc)
+[09:45:43] 54 tRNA-Leu [4246120,4246193] 34 (tag)
+[09:45:43] 55 tRNA-Arg [4246220,4246292] 34 (acg)
+[09:45:43] 56 tRNA-Gln [4246298,4246370] 34 (ttg)
+[09:45:43] 57 tRNA-Met [4246373,4246465] 35 (cat)
+[09:45:43] 58 tRNA-Ile [4246478,4246551] 34 (gat)
+[09:45:43] 59 tRNA-His [4246558,4246630] 35 (gtg)
+[09:45:43] 60 tRNA-Met c[4881980,4882054] 35 (cat)
+[09:45:43] 61 tRNA-Cys c[4914070,4914143] 33 (gca)
+[09:45:43] 62 tRNA-Asn [5240798,5240872] 35 (gtt)
+[09:45:43] 63 tRNA-Leu [5477650,5477732] 35 (caa)
+[09:45:43] 64 tRNA-Ser [5489321,5489409] 35 (gga)
+[09:45:43] Found 64 tRNAs
+[09:45:43] Predicting Ribosomal RNAs
+[09:45:43] You need either Barrnap or RNAmmer installed to predict rRNAs!
+[09:45:43] Skipping ncRNA search, enable with --rfam if desired.
+[09:45:43] Total of 63 tRNA + rRNA features
+[09:45:43] Searching for CRISPR repeats
+[09:45:44] CRISPR1 1 98136 with 17 spacers
+[09:45:44] CRISPR2 1 99392 with 27 spacers
+[09:45:44] Found 2 CRISPRs
+[09:45:44] Predicting coding sequences
+[09:45:44] Contigs total 5493758 bp, so using single mode
+[09:45:44] Running: prodigal -i PROKKA_Test_1\.6\/PROKKA_Test_1\.6\.fna -c -m -g 11 -p single -f sco -q
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:98530..98685 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:98873..98989 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:99786..99941 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:99938..100093 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:100090..100245 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:100470..100625 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:100622..100777 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:100850..101005 on - strand
+[09:46:18] Excluding CDS which overlaps existing RNA (repeat_region) at 1:101078..101233 on - strand
+[09:46:19] Excluding CDS which overlaps existing RNA (tRNA) at 1:493658..493846 on + strand
+[09:46:30] Found 4686 CDS
+[09:46:30] Connecting features back to sequences
+[09:46:30] Not using genus-specific database. Try --usegenus to enable it.
+[09:46:30] Annotating CDS, please be patient.
+[09:46:30] Will use 8 CPUs for similarity searching.
+[09:46:51] There are still 4686 unannotated CDS left (started with 4686)
+[09:46:51] Will use blast to search against /db/prokka/kingdom/Bacteria/sprot with 8 CPUs
+[09:46:51] Running: cat PROKKA_Test_1\.6\/sprot\.faa | parallel --gnu --plain -j 8 --block 102881 --recstart '>' --pipe blastp -query - -db /db/prokka/kingdom/Bacteria/sprot -evalue 1e-06 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_Test_1\.6\/sprot\.blast 2> /dev/null
+[09:48:01] Modify product: Probable GTP-binding protein EngB => putative GTP-binding protein EngB
+[09:48:01] Modify product: Putative acetyltransferase SA2342 => Putative acetyltransferase
+[09:48:01] Modify product: Bifunctional protein FolD => Bifunctional protein FolD protein
+[09:48:01] Modify product: Putative cystathionine beta-synthase Rv1077 => Putative cystathionine beta-synthase
+[09:48:01] Modify product: Putative DNA ligase-like protein Rv0938/MT0965 => Putative DNA ligase-like protein/MT0965
+[09:48:01] Modify product: Uncharacterized lipoprotein YbbD precursor => putative lipoprotein YbbD precursor
+[09:48:01] Modify product: Glucuronide carrier protein homolog => hypothetical protein
+[09:48:02] Modify product: Uncharacterized ABC transporter ATP-binding protein HI_1252 => putative ABC transporter ATP-binding protein
+[09:48:02] Modify product: Probable S-adenosylmethionine-dependent methyltransferase MSMEG_2350/MSMEI_2290 => putative S-adenosylmethionine-dependent methyltransferase/MSMEI_2290
+[09:48:02] Modify product: Probable peptidyl-prolyl cis-trans isomerase => putative peptidyl-prolyl cis-trans isomerase
+[09:48:02] Modify product: Uncharacterized FAD-linked oxidoreductase YvdP => putative FAD-linked oxidoreductase YvdP
+[09:48:02] Modify product: Uncharacterized inner membrane transporter YedA => putative inner membrane transporter YedA
+[09:48:02] Modify product: Uncharacterized ABC transporter ATP-binding protein YheS => putative ABC transporter ATP-binding protein YheS
+[09:48:02] Modify product: Probable lipoprotein YiaD precursor => putative lipoprotein YiaD precursor
+[09:48:02] Modify product: Probable amino-acid ABC transporter-binding protein HI_1080 precursor => putative amino-acid ABC transporter-binding protein precursor
+[09:48:02] Modify product: Uncharacterized FAD-linked oxidoreductase YvdP => putative FAD-linked oxidoreductase YvdP
+[09:48:02] Modify product: Probable GTPase ArgK => putative GTPase ArgK
+[09:48:02] Modify product: Uncharacterized HTH-type transcriptional regulator YxaF => putative HTH-type transcriptional regulator YxaF
+[09:48:02] Modify product: Probable 3-hydroxybutyryl-CoA dehydrogenase => putative 3-hydroxybutyryl-CoA dehydrogenase
+[09:48:02] Modify product: Probable ATP-dependent helicase DinG homolog => hypothetical protein
+[09:48:02] Modify product: Cyclic nucleotide-gated potassium channel mll3241 => Cyclic nucleotide-gated potassium channel
+[09:48:02] Modify product: Probable adenylyltransferase/sulfurtransferase MoeZ => putative adenylyltransferase/sulfurtransferase MoeZ
+[09:48:02] Modify product: Putative O-methyltransferase MSMEG_5073/MSMEI_4947 => Putative O-methyltransferase/MSMEI_4947
+[09:48:02] Modify product: Universal stress protein MSMEG_3950/MSMEI_3859 => Universal stress protein/MSMEI_3859
+[09:48:02] Modify product: Probable sensor histidine kinase pdtaS => putative sensor histidine kinase pdtaS
+[09:48:02] Modify product: Probable ATP-dependent helicase DinG homolog => hypothetical protein
+[09:48:02] Modify product: Probable transcriptional regulatory protein pdtaR => putative transcriptional regulatory protein pdtaR
+[09:48:02] Modify product: Probable metallo-hydrolase BURPS1710b_2304 => putative metallo-hydrolase
+[09:48:03] Modify product: Probable propionyl-CoA carboxylase beta chain 5 => putative propionyl-CoA carboxylase beta chain 5
+[09:48:03] Modify product: Uncharacterized ABC transporter ATP-binding protein YjjK => putative ABC transporter ATP-binding protein YjjK
+[09:48:03] Modify product: SCO1 protein homolog precursor => hypothetical protein
+[09:48:03] Modify product: Probable S-adenosylmethionine-dependent methyltransferase MSMEG_2350/MSMEI_2290 => putative S-adenosylmethionine-dependent methyltransferase/MSMEI_2290
+[09:48:03] Modify product: Uncharacterized acyl-CoA thioester hydrolase HI_0827 => putative acyl-CoA thioester hydrolase
+[09:48:03] Modify product: Probable siderophore transport system ATP-binding protein YusV => putative siderophore transport system ATP-binding protein YusV
+[09:48:03] Modify product: Probable nicotinate-nucleotide pyrophosphorylase [carboxylating] => putative nicotinate-nucleotide pyrophosphorylase [carboxylating]
+[09:48:03] Modify product: Uncharacterized hydrolase YxeP => putative hydrolase YxeP
+[09:48:03] Modify product: Uncharacterized acyl-CoA thioester hydrolase HI_0827 => putative acyl-CoA thioester hydrolase
+[09:48:03] Modify product: Probable TonB-dependent receptor NMB0964 precursor => putative TonB-dependent receptor precursor
+[09:48:03] Modify product: Probable multidrug resistance ABC transporter ATP-binding/permease protein YheI => putative multidrug resistance ABC transporter ATP-binding/permease protein YheI
+[09:48:03] Modify product: N utilization substance protein B homolog => hypothetical protein
+[09:48:03] Modify product: Uncharacterized metallophosphoesterase Cj0846 => putative metallophosphoesterase
+[09:48:03] Modify product: Anaerobic sulfatase-maturating enzyme homolog YdeM => hypothetical protein
+[09:48:03] Modify product: Probable transcriptional regulatory protein HP_0162 => putative transcriptional regulatory protein
+[09:48:03] Modify product: Probable acetyl-CoA acyltransferase => putative acetyl-CoA acyltransferase
+[09:48:03] Modify product: Nucleoid-associated protein HI_0442 => Nucleoid-associated protein
+[09:48:03] Modify product: Putative cystathionine beta-synthase Rv1077 => Putative cystathionine beta-synthase
+[09:48:03] Modify product: Conserved virulence factor B => hypothetical protein
+[09:48:03] Modify product: Probable peroxiredoxin => putative peroxiredoxin
+[09:48:03] Modify product: Thioredoxin-like protein slr0233 => Thioredoxin-like protein
+[09:48:03] Modify product: Probable thiol peroxidase => putative thiol peroxidase
+[09:48:03] Modify product: Uncharacterized acyl-CoA thioester hydrolase HI_0827 => putative acyl-CoA thioester hydrolase
+[09:48:04] Modify product: Probable phospholipid ABC transporter permease protein MlaE => putative phospholipid ABC transporter permease protein MlaE
+[09:48:04] Modify product: Probable cadmium-transporting ATPase => putative cadmium-transporting ATPase
+[09:48:04] Modify product: Ribonuclease TTHA0252 => Ribonuclease
+[09:48:04] Modify product: Uncharacterized symporter YidK => putative symporter YidK
+[09:48:04] Modify product: Probable siderophore biosynthesis protein SbnA => putative siderophore biosynthesis protein SbnA
+[09:48:04] Modify product: Uncharacterized ABC transporter ATP-binding protein Rv0073/MT0079 => putative ABC transporter ATP-binding protein/MT0079
+[09:48:04] Modify product: Transcription termination factor Rho => hypothetical protein
+[09:48:04] Modify product: Uncharacterized ABC transporter ATP-binding protein TM_0288 => putative ABC transporter ATP-binding protein
+[09:48:04] Modify product: Uncharacterized N-acetyltransferase YsnE => putative N-acetyltransferase YsnE
+[09:48:04] Modify product: Uncharacterized ABC transporter ATP-binding protein YbhF => putative ABC transporter ATP-binding protein YbhF
+[09:48:04] Modify product: Epimerase family protein SA0724 => Epimerase family protein
+[09:48:04] Modify product: Uncharacterized symporter YidK => putative symporter YidK
+[09:48:04] Modify product: Uncharacterized symporter YidK => putative symporter YidK
+[09:48:04] Modify product: Glutathione peroxidase homolog BsaA => hypothetical protein
+[09:48:04] Modify product: Probable protein kinase UbiB => putative protein kinase UbiB
+[09:48:04] Modify product: Uncharacterized ABC transporter ATP-binding protein YheS => putative ABC transporter ATP-binding protein YheS
+[09:48:04] Modify product: Probable 3-hydroxyacyl-CoA dehydrogenase => putative 3-hydroxyacyl-CoA dehydrogenase
+[09:48:05] Modify product: Probable acyl-CoA dehydrogenase => putative acyl-CoA dehydrogenase
+[09:48:05] Modify product: Cyclic nucleotide-gated potassium channel mll3241 => Cyclic nucleotide-gated potassium channel
+[09:48:05] Modify product: Probable FKBP-type peptidyl-prolyl cis-trans isomerase FkpA precursor => putative FKBP-type peptidyl-prolyl cis-trans isomerase FkpA precursor
+[09:48:05] Modify product: Probable peptidyl-prolyl cis-trans isomerase => putative peptidyl-prolyl cis-trans isomerase
+[09:48:05] Modify product: Probable chromosome-partitioning protein ParB => putative chromosome-partitioning protein ParB
+[09:48:05] Modify product: Uncharacterized ABC transporter ATP-binding protein YxlF => putative ABC transporter ATP-binding protein YxlF
+[09:48:05] Modify product: Uncharacterized lipoprotein YbbD precursor => putative lipoprotein YbbD precursor
+[09:48:05] Modify product: Probable ATP-dependent helicase DinG homolog => hypothetical protein
+[09:48:05] Modify product: Epimerase family protein SA0724 => Epimerase family protein
+[09:48:05] Modify product: Probable phospholipid ABC transporter permease protein MlaE => putative phospholipid ABC transporter permease protein MlaE
+[09:48:05] Modify product: Uncharacterized oxidoreductase SAV2478 => putative oxidoreductase
+[09:48:05] Modify product: Uncharacterized ABC transporter ATP-binding protein YxlF => putative ABC transporter ATP-binding protein YxlF
+[09:48:05] Modify product: Probable polyketide biosynthesis enoyl-CoA hydratase PksH => putative polyketide biosynthesis enoyl-CoA hydratase PksH
+[09:48:05] Modify product: Putative multidrug export ATP-binding/permease protein SAV1866 => Putative multidrug export ATP-binding/permease protein
+[09:48:05] Modify product: Uncharacterized ABC transporter ATP-binding protein YheS => putative ABC transporter ATP-binding protein YheS
+[09:48:06] Modify product: Probable adenylyltransferase/sulfurtransferase MoeZ => putative adenylyltransferase/sulfurtransferase MoeZ
+[09:48:06] Modify product: Uncharacterized methyltransferase YcgJ => putative methyltransferase YcgJ
+[09:48:06] Modify product: PGL/p-HBAD biosynthesis glycosyltransferase Rv2957/MT3031 => PGL/p-HBAD biosynthesis glycosyltransferase/MT3031
+[09:48:06] Modify product: HIT-like protein HI_0961 => HIT-like protein
+[09:48:06] Modify product: Uncharacterized inner membrane transporter YedA => putative inner membrane transporter YedA
+[09:48:06] Modify product: Probable A/G-specific adenine glycosylase YfhQ => putative A/G-specific adenine glycosylase YfhQ
+[09:48:06] Modify product: DNA repair protein RadA homolog => hypothetical protein
+[09:48:06] Modify product: Uncharacterized methyltransferase YcgJ => putative methyltransferase YcgJ
+[09:48:06] Modify product: Probable enoyl-CoA hydratase echA8 => putative enoyl-CoA hydratase echA8
+[09:48:06] Modify product: SCO1 protein homolog precursor => hypothetical protein
+[09:48:06] Modify product: Putative zinc metalloprotease aq_1964 => Putative zinc metalloprotease
+[09:48:06] Modify product: Probable deoxyribonuclease RhsB => putative deoxyribonuclease RhsB
+[09:48:06] Modify product: Probable cysteine desulfurase => putative cysteine desulfurase
+[09:48:06] Modify product: Probable ATP-dependent transporter SufC => putative ATP-dependent transporter SufC
+[09:48:06] Modify product: Probable sensor histidine kinase pdtaS => putative sensor histidine kinase pdtaS
+[09:48:06] Modify product: Probable transcriptional regulatory protein pdtaR => putative transcriptional regulatory protein pdtaR
+[09:48:06] Modify product: Uncharacterized deoxyribonuclease YjjV => putative deoxyribonuclease YjjV
+[09:48:06] Modify product: Probable ferritin-1 => putative ferritin-1
+[09:48:06] Modify product: Probable murein peptide carboxypeptidase => putative murein peptide carboxypeptidase
+[09:48:06] Modify product: Universal stress protein Rv2005c/MT2061 => Universal stress protein/MT2061
+[09:48:06] Modify product: Cytochrome c oxidase subunit 1 homolog, bacteroid => hypothetical protein
+[09:48:06] Modify product: Probable copper-importing P-type ATPase A => putative copper-importing P-type ATPase A
+[09:48:06] Modify product: Uncharacterized epimerase/dehydratase SAV0553 => putative epimerase/dehydratase
+[09:48:06] Modify product: Probable 5-formyltetrahydrofolate cyclo-ligase => putative 5-formyltetrahydrofolate cyclo-ligase
+[09:48:07] Modify product: Uncharacterized sugar kinase YdjH => putative sugar kinase YdjH
+[09:48:07] Modify product: Transcription termination/antitermination protein NusG => hypothetical protein
+[09:48:07] Modify product: Universal stress protein Rv2005c/MT2061 => Universal stress protein/MT2061
+[09:48:07] Modify product: Transcription termination/antitermination protein NusA => hypothetical protein
+[09:48:07] Modify product: SCO1 protein homolog precursor => hypothetical protein
+[09:48:07] Modify product: Probable inorganic polyphosphate/ATP-NAD kinase => putative inorganic polyphosphate/ATP-NAD kinase
+[09:48:07] Modify product: Putative outer membrane protein NMB0088 precursor => Putative outer membrane protein precursor
+[09:48:07] Modify product: Uncharacterized sensor-like histidine kinase SACOL0202 => putative sensor-like histidine kinase
+[09:48:07] Modify product: Uncharacterized oxidoreductase SAV2478 => putative oxidoreductase
+[09:48:07] Modify product: Probable tRNA-dihydrouridine synthase => putative tRNA-dihydrouridine synthase
+[09:48:07] Modify product: Probable quorum-quenching lactonase YtnP => putative quorum-quenching lactonase YtnP
+[09:48:07] Modify product: Probable CtpA-like serine protease => putative CtpA-like serine protease
+[09:48:07] Modify product: Uncharacterized N-acetyltransferase YjcF => putative N-acetyltransferase YjcF
+[09:48:07] Modify product: Probable ribose-5-phosphate isomerase B => putative ribose-5-phosphate isomerase B
+[09:48:07] Modify product: 30S ribosomal protein S1 homolog => hypothetical protein
+[09:48:07] Modify product: Putative acetyltransferase SACOL2570 => Putative acetyltransferase
+[09:48:07] Modify product: Uncharacterized sugar transferase EpsL => putative sugar transferase EpsL
+[09:48:07] Modify product: Uncharacterized ABC transporter ATP-binding protein YxlF => putative ABC transporter ATP-binding protein YxlF
+[09:48:07] Modify product: Probable transcriptional regulatory protein NarL => putative transcriptional regulatory protein NarL
+[09:48:07] Modify product: Uncharacterized acyl-CoA thioester hydrolase HI_0827 => putative acyl-CoA thioester hydrolase
+[09:48:07] Modify product: Probable adenylyltransferase/sulfurtransferase MoeZ => putative adenylyltransferase/sulfurtransferase MoeZ
+[09:48:07] Modify product: Probable succinyl-CoA:3-ketoacid coenzyme A transferase subunit B => putative succinyl-CoA:3-ketoacid coenzyme A transferase subunit B
+[09:48:07] Modify product: Probable outer membrane protein pmp20 precursor => putative outer membrane protein pmp20 precursor
+[09:48:07] Cleaned 130 /product names
+[09:48:07] Deleting unwanted file: PROKKA_Test_1.6/sprot.faa
+[09:48:07] Deleting unwanted file: PROKKA_Test_1.6/sprot.blast
+[09:48:16] There are still 2961 unannotated CDS left (started with 4686)
+[09:48:16] Will use hmmer3 to search against /db/prokka/hmm/CLUSTERS.hmm with 8 CPUs
+[09:48:16] Running: cat PROKKA_Test_1\.6\/CLUSTERS\.hmm\.faa | parallel --gnu --plain -j 8 --block 56284 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-06 --cpu 1 /db/prokka/hmm/CLUSTERS.hmm /dev/stdin > PROKKA_Test_1\.6\/CLUSTERS\.hmm\.hmmer3 2> /dev/null
+[09:50:51] Deleting unwanted file: PROKKA_Test_1.6/CLUSTERS.hmm.faa
+[09:50:51] Deleting unwanted file: PROKKA_Test_1.6/CLUSTERS.hmm.hmmer3
+[09:51:01] There are still 2696 unannotated CDS left (started with 4686)
+[09:51:01] Will use hmmer3 to search against /db/prokka/hmm/HAMAP.hmm with 8 CPUs
+[09:51:01] Running: cat PROKKA_Test_1\.6\/HAMAP\.hmm\.faa | parallel --gnu --plain -j 8 --block 50732 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-06 --cpu 1 /db/prokka/hmm/HAMAP.hmm /dev/stdin > PROKKA_Test_1\.6\/HAMAP\.hmm\.hmmer3 2> /dev/null
+[09:51:51] Deleting unwanted file: PROKKA_Test_1.6/HAMAP.hmm.faa
+[09:51:51] Deleting unwanted file: PROKKA_Test_1.6/HAMAP.hmm.hmmer3
+[09:52:00] There are still 2655 unannotated CDS left (started with 4686)
+[09:52:00] Will use hmmer3 to search against /db/prokka/hmm/Pfam.hmm with 8 CPUs
+[09:52:00] Running: cat PROKKA_Test_1\.6\/Pfam\.hmm\.faa | parallel --gnu --plain -j 8 --block 49414 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-06 --cpu 1 /db/prokka/hmm/Pfam.hmm /dev/stdin > PROKKA_Test_1\.6\/Pfam\.hmm\.hmmer3 2> /dev/null
+[09:54:36] Modify product: Aerotolerance regulator N-terminal => hypothetical protein
+[09:54:36] Modify product: ISXO2-like transposase domain => ISXO2-like transposase domain protein
+[09:54:36] Modify product: GldM N-terminal domain => hypothetical protein
+[09:54:36] Modify product: CHAT domain => CHAT domain protein
+[09:54:36] Modify product: Phage Tail Collar Domain => Phage Tail Collar Domain protein
+[09:54:36] Modify product: Phage Tail Collar Domain => Phage Tail Collar Domain protein
+[09:54:36] Modify product: PAAR motif => PAAR motif protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: KAP family P-loop domain => KAP family P-loop domain protein
+[09:54:36] Modify product: FG-GAP repeat => FG-GAP repeat protein
+[09:54:36] Modify product: EamA-like transporter family => EamA-like transporter family protein
+[09:54:36] Modify product: Y_Y_Y domain => Y_Y_Y domain protein
+[09:54:36] Modify product: SusD family => SusD family protein
+[09:54:36] Modify product: PKD domain => PKD domain protein
+[09:54:36] Modify product: Metallo-beta-lactamase superfamily => Metallo-beta-lactamase superfamily protein
+[09:54:36] Modify product: SusD family => SusD family protein
+[09:54:36] Modify product: FG-GAP repeat => FG-GAP repeat protein
+[09:54:36] Modify product: Major Facilitator Superfamily => Major Facilitator Superfamily protein
+[09:54:36] Modify product: Caspase domain => Caspase domain protein
+[09:54:36] Modify product: Mov34/MPN/PAD-1 family => Mov34/MPN/PAD-1 family protein
+[09:54:36] Modify product: Mov34/MPN/PAD-1 family => Mov34/MPN/PAD-1 family protein
+[09:54:36] Modify product: Mov34/MPN/PAD-1 family => Mov34/MPN/PAD-1 family protein
+[09:54:36] Modify product: Transposase DDE domain => Transposase DDE domain protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: Alanine dehydrogenase/PNT, N-terminal domain => hypothetical protein
+[09:54:36] Modify product: Calx-beta domain => Calx-beta domain protein
+[09:54:36] Modify product: Calcineurin-like phosphoesterase superfamily domain => Calcineurin-like phosphoesterase superfamily domain protein
+[09:54:36] Modify product: DisA bacterial checkpoint controller nucleotide-binding => DisA bacterial checkpoint controller nucleotide-binding protein
+[09:54:36] Modify product: Receptor L domain => Receptor L domain protein
+[09:54:36] Modify product: MORN repeat => MORN repeat protein
+[09:54:36] Modify product: tRNA_anti-like => tRNA_anti-like protein
+[09:54:36] Modify product: YceI-like domain => YceI-like domain protein
+[09:54:36] Modify product: tRNA_anti-like => tRNA_anti-like protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: FG-GAP repeat => FG-GAP repeat protein
+[09:54:36] Modify product: Carbohydrate-binding module 48 (Isoamylase N-terminal domain) => hypothetical protein
+[09:54:36] Modify product: Fumarylacetoacetate (FAA) hydrolase family => Fumarylacetoacetate (FAA) hydrolase family protein
+[09:54:36] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:36] Modify product: NC domain => NC domain protein
+[09:54:36] Modify product: Alanine racemase, N-terminal domain => hypothetical protein
+[09:54:36] Modify product: MAM domain => MAM domain protein
+[09:54:36] Modify product: MAM domain => MAM domain protein
+[09:54:36] Modify product: FG-GAP repeat => FG-GAP repeat protein
+[09:54:36] Modify product: RecF/RecN/SMC N terminal domain => hypothetical protein
+[09:54:36] Modify product: Transposase DDE domain => Transposase DDE domain protein
+[09:54:36] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:36] Modify product: Acetyltransferase (GNAT) family => Acetyltransferase (GNAT) family protein
+[09:54:36] Modify product: EamA-like transporter family => EamA-like transporter family protein
+[09:54:36] Modify product: YceG-like family => YceG-like family protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: SPFH domain / Band 7 family => SPFH domain / Band 7 family protein
+[09:54:36] Modify product: EamA-like transporter family => EamA-like transporter family protein
+[09:54:36] Modify product: AIG2-like family => AIG2-like family protein
+[09:54:36] Modify product: Fatty acid hydroxylase superfamily => Fatty acid hydroxylase superfamily protein
+[09:54:36] Modify product: putative permease YjgP/YjgQ family => putative permease YjgP/YjgQ family protein
+[09:54:36] Modify product: Heavy-metal-associated domain => Heavy-metal-associated domain protein
+[09:54:36] Modify product: Universal stress protein family => Universal stress protein family protein
+[09:54:36] Modify product: Universal stress protein family => Universal stress protein family protein
+[09:54:36] Modify product: Caspase domain => Caspase domain protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: Transposase IS200 like => Transposase IS200 like protein
+[09:54:36] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:36] Modify product: MORN repeat => MORN repeat protein
+[09:54:36] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:36] Modify product: Thioesterase domain => Thioesterase domain protein
+[09:54:36] Modify product: Vacuole effluxer Atg22 like => Vacuole effluxer Atg22 like protein
+[09:54:36] Modify product: RmlD substrate binding domain => RmlD substrate binding domain protein
+[09:54:36] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:37] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:37] Modify product: CHAT domain => CHAT domain protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: DinB superfamily => DinB superfamily protein
+[09:54:37] Modify product: UvrB/uvrC motif => UvrB/uvrC motif protein
+[09:54:37] Modify product: DinB superfamily => DinB superfamily protein
+[09:54:37] Modify product: Transposase DDE domain => Transposase DDE domain protein
+[09:54:37] Modify product: RES domain => RES domain protein
+[09:54:37] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: AAA-like domain => AAA-like domain protein
+[09:54:37] Modify product: Resolvase, N terminal domain => hypothetical protein
+[09:54:37] Modify product: LytTr DNA-binding domain => LytTr DNA-binding domain protein
+[09:54:37] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:37] Modify product: Activator of Hsp90 ATPase homolog 1-like protein => hypothetical protein
+[09:54:37] Modify product: Bacterial SH3 domain => Bacterial SH3 domain protein
+[09:54:37] Modify product: Cupin domain => Cupin domain protein
+[09:54:37] Modify product: AAA-like domain => AAA-like domain protein
+[09:54:37] Modify product: Fatty acid hydroxylase superfamily => Fatty acid hydroxylase superfamily protein
+[09:54:37] Modify product: LVIVD repeat => LVIVD repeat protein
+[09:54:37] Modify product: YCII-related domain => YCII-related domain protein
+[09:54:37] Modify product: Putative lumazine-binding => Putative lumazine-binding protein
+[09:54:37] Modify product: HYR domain => HYR domain protein
+[09:54:37] Modify product: MG2 domain => MG2 domain protein
+[09:54:37] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:37] Modify product: TraB family => TraB family protein
+[09:54:37] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:37] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:37] Modify product: META domain => META domain protein
+[09:54:37] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:37] Modify product: Transposase DDE domain => Transposase DDE domain protein
+[09:54:37] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:37] Modify product: LytTr DNA-binding domain => LytTr DNA-binding domain protein
+[09:54:37] Modify product: Transposase IS200 like => Transposase IS200 like protein
+[09:54:37] Modify product: Acetyltransferase (GNAT) family => Acetyltransferase (GNAT) family protein
+[09:54:37] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:37] Modify product: Cupin domain => Cupin domain protein
+[09:54:37] Modify product: WD40-like Beta Propeller Repeat => WD40-like Beta Propeller Repeat protein
+[09:54:37] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:37] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:37] Modify product: SMI1 / KNR4 family => SMI1 / KNR4 family protein
+[09:54:37] Modify product: Helix-hairpin-helix motif => Helix-hairpin-helix motif protein
+[09:54:37] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:37] Modify product: PASTA domain => PASTA domain protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: Type I restriction enzyme R protein N terminus (HSDR_N) => hypothetical protein
+[09:54:37] Modify product: CHAT domain => CHAT domain protein
+[09:54:37] Modify product: Putative zinc ribbon domain => Putative zinc ribbon domain protein
+[09:54:37] Modify product: Adenylate and Guanylate cyclase catalytic domain => Adenylate and Guanylate cyclase catalytic domain protein
+[09:54:37] Modify product: Acetyltransferase (GNAT) family => Acetyltransferase (GNAT) family protein
+[09:54:37] Modify product: WD40-like Beta Propeller Repeat => WD40-like Beta Propeller Repeat protein
+[09:54:37] Modify product: Fibronectin type III domain => Fibronectin type III domain protein
+[09:54:37] Modify product: Prolyl oligopeptidase family => Prolyl oligopeptidase family protein
+[09:54:37] Modify product: Phosphotransferase enzyme family => Phosphotransferase enzyme family protein
+[09:54:37] Modify product: Receptor L domain => Receptor L domain protein
+[09:54:37] Modify product: Activator of Hsp90 ATPase homolog 1-like protein => hypothetical protein
+[09:54:37] Modify product: Heavy-metal-associated domain => Heavy-metal-associated domain protein
+[09:54:37] Modify product: MORN repeat => MORN repeat protein
+[09:54:37] Modify product: Fatty acid hydroxylase superfamily => Fatty acid hydroxylase superfamily protein
+[09:54:37] Modify product: Exostosin family => Exostosin family protein
+[09:54:37] Modify product: Carboxymuconolactone decarboxylase family => Carboxymuconolactone decarboxylase family protein
+[09:54:37] Modify product: NMT1/THI5 like => NMT1/THI5 like protein
+[09:54:37] Modify product: 2OG-Fe(II) oxygenase superfamily => 2OG-Fe(II) oxygenase superfamily protein
+[09:54:37] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:37] Modify product: Endonuclease/Exonuclease/phosphatase family => Endonuclease/Exonuclease/phosphatase family protein
+[09:54:37] Modify product: Receptor L domain => Receptor L domain protein
+[09:54:37] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:37] Modify product: NHL repeat => NHL repeat protein
+[09:54:37] Modify product: Adenylate and Guanylate cyclase catalytic domain => Adenylate and Guanylate cyclase catalytic domain protein
+[09:54:37] Modify product: SPFH domain / Band 7 family => SPFH domain / Band 7 family protein
+[09:54:37] Modify product: HD domain => HD domain protein
+[09:54:37] Modify product: DinB superfamily => DinB superfamily protein
+[09:54:37] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:37] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:37] Modify product: PKD domain => PKD domain protein
+[09:54:37] Modify product: RDD family => RDD family protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: Calx-beta domain => Calx-beta domain protein
+[09:54:37] Modify product: Transposase DDE domain => Transposase DDE domain protein
+[09:54:37] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:37] Modify product: YceI-like domain => YceI-like domain protein
+[09:54:37] Modify product: tRNA_anti-like => tRNA_anti-like protein
+[09:54:37] Modify product: LytTr DNA-binding domain => LytTr DNA-binding domain protein
+[09:54:37] Modify product: Endonuclease/Exonuclease/phosphatase family => Endonuclease/Exonuclease/phosphatase family protein
+[09:54:37] Modify product: Type I restriction enzyme R protein N terminus (HSDR_N) => hypothetical protein
+[09:54:37] Modify product: MAM domain => MAM domain protein
+[09:54:37] Modify product: Calx-beta domain => Calx-beta domain protein
+[09:54:37] Modify product: Calx-beta domain => Calx-beta domain protein
+[09:54:37] Modify product: Calx-beta domain => Calx-beta domain protein
+[09:54:37] Modify product: Integral membrane protein TerC family => Integral membrane protein TerC family protein
+[09:54:37] Modify product: Acyltransferase family => Acyltransferase family protein
+[09:54:37] Modify product: Radical SAM superfamily => Radical SAM superfamily protein
+[09:54:37] Modify product: Radical SAM superfamily => Radical SAM superfamily protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: VanZ like family => VanZ like family protein
+[09:54:37] Modify product: CBS domain => CBS domain protein
+[09:54:37] Modify product: LytTr DNA-binding domain => LytTr DNA-binding domain protein
+[09:54:37] Modify product: LytTr DNA-binding domain => LytTr DNA-binding domain protein
+[09:54:37] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:37] Modify product: SusD family => SusD family protein
+[09:54:37] Modify product: Rhomboid family => Rhomboid family protein
+[09:54:37] Modify product: PKD domain => PKD domain protein
+[09:54:37] Modify product: Universal stress protein family => Universal stress protein family protein
+[09:54:37] Modify product: ATP cone domain => ATP cone domain protein
+[09:54:37] Modify product: F5/8 type C domain => F5/8 type C domain protein
+[09:54:37] Modify product: Endonuclease/Exonuclease/phosphatase family => Endonuclease/Exonuclease/phosphatase family protein
+[09:54:37] Modify product: Fibronectin type III domain => Fibronectin type III domain protein
+[09:54:37] Modify product: Major Facilitator Superfamily => Major Facilitator Superfamily protein
+[09:54:37] Modify product: SusD family => SusD family protein
+[09:54:37] Modify product: CHAT domain => CHAT domain protein
+[09:54:37] Modify product: PAP2 superfamily => PAP2 superfamily protein
+[09:54:37] Modify product: Flavin reductase like domain => Flavin reductase like domain protein
+[09:54:37] Modify product: TspO/MBR family => TspO/MBR family protein
+[09:54:37] Modify product: Fasciclin domain => Fasciclin domain protein
+[09:54:37] Modify product: AAA-like domain => AAA-like domain protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: FG-GAP repeat => FG-GAP repeat protein
+[09:54:37] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:37] Modify product: FAD binding domain => FAD binding domain protein
+[09:54:37] Modify product: BNR/Asp-box repeat => BNR/Asp-box repeat protein
+[09:54:37] Modify product: RDD family => RDD family protein
+[09:54:37] Modify product: LemA family => LemA family protein
+[09:54:37] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:37] Modify product: MG2 domain => MG2 domain protein
+[09:54:37] Modify product: MG2 domain => MG2 domain protein
+[09:54:37] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:37] Modify product: LytTr DNA-binding domain => LytTr DNA-binding domain protein
+[09:54:37] Modify product: YceI-like domain => YceI-like domain protein
+[09:54:37] Modify product: Caspase domain => Caspase domain protein
+[09:54:37] Modify product: SnoaL-like domain => SnoaL-like domain protein
+[09:54:37] Modify product: MazG nucleotide pyrophosphohydrolase domain => MazG nucleotide pyrophosphohydrolase domain protein
+[09:54:37] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:37] Modify product: GSCFA family => GSCFA family protein
+[09:54:37] Modify product: LemA family => LemA family protein
+[09:54:37] Modify product: GldM N-terminal domain => hypothetical protein
+[09:54:37] Modify product: Universal stress protein family => Universal stress protein family protein
+[09:54:37] Modify product: MORN repeat => MORN repeat protein
+[09:54:37] Modify product: DinB superfamily => DinB superfamily protein
+[09:54:37] Modify product: SusD family => SusD family protein
+[09:54:37] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:37] Modify product: Cupin domain => Cupin domain protein
+[09:54:37] Modify product: Tyrosine phosphatase family => Tyrosine phosphatase family protein
+[09:54:37] Modify product: Ras family => Ras family protein
+[09:54:37] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:37] Modify product: Universal stress protein family => Universal stress protein family protein
+[09:54:37] Modify product: Lantibiotic dehydratase, C terminus => hypothetical protein
+[09:54:37] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:37] Modify product: BNR/Asp-box repeat => BNR/Asp-box repeat protein
+[09:54:37] Modify product: SusD family => SusD family protein
+[09:54:37] Modify product: Major Facilitator Superfamily => Major Facilitator Superfamily protein
+[09:54:37] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:37] Modify product: von Willebrand factor type A domain => von Willebrand factor type A domain protein
+[09:54:37] Modify product: von Willebrand factor type A domain => von Willebrand factor type A domain protein
+[09:54:37] Modify product: Divergent AAA domain => Divergent AAA domain protein
+[09:54:38] Modify product: Transglutaminase-like superfamily => Transglutaminase-like superfamily protein
+[09:54:38] Modify product: Alpha-2-macroglobulin family N-terminal region => hypothetical protein
+[09:54:38] Modify product: CYTH domain => CYTH domain protein
+[09:54:38] Modify product: START domain => START domain protein
+[09:54:38] Modify product: PD-(D/E)XK nuclease superfamily => PD-(D/E)XK nuclease superfamily protein
+[09:54:38] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:38] Modify product: Universal stress protein family => Universal stress protein family protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: FIST N domain => FIST N domain protein
+[09:54:38] Modify product: Heme NO binding => Heme NO binding protein
+[09:54:38] Modify product: Carboxymuconolactone decarboxylase family => Carboxymuconolactone decarboxylase family protein
+[09:54:38] Modify product: Phage virion morphogenesis family => Phage virion morphogenesis family protein
+[09:54:38] Modify product: Transcriptional regulator PadR-like family => Transcriptional regulator PadR-like family protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: Endonuclease/Exonuclease/phosphatase family => Endonuclease/Exonuclease/phosphatase family protein
+[09:54:38] Modify product: WbqC-like protein family => WbqC-like protein family protein
+[09:54:38] Modify product: RDD family => RDD family protein
+[09:54:38] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:38] Modify product: B12 binding domain => B12 binding domain protein
+[09:54:38] Modify product: Fibronectin type III domain => Fibronectin type III domain protein
+[09:54:38] Modify product: NUDIX domain => NUDIX domain protein
+[09:54:38] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:38] Modify product: SPFH domain / Band 7 family => SPFH domain / Band 7 family protein
+[09:54:38] Modify product: Helicase conserved C-terminal domain => hypothetical protein
+[09:54:38] Modify product: Phage integrase family => Phage integrase family protein
+[09:54:38] Modify product: GldM C-terminal domain => hypothetical protein
+[09:54:38] Modify product: Kelch motif => Kelch motif protein
+[09:54:38] Modify product: LVIVD repeat => LVIVD repeat protein
+[09:54:38] Modify product: MG2 domain => MG2 domain protein
+[09:54:38] Modify product: MG2 domain => MG2 domain protein
+[09:54:38] Modify product: MG2 domain => MG2 domain protein
+[09:54:38] Modify product: MG2 domain => MG2 domain protein
+[09:54:38] Modify product: MG2 domain => MG2 domain protein
+[09:54:38] Modify product: DinB superfamily => DinB superfamily protein
+[09:54:38] Modify product: Endonuclease/Exonuclease/phosphatase family => Endonuclease/Exonuclease/phosphatase family protein
+[09:54:38] Modify product: Fatty acid hydroxylase superfamily => Fatty acid hydroxylase superfamily protein
+[09:54:38] Modify product: TraB family => TraB family protein
+[09:54:38] Modify product: Alpha/beta hydrolase family => Alpha/beta hydrolase family protein
+[09:54:38] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:38] Modify product: Flavin reductase like domain => Flavin reductase like domain protein
+[09:54:38] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:38] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: Fibronectin type III domain => Fibronectin type III domain protein
+[09:54:38] Modify product: CARDB => hypothetical protein
+[09:54:38] Modify product: Glyoxalase/Bleomycin resistance protein/Dioxygenase superfamily => Glyoxalase/Bleomycin resistance protein/Dioxygenase superfamily protein
+[09:54:38] Modify product: Peptidase S24-like => Peptidase S24-like protein
+[09:54:38] Modify product: CHAP domain => CHAP domain protein
+[09:54:38] Modify product: Subtilase family => Subtilase family protein
+[09:54:38] Modify product: Acetyltransferase (GNAT) family => Acetyltransferase (GNAT) family protein
+[09:54:38] Modify product: BAAT / Acyl-CoA thioester hydrolase C terminal => hypothetical protein
+[09:54:38] Modify product: Aldo/keto reductase family => Aldo/keto reductase family protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: Sporulation related domain => Sporulation related domain protein
+[09:54:38] Modify product: Cyclic nucleotide-binding domain => Cyclic nucleotide-binding domain protein
+[09:54:38] Modify product: DinB superfamily => DinB superfamily protein
+[09:54:38] Modify product: PSP1 C-terminal conserved region => hypothetical protein
+[09:54:38] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:38] Modify product: DinB family => DinB family protein
+[09:54:38] Modify product: Thioesterase superfamily => Thioesterase superfamily protein
+[09:54:38] Modify product: 2OG-Fe(II) oxygenase superfamily => 2OG-Fe(II) oxygenase superfamily protein
+[09:54:38] Modify product: TraB family => TraB family protein
+[09:54:38] Modify product: BNR/Asp-box repeat => BNR/Asp-box repeat protein
+[09:54:38] Modify product: Radical SAM superfamily => Radical SAM superfamily protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: BNR/Asp-box repeat => BNR/Asp-box repeat protein
+[09:54:38] Modify product: Phosphate transporter family => Phosphate transporter family protein
+[09:54:38] Modify product: FeoA domain => FeoA domain protein
+[09:54:38] Modify product: Helix-turn-helix domain => Helix-turn-helix domain protein
+[09:54:38] Modify product: RHS Repeat => RHS Repeat protein
+[09:54:38] Modify product: PKD domain => PKD domain protein
+[09:54:38] Modify product: TonB-dependent Receptor Plug Domain => TonB-dependent Receptor Plug Domain protein
+[09:54:38] Modify product: EamA-like transporter family => EamA-like transporter family protein
+[09:54:38] Modify product: Endonuclease/Exonuclease/phosphatase family => Endonuclease/Exonuclease/phosphatase family protein
+[09:54:38] Modify product: MAM domain => MAM domain protein
+[09:54:38] Modify product: LVIVD repeat => LVIVD repeat protein
+[09:54:38] Modify product: LVIVD repeat => LVIVD repeat protein
+[09:54:38] Modify product: Carboxymuconolactone decarboxylase family => Carboxymuconolactone decarboxylase family protein
+[09:54:38] Modify product: Cyclic nucleotide-binding domain => Cyclic nucleotide-binding domain protein
+[09:54:38] Modify product: BNR/Asp-box repeat => BNR/Asp-box repeat protein
+[09:54:38] Modify product: Succinylglutamate desuccinylase / Aspartoacylase family => Succinylglutamate desuccinylase / Aspartoacylase family protein
+[09:54:38] Modify product: FG-GAP repeat => FG-GAP repeat protein
+[09:54:38] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:38] Modify product: Cupin domain => Cupin domain protein
+[09:54:38] Modify product: Glyoxalase-like domain => Glyoxalase-like domain protein
+[09:54:38] Modify product: Tetratricopeptide repeat => Tetratricopeptide repeat protein
+[09:54:38] Modify product: Ser-Thr-rich glycosyl-phosphatidyl-inositol-anchored membrane family => Ser-Thr-rich glycosyl-phosphatidyl-inositol-anchored membrane family protein
+[09:54:38] Cleaned 312 /product names
+[09:54:38] Deleting unwanted file: PROKKA_Test_1.6/Pfam.hmm.faa
+[09:54:38] Deleting unwanted file: PROKKA_Test_1.6/Pfam.hmm.hmmer3
+[09:54:47] There are still 2062 unannotated CDS left (started with 4686)
+[09:54:47] Will use hmmer3 to search against /db/prokka/hmm/TIGR.hmm with 8 CPUs
+[09:54:47] Running: cat PROKKA_Test_1\.6\/TIGR\.hmm\.faa | parallel --gnu --plain -j 8 --block 33506 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-06 --cpu 1 /db/prokka/hmm/TIGR.hmm /dev/stdin > PROKKA_Test_1\.6\/TIGR\.hmm\.hmmer3 2> /dev/null
+[09:54:47] Could not run command: cat PROKKA_Test_1\.6\/TIGR\.hmm\.faa | parallel --gnu --plain -j 8 --block 33506 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-06 --cpu 1 /db/prokka/hmm/TIGR.hmm /dev/stdin > PROKKA_Test_1\.6\/TIGR\.hmm\.hmmer3 2> /dev/null

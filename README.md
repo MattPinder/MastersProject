@@ -2168,3 +2168,95 @@ would probably be which one circularises the best
  * Check the feedback from the PROKKA_Test_1.5 file
 * Wait for results from pb_359_3 14k assembly; if this fails, retry at 13k
 * Seek guidance re: 'gaps' in circularised assemblies and need to Quiver circularised assemblies
+
+# 3 October 2016
+
+## PROKKA
+* Log file forwarded to software developer, to see if the custom HMM database problem can be overcome
+* Script written (Refresh_Prokka_DB.sh) to automate re-pressing of Prokka databases when new ones are added
+ * Must be run with sudo
+
+## pb_359_3
+* 14k assembly job completed:
+ * Number of contigs - 7
+ * Assembled contig length - 4,204,689
+
+* Attempting a 10k assembly; will judge based on this whether to continue trying for a better HGAP assembly of sample 3.
+ * Job ID - 16599
+
+## pb_359_3 HGAP vs Falcon
+* Database - HGAP 18k assembly
+* Query - Falcon 17.1k assembly
+* Result - definitely appears that Falcon combined the two longest HGAP contigs into one
+ * Falcon [28,473 - 2,356,132] for longest HGAP contig ('0' or 'scf...12')
+  * Query [28,473 - 2,356,132] [2,333,549 - 2,400,007]
+  * HGAP [4 - 2,329,04] [2,395,840 - 2,329,392 {Reverse}]
+   * 65k matches reverse compliment at end of '0'. Odd assembly error...?
+ * Falcon [1 to 28,194] and [2,376,369 to 3,834,120] for second-longest HGAP contig ('1' or 'scf...13')
+  * 300 bp unaccounted for from end of '1'
+ * Gaps from [28,194 - 28,473] (~300 bp) and [2,356,132 - 2,376,369] (~200,000 bp)
+ * Gaps don't seem to be well-bridged by HGAP...
+* Regarding 'plasmids':
+ * Long Falcon 'plasmid' matches with some overlap in the HGAP '2' , as expected.
+ * Short Falcon 'plasmid' matches with some overlap in the HGAP '3' , as expected.
+* What of HGAP '4'?
+
+## Circularisation tests
+* Samples whose potential plasmids need to be tested for circularisation:
+ * 2 - 7k Falcon assembly
+  * Standard job - 16610 - Seems okay
+  * Reversed job - 16611 - First 'plasmid' seems okay, second has massive trough in the centre...
+ * 6 - 10.6k Falcon assembly
+  * Standard job - 16606 - Coverage of 'plasmids' fluctuates wildly
+  * Reversed job - 16607 - No halfway troughs to suggest lack of circularisation, but 'bumpy'
+coverage in 'plasmids'...
+ * 7 - 6k Falcon assembly
+  * Standard job - 16608 - Seems okay
+  * Reversed job - 16609 - No halfway troughs to suggest lack of circularisation, but 'bumpy'
+coverage in 'plasmids'...
+* Judging by [this PacBio poster] (http://www.pacb.com/wp-content/uploads/low-input-long-read-for-complete-microbial-genomes-metagenomic-community-analysis.pdf),
+the shape of the 'plasmid' coverage graphs is roughly what one would expect.
+
+* Double-check circularisation for the single-contig samples
+ * Perhaps make a folder saving only the coverage images?
+ * 4 - pb_359_4_Third_Trimmed_Circularisation_consensus.fasta
+ * 5 - pb_359_5_Trimmed_Circularisation_consensus.fasta
+ * 8 - pb_359_8_Trimmed_Circularisation_consensus.fasta
+
+* Samples 6 and 7 appear to be ready for annotation.
+
+## Quality assurance
+* pb_359_4 - one contig
+ * Assembly file - pb_359_4_Third_Trimmed_Circularisation_consensus.fasta
+  * Based on HGAP assembly 16442 (seed read length 10,000), with overlap trimmed.
+ * When viewing centre 'breakpoint' of reversed circularisation test, many low-quality reads
+appear in this area, along with a relative small trough in the assembly
+
+* pb_359_5 - one contig
+ * Assembly file - pb_359_5_Trimmed_Circularisation_consensus.fasta
+  * Based on HGAP assembly 16520 (seed read length 16,000), with overlap trimmed.
+ * Coverage spike to ~500x; unresolved repeat region?
+
+* pb_359_6 - eight contigs
+ * Assembly file - pb_359_6_All_Contigs_Circ_consensus.fasta
+  * Based on Falcon assembly seed_read_10600
+ * No particular issues
+
+* pb_359_7 - four contigs
+ * Assembly file - pb_359_7_All_Contigs_Circ_consensus.fasta
+  * Based on Falcon assembly seed_read_6000
+ * Slight dip on the longest contig to ~120x coverage, but this may not be a major issue
+
+* pb_359_8 - one contig
+ * Assembly file - pb_359_8_Trimmed_Circularisation_consenus.fasta
+  * Based on HGAP assembly 16446 (seed read length (20,000), with overlap trimmed.
+ * Coverage spike to ~430x; unresolved repeat region?
+
+## To do
+* Decide course of action for pb_359_2 regarding second 'plasmid' which doesn't circularise...
+* Decide course of action for assembling pb_359_3
+ * Analyse Falcon vs HGAP Blast xml
+ * Check 10k SRL assembly attempt
+* Double-check the results from the other assemblies to ensure confidence that they are ready
+for annotation.
+* Should standard or 'reversed' consensus file be used for annotation?

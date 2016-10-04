@@ -2260,3 +2260,70 @@ appear in this area, along with a relative small trough in the assembly
 * Double-check the results from the other assemblies to ensure confidence that they are ready
 for annotation.
 * Should standard or 'reversed' consensus file be used for annotation?
+
+# 4 October 2016
+
+## pb_359_3
+* 10k assembly yields the same result of 5 contigs (sum of contig lengths - 4,192,469)
+ * Dip in the longest contig; SRL now too low?
+ * Will attempt a 22k SRL assembly
+  * Job ID - 16612 - No improvement
+* From the HGAP vs Falcon XML file, the two long HGAP contigs wrap around the Falcon result
+in a way that supports the idea of a circular sequence.
+
+* Determine whether the gaps between the HGAP contigs coincide with the drop in coverage seen
+in the Falcon circularisation attempt
+ * Used a different Falcon SRL for Blast and for circularisation - must standardise!
+  * Falcon for HGAP vs Falcon was 17.1k; for circularisation it was 16.8k
+  * Run a circularisation for 17.1k, all contigs
+   * Standard job - 16615 - Short 'plasmid' shows a large dip in coverage
+   * Reversed job - 16616 - Big drop in coverage in the centre of the assembly...
+
+## Prokka
+**Important:**  
+rsyncToNodes.sh was incorrect - it was copying nr.* twice, instead of the prokka folder
+* rsync file updates, will run and retry Prokka
+ * Rerun analysis and see whether it now works - PROKKA_Test_1.7
+  * Works perfectly - previous problems down to human error.
+
+* Try using the genus feature, specifying `--genus Kordia --usegenus`, to try and resolve some
+'hypothetical protein' identities
+ * PROKKA_Genus_Test - 1847 'hypothetical proteins'
+
+* Download new Prokka Bacteria kingdom database from UniProt and replace old:
+ * September release to overwrite May release
+  * Required installation of Swissknife Perl module
+ * PROKKA_Genus_Test_2 - 1846 'hypothetical proteins' - a single hypothetical protein reduction...
+
+* Will try to download and use new Pfam database (hasn't been updated in a long time, it seems)
+ * Problem - new database is ~1.3 Tb! Will delete the old Pfam files except the core file, which
+I will move to my own directory as a backup.
+ * Pfam updated from release (?) to release 30.0
+ * PROKKA_Genus_Test_3 - 1789 'hypothetical proteins' - a very modest improvement...
+
+* **Must think of some additional ways to improve the number of proteins identified**
+
+## Using Prokka on current samples
+* As far as I can tell, pb_359_6 is ready for annotation. Will therefore attempt to run
+Prokka on this sample
+ * File used - pb_359_6_All_Contigs_Circ_consensus.fasta
+  * 1052 instances of the word 'hypothetical' in the file (this includes all plasmids)
+   * 713 in chromosome alone
+  * 1993 named genes in chromosome
+  * 3538 predicted genes in chromosome
+* Add some kind of *Sulfitobacter* database?
+ 
+## Useful commands for extracting information from genbank files, for multiple sequences
+* sed -n [start],[stop]p [filename] | grep "[string]" | wc -l
+* Useful strings:
+ * "locus_tag"
+ * "/gene"
+ * "/product=\"hypothetical protein\""
+
+## To do
+* **Blast all vs all on pb_359_6, to determine if some molecules are circularising in pieces
+(as with Kordia).**
+* Search for 16S regions - potentially V-Extractor?
+* Check for books, papers, etc. on **bacterial genomics**
+* Check for papers on Sulfitobacter assemblies?
+* Prevalence of transposable elements in bacteria cf. eukaryotes?

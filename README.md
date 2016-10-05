@@ -2327,3 +2327,68 @@ Prokka on this sample
 * Check for books, papers, etc. on **bacterial genomics**
 * Check for papers on Sulfitobacter assemblies?
 * Prevalence of transposable elements in bacteria cf. eukaryotes?
+
+# 5 October 2016
+
+## pb_359_6 Self-Blast
+
+* Longest + Third contigs
+ * ~7k section (100% identity)
+* Fourth + Sixth contigs
+ * 3k and 1k sections, ~equally spaced
+* Sixth + Shortest contigs
+ * 6k and 2k sections, equally spaced (one long sequence?)
+* Fifth + Shortest contigs (reverse compliment)
+ * 5k, 6k, 5k, 4k, 1k sections, all in roughly the correct orientation
+* Seventh + Shortest contigs
+ * 3k section
+
+* Search for ~long matches between contigs.
+* Set resequencing step with only reads that would span the repeat region, and ensure coverage remains high.
+ * Set 13k Minimum Subread Length
+ * Job 16617
+  * No obvious problems, will try reverse just in case; failing that, will drop to 12k
+ * Reverse - job 16618
+  * Also no obvious problems...
+ * Repeat above with 12k Minimum Subread Length
+  * 16619 - As above...
+ * Retry at 10k for good measure
+  * 16620 - 
+
+* Shortest contig - gap between position 8,193 and 9,552
+
+* Check Falcon 10.6k a_ctg.fa file...
+ * No alternative contigs...
+
+* Re-perform self-blast as a standard txt output and determine the sequence of these repeated regions...?
+
+ * Match between longest and third contig - 6133 bases (100% identity)
+  * Closest match - Roseobacter cell wall-associated hydrolase; however, only 7% query coverage.
+  * Some reads to bridge this whole region of the longest contig...
+   * Longest - 2,841,974 - 2,848,106 (resides in a slight lull in the coverage)
+    * Compared to standard Resequencing job - resides in a relative lull as well)
+   * Third - 155,873 - 162,005 (relatively high coverage, but a slight dip in the centre...)
+    * Compared to standard Resequencing job - high concentration of lower-quality reads...)
+
+ * 100% identity for such a long sequence seems unusually high...
+  * Spliced the contigs so that the repeat starts each contig
+  * Created a combined contig with longest at start and third at end:
+   []--------------------------------------[]------ (Standard)
+   -----------------[]------[]--------------------- (Reversed)
+    Where [] is the repeated region.
+  * (Longest 3,572,445; third 292,917)
+   * Reverse - expect bumps at 1,639,765 and 1,932,682
+  * Use as a template for pb_359_6 assembly
+   * Would expect a dramatic drop in coverage around [] if there were an issue with assembly
+   * Standard job 16622 + reversed job 16623 - Does not appear to be a valid fusion...
+
+ * Match between longest and second contig - 2758/2759 bases (99% identity, 1 gap)
+  * Closest match - Oceanibulbus (multispecies) transposase (two regions)
+  * Two spaced COG3547 domains. Could this be a repeat region resulting in incorrect assembly?
+  * Many reads span this region of the longest contig...
+
+* No strong evidence to suggest that the assembly is incorrect? 
+
+## Bacterial genomics
+* Rhodobacterales known to have an [abundance of plasmids] (http://onlinelibrary.wiley.com/doi/10.1111/j.1462-2920.2012.02806.x/full)
+

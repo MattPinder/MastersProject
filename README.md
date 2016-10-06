@@ -2353,7 +2353,7 @@ Prokka on this sample
  * Repeat above with 12k Minimum Subread Length
   * 16619 - As above...
  * Retry at 10k for good measure
-  * 16620 - 
+  * 16620 - As above...
 
 * Shortest contig - gap between position 8,193 and 9,552
 
@@ -2392,3 +2392,65 @@ Prokka on this sample
 ## Bacterial genomics
 * Rhodobacterales known to have an [abundance of plasmids] (http://onlinelibrary.wiley.com/doi/10.1111/j.1462-2920.2012.02806.x/full)
 
+# 6 October 2016
+
+## pb_359_2
+* Regarding the shortest contig which doesn't circularise
+ * All-vs-all blast to see whether it fits elsewhere?
+  * Only match is ~1,500 bases with the longest contig...
+
+## pb_359_7
+* Assembly appears to be alright
+ * Double-checking the self-blast xml file, no obvious areas of overlap
+* Attempt Prokka
+ * File used - 01_assemblies/pb_359_7/All_Contigs_Circ/pb_359_7_All_Contigs_Circ_consensus.fasta
+
+## pb_359_5
+* Only issue with this assembly is a large spike in coverage
+ * Blastx spike to see if its contents are relevant
+ * Appears to be involved in mercury/heavy metal detoxification- MerA (detoxification of mercury
+compounds) and HMA (heavy-metal-associated domain) among them
+ * Best matches to mercury(II) reductase in various *Marinobacter* species
+* Run Prokka
+ * File used - 01_assemblies/pb_359_5/Trim/pb_359_5_Trimmed_Circularisation_consensus.fasta
+
+## pb_359_8
+* Only issue with his assembly is a large spike in coverage
+ * Blastx spike to see if its contents are relevant
+ * Appears to be a transposase gene
+  * Best matches to transposase in varius *Zobellia* species
+   * Strong matches to *Arenibacter*, the predicted genus of this organism
+* Run Prokka
+ * File used - 01_assemblies/pb_359_8/Trim/pb_359_8_Trimmed_Circularisation_consensus.fasta
+
+## pb_359_4
+* Questionable quality of certain areas of assembly; consider re-assembling using a higher
+seed read length in HGAP
+ * This should result in more reads being used to correct the assembly, which should hopefully
+improve its quality.
+* New job - 11k SRL (job ID: 16625)
+
+## To do
+
+| Sample   | Course of action                   | Future action                               |
+|----------|------------------------------------|---------------------------------------------|
+| pb_359_2 | Check peak near start, then Prokka | Check circularisation of shortest contig    |
+| pb_359_3 | Prokka                             | Check a_ctg.fa, and troughs; repeat region? |
+| pb_359_4 | Blast Falcon vs HGAP, tweak Falcon settings? |                                   |
+| pb_359_5 | Prokka                             |                                             |
+| pb_359_6 | Prokka                             |                                             |
+| pb_359_7 | Prokka                             |                                             |
+| pb_359_8 | Prokka                             |                                             |
+
+Check:
+* Can PacBio pick up mRNA sequences inadvertently? Peaks in pb_359_5 seem to stack precisely with
+some genes, as though picking up only an RNA sequence...
+* Determine % of reads mapping to the final assembly
+ * In SMRT Portal report - Number of reads vs Mapped reads
+ * Create 05_Results folder and add a folder for each sample, with a README.md for stats, etc.
+* Will Pathway Tools use the Note field of a Genbank file?
+* fp.py in [result].faa of Prokka, grep for "hypothetical protein", and run through web tools
+
+* Check new pb_359_4 assembly.
+
+* Update git page

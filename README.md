@@ -2445,12 +2445,32 @@ improve its quality.
 Check:
 * Can PacBio pick up mRNA sequences inadvertently? Peaks in pb_359_5 seem to stack precisely with
 some genes, as though picking up only an RNA sequence...
-* Determine % of reads mapping to the final assembly
- * In SMRT Portal report - Number of reads vs Mapped reads
- * Create 05_Results folder and add a folder for each sample, with a README.md for stats, etc.
+
 * Will Pathway Tools use the Note field of a Genbank file?
-* fp.py in [result].faa of Prokka, grep for "hypothetical protein", and run through web tools
 
-* Check new pb_359_4 assembly.
+# 7 October 2016
 
-* Update git page
+## Number of reads used
+With one exception, all assemblies used at least 90% of reads generated
+* Exception - pb_359_5 only used 85.8% or reads. Does this denote a problem with the assembly?
+ * Not the smallest assembly, but has the lowest number of predicted genes thus far
+
+## Prokka
+* Start a preliminary Prokka for pb_359_3
+* Check the peak at the start of pb_359_2, then Prokka
+ * Blast 3,605,637 to 3,646,291
+ * Not as discrete a peak as the previous one, but still almost double average coverage...
+ * pb_359_2 - first part of the peak - hypothetical protein/acyl-CoA dehydrogenase (Roseovarius)
+ * Second part of the peak - transposase/hypothetical protein/phage protein (Roseovarius)
+
+## Extracting hypothetical protein sequences
+* fasta2tab <FASTA_FILE> | grep "PATTERN_TO_SEARCH_FOR" | tab2fasta > <OUTPUT_FILE>
+* Find protein identification website
+
+## pb_359_4
+* Blast Falcon vs HGAP assemblies
+ * Good match, but reverse-complement
+ * 99.9% identity, 0.1% gaps
+
+## Batch Web CD-Search Tool
+* QM3-qcdsearch-16595F23C15C6285

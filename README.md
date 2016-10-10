@@ -2472,5 +2472,36 @@ With one exception, all assemblies used at least 90% of reads generated
  * Good match, but reverse-complement
  * 99.9% identity, 0.1% gaps
 
-## Batch Web CD-Search Tool
-* QM3-qcdsearch-16595F23C15C6285
+# 10 October 2016
+
+## Find new DBs for Prokka to aid annotation
+* Will test the effectiveness of a genus-specific database
+ * pb_359_5 - Marinobacter
+  * M. hydrocarbonoclausticus
+  * M. excellens
+  * M. lipolyticus
+  * M. algicola
+  * M. daepoensis
+  * M. santoriniensis
+  * M. nanhaiticus
+  * M. manganoxydans
+  * M. adhaerens
+   * + 2 plasmids
+  * M. nitratireducens
+  * M. subterrani
+  * M. psychrophilus
+  * M. salarius
+  * M. similis
+* Running pb_359_5_genus
+ * Most gene names have been removed...
+ * Re-run using the --addgenes option
+  * No improvement...
+ * Try using --hmms option to specify all HMMs before Marinobacter database
+  * hmmpress /db/prokka/hmm/TIGR
+  * No improvement...
+ * Specifying a genus means that the Bacteria sprot database ISN'T searched...
+  * Use --proteins option to specify Marinobacter database?
+* New plan - cut hypothetical proteins out of the resultant Prokka files, and run
+Prokka on the hypothetical file
+ * Not so simple...
+* Compare first and second jobs by eye?

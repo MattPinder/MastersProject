@@ -2505,3 +2505,7 @@ With one exception, all assemblies used at least 90% of reads generated
 Prokka on the hypothetical file
  * Not so simple...
 * Compare first and second jobs by eye?
+
+# 14 October 2016
+Transferring info from manual_check to pb_359_2_v2.gbk (missed some DUFxxx earlier in the gbk)
+3336 done; 3344 next

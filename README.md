@@ -2507,5 +2507,67 @@ Prokka on the hypothetical file
 * Compare first and second jobs by eye?
 
 # 14 October 2016
-Transferring info from manual_check to pb_359_2_v2.gbk (missed some DUFxxx earlier in the gbk)
+Transferring info from manual_check to pb_359_5_v2.gbk (missed some DUFxxx earlier in the gbk)
 3336 done; 3344 next
+
+# 17 October 2016
+Completed transfer from manual_check to pb_359_2_v2.gbk
+* Will check the genbank in Pathway Tools
+* Will create a Pathway Tools instruction guide to remind myself how to run Pathway Tools
+
+Run prokka 3x:
+* Standard database (done)
+* Standard + ALL Marinobacter (skip cd-hit step)
+* Standard + non-hypothetical Marinobacter (skip cd-hit step)
+ * fasta2tab <FASTA_FILE> | grep -v "PATTERN_TO_SEARCH_FOR" | tab2fasta > <OUTPUT_FILE>
+ * Removed 'hypothetical', 'putative', 'unknown' and 'DUF' (capital and lower-case for the first
+three)
+  * Leave 'possible' results in; only a handful of hits
+* **Remember to run rSync whenever you modify the database!**
+
+* Standard only - pb_359_5
+* Standard + ALL Marinobacter - pb_359_5_K+G
+* Standard + non-hypothetical Marinobacter -  pb_359_5_K+G_cleaned
+
+Results:
+
+| Run                      | Predicted loci | Named genes | Hypothetical proteins |
+|--------------------------|----------------|-------------|-----------------------|
+| Standard                 | 4066           | 2357        | 833                   |
+| Standard + All Mari.     | 4066           | 198         | 591                   |
+| Standard + Cleaned Mari. | 4066           | 204         | 581                   |
+
+Check whether Pathway Tools can output gbk files, and whether it can recognise gene names
+from protein products (e.g. locus #3)
+
+## pb_359_2
+In preparation for Prokka annotation of pb_359_2, download *Roseovarius* genbank sequences from
+NCBI:
+* R. nubinhibens
+* R. mucosus
+* R. atlanticus
+* R. indicus
+* R. tolerans
+
+## pb_359_3
+In preparation for Prokka annotation of pb_359_3, download *Loktanella* genbank sequences from
+NCBI:
+* L. vestfoldensis
+* L. cinnabarina
+* L. hongkongensis
+
+## pb_359_4
+In preparation for Prokka annotation of pb_359_4, download *Sphingorhabdus* genbank sequences
+from NCBI:
+* S. sp. M41
+
+## pb_359_8
+In preparation for Prokka annotation of pb_359_8, download *Arenibacter* genbank sequences from
+NCBI:
+* A. latericius
+* A. certesii
+* A. algicola
+
+ * Having trouble compiling: retry Prokka-genbank_to_fasta_db
+
+* Prepare to present re: Pathway Tools results on Tuesday

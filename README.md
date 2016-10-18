@@ -2571,3 +2571,28 @@ NCBI:
  * Having trouble compiling: retry Prokka-genbank_to_fasta_db
 
 * Prepare to present re: Pathway Tools results on Tuesday
+
+# 18 October 2016
+
+## pb_359_5 in Pathway Tools
+* Using just the Bacterial database, Pathway Tools identifies 269 pathways
+* Using Bacterial + cleaned Marinobacter, Pathway tools identifies 238 pathways
+
+Observations:
+* Polyisoprenoid biosynthesis (E. coli)
+ * All components present EXCEPT for the first one - IPP -> DMAPP
+  * idi gene. Check against pb_359_5 with idi gene (E. coli) as query?
+  * idi gene not present in order Alteromonadales (according to NCBI)
+   * ispA gene present in one Alteromonadales bacterium (according to NCBI)
+  * No hits
+   * **Hypothesis: Is DMAPP produced by S. marinoi (or something else in the microbiome?), and
+Marinobacter takes care of the rest?**
+
+* Guanosine -> Guanine step missing (but guanine -(hpg)-> GMP present)
+* Whole 'superpathway of glyoxylate bypass and TCA' pathway present EXCEPT
+(S)-malate -(malate dehydrogenase)-> oxaloacetate enzyme
+
+## Newly-downloaded databases from NCBI
+* Arenibacter database still not functioning correctly
+ * No CDS data! Redownload available genbanks WITH CDS data
+ * Arenibacter database now created

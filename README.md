@@ -2596,3 +2596,37 @@ Marinobacter takes care of the rest?**
 * Arenibacter database still not functioning correctly
  * No CDS data! Redownload available genbanks WITH CDS data
  * Arenibacter database now created
+
+## Pathway Tools
+New overviews created for:
+* Loktanella (pb_359_3)
+* Roseovarius (pb_359_2)
+
+# 19 October 2016
+
+## Pathway Tools
+Creating Pathway Tools overviews for:
+* Sulfitobacter (pb_359_6)
+ * Note - RNA genes found on 'plasmids'...
+* Sphingorhabdus (pb_359_7)
+ * Unsuccessful - retry...
+
+## pb_359_2
+As the smallest 'plasmid' still doesn't circularise, attempt a Falcon run using 1000 SRL
+* Must then put results through SMRT Portal
+
+## Canu Assembler
+Attempting assembler on pb_359_4
+* Once again, a single contig is achieved, though it's apparently non-circular
+ * Length - 3,486,666 bp (same region as the HGAP assembly, +/- 10 kbp)
+ * Blast against itself to determine overlap
+  * Trim the first 7058 bases, and reverse
+  * Once some space frees up on the Annotation nodes, start the jobs to run overnight
+
+Potentially try pb_359_6 in Canu to resolve the massive amount of 'plasmids'?
+* Check results tomorrow
+
+## Observations
+* Loktanella appears to be missing some RNA genes
+* Roseovaius appears to also be missing some RNA genes
+ * Final step of 'superpathway of dimethylsulfonioproanoate degradation' missing

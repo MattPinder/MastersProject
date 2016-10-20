@@ -2630,3 +2630,51 @@ Potentially try pb_359_6 in Canu to resolve the massive amount of 'plasmids'?
 * Loktanella appears to be missing some RNA genes
 * Roseovaius appears to also be missing some RNA genes
  * Final step of 'superpathway of dimethylsulfonioproanoate degradation' missing
+
+# 20 October 2016
+
+## pb_359_6
+* Canu job still waiting; cancelled, lowered # of CPUs required, and moved to another node.
+ * Failed, retry from home directory
+
+## Pathway Tools
+* Marinobacter (5) - done; original and plus
+* Loktanella (3) - done
+* Roseovarius (2) - done
+* Sulfitobacter (6) - done
+* Sphingorhabdus (4) - waiting... (require pb_359_4 gbk...)
+* Arenibacter (8) - done
+* ??? (7) - done
+
+## pb_359_4
+* Trying circularisation of Canu assembly on SMRT Portal
+ * Standard job (16628) is relatively convincing (check result near the start)
+ * Reversed job (16629) also relatively convincing (no drop at the midpoint)
+* Run Prokka and then attempt to build in Pathway Tools
+ * Waiting...
+
+## Current jobs
+
+* Canu - pb_359_6 - take results, trim and reverse, put into SMRT Portal
+ * One extra contig (19366 bp, 11 reads); can this be disregarded?
+ * Self-blast - trim:
+  * First 10,853 of tig00000000
+  * First 10,000 of tig00000001
+  * First 15,098 of tig00000002
+  * First 12,401 of tig00000003
+  * First 13,138 of tig00000004
+  * First 9,000 of tig00000005
+  * First 9,992 of tig00000006
+  * tig00000007 has no overlap...
+  * First 12,227 of tig00000008
+ * Running in SMRT Portal
+ * Blast vs Falcon
+  * When consensus has been obtained from SMRT Portal
+
+* Prokka - pb_359_4 - take results and put into Pathway Tools
+ * Put into Pathway Tools later
+
+## pb_359_6's numerous contigs
+* Check GC content of each contig?
+* Check coverage graphs/SMRT View
+* Check Falcon vs Canu Blast results

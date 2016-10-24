@@ -2716,3 +2716,18 @@ this in our Arenibacter
  * E.g. trans-lycopene biosynthesis I in Arenibacter
  * Also check hormones and aromatic compounds, and other small groupings
 * PowerPoint for Tuesday
+
+# 24 October 2016
+
+Run sg_sequences_to_GFA.py (as opposed to sg_edges_to_GFA.py);
+Blast bubbles
+Attempt to resolve bubbles (but keep alt. sequence)
+
+Falcon
+* Tweak 'overlap filtering options' settings based on average coverage
+ (max_diff 3x, max_cov 2x, min_cov 1/4x)
+
+Check SMRT Portal for graph file?
+* gfa? Other?
+
+[Regarding potential diatom-bacterial interactions] (http://mmbr.asm.org/content/76/3/667.full#sec-11)

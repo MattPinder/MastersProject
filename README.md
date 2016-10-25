@@ -2731,3 +2731,38 @@ Check SMRT Portal for graph file?
 * gfa? Other?
 
 [Regarding potential diatom-bacterial interactions] (http://mmbr.asm.org/content/76/3/667.full#sec-11)
+
+# 25 October 2016
+
+## Genome announcement papers
+
+
+## Carotenoids
+Check whether the yellow and red bacteria show different components of the trans-lycopene biosynthesis pathway
+
+| Species        | Colour | Pathway details    |
+|----------------|--------|--------------------|
+| Arenibacter    | Yellow | All parts present  |
+| Loktanella     | Red    | Final step missing |
+| Roseovarius    | Red    | All parts present  |
+| Sphingorhabdus | Yellow | All parts present  |
+
+(See also - spheroidene pathway and )
+
+## Pili
+Search for pilus-related genes in the genomes
+* Definite presence; will need to quantify
+
+## Phylotaxonomic analysis
+
+* Ensure circularisation is complete!
+
+* Check relevant programs and methods in Alvar's thesis
+ * New programs may need to be installed on the system
+ * Alvar's code for DLing sequences may need to be altered
+
+* Code for DLing sequences - genome_downloader.py
+ * Can it download from ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/genbank/bacteria ?
+ * OR ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/refseq/bacteria
+* Attempting to run the script as-is...
+ * Check in the morning...

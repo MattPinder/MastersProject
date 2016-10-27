@@ -2766,3 +2766,107 @@ Search for pilus-related genes in the genomes
  * OR ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/refseq/bacteria
 * Attempting to run the script as-is...
  * Check in the morning...
+
+# 26 October 2016
+
+## Circularisations
+
+| Sample # | Species        | # of contigs          | Circularisation complete?                                                                 |
+|----------|----------------|-----------------------|-------------------------------------------------------------------------------------------|
+| pb_359_2 | Roseovarius?   | 3 (Falcon)            | Graph - Many chromosome bubbles; Circ - Shortest contig needs work                        |
+| pb_359_3 | Loktanella     | 3 (Falcon)            | Graph - 3 chromosome bubbles; Circ - Longest and shortest contigs need work               |
+| pb_359_4 | Sphingorhabdus | 1 (HGAP) / 1 (Canu)   | Canu assembly seems to be okay                                                            |
+| pb_359_5 | Marinobacter   | 1 (HGAP)              | Circ - appears to be okay                                                                 |
+| pb_359_6 | Sulfitobacter  | 8 (Falcon) / 9 (Canu) | Circ - Canu assembly appears sound aside from short 'contig'; Graph - insufficient detail |
+| pb_359_7 | ???            | 4 (Falcon)            | Graph - Many bubbles; Circ - appears to be okay                                           |
+| pb_359_8 | Arenibacter    | 1 (HGAP)              | Circ - appears to be okay                                                                 |
+
+## PhyloPhlAn
+
+Numerous errors regarding missing modules, plus several which seem to result from not running the
+program from its install folder...
+**Installing to home directoy for the time being; will discuss options for a global installation later**
+Usearch requires version 5.32; does not work with the latest version
+
+## Alvar's genome_downloader.py
+
+Change location of python install in Alvar's script
+* NCBI have changed their file structure; must work out how to alter the code
+
+# 27 October 2016
+
+## PhyloPhlAn
+Job completed for pb_359_8; adjustment made as per Alvar's instructions to include taxonomic names on the branches:  
+IFS=$'\n'; for r in `cat /home/username/programs/data/ppafull.tax.txt`; do id=`echo ${r} | cut -f1`; tax=`echo ${r} | cut -f2`; sed -i "s/${id}/${id}_${tax}/g" /home/username/programs/nsegata-phylophlan-f2d78771d71d/output/job_name/genome.tree.int.nwk; done; unset IFS  
+(Varied according to paths in my own directory)
+
+The program places pb_359_8 between Maribacter and Cellulophaga; Arenibacter (the hypothesised species) is a member of the family Flavobacteriaceae (along with Maribacter and Cellulophaga), which is
+thus far consistent.  
+Where do other Arenibacter species sit in the tree of bacteria, relative to these other two genera?
+
+## genome_downloader.py
+Seem to have found the root of the compatability problem between Alvar's code and the NCBI ftp site; need to add 'refseq' into the file path between 'genome' and 'bacteria' partway through
+the code.  
+Running a four-core jobs on high_mem, plus a (one-core?) job on the login node to see whether there is any time difference.  
+No difference whatsoever in time taken between 4 cores and one core. Run on login node from
+now on...
+The downloads didn't work - need to delve deeper into the file structure to get at the relevant
+sequence files...
+
+## General progess
+* The following assemblies appear to be okay:
+ * pb_359_4 (Canu) - Sphingorhabdus - PhyloPhlAn in progress...
+ * pb_359_5 (HGAP) - Marinobacter - PhyloPhlAn in progress...
+ * pb_359_8 (HGAP) - Arenibacter? - PhyloPhlAn has been run once; need to DL relevant related sequences to run a smaller PhyloPhlAn job
+
+* The following assemblies need to have the bubbles in their string graphs examined:
+ * pb_359_7 (Falcon) - ??? - check bubbles in Bandage...
+
+* The following assemblies need to have their circularisation examined:
+ * pb_359_2 (Falcon)
+ * pb_359_3 (Falcon)
+
+* The following assemblies need to be generally checked:
+ * pb_359_6 (Falcon/Canu)
+
+## pb_359_7
+Considering the bubbles, increase the seed read length to determine whether this helps to resolve
+them? Current SRL is 6k, so may have trouble spanning certain stretches...
+* Values up to SRL 16000 give 4 contigs; perhaps try SRL 16k? If that works, then check
+circularisation with a view to using this value instead?
+
+* Bubbles in 6k - 11/1/1/0
+* Bubbles in 16k - 1/0/0/0
+ * Short path in the current bubble is 19,348 bp long, but 19k and 20k SRLs give 17 and 38
+contigs, respectively...
+ * An almost-perfect match exists between 000003887 and 000004729, except the latter is almost
+30,000 bp (cf. almost 20,000 bp)
+
+* Re-run Falcon job
+ * Tweak 'overlap filtering options' settings based on average coverage
+(max_diff 3x, max_cov 2x, min_cov 1/4x)
+ * Average coverage ~180:
+  * max_diff 540
+  * max_cov 360
+  * min_cov 45
+ * Once job is finished, check the number of contigs, then create a string graph with
+sg_sequences_to_GFA.py and see whether the bubble has been resolved.
+ * Job came back with no results...
+  * Retry with these settings, based on the recommendations of the developer:
+   * max_diff 360
+   * max_cov 540
+   * min_cov 5
+ * Results give 7 contigs instead... What else can be tweaked?
+
+## pb_359_2 and pb_359_3
+As these didn't circularise properly, attempt with Canu?
+* Started Canu jobs in home directory (reads files still unzipped)
+ * pb_359_2
+  * Canu gives three contigs (bubbles file also size 0) - consistent
+ * pb_359_3
+  * Canu gives five contigs (bubbles file also size 0) - consistent
+
+## To do
+* Adjust Falcon settings to improve assembly of pb_359_7
+* Check overlap and circularisation of pb_359_2 and _3 Canu sequences
+* Make sure that all files are synced to gitlab

@@ -2864,9 +2864,67 @@ As these didn't circularise properly, attempt with Canu?
  * pb_359_2
   * Canu gives three contigs (bubbles file also size 0) - consistent
  * pb_359_3
-  * Canu gives five contigs (bubbles file also size 0) - consistent
+  * Canu gives five contigs (bubbles file also size 0) - inconsistent with Falcon
 
 ## To do
 * Adjust Falcon settings to improve assembly of pb_359_7
 * Check overlap and circularisation of pb_359_2 and _3 Canu sequences
 * Make sure that all files are synced to gitlab
+
+# 28 October 2016
+
+## pb_359_2 and _3
+Check overlap, then put into SMRT Portal
+* pb_359_2: 3 contigs
+ * Contig 1 (tig00000000) - remove first 16,830 bases (should be 4,170,771)
+ * Contig 2 (tig00000001) - remove first 14,738 bases (should be 180,122)
+ * Contig 3 (tig00000002) - remove first 10,069 bases (should be 30,293)
+* pb_359_3: 5 contigs
+ * Contig 1 (tig00000000) - remove first 16,012 bases (should be 3,836,915)
+ * Contig 2 (tig00000001) - ??? (may be a part of tig00000000)
+ * Contig 3 (tig00000002) - remove first 15,928 bases (should be 111,026)
+ * Contig 4 (tig00000003) - remove first 13,184 bases (should be 89,752)
+ * Contig 5 (tig00000004) - remove first 18,493 bases (should be 39,355)
+  * Hypothesis - Contigs 1 and 2 should be joined?
+
+* pb_359_2 standard job - 16648 - shortest contig still a problem
+* pb_359_2 reversed job - 16649 - the ends seem to join fine, but problem remains (see above)
+* pb_359_3 standard job - 16650 - still problems with first and last contigs (also fourth)
+* pb_359_3 reversed job - 16651 - see above
+
+## pb_359_3
+Check whether the longest and shortest contigs go together...  
+Problem - self-blast was from 17k job; circularisation was from 17.1k job...  
+**Must be consistent**
+
+What I would expect - overlap between the start/end of the longest contig, and the area ~3/4 of
+the way through the shortest contig.
+
+Best hit between longest and shortest contigs (in terms of bit score): a 2,102 stretch, no gaps,
+only two bp difference  
+Problem - the sequence matches towards the END of the longest contig, not the start where the
+coverage drop occurs...
+
+* Spliced the longest and shortest contigs together, flanked by the shared region. Will try
+this with the Resequencing protocol on SMRT Portal
+* Job # 16653
+
+
+## pb_359_7
+Attempting Canu
+* 4 contigs, consistent with Falcon
+* Size 0 bubbles file
+* Self-blast and circularise
+ * Longest contig - trim first 15,834 bp (expected length: 4,722,943 bp)
+ * Second contig - trim first 15,633 bp (expected length: 372,257 bp)
+ * Third contig - trim first 18,046 bp (expected length: 154,461 bp)
+ * Shortest contig - trim first 17,200 bp (expected length: 81,443 bp)
+
+(Check any matches between different contigs...)
+
+* Standard job - 16654
+* Reversed job - 16655
+
+
+* Check sample 3 splice job and download files
+ * Failure

@@ -2928,3 +2928,25 @@ Attempting Canu
 
 * Check sample 3 splice job and download files
  * Failure
+
+# 31 October 2016
+
+## Checking pb_359_7 jobs
+* Standard job - appears at first glance to be okay (check slight dips)
+* Reversed job - also appears to be okay at first glance
+
+Check for any matches between contigs, and coverage dips
+* Match between second and third contigs of ~4kbp
+ * Blasting sequence: area contains potentially two protein genes...
+ * Average coverage in the two contigs is different; reasonable to assume that
+they truly are different contigs?
+* Coverage appears to be reasonable throughout
+
+* pb_359_7 has now been sent to Prokka
+ * Numbers of predicted loci and named genes changed fairly drastically... Investigate!
+  * Ensure Prokka database has been synced correctly to all nodes
+
+## pb_359_5 and _8
+* Conflicts in the assembly cannot be verified; reperform with Canu?
+ * Canu jobs started in home directory (be sure to sync results to data5 when completed)
+ * Numbers of contigs inconsistent... Investigate!

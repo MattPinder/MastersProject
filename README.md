@@ -2853,8 +2853,8 @@ contigs, respectively...
 sg_sequences_to_GFA.py and see whether the bubble has been resolved.
  * Job came back with no results...
   * Retry with these settings, based on the recommendations of the developer:
-   * max_diff 360
-   * max_cov 540
+   * max_diff 360 (2x average coverage)
+   * max_cov 540 (3x average coverage)
    * min_cov 5
  * Results give 7 contigs instead... What else can be tweaked?
 
@@ -2950,3 +2950,115 @@ they truly are different contigs?
 * Conflicts in the assembly cannot be verified; reperform with Canu?
  * Canu jobs started in home directory (be sure to sync results to data5 when completed)
  * Numbers of contigs inconsistent... Investigate!
+
+# 1 November 2016
+
+## pb_359_5 and _8
+* After Canu jobs the following results were obtained:
+ * pb_359_5 - 2 contigs (albeit one very poorly supported...)
+ * pb_359_8 - 3 contigs, one with moderate support (and one with negative support?)
+* Both 'bubbles.fasta' files are blank, however
+
+Approximate sizes of assembly/longest contig
+
+|          | HGAP              | Falcon             | Canu               |
+|----------|-------------------|--------------------|--------------------|
+| pb_359_5 | 4,406k (1 contig) | 4,384k (2 contigs) | 4,403k (2 contigs) |
+| pb_359_8 | 5,839k (1 contig) | 5,822k (2 contigs) | 4,877k (3 contigs) |
+
+For _5:
+* Falcon finds a second contig of ~241k
+* Canu finds a second contig of ~264k (poor support)
+
+For _8:
+* Falcon finds a second contig of ~64k
+* Canu finds a second contig of ~960k
+ * Canu also finds a third contig of ~87k (poor support)
+
+For pb_359_5, genome size was previously set to 4.5m
+* Attempting at 4.4m
+ * No bubbles
+ * Once again, 2 contigs (once again, the second contig has ~low support)
+
+For pb_359_8, genome size was previously set to 5.3m (this appears to have been an error...)
+* Attempting at 5.8m
+ * No bubbles
+ * Once again, 3 contigs (once again, the third contig has negative coverage)
+
+## pb_359_2
+Both Falcon and Canu are convinced that there is a third contig, but it looks like an M in
+terms of coverage, with an obvious dip in the middle.
+* What is contained within this contig? Blast first ~10k bases
+ * None of the best hits are to Roseovarius or Roseobacter, the two proposed genera...
+* Blast next ~10k bases
+ * A few of the best hits are to Roseovarius
+* Blast final ~10k bases for completeness
+ * Again, no convincing Roseo* hits
+
+* Looking at the self-blast results:
+ * In the Falcon assembly, the shortest contig has no hits to the other two
+ * The same is true in the Canu assembly
+
+
+
+## pb_359_3
+HGAP and Canu believe there are 5 contigs, whereas Falcon says there are 3
+* All show massive dips in the assemblies of the longest contig; for
+HGAP and Canu, these also exist in the shorter contigs...
+ * The coverage always drops to ~50
+* Tweak settings of Canu to try and obtain 3 contigs with it?
+* Check string graph of Falcon assembly?
+ * Three bubbles in the chromosome, two of which are huge.
+* Self-blasts of both Canu AND Falcon assemblies give some fairly large hits between contigs...
+* Alter Falcon settings re: coverage? (using 17.1k SRL as reference)
+ * Average coverage 177.93 (~180)
+  * max_diff: 360
+  * max_cov: 540
+  * min_cov: 5
+ * This resulted in 9 contigs...
+
+Re: Falcon settings on overlap:  
+"What is the right numbers used for these parameters? These parameters may the most tricky ones
+to be set right. If the overall coverage of the error corrected reads longer than the length cut
+off is known and reasonable high (e.g. greater than 20x), it might be safe to set min_cov to be 5,
+max_cov to be three times of the average coverage and the max_diff to be twice of the average
+coverage."
+
+* In Falcon, 3-contig assemblies range from SRL 16600-17250 (inclusive)
+ * Resultant files have since been deleted; rerun jobs in home directory...
+  * 16600, 16700, 16750, 16800, 16900, 17000, 17100, 17200, 17250
+
+
+
+
+## pb_359_6
+No blatant issues with coverage, but a curious patch in the longest contig...
+* In Falcon, 8-contig assemblies range from SRL 10500-11500 (inclusive)
+ * 11,400 and 11,500 both have size 0 a_ctg files; switch to these assemblies instead?
+ * Problem - not circular!
+
+
+
+## Questions:
+* pb_359_2 - Can the third contig be disregarded? Poorly supported and doesn't circularise at
+all...
+* pb_359_3 - Why will longest contig not assemble? Similar issue with shorter contigs (working on
+re-running some Falcon jobs...)
+* pb_359_5 - Can the HGAP assembly be accepted, despite no string graph or bubble files to
+determine conflicts?
+* pb_359_6 - Can the tiny contig (poorly supported) in the Canu assembly be disregarded? Also,
+can the Falcon assembly's chromosome bubble be resolved?
+* pb_359_8 - Can the HGAP assembly be accepted, despite no string graph to bubble files to
+determine conflicts?
+
+
+* pb_359_4 and _7: Pleased with the assemblies, and genbanks have been produced. 
+ * pb_359_7 still needs to be loaded into Pathway Tools
+ * Both need to be run through PhyloPhlAn
+  * Via home directory...
+  * 4 has already been run; 7 is currently being run and must be moved from the home directory
+into data5
+
+## To do
+* Check stats of pb_359_3 re-run jobs
+* Move pb_359_7 PhyloPhlAn from home directory to data5

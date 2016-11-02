@@ -3027,7 +3027,7 @@ coverage."
 * In Falcon, 3-contig assemblies range from SRL 16600-17250 (inclusive)
  * Resultant files have since been deleted; rerun jobs in home directory...
   * 16600, 16700, 16750, 16800, 16900, 17000, 17100, 17200, 17250
-
+ *All have bubbles...
 
 
 
@@ -3060,5 +3060,72 @@ determine conflicts?
 into data5
 
 ## To do
-* Check stats of pb_359_3 re-run jobs
-* Move pb_359_7 PhyloPhlAn from home directory to data5
+* Rerun Pathway Tools for _4 and _7 (note which assemblies are used), and name them
+such that you know they use the final assembly
+* Work out why FigTree won't output images anymore!
+ * Appears to output them now that Java has been updated...
+
+# 2 November 2016
+
+Try Figtree through Albiorix using sudo
+* Would require sudo su...
+
+## pb_359_5 and _8
+Both sequences circularise well; the only issue is the coverage spike composed of many short
+reads (~1-5kb), present in both samples... Can this be disregarded?
+* Upload Falcon/Canu reference to see whether they also find this spike
+ * 16k Falcon assemblies...
+ * _5 job ID: 16662
+ * _8 job ID: 16663
+
+## pb_359_4 and _7
+New Figtree strategy - max zoom, then export as jpg for inspection
+* Does not work...
+
+## Downloading files for FigTree
+urlretrieve doesn't support wildcards, so may no longer be possible to automate download of the required sequences...
+* Will have to download by hand?
+
+## pb_359_6
+Late observation - the longest 'plasmid' in pb_359_6 is 428k. MUCH too big for a plasmid?
+* Adding together the 'chromosome' and the biggest plasmids would still give a reasonable size for a complete genome...
+* Looking back at the preliminary Blast results, certain of the contigs matched Sulfitobacter, others matched Roseovarius (pb_359_2?)
+ * Blast pb_359_2 and _6?
+ * Falcon - _2 SRL 7k vs _6 SRL 10.6k
+* Expectations:
+ * pb_359_2 - Two longest contigs matched Roseovarius, smallest matched Pseudorhodobacter/Thioclava/Oceanibulbus
+ * pb_359_6 - ~302k and ~104k contig matches Roseovarius, ~153k contig matches Roseo/Puniceibacterium
+* Lots of matches spanning a couple of kilobases, but nothing huge EXCEPT one hit of 91% identity across ~13.7k
+ * 180,096 bp contig of pb_359_2 vs 92,692 bp contig of pb_359_6
+ * Blasting sequence...
+  * Match of ~800 bp to 'type IV secretion system"
+
+Add a newline after every Nth character:
+sed -e "s/.\{N\}/&\n/g" < file.txt
+
+
+
+Check assembly sizes for _4 and _7. If all assemblies come to ~ the same size, use HGAP
+* pb_359_5
+ * HGAP 16K   - 1 contig  - 4,406K
+ * Falcon 10K - 2 contigs - 4,626K
+ * Canu       - 2 contigs - 4,667K
+
+* pb_359_5 is using only 85% of reads, cf. 90% as with the other samples. HGAP assemblies
+with a higher SRL/more contigs had an assembly size more comparable to the other assemblers...
+* pb_359_5 14k job?
+ * 16664
+
+
+* pb_359_8
+ * HGAP 20K   - 1 contig  - 5,839K
+ * Falcon 10K - 2 contigs - 5,886K
+ * Canu       - 3 contigs - 5,924K
+
+* pb_359_8's initial assembly (SciLifeLab) was 2 contig, but it was a slightly bigger assembly - around
+the size of the Canu assembly...
+
+## To do
+
+* Solve size discrepancies between the various assemblies of pb_359_5 and _8
+ * Check sample 5 14k job (16664) on SMRT Portal

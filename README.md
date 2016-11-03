@@ -3105,7 +3105,7 @@ sed -e "s/.\{N\}/&\n/g" < file.txt
 
 
 
-Check assembly sizes for _4 and _7. If all assemblies come to ~ the same size, use HGAP
+Check assembly sizes for _5 and _8. If all assemblies come to ~ the same size, use HGAP
 * pb_359_5
  * HGAP 16K   - 1 contig  - 4,406K
  * Falcon 10K - 2 contigs - 4,626K
@@ -3116,16 +3116,45 @@ with a higher SRL/more contigs had an assembly size more comparable to the other
 * pb_359_5 14k job?
  * 16664
 
-
 * pb_359_8
  * HGAP 20K   - 1 contig  - 5,839K
  * Falcon 10K - 2 contigs - 5,886K
  * Canu       - 3 contigs - 5,924K
 
-* pb_359_8's initial assembly (SciLifeLab) was 2 contig, but it was a slightly bigger assembly - around
-the size of the Canu assembly...
+* pb_359_8's initial assembly (SciLifeLab) was 2 contig, but it was a slightly bigger assembly,
+around the size of the Canu assembly...
 
 ## To do
 
 * Solve size discrepancies between the various assemblies of pb_359_5 and _8
  * Check sample 5 14k job (16664) on SMRT Portal
+
+# 3 November 2016
+
+## pb_359_5
+Job 16664 returned two contigs, the second of which measured ~250k bases, but uses ~92% of the
+reads
+* Previous, one-contig assembly contained only 85% of reads
+ * Compared to the contig size of Marinobacter hydrocarbonoclasticus, this size is reasonable
+* New hypothesis - pb_359_5 contains a chromosome plus a plasmid.
+ * Attempt to circularise the Canu/Falcon assembly
+ * Check string graph for 10K Falcon job
+  * A lot of complex bubbles...
+
+## genome_downloader.py
+Make a fork of Alvar's code, using wget instead of urllib to extract files (wget accepts
+wildcards)
+* https://www.ncbi.nlm.nih.gov/books/NBK25501/
+ * Useful for retrieving accession numbers?
+* Need wget to be installed...
+
+
+## pb_359_8
+Unconvinced by the single-contig assembly of HGAP; attempt surrounding SRL values to test
+the environment.
+* SRL 18k - job 16667
+* SRL 21k - job 16668
+
+## CompleteCode.py
+Code is approaching preliminary completion; solve problem of URL not accepting strings
+as part of the address...

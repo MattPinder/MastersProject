@@ -3158,3 +3158,24 @@ the environment.
 ## CompleteCode.py
 Code is approaching preliminary completion; solve problem of URL not accepting strings
 as part of the address...
+
+# 4 November 2016
+
+## pb_359_5
+Job 16666 (12k SRL) failed; retrying...
+* Something preventing certain SRLS from assembling in sample 5...?
+
+## pb_359_8
+* 18k SRL (16667) - 1 contig, still a little shorter than the Falcon and Canu assemblies...
+* 21k SRL (16668) - 1 contig, still a little shorter than the Falcon and Canu assemblies...
+
+## NCBI_Downloader.py
+Preliminary working version created, and seems to be working well so far. Need to add more user-friendly
+components, but otherwise functional.
+
+## To Do
+* Solve problem with remaining assemblies
+ * pb_359_5 may be near completion; check last job, then attempt to circularise a 2-contig assembly (Canu?)
+ * pb_359_2, _3, _6, _8...
+* Get a phylogenetic tree for pb_359_7 using PhyloPhlAn and NCBI_Downloader.py
+* Complete creation of pb_359_4 phylogenetic tree

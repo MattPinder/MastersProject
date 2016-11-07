@@ -3179,3 +3179,74 @@ components, but otherwise functional.
  * pb_359_2, _3, _6, _8...
 * Get a phylogenetic tree for pb_359_7 using PhyloPhlAn and NCBI_Downloader.py
 * Complete creation of pb_359_4 phylogenetic tree
+
+# 7 November 2016
+
+## pb_359_5
+12k SRL assembly of pb_359_5 complete; assembly size still comparable to Falcon and Canu
+2-contig assemblies.
+* Conclusion - genome is ~ 4.68Mb, with a ~4.4Mb chromosome and a ~200Kb plasmid.
+* Circularisation and quality must now be checked...
+
+Given that 2-contigs appears to be the true shape of the genome, it is feasible that the Falcon
+and Canu assemblies are, in fact, accurate. Therefore, circularisation and string graph bubbles
+must be checked
+* String graph of 10k Falcon job - VERY bubbly, including some very complex bubbles
+* Check a_ctg file sizes for other size assemblies of comparable size
+ * 16k has a smaller a_ctg file (but the p_ctg file is missing...) so will perform more
+Falcon assemblies around this value to try and find a minimum amount of bubbles.
+ * 11k, 12k, 13k, 14k, 15k, 17k, 18k, 19k (and redo 16k for comparison)
+ * Running from home directory; tar will have to be rezipped and resynced with data5
+* Looking at the stats, 18k SRL has the smallest amount of alternate contig data...
+
+## pb_359_4
+Having to re-run PhyloPhlAn because of a naming error; if this persists will have to mass-replace
+spaces with underscores in the FASTA headers (additional section of the code?)
+* NCBI_Downloader.py has been updated as described above.
+* Rerunnng PhyloPhlAn now...
+
+## Other unfinished assemblies
+* pb_359_2 - Shortest contig never circularises
+* pb_359_3 - Longest and shortest contigs never circularise
+* pb_359_6 - Am I convinced that all of the 'plasmids' in this sequence are legitimate?
+* pb_359_8 - Conflict in assembly sizes and numbers of contigs...
+
+## pb_359_8
+Assembly size of 15k SRL is comparable to the previously-checked 10k SRL, BUT a_ctg.fa is blank!
+* Run sg_sequences_to_GFA.py and check this assembly instead.
+ * Despite the emptiness of the a_ctg.fa file, the other a_ctg* files weren't empty, and so
+the resultant string graph still contains some bubbles...
+ * Try some other assembly sizes?
+  * Are the bubbles relevant, if the a_ctg.fa file is empty?
+  * Cannot find an explanation of the difference between a_ctg_all.fa, a_ctg_base.fa,
+a_ctg_base_tiling_path, a_ctg.fa and a_ctg_tiling_path...
+ * The bubble in the 'plasmid' occurs between two nodes of ~17.7Kb and ~19.6Kb
+ * BLASTing vs the ~17.7k node shows extensive repetition...
+  * Would a SRL of 18K resolve this?
+ * Attempt 18K and a few surrounding values...
+  * 17k, 18k, 19k
+ * Running from home directory; tar will have to be rezipped and resynced with data5
+ * 17k yielded 2 contigs; 18k yielded 4, 19k yielded 8...
+ * 18k and 19k have 0 file size on all a_ctg files...
+
+## pb_359_7
+Phylotaxonomic group must be identified in order to shrink the tree.
+* PhyloPhlAn 1.4.3 appears faster than 1.4.2 on my computer for handling huge trees, so
+should be able to sift through more easily.
+ * Dowload sequences from family Rhodobacteraceae
+ * Running PhyloPhlAn job...
+
+
+
+
+
+
+* pb_359_4 running PhyloPhlAn
+* pb_359_5 running Falcon
+* pb_359_8 running Falcon
+
+* pb_359_7 running PhyloPhlAn
+
+* pb_359_2 - massive coverage dips
+* pb_359_3 - massive coverage dips
+* pb_359_6 - so many contigs

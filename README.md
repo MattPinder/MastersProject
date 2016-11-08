@@ -3236,11 +3236,6 @@ should be able to sift through more easily.
  * Dowload sequences from family Rhodobacteraceae
  * Running PhyloPhlAn job...
 
-
-
-
-
-
 * pb_359_4 running PhyloPhlAn
 * pb_359_5 running Falcon
 * pb_359_8 running Falcon
@@ -3250,3 +3245,64 @@ should be able to sift through more easily.
 * pb_359_2 - massive coverage dips
 * pb_359_3 - massive coverage dips
 * pb_359_6 - so many contigs
+
+# 8 November 2016
+
+## PhyloPhlAn
+Samples ran successfully, will visualise them in Figtree...
+* pb_359_4 - May be worth searching GenBank for sequences alongside RefSeq, but seems likely at
+first glance that this is a species of Sphingorhabdus, as predicted.
+* pb_359_7 - Stands alone, seems related to Mameliella alba and Ruegeria sp. PBVC088, but
+might be worth looking at GenBank as well, as no Antarctobacter species were found in RefSeq...
+
+## pb_359_8
+Try 17.5k Falcon assembly?
+* 17k gives 2 contigs but bubbles remain; 18k (and 19k) give more contigs, but no bubbles...
+ * Job submitted; will need to redo the tar and gzip files...
+ * Result - 4 contigs, but with a_ctg* files of non-zero size...
+* Check whether the 17k assembly gives serious bubbles in the string graph, and if it will
+circularise...
+ * Standard job - 16672
+ * Reversed job - 16673
+ * Two bubbles in the long contig, and not circular...
+
+## pb_359_5
+Remove some files to make the .tar file manageable...
+Retain files with smallest a_ctg* files; keep 17/18/19
+
+
+
+* pb_359_2 - COVERAGE DIPS
+* pb_359_3 - COVERAGE DIPS
+* pb_359_4 - Improve annotation? Otherwise write report
+* pb_359_5 - MUST RESOLVE STRING GRAPH BUBBLES
+* pb_359_6 - RESOLVE MASS OF CONTIGS
+* pb_359_7 - Improve annotation and tree? Otherwise write report
+* pb_359_8 - MUST RESOLVE STRING GRAPH BUBBLES
+
+## pb_359_6
+pb_359_6 10.6k Falcon assembly has a single chromosome bubble
+* Rerun sample 6 jobs to double-check whether any of these give better results in terms of
+bubbles?
+ * This has been done, unsuccessfully
+
+Note: Canu jobs have not been tested in SMRT Portal for samples 5 or 8...
+
+* pb_359_5
+ * HGAP 16K   - 1 contig  - 4,406K
+ * Falcon 10K - 2 contigs - 4,626K
+ * Canu       - 2 contigs - 4,667K
+
+* pb_359_8
+ * HGAP 20K   - 1 contig  - 5,839K
+ * Falcon 10K - 2 contigs - 5,886K
+ * Canu       - 3 contigs - 5,924K
+
+Check these two for circularisation...?
+* Use pb_359_5 version rather than pb_359_5_2
+* Use pb_359_8_2 version rather than pb_359_8
+ * Canu results must first be trimmed...
+ * Before trimming, must be blasted
+
+## To do:
+* Check overlap in samples 5 and 8 Canu, with a view to trimming and circularising them...

@@ -3306,3 +3306,40 @@ Check these two for circularisation...?
 
 ## To do:
 * Check overlap in samples 5 and 8 Canu, with a view to trimming and circularising them...
+
+# 9 November 2016
+
+## pb_359_8
+Surprisingly, despite yesterday's comments, the 17k Falcon assembly SEEMS to circularise.
+* Still need to address the bubbles in the string graph, however...
+
+## Canu
+Trim the Canu assemblies of samples 5 and 8
+* pb_359_5
+ * Longest contig: trim first 17,082 bases (length: 4,403,956 to 4,386,874)
+ * Shortest contig: trim first 21,124 bases (length: 264,537 to 243,413) - questionable...
+ * Standard job - 16676
+ * Reversed job - 16677
+* pb_359_8
+ * Longest contig: trim first 
+ * Middle contig: trim first
+ * Shortest contig: trim first
+  * Attempt when BlastViewer decides to work...
+
+## pb_359_5
+Recently-announced species of Marinobacter (http://genomea.asm.org/content/4/5/e00937-16.full),
+compare to pb_359_5 once assembly is complete.
+
+In preparation for pb_359_5 phylotaxonomic placement, downloading Alteromonadaceae family
+sequences for comparison.
+* REMEMBER TO INCLUDE pb_359_5 .faa FILE ITSELF IN THE ANALYSIS!!!
+* Making a preliminary tree or the sample
+ * Based on this, it would appear that both sample 5 AND the above-mentioned species (MCTG268)
+are very closely related, alongside M. salarius.
+
+After checking the Canu assembly, the second contig circularises poorly BUT even the low-coverage
+area is at ~200x. The overlap wasn't entirely clean, so perhaps this needs to be reassessed?
+
+## pb_359_8
+Still need to assess 'circularisation' of pb_359_8, if BlastViewer will work...
+* Download Flavobacteraceae

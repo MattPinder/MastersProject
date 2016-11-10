@@ -3342,4 +3342,61 @@ area is at ~200x. The overlap wasn't entirely clean, so perhaps this needs to be
 
 ## pb_359_8
 Still need to assess 'circularisation' of pb_359_8, if BlastViewer will work...
-* Download Flavobacteraceae
+* Download Flavobacteriaceae
+
+# 10 November 2016
+
+## pb_359_8
+* Downloading files for small tree.
+ * Building preliminary tree...
+ * Preliminary tree supports its placement as a species of Arenibacter
+* BlastViewer STILL not working... Attempt to redo the Blast analysis and see whether it's just
+a fluke that the first file isn't working.
+ * There are 2000+ HSPs in one of the contigs alone. Feasible that it's just taking a long time
+to load on account of the number of hits. Will leave it for a few hours and see if it works...
+
+## PhyloPhlAn
+While waiting for BlastViewer, will attempt to make preliminary trees for the other three
+samples:
+* pb_359_2
+ * Pre-emptively download files based on 16S prediction; Roseovarius, so DL Rhodobacteraceae
+  * Can just transfer over from pb_359_7
+ * Closest relatives do, indeed, appear to be Roseovarius
+* pb_359_3
+ * Pre-emptively download files based on 16S prediction; Loktanella, so DL Rhodobacteraceae
+  * Can just transfer over from pb_359_7
+ * Closest relatives do, indeed, appear to be Loktanella (esp. vestfoldensis)
+ * Combine pb_359_2 and _3 trees?
+* pb_359_6
+ * Pre-emptively download files based on 16S prediction; Sulfitobacter, so DL Rhodobacteraceae
+  * Can just transfer over from pb_359_7
+ * Seems (distantly) related to Sulfitobacter?
+ * Combine pb_359_2, _3 and _7?
+
+Attempt individual big trees, then if they hypothesis is correct, can combine them into a small
+tree.
+
+## pb_359_2 and _3
+Both of these assemblies give at least contig with a massive dip in coverage. How to resolve?
+* Altering settings in Falcon? If so, which ones?
+ * Rerunning pb_359_2 15k job; see how this compares to the 7k that is my current standard
+ * pb_359_3 17.1k has a couple of big bubbles, plus there's something not right about the
+smallest contig...
+
+## pb_359_5
+After asking about the Canu assembly of pb_359_5, and the results of the circularisation, the
+result appears to be acceptable.
+* Although coverage on the short contig is on average ~350, with a dip to ~200, 200x coverage
+is still very high, and the reads supporting it are long (most are between 11Kb and 24Kb)
+ * In this case, annotation should be performed on this assembly in Prokka.
+
+## Marinobacter
+Things to compare between pb_359_5 and MCTG268:
+* # of genes
+* 16S sequence similarity
+* GC ratio
+* Synteny (test with MAUVE)
+* Etc. 
+
+## Currently-running jobs
+* pb_359_5 Prokka

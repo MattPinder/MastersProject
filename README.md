@@ -3400,3 +3400,32 @@ Things to compare between pb_359_5 and MCTG268:
 
 ## Currently-running jobs
 * pb_359_5 Prokka
+
+# 11 November 2016
+
+## pb_359_5
+Prokka has now completed its annotation:
+* The numbers for the longest contig are comparable to the previous assemblies
+* There were additional genes found on the new second contig, implying that these had, indeed,
+simply been missed in the previous assemblies
+
+* Make individual tree - done
+* Run through Pathway Tools - ongoing
+
+* Comparison to MCTG268 (http://genomea.asm.org/content/4/5/e00937-16.full)
+ * Only one of the contigs from MCTG268 had any matches at all to the shorter plasmid.
+  * BLAST this section of pb_359_5 shortest contig: 140,128 - 152,004
+   * 150,579 - 152,004 (10,451 - 11,876)
+   * 149,705 - 150,355 (9,577 - 10,227)
+   * 140,128 - 140,799 (1 - 671)
+  * Top two almost match to a superfamily I DNA/RNA helicase from M. hydrocarbonoclasticus
+  * Blast the above individually...
+   * Good match to superfamily I DNA/RNA helicase from M. hydrocarbonoclasticus
+   * Mediocre matches to five Marinobacter proteins; best: superfamily I DNA/RNA helicase
+    * M. hydocarbonoclasticus
+   * Mediocre matches to two M. hydrocarbonoclasticus hypothetical proteins
+  * Blasting the best two matches together gets a good match to the same DNA/RNA helicase across
+the whole length of the query
+
+* Tried installing Mauve but the program will not cooperate.
+* 16S sequence similarity - check SILVA database

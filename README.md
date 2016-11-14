@@ -2418,7 +2418,7 @@ compounds) and HMA (heavy-metal-associated domain) among them
 * Only issue with his assembly is a large spike in coverage
  * Blastx spike to see if its contents are relevant
  * Appears to be a transposase gene
-  * Best matches to transposase in varius *Zobellia* species
+  * Best matches to transposase in various *Zobellia* species
    * Strong matches to *Arenibacter*, the predicted genus of this organism
 * Run Prokka
  * File used - 01_assemblies/pb_359_8/Trim/pb_359_8_Trimmed_Circularisation_consensus.fasta
@@ -3429,3 +3429,80 @@ the whole length of the query
 
 * Tried installing Mauve but the program will not cooperate.
 * 16S sequence similarity - check SILVA database
+
+# 14 November 2016
+
+## pb_359_5
+Mauve now installed; running an alignment between pb_359_5 and MCTG268
+
+## Unassembled Samples
+* pb_359_2:
+ * Regarding the shortest contig - the coverage dip could appear exaggerated solely due to the
+short size of the contig.
+ * Double-check longest-contig peak, but otherwise accept assembly for the time being.
+* pb_359_3:
+ * Regarding the shortest contig - as above, coverage difference may appear exaggerated on
+accoung of short contig size.
+ * Dip in longest contig coverage may be due to a long, unresolved repeat region; check this,
+but otherwise accept for the time being.
+* pb_359_6:
+ * Coverage across all contigs is relatively consistent; accept for the time being.
+* pb_359_8:
+ * HGAP (after trim) - 5,824,585 - one contig
+  * Falcon - 5,855,311 - two contigs BUT more reads used.
+
+Assemblies to move forward with:
+
+| Sample   | Assembly to now use | Reservations                         |
+|----------|---------------------|--------------------------------------|
+| pb_359_2 | Falcon 7k (?)       | Peak in contig 1, trough in contig 3 |
+| pb_359_3 | Falcon 17.1k        | Troughs in contigs 1 and 3           |
+| pb_359_6 | Falcon 10.6k        | # of contigs, bubble in string graph |
+| pb_359_8 | Falcon 17k          | ?                                    |
+
+Sample 8 must be redone, as all others used the correct file for the 'test runs'
+* For PhyloPhlAn, the file `pb_359_8_2.faa` was renamed to `pb_359_8.faa` to simplify the output
+
+## pb_359_8
+* Phylogenetic tree completed; viewing in Figtree
+ * Position still similar to previously; close to Arenibacter algicola and A. sp. C-21
+* Pathway Tools compilation ongoing
+
+## Metaxa2
+Can be used to extract 16S rRNA sequences
+
+* pb_359_2 - compare to Roseovarius sp. TM1035 (or R. mucosus)
+ * Metaxa also agrees with Roseovarius classification
+ * Downloading all Roseovarius and Roseobacter sequences from SILVA
+ * Appears to match exactly to TM1035, but the TM1035 reference is longer; reverse the Blast
+and check whether the full-length TM1035 sequence appears in pb_359_2
+
+* pb_359_3 - compare to Loktanella vestfoldensis (or sp. S4079, CCS2, 1ANDIMAR09, 5RATIMAR09)
+ * Metaxa also agrees with Loktanella classification
+ * Downloading all Loktanella sequences from SILVA
+ * Best matches are to 'Loktanella; uncultured bacterium', but these are still not perfect
+matches
+  * 2 mismatches; by comparison, L. vestfoldensis differs by 3 bp
+
+* pb_359_4 - compare to Sphingorhabdus sp. M41 (or Sphingopyxis baekryugensis)
+ * Note: Metaxa classifies the sequence as Sphingopyxis, not Sphingorhabdus...
+* pb_359_5 - compare to Marinobacter sp. MCTG268 and M. salarius (or M. algicola)
+ * Metaxa also agrees with Mariobacter classification
+* pb_359_6 - compare to Sulfitobacter pseudonitzschiae and sp. 20_GPM-1509m
+ * Note:  Metaxa finds TWO 16S sequences, both agreeing with the Sulfitobacter classification
+* pb_359_7 - compare to Mameliella alba, Ruegeria sp. PBVC088, and various Antarctobacter
+ * Note: Metaxa can only classify it down to the family Rhodobacteraceae; no genus classification
+ * Antarctobacter sequences do exist within Metaxa2; could this belong to a new genus??
+* pb_359_8 - compare to Arenibacter sp. C-21 and A. algicola (or A. latericius and A. certesii)
+ * Metaxa also agrees with Arenibacter classification
+
+
+
+
+## To do
+* Mapping Illumina data back to PacBio assemblies for confirmation?
+* Are the two Sulfitobacter 16S sequences identical?
+* Use SILVA to get related sequences and then compare them to those extracted with Metaxa2
+ * Check which genus/genera are closest to pb_359_X
+ * Download sequences from SILVA, then use these as a blastn database against which to blast our
+sequence.

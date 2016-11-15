@@ -3480,8 +3480,7 @@ and check whether the full-length TM1035 sequence appears in pb_359_2
 * pb_359_3 - compare to Loktanella vestfoldensis (or sp. S4079, CCS2, 1ANDIMAR09, 5RATIMAR09)
  * Metaxa also agrees with Loktanella classification
  * Downloading all Loktanella sequences from SILVA
- * Best matches are to 'Loktanella; uncultured bacterium', but these are still not perfect
-matches
+ * Best matches are to 'Loktanella; uncultured bacterium', but these are still not perfect matches
   * 2 mismatches; by comparison, L. vestfoldensis differs by 3 bp
 
 * pb_359_4 - compare to Sphingorhabdus sp. M41 (or Sphingopyxis baekryugensis)
@@ -3504,5 +3503,57 @@ matches
 * Are the two Sulfitobacter 16S sequences identical?
 * Use SILVA to get related sequences and then compare them to those extracted with Metaxa2
  * Check which genus/genera are closest to pb_359_X
- * Download sequences from SILVA, then use these as a blastn database against which to blast our
-sequence.
+ * Download sequences from SILVA, then use these as a blastn database against which to blast our sequence.
+
+# 15 November 2016
+
+## Metaxa2
+Continuing to download and compare sequences from SILVA using Metaxa2:
+* pb_359_4:
+ * Downloading all Sphingorhabdus and Sphingopyxis sequences from SILVA
+ * Best matches to Sphingorhabdus flavimaris and Sphingopyxis sp. ZS1-22
+  * 2 mismatches to both of the above; both differences seem to be at the same residue in each species
+
+* pb_359_5:
+ * Downloading all Marinobacter sequences from SILVA
+ * Appears to match exactly to 'Marinobacter; uncultured bacterium', 'bacterium ROC5-1', Marinobacter
+sp. R-28770 and Marinobacter sp. R-28768, but the reference sequences are longer; reverse the Blast
+and check whether the full-length reference sequences appear in pb_359_5
+ * Three matches to MCTG268 - 2 mismatches in one, and 6 mismatches + 2 gaps in the other two
+
+* pb_359_6:
+ * Downloading all Sulfitobacter, Oceanibulbus and Roseobacter sequences from SILVA
+ * Both pb_359_6 sequences appear to match exactly to Sulfitobacter sp. DFL-23 and Sulfitobacter sp. DG885,
+although none of the sequences match for the full length; reverse the Blast and check whether the full-length
+reference sequences appear in pb_359_6
+
+* pb_359_7:
+ * Downloading all Mameliella, Ruegeria and Antarctobacter sequences from SILVA
+ * Appears to match exactly to Antarctobacter sp. 667-12, although the sequence doesn't match the full length;
+reverse the Blast and check whether the full-length reference sequence appears in pb_359_7
+
+* pb_359_8:
+ * Downloading all Arenibacter, Sediminicola and Cellulophaga sequences from SILVA
+ * Best matches to two Arenibacter algicola sequences
+  * Single mismatch, at the same residue in both cases
+
+## Mauve
+* pb_359_5 vs MCTG268
+ * A majority of the sequences appear to be syntenic; however, there are a couple of areas which appear to be
+large inversions...
+ * Based on the similarity between 16S sequences and the high degree of synteny, it seems likely that these two
+may belong to the same species...
+
+
+
+## Possible next step
+As found in Alvar's thesis - use Mauve to align our genomes to a reference obtainin good Blast hits, to assess
+whether our genome can be considered complete, or if there are obvious exclusions.
+
+* Re-check KAAS?
+
+* Look for full-length 16S sequences on GenBank/SILVA
+* 16S tree between closely-related species
+* MrBayes
+
+* Rerun sample 7 through Pathway Tools

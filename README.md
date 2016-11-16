@@ -3557,3 +3557,17 @@ whether our genome can be considered complete, or if there are obvious exclusion
 * MrBayes
 
 * Rerun sample 7 through Pathway Tools
+
+# 16 November 2016
+
+## 16S search
+Very few full/complete 16S sequences for the species of interest...
+Within complete genome sequences there exist regions labelled as rRNA; at the top of the GenBank files, there
+is a list of how many 'complete' or 'partial' 16S sequences exist in the assembly... Label as 'from X', but
+otherwise accept as complete.
+
+* Samples retrieved for pb_359_2
+* Samples retrieved for pb_359_3
+* Samples retrieved for pb_359_4
+ * Are Sphingorhabdus and Sphingopyxis the same...?
+* Sample retrieval for pb_359_5 is ongoing...

@@ -3571,3 +3571,17 @@ otherwise accept as complete.
 * Samples retrieved for pb_359_4
  * Are Sphingorhabdus and Sphingopyxis the same...?
 * Sample retrieval for pb_359_5 is ongoing...
+
+# 17 November 2016
+
+## 16S Search
+Continuing with yesterday's search for full 16S sequences to compare with pb_359_X
+
+* Samples retrieved for pb_359_5
+* Samples retrieved for pb_359_6
+* Samples retrieved for pb_359_7
+ * No complete Antarctobacter 16S sequences found...
+* Sample retrieval for pb_359_8 is ongoing...
+
+Tip - when searching among scaffolds/contigs of whole genome shotgun sequences, search 'tRNA-Ile' as well;
+there is usually such a sequence adjacent to the 16S sequence (investigate).

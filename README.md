@@ -3503,7 +3503,8 @@ and check whether the full-length TM1035 sequence appears in pb_359_2
 * Are the two Sulfitobacter 16S sequences identical?
 * Use SILVA to get related sequences and then compare them to those extracted with Metaxa2
  * Check which genus/genera are closest to pb_359_X
- * Download sequences from SILVA, then use these as a blastn database against which to blast our sequence.
+ * Download sequences from SILVA, then use these as a blastn database against which to blast our
+sequence.
 
 # 15 November 2016
 
@@ -3585,3 +3586,140 @@ Continuing with yesterday's search for full 16S sequences to compare with pb_359
 
 Tip - when searching among scaffolds/contigs of whole genome shotgun sequences, search 'tRNA-Ile' as well;
 there is usually such a sequence adjacent to the 16S sequence (investigate).
+
+# 18 November 2016
+
+## 16S Search
+* Samples retrieved for pb_359_8
+
+## PhyloPhlAn
+* Run 16S sequences together
+* 16S samples from the same species have been concatenated together into a single fasta; may
+need to separate out by strain, or separate out individual sequences again.
+ * Running pb_359_2 as an initial test
+ * PhyloPhlAn accepts amino acid sequences, not nucleotide sequences; cannot use 16S sequences...
+
+## ClustalW
+Run through the 16S sequences with ClustalW and see which align most closely to pb_359_X
+* http://www.genome.jp/tools-bin/clustalw
+
+* pb_359_2
+ * Closest match is to Roseovarius sp. TM1035, although the R. sp. TM1035 sequences are longer;
+closest NAMED species is Roseovarius mucosus (2), whose sequence is even shorter than pb_359_2,
+and three mismatches exist within the sequence.
+ * Blast these sequences against pb_359_2 complete assembly.
+
+* pb_359_3
+ * Closest match is to one of the Loktanella vestfoldensis sequences (1), but three mismatches
+still exist, and pb_359_3's sequence is shorter.
+ * Blast the sequence against pb_359_3 complete assembly, along with the other L. vestfoldensis
+sequences.
+
+* pb_359_4
+ * Closest match is to Sphingorhabdus sp. M41 (1 & 2), but six mismatches still exist, and
+pb_359_4's sequence is shorter.
+ * Blast the sequence against pb_359_4 complete assembly.
+
+* pb_359_5
+ * Closest match is to Marinobacter sp. MCTG268 (2), but three mismatches still exist, and
+pb_359_5's sequence is shorter.
+ * Blast the sequence against pb_359_5 complete assembly.
+
+* pb_359_6
+ * Closest match is to Sulfitobacter pseudonitzschiae, but with similarity to S. guttiformis;
+pb_359_6 sequences are shorter than all of these.
+ * Blast the sequences against pb_359_6 complete assembly.
+
+* pb_359_7
+ * Closest matches are to Sagittula stellata and to Rhodobacteraceae bacterium PD-2, but neither
+of these are particularly close
+ * Need to find complete Antarctobacter sequences...
+
+* pb_359_8
+ * Closest matches are to Sediminicola sp. YIK13 (1) and Cellulophaga lytica, not to Arenibacter!
+ * The two are more closely related to each other than to pb_359_8...
+
+## 16S things to do
+
+* pb_359_2
+ * Using pb_359_2 as the database, use the following queries:
+  * Roseovarius sp. TM1035
+  * Roseovarius mucosus
+
+* pb_359_3
+ * Using pb_359_3 as the database, use the following queries:
+  * Loktanella vestfoldensis
+  * Loktanella sp. S4029
+  * Loktanella sp. 1ANDIMAR09
+  * Loktanella sp. 5RATIMAR09
+  * Roseobacter sp. CCS2
+
+* pb_359_4
+ * Using pb_359_4 as the database, use the following queries:
+  * Sphingorhabdus sp. M41
+  * Sphingopyxis baekryungensis
+  * Any other available Sphingorhabdus sequences
+
+* pb_359_5
+ * Using pb_359_5 as the database, use the following queries:
+  * Marinobacter salarius
+  * Marinobacter sp. MCTG268
+
+* pb_359_6
+ * Using pb_359_6 as the database, use the following queries:
+  * Sulfitobacter pseudonitzschiae
+  * Sulfitobacter sp. 20_GPM_1509m
+  * Sulfitobacter guttiformis
+
+* pb_359_7
+ * Using pb_359_7 as the database, use the following queries:
+  * Mameliella alba
+  * Ruegeria sp. PBVC088
+  * Sagittula stellata
+  * Rhodobacteraceae bacterium PD-2
+  * Any available Antarctobacter sequences
+
+* pb_359_8
+ * Using pb_359_8 as the database, use the following queries:
+  * Arenibacter algicola
+  * Arenibacter sp. C-21
+  * Sediminicola sp. YIK13
+  * Cellulophaga lytica
+  * Any other available Arenibacter sequences
+
+Set up query using concatenation of all SILVA and NCBI hits, then search for '100%', ensuring
+that the length of the query is equal (more or less) to the length of the hit itself
+
+* Copy Sample_X_Comparison.fasta and [Genus]_16S.fasta into 02_blast/pb_359_X/16S_Reverse
+* Use tr to replace white spaces in the SILVA sequences with underscores
+* Remove pb_359_X from the NCBI results
+* Append SILVA/NCBI onto the ends of FASTA headers as appropriate
+* Concatenate the two files into one and delete the old files
+* Run blast and search for 100% results
+
+
+* 100% hits:
+ * pb_359_2
+
+| ID (SILVA)                 | Sample                              | Score (Match/Query length) |
+|----------------------------|-------------------------------------|----------------------------|
+| AF194398.1.409             | uncultured_Roseobacter_kpc14f       | 408/409                    |
+| ABCL01000006.163548.164995 | Roseovarius_sp._TM1035              | 1448/1448                  |
+| AJ294351.1.1370            | Roseovarius_mucosus                 | 1370/1370                  |
+| ABCL01000005.367769.369216 | Roseovarius_sp._TM1035              | 1448/1448                  |
+| EU052702.1.1022            | Roseovarius_sp._MH119               | 1022/1022                  |
+| FJ037593.1.757             | uncultured_bacterium                | 754/757                    |
+| HM368277.1.702             | alpha_proteobacterium_HA-mar-Is4-28 | 702/702                    |
+| HM538455.1.1322            | Roseovarius_sp._CR-CO6              | 1322/1322                  |
+| -                          | Roseovarius_sp._TM1035_1            | 1472/1472                  |
+| -                          | Roseovarius_sp._TM1035_2_NCBI       | 1472/1472                  |
+| -                          | Roseovarius_sp._TM1035_3_NCBI       | 1472/1472                  |
+
+ * pb_359_3
+Check results
+
+ * pb_359_4
+Check results
+
+ *pb_359_5-8
+Run Blasts

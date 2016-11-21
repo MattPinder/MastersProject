@@ -3548,7 +3548,7 @@ may belong to the same species...
 
 
 ## Possible next step
-As found in Alvar's thesis - use Mauve to align our genomes to a reference obtainin good Blast hits, to assess
+As found in Alvar's thesis - use Mauve to align our genomes to a reference obtaining good Blast hits, to assess
 whether our genome can be considered complete, or if there are obvious exclusions.
 
 * Re-check KAAS?
@@ -3698,22 +3698,35 @@ that the length of the query is equal (more or less) to the length of the hit it
 * Run blast and search for 100% results
 
 
-* 100% hits:
+* 100% and 99% hits:
  * pb_359_2
 
-| ID (SILVA)                 | Sample                              | Score (Match/Query length) |
-|----------------------------|-------------------------------------|----------------------------|
-| AF194398.1.409             | uncultured_Roseobacter_kpc14f       | 408/409                    |
-| ABCL01000006.163548.164995 | Roseovarius_sp._TM1035              | 1448/1448                  |
-| AJ294351.1.1370            | Roseovarius_mucosus                 | 1370/1370                  |
-| ABCL01000005.367769.369216 | Roseovarius_sp._TM1035              | 1448/1448                  |
-| EU052702.1.1022            | Roseovarius_sp._MH119               | 1022/1022                  |
-| FJ037593.1.757             | uncultured_bacterium                | 754/757                    |
-| HM368277.1.702             | alpha_proteobacterium_HA-mar-Is4-28 | 702/702                    |
-| HM538455.1.1322            | Roseovarius_sp._CR-CO6              | 1322/1322                  |
-| -                          | Roseovarius_sp._TM1035_1            | 1472/1472                  |
-| -                          | Roseovarius_sp._TM1035_2_NCBI       | 1472/1472                  |
-| -                          | Roseovarius_sp._TM1035_3_NCBI       | 1472/1472                  |
+| ID (SILVA)                   | Sample                                | Score (Match/Query length) |
+|------------------------------|---------------------------------------|----------------------------|
+| ABCL01000006.163548.164995   | Roseovarius_sp._TM1035                | 1448/1448                  |
+| AJ294351.1.1370              | Roseovarius_mucosus                   | 1370/1370                  |
+| ABCL01000005.367769.369216   | Roseovarius_sp._TM1035                | 1448/1448                  |
+| HM538455.1.1322              | Roseovarius_sp._CR-CO6                | 1322/1322                  |
+| -                            | Roseovarius_sp._TM1035_1              | 1472/1472                  |
+| -                            | Roseovarius_sp._TM1035_2              | 1472/1472                  |
+| -                            | Roseovarius_sp._TM1035_3              | 1472/1472                  |
+| ABCL01000012.1.1910          | Roseovarius_sp._TM1035                | 1906/1910                  |
+| KF733617.1.1460              | uncultured_Rhodobacteraceae_bacterium | 1454/1460                  |
+| LADY01000051.4345.5818       | Roseovarius_sp._BRH_c41               | 1458/1474 (2 gaps)         |
+| -                            | Roseovarius_sp._217                   | 1457/1474 (2 gaps)         |
+| -                            | Roseovarius_sp._MCTG156_2b_2          | 1456/1474 (2 gaps)         |
+| -                            | Roseovarius_sp._MCTG156_2b_1          | 1456/1474 (2 gaps)         |
+| KJ814050.1.1429              | uncultured_bacterium                  | 1422/1425                  |
+| KC442852.1.1462              | uncultured_bacterium                  | 1446/1462 (3 gaps)         |
+| FJ516848.1.1431              | uncultured_Rhodobacteraceae_bacterium | 1423/1431                  |
+| HM591393.1.1430              | uncultured_bacterium                  | 1420/1427 (1 gap)          |
+| AAMV01000002.66945.68394     | Roseovarius_sp._217                   | 1433/1450 (2 gaps)         |
+| JQLS01000008.4005738.4007187 | Roseovarius_sp._MCTG156(2b)           | 1432/1450 (2 gaps)         |
+| JQLS01000008.2958404.2959853 | Roseovarius_sp._MCTG156(2b)           | 1432/1450 (2 gaps)         |
+| AB159203.1.1410              | iodide-oxidizing_bacterium_RB-2A      | 1402/1406                  |
+| GU437447.1.1445              | uncultured_bacterium                  | 1417/1432 (3 gaps)         |
+...
+(See 02_blast/pb_359_2/16S_Full/Sample_2_Best_Results.md for the full list)
 
  * pb_359_3
 Check results
@@ -3723,3 +3736,61 @@ Check results
 
  *pb_359_5-8
 Run Blasts
+
+# 21 November 2016
+
+sed 's/\(^>.*\)/\1_SILVA/' input_file > output_file
+sed 's/\(^>.*\)/\1_NCBI/' input_file > output_file
+
+(or use -i flag if you're SURE of the command...)
+
+grep -A 4 ">" pb_359_2_16S_Reverse.BLASTn.txt | grep -B 4 -e"100%" | sed 's/Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Roseovarius;//g' > test
+grep -A 4 ">" pb_359_2_16S_Reverse.BLASTn.txt | grep -B 4 -e"99%" | sed 's/Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Roseovarius;//g' >> test
+
+## 16S
+
+After extracting the results, the following named species appear to be the most closely-related to our samples,
+having 16S similarity of 99% or 100%:
+
+* pb_359_2
+ * Roseovarius mucosus
+  * Strain DSM 17069
+* pb_359_3
+ * Loktanella vestfoldensis
+  * Strain DSM 16212
+  * Strain SKA53
+* pb_359_4
+ * Sphingorhabdus flavimaris - no genome sequence on NCBI or JGI
+  * Previously known as Sphingopyxis flavimaris
+ * Agrobacterium luteum - no genome sequence on NCBI or JGI
+* pb_359_5
+ * Marinobacter algicola
+  * Strain DG893
+ * Marinobacter salarius
+ * Marinobacter koreensis - no genome sequence on NCBI or JGI
+* pb_359_6
+ * Sulfitobacter pseudonitzschiae
+ * Sulfitobacter guttiformis
+ * Sulfitobacter donghicola
+* pb_359_7
+ * Antarctobacter heliothermus - no genome sequence on NCBI
+  * Found at http://genome.jgi.doe.gov/AnthelDSM11445_FD/AnthelDSM11445_FD.download.html
+* pb_359_8
+ * Arenibacter algicola
+ * Flexithrix dorotheae
+ * Arenibacter palladensis - no genome seqence on NCBI
+  * Found at http://genome.jgi.doe.gov/ArepalAR_2009_79_FD/ArepalAR_2009_79_FD.download.html
+  * Comparing to MAR_2009_79, rather than DSM 17539, as the quality is higher (improved draft cf. minimal draft)
+ * Arenibacter troitsensis - no genome seqence on NCBI
+  * Found at http://genome.jgi.doe.gov/AretroDSM19835_FD/AretroDSM19835_FD.download.html
+ * Arenibacter echinorum - no genome seqence on NCBI
+  * Found at http://genome.jgi.doe.gov/AreechDSM23522_FD/AreechDSM23522_FD.download.html
+
+Obtain sequences for these samples and run them through Mauve
+* Select pb_359_X first, then the other sample.
+* (pb_359_5 vs MCTG268 was accidentally deleted; this has been rerun)
+ * (New screenshot is required, however...)
+
+Finish making READMEs in pb_359_8
+
+Sync up git repos

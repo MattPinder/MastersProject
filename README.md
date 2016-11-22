@@ -3794,3 +3794,43 @@ Obtain sequences for these samples and run them through Mauve
 Finish making READMEs in pb_359_8
 
 Sync up git repos
+
+# 22 November 2016
+
+Repository is '7 GB too big'? Must compress files to reduce this...
+* As no HGAP assemblies were used as final assemblies, will tar and zip all HGAP results
+* Deleted the huge subread files (can be redownloaded from SMRT Portal)
+* Despite these deletion, the error remains unchanged; may need to use the `git filter-branch`
+command...
+* Using the `du -sh */`, can pinpoint which folders are using the most space
+* Removed most Canu files except for the .sge and any trimmed assemblies
+* The repository itself is now fine; the `.git` folder is now the issue
+ * Attempting `git gc --aggressive --prune` to see if the size of /git/pack/object can be reduced
+
+* git reflog expire --expire=now --all && git gc --prune=now --aggressive
+
+## Mauve
+VERY close match between pb_359_5 and Marinobacter algicola DG893
+
+## Note of the final assemblies used:
+
+| Sample   | Assembler + SRL |
+|----------|-----------------|
+| pb_359_2 | Falcon 7k       |
+| pb_359_3 | Falcon 17.1k    |
+| pb_359_4 | Canu            |
+| pb_359_5 | Canu            |
+| pb_359_6 | Falcon 10.6k    |
+| pb_359_7 | Canu            |
+| pb_359_8 | Falcon 17k      |
+
+
+## Important
+
+By aligning related 16S sequences from GenBank, can identify the conserved beginning and end
+sequences for the 16S sequence; this can then be extracted and saved into a separate fasta.  
+**This is a priority**
+
+
+## Mauve
+Start from reorder 12 on S. pseudon vs _6

@@ -4037,8 +4037,166 @@ G
 
 * Finish the Arenibacter echinorum Mauve reordering, and continue with the last few from _8
 
-* Blast 16Ss against NCBI,download full sequence, calculate similarity scores, find most
+* Blast 16Ss against NCBI, download full sequence, calculate similarity scores, find most
 closely-related named species.
  * If no tool exists for determining similarity, make one
 
 * Commit to git copy
+
+# 24 November 2016
+
+## 16S
+Regarding the hanging bases on the 16S sequences, go with majority rule and trim them off
+
+* pb_359_2:
+ * Closest named species - Roseovarius mucosus strain DFL-24
+  * Score: 2427 bits (1314)
+  * Expect: 0.0
+  * Identities: 1320/1323(99%)
+  * Gaps: 0/1323(0%)
+  * Strand: Plus/Minus
+  * Query cover: 89% (1323bp vs 1472bp)
+
+* pb_359_3:
+ * Closest named species - Loktanella vestfoldensis strain R-9477 (based on partial sequence)
+  * Score: 2634 bits (1426)
+  * Expect: 0.0
+  * Identities: 1435/1440 (99%)
+  * Gaps: 0/1440 (0%)
+  * Strand: Plus/Minus
+  * Query cover: 98% (1449bp vs 1468bp)
+  * Note: best full sequence is Leisingera methylohalidivorans, but almost 100 differing bases
+
+* pb_359_4:
+ * Closest named species - Sphingopyxis flavimaris strain R-36742 (based on partial sequence)
+  * Score: 2651 bits (1435)
+  * Expect: 0.0
+  * Identities: 1439/1441 (99%)
+  * Gaps: 0/1441 (0%)
+  * Strand: Plus/Minus
+  * Query cover: 92% (1441bp vs 1558bp)
+  * Note: same stats against both variants of pb_359_4 16S - differs at same base?
+  * Note: best full sequence is Novosphingobium pentaromativorans, but almost 80 differing bases
+
+* pb_359_5:
+ * Closest named species - Marinobacter salarius strain R9SW1 (based on complete genome and partial sequence)
+  * Score: 2811 bits (1522) / 2784 bits (1507)
+  * Expect: 0.0 / 0.0
+  * Identities: 1539/1547 (99%) / 1524/1532 (99%)
+  * Gaps: 1/1547 (0%) / 1/1532 (0%)
+  * Strand: Plus/Plus / Plus/Minus
+  * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
+  * Note: searching nr/nt database
+ * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
+  * Score: 2731 bits (1479)
+  * Expect: 0.0
+  * Identities: 1483/1485 (99%)
+  * Gaps: 0/1485
+  * Strand: Plus/Minus
+  * Query cover: 95% (1485bp vs 1547bp)
+  * Note: searching 16S-specific database
+  * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
+
+* pb_359_6:
+ * Closest named species - Sulfitobacter pseudonitzschiae strain H3
+ * Score: 2573 bits (1393)
+ * Expect: 0.0
+ * Identities: 1417/1428 (99%)
+ * Gaps: 4/1428 (0%)
+ * Strand: Plus/Minus
+ * Query cover: 97% (1426bp vs 1467bp)
+ * Note: Identical results found in partial 16S of 'Staleya guttiformis' (deprecated term for
+Sulfitobacter
+
+* pb_359_7:
+ * Closest named species - Antarctobacter heliothermus strain EL-219 (based on partial sequence)
+  * Score: 2549 bits (1380)
+  * Expect: 0.0
+  * Identities: 1395/1402 (99%)
+  * Gaps: 2/1402 (0%)
+  * Strand: Plus/Plus
+  * Query cover: 96% (1400bp vs 1458bp)
+  * Note: best full sequence is Dinoroseobacter shibae, but ~100 differing bases inc. 19 gaps
+
+* pb_359_8:
+ * Closest named species - Flexibacter aggregans strain BSs20185 (based on partial sequence)
+  * Score: 2732 bits (1479)
+  * Expect: 0.0
+  * Identities: 1482/1483 (99%)
+  * Gaps: 1/1483 (0%)
+  * Strand: Plus/Minus
+  * Query cover: 96% (1486bp vs 1531bp)
+ * Closest named species - Arenibacter palladensis strain LMG 21972 (based on complete sequence)
+  * Score: 2682 bits (1452)
+  * Expect 0.0
+  * Identities: 1468/1476 (99%)
+  * Gaps: 0/1476 (0%)
+  * Strand: Plus/Minus
+  * Query cover: 96% (1476bp vs 1531bp)
+
+* Next step for 16S comparison: pairwise sequence alignment?
+
+* Note: 99% may not be a high enough similarity score to account for all possible matches
+ * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2045242/
+* Need to use local alignment, given the size difference between some of the sequences...
+
+* Use E. coli 16S to determine start/stop?
+* RNAmmer
+ * RNAmmer prediction for pb_359_2 is 1456 (x2 sequences); 16 bases shorter, but gets
+the same match stats as the longer prediction
+
+* CCTCCT at 3' end? (binding to Shine-Delgarno sequence)
+ * Problem - in the case of pb_359_2, at least, there is a CCTCCT and an AGGAGG sequence;
+which is 'forward' and which is 'reverse'?
+
+* When performing multiple sequence alignment, ENSURE ALL SEQUENCES ARE GOING IN THE SAME
+DIRECTION! This has produced a much more convincing result!
+ * pb_359_2 - Begins with CAACTTGAGAGT, ends with CCTCCTTTCTAA
+  * Alternatively - begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTG
+  * The latter agrees with the results found in the genome
+ * pb_359_3 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
+  * Alternatively - begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
+  * The latter agrees with the results found in the genome
+ * pb_359_4 - Begins with TCAAACTTGAGAGT, ends with CCTCCTTTCTAAGG
+  * Alternatively - begins with CCTTAGAAAGGAGG, ends with ACTCTCAAGTTTGA
+  * After a little trimming of previous 16S guess, the latter agrees with the results found in
+the genome
+ * pb_359_5 - Begins with AAACTGAAGAGT, ends with CCTCCTTAAACGAAG
+  * Alternatively, begins with CTTCGTTTAAGGAGG, ends with ACTCTTCAGTTT
+  * The latter agrees with the results found in the genome
+ * pb_359_6 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
+  * Alternatively, begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
+  * The latter agrees with the results found in the genome
+ * pb_359_7 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
+  * Alternatively, begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
+  * The former agrees with the results found in the genome
+ * pb_359_8 - Begins with TCTAGAAAGGAGG, ends with ACTCTTCATCGTTG
+  * Alternatively, begins with CAACGATGAAGAGT, ends with CCTCCTTTCTAGA
+  * The former agrees with the results found in the genome
+
+## Presumed identities of the samples
+
+| Sample   | Phylum         | Class               | Order            | Family            | Genus          | 16S 5'                | 16S 3'             |
+|----------|----------------|---------------------|------------------|-------------------|----------------|-----------------------|--------------------|
+| pb_359_2 | Proteobacteria | Alphaproteobacteria | Rhodobacterales  | Rhodobacteraceae  | Roseovarius    | --CAACTTGAGAGTTTGATCC | TCACCTCCTTTCTAA--- |
+| pb_359_3 | Proteobacteria | Alphaproteobacteria | Rhodobacterales  | Rhodobacteraceae  | Loktanella     | -TCAACTTGAGAGTTTGATCC | TCACCTCCTTTCTAA--- |
+| pb_359_4 | Proteobacteria | Alphaproteobacteria | Sphingomonadales | Sphingomonadaceae | Sphingorhabdus | TCAAACTTGAGAGTTTGATCC | TCACCTCCTTTCTAAGG- |
+| pb_359_5 | Proteobacteria | Gammaproteobacteria | Alteromonadales  | Alteromonadaceae  | Marinobacter   | --AAACTGAAGAGTTTGATCA | TCACCTCCTTAAACGAAG |
+| pb_359_6 | Proteobacteria | Alphaproteobacteria | Rhodobacterales  | Rhodobacteraceae  | Sulfitobacter  | -TCAACTTGAGAGTTTGATCC | TCACCTCCTTTCTAA--- |
+| pb_359_7 | Proteobacteria | Alphaproteobacteria | Rhodobacterales  | Rhodobacteraceae  | Antarctobacter | -TCAACTTGAGAGTTTGATCC | TCACCTCCTTTCTAA--- |
+| pb_359_8 | Bacteroidetes  | Flavobacteriia      | Flavobacteriales | Flavobacteriaceae | Arenibacter    | CAACGATGAAGAGTTTGATCC | ACACCTCCTTTCTAGA-- |
+
+* pb_359_7 is in the opposite alignment to the other samples...
+* All sequences but pb_359_7 reversed so that all contained the CCTCCT near the end
+* Observation - very clear differences between different phyla/classes/orders/families
+ * Note: Possible that one or two bases at the ends are missing...?
+  * Specifically - Should there be a T at the start of pb_359_2's sequence?
+
+* Is RNAmmer cutting off at the first CCT?
+ * All sequences start with AGAGTTTGATC and end with TGCGGCTGGA(T/A)CACCT
+ * Seems to be making conservative guesses...
+* Metaxa2 - also conservative?
+ * Unsure what to make of Metaxa2 results; pb_359_8 in particular is twice as long as the others...
+
+## Mauve
+Arenibacter echinorum 'Move contigs' keeps crashing; run the others and then retry?

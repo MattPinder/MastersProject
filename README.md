@@ -4200,3 +4200,11 @@ the genome
 
 ## Mauve
 Arenibacter echinorum 'Move contigs' keeps crashing; run the others and then retry?
+
+# 25 November 2016
+
+## 16S
+* Aim - tabulate the closest 16S matches AND the closest NAMED 16S matches for each species
+
+## To do
+* Finish calculating percentages, and obtain the rest of the required information

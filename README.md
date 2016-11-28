@@ -4208,3 +4208,46 @@ Arenibacter echinorum 'Move contigs' keeps crashing; run the others and then ret
 
 ## To do
 * Finish calculating percentages, and obtain the rest of the required information
+
+# 28 November 2016
+
+## 16S
+* Obtain information on uncultured species closely related to our species
+
+## Gitlab
+* Repository on data5 has been compressed
+ * Repository on personal laptop must also be compressed...
+
+* To do:
+ * Delete repository on Gitlab
+ * Rename _copy repository
+ * Point existing repositories to the new one
+  * git remote set-url origin [new SSH address]
+  * git remote set-url --push origin [new SSH address]
+
+## Mauve results
+* pb_359_2
+ *
+* pb_359_3
+ *
+* pb_359_4
+ *
+* pb_359_5
+ *
+* pb_359_6
+ *
+* pb_359_7
+ *
+* pb_359_8
+ *
+
+
+
+
+Re: partial sequences:
+* Compare Oskar's data with species description
+
+* Add note on within-sequence differences for Marinobacter comparison (10bp)
+
+
+* Retrieve genome announcements and taxonomic descriptions for the species which MAY be other strains of pb_359_X

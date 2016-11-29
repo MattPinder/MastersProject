@@ -4251,3 +4251,48 @@ Re: partial sequences:
 
 
 * Retrieve genome announcements and taxonomic descriptions for the species which MAY be other strains of pb_359_X
+
+# 29 November 2016
+
+## Similar species to investigate
+* pb_359_2
+ * Roseovarius mucosus DSM 17069
+  * R. mucosus description downloaded
+  * R. mucosus genome announcement downloaded
+* pb_359_3
+ * Loktanella vestfoldensis DSM 16212 (= R-9477)
+  * L. vestfoldensis description downloaded
+  * REQUIRE GENOME ANNOUNCEMENT
+* pb_359_4
+ * Sphingorhabdus sp. M41
+  * S. sp. M41 genome announcement downloaded
+  * REQUIRE TAXONOMIC DESCRIPTION
+ * Sphingopyxis flavimaris strain R-36742
+  * Note: reclassified as Sphingorhabdus flavimaris (paper downloaded)
+  * S. flavimaris description (type strain SW-151, not R-36742) downloaded
+  * REQUIRE GENOME ANNOUNCEMENT
+  * S. flavimaris R-36742 not sequenced (environmental sample)
+* pb_359_5
+ * Marinobacter algicola DG893
+  * M. algicola description downloaded
+  * REQUIRE GENOME ANNOUNCEMENT
+ * Marinobacter sp. MCTG268
+  * M. sp. MCTG268 genome announcement downloaded 
+  * REQUIRE TAXONOMIC DESCRIPTION
+* pb_359_6
+ * Sulfitobacter pseudonitzschiae strain H3
+* pb_359_7
+ * Antarctobacter heliothermus strain EL-21
+  * Partial sequence...
+* pb_359_8
+ * Arenibacter algicola strain TG409
+
+
+Send Oskar email with names of closest species; in particular, similar species
+to Sphingorhabdus and Antarctobacter
+
+Make a list of the species in the relevant taxonomic groups, with hyperlinks to the relevant papers
+* Highlight those species with a high 16S similarity to pb_359_X (95% and above)
+ * NCBI currently very slow...
+
+* Wednesday - start from pb_359_5

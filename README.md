@@ -4296,3 +4296,29 @@ Make a list of the species in the relevant taxonomic groups, with hyperlinks to 
  * NCBI currently very slow...
 
 * Wednesday - start from pb_359_5
+
+# 30 November 2016
+
+## Observation requiring further investigation...
+* Initial GC-MS of Skeletonema marinoi (not axenic, so including the microbiome...) indicated the
+presence of a precursor to domoic acid; this toxin is associated with the diatom Pseudo-nitzschia.
+ * pb_359_6 may be Sulfitobacter pseudonitzschiae...
+ * Need to know which genes are responsible for domoic acid biosynthesis...
+
+## Rearrangement
+* 16S details are currently scattered, so will move 16S folders into a single place
+
+## Question
+How should we define a bacterial species, with regard to whether pb_359_X correspond to existing
+species?
+* From "The bacterial species definition in the genomic era" - Konstantinidis, Ramette & Tiedje:
+"ANI is the average nucleotide identity of the total genomic sequence shared between two strains,
+and our previous studies suggest that ANI is an exceptionally robust and sensitive method for
+measuring evolutionary relatedness among closely related bacterial strains, i.e. those showing
+higher than 60% ANI, which, typically, corresponds to greater than 97% 16S rRNA gene sequence
+identity."
+* Evolutionary and ecological relatedness?
+
+## Taxonomy
+* pb_359_5 results complete; _6, _7 and _8 need completing
+ * BlastN acting up...

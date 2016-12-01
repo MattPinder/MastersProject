@@ -4225,25 +4225,6 @@ Arenibacter echinorum 'Move contigs' keeps crashing; run the others and then ret
   * git remote set-url origin [new SSH address]
   * git remote set-url --push origin [new SSH address]
 
-## Mauve results
-* pb_359_2
- *
-* pb_359_3
- *
-* pb_359_4
- *
-* pb_359_5
- *
-* pb_359_6
- *
-* pb_359_7
- *
-* pb_359_8
- *
-
-
-
-
 Re: partial sequences:
 * Compare Oskar's data with species description
 
@@ -4322,3 +4303,58 @@ identity."
 ## Taxonomy
 * pb_359_5 results complete; _6, _7 and _8 need completing
  * BlastN acting up...
+
+# 1 December 2016
+
+## Mauve results
+* pb_359_2 and Roseovarius mucosus seem moderately well aligned, although there are some areas
+which don't line up.
+* pb_359_3 and Loktanella vestfoldensis DSM 16212 line up fairly well, although SKA53 shows
+a lot of rearrangement.
+* pb_359_5 and Marinobacter algicola DG893 align almost perfectly.
+ * MCTG268 is also a close match, but not quite as good as M. algicola.
+* pb_359_6 doesn't show hugely convincing results vs. any of the Sulfitobacter species.
+* pb_359_7 and Antarctobacter heliothermus give a very good alignment.
+* pb_359_8 and Arenibacter algicola give a very good alignment.
+ * Arenibacter palladensis also gives a good alignment.
+ * Arenibacter troitsensis also gives a good alignment.
+
+* Attempting to run longest contig of pb_359_6 vs Sulfitobacter pseudonitzschiae, the closest
+named species to pb_359_6 in terms of 16S rRNA similarity
+
+## Notes on closely-related species
+* pb_359_2 - Roseovarius mucosus
+ * Associated with a dinoflagellate (a different group of marine plankton to diatoms)
+* pb_359_3 - Loktanella vestfoldensis
+ * Found in microbial mats in the Antarctic
+* pb_359_4 - Sphingorhabdus flavimaris
+ * Found in the Yellow Sea, Korea; isolated from sea water...
+* pb_359_5 - Marinobacter algicola
+ * Found associated with dinoflagellates (two species known for producing toxins)
+* pb_359_6 - Sulfitobacter pseudonitzschiae
+ * Associated with toxic marine diatom Pseudo-nitzschia
+* pb_359_7 - Antarctobacter heliothermus
+ * Found at varying depths in an Antarctic lake
+* pb_359_8 - Arenibacter algicola
+ * Associated with Skeletonema costatum
+
+## Interesting paper re: diatom-microbiome interaction (Pseudo-nitzschia)
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869016/
+
+* From Supplementary Material - "The family Rhodobacteraceae is highly represented
+(56 - 98%) in all 3 Pseudo-nitzschia species"
+ * Predisposition for Rhodobacteraceae to be associated with diatoms? 4/7 of our species
+were from this family
+* "Consequently, OTUs homologous to Sulfitobacter, Roseobacter, Phaeobacter, Rhodobacter and
+Sphingophyxis are all common associates of the three Pseudo-nitzschia species (Figure S3).
+Marinobacter, Alteromonas, Roseobacter and Sulfitobacter are also commonly reported to be
+associated with several marine phytoplankton species, and can be considered as the core
+microbiome of marine phytoplankton."
+ * These, or closely-related genera, account for 4/7 of our species
+* "Remarkably, bacteria-free Pseudo-nitzschia consistently have low fitness, suggesting that
+microbiota do indeed have a significant role in the well-being of diatom hosts, just like in
+animal and plant host-microbiota systems"
+ * Consistent with S. marinoi
+* Roseo(bacter/varius) - parasitic?
+* + DA = - bacterial diversity
+* **Note**: Pseudo-nitzschia only distantly related to Skeletonema; Thalassiosira more closely related...

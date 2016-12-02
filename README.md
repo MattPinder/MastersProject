@@ -4358,3 +4358,31 @@ animal and plant host-microbiota systems"
 * Roseo(bacter/varius) - parasitic?
 * + DA = - bacterial diversity
 * **Note**: Pseudo-nitzschia only distantly related to Skeletonema; Thalassiosira more closely related...
+
+# 2 December 2016
+
+## Annotation
+Potential improvements:
+* Any more databases to add?
+* Consider installing RNAmmer for rRNA prediction
+* Use --rfam flag for ncRNA search
+
+Having previously extracted the sequences for hypothetical proteins from the annotation .faa file,
+attempting to run the results through BlastP (E-value threshold 1e-40) to see if any convincing
+hits appear.
+
+## Interesting paper re: algicidal bacteria
+http://onlinelibrary.wiley.com/doi/10.1111/j.1550-7408.2004.tb00538.x/full
+
+* Potential algicidal compounds - ectoproteases/serine proteases
+* Algicidal activity only at concentrations greater than 10^6 cells/ml?
+
+Would presence of chitinase be a potential indication of algicidal activity?
+* S. costatum produces chitin, though unsure of the purpose (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2708456/)
+ * pb_359_2 (Roseovarius) has downstream components of a chitin-degradation pathway
+  * Polymeric compounds degradation; Beta-hexosaminidase nagZ predicted
+  * Also present in _3, _4, (not _5), _6, _7 and _8
+  * Also involved in anhydromuropeptide recycling... Likely false positive...
+
+
+Other identified algicidal compounds - rhamnolipid biosurfactant, PG-L-1 and prodigiosin pigment

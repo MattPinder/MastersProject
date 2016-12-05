@@ -4386,3 +4386,35 @@ Would presence of chitinase be a potential indication of algicidal activity?
 
 
 Other identified algicidal compounds - rhamnolipid biosurfactant, PG-L-1 and prodigiosin pigment
+
+# 5 December 2016
+
+## Announcement papers
+Focus on _4 and _7
+
+## Assemblies
+Double-check assembly details to be certain that the best assembly has been chosen...  
+RATIONALE FOR CHOOSING THE ASSEMBLER
+
+| Sample | HGAP | Falcon         | Canu           |
+|--------|------|----------------|----------------|
+| _2     | 3    | 3 - 4,381,426* | 3 - 4,381,186  | Falcon longest, Falcon selected - OK
+| _3     | 5    | 3 - 3,987,360* | 5 - 4,117,035  | Canu longer BUT questionable final contig - OK
+| _4     | 1    | 1 - 3,487k     | 1 - 3,479,724* | Falcon longest BUT has a big dip - OK
+| _5     | 1    | 2 - 4,391k     | 2 - 4,630,160* | Canu longest, Canu selected - OK
+| _6     | 9    | 8 - 5,121,602* | 9 - 5,140,887  | Canu longer BUT questionable final contig - OK
+| _7     | 4    | 4 - 5,327k     | 4 - 5,331,190* | Canu longest, Canu selected - OK
+| _8     | 1    | 2 - 5,857,781* | 3 - 5,877k     | Canu longer BUT questionable final contig - OK
+
+## Annotation
+* Prokka cutoff appears to be 1e-06
+* Prokka accepts a trusted list of proteins to annotate from before going to other databases;
+create a family-specific .fa file and use this? Remove 'hypothetical proteins'
+
+fasta2tab <FASTA_FILE> | grep -v "hypothetical_protein" | tab2fasta > <OUTPUT_FILE>
+
+* Prokka running for pb_359_4, but looking at the .sge.e#### file, it doesn't appear that
+any results have been obtained from Sphingomonadaceae.faa
+ * May be a problem with naming conventions; perhaps replace ".1_" with ".1~~~", and remove
+underscores?
+ * Also remove [species name] from each entry

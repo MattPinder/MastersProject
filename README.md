@@ -4418,3 +4418,29 @@ any results have been obtained from Sphingomonadaceae.faa
  * May be a problem with naming conventions; perhaps replace ".1_" with ".1~~~", and remove
 underscores?
  * Also remove [species name] from each entry
+
+# 6 December 2016
+
+## Annotation
+Sphingomonadaceae.faa has been altered as described yesterday; rerunning Prokka...
+* In the previous run, proteins were labelled as hypothetical as the format of the fasta header
+wasn't recognised; based on the files in /db/prokka, the format should now be correct...
+* Removed tildes etc., just left the name of the protein as the fasta header. Rerunning Prokka
+again...
+* Formatting is STILL being awkward; reviewing the PROKKA manual, it appears that the format
+is VERY specific. If GenBank files can be acquired for the relevant organisms, then the
+`prokka-genbank_to_fasta_db` script can be run, followed by concatenation (SEE MANUAL!)
+ * Would require a reworking of the NCBI_Downloader script...
+
+* NCBI_Downloader_GenBank.py now complete
+ * **FUTURE TASK** Combine NCBI_Downloader files; add argument which states the file type you
+wish to download...
+
+* Downloading .gbff (GenBank) files
+ * `prokka-genbank_to_fasta_db *.gbff > Sphingo.fasta`
+ * `fasta2tab Sphingo.fasta | grep -v "hypothetical protein" | tab2fasta > Sphingo2.fasta`
+  * Ensure that formatting is preserved!
+ * 2-3 hypothetical proteins; fasta2tab step unnecessary?
+
+Tomorrow - check results of second Prokka run, see if the Sphingo protein file has finally
+been accepted?

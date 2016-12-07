@@ -4444,3 +4444,74 @@ wish to download...
 
 Tomorrow - check results of second Prokka run, see if the Sphingo protein file has finally
 been accepted?
+
+# 7 December 2016
+
+## Annotation
+For pb_359_4:
+* Named genes have decreased dramatically - 922 -> 88
+* Decent decrease in the number of hypotheticals - 745 -> 616
+* Running Pathway Tools to compare number of pathways and other results...
+
+Try ONLY including the named genes from Sphingomonadaceae in the fasta file?
+*`fasta2tab Sphingomonadaceae.fasta | grep -v "~~~~~~" | tab2fasta > Sphingomonadaceae_named.fasta`
+* Number of genes drops from 91,915 to 1723...
+* Attempting with Sphingomonadaceae_named.fasta - pb_359_4_3
+ * Number of named genes has almost doubled vs. the first attempt - 922 -> 1724
+ * Number of hypothetical proteins has increased slightly - 745 -> 818
+ * Once pb_359_4_2 has completed in Pathway Tools, run _3 through it and compare results
+
+It seems that at least one of these two approaches will produce a more informative pathway
+analysis; prepare the other samples
+* pb_359_2, _3, _6, _7 - Rhodobacteraceae
+* pb_359_4 - Sphingomonadaceae/Erythrobacteraceae
+* pb_359_5 - Alteromonadaceae
+* pb_359_8 - Flavobacteriaceae
+
+* Forgot to run the 'remove hypothetical proteins' step...
+ * For Rhodobacteraceae, only 4 hypotheticals so not too big of a problem
+ * For Alteromonadaceae, only 2 hypotheticals; not too big of a problem
+ * For Flavobacteraceae, 26 hypotheticals - remove these
+
+* pb_359_2 - the differences were not quite so dramatic... (rerun?)
+* pb_359_3 - modest difference in the longest chromosome (rerun?)
+* pb_359_5 - again, not such a huge difference... (rerun?)
+* pb_359_6 - very slight difference
+* pb_359_7 - big improvement
+* pb_359_8 - very slight difference
+
+Comparing the three pb_359_4 runs:
+
+|                     | Regular | + All Sphingo prot | + Named Sphingo prots |
+|---------------------|---------|--------------------|-----------------------|
+| Pathways            | 232     | 203                | 247                   |
+| Enzymatic reactions | 1572    | 1257               | 1713                  |
+| Transport reactions | 27      | 7                  | 18                    |
+| Enzymes             | 1051    | 908                | 1191                  |
+| Transporters        | 23      | 13                 | 29                    |
+| Compounds           | 1371    | 1155               | 1492                  |
+
+Overall, annotation appears to have improved, BUT some proteins' predicted functions have changed,
+even those which had a function in the initial run. Which annotation should be trusted?
+* Compromise - cat *.fasta onto the end of the Prokka database file
+ * Attempt with both standard and name-only?
+ * If the second concatenation gives a comparative result to '+ Named Sphingo prots', run with this
+  * Don't want to overwrite better sprot results with worse Sphingo results, hence concatenation
+ * If the Sphingo result is better - can it be trusted?
+
+Compare pb_359_4_3 and pb_359_4_mega_named:
+* _3: 1724 named, 818 hypothetical
+* _named: 1688 named, 823 hypothetical
+
+Â| Approach          | # named genes | # hypothetical | # pathways |
+|--------------------|---------------|----------------|------------|
+| Standard Prokka    | 922           | 745            | 232        |
+| --proteins (all)   | 88            | 616            | 203        |
+| --proteins (named) | 1724          | 818            | 247        |
+| cat sprot all      | 122           | 617            ||
+| cat sprot named    | 1688          | 823            ||
+
+**Run _mega_named through Pathway Tools?**
+* Can be run without creating a cellular overview, which would save time
+ * In which case, run _mega_all for comparison too
+ * Differences between pb_359_4 and pb_359_4_3 saved to 'Differences' file

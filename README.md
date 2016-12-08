@@ -4482,14 +4482,14 @@ analysis; prepare the other samples
 
 Comparing the three pb_359_4 runs:
 
-|                     | Regular | + All Sphingo prot | + Named Sphingo prots |
-|---------------------|---------|--------------------|-----------------------|
-| Pathways            | 232     | 203                | 247                   |
-| Enzymatic reactions | 1572    | 1257               | 1713                  |
-| Transport reactions | 27      | 7                  | 18                    |
-| Enzymes             | 1051    | 908                | 1191                  |
-| Transporters        | 23      | 13                 | 29                    |
-| Compounds           | 1371    | 1155               | 1492                  |
+|                     | Regular | + All Sph prot | + Named Sph prots | Mega all | Mega named |
+|---------------------|---------|----------------|-------------------|----------|------------|
+| Pathways            | 232     | 203            | 247               | 202      | 256        |
+| Enzymatic reactions | 1572    | 1257           | 1713              | 1279     | 1750       |
+| Transport reactions | 27      | 7              | 18                | 7        | 20         |
+| Enzymes             | 1051    | 908            | 1191              | 918      | 1168       |
+| Transporters        | 23      | 13             | 29                | 13       | 25         |
+| Compounds           | 1371    | 1155           | 1492              | 1175     | 1533       |
 
 Overall, annotation appears to have improved, BUT some proteins' predicted functions have changed,
 even those which had a function in the initial run. Which annotation should be trusted?
@@ -4503,15 +4503,138 @@ Compare pb_359_4_3 and pb_359_4_mega_named:
 * _3: 1724 named, 818 hypothetical
 * _named: 1688 named, 823 hypothetical
 
-Â| Approach          | # named genes | # hypothetical | # pathways |
+| Approach           | # named genes | # hypothetical | # pathways |
 |--------------------|---------------|----------------|------------|
 | Standard Prokka    | 922           | 745            | 232        |
 | --proteins (all)   | 88            | 616            | 203        |
 | --proteins (named) | 1724          | 818            | 247        |
-| cat sprot all      | 122           | 617            ||
-| cat sprot named    | 1688          | 823            ||
+| cat sprot all      | 122           | 617            | 202        |
+| cat sprot named    | 1688          | 823            | 256        |
 
 **Run _mega_named through Pathway Tools?**
 * Can be run without creating a cellular overview, which would save time
  * In which case, run _mega_all for comparison too
  * Differences between pb_359_4 and pb_359_4_3 saved to 'Differences' file
+
+# 8 December 2016
+
+## Annotation
+Running _mega_all and _mega_named through Pathway Tools for comparison
+* As expected, _mega_named appears to give the best overall results
+
+## Mauve
+Ran pb_359_4 vs. Sphingorhabdus sp. M41 - the two appear almost identical.
+
+### Other notes on pb_359_4
+* According to [the paper where Sphingorhabdus was first proposed] (http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.043133-0),
+there is a big disconnect between Sphingorhabdus and Sphingopyxis G+C content:
+ * Sphingorhabdus - 52.6%-57.8% (pb_359_4 = 58.0%)
+ * Sphingopyxis - 62.3%-69.2%
+* Comparing a handful of Sphingorhabdus and Sphingopyxis 16S sequences with pb_359_4,
+there is a clear divide between the two genera, and pb_359_4 definitely seems to fall within
+the Sphingorhabdus genus.
+
+## Annotation
+* --proteins flag using named only
+ * Ensure all species have a result generated for this setting
+ * 2, 3, 4, 5, 6, 
+* Identify unique pathways in each bacterium
+
+# 16S
+Compare Alvar's species to pb_359_X to rule out duplicates
+* None of the suspected genus names are the same
+* Will compare to the Metaxa2 predictions to check for, at least, partial similarities
+ * Genome4 - No close similarity (~80% similar to pb_359_4 16S)
+ * Unitig0 - No close similarity (~50-60% similar to pb_359_5 16S)
+ * Kordia - No close similarity (~50-60% similar to pb_359_8 16S)
+
+## Annotation problem
+Sometimes, the new annotations give a WORSE result in terms of the number of predicted pathways
+* pb_359_2 - pathways have decreased from 293 to 269 - X
+* pb_359_3 - pathways have decreased from 306 to 292 - X
+* pb_359_4 - pathways have increased from 232 to 247 - O
+* pb_359_5 - pathways have decreased from 269 to 257 - X
+* pb_359_6 - pathways have decreased from 304 to 294 - X
+* pb_359_7 - pathways have increased from 299 to 301 - O
+* pb_359_8 - pathways have decreased from 268 to 268 - X
+
+(Have been ticking 'circular'; does unticking make a difference...)
+
+* pb_359_2 (Roseovarius)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 293     | 269     | Worse
+| Enzymatic reactions | 1917    | 1773    | Worse
+| Transport reactions | 41      | 21      | Worse
+| Enzymes             | 1383    | 1354    | Worse
+| Transporters        | 63      | 35      | Worse
+| Compounds           | 1638    | 1532    | Worse
+
+* pb_359_3 (Loktanella)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 306     | 292     | Worse
+| Enzymatic reactions | 1928    | 1852    | Worse
+| Transport reactions | 39      | 21      | Worse
+| Enzymes             | 1311    | 1278    | Worse
+| Transporters        | 68      | 34      | Worse
+| Compounds           | 1659    | 1589    | Worse
+
+* pb_359_4 (Sphingorhabdus)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 232     | 247     | Better
+| Enzymatic reactions | 1572    | 1713    | Better
+| Transport reactions | 27      | 18      | Worse
+| Enzymes             | 1051    | 1191    | Better
+| Transporters        | 23      | 29      | Better
+| Compounds           | 1371    | 1492    | Better
+
+* pb_359_5 (Marinobacter)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 269     | 257     | Worse
+| Enzymatic reactions | 1832    | 1734    | Worse
+| Transport reactions | 35      | 14      | Worse
+| Enzymes             | 1332    | 1309    | Worse
+| Transporters        | 42      | 27      | Worse
+| Compounds           | 1543    | 1459    | Worse
+
+* pb_359_6 (Sulfitobacter)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 304     | 294     | Worse
+| Enzymatic reactions | 1996    | 1889    | Worse
+| Transport reactions | 44      | 18      | Worse
+| Enzymes             | 1627    | 1612    | Worse
+| Transporters        | 67      | 36      | Worse
+| Compounds           | 1748    | 1656    | Worse
+
+* pb_359_7 (Antarctobacter)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 299     | 301     | Better
+| Enzymatic reactions | 2042    | 2002    | Worse
+| Transport reactions | 46      | 22      | Worse
+| Enzymes             | 1484    | 1670    | Better
+| Transporters        | 48      | 40      | Worse
+| Compounds           | 1749    | 1716    | Worse
+
+* pb_359_8 (Arenibacter)
+
+|                     | Regular | + Named |
+|---------------------|---------|---------|
+| Pathways            | 268     | 262     | Worse
+| Enzymatic reactions | 1886    | 1849    | Worse
+| Transport reactions | 19      | 15      | Worse
+| Enzymes             | 1486    | 1492    | Better
+| Transporters        | 37      | 35      | Worse
+| Compounds           | 1559    | 1537    | Worse
+
+* **pb_359_4 is the ONLY sample for which the --proteins [named] result is the better result...**

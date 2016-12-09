@@ -4562,79 +4562,98 @@ Sometimes, the new annotations give a WORSE result in terms of the number of pre
 
 * pb_359_2 (Roseovarius)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 293     | 269     | Worse
-| Enzymatic reactions | 1917    | 1773    | Worse
-| Transport reactions | 41      | 21      | Worse
-| Enzymes             | 1383    | 1354    | Worse
-| Transporters        | 63      | 35      | Worse
-| Compounds           | 1638    | 1532    | Worse
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 293     | 269     | Worse  | 267         | Worse  |
+| Enzymatic reactions | 1917    | 1773    | Worse  | 1773        | Worse  |
+| Transport reactions | 41      | 21      | Worse  | 24          | Worse  |
+| Enzymes             | 1383    | 1354    | Worse  | 1319        | Worse  |
+| Transporters        | 63      | 35      | Worse  | 38          | Worse  |
+| Compounds           | 1638    | 1532    | Worse  | 1528        | Worse  |
 
 * pb_359_3 (Loktanella)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 306     | 292     | Worse
-| Enzymatic reactions | 1928    | 1852    | Worse
-| Transport reactions | 39      | 21      | Worse
-| Enzymes             | 1311    | 1278    | Worse
-| Transporters        | 68      | 34      | Worse
-| Compounds           | 1659    | 1589    | Worse
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 306     | 292     | Worse  | 287         | Worse  |
+| Enzymatic reactions | 1928    | 1852    | Worse  | 1830        | Worse  |
+| Transport reactions | 39      | 21      | Worse  | 25          | Worse  |
+| Enzymes             | 1311    | 1278    | Worse  | 1260        | Worse  |
+| Transporters        | 68      | 34      | Worse  | 40          | Worse  |
+| Compounds           | 1659    | 1589    | Worse  | 1579        | Worse  |
 
 * pb_359_4 (Sphingorhabdus)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 232     | 247     | Better
-| Enzymatic reactions | 1572    | 1713    | Better
-| Transport reactions | 27      | 18      | Worse
-| Enzymes             | 1051    | 1191    | Better
-| Transporters        | 23      | 29      | Better
-| Compounds           | 1371    | 1492    | Better
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 232     | 247     | Better | 228         | Worse  |
+| Enzymatic reactions | 1572    | 1713    | Better | 1591        | Better |
+| Transport reactions | 27      | 18      | Worse  | 19          | Worse  |
+| Enzymes             | 1051    | 1191    | Better | 1149        | Better |
+| Transporters        | 23      | 29      | Better | 28          | Better |
+| Compounds           | 1371    | 1492    | Better | 1425        | Better |
 
 * pb_359_5 (Marinobacter)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 269     | 257     | Worse
-| Enzymatic reactions | 1832    | 1734    | Worse
-| Transport reactions | 35      | 14      | Worse
-| Enzymes             | 1332    | 1309    | Worse
-| Transporters        | 42      | 27      | Worse
-| Compounds           | 1543    | 1459    | Worse
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 269     | 257     | Worse  | 252         | Worse  |
+| Enzymatic reactions | 1832    | 1734    | Worse  | 1736        | Worse  |
+| Transport reactions | 35      | 14      | Worse  | 18          | Worse  |
+| Enzymes             | 1332    | 1309    | Worse  | 1323        | Worse  |
+| Transporters        | 42      | 27      | Worse  | 32          | Worse  |
+| Compounds           | 1543    | 1459    | Worse  | 1459        | Worse  |
 
 * pb_359_6 (Sulfitobacter)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 304     | 294     | Worse
-| Enzymatic reactions | 1996    | 1889    | Worse
-| Transport reactions | 44      | 18      | Worse
-| Enzymes             | 1627    | 1612    | Worse
-| Transporters        | 67      | 36      | Worse
-| Compounds           | 1748    | 1656    | Worse
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 304     | 294     | Worse  | 279         | Worse  |
+| Enzymatic reactions | 1996    | 1889    | Worse  | 1865        | Worse  |
+| Transport reactions | 44      | 18      | Worse  | 23          | Worse  |
+| Enzymes             | 1627    | 1612    | Worse  | 1577        | Worse  |
+| Transporters        | 67      | 36      | Worse  | 43          | Worse  |
+| Compounds           | 1748    | 1656    | Worse  | 1627        | Worse  |
 
 * pb_359_7 (Antarctobacter)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 299     | 301     | Better
-| Enzymatic reactions | 2042    | 2002    | Worse
-| Transport reactions | 46      | 22      | Worse
-| Enzymes             | 1484    | 1670    | Better
-| Transporters        | 48      | 40      | Worse
-| Compounds           | 1749    | 1716    | Worse
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 299     | 301     | Better | 291         | Worse  |
+| Enzymatic reactions | 2042    | 2002    | Worse  | 1948        | Worse  |
+| Transport reactions | 46      | 22      | Worse  | 24          | Worse  |
+| Enzymes             | 1484    | 1670    | Better | 1645        | Better |
+| Transporters        | 48      | 40      | Worse  | 43          | Worse  |
+| Compounds           | 1749    | 1716    | Worse  | 1665        | Worse  |
 
 * pb_359_8 (Arenibacter)
 
-|                     | Regular | + Named |
-|---------------------|---------|---------|
-| Pathways            | 268     | 262     | Worse
-| Enzymatic reactions | 1886    | 1849    | Worse
-| Transport reactions | 19      | 15      | Worse
-| Enzymes             | 1486    | 1492    | Better
-| Transporters        | 37      | 35      | Worse
-| Compounds           | 1559    | 1537    | Worse
+|                     | Regular | + Named | vs Reg | + All Named | vs Reg |
+|---------------------|---------|---------|--------|-------------|--------|
+| Pathways            | 268     | 262     | Worse  | 245         | Worse  |
+| Enzymatic reactions | 1886    | 1849    | Worse  | 1733        | Worse  |
+| Transport reactions | 19      | 15      | Worse  | 14          | Worse  |
+| Enzymes             | 1486    | 1492    | Better | 1486        | Same   |
+| Transporters        | 37      | 35      | Worse  | 36          | Worse  |
+| Compounds           | 1559    | 1537    | Worse  | 1438        | Worse  |
 
 * **pb_359_4 is the ONLY sample for which the --proteins [named] result is the better result...**
+ * Marginally true for pb_359_7...
+
+# 9 December 2016
+
+# Annotation
+Rerun all annotation attempts, but use a merger of ALL named proteins from the 4 previous
+databases instead of just one family each.
+* Modest improvement in number of named genes in all cases; now attempt Pathway Tools
+
+## Note on Pathway Tools
+Previously, I've been including the entire .gbk file as a single replicon; will try splitting
+them up into their individual chromosomes and plasmids
+
+* Go for max. number of pathways
+ * Important - the number of pathways predicted doesn't correspond to the number in the
+SmartTable; the numbers correlate with the number of pathways relative to one another, however
+  * It includes super-pathways; these should be separated out
+
+* Extract pathway lists from Pathway Tools and identify unique ones

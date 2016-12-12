@@ -4657,3 +4657,70 @@ SmartTable; the numbers correlate with the number of pathways relative to one an
   * It includes super-pathways; these should be separated out
 
 * Extract pathway lists from Pathway Tools and identify unique ones
+
+# 12 December 2016
+
+## Annotation
+* pb_359_4 (Sphingorhabdus) appears to contain some components of the Enterobacterial Common
+Antigen biosynthesis pathway; this pathway is supposedly restricted to Enterobacteriaceae...
+ * Double-check vs. original pb_359_4 annotation
+  * TDP-fucosamine acetyltransferase
+   * The annotation only appears when using named genes, but no gene name is given...
+   * Alternate annotation - GCN5 family acetyltransferase
+  * wecB and wecC
+   * As above, only appears when using named genes
+   * Alternate annotation for wecC - UDP-N-acetyl-D-mannosaminuronic acid dehydrogenase
+    * wecB annotation is the same
+
+* pb_359_8 (Arenibacter) contains components of the pectin degradation II pathway
+ * Pectin is present in diatom frustules
+ * The top part of the pathway is present; do these enzymes have other purposes?
+  * pemA and pehX - no othe purpose
+  * Pathway lacks presence of digalacturonate lyase
+  * Evidence of presence of downstream pathways
+   * pemA not present in annotation using ALL Flavo hits, implying an unnamed hit was better
+    * Unnamed hit - pectate lyase
+     * Multiple pectate lyase hits in this annotation, and nowhere else
+   * pehX, as above, not present in the all Flavo database-using version
+    * Unnamed hit - glycoside hydrolase
+ * ["It is known that the members of Flavobacteria are especially proficient in degrading various
+biopolymers, such as cellulose, chitin, and pectin"] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4646686/)
+
+*_3, _5 and _7 only species predicted to have alginate-related pathways (other species seem to
+possess some alginate-related genes, however...)
+ * All three have components of the alginate degradation pathway
+  * _5 has one component (algL alginate lyase)
+  * _3 has two components (algE7 alginate lyase and kdgK 2-dehydro-3-deoxygluconokinase)
+  * _7 has two components (algE7 alginate lyase and kdgK 2-dehydro-3-deoxygluconokinase)
+ *_5 (Marinobacter) contains all components of the alginate biosynthesis II pathway
+
+* _3, _6 and _8 contain elements of trehalose biosynthesis pathways
+ * Trehalose involved in survival of desiccation
+ * Implications for when Skeletonema becomes dormant; survival of microbiome?
+
+* Look into different types of siderophores (e.g. aerobactin, enterobactin)
+
+* Most of the species have various glycolate oxidase subunit genes, implying potential use of
+glycolate as a carbon source; if released by Skeletonema? (produced by photoautotophs)
+ * Only _7 seems to possess glcD; many possess glcE and an iron-sulfur subunit
+
+* Pigments - neurosporene
+ * _2, _3, _4, _5 and _8 are predicted to contain the neurosporene biosynthesis pathway
+ * Under class Carotenoids Biosynthesis:
+  * _2:
+   * Trans-lycopene biosynthesis (all components)
+    * Final step appears spontaneous, but not highlighted?
+   * Spheroidene and spheroidenone biosynthesis (3/5 components)
+   * Spirilloxanthin and 2,2'-diketo-spirilloxanthin biosynthesis (4/5 components)
+  * _3:
+   * Trans-lycopene biosynthesis (all components)
+   * Spheroidene and spheroidenone biosynthesis (3/5 components)
+   * Spirilloxanthin and 2,2'-diketo-spirilloxanthin biosynthesis (4/5 components)
+  * _4:
+   * Trans-lycopene biosynthesis (all components)
+    * Enzymes present in final step, but not highlighted?
+  * _5:
+   * Trans-lycopene biosynthesis (3/5 components (missing first two))
+  * _8:
+   * Trans-lycopene biosynthesis (all components)
+    * Enzymes present in final step, but not highlighted?

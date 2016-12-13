@@ -4724,3 +4724,17 @@ glycolate as a carbon source; if released by Skeletonema? (produced by photoauto
   * _8:
    * Trans-lycopene biosynthesis (all components)
     * Enzymes present in final step, but not highlighted?
+
+# 13 December 2016
+
+## Tasks
+* Add references to the announcement papers
+* Continue searching for interesting pathways
+ * Investigate presence of secretion pathways?
+
+## Prokka
+rRNA module now installed for Prokka; rerun annotations to include rRNA information
+
+## Annotation
+* Check on chitinase annotation
+* Check for antibiotic resistance genes

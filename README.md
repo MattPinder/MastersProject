@@ -4738,3 +4738,32 @@ rRNA module now installed for Prokka; rerun annotations to include rRNA informat
 ## Annotation
 * Check on chitinase annotation
 * Check for antibiotic resistance genes
+
+# 14 December 2016
+
+## Genome announcements
+* Major references added to Google Docs versions of the announcement papers
+* Rerun Prokka now that rRNA module has been installed; create a Final_Annotations folder cf. the Final_Assemblies folder?
+ * Predicted number of loci are more or less consistent with the previous annotation; seems
+as though some hypothetical loci were disrupted
+* Consider running Prokka with the --rfam flag for ncRNA prediction?
+ * Running for pb_359_2; comparison to previous run:
+  * 
+
+## Annotation
+* Observation - pb_359_4 has 46 copies of the gene benD?? Involved in benzoate degradation...
+ * Degradation of polychlorinated biphenyls (PCBs)?
+* pb_359_7 appears to lack a tmRNA prediction, whereas all others have one; apparently this
+feature is universal among eubacteria
+ * SsrA-binding protein smpB is present, however...
+ * Possible that Antarctobacter (relatively unstudied genus) has an unrecognised SsrA?
+
+
+## Pathway Tools
+Uploading yet another version of each .gbk file to Pathway Tools
+* 'Final' prefix
+
+## To do
+Run _7 and _8 final annotations through Pathway Tools and double-check whether this has made
+any difference to the pathways predicted; it shouldn't have done, as the number of CDSs appears
+to have remained constant...

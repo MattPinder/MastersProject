@@ -4767,3 +4767,18 @@ Uploading yet another version of each .gbk file to Pathway Tools
 Run _7 and _8 final annotations through Pathway Tools and double-check whether this has made
 any difference to the pathways predicted; it shouldn't have done, as the number of CDSs appears
 to have remained constant...
+
+# 15 December 2016
+
+## Pathway Tools
+All final annotations now uploaded to Pathway Tools  
+Number of pathways has remained constant. Identity?  
+(find-replace, remove column 1 and row 1)
+* Using diff - all pathways are the same
+
+## Observations
+MarR and MarA antibiotic resistance genes
+
+## Grepping lines before and after a hit
+-A (after), -B (before) and -C (before AND after)
+-A7 -B1

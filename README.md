@@ -4782,3 +4782,7 @@ MarR and MarA antibiotic resistance genes
 ## Grepping lines before and after a hit
 -A (after), -B (before) and -C (before AND after)
 -A7 -B1
+
+# 16 December 2016
+
+Start to write individual plasmids' information in the announcement papers

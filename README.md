@@ -4786,3 +4786,8 @@ MarR and MarA antibiotic resistance genes
 # 16 December 2016
 
 Start to write individual plasmids' information in the announcement papers
+
+# 19 December 2016
+
+To do:
+*Add any relevant parameters from assembly to the announcement papers

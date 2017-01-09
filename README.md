@@ -4790,4 +4790,25 @@ Start to write individual plasmids' information in the announcement papers
 # 19 December 2016
 
 To do:
-*Add any relevant parameters from assembly to the announcement papers
+* Add any relevant parameters from assembly to the announcement papers
+
+# 9 January 2017
+
+## pb_359_2
+[Genome announcement of Roseovarius mucosus] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4511512/)
+
+* Two glycine betaine biosynthesis pathways - I and IV. IV is apparently a very energy-consuming process,
+so is there a benefit to this redundancy...?
+* Investigating absence of bacteriochlorophyll A synthesis genes in final annotation; appears in pb_359_2_2
+(where Rhodobacteraceae database is searched first); in final annotation it is labelled as PUCC protein...
+
+* Check the products/pathways on the Roseovarius plasmids and see what they contain
+ * Plasmid 1 seems to contain a lot of cytochrome- and metal import/export-related genes
+ * Plasmid 2 contains several genes involved in mercury resistance?
+* Viewed in Pathway Tools (both final annotation and pb_359_2_2), the plasmids seem to encode no obvious pathways by themselves...
+ * 2/3 components of phosphatidylcholine biosynthesis V pathway - "This pathway is found in animals, yeast, and bacteria that interact with eukaryotic cells" (BioCyc)
+* Found 4x plasmids from previous R. mucosus genome (DSM 17069), but purely by eyeballing, can't see any obvious link to current plasmids...
+
+* Check number of vitamin B12/cobalamin biosynthesis genes in each species and determine which of them have the most complete pathways; these would potentially
+be the most likely ones to be involved in providing the vitamin to Skeletonema
+ * Try the same thing with siderophores (and read up on the biology of siderophores)

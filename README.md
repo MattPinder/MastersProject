@@ -4812,3 +4812,64 @@ so is there a benefit to this redundancy...?
 * Check number of vitamin B12/cobalamin biosynthesis genes in each species and determine which of them have the most complete pathways; these would potentially
 be the most likely ones to be involved in providing the vitamin to Skeletonema
  * Try the same thing with siderophores (and read up on the biology of siderophores)
+
+# 10 January 2017
+
+## pb_359_2
+More reliable way of checking the plasmids - download and concatenate, then blast
+* Decent long match between the longest DSM 17069 plasmid and the longest pb_359_2 plasmid:
+ * 26148-74585 on DSM 17069 vs 8350-56784 on pb_359_2 (Identities = 47548/48456 (98%), Gaps = 39/48456 (0%))
+  * This accounts for between one-third and one-quarter of the size of the largest plasmid of pb_359_2
+  * This accounts for between one-half and one-third of the size of the largest plasmid of DSM 17069
+ * Three more matches of >1000bp
+* Shortest DSM 17069 plasmid had one match >1000bp; middle two plasmids had either short or no matches
+
+Blast the pb_359_2 segment which matches the DSM 17069 plasmid
+* Big section in the middle with no matches, but the closest matches are to Ruegeria mobilis, Celeribacter indicus and Marinovum algicola (all plasmid sequences)
+ * Marinovum algicola isolated from a dinoflagellate...
+
+* Regarding Celeribacter indicus:
+ * "...the taxonomic distributions of the five plasmid proteomes of strain P73T were different from that of the chromosome, suggesting the chromosome and the plasmids
+ may have had potentially different origins... For pP73B they matched Roseovarius (41, 28.67%) and Celeribacter (23, 16.08%)..."
+From [Genomic and metabolic analysis of fluoranthene degradation pathway in Celeribacter indicus P73T] (http://www.nature.com/articles/srep07741)
+ * Unfortunately, a lot of the genes on the p73B plasmid appear not to be characterised...
+
+
+
+Put the 4x R mucosus DSM 17069 plasmids into Pathway Tools and compare to the 2x from R3
+* Also enter the full DSM 17069 GenBank
+
+| Pathway                                               | Present in R3? | Present in DSM 17069? |
+|-------------------------------------------------------|----------------|-----------------------|
+| Palmitate biosynthesis II (bacteria and plants)       | Yes            | -                     |
+| **Phosphatidylcholine biosynthesis V**                | Yes            | Yes                   |
+| Cyclopropane fatty acid (CFA) biosynthesis            | Yes            | -                     |
+| Fatty acid elongation - saturated                     | Yes            | -                     |
+| CMP-3-D-manno-octulosonate biosynthesis               | Yes            | -                     |
+| **Glutathione-glutaredoxin redox reactions**          | Yes            | Yes                   |
+| Reactive oxygen species degradation                   | Yes            | -                     |
+| PRPP biosynthesis I                                   | Yes            | -                     |
+| Superoxide radicals degradation                       | Yes            | -                     |
+| Cellulose and hemicellulose degradation (cellulosome) | -              | Yes                   |
+| L-carnitine degradation I                             | -              | Yes                   |
+| L-arginine degradation V (arginine deiminase pathway) | Yes            | -                     |
+| **Phenylmercury acetate degradation**                 | Yes            | Yes                   |
+| 2-oxopentenoate degradation                           | -              | Yes                   |
+| Pyrimidine deoxyribonucleosides degradation           | Yes            | -                     |
+
+Align DSM 17069 plasmids and R3 plasmids in Mauve, in case ours are the results of a fusion (hence the lower numbers)?
+* Doesn't appear to be a fusion... If it is, then it was very ancient perhaps?
+
+Pathways unique to R3 (vs. DSM 17069)
+* Chitobiose degradation
+* Xanthan biosynthesis
+
+
+Annotation pb_359_2_2 has been thus far disregarded, as most of the genes had no name; however, more had a function than with
+any other annotation attempt.
+* Running the resultant .gbk file through Pathway Tools to check number of pathways, in case it has more pathways than the current
+'final' annotation...
+ * 236 pathways, less than any other annotation...
+ * However, includes pathway for 3,8-divinyl-chlorophyllide a biosynthesis (a chlorophyll intermediate)
+  * This pathway is present in R mucosus DSM 17069...
+  * The chlorophyll a synthase predicted in pb_359_2_2 was inferred from a sequence from Roseobacter

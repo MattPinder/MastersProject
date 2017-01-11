@@ -4873,3 +4873,47 @@ any other annotation attempt.
  * However, includes pathway for 3,8-divinyl-chlorophyllide a biosynthesis (a chlorophyll intermediate)
   * This pathway is present in R mucosus DSM 17069...
   * The chlorophyll a synthase predicted in pb_359_2_2 was inferred from a sequence from Roseobacter
+
+# 11 January 2017
+
+## GenBank consensus script
+
+Aim: Write a script which will make a consensus of multiple GenBank files, overwriting 'hypothetical' proteins with those
+of known function.
+
+* 1_Copy_GenBank_Header.py appears to work; can print the initial, non-record elements of the first GenBank file into the output file.
+* 2_Print_GenBank_Record.py can print most of a GenBank record in the correct format
+ * Need to work out newline character in translation line
+ * Need to work out how to spread Inference and Note across multiple lines, one per entry
+* 3_Compare_GenBank_Records.py allows a 'hypothetical protein' product in the primary GenBank to be overwritten with a non-'hypothetical protein' entry in another
+ * Need to add the capacity to print the rest of the entry as well
+
+
+
+
+
+## Blast server
+Blasting pb_359_2 assembly vs. Skeletonema on the Blast server
+* Username: skeletonema
+* Password: b******a
+
+Best match: ATP synthase subunit beta atpD
+* Another strong match to ATP synthase subunit alpha atpA
+* Phosphomethylpyrimidine synthase thiC
+* Chaperone protein dnaK
+* Elongation factor G fusA
+* NADH-quinone oxidoreductase chain 1 nqo1
+
+
+## gcPlot.py
+Some regions of v. low GC content exist in pb_359_2; use gcPlot to check the locations and see what is encoded in these regions; may be viral
+* See whether one can search for LOCATION-specific genes in Pathway Tools to see which pathways a particular region's genes are involved in
+
+* Minimum value exists around 3.06 Mb; checking this region against the annotation, there is a cluster of genes:
+ * 5 hypothetical proteins
+ * Insertion element uncharacterised 12.0 kDa protein
+ * Integrase core domain protein
+* Slightly further downstream, more hypothetical proteins and transposases
+
+## To do
+Find notes on transposable elements

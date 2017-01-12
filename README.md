@@ -4917,3 +4917,14 @@ Some regions of v. low GC content exist in pb_359_2; use gcPlot to check the loc
 
 ## To do
 Find notes on transposable elements
+
+# 12 January 2017
+
+## GenBank_Consensus.py
+Almost complete; need to work out the formatting of the 'translation' line
+* Appears to be workable without this formatting
+* Need to try on a proper dataset; ensure formatting works for other types aside from CDS and tRNA
+* NEED TO ACCOUNT FOR DATABASES WHICH INCLUDE MORE FEATURES THAN THEIR PREDECESSORS; THESE WILL THROW OFF THE NUMBERING
+
+## To do
+Investigate the viral component of R. mucosus R3 on Web Apollo on Albiorix

@@ -4928,3 +4928,33 @@ Almost complete; need to work out the formatting of the 'translation' line
 
 ## To do
 Investigate the viral component of R. mucosus R3 on Web Apollo on Albiorix
+
+# 13 January 2017
+
+## GenBank_Consensus.py
+Script appears to be functional; only change needed is to format the 'Translation' field of each record so that it adheres
+to the proper formatting, i.e. adding newlines and restricting the character limit per line to 79.
+* Note: only currently works for GenBank files containing a single contig; will have to split up the others into per-contig GenBanks.
+
+Problem - by including a tab in the CDS/tRNA/rRNA/misc line, I've inadvertently confused BioPython when it tried to interpret the resultant file
+* Need to remove the tab character and replace it with the appropriate number of spaces - SOLVED
+* Need to investigate propagation of the 'notes' value; should not be transferred from one file to the next...
+* Need to import locus tag from primary input, not secondary input
+
+## pb_359_2
+* Split the GenBanks up into individual contigs
+* Generate series of consensuses:
+ * Final vs. _2 -> A
+ * A vs. _3 -> B
+ * B vs. _All -> C
+* Check stats of C
+
+## Git
+'git status' command was bringing up a lot of untracked files
+* Added a lot of files (unused Prokka outputs, .sge.*, etc.) to .gitignore
+* Committed the rest of the untracked files
+
+## To do:
+* Investigate the viral component of R. mucosus R3 on Web Apollo on Albiorix
+* Investigate Note problem in GenBank_Consensus script
+* Fix problem with locus tags

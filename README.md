@@ -4958,3 +4958,45 @@ Problem - by including a tab in the CDS/tRNA/rRNA/misc line, I've inadvertently 
 * Investigate the viral component of R. mucosus R3 on Web Apollo on Albiorix
 * Investigate Note problem in GenBank_Consensus script
 * Fix problem with locus tags
+
+# 16 January 2017
+
+## To do:
+* Run GenBank_Consensus script on R. mucosus
+ * Attempt to fix the Note problem in the script (if Note exists, overwrite it?)
+* Re-download notes on viral genomes and identify TE/viral elements in R. mucosus
+
+## GenBank_Consensus
+* Notes problem fixed - duplicate From*.gb/From*.gbk lines removed
+* Running the final consensus file through Pathway Tools results in ten less pathways...
+ * Why?
+* TestRoseoFinal database (NewVersionTest) - running 'final' annotation in Pathway Tools
+ * Doesn't yield the same number of pathways as previously
+ * Conclusion: The new version of pathway tools predicts the number of pathways differently to the old versions
+  * Analyses will have to be redone to check figures...
+* Written a .sge script to automate the whole process of GenBank_Consensus steps
+
+## Pathway Tools
+* Rescored the original 'final' Roseovarius result; now shows either 280 or 283 pathways, depending on whether
+the original is rescored, or the original file is reuploaded entirely. Either way, the consensus file appears
+to give the best overall result now in terms of less hypotheticals and the same/more total pathways
+ * Will redo the analyses with v20.5 of Pathway Tools (originally done in 20.0)
+
+## To do
+* Alter GenBank_Consensus.py to prioritise named genes
+
+# 17 January 2017
+
+## Pathway Tools
+* Rerun old analyses to get a more accurate comparison of the number of pathways predicted between runs
+ * All analyses must be brought forward to the new version
+
+## GenBank_Consensus.py
+* Added an expression to prioritise named genes, if one exists at a locus in the secondary input but not in the primary input
+ * Running the GenBank files in reverse order through this script, from the GenBank with the most named entries to the least
+ * Results in the same # of named genes, as one would expect...
+
+## To do
+* Run remaining GenBank_Consensus_4.5 files through Pathway Tools (Starting with Sphingo consensus)
+* Generate GenBank_Consensus_Names output files and run THESE through Pathway Tools
+* Finish writing the READMEs for the GenBank_Consensus results (6-8)

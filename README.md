@@ -5000,3 +5000,36 @@ to give the best overall result now in terms of less hypotheticals and the same/
 * Run remaining GenBank_Consensus_4.5 files through Pathway Tools (Starting with Sphingo consensus)
 * Generate GenBank_Consensus_Names output files and run THESE through Pathway Tools
 * Finish writing the READMEs for the GenBank_Consensus results (6-8)
+
+# 18 January 2017
+
+## Pathway Tools
+* For pb_359_2, Consensus_4.5 has one more pathway predicted than Consensus_Names
+ * Would have expected more named genes to equal more predicted pathways
+ * If this trend continues, compare the lists of pathways
+* For pb_359_3, Consensus_Names had three more pathways predicted than Consensus_4.5
+
+* Question - does it matter whether .gbk files are uploaded to Pathway Tools as per-contig files, or can
+they all be uploaded as a single file...?
+ * Seems to make no difference; can continue without uploading each contig separately
+
+| Sample   | Consensus     | Consensus_Names     | Differences |
+|----------|---------------|---------------------|-------------|
+| pb_359_2 | **284**       | 283                 | +5/+4       |
+| pb_359_3 | 300           | **303**             | +1/+5       |
+| pb_359_4 | **237**       | 235                 | +2/+0       |
+| pb_359_5 | **261**       | **261**             | +3/+2       |
+| pb_359_6 | 302           | **307**             | +2/+7       |
+| pb_359_7 | 290           | **297**             | +1/+8       |
+| pb_359_8 | 256           | **257**             | +1/+3       |
+
+* Figures don't appear to add up, as # of pathways doesn't take into account 'superpathways'
+
+* Overall, Consensus_Names seems to give the highest # of predicted pathways
+ * Use this for ALL bacteria, or select on case-by-case basis?
+
+## VirSorter
+* Checking VirSorter predictions versus VirSorter database and R. mucosus results
+ * Where neither of these turn up results, attempt Blast search
+ * Started making a list of proteins in the viral region in 06_VirSorter/pb_359_2/README.md
+  * Try to work out if the remaining genes have a known/suspected function...

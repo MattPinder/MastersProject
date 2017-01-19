@@ -5033,3 +5033,20 @@ they all be uploaded as a single file...?
  * Where neither of these turn up results, attempt Blast search
  * Started making a list of proteins in the viral region in 06_VirSorter/pb_359_2/README.md
   * Try to work out if the remaining genes have a known/suspected function...
+
+# 19 January 2017
+
+data5 offline; working from laptop.  
+BACKUP TO GITLAB AT THE END OF THE DAY
+
+Change GenBank_Consensus scripts to remove 'Both records hypothetical' note
+
+Trying PHASTER bacteriophage predictor (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4987931/):
+* pb_359_2/Roseovarius mucosus - http://phaster.ca/batches/BB_08ded19b26
+ * The previously-explored region ~3.05Mb has a score of 100 (/150), whereas two other regions have scores of 140 and 150, respectively
+* pb_359_3/Loktanella - http://phaster.ca/batches/BB_8abd2fdfb8
+* pb_359_4/Sphingorhabdus - http://phaster.ca/submissions/ZZ_0576f774b4
+* pb_359_5/Marinobacter - http://phaster.ca/batches/BB_d095410425
+* pb_359_6/Sulfitobacter - http://phaster.ca/batches/BB_7cae19f6b7
+* pb_359_7/Antarctobacter - http://phaster.ca/batches/BB_c5b9d025e7
+* pb_359_8/Arenibacter - http://phaster.ca/batches/BB_12bb67a072

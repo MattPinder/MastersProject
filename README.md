@@ -5050,3 +5050,19 @@ Trying PHASTER bacteriophage predictor (https://www.ncbi.nlm.nih.gov/pmc/article
 * pb_359_6/Sulfitobacter - http://phaster.ca/batches/BB_7cae19f6b7
 * pb_359_7/Antarctobacter - http://phaster.ca/batches/BB_c5b9d025e7
 * pb_359_8/Arenibacter - http://phaster.ca/batches/BB_12bb67a072
+
+# 20 January 2017
+
+## PHASTER
+Need to find a convenient way to convert my generated .gbk files into .faa files so that I can use them as a blast database.
+
+## pb_359_2
+* With the output from PHASTER, there appears to be at least one phage in the chromosome, up to three
+
+## Annotations
+Problem: sometimes a gene name will be mentioned in the product line but not mentioned in the name field
+* Will require manual annotation
+* ~150 changes made
+
+
+	Try these in Pathway Tools on Monday!

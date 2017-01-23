@@ -5062,7 +5062,63 @@ Need to find a convenient way to convert my generated .gbk files into .faa files
 ## Annotations
 Problem: sometimes a gene name will be mentioned in the product line but not mentioned in the name field
 * Will require manual annotation
-* ~150 changes made
-
+* ~150 changes made to pb_359_2_Consensus_Names
+ * Not changed if the line said 'xxx-like' or 'xxx-family'
 
 	Try these in Pathway Tools on Monday!
+
+# 23 January 2017
+
+## Annotations
+* Running pb_359_2 manually-adjusted annotation through Pathway Tools
+ * Pathways - 283
+  * Vs. ~284 from previous best analyses
+  * Despite addition of explicitly-named components of the bacteriochlorophyll a synthesis pathway, these still appear as gaps in the pathway...
+
+* Comparing photosynthetic gene cluster to that in Roseovariuis mucosus DSM 17069 - VERY similar gene order
+ * 39 genes in cluster
+* Largest plasmid in both cases contains type IV secretion system genes
+ * In general, plasmid 1 of R3 seems to be an extension of A123 plasmid in DSM 17069
+ * Similarity ends ~100 Kb into R3 plasmid 1
+  * rosmuc_04171 corresponds to 04123 (RÂ3
+* R mucosus DSM 17069 appears to have only 265 pathways
+ * Flagellar protein region rosmuc00543 - rosmuc00574 matches 01702 - 01733 (R3)
+
+* R3 seems to be lacking sulfoquinovosyl diacylglycerol biosynthesis pathway
+ * 'found in all photosynthetic organisms'?
+ * R3 appears to be missing other components of photosynthetic pathways cf. DSM 17069
+
+* Blast R3 vs DSM 17069 - Blastn
+ * Long R3 plasmid appears to be a merger of two of the DSM 17069 contigs; scaffold14 has 2x 100% identical matches to R3 (78 Kb and 8 Kb)
+ * Almost all 17 scaffolds of DSM 17069 map to the chromosome and longest plasmid of R3
+  * Scaffolds 11 and 13 do not hit anything in R3
+   * Scaffold 11 - only 1012 bp...
+   * (pRosMuc_C27) Scaffold 13 - 26,795 bp - contains type IV secretory system genes, but is this not redundant? e.g. 2x VirB4 genes in DSM 17069, just 1 in R3
+    * However, DSM 17069 also contains trb genes involved in P-type conjugative transfer, and plasmid segregation genes, and yhaV toxin gene
+  * Scaffold 12 has a short hit on the small R3 plasmid (1,429bp)
+   * 16,653 to 18,078 (scaffold12 (DSM 17069)) (Antirestriction protein in this region)
+   * 968 to 2,395 (short plasmid (RÂ3) (DNA primase TraC in this region)
+   * Both a comparable size in terms of # of base pairs
+
+| DSM 17069 plasmid | Location in R3                                                                                                                  |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| A123 (123,088 bp) | ~50% of R3 large plasmid (4Kb on R3 small plasmid; plasmid transfer genes? - traG and 'mobilisation protein' (+ hypotheticals)) |
+| B85 (85,327 bp)   | ??? (only hits are a few hundred bases or less)                                                                                 |
+| C27 (26,795 bp)   | ??? (no hits)                                                                                                                   |
+| D21 (20,721 bp)   | ~1,500 bp hit on R3 short plasmid (TraC DNA primase, or antirestriction protein)                                                |
+
+| R3 plasmid                | Location in DSM 17069                                                                     |
+|---------------------------|-------------------------------------------------------------------------------------------|
+| Long plasmid (180,135 bp) | Largely spread between scaffolds 14 and 15 (scaffold15 = A123 plasmid)                    |
+| Short plasmid (30,295 bp) | 4 Kb hit to scaffold15 (A123 plasmid), 1.4 Kb hit to scaffold12 (plasmid transfer genes?) |
+
+Three shorter DSM 17069 plasmids and shortest R3 plasmid appear to be unrepresented in the other strain...
+* R3 has mercury resistance?
+ * Plasmid seems to be missing a vitally important gene - MerB
+ * Even after various Blasts, no MerB hits in shortest plasmid...
+ * Doesn't have 'broad spectrumn' resistance to organic mercury compounds
+ * DSM 17069 ALSO DISPLAYS MERCURY RESISTANCE
+* Three shorter plasmids in DSM 17069 contain components of phosphatidylcholine biosynthesis pathway
+ * R3 contains a different version of this pathway...
+
+Observation - DSM 17069 replicons were never tested for circularity; assumed to be linear

@@ -5097,7 +5097,7 @@ Problem: sometimes a gene name will be mentioned in the product line but not men
     * However, DSM 17069 also contains trb genes involved in P-type conjugative transfer, and plasmid segregation genes, and yhaV toxin gene
   * Scaffold 12 has a short hit on the small R3 plasmid (1,429bp)
    * 16,653 to 18,078 (scaffold12 (DSM 17069)) (Antirestriction protein in this region)
-   * 968 to 2,395 (short plasmid (RÂ3) (DNA primase TraC in this region)
+   * 968 to 2,395 (short plasmid (R3) (DNA primase TraC in this region)
    * Both a comparable size in terms of # of base pairs
 
 | DSM 17069 plasmid | Location in R3                                                                                                                  |
@@ -5122,3 +5122,123 @@ Three shorter DSM 17069 plasmids and shortest R3 plasmid appear to be unrepresen
  * R3 contains a different version of this pathway...
 
 Observation - DSM 17069 replicons were never tested for circularity; assumed to be linear
+
+
+CHECK ON TUESDAY - ARE THE PREDICTED VIRAL REGIONS OF STRAIN R3 ALSO PRESENT IN DSM 16079?
+
+# 24 January 2017
+
+## R. mucosus R3 viral regions vs DSM 17069
+
+| Phage region and stats    | Matching region in DSM 17069                                                                                                 |
+|---------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| 1 (13,874 bp) (score 140) | scaffold1: 655,647 - 641,752 (matches almost entire phage); region in DSM 17069 contains concentration of phage proteins     |
+| 2 (25,924 bp) (score 100) | scaffold6: 173,811 - 175,733; 175,757 - 177,023; region seems to contain very general genes                                  |
+| 3 (75,114 bp) (score 150) | scaffold1: 256,258 - 250,464; 250,220 - 244,751; 262,568 - 257,297; 248,815 - 244,751; 243,527 - 240,019; 256,909 - 253,057; |
+|                           |            236,712 - 232,982; 243,527 - 240,712; 236,706 - 232,982; 252,653 - 250,464; 268,312 - 266,416; 268,344 - 266,756; |
+|                           |            238,891 - 237,024; 232,783 - 231,656; 258,778 - 257,299; etc... (general: 231,656 - 268,344); primarily Mu-like   |
+|                           |            phage proteins and hypothetical proteins; also more fragmented than for phage region 1                            |
+|                           | scaffold17: 464,087 - 464,766; 2x hypothetical proteins                                                                      |
+
+## Check R3 plasmids vs other Roseovarius/Rhodobacteraceae plasmids?
+* Long plasmid - Patchy, but Blast hits to Ruegeria mobilis plasmid, Celeribacter indicus plasmid, Marinovum algicola plasmid, Phaeobacter gallaeciensis plasmid,
+Confluentimicrobium sp. EMB200-NS6 plasmid, Dinoroseobacter shibae DFL-12 plasmid, etc...
+ * Conclusion - conserved Rhodobacteraceae plasmid?
+* Short plasmid - Even patchier, but Blast hits to Sulfitobacter sp. AM1-D1 plasmid, Roseobacter denitrificans OCh 114 plasmid, Celeribacter indicus strain P73
+plasmid; worse hits to other sequences including Paracoccus denitrificans PD1222 chromosome...
+ * Conclusion - check 26,302 - . - 2395 of short plasmid (conserved? region)
+  * Contains primarily transfer genes and hypothetical genes - also gene for molybdopterin-guanine dinucleotide biosynthesis protein A
+ * Check 7,929 - 10,035 (matches Paracoccus chromosome)
+  * Contains 3-hydroxy-D-aspartate aldolase and pheylserine dehydratase
+
+* Blastn vs. refseq_genomic using R3 long plasmid
+ * Roseovarius sp. TM1035 1101493006644, whole genome shotgun sequence - Coverage: 78%, E value: 0.0, Identity: 99%
+* Blastn vs refseq_genomic using R3 short plasmid
+ * Sulfitobacter sp. EhC04 A4_Contig27, whole genome shotgun sequence - Coverage: 26%, E value:	0.0, Identity: 92%
+
+
+
+## Workflow
+* Compare phage regions to related species
+* Check synteny with most closely related species (type species if a strain?)
+* Compare plasmids
+* Identify unique regions to try and identify unique functions?
+
+
+
+## refseq_genomic Blastn vs. plasmids - list some of the best hits
+* pb_359_3 long plasmid
+ * Best hits to Oceanibulbus and Sulfitobacter, 99% identity but <20% coverage (E value: 0.0)
+ * Ruegeria hits with 98% identity and <35% identity (E value: 0.0) - still not amazing coverage...
+* pb_359_3 short plasmid
+ *  Sulfitobacter sp. EhC04 A4_Contig27 - Coverage: 20%, E value: 0.0, Identity: 93%
+
+* pb_359_5 plasmid
+ *  Thalassospira xiamenensis strain MCCC 1A03005 contig22 - Coverage: 3%, E value: 0.0, Identity: 98%
+
+* pb_359_6 Plas_1:
+ * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 13%, E value: 0.0, Identity: 86%
+ *  Sulfitobacter sp. 20_GPM-1509m ... scaffold00006.6_C - Coverage: 15%, E value: 0.0, Identity: 87%
+* pb_359_6 Plas_2:
+ * Sagittula stellata E-37 1101159001451 - Coverage: 6%, E value: 0.0, Identity: 83%
+ * Sulfitobacter sp. 20_GPM-1509m ... scaffold00010.10_C - Coverage: 15%, E value: 0.0, Identity: 86%
+ * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 16%, E value: 0.0, Identity: 86%
+* pb_359_6 Plas_3:
+ * Sulfitobacter sp. 20_GPM-1509m ... scaffold00003.3_C - Coverage: 7%, E value: 0.0, Identity: 93%
+ * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 7%, E value: 0.0, Identity: 93%
+* pb_359_6 Plas_4:
+ * Sulfitobacter sp. CB2047 contig_5 - Coverage: 16%, E value: 0.0, Identity: 90%
+ * Litoreibacter ascidiaceicola strain DSM 100566 - Coverage: 18%, E value: 0.0, Identity: 90%
+ * Celeribacter indicus strain P73 plasmid pP73B - Coverage: 10%, E value: 0.0, Identity: 93%
+* pb_359_6 Plas_5:
+ * Roseovarius sp. MCTG156(2b) ... quiver.4_C - Coverage: 42%, E value: 0.0, Identity: 99%
+* pb_359_6 Plas_6:
+ * Ruegeria mobilis strain NBRC102038 contig_13 - Coverage: 47%, E value: 0.0, Identity: 97%
+ * Rhodobacteraceae bacterium O3.65 TRIHO_contig000128 - Coverage: 61%, E value: 0.0, Identity: 92%
+* pb_359_6 Plas_7:
+ * Celeribacter baekdonensis strain DSM 27375 - Coverage: 80%, E value: 0.0, Identity: 98%
+ * Roseobacter sp. MED193 1099517003960 - Coverage: 54%, E value: 0.0, Identity: 100%
+
+* pb_359_7 long plasmid
+ * Tropicibacter naphthalenivorans scaffold 0009 - Coverage: 13%, E value: 0.0, Identity: 89%
+* pb_359_7 middle plasmid
+ * Marinovum algicola DG 898 plasmid pMaD4 - Coverage: 6%, E value: 0.0, Identity: 76%
+* pb_359_7 short plasmid
+ * Roseobacter sp. MED193 1099517003956 - Coverage: 7%, E value: 0.0, Identity: 91%
+ * Rhodobacterales bacterium HTCC2654 - Coverage: 9%, E value: 0.0, Identity: 92%
+
+* pb_359_8 plasmid
+ * Muricauda lutaonensis strain CC-HSB-11 - Coverage: 3%, E value: 0.0, Identity: 81%
+
+
+* CAN SEARCH USING 'WHOLE GENOME SHOTGUN CONTIGS' OPTION, but must be specific with which organisms
+you search (e.g. Rhodobacteraceae), or else Blast seems to reject the query
+ * This allows me to check the plasmids against whole families, rather than having to download and
+Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
+
+* R3 long plasmid finds the same two R. mucosus DSM 17069 contigs as my BlastN
+* R3 short plasmid - no great matches
+ * Two regions which don't seem to match anything in particular - 10035-19031 and 19655-23967
+  * 2-iminobutanoate/2-iminopropanoate deaminase yabJ, D-amino acid dehydrogenase dadA1, 2-iminobutanoate/2-iminopropanoate deaminase yabJ,
+    C4-dicarboxylate-binding periplasmic protein dctP, C4-dicarboxylate TRAP transporter large permease protein dctM,
+    2,3-diketo-L-gulonate TRAP transporter small permease protein yiaM, HTH-type transcriptional regulator cynR, Abi-like protein, hypo
+   * No good matches among Rhodobacteraceae, scattered matches among Alphaproteobacteria, no matches among diatoms (Bacillariophyceae)
+
+  * Hypo, hypo, tRNA(fMet)-specific endonuclease vapC, restriction endonuclease bglII, S-adenosylmethionine-binding protein
+   * No matches among Rhodobacteraceae, Alphaproteobacteria or diatoms
+
+
+
+## Analyses attempted on R. mucosus strain R3
+* PHASTER - phage search
+ * Comparing phage regions to R. mucosus type strain (DSM 17069)
+* Comparing contigs and plasmids with type strain (BlastN -> Mauve)
+* Finding unique regions in each and searching for unique genes/functions (not replicated in other regions of the genome)
+* BlastN unique regions of R3 (in particular, second plasmid) to identify an origin
+* Compare lists of proteins unique to R3 and DSM
+
+
+
+
+* UvrABC system proteins A, B and C absent from DSM 17069??
+ * Problem - genes in DSM 17069 all unnamed...

@@ -5296,3 +5296,12 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 * Antarctobacter seems to have many copies of leukotoxin gene over chromosome and plasmids
 
 | pb_359_8 plasmid  | Transposition (tra genes)? Many hypothetical proteins... |
+
+* Blastn all-vs-all; get .xml output for all hits with E value >9,000
+ * Roseovarius plasmid 1 vs Sulfitobacter plasmid 7 (18,619)
+ * Roseovarius plasmid 2 vs Loktanella plasmid 2 (26,797)
+ * Loktanella plasmid 1 vs Loktanella chromosome (11,625)
+ * Sulfitobacter chromosome vs Sulfitobacter plasmid 2 (11,326)
+ * Sulfitobacter plasmid 5 vs Sulfitobacter plasmid 7 (9,310)
+
+* Copy across fasta sequences and run Blasts with .xml output

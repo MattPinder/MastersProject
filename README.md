@@ -5235,10 +5235,64 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 * Comparing contigs and plasmids with type strain (BlastN -> Mauve)
 * Finding unique regions in each and searching for unique genes/functions (not replicated in other regions of the genome)
 * BlastN unique regions of R3 (in particular, second plasmid) to identify an origin
-* Compare lists of proteins unique to R3 and DSM
+* Compare lists of proteins unique to R3 and DSM 17069
 
+# 25 January 2017
 
+## uvrABC genes
+* Blast R3 sequences against DSM 17069
+ * Listed as 'excinuclease ABC subunit', rather than uvrABC; still present...
 
+* vapC found on R3 short plasmid is the toxin part of a toxin/antitoxin system
+ * Neutralised by vapB, which appears absent...
 
-* UvrABC system proteins A, B and C absent from DSM 17069??
- * Problem - genes in DSM 17069 all unnamed...
+* Purpose of R3 short plasmid appears to be mercuric resistance, but DSM 17069 also seems to have this capacity...
+
+* Purpose of R3 long plasmid:
+ * Phosphate/phosophonate uptake?
+ * Cobalt-zinc-cadmium resistance?
+  * At least one copper resistance gene, too
+ * Type IV secretion system?
+ * A lot of mitochondria-related genes
+  * Many pertaining to cytochrome C (inner mitochondrial membrane)
+  * Cardiolipin synthase A (inner mitochondrial membrane)
+   * Mitochondria hypothesised to derive from alphaproteobacteria, so perhaps unsurprising...
+ * entS enterobactin exporter (strongest known siderophore)
+  * But, no enterobactin itself, plus entS also on chromosome...
+
+ * "... there is experimental evidence that cytochrome biosynthesis genes are involved in
+   copper resistance in Pseudomonas fluorescens"
+   (Yang H, Liu MY, Romeo T: Coordinate genetic regulation of glycogen catabolism and biosynthesis in Escherichia colivia the CsrA gene product.
+   J Bacteriol. 1996, 178 (4): 1012-1017.)
+
+| Plasmid           | Possible function    |
+|-------------------|----------------------|
+| pb_359_2 - Plas 1 | See above (R3 long)  |
+| pb_359_2 - Plas 2 | See above (R3 short) |
+| pb_359_3 - Plas 1 | ?                    |
+| pb_359_3 - Plas 2 | Mercury resistance?  |
+
+* Loktanella short plasmid seems to contain largely the same genes as R3 short plasmid...
+ * Blastn reveals that the two plasmids are almost identical...
+
+| pb_359_5 plasmid  | Mercury resistance? Copper resistance? Type IV secretion? |
+| pb_359_6 - Plas 1 | [Long; check again] |
+| pb_359_6 - Plas 2 | [Long; check again] |
+| pb_359_6 - Plas 3 | [Long; check again] |
+| pb_359_6 - Plas 4 | Alkane degradation (alk genes)? Carbon monoxide dehydrogenase (cox genes)? |
+| pb_359_6 - Plas 5 | Phosphonate metabolism (phn genes)? |
+| pb_359_6 - Plas 6 | Amino acid transport (liv genes + braC)? Type IV secretion? |
+| pb_359_6 - Plas 7 | ? |
+
+* Sulfitobacter plasmids have genes for fructoselysine and psicoselysine degradation; carbon source?
+
+* Blast all plasmids against one another?
+
+| pb_359_7 - Plas 1 | [Long; check again] |
+| pb_359_7 - Plas 2 | ? |
+| pb_359_7 - Plas 3 | ? |
+
+* Antarctobacter plasmids have genes for phosphatidylcholine biosynthesis; interaction with S. marinoi?
+* Antarctobacter seems to have many copies of leukotoxin gene over chromosome and plasmids
+
+| pb_359_8 plasmid  | Transposition (tra genes)? Many hypothetical proteins... |

@@ -5305,3 +5305,63 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
  * Sulfitobacter plasmid 5 vs Sulfitobacter plasmid 7 (9,310)
 
 * Copy across fasta sequences and run Blasts with .xml output
+
+# 26 January 2017
+
+## Blastn .xml
+
+* Roseovarius plasmid 2 vs Loktanella plasmid 2 is the only one which shows such dramatic similarity
+
+## Other samples
+* pb_359_3 - compare to Loktanella vestfoldensis
+* pb_359_4 - wait
+* pb_359_5 - compare to Marinobacter algicola
+* pb_359_6 - compare to Sulfitobacter pseudonitzschiae
+* pb_359_7 - wait
+* pb_359_8 - compare to Arenibacter algicola
+
+## Workflow
+* Compare phage regions to related species
+* Check synteny with most closely related species (type species if a strain?)
+* Compare plasmids
+* Identify unique regions to try and identify unique functions?
+
+## pb_359_3 vs L. vestfoldensis DSM 16212(T)
+
+* DSM 16212 assembly contains 45 contigs... Most have matches to pb_359_3
+ * The matches are generally in the mid-80% similarity range...
+ * Contigs with no match:
+  * NZ_KB908004 - hypothetical and CRISPR-related genes
+  * NZ_KB908005 - primarily hypothetical proteins
+  * NZ_KB908007 - various genes
+  * NZ_KB908008 - [check GenBank]
+  * NZ_KB908011 - [check GenBank]
+  * NZ_KB908012 - [check GenBank]
+  * NZ_KB908014 - [check GenBank]
+  * NZ_KB908017 - [check GenBank]
+
+* Running DSM 16212 through Pathway Tools
+
+* Check 'intact' phage regions of pb_359_3 against L. vestfoldensis DSM 16212
+ * Region 3 matches NZ_KB907974.1 Loktanella vestfoldensis DSM 16212 genomic scaffold H147DRAFT_scaffold00002.2 (mid-80% match)
+ * Region 6 has 4 matches of <2,000bp
+
+## pb_359_5 vs M. algicola DG893(T)
+
+* DG893 assembly contains >100 contigs
+ * Two short hits on plasmid; many long hits to chromosome
+ * Chromosome hits have 89%-98% identity to pb_359_5
+
+## pb_359_6 vs S. pseudonitzschiae H3(T)
+
+* H3 assembly contains 80 contigs
+ * Many long hits to the chromosome
+ * Hits to plasmids rather fragmented
+
+## pb_359_8 vs A. algicola TG409(T)
+
+* TG409 has only 3 contigs; easier to make comparisons
+* All 3 contigs seem to map to pb_359_8's chromosome
+* A few short (1,936, 212, 63) matches to two of the TG409 contigs; 1,936 region identical in both matches
+ * Check 8,328 - 10,243 on pb_359_8 plasmid
+  * Putative transposase and tyrosine recombinase XerD

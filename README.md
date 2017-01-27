@@ -5362,6 +5362,15 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 
 * TG409 has only 3 contigs; easier to make comparisons
 * All 3 contigs seem to map to pb_359_8's chromosome
-* A few short (1,936, 212, 63) matches to two of the TG409 contigs; 1,936 region identical in both matches
+* A few short (1,936, 212, 63) matches to two of the TG409 contigs on the plasmid; 1,936 region identical in both matches
  * Check 8,328 - 10,243 on pb_359_8 plasmid
   * Putative transposase and tyrosine recombinase XerD
+
+# 27 January 2017
+
+## pb_359_8 vs A. algicola TG409(T)
+* Double-checking matching regions
+ * Contig 1: ~1,850,000 - ~4,335,519 on Chromosome
+ * Contig 2: ~5,300,000 (9.1 Kb match) on Chromosome
+ * Contig 3: ~4,372,000 - ~1,857,451 on Chromosome
+* Arenibacter contigs match very well to the pb_359_8 chromosome (>95% identity)

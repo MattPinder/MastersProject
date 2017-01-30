@@ -5374,3 +5374,38 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
  * Contig 2: ~5,300,000 (9.1 Kb match) on Chromosome
  * Contig 3: ~4,372,000 - ~1,857,451 on Chromosome
 * Arenibacter contigs match very well to the pb_359_8 chromosome (>95% identity)
+
+# 30 January 2017
+
+## 16S check
+* pb_359_2 - 1472bp according to previous analyses
+ * Check GenBank: 1456bp and 1456bp
+ * complement(1417291..1418746) and complement(1684905..1686360)
+ * Cut these from the GenBank file and reBlast them
+* pb_359_3 - 1468bp according to previous analyses
+ * Check GenBank:  1451bp and 1451bp
+ * complement(2602128..2603578) and complement(3237731..3239181)
+ * Cut from fasta, ready to reBlast
+* pb_359_4 - 1497bp according to previous analyses
+ * Check GenBank: 1477bp and 1477bp
+ * complement(1530498..1531974) and complement(1540929..1542405)
+ * Cut from fasta, ready to reBlast
+* pb_359_5 - 1547bp according to previous analyses
+ * Check GenBank: 1528bp, 1528bp and 1528bp
+ * complement(2845442..2846969), complement(3612280..3613807) and complement(3824765..3826292)
+ * Cut from fasta, ready to reBlast
+* pb_359_6 - 1467bp according to previous analyses
+ * Check GenBank: 1450bp and 1450bp
+ * complement(2846175..2847624) and complement(160074..161523) (third contig)
+ * Cut from fasta, ready to reBlast
+* pb_359_7 - 1458bp according to previous analyses
+ * Check GenBank: 1441bp and 1441bp
+ * 1369387..1370827 and 2482487..2483927
+ * Cut from fasta, ready to reBlast
+* pb_359_8 - 1531bp according to previous analyses
+ * Check GenBank: 1512bp, 1512bp and 1512bp
+ * complement(552372..553883), complement(5511478..5512989) and complement(5716748..5718259)
+ * Cut from fasta, ready to reBlast
+
+* Ensure that 16S paragraph contains BLASTn reference, database used, and the acc. no., query cover and identity of the best hit
+ * Edited announcement paper paragraphs to relate specifically to the 16S sequences predicted using RNAmmer 1.2

@@ -5409,3 +5409,29 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 
 * Ensure that 16S paragraph contains BLASTn reference, database used, and the acc. no., query cover and identity of the best hit
  * Edited announcement paper paragraphs to relate specifically to the 16S sequences predicted using RNAmmer 1.2
+
+# 31 January 2017
+
+## pb_359_3 - Loktanella vestfoldensis [strain name]
+Find genes which are suggestive of symbiosis/parasitism
+* Export and compare type strain pathways
+
+* 2x Rhamnan synthesis protein F genes found in pb_359_3 but not in type strain
+ * https://www.ebi.ac.uk/interpro/entry/IPR007739
+ * Pathogenic factor??
+ * Rhamnose produced by diatoms!
+
+* Tungstate uptake and usage
+ * tupABC operon
+
+* uvrABC only annotated in pb_359_3 - are they present in type strain?
+ * Again, labelled as excinuclease ABC subunit... Still present
+
+
+
+
+* Check paper:
+ * http://bmcevolbiol.biomedcentral.com/articles/10.1186/1471-2148-8-30
+
+
+* Compare pb_359_4 to genome of Sphingorhabdus sp. M41?

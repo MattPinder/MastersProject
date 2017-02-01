@@ -5423,6 +5423,7 @@ Find genes which are suggestive of symbiosis/parasitism
 
 * Tungstate uptake and usage
  * tupABC operon
+ * Seemingly absent in the type strain?
 
 * uvrABC only annotated in pb_359_3 - are they present in type strain?
  * Again, labelled as excinuclease ABC subunit... Still present
@@ -5435,3 +5436,102 @@ Find genes which are suggestive of symbiosis/parasitism
 
 
 * Compare pb_359_4 to genome of Sphingorhabdus sp. M41?
+
+# 1 February 2017
+
+GitLab acting up; push from laptop to Albiorix when able
+
+## pb_359_4
+* No phosphatidylcholine synthase?
+ * Phosphatidylcholine biosynthesis V pathway - check
+ * One required gene present, one missing
+* No acyl-homoserine-lactone synthase? (no autoinducer synthesis/quorum sensing?)
+ * AI-2 transporter genes present...
+* Presence of cob(II)yrinate a,c-diamide biosynthesis II (vitamin B12 synthesis)
+
+* Trehalose utilisation - relevant?
+* Little evidence of type IV secretion system
+
+## pb_359_5
+* Two adenosylcobalamin salvage pathways? - check
+* cob(II)yrinate a,c-diamide biosynthesis II pathway - check
+ * Cobalamin biosynthesis protein CobD
+* No phosphatidylcholine synthase?
+* No autoinducer?
+ * AI-2 transporter genes present...
+ * Autoinducer 2 sensor kinase/phosphatase LuxQ	genes present
+* Abundance of mercuric resistance proteins
+* Putative siderophore-related proteins
+* Tungstate uptake and usage
+ * TupABC operon
+ * One tungstate-related protein in type strain
+
+## pb_359_6
+* Three adenosylcobalamin salvage pathways? - check
+* autoinducer AI-1 biosynthesis AND autoinducer AI-2 degradation
+* cob(II)yrinate a,c-diamide biosynthesis II
+* 2x cobalamin biosynthesis protein
+* 3x Invasion associated locus B (IalB) protein
+* 2x leukotoxin genes
+* Luminescence regulatory protein LuxO?
+ * From UniProt - "LuxO and sigma-54 have also a role in activating the production of siderophore and in regulating the rugose colony morphology phenotype."
+* Presence of phosphatidylcholine synthase
+* Putative siderophore-related proteins
+* Multiple copies of the TupABC tungstate operon
+ * Seemingly absent from type strain
+
+## pb_359_7
+* Two adenosylcobalamin salvage pathways? - check
+* cob(II)yrinate a,c-diamide biosynthesis II
+* phosphatidylcholine biosynthesis VI
+ * Presence of phosphatidylcholine synthase
+* 2x cobalamin biosynthesis protein
+* 2x Invasion associated locus B (IalB) protein
+* Abundance of leukotoxin genes
+ * Also leukotoxin-activating lysine-acyltransferase LtxC
+* Contains only TupA of tungstate use operon
+
+# pb_359_8
+* 1x adenosylcobalamin salvage pathway - check
+* Autoinducer AI-2 degradation
+* phosphatidylcholine biosynthesis V
+ * No phosphatidylcholine synthase?
+* 'pheromone autoinducer 2 transporter'
+
+
+## Other
+* Check presence/absence of flagellar proteins - pb_359_5 has many, but did pb_359_4?
+ * Compare reports of motility
+
+* Read up and check genes for all types of secretion system, not just Type IV
+
+* Imelysin?
+
+* Presence/absence of 'precorrin' genes (involved in vit B12 synthesis?)
+
+* (pb_359_2 also contains tungstate operon tupABC)
+
+| Sample   | Comparable species                | Comparable species motile?                       | Flagellar genes?                        |
+|----------|-----------------------------------|--------------------------------------------------|-----------------------------------------|
+| pb_359_2 | R. mucosus (type strain)          | Motility rarely observed                         | Many flagella-related genes in pb_359_2 |
+| pb_359_3 | L. vestfoldensis (type strain)    | Motility not observed (genus)                    | Many flagella-related genes in pb_359_3 |
+| pb_359_4 | Sphingorhabdus (genus)            | Motile or non-motile                             | Few flagella-related genes in pb_359_4  |
+| pb_359_5 | M. algicola (type strain)         | Motile ('single, non-sheathed, polar flagellum') | Many flagella-related genes in pb_359_5 |
+| pb_359_6 | S. pseudonitzschiae (type strain) | Non-motile                                       | Few flagella-related genes in pb_359_6  |
+| pb_359_7 | Antarctobacter (genus)            | 'Daughter cells may be motile'                   | Many flagella-related genes in pb_359_7 |
+| pb_359_8 | A. algicola (type strain)         | Non-motile                                       | Two flagella-related genes in pb_359_8  |
+
+ * Conflicts with Flagella observations by Oskar?
+
+* Tungstate-using samples
+ * pb_359_2
+ * pb_359_3
+ * pb_359_5
+ * pb_359_6
+ * (Only tupA in pb_359_7)
+ * Rhodobacteraceae and Alteromonadaceae
+
+
+## To do
+
+Push commit to GitLab once GitLab is back online

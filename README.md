@@ -5531,7 +5531,14 @@ GitLab acting up; push from laptop to Albiorix when able
  * (Only tupA in pb_359_7)
  * Rhodobacteraceae and Alteromonadaceae
 
+# 2 February 2017
 
-## To do
+## Marinobacter algicola vs pb_359_5
+* (Note: M. algicola lives in association with a dinoflagellate)
+* M. algicola has adenosylcobalamin biosynthesis from cobyrinate a,c-diamide I and II pathways; pb_359_5 doesn't
+* pb_359_5 has biotin biosynthesis pathways, M. algicola doesn't
+* Siderophore-related genes in M. algicola; putative siderophore-related genes in pb_359_5
+* pb_359_5 has a gene for 'strictosidine synthase' - interesting?
 
-Push commit to GitLab once GitLab is back online
+## Sulfitobacter pseudonitzschiae vs pb_359_6
+* 

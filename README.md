@@ -5545,4 +5545,61 @@ GitLab acting up; push from laptop to Albiorix when able
 * Both have phosphatidylcholine synthase gene
 
 ## Arenibacter algicola vs pb_359_8
-* 
+* pb_359_8 lacking chloramphenicol acetyltransferase
+* pb_359_8 contains additional transposon proteins?
+* A. algicola has a syringomycin biosynthesis enzyme that pb_359_8 seems to lack
+ * Present in plant pathogens...
+
+
+
+* Compare presence/absence of the following between pb_359_X and type strains, and among each other
+ * transposon- and phage-related genes
+ * resistance genes (drugs/metals)
+ * General metal-related genes
+  * Tungsten/tungstate, copper, mercury, etc.
+ * Presence of tungstate genes vs # of molybdenum-associated genes?
+ * -ycin genes (antibiotics, either resistance or production)
+
+
+## pb_359_8 vs A. algicola - contigs
+* pb_359_8 has two contigs; A. algicola type strain has three
+* Two longest A. algicola contigs map together to cover the entire pb_359_8 chromosome
+* Few short regions match the pb_359_8 plasmid... Largely unique
+
+## pb_359_6 vs S. pseudonitzschiae - contigs
+* Sixth Falcon contig (plasmid 5) of pb_359_6 has only a few hits to S. pseudonitzschiae
+* Fourth Falcon contig (plasmid 3) of pb_359_6 only appears to match S. pseudonitzschiae in patches
+* Around half of Third Falcon contig (plasmid 2) of pb_359_6 matches contig11 of S. pseudonitzschiae
+
+
+
+
+## Leukotoxins
+* pb_359_2 and _7 have an abundance of leukotoxin genes
+ * pb_359_2 - 15
+ * pb_359_3 - 1, plus Leukotoxin export ATP-binding protein LtxB
+ * pb_359_4 - none
+ * pb_359_5 - none
+ * pb_359_6 - 2
+ * pb_359_7 - 15, plus Leukotoxin-activating lysine-acyltransferase LtxC
+
+* Leukotoxins only appear to affect white-blood cells... similar sequence...?
+* Check pb_359_2:
+ * BlastP of the first leukotoxin gene in pb_359_2 gave an excellent hit to a 5'-nucleotidase in R. sp. TM1035 (~99% identity)
+ * Second: among others, matches Ca2+-binding protein, RTX toxin-related [Roseovarius azorensis] (best match to a hypo. from TM1035)
+ * Third: aggregation factor core protein MAFp3 [Roseovarius sp. TM1035]
+ * Fourth: type I secretion protein [Roseovarius sp. TM1035]  (also similar to RTX toxin [Roseovarius mucosus DSM 17069])
+ * Fifth: Large exoprotein [Roseovarius sp. TM1035]
+ * Sixth: rhizobiocin/RTX toxin [Roseovarius sp. TM1035]
+ * Seventh: type I secretion protein [Roseovarius sp. TM1035] (some similarity to Hemolysin-type calcium-binding repeat (2 copies) [Roseovarius mucosus DSM 17069])
+ * Eighth: rhizobiocin/RTX toxin [Roseovarius sp. TM1035]
+ * Ninth: Hemolysin-type calcium-binding region [Roseovarius sp. TM1035]
+ * Tenth: No great matches, but second hit is Ca2+-binding protein, RTX toxin-related [Rhizobium loessense]
+ * Eleventh: Haem peroxidase?
+ * Twelfth: Ca2+-binding protein, RTX toxin-related [Rhizobium loessense] ? (only accounts for the second-half of the protein; first half had no good hits)
+ * Thirteenth: Nidogen, extracellular region [Roseovarius sp. TM1035]
+ * Fourteenth: Hemolysin-type calcium-binding protein [Roseovarius sp. TM1035]
+ * Fifteenth: Hemolysin-type calcium-binding region, RTX [Roseovarius sp. TM1035]
+
+* Check pb_359_7:
+ * TO DO ON FRIDAY

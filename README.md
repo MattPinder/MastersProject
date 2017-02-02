@@ -5541,4 +5541,8 @@ GitLab acting up; push from laptop to Albiorix when able
 * pb_359_5 has a gene for 'strictosidine synthase' - interesting?
 
 ## Sulfitobacter pseudonitzschiae vs pb_359_6
+* Many more multidrug resistance genes in pb_359_6 than in type strain
+* Both have phosphatidylcholine synthase gene
+
+## Arenibacter algicola vs pb_359_8
 * 

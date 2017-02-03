@@ -5603,3 +5603,63 @@ GitLab acting up; push from laptop to Albiorix when able
 
 * Check pb_359_7:
  * TO DO ON FRIDAY
+
+# 3 February 2017
+
+## pb_359_7
+
+* Check identity of pb_359_7 'leukotoxins' using BlastP
+ * 'Leukotoxin-activating lysine-acyltransferase LtxC': toxin/cytolysin-activating lysine-acyltransferase (only ~80% cover and ~40% identity)
+ * First: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (better hits are to 'hypothetical proteins')
+ * Second: Hemolysin-type calcium-binding repeat-containing protein [Yangia pacifica] (better hits to type I secretion target repeat protein and hypo. proteins)
+ * Third: putative Ca2+-binding protein [Rhodobacteraceae bacterium HLUCCO07] (better hits to type I secretion target repeat protein and hypo. proteins)
+ * Fourth: 5'-nucleotidase [Mameliella alba]
+ * Fifth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+ * Sixth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] 
+ * Seventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Eighth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Ninth: 5'-nucleotidase [Mameliella alba] (several better hit to hypothetical proteins)
+ * Tenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Eleventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+ * Twelfth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+ * Thirteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Fourteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Fifteenth: 5'-nucleotidase [Mameliella alba]
+
+## Leukotoxin/hemolysin
+* Hemolysin forms transmembrane pores in red blood cells and mammalian cells
+* Leukotoxin disturbs the lysosomal membrane so the contents enter the cytosol, causing cell death
+
+* Algicidal compound of DHQ25
+ * "... cells of xenic A. tamarense treated  with  culture  filtrate  of  DHQ25 exhibited rounding  and  loss  of  cell  wall  integrity. 
+Cells were disrupted, and cellular substances were  decomposed  and  released  with  increased  exposure time."
+ * http://onlinelibrary.wiley.com/doi/10.1111/j.1472-765X.2010.02936.x/pdf
+
+* Algicidal compound of Brevibacterium sp. BS01
+ * "Morphological analysis revealed structural alterations in A. tamarense with algal cells losing the integrity of their organelles"
+ * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4633486/
+
+* Prediction - pb_359_2 and _7 may be algicidal
+ * pb_359_7 has no autoinducer predicted in Pathway Tools...
+
+* Pairwise alignment between similar regions? e.g. pb_359_2 plasmids vs type strain
+ * pb_359_2 vs scaffold14; high 90s similarity, but hard to know best way to compare the two and get measurable comparison...
+
+## Things to do for thesis
+
+* Gather papers regarding other bacteria-diatom interactions
+* Double-check whether Consensus, consensus_names or a combination should be used
+* Include results of preliminary BLASTs
+* Condense 'primary' and 'secondary' annotations down into one; 'primary' can probably be ignored as family is discernable from preliminary BLAST?
+* How reliable a source is SILVA for 16S data; no information on whether or not the sequences are complete...
+* BLASTn/Blast Viewer, or Mauve? - visualise for closeness to related strains
+* Rerun trees including an outgroup (e.g. from different order)
+* Take printscreens of coverage graphs from SMRT Viewer to show coverage? (or are these too numerous/unnecessary...?)
+* Take some printscreens from Pathway Tools, showing relevant/interesting pathways
+* Tabulate 16S search results
+
+* Check state of S. marinoi annotation
+
+* Check bacterial-diatom adhesion systems
+ * BUT bacteria don't have to adhere to be within the phycosphere - biofilms?
+* Any more information on use of tungsten by bacteria?

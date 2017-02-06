@@ -3231,7 +3231,7 @@ a_ctg_base_tiling_path, a_ctg.fa and a_ctg_tiling_path...
 
 ## pb_359_7
 Phylotaxonomic group must be identified in order to shrink the tree.
-* PhyloPhlAn 1.4.3 appears faster than 1.4.2 on my computer for handling huge trees, so
+* FigTree 1.4.3 appears faster than 1.4.2 on my computer for handling huge trees, so
 should be able to sift through more easily.
  * Dowload sequences from family Rhodobacteraceae
  * Running PhyloPhlAn job...
@@ -5663,3 +5663,70 @@ Cells were disrupted, and cellular substances were  decomposed  and  released  w
 * Check bacterial-diatom adhesion systems
  * BUT bacteria don't have to adhere to be within the phycosphere - biofilms?
 * Any more information on use of tungsten by bacteria?
+
+# 6 February 2017
+
+## Select outgroups for phylogenetic analysis - choose an adjacent class/order
+* Rhodobacteraceae - use X
+* Sphingomonadaceae - use Erythromonadaceae + one from further out
+* Alteromonadaceae - use X
+* Flavobacteriaceae - use X
+
+* Trees will be too big using full order trees; have to take a subsample; take outgroup from adjacent branch of the tree
+
+* Syntax: $ ./phylophlan.py -i my_genomes_to_insert --nproc 16
+ * .faa input
+
+* pb_359_2:
+ * All Roseovarius and Roseobacter sequences, plus Thalassobius as outgroup
+  * Roseovarius mucosus downloaded manually; no 'latest assembly version' found...
+  * Roseovarius sp. BRH_c41 downloaded manually; no 'latest assembly version' found...
+
+* pb_359_3:
+ * All Loktanella, plus Donghicola, Oceanicola, Wenxinia, Rubellimicrobium and Ketogulonicigenium, plus Octadecabacter as outgroup
+  * Download Roseobacter sp. CCS2 manually; rest of Roseobacter in different group...
+
+* pb_359_4:
+ * All Sphingorhabdus, Sphingopyxis and Blastomonas, plus Sandarakinorhabdus as outgroup
+
+* pb_359_5:
+ * Subset of Marinobacter, plus Agarivorans as outgroup
+  * M. subterrani, sp. YWL01, manganoxydans, sp. CP1, sp. EhC06, sp. EhN04, adhaerens, sp. Hb8, similis, lipolyticus, sp. HL-58, algicola, sp. MCTG268 and salarius
+
+* pb_359_6:
+ * All Sulfitobacter, Roseobacter (except CCS2, SK209-2-6 and MED193), Tateyamaria and Oceanibulbus, plus Nautella as outgroup
+
+* pb_359_7:
+ * All Antarctobacter (if any exist), Tropicibacter naphthalenivorans, Sagittula stellata, Rhodobacteraceae bacterium PD-2, Mameliella alba, Ponticoccus sp. SJ5A-1,
+and Ruegeria sp. PBVC088, with Citreicella as outgroup
+
+* pb_359_8:
+ * All Arenibacter, Cellulophaga, Sediminicola, Maribacter and Zobellia, plus Muricauda as outgroup
+
+* All jobs running at 8 cores each
+ * Taking much longer than I had remembered...
+ * Because the -u flag was supposed to be used, not the -i flag...
+
+## pb_359_2
+* From https://www.ncbi.nlm.nih.gov/bioproject/19363:
+ * "Roseovarius sp. TM1035. This strain was isolated from the dinoflagellate Pfiesteria piscicida and actively metabolizes the dinoflagellate secondary product
+dimethylsulfoniopropionate (DMSP)."
+* Miller & Belas - "Dimethylsulfoniopropionate Metabolism by Pfiesteria-Associated Roseobacter spp."
+ * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/
+* All but final step apparently present in pb_359_2
+* Roseovarius mucosus has all genes for dmdABCD genes in an operon...?
+ * Checked vs Ruegeria dmdD (TblastN), but the only hit isn't very convincing...
+
+* Toxins present in DSM 17069 - 6 RTX toxins
+
+## Trees
+* May be approaching this from the wrong angle...
+* Take a representative species or two from a variety of genera, and tree those?
+* Also rename file to be only 'pb_359_X'
+* Remove 'sp.' species
+* Choose an outgroup from further away in the tree
+ * pb_359_2 - try Hyphomonas? Still in order Rhodobacterales, but not in family Rhodobacteraceae
+  * Roseobacter denitrificans still appears outside of the expected area...
+
+* Check re: best way to generate good trees...
+ * Currently re-downloading Rhodobacteraceae fastas; still need an outgroup, something from outside Rhodobacteraceae?

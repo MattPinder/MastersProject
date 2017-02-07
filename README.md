@@ -5730,3 +5730,44 @@ dimethylsulfoniopropionate (DMSP)."
 
 * Check re: best way to generate good trees...
  * Currently re-downloading Rhodobacteraceae fastas; still need an outgroup, something from outside Rhodobacteraceae?
+
+# 7 February 2017
+
+## Pathways
+* Make list of relevant pathways and interesting genes
+* Interesting results
+ * Toxins - Roseovarius and Antarctobacter have 15 'leukotoxin' genes each
+ * Mercury resistance - Marinobacter has 13 genes potentially related to mercuric resistance
+ * Cadmium resistance - Arenibacter has 12 genes potentially related to cadmium resistance
+ * Drug resistance - Sphingorhabdus has 14 genes related to glyoxalase/bleomycin resistance, and 13 related to multidrug resistance
+ * Phosphatidylcholine biosynthesis - Marinobacter doesn't seem to have any phosphatidylcholine biosynthesis pathways
+  * M. shengliensis and M. hydrocarbonoclasticus (and others?) seem to produce phosphatidylcholine...
+
+
+
+Interesting - "Although cadmium has no known biological function in higher organisms,
+a cadmium-dependent carbonic anhydrase has been found in marine diatoms."  
+(From Wikipedia)
+* Relationship between diatoms, bacteria and heavy metals?
+
+
+* pb_359_4 and _8 contain one or two of the genes required for prodigiosin biosynthesis
+* pb_359_6 contains a rhamnolipid biosynthesis gene
+
+* See also:
+ * http://www.sciencedirect.com/science/article/pii/S073497501530029X
+ * Algicidal microorganisms and secreted algicides: New tools to induce microalgal cell disruption
+
+
+## Trees
+* pb_359_2 - Take representatives from:
+ * Roseovarius, Pseudooceanicola, Roseivivax, Jannaschia, Thalassobius,
+Oceanibulbus, Sulfitobacter, Ruegeria, Leisingera, Loktanella, Paracoccus,
+Rhodobacter
+
+
+## To do
+* Check for degradation of the following polysaccharides:
+ * Agar, alginate, chitin, cellulose, fucoidan, laminarin, pectin, pullulan, starch, xylan
+
+* Check pb_359_2 job compared to other attempted trees

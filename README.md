@@ -5771,3 +5771,42 @@ Rhodobacter
  * Agar, alginate, chitin, cellulose, fucoidan, laminarin, pectin, pullulan, starch, xylan
 
 * Check pb_359_2 job compared to other attempted trees
+
+# 8 February 2017
+
+## pb_359_6
+* Re: Sulfitobacter and diatoms:
+ * http://onlinelibrary.wiley.com/doi/10.1111/j.1438-8677.2008.00040.x/abstract;jsessionid=70C450C00E3E37C96D94608D17D6991E.f03t03
+
+## Trees
+* pb_359_2 tree always seems to split into three...
+* Arenibacter algicola may also be a poor choice to include, as it always extends further than the other branches...
+* Include two other species from a non-Rhodobacteraceae Rhodobacterales genus?
+ * Try Hyphomonas? Otherwise try non-Rhodobacterales alphaproteobacterium
+ * Reason for issues with previous iterations - no rooting; attempt midpoint rooting
+* 8_Feb_PM_2_pb_359_2.tree.nwk appears to be a good basis for the pb_359_2 tree; include pb_359_3, _6 and _7 to form a single Rhodobacteraceae tree
+ * Outgroup - Hyphomonas (within Hyphomonadaceae, sister family to Rhodobacteraceae within order Rhodobacterales)
+
+
+* For pb_359_4, include in tree of Sphingomonadaceae; outgroup - member of Erythromonadaceae? Sister family within order Sphingomonadales
+ * Outgroup - Erythrobacter
+ * Considering the lack of represented genera in this family, would it be better to include Erythromonadaceae in the tree and have an outgroup from another class?
+
+* For pb_359_5, include in tree of Alteromonadaceae; outgroup - member of XXX? Sister family within order Alteromonadales
+ * Outgroup - 
+
+* For pb_359_8, include in tree of Flavobacteriaceae; outgroup - member of XXX? Sister family within order Flavobacteriales
+ * Outgroup - 
+
+
+* Rhodo_Tree has been trimmed; if a monophyletic group is made up entirely of a single genus, then the group is reduced to a single representative species
+
+
+## To do
+* Check new Rhodo tree
+
+* Consider changing the pb_359_4 tree to include Erythro genera and use another class as outgroup
+ * Kordia? From order Kordiimonadales, class Alphaproteobacteria
+ * Check new pb_359_4 tree (Kordia outgroup)
+
+* Decide on outgroups for pb_359_5 (Altero) and pb_359_8 (Flavo) trees

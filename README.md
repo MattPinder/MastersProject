@@ -5807,6 +5807,36 @@ Rhodobacter
 
 * Consider changing the pb_359_4 tree to include Erythro genera and use another class as outgroup
  * Kordia? From order Kordiimonadales, class Alphaproteobacteria
+  * [THIS IS INCORRECT!]
  * Check new pb_359_4 tree (Kordia outgroup)
 
 * Decide on outgroups for pb_359_5 (Altero) and pb_359_8 (Flavo) trees
+
+# 9 February 2017
+
+## Trees
+Checking new Rhodo and pb_359_4 trees:
+* Rhodo - Seems to have worked, but need to trim out some branches - 94 tips down to at least 50?
+* pb_359_4 - Also seems okay, but need to trim out the excess branches - 99 tips down to at least 50 again?
+
+* For pb_359_5 - include order Alteromonadales? Few represented genera in Alteromonadaceae alone
+ * Running with Kordia as an outgroup [CHANGE OUTGROUP!]
+
+* Kordia is not an Alphaproteobacteria... Choose an alternative outgroup for the above...
+ * For pb_359_4 - Brucella? (Rhizobiales)
+ * For pb_359_5 - Escherichia? (Enterobacterales)
+ * For pb_359_8 - Bacteroides? (Bacteroidales)
+
+* Tree statuses:
+ * Rhodo - outgroup decided (Hyphomonas, sister family), need to remove branches to resize tree
+ * pb_359_4 - outgroup decided (Brucella, sister order), other branches need to be reduced to resize tree
+ * pb_359_5 - outgroup needs to be added (old one must be removed), other branched need to be reduced to resize tree
+ * pb_359_8 - outgroup decided (Bacteroides, sister class), check results and remove excess branches
+  * May need to change outgroup to something within Flavobacteriales, outside Flavobacteriaceae
+  * New outgroup - two members of Crocinitomicaceae; sister family under Flavobacteriales
+
+* Rhodo provisionally done - 50 species
+
+## To do
+* Commit latest pb_359_8 tree
+* View pb_359_4, _5 and _8 trees and continue to remove branches to reach a suitable size for the report

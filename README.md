@@ -3231,7 +3231,7 @@ a_ctg_base_tiling_path, a_ctg.fa and a_ctg_tiling_path...
 
 ## pb_359_7
 Phylotaxonomic group must be identified in order to shrink the tree.
-* PhyloPhlAn 1.4.3 appears faster than 1.4.2 on my computer for handling huge trees, so
+* FigTree 1.4.3 appears faster than 1.4.2 on my computer for handling huge trees, so
 should be able to sift through more easily.
  * Dowload sequences from family Rhodobacteraceae
  * Running PhyloPhlAn job...
@@ -5603,3 +5603,240 @@ GitLab acting up; push from laptop to Albiorix when able
 
 * Check pb_359_7:
  * TO DO ON FRIDAY
+
+# 3 February 2017
+
+## pb_359_7
+
+* Check identity of pb_359_7 'leukotoxins' using BlastP
+ * 'Leukotoxin-activating lysine-acyltransferase LtxC': toxin/cytolysin-activating lysine-acyltransferase (only ~80% cover and ~40% identity)
+ * First: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (better hits are to 'hypothetical proteins')
+ * Second: Hemolysin-type calcium-binding repeat-containing protein [Yangia pacifica] (better hits to type I secretion target repeat protein and hypo. proteins)
+ * Third: putative Ca2+-binding protein [Rhodobacteraceae bacterium HLUCCO07] (better hits to type I secretion target repeat protein and hypo. proteins)
+ * Fourth: 5'-nucleotidase [Mameliella alba]
+ * Fifth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+ * Sixth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] 
+ * Seventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Eighth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Ninth: 5'-nucleotidase [Mameliella alba] (several better hit to hypothetical proteins)
+ * Tenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Eleventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+ * Twelfth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+ * Thirteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Fourteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+ * Fifteenth: 5'-nucleotidase [Mameliella alba]
+
+## Leukotoxin/hemolysin
+* Hemolysin forms transmembrane pores in red blood cells and mammalian cells
+* Leukotoxin disturbs the lysosomal membrane so the contents enter the cytosol, causing cell death
+
+* Algicidal compound of DHQ25
+ * "... cells of xenic A. tamarense treated  with  culture  filtrate  of  DHQ25 exhibited rounding  and  loss  of  cell  wall  integrity. 
+Cells were disrupted, and cellular substances were  decomposed  and  released  with  increased  exposure time."
+ * http://onlinelibrary.wiley.com/doi/10.1111/j.1472-765X.2010.02936.x/pdf
+
+* Algicidal compound of Brevibacterium sp. BS01
+ * "Morphological analysis revealed structural alterations in A. tamarense with algal cells losing the integrity of their organelles"
+ * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4633486/
+
+* Prediction - pb_359_2 and _7 may be algicidal
+ * pb_359_7 has no autoinducer predicted in Pathway Tools...
+
+* Pairwise alignment between similar regions? e.g. pb_359_2 plasmids vs type strain
+ * pb_359_2 vs scaffold14; high 90s similarity, but hard to know best way to compare the two and get measurable comparison...
+
+## Things to do for thesis
+
+* Gather papers regarding other bacteria-diatom interactions
+* Double-check whether Consensus, consensus_names or a combination should be used
+* Include results of preliminary BLASTs
+* Condense 'primary' and 'secondary' annotations down into one; 'primary' can probably be ignored as family is discernable from preliminary BLAST?
+* How reliable a source is SILVA for 16S data; no information on whether or not the sequences are complete...
+* BLASTn/Blast Viewer, or Mauve? - visualise for closeness to related strains
+* Rerun trees including an outgroup (e.g. from different order)
+* Take printscreens of coverage graphs from SMRT Viewer to show coverage? (or are these too numerous/unnecessary...?)
+* Take some printscreens from Pathway Tools, showing relevant/interesting pathways
+* Tabulate 16S search results
+
+* Check state of S. marinoi annotation
+
+* Check bacterial-diatom adhesion systems
+ * BUT bacteria don't have to adhere to be within the phycosphere - biofilms?
+* Any more information on use of tungsten by bacteria?
+
+# 6 February 2017
+
+## Select outgroups for phylogenetic analysis - choose an adjacent class/order
+* Rhodobacteraceae - use X
+* Sphingomonadaceae - use Erythromonadaceae + one from further out
+* Alteromonadaceae - use X
+* Flavobacteriaceae - use X
+
+* Trees will be too big using full order trees; have to take a subsample; take outgroup from adjacent branch of the tree
+
+* Syntax: $ ./phylophlan.py -i my_genomes_to_insert --nproc 16
+ * .faa input
+
+* pb_359_2:
+ * All Roseovarius and Roseobacter sequences, plus Thalassobius as outgroup
+  * Roseovarius mucosus downloaded manually; no 'latest assembly version' found...
+  * Roseovarius sp. BRH_c41 downloaded manually; no 'latest assembly version' found...
+
+* pb_359_3:
+ * All Loktanella, plus Donghicola, Oceanicola, Wenxinia, Rubellimicrobium and Ketogulonicigenium, plus Octadecabacter as outgroup
+  * Download Roseobacter sp. CCS2 manually; rest of Roseobacter in different group...
+
+* pb_359_4:
+ * All Sphingorhabdus, Sphingopyxis and Blastomonas, plus Sandarakinorhabdus as outgroup
+
+* pb_359_5:
+ * Subset of Marinobacter, plus Agarivorans as outgroup
+  * M. subterrani, sp. YWL01, manganoxydans, sp. CP1, sp. EhC06, sp. EhN04, adhaerens, sp. Hb8, similis, lipolyticus, sp. HL-58, algicola, sp. MCTG268 and salarius
+
+* pb_359_6:
+ * All Sulfitobacter, Roseobacter (except CCS2, SK209-2-6 and MED193), Tateyamaria and Oceanibulbus, plus Nautella as outgroup
+
+* pb_359_7:
+ * All Antarctobacter (if any exist), Tropicibacter naphthalenivorans, Sagittula stellata, Rhodobacteraceae bacterium PD-2, Mameliella alba, Ponticoccus sp. SJ5A-1,
+and Ruegeria sp. PBVC088, with Citreicella as outgroup
+
+* pb_359_8:
+ * All Arenibacter, Cellulophaga, Sediminicola, Maribacter and Zobellia, plus Muricauda as outgroup
+
+* All jobs running at 8 cores each
+ * Taking much longer than I had remembered...
+ * Because the -u flag was supposed to be used, not the -i flag...
+
+## pb_359_2
+* From https://www.ncbi.nlm.nih.gov/bioproject/19363:
+ * "Roseovarius sp. TM1035. This strain was isolated from the dinoflagellate Pfiesteria piscicida and actively metabolizes the dinoflagellate secondary product
+dimethylsulfoniopropionate (DMSP)."
+* Miller & Belas - "Dimethylsulfoniopropionate Metabolism by Pfiesteria-Associated Roseobacter spp."
+ * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/
+* All but final step apparently present in pb_359_2
+* Roseovarius mucosus has all genes for dmdABCD genes in an operon...?
+ * Checked vs Ruegeria dmdD (TblastN), but the only hit isn't very convincing...
+
+* Toxins present in DSM 17069 - 6 RTX toxins
+
+## Trees
+* May be approaching this from the wrong angle...
+* Take a representative species or two from a variety of genera, and tree those?
+* Also rename file to be only 'pb_359_X'
+* Remove 'sp.' species
+* Choose an outgroup from further away in the tree
+ * pb_359_2 - try Hyphomonas? Still in order Rhodobacterales, but not in family Rhodobacteraceae
+  * Roseobacter denitrificans still appears outside of the expected area...
+
+* Check re: best way to generate good trees...
+ * Currently re-downloading Rhodobacteraceae fastas; still need an outgroup, something from outside Rhodobacteraceae?
+
+# 7 February 2017
+
+## Pathways
+* Make list of relevant pathways and interesting genes
+* Interesting results
+ * Toxins - Roseovarius and Antarctobacter have 15 'leukotoxin' genes each
+ * Mercury resistance - Marinobacter has 13 genes potentially related to mercuric resistance
+ * Cadmium resistance - Arenibacter has 12 genes potentially related to cadmium resistance
+ * Drug resistance - Sphingorhabdus has 14 genes related to glyoxalase/bleomycin resistance, and 13 related to multidrug resistance
+ * Phosphatidylcholine biosynthesis - Marinobacter doesn't seem to have any phosphatidylcholine biosynthesis pathways
+  * M. shengliensis and M. hydrocarbonoclasticus (and others?) seem to produce phosphatidylcholine...
+
+
+
+Interesting - "Although cadmium has no known biological function in higher organisms,
+a cadmium-dependent carbonic anhydrase has been found in marine diatoms."  
+(From Wikipedia)
+* Relationship between diatoms, bacteria and heavy metals?
+
+
+* pb_359_4 and _8 contain one or two of the genes required for prodigiosin biosynthesis
+* pb_359_6 contains a rhamnolipid biosynthesis gene
+
+* See also:
+ * http://www.sciencedirect.com/science/article/pii/S073497501530029X
+ * Algicidal microorganisms and secreted algicides: New tools to induce microalgal cell disruption
+
+
+## Trees
+* pb_359_2 - Take representatives from:
+ * Roseovarius, Pseudooceanicola, Roseivivax, Jannaschia, Thalassobius,
+Oceanibulbus, Sulfitobacter, Ruegeria, Leisingera, Loktanella, Paracoccus,
+Rhodobacter
+
+
+## To do
+* Check for degradation of the following polysaccharides:
+ * Agar, alginate, chitin, cellulose, fucoidan, laminarin, pectin, pullulan, starch, xylan
+
+* Check pb_359_2 job compared to other attempted trees
+
+# 8 February 2017
+
+## pb_359_6
+* Re: Sulfitobacter and diatoms:
+ * http://onlinelibrary.wiley.com/doi/10.1111/j.1438-8677.2008.00040.x/abstract;jsessionid=70C450C00E3E37C96D94608D17D6991E.f03t03
+
+## Trees
+* pb_359_2 tree always seems to split into three...
+* Arenibacter algicola may also be a poor choice to include, as it always extends further than the other branches...
+* Include two other species from a non-Rhodobacteraceae Rhodobacterales genus?
+ * Try Hyphomonas? Otherwise try non-Rhodobacterales alphaproteobacterium
+ * Reason for issues with previous iterations - no rooting; attempt midpoint rooting
+* 8_Feb_PM_2_pb_359_2.tree.nwk appears to be a good basis for the pb_359_2 tree; include pb_359_3, _6 and _7 to form a single Rhodobacteraceae tree
+ * Outgroup - Hyphomonas (within Hyphomonadaceae, sister family to Rhodobacteraceae within order Rhodobacterales)
+
+
+* For pb_359_4, include in tree of Sphingomonadaceae; outgroup - member of Erythromonadaceae? Sister family within order Sphingomonadales
+ * Outgroup - Erythrobacter
+ * Considering the lack of represented genera in this family, would it be better to include Erythromonadaceae in the tree and have an outgroup from another class?
+
+* For pb_359_5, include in tree of Alteromonadaceae; outgroup - member of XXX? Sister family within order Alteromonadales
+ * Outgroup - 
+
+* For pb_359_8, include in tree of Flavobacteriaceae; outgroup - member of XXX? Sister family within order Flavobacteriales
+ * Outgroup - 
+
+
+* Rhodo_Tree has been trimmed; if a monophyletic group is made up entirely of a single genus, then the group is reduced to a single representative species
+
+
+## To do
+* Check new Rhodo tree
+
+* Consider changing the pb_359_4 tree to include Erythro genera and use another class as outgroup
+ * Kordia? From order Kordiimonadales, class Alphaproteobacteria
+  * [THIS IS INCORRECT!]
+ * Check new pb_359_4 tree (Kordia outgroup)
+
+* Decide on outgroups for pb_359_5 (Altero) and pb_359_8 (Flavo) trees
+
+# 9 February 2017
+
+## Trees
+Checking new Rhodo and pb_359_4 trees:
+* Rhodo - Seems to have worked, but need to trim out some branches - 94 tips down to at least 50?
+* pb_359_4 - Also seems okay, but need to trim out the excess branches - 99 tips down to at least 50 again?
+
+* For pb_359_5 - include order Alteromonadales? Few represented genera in Alteromonadaceae alone
+ * Running with Kordia as an outgroup [CHANGE OUTGROUP!]
+
+* Kordia is not an Alphaproteobacteria... Choose an alternative outgroup for the above...
+ * For pb_359_4 - Brucella? (Rhizobiales)
+ * For pb_359_5 - Escherichia? (Enterobacterales)
+ * For pb_359_8 - Bacteroides? (Bacteroidales)
+
+* Tree statuses:
+ * Rhodo - outgroup decided (Hyphomonas, sister family), need to remove branches to resize tree
+ * pb_359_4 - outgroup decided (Brucella, sister order), other branches need to be reduced to resize tree
+ * pb_359_5 - outgroup needs to be added (old one must be removed), other branched need to be reduced to resize tree
+ * pb_359_8 - outgroup decided (Bacteroides, sister class), check results and remove excess branches
+  * May need to change outgroup to something within Flavobacteriales, outside Flavobacteriaceae
+  * New outgroup - two members of Crocinitomicaceae; sister family under Flavobacteriales
+
+* Rhodo provisionally done - 50 species
+
+## To do
+* Commit latest pb_359_8 tree
+* View pb_359_4, _5 and _8 trees and continue to remove branches to reach a suitable size for the report

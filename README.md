@@ -5840,3 +5840,20 @@ Checking new Rhodo and pb_359_4 trees:
 ## To do
 * Commit latest pb_359_8 tree
 * View pb_359_4, _5 and _8 trees and continue to remove branches to reach a suitable size for the report
+
+# 10 February 2017
+
+## Scripts
+* Script folders tidied up
+* NCBI Downloader scripts combined into one; user now specifies desired file extension
+* GenBank_Consensus and GenBank_Consensus_Names not combined; will need to work out how to combine functionality
+
+## Trees
+Provisional final trees for all 4 groups; now need to generate complete trees for supplementary material
+
+
+
+## To do
+* Currently running PhyloPhlAn for full trees; add these to GitHub and include a descriptive readme
+ * Include date of retrieval of sequences, and which sequences were left out (_sp._)
+ * Mention that Roseovarius mucosus has been 'suppressed'

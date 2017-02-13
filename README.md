@@ -5857,3 +5857,7 @@ Provisional final trees for all 4 groups; now need to generate complete trees fo
 * Currently running PhyloPhlAn for full trees; add these to GitHub and include a descriptive readme
  * Include date of retrieval of sequences, and which sequences were left out (_sp._)
  * Mention that Roseovarius mucosus has been 'suppressed'
+
+# 11 February 2017
+
+## 

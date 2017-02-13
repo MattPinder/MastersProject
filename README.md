@@ -5080,7 +5080,7 @@ Problem: sometimes a gene name will be mentioned in the product line but not men
 * Largest plasmid in both cases contains type IV secretion system genes
  * In general, plasmid 1 of R3 seems to be an extension of A123 plasmid in DSM 17069
  * Similarity ends ~100 Kb into R3 plasmid 1
-  * rosmuc_04171 corresponds to 04123 (RÂ3
+  * rosmuc_04171 corresponds to 04123 (RÃ‚3
 * R mucosus DSM 17069 appears to have only 265 pathways
  * Flagellar protein region rosmuc00543 - rosmuc00574 matches 01702 - 01733 (R3)
 
@@ -5858,6 +5858,22 @@ Provisional final trees for all 4 groups; now need to generate complete trees fo
  * Include date of retrieval of sequences, and which sequences were left out (_sp._)
  * Mention that Roseovarius mucosus has been 'suppressed'
 
-# 11 February 2017
+# 13 February 2017
 
-## 
+## Trees
+'Final' trees moved to repository; readme mentions relevant information
+
+* pb_359_5 is shown on its own branch next to Marinobacter algicola and M. salarius
+ * Is it definitely most closely related to M. algicola?
+
+## Preliminary Blasts
+
+Preliminary blastx not done for all final assemblies - rerun
+
+
+
+
+
+## To do
+* Run other blastx analyses?
+* Save full tree

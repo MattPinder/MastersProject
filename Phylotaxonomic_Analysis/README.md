@@ -1,7 +1,12 @@
 # Phylotaxonomic analysis
-Complete versions of the subsampled phylogenetic trees present in the report.  
-Unless otherwise noted, sequences from NCBI's ftp site were downloaded in
+Complete versions of the subsampled phylogenetic trees present in the report.
+* Unless otherwise noted, sequences from NCBI's ftp site were downloaded in
 February 2017 using the [NCBI Downloader script] (https://github.com/MattPinder/MastersProject/tree/master/Scripts).
+* Unnamed species (i.e. those named *genus* sp. *?*) were not included in the trees.
+
+## FullTreeAllSamples.tree.int.nwk
+
+* Uses PhyloPhlAn's -i flag to insert all samples into the bacterial tree of life.
 
 ## Rhodobacteraceae.tree.nwk
 

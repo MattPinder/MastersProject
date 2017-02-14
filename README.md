@@ -5877,3 +5877,38 @@ Preliminary blastx not done for all final assemblies - rerun
 ## To do
 * Run other blastx analyses?
 * Save full tree
+
+
+# 14 February 2017
+
+## Trees
+Full tree may not save after problems last night... Restarted
+* Full tree complete and uploaded
+
+## Preliminary Blasts
+Rerun pb_359_4 Blast from yesterday (failed)
+
+## Pathway Tools
+Test capacity for a multi-species pathway file
+
+* Number of pathways
+
+| Sample   | Consensus | Consensus_Names |
+|----------|-----------|-----------------|
+| pb_359_2 | **284**   | 283             |
+| pb_359_3 | 300       | **303**         |
+| pb_359_4 | **237**   | 235             |
+| pb_359_5 | 261       | 261             |
+| pb_359_6 | 302       | **307**         |
+| pb_359_7 | 290       | **297**         |
+| pb_359_8 | 256       | **257**         |
+
+## 16S
+
+Is it viable to check other databases and accept matches to regions of a genome not explicitly listed as '16S'?
+* 08_16S/CHECKME.md
+
+
+## To do
+
+Still waiting for pb_359_4 Blast on node0

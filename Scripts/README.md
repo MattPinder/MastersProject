@@ -88,6 +88,12 @@ The hope with this version is that named gene predictions will allow for more nu
            hypothetical proteins in the primary input file. Note: this file
            should not have more records in it than the primary input.
 
+## Limitations
+
+* The current version is only intended for use with GenBank files containing a single contig; multi-contig files will not be processed correctly.
+* The 'Translation' line of each locus is not correctly formatted; sequences are displayed on a single line rather than adding line breaks into long sequences.
+ * For the intended purpose - comprehension by the program [Pathway Tools] (http://brg.ai.sri.com/ptools/) - this formatting issue is irrelevant.
+
 ## Version history
 
 * Version 1
@@ -112,9 +118,3 @@ The hope with this version is that named gene predictions will allow for more nu
  * **This version was the basis for the alternative version, GenBank_Consensus_Names.py**
 * GenBank_Consensus_Names
  * Alterations made so that a named gene would be selected in preference to an unnamed one at the same locus
-
-## Limitations
-
-* The current version is only intended for use with GenBank files containing a single contig; multi-contig files will not be processed correctly.
-* The 'Translation' line of each locus is not correctly formatted; sequences are displayed on a single line rather than adding line breaks into long sequences.
- * For the intended purpose - comprehension by the program [Pathway Tools] (http://brg.ai.sri.com/ptools/) - this formatting issue is irrelevant.

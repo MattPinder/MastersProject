@@ -5912,3 +5912,13 @@ Is it viable to check other databases and accept matches to regions of a genome 
 ## To do
 
 Still waiting for pb_359_4 Blast on node0
+
+
+# 15 February 2017
+
+## Pathway Tools
+
+'Error: Duplicate genetic element ID NIL' shows up even when only trying to combine two species...
+* Unsure if the program will work as intended
+
+Manual annotation refinement using pathway hole filler in Pathway Tools?

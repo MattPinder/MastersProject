@@ -5922,3 +5922,10 @@ Still waiting for pb_359_4 Blast on node0
 * Unsure if the program will work as intended
 
 Manual annotation refinement using pathway hole filler in Pathway Tools?
+
+## Report
+
+* Ensure that citations are correct and consistent
+* Is doi or full link the best option?
+
+* Can't access SMRT Portal?

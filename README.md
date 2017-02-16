@@ -5929,3 +5929,50 @@ Manual annotation refinement using pathway hole filler in Pathway Tools?
 * Is doi or full link the best option?
 
 * Can't access SMRT Portal?
+
+# 16 February 2016
+
+## BLAST
+BLAST still acting up; already have 16S and phylogeny for determining taxonomy,
+BLAST seems imprecise and surplus... Perhaps mention earlier BLAST results
+when relevant
+
+## Ros. P2 vs Lok. P2
+Reinvestigate these two plasmids' similarity
+* All of Roseovarius plasmid is accounted for in these areas - 100% identity
+* Areas in Loktanella not covered by Roseovarius:
+ * 1 - 2,106
+  * Part of Tn3 transposase DDE domain protein
+ * 16,616 - 18,152
+  * Hypothetical protein and transposase
+ * 27,780 - 31,556
+  * Tn3 transposase DDE domain protein, DNA-invertase hin, and end of conjugal transfer protein TraG
+ * 37,730 - 39,380
+  * Mercuric reductase (merA) and hypothetical protein
+* BLASTn-ing the unique areas - two don't match anything (BLASTn), two match other Rhodobacteraceae sequences
+* BLASTx-ing the unique areas reveals that all of them match transposases
+
+* Do the unique regions exist on the Roseovarius chromosome/large plasmid?
+ * No BLASTn hits at all
+* Are the unique regions present on other Loktanella replicons?
+ * Common to either one or both other replicons
+
+## Trees
+pb_359_Rhodo subsampled tree is much too wide - any way to thin it down to fit on a page?
+* Try removing Stappia indica
+
+pb_359_5 subsampled tree looks a little untidy on account of Marinobacterium litorale
+* Try removing it
+* Still long; remove Ferrimonas and Shewanella?
+
+
+## Gene transfer
+BLAST all pb_359 samples vs Skeletonema to check for gene transfer
+* s*********a b******a
+* Question: How to tell if a hit truly IS a result of HGT?
+* Check article:
+ * http://onlinelibrary.wiley.com/doi/10.1111/1462-2920.12854/full
+
+
+## To do
+* Check pb_359_5 tree with trims made

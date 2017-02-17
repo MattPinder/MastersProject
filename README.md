@@ -5976,3 +5976,48 @@ BLAST all pb_359 samples vs Skeletonema to check for gene transfer
 
 ## To do
 * Check pb_359_5 tree with trims made
+
+
+# 17 February 2017
+
+## Tree
+Settings for exporting trees from FigTree:
+* Expansion ~half way
+* Align tip labels
+* Highlight pb_359 in blue
+* Appearance - line weight 2
+* Tip labels - 18 Arial Bold
+* Tip shapes - 6 circles
+* Node labels - label, 12 Arial Bold
+* Scale bar - 14, line weight 2
+
+## Genome sizes
+
+Double-check genome/chromosome sizes vs genus:
+
+* pb_359_2 (Roseovarius) - 4,381,426 / 4,170,996
+ * Range - 3.67 Mb - 6.06 Mb
+ * Acceptable genome size
+ * R. mucosus genome size - 4.24 Mb
+* pb_359_3 (Loktanella) - 3,987,360 / 3,836,950
+ * Range - 3.18 Mb - 4.20 Mb
+ * Acceptable genome size
+ * L. vestfoldensis genome size - 3.72 Mb
+* pb_359_4 (Sphingorhabdus) - 3,479,724 / 3,479,724
+ * Range - 3.33 Mb - 3.54 Mb
+ * Acceptable genome size
+* pb_359_5 (Marinobacter) - 4,630,160 / 4,386,892
+ * Range - 3.15 Mb - 5.35 Mb
+ * Acceptable genome size
+ * M. algicola genome size - 4.41 Mb
+ * M. salarius genome size - 4.61 Mb
+* pb_359_6 (Sulfitobacter) - 5,121,602 / 3,572,445
+ * Range - 3.45 Mb - 4.94 Mb
+ * Chromosome - acceptable chromosome size
+ * S. pseudonitzschiae genome size - 4.94 Mb
+* pb_359_7 (Antarctobacter) - 5,331,190 / 4,723,013
+ * No information available
+* pb_359_8 (Arenibacter) - 5,857,781 / 5,793,053
+ * Range - 4.36 Mb - 5.66 Mb
+ * Genome a little too big?
+ * A. algicola genome size - 5.55 Mb

@@ -6021,3 +6021,72 @@ Double-check genome/chromosome sizes vs genus:
  * Range - 4.36 Mb - 5.66 Mb
  * Genome a little too big?
  * A. algicola genome size - 5.55 Mb
+
+# 20 February 2017
+
+## Pathway Tools
+
+Checked ambiguous entries in RoseoConsensusBase vs. UniProtKB
+* One pathway deleted, three new ones predicted
+* Problem when trying to further refine the list - when checking vs UniProtKB, many of the results have an EC number of X.X.X.-,
+which is non-specific. Should this be entered into Pathway Tools, or would this be too general?
+
+## Secondary metabolites
+
+Check no. of secondary metabolites per bacterium
+* Tools:
+ * antiSmash
+ * Dark Horse
+ * BioCompass (when available)
+* FIND WAY TO GET A LIST OF SECONDARY METABOLITES - PATHWAY TOOLS DOESN'T SEEM TO HAVE SUCH A FUNCTION...
+
+
+## Things to check
+* Small plasmids in Roseovarius + Loktanella: Almost the same!
+
+* Marinobacter identity - algicola or salarius??
+ * Re: checking the 16S:
+  * Closest named species - Marinobacter salarius strain R9SW1 (based on complete genome and partial sequence)
+   * Score: 2811 bits (1522) / 2784 bits (1507)
+   * Expect: 0.0 / 0.0
+   * Identities: 1539/1547 (99%) / 1524/1532 (99%)
+   * Gaps: 1/1547 (0%) / 1/1532 (0%)
+   * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
+   * Note: searching nr/nt database
+  * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
+   * Score: 2731 bits (1479)
+   * Expect: 0.0
+   * Identities: 1483/1485 (99%)
+   * Gaps: 0/1485
+   * Query cover: 95% (1485bp vs 1547bp)
+   * Note: searching 16S-specific database
+   * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
+ * Re: phylogenetic tree:
+  * salarius and algicola share a MRCA; step above that is pb_359_5
+  * MRCA with salarius; step above that is algicola (in trimmed tree)
+
+* List of predicted genes/pathways - are these relevant to mention?
+
+* Semester end date - June 2nd
+
+* SMRT Portal not working?
+
+* Sometimes the GenBank with MORE gene names yields LESS pathways; select all of one type, or case-by-case?
+
+* Pathway Tools - EC number inclusion - include X.X.X.- results?
+
+
+
+
+
+## To do
+Lists of secondary metabolites
+* Must run antiSmash on a contig-by-contig basis...
+ * Remember to check pb_359_3 antiSmash bookmark
+ * Check 'symbiotically important' succinoglycan - http://www.sciencedirect.com/science/article/pii/009286749390418P?via%3Dihub
+ * Also check pb_359_4 antiSmash bookmark
+
+Identical short plasmids
+* Look for signs of phage on the identical short plasmids
+* Check VirSorter/PHASTER results
+* (Show Mats results from PHASTER on Thursday)

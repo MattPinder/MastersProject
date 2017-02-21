@@ -6053,6 +6053,7 @@ Check no. of secondary metabolites per bacterium
    * Gaps: 1/1547 (0%) / 1/1532 (0%)
    * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
    * Note: searching nr/nt database
+
   * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
    * Score: 2731 bits (1479)
    * Expect: 0.0
@@ -6061,6 +6062,7 @@ Check no. of secondary metabolites per bacterium
    * Query cover: 95% (1485bp vs 1547bp)
    * Note: searching 16S-specific database
    * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
+
  * Re: phylogenetic tree:
   * salarius and algicola share a MRCA; step above that is pb_359_5
   * MRCA with salarius; step above that is algicola (in trimmed tree)
@@ -6090,3 +6092,186 @@ Identical short plasmids
 * Look for signs of phage on the identical short plasmids
 * Check VirSorter/PHASTER results
 * (Show Mats results from PHASTER on Thursday)
+
+# 21 February 2017
+
+## antiSMASH
+Cut GenBank files into per-contig files, then run through antiSMASH (appears to only handle one contig at a time?)
+* Seems to be handling everything at once; the contigs just don't contain any secondary metabolite clusters
+
+
+
+## To do
+
+Find full-length algicola and salarius 16S sequences from NCBI; compare G+C content AND synteny/gene content in general
+* Double-check description papers (if in doubt, go for earliest-described species)
+ * Discuss taxonomic considerations in report
+* Compare directly to 16S
+
+* Subsample closest ~25 species into tree, not bredth of coverage across order/family
+
+* Always prioritise more pathways in GenBank/Pathway Tools
+
+* Include incomplete EC numbers
+ * Make Pathway Tools files available on GitHub
+
+* SMRT Portal now running again
+
+* Report draft in early May
+
+* Test antiSMASH - splice two chromosomes into one GenBank to see if it handles multiple contigs
+ * Put antiSMASH results/percentages of genes for secondary metabolites into report
+ * List metabolites
+
+## Tree subsampling
+
+* Rhodo; Hyphomonas as outgroup (2 + 11 + 11 + 12 + 11 = 47 total)
+
+ * Hyphomonas x 2
+
+ * pb_359_7
+ * Marinovum algicola
+ * Marivita hallyeonensis
+ * [Roseivivax x 4] - collapse
+ * Salipiger mucosus
+ * Pelagibaca x 2
+ * Thiobacimonas profunda
+ * Mameliella alba
+ * Sagittula stellata
+ * Tropicibacter naphthalenivorans
+
+ * pb_359_2
+ * [Pseudooceanicola x 3] - collapse
+ * Sediminimonas qiaohouensis
+ * Roseovarius x 8
+
+ * pb_359_6
+ * Tateyamaria omphalii
+ * [Roseobacter x 2] - collapse
+ * Oceanibulbus indolifex
+ * Sulfitobacter x 8
+
+ * pb_359_3
+ * Oceanicola granulosus
+ * Loktanella x 6
+ * [Rubellimicrobium x 2] - collapse
+ * Ketogulonicigenium vulgare
+ * [Wenxinia x 2] - collapse
+
+* pb_359_4; Brucella as outgroup (36 total)
+
+ * Brucella x 2
+
+ * pb_359_4
+ * Sphingorhabdus marina
+ * Sphingopyxis x 6
+ * [Croceicoccus x 4] - collapse
+ * [Novosphingobium x 15] - collapse
+ * Altererythrobacter x 7
+ * Porphyrobacter x 6
+ * Erythrobacter x 8
+ * Citromicrobium bathyomarinum
+ * Sphingomonas jaspsi
+ * Sphingomonas astaxanthinifaciens
+
+* pb_359_5; Escherichia as outgroup (43 total)
+
+ * Escherichia x 2
+
+ * pb_359_5
+ * Marinobacter x 16
+ * [Marinobacterium x 5] - collapse
+ * [Idiomarina x 9] - collapse
+ * Lacimicrobium alkaliphilum
+ * Aliiglaciecola lipolytica
+ * Paraglaciecola x 6
+ * Pseudoalteromonas atlantica
+ * Aestuariibacter x 2
+ * [Glaciecola x 3] - collapse
+ * Salinimonas chungwhensis
+ * Alteromonas x 9
+
+* pb_359_8; Crocinitomix and Fluviicola as outgroup (24 total)
+
+ * Crocinitomix catalasitica
+ * Fluviicola taffensis
+
+ * pb_359_8
+ * Robiginitalea biformata
+ * Eudorea adtriatica
+ * Pseudozobellia thermophila
+ * [Zobellia x 2] - collapse
+ * [Maribacter x 6] - collapse
+ * Arenibacter x 5
+ * [Cellulophaga x 5] - collapse
+ * Spongiibacterium flavum
+ * Muricauda x 3
+ * Croceitalea dokdonensis
+ * Joostella marina
+ * Galbibacter marinus
+ * Sinomicrobium oceani
+ * Zhouia amlolytica
+ * Imtechella halotolerans
+
+## 16S
+Rechecking pb_359_5 16S:
+* Check against all three databases and save best hits
+ * nr/nt - 2x M. salarius
+ * refseq_genomic - M. algicola
+ * bacteria/archaea 16S - M. algicola partial + M. adhaerens complete
+
+* Align hits and find the best match (individual PSAs would be better than MSAs...)
+
+* pb_359_5 - 3 x 16S sequences
+ * 1 + 2 = identical (column 1)
+ * 3 = 1bp difference (column 2)
+
+* nr/nt salarius 1 (rev com):
+ * Length: 1532 (pb_359_5 = 1528; M. salarius = 1531)
+ * Identity:    1519/1532 (99.2%)	1520/1532 (99.2%)
+ * Similarity:  1519/1532 (99.2%)	1520/1532 (99.2%)
+ * Gaps:           5/1532 ( 0.3%)	5/1532 ( 0.3%)
+ * Score: 	7553.0			7562.0
+
+* nr/nt salarius 2:
+ * Length: 1528 (pb_359_5 = 1528; M. salarius = 1527)
+ * Identity:    1519/1528 (99.4%)	1520/1528 (99.5%)
+ * Similarity:  1519/1528 (99.4%)	1520/1528 (99.5%)
+ * Gaps:           1/1528 ( 0.1%)	1/1528 ( 0.1%)
+ * Score:	7553.0			7562.0
+
+* refseq_genomic algicola:
+ * Length: 1528 (pb_359_5 and M. algicola = same length)
+ * Identity:    1525/1528 (99.8%)	1526/1528 (99.9%)
+ * Similarity:  1525/1528 (99.8%)	1526/1528 (99.9%)
+ * Gaps:           0/1528 ( 0.0%)	0/1528 ( 0.0%)
+ * Score: 	7613.0			7622.0
+
+* 16S algicola partial (rev com):
+ * Length: 1528 (pb_359_5 = 1528; M. algicola = 1485)
+ * Identity:    1482/1528 (97.0%)	1483/1528 (97.1%)
+ * Similarity:  1482/1528 (97.0%)	1483/1528 (97.1%)
+ * Gaps:          43/1528 ( 2.8%)	43/1528 ( 2.8%)
+ * Score: 	7398.0			7407.0
+
+(* If pb_359_5 trimmed to match ends of M. algicola partial sequence...
+  * Length: 1485
+  * Identity:   1482/1485 (99.8%)	1483/1485 (99.9%)
+  * Similarity: 1482/1485 (99.8%)	1483/1485 (99.9%)
+  * Gaps:          0/1485 ( 0.0%)	0/1485 ( 0.0%)
+  * Score: 	7398.0			7407.0)
+
+* 16S adhaerens complete:
+ * Length: 1535/1534 (pb_359_5 = 1528; M. adhaerens = 1532)
+ * Identity:    1507/1535 (98.2%)	1505/1534 (98.1%)
+ * Similarity:  1507/1535 (98.2%)	1505/1534 (98.1%)
+ * Gaps:          10/1535 ( 0.7%)	8/1534 ( 0.5%)
+ * Score: 	7403.0			7401.0
+
+
+
+* pb_359_4 submitted and completed
+* pb_359_5 submitted and completed
+* pb_359_8 submitted and completed
+* Rhodo tree submitted and completed
+ * New trees provisionally added to report

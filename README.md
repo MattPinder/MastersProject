@@ -1,4 +1,4 @@
-# 9 August 2016
+﻿# 9 August 2016
 
 Useful tools to install:  
 * PROKKA  
@@ -6275,3 +6275,76 @@ Rechecking pb_359_5 16S:
 * pb_359_8 submitted and completed
 * Rhodo tree submitted and completed
  * New trees provisionally added to report
+
+# 22 February 2017
+
+## ClustalW tree for 16S sequences
+* Based on tree obtained from ClustalW alignment (http://www.genome.jp/tools/clustalw/), seems likely
+that the species is, indeed, M. algicola.
+
+## antiSMASH
+* Currently all been done using 'pb_359_X_Consensus.gbk'; need to make final decision on which one to use based on
+number of predicted pathways.
+
+| Sample   | Consensus | Consensus_Names     |
+|----------|-----------|---------------------|
+| pb_359_2 | **284**   | 283                 |
+| pb_359_3 | 300       | **303**             |
+| pb_359_4 | **237**   | 235                 |
+| pb_359_5 | 261       | **261** (more info) |
+| pb_359_6 | 302       | **307**             |
+| pb_359_7 | 290       | **297**             |
+| pb_359_8 | 256       | **257**             |
+
+
+# 23 February 2017
+
+## antiSMASH
+Number of 2' metabolite cluster genes vs whole genome (%age)
+* Compared to cyanos from presentation - ~14%
+
+## Pathway Tools
+
+Include incomplete EC numbers to go for maximum number of predictions
+* Move all files out of default file and start afresh?
+* Make Pathway Tools files available on GitHub
+
+
+* Search conjugation genes
+ * Searching with the term 'conjug'
+  * pb_359_2 - 4 hits (0 plasmid hits)
+  * pb_359_3 - 12 hits (of which 3 plasmid hits)
+  * pb_359_4 - 11 hits
+  * pb_359_5 - 4 hits (all plasmid hits)
+  * pb_359_6 - 12 hits (of which 10 plasmid hits)
+  * pb_359_7 - 1 hit (0 plasmid hits)
+  * pb_359_8 - 33 hits (of which 6 plasmid hits)
+
+* Run type strain gbk through antiSMASH?
+ * Check results vs. pb_359
+
+* Double-check copy no. of plasmids
+
+* List of genes on each Sulfito plasmid
+ * Needs formatting...
+
+## Plasmid copy number
+Compare coverage for chromosome to coverage for plasmids
+
+| Sample   | Chrom. cover | Plasmid cover                                 |
+|----------|--------------|-----------------------------------------------|
+| pb_359_2 | ~140x        | ~120x, ~150x                                  |
+| pb_359_3 | ~180x        | ~90x, ~120x                                   |
+| pb_359_4 | ~100x        | -                                             |
+| pb_359_5 | ~210x        | ~350x                                         |
+| pb_359_6 | ~170x        | ~170x, ~160x, ~170x, ~130x, ~150x, ~80x, ~90x |
+| pb_359_7 | ~180x        | ~200x, ~160x, ~140x                           |
+| pb_359_8 | ~170x        | ~450x                                         |
+
+## Sulfitobacter and plasmids
+* Sulfitobacter sp. AM1-D1 has [five plasmids] (http://www.genome.jp/kegg-bin/show_organism?org=suam),
+albeit somewhat smaller than those in pb_359_6.
+
+
+## To do
+Continue gene-checking in pb_359_2 in Pathway Tools

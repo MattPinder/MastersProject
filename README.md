@@ -6348,3 +6348,31 @@ albeit somewhat smaller than those in pb_359_6.
 
 ## To do
 Continue gene-checking in pb_359_2 in Pathway Tools
+
+
+# 24 February 2017
+
+## Pathway Tools refinement
+If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions that would be applicable
+* If UniProtKB gives 1.2.3.-, for example, accept 1.2.3.4)
+* EXCEPTION: if Pathway Tools suggests the general pathway (1.2.3.-), accept that and not the specific one (1.2.3.4)
+
+* pb_359_2 - pathways increased from 284 to 290
+* pb_359_3 - pathways increased from 303 to 305
+
+## % predictions for 2' metabolite clusters
+
+* pb_359_2 - 4,184 CDSs in genome, 3,959 CDSs in chromosome, 154 2' metabolite cluster genes
+ * As a percentage - 
+* pb_359_3 - 3,952 CDSs in genome, 3,811 CDSs in chromosome, 125 2' metabolite cluster genes
+* pb_359_4 - 3,348 CDSs in genome, 104 2' metabolite cluster genes
+* pb_359_5 - 4,277 CDSs in genome, 4,011 CDSs in chromosome, Z 2' metabolite cluster genes
+ * 
+* pb_359_6 - 4,967 CDSs in genome, 3,497 CDSs in chromosome, Z 2' metabolite cluster genes
+* pb_359_7 - 5,098 CDSs in genome, 4,504 CDSs in chromosome, Z 2' metabolite cluster genes
+* pb_359_8 - 4,984 CDSs in genome, 4,901 CDSs in chromosome, Z 2' metabolite cluster genes
+
+## To do
+
+* Continue refinements of annotation using UniProtKB
+* Calculate percentages for 2' metabolite cluster genes

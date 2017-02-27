@@ -6363,16 +6363,44 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 ## % predictions for 2' metabolite clusters
 
 * pb_359_2 - 4,184 CDSs in genome, 3,959 CDSs in chromosome, 154 2' metabolite cluster genes
- * As a percentage - 
+ * As a percentage - 3.68% of genome (or 3.89% of chromosome)
 * pb_359_3 - 3,952 CDSs in genome, 3,811 CDSs in chromosome, 125 2' metabolite cluster genes
+ * As a percentage - 3.16% of genome (or 3.28% of chromosome)
 * pb_359_4 - 3,348 CDSs in genome, 104 2' metabolite cluster genes
-* pb_359_5 - 4,277 CDSs in genome, 4,011 CDSs in chromosome, Z 2' metabolite cluster genes
- * 
-* pb_359_6 - 4,967 CDSs in genome, 3,497 CDSs in chromosome, Z 2' metabolite cluster genes
-* pb_359_7 - 5,098 CDSs in genome, 4,504 CDSs in chromosome, Z 2' metabolite cluster genes
-* pb_359_8 - 4,984 CDSs in genome, 4,901 CDSs in chromosome, Z 2' metabolite cluster genes
+ * As a percentage - 3.11%
+* pb_359_5 - 4,277 CDSs in genome, 4,011 CDSs in chromosome, 103 2' metabolite cluster genes
+ * As a percentage - 2.41% of genome (or 2.57% of chromosome)
+* pb_359_6 - 4,967 CDSs in genome, 3,497 CDSs in chromosome, 196 2' metabolite cluster genes
+ * As a percentage - 3.95% of genome (or 5.60% of chromosome)
+* pb_359_7 - 5,098 CDSs in genome, 4,504 CDSs in chromosome, 209 2' metabolite cluster genes (190 on chromosome)
+ * As a percentage - 4.10% of genome (or 4.22% of chromosome)
+* pb_359_8 - 4,984 CDSs in genome, 4,901 CDSs in chromosome, 160 2' metabolite cluster genes
+ * As a percentage - 3.21% of genome (or 3.26% of chromosome)
 
 ## To do
 
 * Continue refinements of annotation using UniProtKB
-* Calculate percentages for 2' metabolite cluster genes
+
+# 27 February 2017
+
+## pb_359_2 Leukotoxin BLASTp - best hits
+* IAEOHLKH_00090: 5' nucleotidase
+* IAEOHLKH_00466: putative calcium-binding proteins
+* IAEOHLKH_00488: aggregation factor core protein MAFp3
+* IAEOHLKH_01179: type I secretion protein
+* IAEOHLKH_01809: large exoprotein
+* IAEOHLKH_01818: rhizobiocin/RTX toxin
+* IAEOHLKH_02005: type I secretion protein
+* IAEOHLKH_02307: rhizobiocin/RTX toxin
+* IAEOHLKH_02309: hemolysin-type calcium-binding region
+* IAEOHLKH_02820: [mainly poor hits]
+* IAEOHLKH_02860: hypothetical proteins
+* IAEOHLKH_02884: [mainly poor hits, to secod-half of protein]
+* IAEOHLKH_03603: nidogen, extracellular region
+* IAEOHLKH_03940: hemolysin-type calcium-binding protein
+* IAEOHLKH_03943: hemolysin-type calcium-binding region, RTX
+
+## Pathway Tools prediction refinement
+* pb_359_4 - pathways increased from 237 to 241
+* pb_359_5 - pathways increased from 261 to 264 (forgot to set new version...)
+* pb_359_6 - [Continue tomorrow]

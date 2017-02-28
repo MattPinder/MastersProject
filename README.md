@@ -6395,7 +6395,7 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 * IAEOHLKH_02309: hemolysin-type calcium-binding region
 * IAEOHLKH_02820: [mainly poor hits]
 * IAEOHLKH_02860: hypothetical proteins
-* IAEOHLKH_02884: [mainly poor hits, to secod-half of protein]
+* IAEOHLKH_02884: [mainly poor hits, to second-half of protein]
 * IAEOHLKH_03603: nidogen, extracellular region
 * IAEOHLKH_03940: hemolysin-type calcium-binding protein
 * IAEOHLKH_03943: hemolysin-type calcium-binding region, RTX
@@ -6403,4 +6403,14 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 ## Pathway Tools prediction refinement
 * pb_359_4 - pathways increased from 237 to 241
 * pb_359_5 - pathways increased from 261 to 264 (forgot to set new version...)
-* pb_359_6 - [Continue tomorrow]
+
+
+# 28 February 2017
+
+## Pathway Tools prediction refinement
+* pb_359_6 - pathways increased from 307 to 313
+* pb_359_7 - pathways increased from 297 to 307
+* pb_359_8 - pathways increased from 257 to [complete tomorrow]
+
+* Next step - v1.2 of the database could attempt to implement the Pathway Hole Filler?
+* Continue checking function of pb_359_6 plasmids

@@ -6410,7 +6410,43 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 ## Pathway Tools prediction refinement
 * pb_359_6 - pathways increased from 307 to 313
 * pb_359_7 - pathways increased from 297 to 307
-* pb_359_8 - pathways increased from 257 to [complete tomorrow]
 
 * Next step - v1.2 of the database could attempt to implement the Pathway Hole Filler?
 * Continue checking function of pb_359_6 plasmids
+
+# 01 March 2017
+
+## Pathway Tools prediction refinement
+* pb_359_8 - pathways increased from 257 to 259
+
+## Pathway Tools prediction summary
+
+| Sample   | Before | After | Diff |
+|----------|--------|-------|------|
+| pb_359_2 | 284    | 290   | +6   |
+| pb_359_3 | 303    | 305   | +2   |
+| pb_359_4 | 237    | 241   | +4   |
+| pb_359_5 | 261    | 264   | +3   |
+| pb_359_6 | 307    | 313   | +6   |
+| pb_359_7 | 297    | 307   | +10  |
+| pb_359_8 | 257    | 259   | +2   |
+
+## pb_359_6 Plasmids
+* Individually inputted into Pathway Tools
+* Individual lists of (non-hypothetical) gene products created
+
+* Question - how are these plasmids being maintained...?
+ * 7 plasmids would constitute an enormour metabolic cost to maintain,
+   especially with them being so big...
+
+* Each plasmid has an antitoxin gene; this may contribute
+
+| Plasmid | Size (bp) | Protein genes | RNA genes | Pathways |
+|---------|-----------|---------------|-----------|----------|
+| 1       | 428,095   | 412           | 3         | 36       |
+| 2       | 292,917   | 255           | 6         | 21       |
+| 3       | 284,777   | 277           | 3         | 23       |
+| 4       | 209,222   | 193           | -         | 19       |
+| 5       | 142,107   | 152           | -         | 5        |
+| 6       | 99,245    | 93            | -         | 8        |
+| 7       | 92,794    | 88            | -         | 6        |

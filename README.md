@@ -6421,15 +6421,15 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 
 ## Pathway Tools prediction summary
 
-| Sample   | Before | After | Diff |
-|----------|--------|-------|------|
-| pb_359_2 | 284    | 290   | +6   |
-| pb_359_3 | 303    | 305   | +2   |
-| pb_359_4 | 237    | 241   | +4   |
-| pb_359_5 | 261    | 264   | +3   |
-| pb_359_6 | 307    | 313   | +6   |
-| pb_359_7 | 297    | 307   | +10  |
-| pb_359_8 | 257    | 259   | +2   |
+| Sample   | Before | After | Diff | PHF | Diff |
+|----------|--------|-------|------|-----|------|
+| pb_359_2 | 284    | 290   | +6   |||
+| pb_359_3 | 303    | 305   | +2   |||
+| pb_359_4 | 237    | 241   | +4   | 249 | +8   |
+| pb_359_5 | 261    | 264   | +3   |||
+| pb_359_6 | 307    | 313   | +6   |||
+| pb_359_7 | 297    | 307   | +10  |||
+| pb_359_8 | 257    | 259   | +2   |||
 
 ## pb_359_6 Plasmids
 * Individually inputted into Pathway Tools
@@ -6450,3 +6450,62 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 | 5       | 142,107   | 152           | -         | 5        |
 | 6       | 99,245    | 93            | -         | 8        |
 | 7       | 92,794    | 88            | -         | 6        |
+
+# 2 March 2017
+
+## pb_359_6 Plasmids
+* Do the plasmids provide functions that the chromosome doesn't?
+ * No unique pathways in plasmid 1
+ * **arsenate detoxification II (glutaredoxin)** unique to plasmid 2
+  * Only 'arsen' search result on the chromosome - **arsenite oxidation II (respiratory)**
+  * False positive... (see below)
+ * **NAD biosynthesis I (from aspartate)** unique to plasmid 3
+  * Only 'NAD biosynthesis' search result on the chromosome - **NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde**
+  * Another false positive... (see below)
+ * No unique pathways in plasmid 4
+ * No unique pathways in plasmid 5
+ * No unique pathways in plasmid 6
+ * No unique pathways in plasmid 7
+ * No unique proteins in any plasmid
+
+* The files compared to the plasmid files were for the whole genome;
+predictions for plasmids are changing depending on the presence of absence of the chromosome...
+ * Arsenate oxidation II (respiratory) - predicted genes (full) - aioA_2, aioA_1, aioB
+ * Arsenate detoxification II (glutaredoxin) - predicted genes (plasmid 2) - arsC (missing 3.6.3.16)
+  * arsC also exists on the chromosome...
+
+ * NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde - predicted genes (full) - nadC, nadD (also MOLFBGNK_02398), nadE
+ * NAD biosynthesis I (from aspartate) - predicted genes (plasmid 3) - nadB, nadA, nadC; lower part of the pathway missing (6.3.1.5 not covered by chromosome;
+   2.7.7.18 and 6.3.5.1 are covered)
+  * Seems to be another false positive...
+
+
+* Double-checked plasmid sizes of Sulfitobacter sp. AM1-D1
+ * Plasmids not in size order; this strain also contains some large plasmids (largest 348,874 bp)
+ * "Complete genome sequence of Sulfitobacter sp. AM1-D1, a toxic bacteria associated with marine dinoflagellate Alexandrium minutum in East China Sea"
+  * Sadly, paper has not been published yet (submitted Dec 2016)
+
+* Sulfitobacter guttiformis has three plasmids, including one megaplasmid
+
+
+* Pathway Tools analysis rerun using just pb_359_6 chromosome; pathway and protein lists exported
+
+* Study on number and size of plasmids (within Enterobacteriaceae, not Rhodobacteraceae)
+ * http://www.sciencedirect.com/science/article/pii/S0147619X02001075
+ * "From 0 to 7 co-resident plasmids were detected within individual bacterial strains"
+  * 7 is at the top end, so Sulfitobacter's other contigs may truly be plasmids...
+  * Plasmids greater than 256 Kbp found (cf. ~428 Kbp of pb_359_6 largest plasmid)
+* Megaplasmids present in Sinorhizobium (2x plasmids greater than 1 Mb)
+ * https://academic.oup.com/femsec/article-lookup/doi/10.1111/j.1574-6941.2008.00505.x
+ * "However, these data do raise the possibility that plasmid size is under the same ecological constraints as chromosome size,
+   with larger genomes associated with more complex, heterogeneous environments, such as soil."
+* Megaplasmids seen in other Rhodobacteraceae
+ * Silicibacter pomeroyi has a megaplasmid of ~491 Kbp
+
+* Problem - is there evidence of large plasmids AND high numbers of different plasmids in the same species/strain?
+
+## Pathway Tools
+Pathway Hole Filler can take 8+ hours; try on plasmid, let chromosomes run overnight
+* Smallest pb_359_6 plasmid has too few pathways/proteins to act as training data; need at least 50.
+* Running on Sphingorhabdus (pb_359_4), as it is both the smallest chromosome and has the lowest no. of contigs.
+ * Process took about an hour; selected top candidate in all cases, and rejected any pathways with less than half of components.

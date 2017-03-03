@@ -6423,13 +6423,13 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 
 | Sample   | Before | After | Diff | PHF | Diff |
 |----------|--------|-------|------|-----|------|
-| pb_359_2 | 284    | 290   | +6   |||
-| pb_359_3 | 303    | 305   | +2   |||
+| pb_359_2 | 284    | 290   | +6   | 296 | +6   |
+| pb_359_3 | 303    | 305   | +2   | 311 | +6   |
 | pb_359_4 | 237    | 241   | +4   | 249 | +8   |
-| pb_359_5 | 261    | 264   | +3   |||
-| pb_359_6 | 307    | 313   | +6   |||
-| pb_359_7 | 297    | 307   | +10  |||
-| pb_359_8 | 257    | 259   | +2   |||
+| pb_359_5 | 261    | 264   | +3   | 271 | +7   |
+| pb_359_6 | 307    | 313   | +6   | 321 | +8   |
+| pb_359_7 | 297    | 307   | +10  | 320 | +13  |
+| pb_359_8 | 257    | 259   | +2   | 268 | +9   |
 
 ## pb_359_6 Plasmids
 * Individually inputted into Pathway Tools
@@ -6509,3 +6509,17 @@ Pathway Hole Filler can take 8+ hours; try on plasmid, let chromosomes run overn
 * Smallest pb_359_6 plasmid has too few pathways/proteins to act as training data; need at least 50.
 * Running on Sphingorhabdus (pb_359_4), as it is both the smallest chromosome and has the lowest no. of contigs.
  * Process took about an hour; selected top candidate in all cases, and rejected any pathways with less than half of components.
+
+# 3 March 2017
+
+## Blast
+* Blast pb_359_6 against Sulfitobacter sp. AM1-D1
+ * Plenty of hits, but not many huge, almost-perfect matches (a lot of the hits on the chromosome seem to contain ~1% gaps)
+
+## Pathway Hole Filling
+* Continue to use Pathway Hole Filler on samples (ensure that a new version number of each KB is created for this)
+
+## To do
+* Check for any informative differences now that Assign Probable Enzymes and Pathway Hole Filler have been run.
+* Compare results of VirSorter and PHASTER.
+* Work on poster and report.

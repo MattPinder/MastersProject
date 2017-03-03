@@ -74,6 +74,7 @@ misc elements, whereas the secondary file contained only CDS and sometimes tRNA 
 This version is a branch of version 4.5 which, as well as overwriting hypothetical entries in the
 primary input, also overwrites unnamed entries in the primary input if the secondary input contains a named entry at the same locus.
 The hope with this version is that named gene predictions will allow for more numerous and more accurate pathway predictions.
+* This version now includes the fix present in v4.6, whereby 'Both entries hypothetical' notes don't propagate.
 
 ## Usage
 
@@ -116,5 +117,8 @@ The hope with this version is that named gene predictions will allow for more nu
 * Version 4.5
  * Added additional parameters to account for unusual bracketing of values in GenBank libraries interpreted by BioPython
  * **This version was the basis for the alternative version, GenBank_Consensus_Names.py**
+* Version 4.6
+ * 'Both entries hypothetical' notes generated in previous GenBank_Consensus steps no longer transferred to subsequent steps
 * GenBank_Consensus_Names
  * Alterations made so that a named gene would be selected in preference to an unnamed one at the same locus
+ * Added v4.6 feature where 'Both entries hypothetical' notes don't propagate

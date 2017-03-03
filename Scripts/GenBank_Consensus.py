@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#GenBank Consensus Generator, version 4.5
+#GenBank Consensus Generator, version 4.6
 
 #Work still needed: Format the Translation entry of each record so that it adheres
 #to the standard format of max. line length 79 characters
@@ -135,7 +135,7 @@ def WriteRecord(record,locus):
         	        Consensus.write("                     /inference=\"" + re.sub("\['|'\]|\[\"|\"\]","",inferences) + "\"\n")
         if "note" in record.features[locus].qualifiers:
                 for notes in record.features[locus].qualifiers['note']:
-			if not re.sub("\['|'\]|\[\"|\"\]","",notes).endswith(".gb") and not re.sub("\['|'\]|\[\"|\"\]","",notes).endswith(".gbk"):
+			if not re.sub("\['|'\]|\[\"|\"\]","",notes).endswith(".gb") and not re.sub("\['|'\]|\[\"|\"\]","",notes).endswith(".gbk") and not re.sub("\['|'\]|\[\"|\"\]","",notes).endswith("hypothetical"):
 	                        Consensus.write("                     /note=\"" + re.sub("\['|'\]|\[\"|\"\]","",notes) + "\"\n")
 	if not str(Record1.features[locus1].location) in File2Locations:
 		Consensus.write("                     /note=\"" + "Only found in " + GenBank1 + "\"\n")

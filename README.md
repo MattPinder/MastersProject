@@ -6523,3 +6523,64 @@ Pathway Hole Filler can take 8+ hours; try on plasmid, let chromosomes run overn
 * Check for any informative differences now that Assign Probable Enzymes and Pathway Hole Filler have been run.
 * Compare results of VirSorter and PHASTER.
 * Work on poster and report.
+
+# 6 March 2017
+
+## PHASTER vs VirSorter
+* pb_359_2
+ * PHASTER prediction locations: 667953-681826, 3056898-3082821, 3609563-3684676 (All intact)
+ * VirSorter prediction locations: 3610619-3693782 (cat 5), 2982393-3083217 (cat 6)
+  * Two potential matches; PHASTER predicts one more sequence (scored 140/150, but only 18 proteins present)
+
+* pb_359_3
+ * PHASTER prediction locations: 60063-86985 (incomplete), 107037-127863 (incomplete), 1708018-1725675 (intact), 2554203-2572760 (questionable)
+				 2754039-2758904 (incomplete), 3665970-3700784 (intact) (+ Plasmid 1 - 61435-79659 (incomplete))
+ * VirSorter prediction locations: 3084744-3178263 (cat 5), 3670268-3705289 (cat 5), 2495680-2580684 (cat 5) (all chromosome)
+                                   3792356-3836998 (cat 6), 2353020-2408937 (cat 6), 3352207-3404798 (cat 6), 826707-869949 (cat 6) (all chromosome)
+  * Two potential matches, one slightly tenuous; overall, not much match-up between the two predictions
+   * **Double-check the prediction methods for the two programs**
+
+* pb_359_4
+ * PHASTER prediction locations: 1788211-1822735 (incomplete), 2885186-2900516 (intact)
+ * VirSorter prediction locations: 222024-275593 (cat 5), 2172724-2202648 (cat 6)
+  * No overlap
+
+* pb_359_5
+ * PHASTER prediction locations: 2007744-2045050 (incomplete)
+ * VirSorter prediction locations: 2557585-2612619 (cat 5)
+  * No overlap
+
+* pb_359_6
+ * PHASTER prediction locations: 2070068-2092886 (questionable) (+ Plasmid 1 - 	36405-69679 (intact); Plasmid 3 - 223862-249633 (incomplete);
+				 Plasmid 5 - 118518-129108 (incomplete))
+ * VirSorter prediction locations: 2068135-2080179 (cat 5), 1718446-1731079 (cat 5) (+ Plasmid 1 - 316148-414273 (cat 6))
+  * Two potential matches
+
+* pb_359_7
+ * PHASTER prediction locations: 1720004-1743048 (questionable), 3102869-3117957 (intact), 3498867-3508923 (incomplete), 4649429-4662956 (incomplete)
+				 (+ Plasmid 1 - 2509-36730 (intact), 279460-305254 (incomplete); Plasmid 3 - 54137-60779 (incomplete))
+ * VirSorter prediction locations: 3376495-3395782 (cat 5), 3179443-3194320 (cat 6), 3878522-3896803 (cat 6)
+  * Hits in the right areas, but no direct overlap
+
+* pb_359_8
+ * PHASTER prediction locations: 3802794-3809819 (questionable), 4318764-4331621 (questionable)
+ * VirSorter prediction locations: 443338-516457 (cat 6)
+  * No overlap
+
+* The two methods appear to have comparable detection ability for phages; unsure about prophages, as the VirSorter paper doesn't mention its categories 4-6
+
+## Pathway Tools
+* DL and compare pathway/protein lists between v1.0 and v1.2 databases
+* Wrote a script to reformat
+
+## Compare old and new pathway/protein files
+Interesting observations:
+* pb_359_4 now appears to show a cellulose biosynthesis pathway
+ * Only the bcsC subunit... bcsA and bcsB are 'necessary and sufficient' to form cellulose chains in vitro.
+* pb_359_6 now appears to show a polyethylene terephthalate (PET) degradation pathway
+ * One of the two components is currently predicted, so not a definite...
+* pb_359_7 now appears to show cellulose biosynthesis AND polyethylene terephthalate (PET) degradation pathways
+ * As with pb_359_4, only bcsC currently predicted
+ * As with pb_359_6, only one PET degradation component currently predicted
+* Cardiolipin biosynthesis I has been added to all species' pathway lists
+* Apparently no interesting (from the perspective of this project) new pathways inferred from the refinement steps

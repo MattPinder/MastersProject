@@ -6584,3 +6584,30 @@ Interesting observations:
  * As with pb_359_6, only one PET degradation component currently predicted
 * Cardiolipin biosynthesis I has been added to all species' pathway lists
 * Apparently no interesting (from the perspective of this project) new pathways inferred from the refinement steps
+
+# 7 March 2017
+
+## NCBI
+Upload sequence (and annotation?) to NCBI for pb_359_2
+* https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/
+* Check conventions for naming annotation loci
+ * Cannot contain underscores, so will try to register ROSMUCR3
+ * This alteration has been made in the GenBank file, pending acceptance
+
+Steps to follow:
+1. Establish a BioProject (including all S. marinoi microbiome project samples?)
+2. Register each organism as a BioSample (can be submitted in batch if required)
+3. 
+
+
+## Things to check
+* At locus 00589 is a gene nylB'. Why is there an apostrophe??
+* At locus 01105 is a gene hdl IVa. How to deal with the space??
+* At locus 01742 is a gene sat/cysC. Is this valid??
+* At locus 02210 is a gene Y2-aiiA. Is this valid??
+* At locus 03888 is a gene absAa. Is this valid??
+
+* Remove /inference fields which say 'similar to AA sequence:[custom database]'
+
+* Start from `grep "/product=\"H" test | sort | uniq`
+ * Use `sed -i 's/\"Imely/\"imely/g' test` format to replace upper-case beginnings

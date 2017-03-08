@@ -6611,3 +6611,90 @@ Steps to follow:
 
 * Start from `grep "/product=\"H" test | sort | uniq`
  * Use `sed -i 's/\"Imely/\"imely/g' test` format to replace upper-case beginnings
+
+# 8 March 2017
+
+## NCBI
+* Remember to add grants to the BioProject
+* Need raw reads - available in H5 format from SMRT portal, but impractical to move these via repository; access denied to relevant area on Albiorix...
+ * Where is base modification file? Would this come from Falcon output or from Resequencing?
+* Site to convert GenBank files to .tbl and .fsa: https://chlorobox.mpimp-golm.mpg.de/GenBank2Sequin.html
+* Submission to NCBI requires a protein_id field of format	gnl|XXXX|locus_tag	for CDS entries, where XXXX is a unique centre identifier
+* No obvious way to add this, so will attempt to make a Python script for it
+ * Use GotUniMarDep as centre identifier; can always change with `sed` later
+
+* Certain fields still need to be removed from the .tbl files
+ * transl_table
+ * codon_start
+* Strain needs to be changed in .fsa files
+* Header and filename needs to be checked on both .tbl AND .fsa files
+
+### Submission guidelines
+
+* "Your lab must have sequenced the genome or paid to have it sequenced or been part of the collaboration that sequenced it.
+  You cannot submit a genome that you have downloaded from a web site or similar place."
+ * COMPLETE
+
+* "The sequence submission must represent a sequence that occurs biologically in the organism. Do not randomly combine the contigs to create a single sequence;
+  you must keep them separate (a traditional WGS submission) or join them with runs of Ns into the correct order and orientation (a gapped WGS submission).
+  If you keep them separate in a traditional submission, you can provide the information to assemble them into scaffolds and/or chromosomes or plasmids
+  with an AGP file (//www.ncbi.nlm.nih.gov/genbank/wgs.submit#agp)."
+ * COMPLETE
+
+* "Register the source information for each genome in the BioSample database. Multiple BioSamples can be pre-registered at once, with the Batch option.
+  For isolated unicellular organisms, chose the appropriate Pathogen package (Clinical or host-associated pathogen OR Environmental, food or other pathogen)
+  or the Microbe package. If the same sample is used for two different genome assemblies, then use the same BioSample for both."
+ * BIOSAMPLE REGISTRATION ONGOING; MUST DOUBLE-CHECK DETAILS
+
+* "Each genome must belong to a BioProject. Genomes sequenced as part of the same research effort can belong to a single multi-isolate or to a multi-species
+  BioProject.  When more BioSamples are added to a BioProject, the assigned locus_tag prefixes are added to the locustagprefix.txt file in the BioProject
+  submission portal, https://submit.ncbi.nlm.nih.gov/subs/bioproject/."
+ * BIOPROJECT REGISTRATION ONGOING; MUST DOUBLE-CHECK DETAILS
+
+* "Raw reads should be submitted to SRA. If the genome was sequenced using PacBio sequencing technology, please also submit to SRA the base modification files,
+  eg the motif_summary.csv file. If you have any questions about SRA, contact sra@ncbi.nlm.nih.gov."
+ * FIND RAW READS ON ALBIORIX (DOWNLOAD FROM SMRT PORTAL IF NECESSARY)
+ * FIND BASE MODIFICATION FILES FROM FALCON/SMRT PORTAL?
+
+* "Annotation is not required, but if annotation is provided it must be biologically valid and the product names should follow the
+  UniProt-Protein Naming Guidelines."
+ * SEEMS TO BE COMPLETE NOW
+
+* "NCBI's Prokaryotic Genomes Annotation Pipeline (NCBI_PGAP) is used to annotate prokaryotic RefSeq genomes and is available for GenBank submissions, by request.
+  No changes by the submitter are needed to make this annotation ready for GenBank submission. Note that all complete prokaryotic genomes will be run through
+  NCBI_PGAP for a basic integrity check, to see that the genome contains some required elements like RNAs and has low levels of pseudogenes/frameshifted genes.
+  The genome will not be released with this annotation unless you ask us to include it."
+ * NOT REQUIRED; ANNOTATION DONE VIA PROKKA
+
+* "Provide relevant chromosome, plasmid or organellar assignment information for any sequences in the fasta definition line, as described below."
+ * ONGOING
+
+### Data files
+1. Fasta File
+ * "Put the sequences into fasta format of the sequences. These files have the suffix .fsa. Each sequence has a definition line beginning with a '>' and a unique
+   identifier, eg contig001, contig002, etc."
+ * PROVISIONALLY COMPLETE, MAY NEED TO BE CHECKED AND REDONE...
+
+2. "A template file with submitter, publication, BioProject and BioSample information."
+ * NEEDS TO BE COMPLETED; SEE TEMPLATE
+
+3. "The Genome-Assembly-Data Structured Comment which includes the assembly method and version, the genome coverage and the sequencing technologies can be
+    created on the Structured Comment Template page."
+ * NEEDS TO BE COMPLETED; SEE TEMPLATE
+
+4. "Annotation files, if appropriate. These correspond to and have the same basenames as the .fsa files, but have the suffix .tbl. The .tbl files have a 5-column
+   tab-delimited format, as described in the annotation instruction pages. Be sure to read the annotation requirements in the appropriate annotation guidelines."
+ * COMPLETE
+
+5. "Quality scores of the sequences. These files correspond to and have the same basenames as the .fsa files, but have the suffix .qvl.
+   The quality scores are optional, but desired."
+ * QUALITY SCORES UNAVAILABLE...
+
+## To do
+
+* Finish registering BioProject and BioSample (double-check details with Mats)
+* Obtain raw reads and base modification files from SMRT Portal/Falcon file
+* Check that fasta and contig names are acceptable
+* Complete general template
+* Complete Genome-Assembly-Data Structured Comment
+* Follow the 'Create your submission' instructions [here] (https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)

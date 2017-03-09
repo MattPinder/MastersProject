@@ -1,17 +1,20 @@
 # Sequence Reverse
 
 ## Function
+
 Cuts a sequence in half and reattaches them in the opposite order, i.e.:
 * A------B
 * A---||---B
 * ---BA---
 
 ## Purpose
+
 Rearrangement of sequences to check coverage levels and determine whether
 a contig is circular, when used as a reference sequence for the Resequencing
 protocol on the SMRT Portal.
 
 ## Usage
+
 `Sequence_Reverse.py [input] [output]`
 
 * input: Specify the input fasta file.
@@ -29,14 +32,17 @@ protocol on the SMRT Portal.
 # NCBI Downloader
 
 ## Function
+
 Downloads files of the chosen type from the NCBI ftp site.
 
 ## Purpose
+
 Downloading dozens of files for comparative studies (e.g. generating phylogenies)
 can be time-consuming, so this script requires a file listing the desired genera,
 and the file extension of the desired file type.
 
 ## Usage
+
 `NCBI_Downloader.py [list] [filetype]`
 
 * list: File containing a list of bacterial genera.
@@ -62,6 +68,7 @@ Generate a consensus between two GenBank files; if an entry in the primary input
 the second GenBank file can fill in the blank if its own entry isn't hypothetical.
 
 ## Purpose
+
 This script was written for the specific purpose of combining two GenBank files generated using
 the Prokka prokaryotic annotation tool, which have been annotated using slightly different databases,
 and therefore contain slightly different information.
@@ -122,3 +129,32 @@ The hope with this version is that named gene predictions will allow for more nu
 * GenBank_Consensus_Names
  * Alterations made so that a named gene would be selected in preference to an unnamed one at the same locus
  * Added v4.6 feature where 'Both entries hypothetical' notes don't propagate
+
+# GenBank_to_NCBI_tbl.py (formerly protein_id_Adder.py)
+
+## Function
+
+* GenBank_to_NCBI_tbl.py - Converts a GenBank file to a .tbl file, with the addition of the `protein_id` field.
+ * (protein_id_Adder.py - Adds a `protein_id` field to GenBank files, based on the specified unique centre identifier)
+
+## Purpose
+
+NCBI submissions require that each CDS locus has a `protein_id` field. This script converts the GenBank file into a .tbl file,
+while adding a `protein_id` field to the relevant entries.
+
+## Syntax
+
+`GenBank_to_NCBI_tbl.py [-h] file centreID`
+
+* file: File path of GenBank to be converted
+* centreID: Enter unique centre identifier, to be used in the protein_id field
+
+## Limitations
+As with GenBank_Consensus.py, this script is only designed for single-contig GenBank files. If this is not the expectation of NCBI's submission portal,
+the files can be concatenated afterwards.
+
+## Version History
+* Version 1 (protein_id_Adder.py)
+ * Copies a GenBank file exactly, adding the `protein_id` field to CDS entries
+* Version 2 (GenBank_to_NCBI_tbl.py)
+ * Name changed; converts a GenBank file into a .tbl file, adding the `protein_id` field to CDS entries

@@ -6622,6 +6622,7 @@ Steps to follow:
 * Submission to NCBI requires a protein_id field of format	gnl|XXXX|locus_tag	for CDS entries, where XXXX is a unique centre identifier
 * No obvious way to add this, so will attempt to make a Python script for it
  * Use GotUniMarDep as centre identifier; can always change with `sed` later
+ * Written protein_id_Adder.py script for this purpose
 
 * Certain fields still need to be removed from the .tbl files
  * transl_table
@@ -6680,7 +6681,7 @@ Steps to follow:
 
 3. "The Genome-Assembly-Data Structured Comment which includes the assembly method and version, the genome coverage and the sequencing technologies can be
     created on the Structured Comment Template page."
- * NEEDS TO BE COMPLETED; SEE TEMPLATE
+ * COMPLETE - DOWNLOADED AS genome.asm
 
 4. "Annotation files, if appropriate. These correspond to and have the same basenames as the .fsa files, but have the suffix .tbl. The .tbl files have a 5-column
    tab-delimited format, as described in the annotation instruction pages. Be sure to read the annotation requirements in the appropriate annotation guidelines."
@@ -6696,5 +6697,29 @@ Steps to follow:
 * Obtain raw reads and base modification files from SMRT Portal/Falcon file
 * Check that fasta and contig names are acceptable
 * Complete general template
-* Complete Genome-Assembly-Data Structured Comment
+ * Specifically, Sequence Authors
 * Follow the 'Create your submission' instructions [here] (https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
+
+# 9 March 2017
+
+## protein_id_Adder.py
+* Redo script to simply output the file as a .tbl file...
+ * Version 2 of the script has been written, and appears to be working as intended
+
+## NCBI
+Be sure to double-check naming conventions...
+
+## Leukotoxin
+* As the pb_359_2 leukotoxin genes were just labelled as 'leukotoxin', genes of similar function may have been
+found in the other species, but by a different name. Grep alternative search terms based on the BLAST results.
+
+ * 5' nucleotidase - fairly frequent in other species
+ * hemolysin-type calcium-binding region - common
+ * type I secretion protein - common primarily among Rhodobacteraceae
+ * putative calcium-binding proteins - relatively uncommon
+
+ * aggregation factor core protein MAFp3 - no other matches
+ * large exoprotein - no other matches, but vague
+ * rhizobiocin/RTX toxin - no other matches to rhizobiocin
+ * nidogen, extracellular region - no other matches
+

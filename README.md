@@ -6723,3 +6723,8 @@ found in the other species, but by a different name. Grep alternative search ter
  * rhizobiocin/RTX toxin - no other matches to rhizobiocin
  * nidogen, extracellular region - no other matches
 
+# 10 March 2017
+
+## To do
+If system will cooperate, rerun 10% BLASTs on the final assemblies...
+* Failing that, use results from original HGAP assemblies (this is stated in the report...)

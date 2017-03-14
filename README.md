@@ -6728,3 +6728,85 @@ found in the other species, but by a different name. Grep alternative search ter
 ## To do
 If system will cooperate, rerun 10% BLASTs on the final assemblies...
 * Failing that, use results from original HGAP assemblies (this is stated in the report...)
+
+# 13 March 2017
+
+## NCBI Submission
+
+* Finish registering BioProject and BioSample (double-check details with Mats)
+* Obtain raw reads and base modification files from SMRT Portal/Falcon file
+* Check that fasta and contig names are acceptable
+* Complete general template
+ * Specifically, Sequence Authors
+* Follow the 'Create your submission' instructions [here] (https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
+
+## More functional searches
+* Siderophores
+ * Marinobacter and Sulfitobacter seem most likely to produce siderophores
+  * Both species contain a multitude of required genes - High numbers of hits when grepping 'siderophore' (including on Sulfitobacter plasmids),
+    and presence of related genes checked (http://onlinelibrary.wiley.com/doi/10.1046/j.1365-2958.2002.02951.x/full)
+   * Fhu hydroxamate uptake family - fhuABCD in Marinobacter, fhuAC in Sulfitobacter
+   * TonB (energy transducer) present in both
+  * Marinobacter siderophore cluster (serobactin) noted by antiSMASH
+  * Sulfitobacter siderophore cluster (vicibactin) noted by antiSMASH
+  * 'Putative siderophore biosynthesis protein SbnA' noted for Marinobacter
+  * 'Enterobactin synthase component D' noted for Sulfitobacter
+
+ * Pathway Tools
+  * Marinobacter - 2/4 components predicted for aerobactin biosynthesis
+   * 5/7 components predicted for enterobactin biosynthesis
+  * Sulfitobacter - 2/4 components predicted for aerobactin biosynthesis
+
+ * Roseovarius and Sphingorhabdus - enterobactin biosynthesis predicted
+  * Roseovarius - 4/7 components predicted
+  * Sphingorhabdus - 3/7 components predicted
+
+ * Curiously, more species seem to code for 'Vibriobactin utilization protein' ViuB than actually produce it.
+  * Multiple bacteria scrounging off of two species actually producing vibriobactin/siderophore?
+   * Xenosiderophores - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3832793/
+
+* Auxins - indole-3-acetate / indole-3-acetic acid biosynthesis pathway
+ * Plant hormone, seen in other diatom-microbe interactions
+ * Roseovarius - 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
+ * Marinobacter - 1/1 predicted for indole-3-acetate biosynthesis V (bacteria and fungi)
+ * Sulfitobacter - 2/2 predicted for indole-3-acetate biosynthesis III (bacteria)
+  * 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
+ * Antarctobacter - 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
+  * 1/1 predicted for indole-3-acetate biosynthesis V (bacteria and fungi)
+
+* Chitin degradation II (Vibrio) pathway
+ * Chitin degradation demonstrated in at least one algicidal species - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4763246/
+ * Roseovarius - 2/4 components predicted
+ * Loktanella - 2/4 components predicted
+ * Sphingorhabdus - 2/4 components predicted
+ * Sulfitobacter - 2/4 components predicted
+ * Antarctobacter - 2/4 components predicted
+ * Arenibacter - 2/4 components predicted
+ * As the 2 components predicted are the same protein, and the same two steps are predicted in each example, unconvincing...
+
+(Replace R05AC with RO5AC)
+* Complete Grants section of BioProject
+* Generating modification files on SMRT Portal... Check tomorrow
+
+* BioSample submitted, awaiting confirmation...
+
+## To do
+* Look into other experiments which have investigated diatom microbiomes
+* Check SMRT Portal, download relevant modification files for SRA submission
+* Rename contigs? e.g. RosMucR3_chrom, RosMucR3_longplas, RosMucR3_shortplas?
+* Check xml requirements
+
+# 14 March 2017
+
+## NCBI
+* Biosample accession - SAMN06564448
+
+* Files required for SRA submission:
+ * modifications.csv
+ * motifs.gff
+ * motifs_summary.csv
+* Files downloaded; need to be decompressed
+
+
+## Diatom-bacteria interactions
+* Look into 'roseobacticides'

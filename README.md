@@ -6810,3 +6810,31 @@ If system will cooperate, rerun 10% BLASTs on the final assemblies...
 
 ## Diatom-bacteria interactions
 * Look into 'roseobacticides'
+
+# 15 March 2017
+
+## NCBI
+Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_359-2/run1/B01_1/Analysis_Results
+
+* XML preparation is unnecessary - see email from SRA
+
+* Checksums for files
+ * RosMucR3_modifications.csv	9499b9e417f2866f2cf0b04461b90eab
+ * RosMucR3_motifs.gff		a4a79df700dcc853d3e874d6e0562b7f
+ * RosMucR3_motif_summary.csv	1b0ace9555cad09b954e150fe4315749
+
+* Seems like .fsa files may need to be merged - awaiting reply from NCBI
+ * If this is the case, what about the .tbl files?
+* tbl2asn may need updating...
+
+* tbl2asn command to be run from C:\Users\matt_\Desktop\PROJECT\Skeletonema_marinoi_microbiome_project\SubmissionPreparations\RosMucR3\NCBI
+ * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucR3_Template.sbt -M n -Z discrep
+
+* tbl2asn run on Windows, has returned a mass of error messages for the pb_359_2 records; attempt to solve
+ * Protein product containing '?'/ ending in '_'
+  * Offending character removed; change noted in note field
+ * Protein product named 'Agrobacterium tumefaciens protein'
+  * Renamed as 'hypothetical protein' (most BLASTp results concur); change noted in note field
+
+* Checking additional errors
+ * https://blast2go-apps.github.io/ncbi-submission/user_manual/NCBI_Submission_b2g_App_DOC.pdf

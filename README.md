@@ -6828,7 +6828,7 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
 * tbl2asn may need updating...
 
 * tbl2asn command to be run from C:\Users\matt_\Desktop\PROJECT\Skeletonema_marinoi_microbiome_project\SubmissionPreparations\RosMucR3\NCBI
- * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucR3_Template.sbt -M n -Z discrep
+ * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucR3_Template.sbt -M n -Z discrep -w RosMucR3_StructuredComment.asm
 
 * tbl2asn run on Windows, has returned a mass of error messages for the pb_359_2 records; attempt to solve
  * Protein product containing '?'/ ending in '_'
@@ -6838,3 +6838,17 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
 
 * Checking additional errors
  * https://blast2go-apps.github.io/ncbi-submission/user_manual/NCBI_Submission_b2g_App_DOC.pdf
+
+# 16 March 2017
+
+## NCBI
+* Receiving a lot of errors about wrong start/stop codons, but no data on WHICH genes are causing the error...
+ * Concatenating all contigs into one file doesn't work
+ * Issue with printing locations of sequences on the complementary strand
+  * GenBank to .tbl script fixed
+
+* All other errors fixed; only major issue remaining is DBLinkProblem; this may fix itself once a BioProject is assigned
+ * Template will need to be redone afterwards
+ * Conflicting gene names present but harder to fix - 555 instances
+ * Small, non-critical issues addressed such as products ending in ] and _, and some instances of products of kDa weights
+  * Where relevant, original names have been included in a note

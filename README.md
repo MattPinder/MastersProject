@@ -6852,3 +6852,21 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
  * Conflicting gene names present but harder to fix - 555 instances
  * Small, non-critical issues addressed such as products ending in ] and _, and some instances of products of kDa weights
   * Where relevant, original names have been included in a note
+
+# 17 March 2017
+
+## pb_359_7
+* Double-check classification of pb_359_7 as Antarctobacter; 16S check not convincing...
+ * Similarities to genera Ruegeria and Mameliella
+ * Based on PhyloPhlAn analysis, more closely related to Mameliella (Ruegeria is in another clade, closer to Sulfitobacter)
+ * 16S shows pb_359_7 sequences assorting with Antarctobacter; Mameliella and Ruegeria form their own clade
+  * Download more 16S sequences for a broader survey
+ * Re-classify as Mameliella?
+
+## Report
+* Add results of 16S searches; tabulate
+
+## To do
+* Add 16S results table to report
+* Continue 16S checks on pb_359_7
+ * List of sequences saved; may need to reverse-complement some of these...

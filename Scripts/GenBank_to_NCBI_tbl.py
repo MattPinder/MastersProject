@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #GenBank to NCBI .tbl convertor
-#Formerly protein_id Adder, version 2.0
+#Formerly protein_id Adder, version 2.1
 
 
 #Import relevant modules
@@ -66,11 +66,18 @@ for locus in range(1,allFeatures):
 	end = colon[2]
 
 	if INPUT.features[locus].type == "CDS":
-		OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
+
+		if "-" in str(INPUT.features[locus].location):
+			OUTPUT.write(end + "\t" + str(begin) + "\tgene\n")
+		elif "+" in str(INPUT.features[locus].location):
+			OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
 		if "gene" in INPUT.features[locus].qualifiers:
 			OUTPUT.write("\t\t\tgene\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['gene'])) + "\n")
 		OUTPUT.write("\t\t\tlocus_tag\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['locus_tag'])) + "\n")
-		OUTPUT.write(str(begin) + "\t" + end + "\tCDS\n")
+		if "-" in str(INPUT.features[locus].location):
+			OUTPUT.write(end + "\t" + str(begin) + "\tCDS\n")
+		elif "+" in str(INPUT.features[locus].location):
+			OUTPUT.write(str(begin) + "\t" + end + "\tCDS\n")
 		OUTPUT.write("\t\t\tproduct\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['product'])) + "\n")
 		
 		if "EC_number" in INPUT.features[locus].qualifiers:
@@ -87,18 +94,30 @@ for locus in range(1,allFeatures):
 		OUTPUT.write("\t\t\tprotein_id\tgnl|" + CENTRE_ID + "|" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['locus_tag'])) + "\n")
 
 	if INPUT.features[locus].type == "rRNA":
-		OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
+		if "-" in str(INPUT.features[locus].location):
+			OUTPUT.write(end + "\t" + str(begin) + "\tgene\n")
+		elif "+" in str(INPUT.features[locus].location):
+			OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
 		OUTPUT.write("\t\t\tlocus_tag\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['locus_tag'])) + "\n")
-		OUTPUT.write(str(begin) + "\t" + end + "\trRNA\n")
+		if "-" in str(INPUT.features[locus].location):
+			OUTPUT.write(end + "\t" + str(begin) + "\trRNA\n")
+		elif "+" in str(INPUT.features[locus].location):
+			OUTPUT.write(str(begin) + "\t" + end + "\trRNA\n")
 		OUTPUT.write("\t\t\tproduct\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['product'])) + "\n")
 		if "inference" in INPUT.features[locus].qualifiers:
                         for inferences in INPUT.features[locus].qualifiers['inference']:
                                 OUTPUT.write("\t\t\tinference\t" + re.sub("\['|'\]|\[\"|\"\]","",inferences) + "\n")
 
 	if INPUT.features[locus].type == "tRNA":
-                OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
+		if "-" in str(INPUT.features[locus].location):
+			OUTPUT.write(end + "\t" + str(begin) + "\tgene\n")
+		elif "+" in str(INPUT.features[locus].location):
+			OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
                 OUTPUT.write("\t\t\tlocus_tag\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['locus_tag'])) + "\n")
-                OUTPUT.write(str(begin) + "\t" + end + "\ttRNA\n")
+		if "-" in str(INPUT.features[locus].location):
+                        OUTPUT.write(end + "\t" + str(begin) + "\ttRNA\n")
+                elif "+" in str(INPUT.features[locus].location):
+                        OUTPUT.write(str(begin) + "\t" + end + "\ttRNA\n")
                 OUTPUT.write("\t\t\tproduct\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['product'])) + "\n")
 		if "note" in INPUT.features[locus].qualifiers:
 			for notes in INPUT.features[locus].qualifiers['note']:
@@ -108,20 +127,32 @@ for locus in range(1,allFeatures):
                                 OUTPUT.write("\t\t\tinference\t" + re.sub("\['|'\]|\[\"|\"\]","",inferences) + "\n")
 
 	if INPUT.features[locus].type == "tmRNA":
-		OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
+		if "-" in str(INPUT.features[locus].location):
+                        OUTPUT.write(end + "\t" + str(begin) + "\tgene\n")
+                elif "+" in str(INPUT.features[locus].location):
+                        OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
 		if "gene" in INPUT.features[locus].qualifiers:
                         OUTPUT.write("\t\t\tgene\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['gene'])) + "\n")
                 OUTPUT.write("\t\t\tlocus_tag\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['locus_tag'])) + "\n")
-                OUTPUT.write(str(begin) + "\t" + end + "\ttmRNA\n")
+		if "-" in str(INPUT.features[locus].location):
+                        OUTPUT.write(end + "\t" + str(begin) + "\ttmRNA\n")
+                elif "+" in str(INPUT.features[locus].location):
+                        OUTPUT.write(str(begin) + "\t" + end + "\ttmRNA\n")
                 OUTPUT.write("\t\t\tproduct\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['product'])) + "\n")
                 if "inference" in INPUT.features[locus].qualifiers:
                         for inferences in INPUT.features[locus].qualifiers['inference']:
                                 OUTPUT.write("\t\t\tinference\t" + re.sub("\['|'\]|\[\"|\"\]","",inferences) + "\n")
 
 	if INPUT.features[locus].type == "misc_RNA":
-		OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
+		if "-" in str(INPUT.features[locus].location):
+                        OUTPUT.write(end + "\t" + str(begin) + "\tgene\n")
+                elif "+" in str(INPUT.features[locus].location):
+                        OUTPUT.write(str(begin) + "\t" + end + "\tgene\n")
 		OUTPUT.write("\t\t\tlocus_tag\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['locus_tag'])) + "\n")
-		OUTPUT.write(str(begin) + "\t" + end + "\tncRNA\n")
+		if "-" in str(INPUT.features[locus].location):
+                        OUTPUT.write(end + "\t" + str(begin) + "\tncRNA\n")
+                elif "+" in str(INPUT.features[locus].location):
+                        OUTPUT.write(str(begin) + "\t" + end + "\tncRNA\n")
 		OUTPUT.write("\t\t\tncRNA_class\t" + re.sub("\['|'\]|\[\"|\"\]","",str(INPUT.features[locus].qualifiers['product'])) + "\n")
 
 

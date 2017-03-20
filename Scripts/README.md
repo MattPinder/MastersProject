@@ -23,11 +23,11 @@ protocol on the SMRT Portal.
 ## Version history
 
 * Version 1
- * Reversal of single-record fasta files
+  * Reversal of single-record fasta files
 * Version 2
- * Added code to handle multi-record fasta files
+  * Added code to handle multi-record fasta files
 * Version 3
- * Added help page
+  * Added help page
 
 # NCBI Downloader
 
@@ -47,18 +47,18 @@ and the file extension of the desired file type.
 
 * list: File containing a list of bacterial genera.
 * filetype: File extension to download. Currently tested with .faa and .gbff.
- * Note: .fna files are problematic.
+  * Note: .fna files are problematic.
 
 ## Version history
 
 * Version 1
- * Downloads .faa (amino acid fasta) files from NCBI ftp site
+  * Downloads .faa (amino acid fasta) files from NCBI ftp site
 * Version 2
- * Downloads .gbff (GenBank) files from NCBI ftp site
+  * Downloads .gbff (GenBank) files from NCBI ftp site
 * Version 3
- * Downloads specified file type from NCBI ftp site
- * Note: Tested with .faa and .gbff; other file types should work but may be problematic
-  * .fna in particular creates problems, as there are often multiple .fna files in a folder
+  * Downloads specified file type from NCBI ftp site
+  * Note: Tested with .faa and .gbff; other file types should work but may be problematic
+    * .fna in particular creates problems, as there are often multiple .fna files in a folder
 
 # GenBank Consensus Generator
 
@@ -100,42 +100,42 @@ The hope with this version is that named gene predictions will allow for more nu
 
 * The current version is only intended for use with GenBank files containing a single contig; multi-contig files will not be processed correctly.
 * The 'Translation' line of each locus is not correctly formatted; sequences are displayed on a single line rather than adding line breaks into long sequences.
- * For the intended purpose - comprehension by the program [Pathway Tools] (http://brg.ai.sri.com/ptools/) - this formatting issue is irrelevant.
+  * For the intended purpose - comprehension by the program [Pathway Tools] (http://brg.ai.sri.com/ptools/) - this formatting issue is irrelevant.
 
 ## Version history
 
 * Version 1
- * Original version with all features largely functional
+  * Original version with all features largely functional
 * Version 2
- * Condensed code by defining 'WriteRecord' function
+  * Condensed code by defining 'WriteRecord' function
 * Version 3
   * The primary input file can now be longer than the secondary input file, rather than having to have equal length
- * To account for length differences, matching records between two files now uses locus coordinates instead of locus tag
- * The summary file will now record how many loci were only present in the primary input file
+  * To account for length differences, matching records between two files now uses locus coordinates instead of locus tag
+  * The summary file will now record how many loci were only present in the primary input file
 * Version 4.1
- * Help feature added
- * Tabs no longer used when printing feature type
+  * Help feature added
+  * Tabs no longer used when printing feature type
 * Version 4.2
- * Product now also printed for non-CDS loci
+  * Product now also printed for non-CDS loci
 * Version 4.3
- * Locus tag issue fixed; if locus information is taken from the secondary input file, the locus tag from the primary file is now retained
+  * Locus tag issue fixed; if locus information is taken from the secondary input file, the locus tag from the primary file is now retained
 * Version 4.4
- * Notes generated in previous GenBank_Consensus steps ("From *.gb/*.gbk") no longer transferred to subsequent steps
+  * Notes generated in previous GenBank_Consensus steps ("From *.gb/*.gbk") no longer transferred to subsequent steps
 * Version 4.5
- * Added additional parameters to account for unusual bracketing of values in GenBank libraries interpreted by BioPython
- * **This version was the basis for the alternative version, GenBank_Consensus_Names.py**
+  * Added additional parameters to account for unusual bracketing of values in GenBank libraries interpreted by BioPython
+  * **This version was the basis for the alternative version, GenBank_Consensus_Names.py**
 * Version 4.6
- * 'Both entries hypothetical' notes generated in previous GenBank_Consensus steps no longer transferred to subsequent steps
+  * 'Both entries hypothetical' notes generated in previous GenBank_Consensus steps no longer transferred to subsequent steps
 * GenBank_Consensus_Names
- * Alterations made so that a named gene would be selected in preference to an unnamed one at the same locus
- * Added v4.6 feature where 'Both entries hypothetical' notes don't propagate
+  * Alterations made so that a named gene would be selected in preference to an unnamed one at the same locus
+  * Added v4.6 feature where 'Both entries hypothetical' notes don't propagate
 
 # GenBank_to_NCBI_tbl.py (formerly protein_id_Adder.py)
 
 ## Function
 
 * GenBank_to_NCBI_tbl.py - Converts a GenBank file to a .tbl file, with the addition of the `protein_id` field.
- * (protein_id_Adder.py - Adds a `protein_id` field to GenBank files, based on the specified unique centre identifier)
+  * (protein_id_Adder.py - Adds a `protein_id` field to GenBank files, based on the specified unique centre identifier)
 
 ## Purpose
 
@@ -155,6 +155,8 @@ the files can be concatenated afterwards.
 
 ## Version History
 * Version 1 (protein_id_Adder.py)
- * Copies a GenBank file exactly, adding the `protein_id` field to CDS entries
+  * Copies a GenBank file exactly, adding the `protein_id` field to CDS entries
 * Version 2 (GenBank_to_NCBI_tbl.py)
- * Name changed; converts a GenBank file into a .tbl file, adding the `protein_id` field to CDS entries
+  * Name changed; converts a GenBank file into a .tbl file, adding the `protein_id` field to CDS entries
+* Version 2.1
+  * Changed to print sequence coordinates for complement-strand genes in the reverse order (largest number first)

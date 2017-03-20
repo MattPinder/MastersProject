@@ -135,7 +135,7 @@ hypothetical in the .gbk file...
 Some _K. algicida_ protein sequences are present on NCBI, including some with
 gene names. Checking manually (yet again), I found that PROKKA_01500 from the
 aforemetioned .gbk file bears a resemblance to [the preprotein translocase
-subunit YajC found on NCBI] (http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
+subunit YajC found on NCBI](http://www.ncbi.nlm.nih.gov/protein/WP_050765224.1).
 Judging by where the alignment starts and ends vs. the _K. algicida_ sequence,
 the gene predictor MAY have made a mistake in the alignment...  
 _Kordia sp._:  
@@ -147,9 +147,8 @@ MVVVVYFFILAPSIKRQKKEKNFMASIKKGDRVITKSGIHGKVVELNDKDHTCVIETGAGKIKFERAALSADATLRLNKP
 
 Small victory?  
 Took a partial list of proteins labelled 'Hypothetical protein' in
-myRAST_export.xls, and ran it through [Batch Web CD-Search Tool]
-(http://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi); some of those
-labelled as specific hits included gene names; after comparing a few of these
+myRAST_export.xls, and ran it through [Batch Web CD-Search Tool](http://www.ncbi.nlm.nih.gov/Structure/bwrpsb/bwrpsb.cgi);
+some of those labelled as specific hits included gene names; after comparing a few of these
 to Oskar's V5 genbank file, found one of his with no gene name but which
 identified a heavy metal-associated domain, which agrees with the CD search's
 claim that the gene is the copper chaperone CopZ. Subsequent BLASTP gave a
@@ -550,9 +549,9 @@ P_CeleraAssembler.runCaHgap previously took ~85 minutes; now takes __~552__ minu
 
 blastx command notes:
 * -query_loc command:
- * `-query_loc X-Y`, where X and Y are the limits
- * For fasta files with a single contig, set an arbitrary number of bases to check (e.g. first 5%?)
- * For fastas with multiple contigs, use `fp.py --length --header <NAME_OF_FASTA_FILE> | sort -n -r > <NAME_OF_OUTPUT_FILE>`
+  * `-query_loc X-Y`, where X and Y are the limits
+  * For fasta files with a single contig, set an arbitrary number of bases to check (e.g. first 5%?)
+  * For fastas with multiple contigs, use `fp.py --length --header <NAME_OF_FASTA_FILE> | sort -n -r > <NAME_OF_OUTPUT_FILE>`
 to determine the length of the contigs, then set -query_loc slightly longer than the second contig
 * Use 40 cores each to speed things along (progress has been too slow when working with the WHOLE genome
 __and__ using only 10 cores, so using less material and more cores should give us faster results
@@ -630,58 +629,57 @@ One last resubmission of the three blastx jobs, this time querying 20% of the su
 
 Summary of findings from 5% and 10% queries:
 * pb_359_4
- * Both 5% and 10% queries returned the same top results; with a bit score of 2220,
+  * Both 5% and 10% queries returned the same top results; with a bit score of 2220,
 ___Sphingorhabdus sp. M41___ appears to be the closest match (hit #3 was from the same species,
 with a bit score of 1757); hit #2 was from Sphingomonadales bacterium EhC05 (bit score 1843).
- * __Current hypothesis - member of the order Sphingomonadales, potential family
+  * __Current hypothesis - member of the order Sphingomonadales, potential family
 Sphingomonadaceae, potential genus Sphingorhabdus.__
-  * Hits lower in the list (e.g. _Sphingobium sp. C100_ and _Erythrobacter_) support at least up to
+    * Hits lower in the list (e.g. _Sphingobium sp. C100_ and _Erythrobacter_) support at least up to
 the order Sphingomonadales.
- * Discovery of _Sphingorhabdus sp. M41_ published just a few months ago
-(http://www.sciencedirect.com/science/article/pii/S0168165616301961).
- * _Sphingorhabdus sp. M41_ genome size - 3,339,521 bp
- * pb_359_4 genome size - 3,492,548 bp
+  * [Discovery of _Sphingorhabdus sp. M41_ published just a few months ago](http://www.sciencedirect.com/science/article/pii/S0168165616301961).
+  * _Sphingorhabdus sp. M41_ genome size - 3,339,521 bp
+  * pb_359_4 genome size - 3,492,548 bp
 
 * pb_359_7
- * Analysis of the longest contig returned numerous hits to different genera, however the top
+  * Analysis of the longest contig returned numerous hits to different genera, however the top
 three hits for both the 5% and 10% query fell under the family Rhodobacteraceae.
- * __Current hypothesis - member of the family Rhodobacteraceae.__
- * Top hits for the second and third longest contig also all fall under the Rhodobacteraceae
+  * __Current hypothesis - member of the family Rhodobacteraceae.__
+  * Top hits for the second and third longest contig also all fall under the Rhodobacteraceae
 family, along with most of the top hits from the shortest contig; the one that didn't was still
 a member of the class Alphaproteobacteria.
- * __Further attempts at assembly may be necessary, as this results is very inconclusive.__
+  * __Further attempts at assembly may be necessary, as this results is very inconclusive.__
 
 * pb_359_8
- * Both 5% and 10% queries returned the same top results; with a bit score of 2962,
+  * Both 5% and 10% queries returned the same top results; with a bit score of 2962,
 ___Arenibacter algicola___ appears to be the closest match (hit #2 was from the same species,
 with a bit score of 2777); hit #3 was from _Cellulophaga baltica_) (bit score 2770).
- * __Current hypothesis - member of the family Flavobacteriaceae, potential
+  * __Current hypothesis - member of the family Flavobacteriaceae, potential
 genus Arenibacter.__
-  * Hits lower in the list (e.g. _Muricauda sp. MAR_2010_75_ and _Sediminicola sp. YIK13_) support
+    * Hits lower in the list (e.g. _Muricauda sp. MAR_2010_75_ and _Sediminicola sp. YIK13_) support
 at least up to the family Flavobacteriaceae.
- * _Arenibacter algicola_ known to associate with _Skeletonema costatum_ based on its initial discovery
+  * _Arenibacter algicola_ known to associate with _Skeletonema costatum_ based on its initial discovery
 (http://aem.asm.org/content/early/2013/11/04/AEM.03104-13).
- * _Arenibacter algicola_ genome size - 5,550,230 bp
- * pb_359_8 genome size - 5,839,016 bp
+  * _Arenibacter algicola_ genome size - 5,550,230 bp
+  * pb_359_8 genome size - 5,839,016 bp
 
 ### Status:
 * pb_359_1 - Assembly will go no lower than 9 polished contigs
- * Try assembling with seed read length 16k/17k, or attempt blastx analysis?
+  * Try assembling with seed read length 16k/17k, or attempt blastx analysis?
 * pb_359_2 - Assembly will go no lower than 3 polished contigs
- * Try assembling with seed read length 5k, or __attempt blastx analysis__?
+  * Try assembling with seed read length 5k, or __attempt blastx analysis__?
 * pb_359_3 - Assembly will go no lower than 5 polished contigs (with a 6 in between...)
- * Attempt blastx analysis with 18k/20k seed read length results?
+  * Attempt blastx analysis with 18k/20k seed read length results?
 * pb_359_4 - After blastx analysis, appears to belong to the order Sphingomonadales
- * Potential family Sphingomonadaceae, potential genus Sphingorhabdus)
- * Consistent with prediction in 00_data/pb_359 readme
+  * Potential family Sphingomonadaceae, potential genus Sphingorhabdus)
+  * Consistent with prediction in 00_data/pb_359 readme
 * pb_359_5 - Still waiting for assemblies to complete on account of errors...
 * pb_359_6 - Assemby will go no lower than 9 polished contigs
- * Try assembling with seed read length 5k, or attempt blastx analysis?
+  * Try assembling with seed read length 5k, or attempt blastx analysis?
 * pb_359_7 - After blastx analysis, appears to belong to the famiy Rhodobacteraceae
- * May need to attempt reassembly, as genus identity is far from certain...
+  * May need to attempt reassembly, as genus identity is far from certain...
 * pb_359_8 - After blastx analysis, appears to belong to the family Flavobacteriaceae
- * Potential genus Arenibacter (known to associate with Skeletonema)
- * Consistent with prediction in 00_data/pb_359 readme
+  * Potential genus Arenibacter (known to associate with Skeletonema)
+  * Consistent with prediction in 00_data/pb_359 readme
 
 Unable to find any good reason in the log files as to why pb_359_5-15000 continually fails; will
 wait on the results of the pb_359_5-18000 test rerun before deciding how to proceed...
@@ -706,14 +704,14 @@ output information regarding how long the job took.
 Can achieve this in retrospect with `qacct -j ####`
 
 Time to complete 5% jobs:
- * _4: ~2 hours
- * _7: ~9.5 hours
- * _8: ~3 hours
+  * _4: ~2 hours
+  * _7: ~9.5 hours
+  * _8: ~3 hours
 
 Time to complete 10% jobs:
- * _4: ~4 hours
- * _7: ~14 hours
- * _8: ~6 hours
+  * _4: ~4 hours
+  * _7: ~14 hours
+  * _8: ~6 hours
 
 Time taken is roughly equivalent to the number of contigs in the file, therefore estimate that
 the three contigs of pb_359_2 will take ~6 hours and ~12 hours respectively.
@@ -738,20 +736,19 @@ Check results for pb_359_2 blastx tests:
 * Both 5% and 10% queries returned the same top results; with a bit score of 1892 and 4826
 respectively, ___Roseovarius sp. TM1035___ appears to be the closest match (hit #2 of the 10%
 query was from the same species, with a bit score of 4812); other hits in the top 3 were:
- * _Roseovarius mucosus_ (hit #2 in 5% query; bit score 1847)
- * _Roseovarius sp. 217_ (hit #3 in 5% query; bit score 1800)
- * _Roseovarius mucosus DSM 17069_ (hit #3 in 10% query; bit score 2498)
+  * _Roseovarius mucosus_ (hit #2 in 5% query; bit score 1847)
+  * _Roseovarius sp. 217_ (hit #3 in 5% query; bit score 1800)
+  * _Roseovarius mucosus DSM 17069_ (hit #3 in 10% query; bit score 2498)
 * __Current hypothesis - member of the genus Roseovarius.__
- * Hits lower in the list (e.g. _Actibacterium atlanticum_ and _Methyloligella halotolerans_)
+  * Hits lower in the list (e.g. _Actibacterium atlanticum_ and _Methyloligella halotolerans_)
 support at least up to the class Alphaproteobacteria.
- * [Found associated with dinoflagellates] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/),
-involved in dimethylsulfoniopropionate metabolism ([DMSP metabolism in _S. marinoi_]
-(http://www.sciencedirect.com/science/article/pii/S0022098111005429)).
- * _Roseovarius sp. TM1035_ genome size - 4,209,812 bp
- * pb_359_2 genome size - 4,188,132 bp (longest contig)/ 4,415,183 (sum of polished contigs)
+  * [Found associated with dinoflagellates](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/),
+involved in dimethylsulfoniopropionate metabolism ([DMSP metabolism in _S. marinoi_](http://www.sciencedirect.com/science/article/pii/S0022098111005429)).
+  * _Roseovarius sp. TM1035_ genome size - 4,209,812 bp
+  * pb_359_2 genome size - 4,188,132 bp (longest contig)/ 4,415,183 (sum of polished contigs)
 * _Roseovarius sp. TM1035_ also appears as the top result for the second longest contig, and
 the top result of the third - _P. aquimaris_ - shares Roseovarius' family of Rhodobacteraceae.
- * __Possible need for reassembly?__
+  * __Possible need for reassembly?__
 
 Results for pb_359_2, _4 and _8 have thus far been consistent with the preliminary 16S analyses.
 
@@ -775,8 +772,8 @@ so will run assembly jobs for _1 and _3 at 16k SRL (16512 and 16513 respectively
 ### Status:
 * pb_359_1 - Attempting an assembly at 16k SRL to try and get less than 9 polished contigs
 * pb_359_2 - After blastx analysis, appears to belong to the genus Roseovarius
- * Consistent with prediction in 00_data/pb_359 readme
- * Second-longest contig matches well to the longest; shortest contig matches to neither...
+  * Consistent with prediction in 00_data/pb_359 readme
+  * Second-longest contig matches well to the longest; shortest contig matches to neither...
 * pb_359_3 - Attempting an assembly at 16k SRL to try and get less than 5 polished contigs
 * pb_359_4 - Potentially identified; see yesterday's status
 * pb_359_5 - As 15k SRL resulted in persistent failure, yet 18k continues to work,
@@ -821,7 +818,7 @@ __Current hypothesis:__ Species of Sulfitobacter, however this contradicts the r
 found in the 16S analysis (_1 WAS predicted to be Sulfitobacter, however...)
 * Some Sulfitobacter species __are__ known to associate with diatoms, however, including
 _Sulfitobacter pseudonitzschiae_, which was the the second-highest blastx result for the
-longest contig ([see article] (http://www.ncbi.nlm.nih.gov/pubmed/25278561)).
+longest contig ([see article](http://www.ncbi.nlm.nih.gov/pubmed/25278561)).
 
 __Note on blastx:__ Jobs seem to take ~1 hour per 100,000 bases (with 40 cores)
 
@@ -851,10 +848,10 @@ Will most likely move on to Falcon after the final HGAP job has completed.
 * Used subreads from job 16439
 * Five runs tried - 14k, 15k, 16k, 17k and 18k seed read length; all other options left as default
 * If I have interpreted the output correctly, all runs gave 8 contigs rather than 9 or 10 as with HGAP
- * 18k has 15 contigs...
+  * 18k has 15 contigs...
 * Aside from SRL 18k (1.1 Mb), the other runs estimated a longest contig length of ~3.6 Mb.
- * Max contig length of HGAP assembly of _1 - ~3.6 Mb.
- * Second-longest contigs range in size from ~100 Kb to 1 Mb
+  * Max contig length of HGAP assembly of _1 - ~3.6 Mb.
+  * Second-longest contigs range in size from ~100 Kb to 1 Mb
 
 | SRL | Note                  |
 |-----|-----------------------|
@@ -891,8 +888,8 @@ left as default
 | 21k   | 21      | 100997         | All linear            |
 | 22k   | 6       | 96084          | All linear            |
 
- * Max contig length of HGAP assembly of _3 between 2.1 Mb and 3.8 Mb (most results sit at 2.4 Mb)
- * Second-longest contigs from Falcon range from ~23 Kb to ~0.8 Mb
+  * Max contig length of HGAP assembly of _3 between 2.1 Mb and 3.8 Mb (most results sit at 2.4 Mb)
+  * Second-longest contigs from Falcon range from ~23 Kb to ~0.8 Mb
 
 Experimental attempt at 16,500 seed read length...  
 Results added to the above table.
@@ -917,16 +914,16 @@ Attempting a Falcon run with sample _2, using subreads from 16458
 | 9k  | 3       | 4171540        | 1 linear, 2 circular... |
 | 10k | 3       | 4176707        | 1 linear, 2 circular... |
 
- * Max contig length of HGAP assembly of _2 ~4.2 Mb
- * Second-longest contigs from Falcon 180,096 bp for all SRLs
-  * Shortest contigs all 30,281 bp
+  * Max contig length of HGAP assembly of _2 ~4.2 Mb
+  * Second-longest contigs from Falcon 180,096 bp for all SRLs
+    * Shortest contigs all 30,281 bp
 
 __Try:__ Run a blastx of the 17k pb_359_3 result; see whether the results from the 'linear'
 contig are much different to those of the 'circular' ones
 
 ### For tomorrow:
 * Check remaining results from _2 Falcon test
- * Results added to the above table
+  * Results added to the above table
 * Check results from _3 Falcon blastx analysis (if complete)
 
 # 9 September 2016
@@ -948,10 +945,10 @@ Check blastx results from Falcon run of _3
 (hit #2 was from the same species, with a bit score of 1840); hit #3 was from Roseobacter
 sp. CCS2.
 * __Current hypothesis - member of the family Rhodobacteraceae, potential genus Loktanella.__
- * Hits lower in the list (e.g. Sulfitobacter) support placement in the Rhodobacteraceae.
- * [Discovery paper] (http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.0300$
- * Loktanella vestfoldensis genome size - 3,063,691 bp
- * pb_359_2 longest contig size - 3,834,127 bp
+  * Hits lower in the list (e.g. Sulfitobacter) support placement in the Rhodobacteraceae.
+  * [Discovery paper] (http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.0300$
+  * Loktanella vestfoldensis genome size - 3,063,691 bp
+  * pb_359_2 longest contig size - 3,834,127 bp
 * Consistent with 16S analysis.
 
 | Job              | Job ID | Status  |
@@ -984,20 +981,20 @@ sp. CCS2.
 
 Where single contigs have been obtained, where did the additional contigs go...?
 * pb_359_4
- * Both the SciLifeLab assembly and our own had 1 contig and were within a kilobase of
+  * Both the SciLifeLab assembly and our own had 1 contig and were within a kilobase of
 one another in size; this should be okay.
 * pb_359_5
- * The single-contig assembly size was 4,406 Kb; the two-contig assembly size was 4,670 Kb
-  * Over 250 Kb lost
- * Compare 16520 (1 contig) and 16461 (2 contigs)
-  * The second contig in 16461 has a very high coverage (~350 vs. 200), and length ~250 Kb
-  * __Seems likely that a repeat region is the culprit, but perhaps blastn 16461 to itself to confirm?__
+  * The single-contig assembly size was 4,406 Kb; the two-contig assembly size was 4,670 Kb
+    * Over 250 Kb lost
+  * Compare 16520 (1 contig) and 16461 (2 contigs)
+    * The second contig in 16461 has a very high coverage (~350 vs. 200), and length ~250 Kb
+    * __Seems likely that a repeat region is the culprit, but perhaps blastn 16461 to itself to confirm?__
 * pb_359_8
- * The single-contig assembly size was 5,829 Kb; the two-contig assembly size was 5,924 Kb
-  * Around 100 Kb lost
- * Compare 16446 (1 contig) and SciLifeLab (2 contigs)
-  * The second contig from SciLifeLab has a very high coverage (~500 vs. 150), and length ~90 Kb
-  * __Seems likely that a repeat region is the culprit.__
+  * The single-contig assembly size was 5,829 Kb; the two-contig assembly size was 5,924 Kb
+    * Around 100 Kb lost
+  * Compare 16446 (1 contig) and SciLifeLab (2 contigs)
+    * The second contig from SciLifeLab has a very high coverage (~500 vs. 150), and length ~90 Kb
+    * __Seems likely that a repeat region is the culprit.__
 
 __To do:__
 * Write a tutorial for use of Quiver from the command line
@@ -1072,13 +1069,13 @@ Check new sample 6 and 7 assemblies
 
 _6:  
 * 12k to 5k
- * Results range from 8 contigs to 22...
- * Perhaps try a few higher SRL?
-  * Perhaps investigate around 11k; longest contig 'circular'
+  * Results range from 8 contigs to 22...
+  * Perhaps try a few higher SRL?
+    * Perhaps investigate around 11k; longest contig 'circular'
 
 _7:  
 * 21k to 5k
- * Results bottom out at 4 contigs...
+  * Results bottom out at 4 contigs...
 
 Check sample 2 Blastx:  
 * Repeats the findings of the HGAP assembly's Blastx; likely Roseovarius
@@ -1086,9 +1083,9 @@ Check sample 2 Blastx:
 Check new sample 3 Falcon assembly:  
 * 14k to 5k
 * Updated longest_contig, number_of_contigs and second_longest_contig files
- * Still no single-contig result, and seem to have passed over the low point
- * Investigate more values around 17k, e.g. 16750 and 17250?
-  * Or change other parameters?
+  * Still no single-contig result, and seem to have passed over the low point
+  * Investigate more values around 17k, e.g. 16750 and 17250?
+    * Or change other parameters?
 
 Check sample 5 10% Blastx:  
 * Results also suggest that the bacterium belongs to genus Marinobacter
@@ -1135,11 +1132,11 @@ smaller and smaller increments, or to change some more parameters.
 and the second and third contigs seem to confirm placement in the family
 Rhodobacteraceae (the best result in the second and third contigs come from a plasmid...)
 * __Compare size of longest contig and Loktanella.__
- * Longest contig ~3.8 Mb
- * Loktanella vestfoldensis genome size ~3.1 Mb, so MUCH shorter
- * L. cinnabarina genome size ~3.9 Mb
- * L. hongkongensis genome size ~3.2 Mb, 2x plasmids (85 Kb and 103 Kb)
- * (Loktanella phage ~57 Kb...)
+  * Longest contig ~3.8 Mb
+  * Loktanella vestfoldensis genome size ~3.1 Mb, so MUCH shorter
+  * L. cinnabarina genome size ~3.9 Mb
+  * L. hongkongensis genome size ~3.2 Mb, 2x plasmids (85 Kb and 103 Kb)
+  * (Loktanella phage ~57 Kb...)
 * __Started a self-blast job as the second and third contigs appear to match the same
  region; will see if they also match any region on the longest contig.__
 
@@ -1199,7 +1196,7 @@ to the nodes, run the `rsyncToNodes.sh` script
 __On Tuesday:__
 * Update Git!  
 * Attempt to run `prokka-genbank_to_fasta_db` again with the Kordia genbank files
- * Be sure to load Prokka vX.XX (1.12-beta...) and NOT 1.11
+  * Be sure to load Prokka vX.XX (1.12-beta...) and NOT 1.11
 
 # 13 September 2016
 
@@ -1209,39 +1206,39 @@ yield nothing of value...
 
 Is there any value in trying some assemblies in HGAP again using new SRLs,
 tested in Falcon and giving good results, but previously untried in HGAP?
- * _1: In HGAP, tested between 15k and 25k with a minimum between 16k and 20k (9 contigs)
-  * In Falcon, a minimum of 8 contigs was found between 14k and 17k
- * Try 17k in HGAP and 16.75k/17.25k in Falcon?
+  * _1: In HGAP, tested between 15k and 25k with a minimum between 16k and 20k (9 contigs)
+    * In Falcon, a minimum of 8 contigs was found between 14k and 17k
+  * Try 17k in HGAP and 16.75k/17.25k in Falcon?
 
- * _2: In HGAP, tested between 6k and 20k, with a minimum between 6k and 12k (3 contigs)
-  * In Falcon, a minimum of 3 contigs was found between 2k and 12k, and at 15k
- * Try 7k and 9k in HGAP and some intermediate values in Falcon?
+  * _2: In HGAP, tested between 6k and 20k, with a minimum between 6k and 12k (3 contigs)
+    * In Falcon, a minimum of 3 contigs was found between 2k and 12k, and at 15k
+  * Try 7k and 9k in HGAP and some intermediate values in Falcon?
 
- * _3: In HGAP, tested between 15k and 25k, with a minimum between 16k and 20k (5/6 contigs)
-  * In Falcon, a minimum of 3/4 contigs was found between 16.5k and 17.5k
- * Try 17k in HGAP and maybe more intermediate values in Falcon?
+  * _3: In HGAP, tested between 15k and 25k, with a minimum between 16k and 20k (5/6 contigs)
+    * In Falcon, a minimum of 3/4 contigs was found between 16.5k and 17.5k
+  * Try 17k in HGAP and maybe more intermediate values in Falcon?
 
- * _6: In HGAP, tested between 5k and 15k, with a minimum between 5k and 10k (9 contigs)
-  * In Falcon, a minimum of 8 contigs was found at 11k (9 contigs between 2k and 10k)
- * Try 11k in HGAP and 10.5k/11.5k in Falcon?
+  * _6: In HGAP, tested between 5k and 15k, with a minimum between 5k and 10k (9 contigs)
+    * In Falcon, a minimum of 8 contigs was found at 11k (9 contigs between 2k and 10k)
+  * Try 11k in HGAP and 10.5k/11.5k in Falcon?
 
- * _7: In HGAP, tested between 18k and 25k, with a minimum between 19k and 21k (4 contigs)
-  * In Falcon, a minimum of 4 contigs was found between 2k and 16k
- * Try some lower values in HGAP (~10k?) and maybe more intermediate values in Falcon?
+  * _7: In HGAP, tested between 18k and 25k, with a minimum between 19k and 21k (4 contigs)
+    * In Falcon, a minimum of 4 contigs was found between 2k and 16k
+  * Try some lower values in HGAP (~10k?) and maybe more intermediate values in Falcon?
 
 * Jobs for HGAP (save for this evening)
- * pb_359_1 - 17k - saved
- * pb_359_2 - 7k, 9k - both saved
- * pb_359_3 - 17k - saved
- * pb_359_6 - 11k - saved
- * pb_359_7 - 10k - saved
+  * pb_359_1 - 17k - saved
+  * pb_359_2 - 7k, 9k - both saved
+  * pb_359_3 - 17k - saved
+  * pb_359_6 - 11k - saved
+  * pb_359_7 - 10k - saved
 
 * Jobs for Falcon
- * pb_359_1 - 16.75k, 17.25k - Submitted - no improvement...
- * pb_359_2 - Intermediates
- * pb_359_3 - Intermediates
- * pb_359_6 - 10.5k, 11.5k - Submitted - both gave the same result as 11k (8 contigs, a low)
- * pb_359_7 - Intermediates
+  * pb_359_1 - 16.75k, 17.25k - Submitted - no improvement...
+  * pb_359_2 - Intermediates
+  * pb_359_3 - Intermediates
+  * pb_359_6 - 10.5k, 11.5k - Submitted - both gave the same result as 11k (8 contigs, a low)
+  * pb_359_7 - Intermediates
 
 Falcon - based on areas of minimal contigs, attempt the following:
 * _1 - 13.5k, 14.5k, 15.5k - submitted
@@ -1252,7 +1249,7 @@ Falcon - based on areas of minimal contigs, attempt the following:
 
 Results:
 * _1: Still yielded no better results...
- * Wait until .6, .7, .8, etc. jobs for other samples have completed before deciding
+  * Wait until .6, .7, .8, etc. jobs for other samples have completed before deciding
 whether it is worth trying something similar with _1.
 
 * _2: Still yielded no better results, but after 15k the number of contigs begins to
@@ -1351,9 +1348,9 @@ _May be misunderstanding the meaning of the term 'node'..._
 Comparing long contig of _2 7k Falcon and HGAP assemblies:
 * Longest contig of Falcon assembly: ~4,204,009
 * Longest contig of HGAP assembly: ~4,183,457
- * Discrepancy of ~20k, BUT spike in the middle of the log contig's coverage, which could be evidence of a collapsed repeat?
- * Longest contig of 12k HGAP assembly: ~4,188,132
-  *Longer contig generates longer sequence, adding support to the idea of collapsed repeats (though spike remains)
+  * Discrepancy of ~20k, BUT spike in the middle of the log contig's coverage, which could be evidence of a collapsed repeat?
+  * Longest contig of 12k HGAP assembly: ~4,188,132
+    * Longer contig generates longer sequence, adding support to the idea of collapsed repeats (though spike remains)
 
 ### To try
 Falcon indicates that the long 'linear' sequences of samples 2, 3 and 7 may in fact be circular; this should be testable in HGAP:
@@ -1386,14 +1383,14 @@ Creating new jobs on SMRT Portal using the references:
 Probably a good idea to try the same thing using the single-contigs from samples 4,5 and 8, as these have
 not been confirmed as circular yet.
 * 4 - Rerun job 16442 with a reference.
- * Reference file name: pb_359_4_HGAP_reversed_halves.fasta
- * 16537 - pb_359_4-Circularisation_Test
+  * Reference file name: pb_359_4_HGAP_reversed_halves.fasta
+  * 16537 - pb_359_4-Circularisation_Test
 * 5 - Rerun job 16520 with a reference.
- * Reference file name: pb_359_5_HGAP_reversed_halves.fasta
- * 16538 - pb_359_5-Circularisation_Test
+  * Reference file name: pb_359_5_HGAP_reversed_halves.fasta
+  * 16538 - pb_359_5-Circularisation_Test
 * 8 - Rerun job 16446 with a reference.
- * Reference file name: pb_359_8_HGAP_reversed_halves.fasta
- * 16539 - pb_359_8-Circularisation_Test
+  * Reference file name: pb_359_8_HGAP_reversed_halves.fasta
+  * 16539 - pb_359_8-Circularisation_Test
 
 The first step of the process for creating the reversed-halves sequence file is slightly different:
 * `tr -d '\n' < filename > sequence.fasta
@@ -1402,11 +1399,11 @@ The first step of the process for creating the reversed-halves sequence file is 
 Waiting on jobs for samples 2, 3, 4, 5, 7 and 8; this still leaves the problematic samples 1 and 6.  
 Even in Falcon, these can't be brought to lower than 8 contigs.  
 * Check the 15k for _1, as this gives the longest contig.
- * By the node logic used above (explained in the Falcon manual), the long contig appears circular.
+  * By the node logic used above (explained in the Falcon manual), the long contig appears circular.
 * Check the 10.6k for _6, as this gives the longest contig.
- * By the node logic used above (explained in the Falcon manual), the long contig appears circular
+  * By the node logic used above (explained in the Falcon manual), the long contig appears circular
 (including a second 'linear' contig about 10% of the size of the longest).
-  * The two 'linear' contigs also have a simpler unitig path according to the ctg_paths file.
+    * The two 'linear' contigs also have a simpler unitig path according to the ctg_paths file.
 
 Contig lengths:
 
@@ -1451,13 +1448,13 @@ will repeat with the other samples that failed.
 
 Blastx results: pb_359_1 complete, pb_359_6 should complete around 4.30pm.
 * pb_359_1
- * Seems likely that this is a species of __Sulfitobacter__, consistent with the 16S predictions.
- * Suspiciously similar to the pb_359_6 results from previously...
-  * Second contig in particular, where hits are found for the SAME protein - formate dehydrogenase -
+  * Seems likely that this is a species of __Sulfitobacter__, consistent with the 16S predictions.
+  * Suspiciously similar to the pb_359_6 results from previously...
+    * Second contig in particular, where hits are found for the SAME protein - formate dehydrogenase -
 in the SAME species...
 
 * pb_359_6
- * Awaiting results...
+  * Awaiting results...
 
 Resequencing complete; results are once again IDENTICAL to the original HGAP assembly, from a look
 at the coverage graph...  
@@ -1488,11 +1485,11 @@ assembly starts and ends in the same places as the HGAP job.
 # 19 September 2016
 
 * Summarise pb_359_6 Blast results
- * Results very similar to those of the HGAP assembly, AND similar to those of 
+  * Results very similar to those of the HGAP assembly, AND similar to those of 
 * DL three circularisation reports
- * pb_359_2 - Coverage over centre not terrible
- * pb_359_3 - Drop in the centre, but still ~50x coverage
- * pb_359_7 - Drop in the centre, but still ~100x coverage
+  * pb_359_2 - Coverage over centre not terrible
+  * pb_359_3 - Drop in the centre, but still ~50x coverage
+  * pb_359_7 - Drop in the centre, but still ~100x coverage
 
 | Sample   | Reference    | Circularisation summary   |
 |----------|--------------|---------------------------|
@@ -1511,11 +1508,11 @@ Rerun HGAP jobs in Falcon?
 Run #4 first as a test, and observe results
 * Download subread fasta for #4 - Done
 * Run in Falcon with the same SRL parameters as for HGAP - Done
- * 40 'linear' contigs obtained from Falcon; attempt other SRL parameters
- * 5k SRL gives a single contig. Will try a few more values to see if longer contigs attainable
-  * 3k-7k SRL - 3,487 Kb (or 3,488 Kb) vs 3,492 Kb from HGAP
+  * 40 'linear' contigs obtained from Falcon; attempt other SRL parameters
+  * 5k SRL gives a single contig. Will try a few more values to see if longer contigs attainable
+    * 3k-7k SRL - 3,487 Kb (or 3,488 Kb) vs 3,492 Kb from HGAP
 * Ensure that only a single contig is obtained, and ensure size is comparable
- * Single contig, but ~5k discrepancy...
+  * Single contig, but ~5k discrepancy...
 * Split and reverse-rejoin the two halves of the contig
 * Run the result through the resequencer on SMRT Portal
 * Check the coverage report
@@ -1535,15 +1532,15 @@ Check 5 and 8 Falcons...
 
 Falcon jobs:
 * Sample 5:
- * 3k - 2 contigs, longest 4,384,754 bp
- * 7k - 2 contigs, longest 4,384,754 bp
-  * Given the current pattern, should probably go up to 20k SRL
- * 20k - 5 contigs, longest ~1,812k bp
- * 2k - As above (2 contig result)
+  * 3k - 2 contigs, longest 4,384,754 bp
+  * 7k - 2 contigs, longest 4,384,754 bp
+    * Given the current pattern, should probably go up to 20k SRL
+  * 20k - 5 contigs, longest ~1,812k bp
+  * 2k - As above (2 contig result)
 * Sample 8:
- * 3k - 2 contigs, longest 5,822,105 bp
- * 7k - 2 contigs, longest ~5,822k bp
- * 15k - As above
+  * 3k - 2 contigs, longest 5,822,105 bp
+  * 7k - 2 contigs, longest ~5,822k bp
+  * 15k - As above
 
 ## SMRT Portal
 
@@ -1553,11 +1550,11 @@ the sequence down the centre; try resequencing using the original sequence as a 
 
 Running sample 4 resequencing with original, un-inverted Falcon assembly as reference
 * Job 16551
- * Obtained a similar coverage pattern for the original Falcon file as for the inverted file.
+  * Obtained a similar coverage pattern for the original Falcon file as for the inverted file.
 However, there is a sharp drop in coverage to around ~20x (cf. ~110x) in both results; why?
 * SMRT View: 
- * Very low coverage around the area; not sure if this can be trusted...
- * Falcon assembled something that the reads don't back up... How?
+  * Very low coverage around the area; not sure if this can be trusted...
+  * Falcon assembled something that the reads don't back up... How?
 
 ## Prokka
 
@@ -1568,13 +1565,13 @@ had to be downloaded, so:
 * See if Prokka works, and if so, delete the old version
 
 Prokka now loads tbl2asn, BUT fails during the HMM check and leaves a lot of large files behind...
- * Retry with old PROKKA build...
-  * Old version passes the first sets of HMMs, but fails on my custom one...
- * Tried manually loading HMM module
-  * No improvement
- * Try resetting the databases using --cleandb and --setupdb (and use old PROKKA build)
-  * (May need to try again as root user, as comes up with some issues...)
-  * Same error as before, failing on custom DB
+  * Retry with old PROKKA build...
+    * Old version passes the first sets of HMMs, but fails on my custom one...
+  * Tried manually loading HMM module
+    * No improvement
+  * Try resetting the databases using --cleandb and --setupdb (and use old PROKKA build)
+    * (May need to try again as root user, as comes up with some issues...)
+    * Same error as before, failing on custom DB
 
 Check SMRTView results for circularisation coverage at break points
 
@@ -1584,7 +1581,7 @@ Blastn samples 1 and 6 against each other
 
 Any noted phenomenon of extra-chromosomal material in Sulfitobacter? e.g. lots of plasmids...
 * S. guttiformis - 3 plasmids
- * Only species that seems to have plasmids (according to NCBI...)
+  * Only species that seems to have plasmids (according to NCBI...)
 
 Tonight:
 * Git push from home directory to nobackup
@@ -1607,15 +1604,15 @@ Similarity between the results is INCREDIBLY HIGH! Bit scores:
 ## pb_359_2
 Barring a correction step (must research command-line quiver), this appears to be fine.
 * Try original Falcon file for pb_359_2, as after the issues with sample 4 I don't fully trust Falcon...
- * Longest ('linear') contig only
+  * Longest ('linear') contig only
 * Job 16555 - circularisation appears to have been successful; will check the area of lowest coverage in
 SMRT View to confirm...
- * Aside from the large spike (unresolved repeat region?), __the circular molecule appears to be sound__.
+  * Aside from the large spike (unresolved repeat region?), __the circular molecule appears to be sound__.
 * (Meanwhile, for the remaining two results, check whether Roseovarius sp. have any known plasmids)
- * R. mucosus possesses [4 plasmids] (https://standardsingenomics.biomedcentral.com/articles/10.1186/1944-3277-10-17)
-  * Second-highest match in the results for the longest contig
- * Contig 2 - highest hit to Roseovarius sp. TM1035
- * Contig 3 - highest hit to Pseudorhodobacter aquimaris (some lower hits to Roseovarius)
+  * R. mucosus possesses [4 plasmids] (https://standardsingenomics.biomedcentral.com/articles/10.1186/1944-3277-10-17)
+    * Second-highest match in the results for the longest contig
+  * Contig 2 - highest hit to Roseovarius sp. TM1035
+  * Contig 3 - highest hit to Pseudorhodobacter aquimaris (some lower hits to Roseovarius)
 
 ## Status of samples
 
@@ -1634,34 +1631,34 @@ SMRT View to confirm...
 
 __To try:__ On sample 8, take 40k from each end of the HGAP assembly and blast them to each other...
 * Overlap of ~14400 bases
- * Score = 26504 bits (14352),  Expect = 0.0
- * Identities = 14422/14450 (99%), Gaps = 28/14450 (0%)
+  * Score = 26504 bits (14352),  Expect = 0.0
+  * Identities = 14422/14450 (99%), Gaps = 28/14450 (0%)
 
 * Retry with sample 4 and sample 5 to confirm
 
- * Sample 4 - More fragmented, but the pattern remains
-  * Subject base 1-10163 of Last_40k
-  * Query base 27173-37325 of First_40k
-   * Score = 18582 bits (10062),  Expect = 0.0
-   * Identities = 10138/10170 (99%), Gaps = 24/10170 (0%)
-  * Subject base 4014-10163 of Last_40k
-  * Query base 20759-26908 of First_40k
-   * Score = 11313 bits (6126),  Expect = 0.0
-   * Identities = 6142/6150 (99%), Gaps = 0/6150 (0%)
-  * Subject base 1-2424 of Last_40k
-  * Query base 37588-40000 of First_40k
-   * Score = 4394 bits (2379),  Expect = 0.0
-   * Identities = 2412/2425 (99%), Gaps = 13/2425 (1%)
+  * Sample 4 - More fragmented, but the pattern remains
+    * Subject base 1-10163 of Last_40k
+    * Query base 27173-37325 of First_40k
+      * Score = 18582 bits (10062),  Expect = 0.0
+      * Identities = 10138/10170 (99%), Gaps = 24/10170 (0%)
+    * Subject base 4014-10163 of Last_40k
+    * Query base 20759-26908 of First_40k
+      * Score = 11313 bits (6126),  Expect = 0.0
+      * Identities = 6142/6150 (99%), Gaps = 0/6150 (0%)
+    * Subject base 1-2424 of Last_40k
+    * Query base 37588-40000 of First_40k
+      * Score = 4394 bits (2379),  Expect = 0.0
+      * Identities = 2412/2425 (99%), Gaps = 13/2425 (1%)
 
- * Sample 5 - Overlap of ~ 19500 bases
-  * Score = 35763 bits (19366),  Expect = 0.0
-  * Identities = 19536/19605 (99%), Gaps = 63/19605 (0%)
+  * Sample 5 - Overlap of ~ 19500 bases
+    * Score = 35763 bits (19366),  Expect = 0.0
+    * Identities = 19536/19605 (99%), Gaps = 63/19605 (0%)
 
 __Useful code for removing newlines from a file__  
 `tr -d '\n' < filename > output`
 
 * Run sample 4 blast_ends test again, with xml output to view in BlastViewer?
- * For good measure, rerun all with xml output
+  * For good measure, rerun all with xml output
 
 ## Falcon
 
@@ -1673,33 +1670,33 @@ __Created a .gitignore file to thin out `git status` by removing Falcon output f
 ## pb_359_1 and pb_359_6:
 * The results so far:
 
- * pb_359_1
-  * Minimum # of contigs: 8 (between 14k and 17k SRL)
-  * Between 1 and 3 'linear' contigs
-   * 1 found between 14.5k and 15.5k SRL
-   * Looking at the ctg_paths files for the above, the start and end nodes are the same, implying 'circularity'
+  * pb_359_1
+    * Minimum # of contigs: 8 (between 14k and 17k SRL)
+    * Between 1 and 3 'linear' contigs
+      * 1 found between 14.5k and 15.5k SRL
+      * Looking at the ctg_paths files for the above, the start and end nodes are the same, implying 'circularity'
 
- * pb_359_6
-  * Minimum # of contigs: 8 (between 10.5k and 11.5k SRL)
-  * Between 2 and 5 'linear' contigs
-   * 2 found between 10.5k and 10.6k
-   * Looking at the ctg_paths files for the above, the start and end nodes are the same, implying 'circularity'
+  * pb_359_6
+    * Minimum # of contigs: 8 (between 10.5k and 11.5k SRL)
+    * Between 2 and 5 'linear' contigs
+      * 2 found between 10.5k and 10.6k
+      * Looking at the ctg_paths files for the above, the start and end nodes are the same, implying 'circularity'
 
 * Expected size of a _Sulfitobacter_ genome ranges between 3.45 and 4.95 Mb:
- * _S. pontiacus_: ~3.45 Mb
- * _S. mediterraneus_: ~4.13 Mb
- * _S. donghicola_: ~3.54 Mb
- * _S. guttiformis_: ~3.98 Mb (+ plasmids)
- * _S. noctilucicola_: ~4.09 Mb
- * _S. noctilucae_: ~3.91 Mb
- * _S. geojensis_: ~4.23 Mb
- * _S. pseudonitzschiae_: ~4.95 Mb
+  * _S. pontiacus_: ~3.45 Mb
+  * _S. mediterraneus_: ~4.13 Mb
+  * _S. donghicola_: ~3.54 Mb
+  * _S. guttiformis_: ~3.98 Mb (+ plasmids)
+  * _S. noctilucicola_: ~4.09 Mb
+  * _S. noctilucae_: ~3.91 Mb
+  * _S. geojensis_: ~4.23 Mb
+  * _S. pseudonitzschiae_: ~4.95 Mb
 
 * Compare size of longest contig from Falcon assemblies:
- * pb_359_1: ~3.57 Mb - would be a reasonable size for a _Sulfitobacter_ genome
-  * Second longest = ~0.43 Mb
- * pb_359_6: ~3.57 Mb - would be a reasonable size for a
-  * Second longest = ~0.43 Mb
+  * pb_359_1: ~3.57 Mb - would be a reasonable size for a _Sulfitobacter_ genome
+    * Second longest = ~0.43 Mb
+  * pb_359_6: ~3.57 Mb - would be a reasonable size for a
+    * Second longest = ~0.43 Mb
 
 __Check Alvar's thesis re: handling overlap__  
 Otherwise, manually trim one end of the overlap, reverse and correct using Resequencing.
@@ -1716,43 +1713,43 @@ To do:
 
 ## pb_359_8
 * Where to trim the ends...
- * First_40k-----------------Last_40k
- * --14431                    25560--
- * -14431 from start or -14440 from end
- * Remove less bases; more bases can always be removed later
+  * First_40k-----------------Last_40k
+  * --14431                    25560--
+  * -14431 from start or -14440 from end
+  * Remove less bases; more bases can always be removed later
 * **Remove the first 14431 of assembly 16446 and use as reference for Resequencing**
- * Assembly is 5,839,016 bases long, so trimmed assembly should be 5,824,585
- * Should begin 'GATATAGCCTACATG'
+  * Assembly is 5,839,016 bases long, so trimmed assembly should be 5,824,585
+  * Should begin 'GATATAGCCTACATG'
 * Standard reference: job 16558 - results positive (one big spike...)
 * Reversed reference: job 16559 - results positive (as above, one big spike...)
 
 ## pb_359_5
 * Where to trim ends...
- * First_40k-----------------Last_40k
- * --19556                    20410--
- * -19556 from start or -19590 from end
- * Remove less bases; more bases can always be removed later
+  * First_40k-----------------Last_40k
+  * --19556                    20410--
+  * -19556 from start or -19590 from end
+  * Remove less bases; more bases can always be removed later
 * **Remove the first 19556 of assembly 16520 and use as reference for Resequencing**
- * Assembly is 4,406,446 bases long, so trimmed assembly should be 4,386,890
- * Should begin 'TCAAAGCGGGAGGTG'
+  * Assembly is 4,406,446 bases long, so trimmed assembly should be 4,386,890
+  * Should begin 'TCAAAGCGGGAGGTG'
 * Standard reference: job 16562 - results positive (one big spike...)
 * Reversed reference: job 16563 - results positive (as above, one big spike...)
 
 ## pb_359_4 (1st)
 * Where to trim ends...
- * First_40k-----------------Last_40k
- * 1-10163                27173-37325 ?
- * 4014-10163             20759-26908
- * 1-2424                 37588-40000 X
- * --2424                     37588--
- * -2424 from start or -2412 from end
- * Remove less bases; more bases can always be removed later
+  * First_40k-----------------Last_40k
+  * 1-10163                27173-37325 ?
+  * 4014-10163             20759-26908
+  * 1-2424                 37588-40000 X
+  * --2424                     37588--
+  * -2424 from start or -2412 from end
+  * Remove less bases; more bases can always be removed later
 * **Remove last 2412 bases of assembly 16442 and use as reference for Resequencing**
- * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,490,136
- * Should end 'gaagtgccttgcggg'
-  * This makes an assembly of 3,490,135; be aware in case there are any single-base problems
- * Standard reference: job 16566 - results positive - constant ~100x coverage
- * Reversed reference: job 16567 - **results negative - huge dip at the breakpoint**
+  * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,490,136
+  * Should end 'gaagtgccttgcggg'
+    * This makes an assembly of 3,490,135; be aware in case there are any single-base problems
+  * Standard reference: job 16566 - results positive - constant ~100x coverage
+  * Reversed reference: job 16567 - **results negative - huge dip at the breakpoint**
 
 ## pb_359_7
 * 'Low coverage area' at centre point of reversed-reference Resequencing run not well-reflected
@@ -1761,25 +1758,25 @@ of the other samples (e.g. pb_359_4/5/8 before trimming overlap); potentially an
 
 ## pb_359_3
 * Reference used - 17.1k Falcon assembly
- * SRLs giving 3 contigs range from 16600 to 17250
- * Attempt circularisation with another of these, in case results differ?
+  * SRLs giving 3 contigs range from 16600 to 17250
+  * Attempt circularisation with another of these, in case results differ?
 
 ## pb_359_4 (2nd)
 * Circularisation attempt failed; apparently more trimming is required, at a different point...
 * Checking the first 96 bases reveals three hits:
- * Position 1
- * Position 3,479,721
- * Position 3,490,136
+  * Position 1
+  * Position 3,479,721
+  * Position 3,490,136
 * As the trimming from the last of these (2,412 bases) didn't work, attempt to trim from the
 first of these (12,827 bases); this would also be of a similar magnitude to the other trims
- * First_40k-----------------Last_40k
- * --10163              27173-37325--
- * -10163 from start or -12827 from end
- * Remove less bases; more bases can always be removed later
+  * First_40k-----------------Last_40k
+  * --10163              27173-37325--
+  * -10163 from start or -12827 from end
+  * Remove less bases; more bases can always be removed later
 * **Remove first 10163 bases of assembly 16442 and use as reference for Resequencing**
- * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,482,385
- * Should begin 'TAGTTTTTGCATTTT'
- * **Not totally convinced on this overlap, considering the Blast results...**
+  * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,482,385
+  * Should begin 'TAGTTTTTGCATTTT'
+  * **Not totally convinced on this overlap, considering the Blast results...**
 * Standard reference: job 16570 - X
 * Reversed reference: job 16571 - X
 
@@ -1788,13 +1785,13 @@ suspected plasmids be subjected to an HGAP resequencing attempt to confirm their
 
 * pb_359_1 -
 * pb_359_2 - Longest contig appears to circularise; requires Quiver-correction
- * 'Plasmids' require circularisation test...
+  * 'Plasmids' require circularisation test...
 * pb_359_3 -
 * pb_359_4 - Having trouble resolving the overlap issue; awaiting Resequencing...
 * pb_359_5 - Appears to circularise; quality check -> annotation
 * pb_359_6 -
 * pb_359_7 - Seems to circularise in spite of a questionable drop found in SOME analyses...
- * 'Plasmids' require circularisation test...
+  * 'Plasmids' require circularisation test...
 * pb_359_8 - Appears to circularise; quality check -> annotation
 
 __Tomorrow:__
@@ -1814,58 +1811,58 @@ Git now up-to-date
 ### Summary
 
 * Circularised, require quality check
- * pb_359_5
- * pb_359_8
+  * pb_359_5
+  * pb_359_8
 
 * Appears to circularise, additional genetic material needs to be checked
- * pb_359_2
- * pb_359_7
+  * pb_359_2
+  * pb_359_7
 
 * Appear to be identical, must decide how to proceed
- * pb_359_1
- * pb_359_6
+  * pb_359_1
+  * pb_359_6
 
 * Still having trouble circularising, explore other assemblies?
- * pb_359_4 - one last trim attempt
+  * pb_359_4 - one last trim attempt
 
 * Doesn't circularise well, explore low-coverage region
- * pb_359_3
+  * pb_359_3
 
 ## pb_359_4 (3rd)
 * Gap in the circularisation of ~2 Kb
 * Gap in first circularisation attempt had a gap of ~7+ Kb
 
 * Where to trim ends...
- * First_40k-----------------Last_40k
- * --10163              27173-37325--
- * -10163 from start or -12827 from end
+  * First_40k-----------------Last_40k
+  * --10163              27173-37325--
+  * -10163 from start or -12827 from end
 * **Remove last 12827 bases of assembly 16442 and use as reference for Resequencing**
- * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,479,721 bases
- * Should end 'AAGTGCCCTTGCGGG'
-  * This makes an assembly of 3,479,720; be aware in case there are any single-base problems
- * Standard reference: job 16574 - Appears to have been successful
- * Reversed reference: job 16575 - Appears to have been successful 
+  * Assembly is 3,492,548 bases long, so trimmed assembly should be 3,479,721 bases
+  * Should end 'AAGTGCCCTTGCGGG'
+    * This makes an assembly of 3,479,720; be aware in case there are any single-base problems
+  * Standard reference: job 16574 - Appears to have been successful
+  * Reversed reference: job 16575 - Appears to have been successful 
 
 ## pb_359_3
 * Upon checking the breakpoint in SMRT View, the break isn't entirely clear-cut...
- * However, a LOT of reads break off at that point...
+  * However, a LOT of reads break off at that point...
 * Assembly used: Falcon 17.1k (range of 3-contig: 16.6k - 17.25k)
- * Start: TCTCACCGCTGATTGGCAAG
- * End: ACCTTGCAAAGCAATTCCGA
+  * Start: TCTCACCGCTGATTGGCAAG
+  * End: ACCTTGCAAAGCAATTCCGA
 * Search for the sequence 'ACCTTGCAAAGCAATTCCGATCTCACCGCTGATTGGCAAG' in other assemblies:
- * 16.6k - start and end match 17.1k
- * 16.7k - present in the middle
- * 16.75k - present in the middle
- * 16.8k - present in the middle *
- * 16.9k - present in the middle
- * 17k - present in the middle
- * 17.1k - **current assembly**
- * 17.2k - present in the middle
- * 17.25k - present in the middle
+  * 16.6k - start and end match 17.1k
+  * 16.7k - present in the middle
+  * 16.75k - present in the middle
+  * 16.8k - present in the middle *
+  * 16.9k - present in the middle
+  * 17k - present in the middle
+  * 17.1k - **current assembly**
+  * 17.2k - present in the middle
+  * 17.25k - present in the middle
 * 16.8k has the second-longest of the long contigs in the 3-contig range, after 17.1k, so will
- attempt to circularise that and compare.
- * Standard reference: job 16578 - Still the peculiar high-low spike...
- * Reversed reference: job 16579 - Still the peculiar high-low spike...
+attempt to circularise that and compare.
+  * Standard reference: job 16578 - Still the peculiar high-low spike...
+  * Reversed reference: job 16579 - Still the peculiar high-low spike...
 
 >Sample_1_Contig_1
 GCTTTTTGATGCCTGCACAATATCTTGCGGCGCGCCCCTCACTTAGGCGG
@@ -1903,37 +1900,37 @@ GTTGAGCATCCGCGACAGCCTCTTGCGCCTTAACATGCGCCGCTGCCTTG
 Could Falcon have accidentally fused the chromosomal DNA to a plasmid sequence? If so, could a
 four-contig assembly be a better fit?
 * 16.5k SRL assembly has 4 contigs
- * Sizes of the contigs:
-  * 3,834,018
-  * 110,986
-  * 39,367
-  * 1,870
- * Size of the contigs from the 17.1k SRL assembly
-  * 3,834,121
-  * 110,980
-  * 39,376
+  * Sizes of the contigs:
+    * 3,834,018
+    * 110,986
+    * 39,367
+    * 1,870
+  * Size of the contigs from the 17.1k SRL assembly
+    * 3,834,121
+    * 110,980
+    * 39,376
 * Sizes almost identical... Falcon is convinced that this assembly is correct, so where is the
 discrepancy...?
- * Compare to the contig sizes from the 5-contig assembly from HGAP:
-  * 2,388,684
-  * 1,487,285
-  * 46,106
-  * 103,565
-  * 69,473
- * Size difference barely comparable...
+  * Compare to the contig sizes from the 5-contig assembly from HGAP:
+    * 2,388,684
+    * 1,487,285
+    * 46,106
+    * 103,565
+    * 69,473
+  * Size difference barely comparable...
 
 **Note:** For the HGAP assemblies yielding a single contig, the best SRL was within 2k of the
 N50 read length. Same appears to be generally true for Falcon, albeit over a wider range.
 
 To this end - try a ~12k SRL assembly for pb_359_3, and see if this generates a good result
- * Could the 28 contig result at 15k SRL have been a localised peak?
- * Job ID - 16580
-  * Awaiting results...
+  * Could the 28 contig result at 15k SRL have been a localised peak?
+  * Job ID - 16580
+    * Awaiting results...
 
 ## pb_359_1 vs pb_359_6
 * If the samples are going to be spliced to match up, will need to obtain some reverse complement
 sequences...
- * Relevant sample 6 sequences reverse-transcribed, start points aligned with sample 1, and new
+  * Relevant sample 6 sequences reverse-transcribed, start points aligned with sample 1, and new
 blastn jobs submitted.
 * Result - all samples showed 99% identity, <1% gaps
 * Combined with the revelation that their 16S sequences are identical - **These two appear to
@@ -1947,11 +1944,11 @@ pb_359_6 has at least two 'linear' contigs in all results.
 
 ## pb_359_1
 * Sample to use - 15k SRL
- * According to the ctg_paths file, the starting and ending nodes are the same; potentially circular
- * Standard job - 16584 - Several tall peaks, but no severe dips
- * Reversed job - 16585 - One relatively deep dip in the middle (~120x down to ~60x)
-  * Definite gap in the coverage, despite a decent number of supporting reads...
-  * As with sample 3, there is a large peak beside the dip...
+  * According to the ctg_paths file, the starting and ending nodes are the same; potentially circular
+  * Standard job - 16584 - Several tall peaks, but no severe dips
+  * Reversed job - 16585 - One relatively deep dip in the middle (~120x down to ~60x)
+    * Definite gap in the coverage, despite a decent number of supporting reads...
+    * As with sample 3, there is a large peak beside the dip...
 
 ## Observation regarding Quiver
 Standard and reversed circularisation jobs using the SMRT Portal Resequencing protocol contain a
@@ -1976,19 +1973,19 @@ Assembly job gave 5 contigs, including a dip in the middle of the longest contig
 * Compare to other jobs to see if dip is repeated - coverage dip IS present in another 5-contig assembly
 * Consider - **potential issue with contamination, according to Oskar**
 * Attempt builds at 11k and 14k SRL?
- * 11k job: 16585
- * 14k job: 16586
+  * 11k job: 16585
+  * 14k job: 16586
 
 ## pb_359_1 and pb_359_6
 As pb_359_1 has failed to give a circularised chromosome, could pb_359_6 give a better result? Or
 would it be the same?
 * Compare coverage in reports from pb_359_1 and pb_359_6
- * No steep drops in either, but sample 1 has much higher overall coverage than sample 6
- * Dissimilar enough to at least attempt to circularise 6?
-  * According to the 10.6k SRL ctg_paths file, theoretically circularisable...
+  * No steep drops in either, but sample 1 has much higher overall coverage than sample 6
+  * Dissimilar enough to at least attempt to circularise 6?
+    * According to the 10.6k SRL ctg_paths file, theoretically circularisable...
 * Will attempt two circularisation of pb_359_6 10.6k
- * Standard job: 16590
- * Reversed job: 16591
+  * Standard job: 16590
+  * Reversed job: 16591
 
 ## Python
 Have completed and tested my Sequence_Reverse.py script
@@ -2004,16 +2001,16 @@ Have completed and tested my Sequence_Reverse.py script
 
 ## pb_359_3
 pb_359_3 jobs failed - rerun:
- * 11k - 16592 - **running**
- * 14k - 16593 - **will run after 11k is complete; many jobs currently running, and suspicious that the last
+  * 11k - 16592 - **running**
+  * 14k - 16593 - **will run after 11k is complete; many jobs currently running, and suspicious that the last
 attempt may have timed out...**
 
 ## pb_359_6
 Start pb_359_6 jobs once templates are uploaded
- * Standard job: 16590 - As mentioned below, a dip exists which does not appear to be clear-cut. Could be a good assembly?
- * Reversed job: 16591 - Appears to be a dip from ~150x to ~75x, BUT no clean break; could well be a legitimate circularisation
-  * Also, break not in the centre of the sequence, as one would expect of the reverse job.
-  * High peak of ~140bp at ~230x coverage right before dip.
+  * Standard job: 16590 - As mentioned below, a dip exists which does not appear to be clear-cut. Could be a good assembly?
+  * Reversed job: 16591 - Appears to be a dip from ~150x to ~75x, BUT no clean break; could well be a legitimate circularisation
+    * Also, break not in the centre of the sequence, as one would expect of the reverse job.
+    * High peak of ~140bp at ~230x coverage right before dip.
 
 ## Next steps
 * **Samples 4, 5 and 8** have single-contig, Quiver-corrected assemblies (initial assembly + Resequencer consensus)
@@ -2023,9 +2020,9 @@ Start pb_359_6 jobs once templates are uploaded
 
 ## Prokka
 * Retry original script (for Prokka v1.11); renamed PROKKA_Test_1.5.sge
- * Breaks at custom TIGR HMM database...
- * Do I need to run `prokka --cleandb` and `prokka --setupdb` as admin to get them to work...?
-  * *sudo* does not seem to recognise the 'module' command?
+  * Breaks at custom TIGR HMM database...
+  * Do I need to run `prokka --cleandb` and `prokka --setupdb` as admin to get them to work...?
+    * *sudo* does not seem to recognise the 'module' command?
 
 ## To do
 * Modify ./bashrc to include path to my Scripts folder, so I can run Sequence_Reverse.py without having to
@@ -2038,21 +2035,21 @@ specify the path each time?
 ## pb_359_3
 * 14k - 16593 - **running**
 * 11k - 16592 - completed:
- * Contigs - 5
- * Sum of contig lengths - 4,198,061
+  * Contigs - 5
+  * Sum of contig lengths - 4,198,061
 
 * 11k shows massive dip in the centre of the longest contig of the ** HGAP** assembly. Compare to other 5-contig assemblies:
- * (11k - Coverage rises, massive dip just after peak, then slow fall from peak)
- * 20k - No significant drop aside from those at the ends of the assembly.
- * 18k - Sharp drop just before the end of the assembly...
- * 12k - Same sharp drop as 11k
+  * (11k - Coverage rises, massive dip just after peak, then slow fall from peak)
+  * 20k - No significant drop aside from those at the ends of the assembly.
+  * 18k - Sharp drop just before the end of the assembly...
+  * 12k - Same sharp drop as 11k
 * Blast 20k or 18k against itself, and see if there are overlaps at the end which could be removed,
 and circularisation tested?
- * 20k/18k contig lengths vs contig lengths in 3-contig Falcon assemblies:
-  * Falcon
-   * 3,834k + 110k + 39k
-  * HGAP
-   * 2,388k + 1,487k + 46k + 103k + 69k
+  * 20k/18k contig lengths vs contig lengths in 3-contig Falcon assemblies:
+    * Falcon
+      * 3,834k + 110k + 39k
+    * HGAP
+      * 2,388k + 1,487k + 46k + 103k + 69k
 * Try Blasting the HGAP assembly (~250 Kb), and see whether the two longest contigs BOTH match Loktanella;
 genome could have been split as in Alvar's investigation...
 
@@ -2061,28 +2058,28 @@ Running a Falcon job (11k SRL) for samples 1 and 6 together, to see what kind of
 * Result was 9 contigs, almost the lowest result seen (same as pb_359_1 at this SRL, but one higher than
 pb_359_6 at this SRL)
 * Compare contig lengths:
- * pb_359_1 - 11k: 3,580k (L), 142k (L), 99k (L), 43k (C), 209k (C), 427k (C), 284k (C), 92k (C), 292k (C)
- * pb_359_6 - 11k: 428k (L), 73k (L), 67k (L), 284k (C), 209k (C), 3,571k (C), 142k (C), 292k (C)
- * Fusion - 11k: 3,566k (L), 427k (L), 291k (L), 142k (L) 99k (L), 30k (L), 284k (C), 92k (C), 209k (C)
-  * VERY similar sizes to the pb_359_1 11k assembly
-  * Attempt an assembly with higher SRL, similar to pb_359_1 8-contig assemblies - 15k
+  * pb_359_1 - 11k: 3,580k (L), 142k (L), 99k (L), 43k (C), 209k (C), 427k (C), 284k (C), 92k (C), 292k (C)
+  * pb_359_6 - 11k: 428k (L), 73k (L), 67k (L), 284k (C), 209k (C), 3,571k (C), 142k (C), 292k (C)
+  * Fusion - 11k: 3,566k (L), 427k (L), 291k (L), 142k (L) 99k (L), 30k (L), 284k (C), 92k (C), 209k (C)
+    * VERY similar sizes to the pb_359_1 11k assembly
+    * Attempt an assembly with higher SRL, similar to pb_359_1 8-contig assemblies - 15k
 * Result of 15k combined Falcon run - 9 contigs (compared to 8 and 2, respectively)
- * Compare contig lengths:
-  * pb_359_1 - 15k: 3,581k (L), 292k (C), 99k (C), 92k (C), 284k (C), 141k (C), 209k (C), 427k (C)
-  * pb_359_6 - 15k: 10k (L), 6k (L) - **This was a dud result**
-  * Fusion - 15k: 3,573k (L), 427k (L), 292k (L), 8k (L), 209k (C), 92k (C), 99k (C), 284k (C), 141k (C)
+  * Compare contig lengths:
+    * pb_359_1 - 15k: 3,581k (L), 292k (C), 99k (C), 92k (C), 284k (C), 141k (C), 209k (C), 427k (C)
+    * pb_359_6 - 15k: 10k (L), 6k (L) - **This was a dud result**
+    * Fusion - 15k: 3,573k (L), 427k (L), 292k (L), 8k (L), 209k (C), 92k (C), 99k (C), 284k (C), 141k (C)
 * Out of curiosity, run a 20k assembly as this hasn't been run on either of the samples individually
- * Fusion - 20k: 40 contigs...
+  * Fusion - 20k: 40 contigs...
 * Run a 13k assembly, as this is midway between 11k and 15k
- * Fusion - 13k: 9 contigs
-  * Contig sizes: 3,573k (L), 427k (L), 292k (L), 142k (L), 110k (L), 30k (L), 92k (C), 284k (C), 209k (C)
-  * Contig sizes very similar to 11k and 15k
+  * Fusion - 13k: 9 contigs
+    * Contig sizes: 3,573k (L), 427k (L), 292k (L), 142k (L), 110k (L), 30k (L), 92k (C), 284k (C), 209k (C)
+    * Contig sizes very similar to 11k and 15k
 * Run a 17k assembly; pb_359_1 gave 8 contigs with this SRL
- * Number of contigs: 
- * Compare contig sizes:
-  * pb_359_1 - 17k: 3,532k (L), 399k (L), 257k (L), 284k (C), 92k (C), 142k (C), 99k (C), 209k (C)
-  * pb_359_6 - 17k assembly not attempted
-  * Fusion - 17k: **see 30 September**
+  * Number of contigs: 
+  * Compare contig sizes:
+    * pb_359_1 - 17k: 3,532k (L), 399k (L), 257k (L), 284k (C), 92k (C), 142k (C), 99k (C), 209k (C)
+    * pb_359_6 - 17k assembly not attempted
+    * Fusion - 17k: **see 30 September**
 
 ## Prokka
 **Databases now re-done**  
@@ -2113,20 +2110,20 @@ __Note on blastx:__ Jobs seem to take ~1 hour per 100,000 bases (with 40 cores)
 
 * 250,000 bp for each contig
 * 250k + 250k + 46k + 103k + 69k = 718k = ~7 hours @ 40 cores
- * Currently at 8 cores - 7*5 = 35 hours
- * Started at 13:19 on 29 Sept, should be finished at ~midnight on Friday night
-  * Job completed earlier than anticipated
+  * Currently at 8 cores - 7*5 = 35 hours
+  * Started at 13:19 on 29 Sept, should be finished at ~midnight on Friday night
+    * Job completed earlier than anticipated
 
 * Results:
- * Incredibly similar results, with _Loktanella vestfoldensis_ still the supposed identity of the longest contig
- * DDE transposase still found on the shorter contigs (with one exception), again with _Confluentimicrobium_
+  * Incredibly similar results, with _Loktanella vestfoldensis_ still the supposed identity of the longest contig
+  * DDE transposase still found on the shorter contigs (with one exception), again with _Confluentimicrobium_
 the most likely candidate.
 * Now just a case of getting as good an assembly as possible...
 
 ## pb_359_1 + pb_359_6 fusion
 Final assembly attempt - 17k - completed yesterday.
 * Number of contigs: 9
- * Contig sizes: 3,572k (L), 399k (L), 260k (L), 8k (L), 99k (C), 209k (C), 92k (C), 141k (C), 284k (C)
+  * Contig sizes: 3,572k (L), 399k (L), 260k (L), 8k (L), 99k (C), 209k (C), 92k (C), 141k (C), 284k (C)
 As mentioned above, will treat pb_359_1 and pb_359_6 as two samples of a single species from now on.
 
 ## Prokka
@@ -2135,11 +2132,11 @@ Now that the databases have been updated, will attempt to run the Prokka jobs fr
 it will now run as intended.
 
 * Running Prokka v1.11 - gets stuck at my custom TIGR database.
- * Solution - try re-pressing TIGR database, then retry --cleandb and --setupdb (as sudo)
-  * Failed
- * Solution 2 - try implementing [this workaround] (https://github.com/tseemann/prokka/issues/44)
-  * Failed
- * Solution 3 - Post a message on the Github Issues page for Prokka, wait for response
+  * Solution - try re-pressing TIGR database, then retry --cleandb and --setupdb (as sudo)
+    * Failed
+  * Solution 2 - try implementing [this workaround] (https://github.com/tseemann/prokka/issues/44)
+    * Failed
+  * Solution 3 - Post a message on the Github Issues page for Prokka, wait for response
 
 ## pb_359_1 and pb_359_6 circularisation
 Considering the similarities between the two, the best indicator of which assembly to continue with
@@ -2165,7 +2162,7 @@ would probably be which one circularises the best
 
 ## To do
 * Check back for reply from TSeemann re: Prokka
- * Check the feedback from the PROKKA_Test_1.5 file
+  * Check the feedback from the PROKKA_Test_1.5 file
 * Wait for results from pb_359_3 14k assembly; if this fails, retry at 13k
 * Seek guidance re: 'gaps' in circularised assemblies and need to Quiver circularised assemblies
 
@@ -2174,89 +2171,89 @@ would probably be which one circularises the best
 ## PROKKA
 * Log file forwarded to software developer, to see if the custom HMM database problem can be overcome
 * Script written (Refresh_Prokka_DB.sh) to automate re-pressing of Prokka databases when new ones are added
- * Must be run with sudo
+  * Must be run with sudo
 
 ## pb_359_3
 * 14k assembly job completed:
- * Number of contigs - 7
- * Assembled contig length - 4,204,689
+  * Number of contigs - 7
+  * Assembled contig length - 4,204,689
 
 * Attempting a 10k assembly; will judge based on this whether to continue trying for a better HGAP assembly of sample 3.
- * Job ID - 16599
+  * Job ID - 16599
 
 ## pb_359_3 HGAP vs Falcon
 * Database - HGAP 18k assembly
 * Query - Falcon 17.1k assembly
 * Result - definitely appears that Falcon combined the two longest HGAP contigs into one
- * Falcon [28,473 - 2,356,132] for longest HGAP contig ('0' or 'scf...12')
-  * Query [28,473 - 2,356,132] [2,333,549 - 2,400,007]
-  * HGAP [4 - 2,329,04] [2,395,840 - 2,329,392 {Reverse}]
-   * 65k matches reverse compliment at end of '0'. Odd assembly error...?
- * Falcon [1 to 28,194] and [2,376,369 to 3,834,120] for second-longest HGAP contig ('1' or 'scf...13')
-  * 300 bp unaccounted for from end of '1'
- * Gaps from [28,194 - 28,473] (~300 bp) and [2,356,132 - 2,376,369] (~200,000 bp)
- * Gaps don't seem to be well-bridged by HGAP...
+  * Falcon [28,473 - 2,356,132] for longest HGAP contig ('0' or 'scf...12')
+    * Query [28,473 - 2,356,132] [2,333,549 - 2,400,007]
+    * HGAP [4 - 2,329,04] [2,395,840 - 2,329,392 {Reverse}]
+    * 65k matches reverse compliment at end of '0'. Odd assembly error...?
+  * Falcon [1 to 28,194] and [2,376,369 to 3,834,120] for second-longest HGAP contig ('1' or 'scf...13')
+    * 300 bp unaccounted for from end of '1'
+  * Gaps from [28,194 - 28,473] (~300 bp) and [2,356,132 - 2,376,369] (~200,000 bp)
+  * Gaps don't seem to be well-bridged by HGAP...
 * Regarding 'plasmids':
- * Long Falcon 'plasmid' matches with some overlap in the HGAP '2' , as expected.
- * Short Falcon 'plasmid' matches with some overlap in the HGAP '3' , as expected.
+  * Long Falcon 'plasmid' matches with some overlap in the HGAP '2' , as expected.
+  * Short Falcon 'plasmid' matches with some overlap in the HGAP '3' , as expected.
 * What of HGAP '4'?
 
 ## Circularisation tests
 * Samples whose potential plasmids need to be tested for circularisation:
- * 2 - 7k Falcon assembly
-  * Standard job - 16610 - Seems okay
-  * Reversed job - 16611 - First 'plasmid' seems okay, second has massive trough in the centre...
- * 6 - 10.6k Falcon assembly
-  * Standard job - 16606 - Coverage of 'plasmids' fluctuates wildly
-  * Reversed job - 16607 - No halfway troughs to suggest lack of circularisation, but 'bumpy'
+  * 2 - 7k Falcon assembly
+    * Standard job - 16610 - Seems okay
+    * Reversed job - 16611 - First 'plasmid' seems okay, second has massive trough in the centre...
+  * 6 - 10.6k Falcon assembly
+    * Standard job - 16606 - Coverage of 'plasmids' fluctuates wildly
+    * Reversed job - 16607 - No halfway troughs to suggest lack of circularisation, but 'bumpy'
 coverage in 'plasmids'...
- * 7 - 6k Falcon assembly
-  * Standard job - 16608 - Seems okay
-  * Reversed job - 16609 - No halfway troughs to suggest lack of circularisation, but 'bumpy'
+  * 7 - 6k Falcon assembly
+    * Standard job - 16608 - Seems okay
+    * Reversed job - 16609 - No halfway troughs to suggest lack of circularisation, but 'bumpy'
 coverage in 'plasmids'...
-* Judging by [this PacBio poster] (http://www.pacb.com/wp-content/uploads/low-input-long-read-for-complete-microbial-genomes-metagenomic-community-analysis.pdf),
+* Judging by [this PacBio poster](http://www.pacb.com/wp-content/uploads/low-input-long-read-for-complete-microbial-genomes-metagenomic-community-analysis.pdf),
 the shape of the 'plasmid' coverage graphs is roughly what one would expect.
 
 * Double-check circularisation for the single-contig samples
- * Perhaps make a folder saving only the coverage images?
- * 4 - pb_359_4_Third_Trimmed_Circularisation_consensus.fasta
- * 5 - pb_359_5_Trimmed_Circularisation_consensus.fasta
- * 8 - pb_359_8_Trimmed_Circularisation_consensus.fasta
+  * Perhaps make a folder saving only the coverage images?
+  * 4 - pb_359_4_Third_Trimmed_Circularisation_consensus.fasta
+  * 5 - pb_359_5_Trimmed_Circularisation_consensus.fasta
+  * 8 - pb_359_8_Trimmed_Circularisation_consensus.fasta
 
 * Samples 6 and 7 appear to be ready for annotation.
 
 ## Quality assurance
 * pb_359_4 - one contig
- * Assembly file - pb_359_4_Third_Trimmed_Circularisation_consensus.fasta
-  * Based on HGAP assembly 16442 (seed read length 10,000), with overlap trimmed.
- * When viewing centre 'breakpoint' of reversed circularisation test, many low-quality reads
-appear in this area, along with a relative small trough in the assembly
+  * Assembly file - pb_359_4_Third_Trimmed_Circularisation_consensus.fasta
+    * Based on HGAP assembly 16442 (seed read length 10,000), with overlap trimmed.
+  * When viewing centre 'breakpoint' of reversed circularisation test, many low-quality reads
+    appear in this area, along with a relative small trough in the assembly
 
 * pb_359_5 - one contig
- * Assembly file - pb_359_5_Trimmed_Circularisation_consensus.fasta
-  * Based on HGAP assembly 16520 (seed read length 16,000), with overlap trimmed.
- * Coverage spike to ~500x; unresolved repeat region?
+  * Assembly file - pb_359_5_Trimmed_Circularisation_consensus.fasta
+    * Based on HGAP assembly 16520 (seed read length 16,000), with overlap trimmed.
+  * Coverage spike to ~500x; unresolved repeat region?
 
 * pb_359_6 - eight contigs
- * Assembly file - pb_359_6_All_Contigs_Circ_consensus.fasta
-  * Based on Falcon assembly seed_read_10600
- * No particular issues
+  * Assembly file - pb_359_6_All_Contigs_Circ_consensus.fasta
+    * Based on Falcon assembly seed_read_10600
+  * No particular issues
 
 * pb_359_7 - four contigs
- * Assembly file - pb_359_7_All_Contigs_Circ_consensus.fasta
-  * Based on Falcon assembly seed_read_6000
- * Slight dip on the longest contig to ~120x coverage, but this may not be a major issue
+  * Assembly file - pb_359_7_All_Contigs_Circ_consensus.fasta
+    * Based on Falcon assembly seed_read_6000
+  * Slight dip on the longest contig to ~120x coverage, but this may not be a major issue
 
 * pb_359_8 - one contig
- * Assembly file - pb_359_8_Trimmed_Circularisation_consenus.fasta
-  * Based on HGAP assembly 16446 (seed read length (20,000), with overlap trimmed.
- * Coverage spike to ~430x; unresolved repeat region?
+  * Assembly file - pb_359_8_Trimmed_Circularisation_consenus.fasta
+    * Based on HGAP assembly 16446 (seed read length (20,000), with overlap trimmed.
+  * Coverage spike to ~430x; unresolved repeat region?
 
 ## To do
 * Decide course of action for pb_359_2 regarding second 'plasmid' which doesn't circularise...
 * Decide course of action for assembling pb_359_3
- * Analyse Falcon vs HGAP Blast xml
- * Check 10k SRL assembly attempt
+  * Analyse Falcon vs HGAP Blast xml
+  * Check 10k SRL assembly attempt
 * Double-check the results from the other assemblies to ensure confidence that they are ready
 for annotation.
 * Should standard or 'reversed' consensus file be used for annotation?
@@ -2265,60 +2262,60 @@ for annotation.
 
 ## pb_359_3
 * 10k assembly yields the same result of 5 contigs (sum of contig lengths - 4,192,469)
- * Dip in the longest contig; SRL now too low?
- * Will attempt a 22k SRL assembly
-  * Job ID - 16612 - No improvement
+  * Dip in the longest contig; SRL now too low?
+  * Will attempt a 22k SRL assembly
+    * Job ID - 16612 - No improvement
 * From the HGAP vs Falcon XML file, the two long HGAP contigs wrap around the Falcon result
 in a way that supports the idea of a circular sequence.
 
 * Determine whether the gaps between the HGAP contigs coincide with the drop in coverage seen
 in the Falcon circularisation attempt
- * Used a different Falcon SRL for Blast and for circularisation - must standardise!
-  * Falcon for HGAP vs Falcon was 17.1k; for circularisation it was 16.8k
-  * Run a circularisation for 17.1k, all contigs
-   * Standard job - 16615 - Short 'plasmid' shows a large dip in coverage
-   * Reversed job - 16616 - Big drop in coverage in the centre of the assembly...
+  * Used a different Falcon SRL for Blast and for circularisation - must standardise!
+    * Falcon for HGAP vs Falcon was 17.1k; for circularisation it was 16.8k
+    * Run a circularisation for 17.1k, all contigs
+      * Standard job - 16615 - Short 'plasmid' shows a large dip in coverage
+      * Reversed job - 16616 - Big drop in coverage in the centre of the assembly...
 
 ## Prokka
 **Important:**  
 rsyncToNodes.sh was incorrect - it was copying nr.* twice, instead of the prokka folder
 * rsync file updates, will run and retry Prokka
- * Rerun analysis and see whether it now works - PROKKA_Test_1.7
-  * Works perfectly - previous problems down to human error.
+  * Rerun analysis and see whether it now works - PROKKA_Test_1.7
+   * Works perfectly - previous problems down to human error.
 
 * Try using the genus feature, specifying `--genus Kordia --usegenus`, to try and resolve some
 'hypothetical protein' identities
- * PROKKA_Genus_Test - 1847 'hypothetical proteins'
+  * PROKKA_Genus_Test - 1847 'hypothetical proteins'
 
 * Download new Prokka Bacteria kingdom database from UniProt and replace old:
- * September release to overwrite May release
-  * Required installation of Swissknife Perl module
- * PROKKA_Genus_Test_2 - 1846 'hypothetical proteins' - a single hypothetical protein reduction...
+  * September release to overwrite May release
+    * Required installation of Swissknife Perl module
+  * PROKKA_Genus_Test_2 - 1846 'hypothetical proteins' - a single hypothetical protein reduction...
 
 * Will try to download and use new Pfam database (hasn't been updated in a long time, it seems)
- * Problem - new database is ~1.3 Tb! Will delete the old Pfam files except the core file, which
+  * Problem - new database is ~1.3 Tb! Will delete the old Pfam files except the core file, which
 I will move to my own directory as a backup.
- * Pfam updated from release (?) to release 30.0
- * PROKKA_Genus_Test_3 - 1789 'hypothetical proteins' - a very modest improvement...
+  * Pfam updated from release (?) to release 30.0
+  * PROKKA_Genus_Test_3 - 1789 'hypothetical proteins' - a very modest improvement...
 
 * **Must think of some additional ways to improve the number of proteins identified**
 
 ## Using Prokka on current samples
 * As far as I can tell, pb_359_6 is ready for annotation. Will therefore attempt to run
 Prokka on this sample
- * File used - pb_359_6_All_Contigs_Circ_consensus.fasta
-  * 1052 instances of the word 'hypothetical' in the file (this includes all plasmids)
-   * 713 in chromosome alone
-  * 1993 named genes in chromosome
-  * 3538 predicted genes in chromosome
+  * File used - pb_359_6_All_Contigs_Circ_consensus.fasta
+    * 1052 instances of the word 'hypothetical' in the file (this includes all plasmids)
+      * 713 in chromosome alone
+    * 1993 named genes in chromosome
+    * 3538 predicted genes in chromosome
 * Add some kind of *Sulfitobacter* database?
  
 ## Useful commands for extracting information from genbank files, for multiple sequences
 * sed -n [start],[stop]p [filename] | grep "[string]" | wc -l
 * Useful strings:
- * "locus_tag"
- * "/gene"
- * "/product=\"hypothetical protein\""
+  * "locus_tag"
+  * "/gene"
+  * "/product=\"hypothetical protein\""
 
 ## To do
 * **Blast all vs all on pb_359_6, to determine if some molecules are circularising in pieces
@@ -2333,59 +2330,59 @@ Prokka on this sample
 ## pb_359_6 Self-Blast
 
 * Longest + Third contigs
- * ~7k section (100% identity)
+  * ~7k section (100% identity)
 * Fourth + Sixth contigs
- * 3k and 1k sections, ~equally spaced
+  * 3k and 1k sections, ~equally spaced
 * Sixth + Shortest contigs
- * 6k and 2k sections, equally spaced (one long sequence?)
+  * 6k and 2k sections, equally spaced (one long sequence?)
 * Fifth + Shortest contigs (reverse compliment)
- * 5k, 6k, 5k, 4k, 1k sections, all in roughly the correct orientation
+  * 5k, 6k, 5k, 4k, 1k sections, all in roughly the correct orientation
 * Seventh + Shortest contigs
- * 3k section
+  * 3k section
 
 * Search for ~long matches between contigs.
 * Set resequencing step with only reads that would span the repeat region, and ensure coverage remains high.
- * Set 13k Minimum Subread Length
- * Job 16617
-  * No obvious problems, will try reverse just in case; failing that, will drop to 12k
- * Reverse - job 16618
-  * Also no obvious problems...
- * Repeat above with 12k Minimum Subread Length
-  * 16619 - As above...
- * Retry at 10k for good measure
-  * 16620 - As above...
+  * Set 13k Minimum Subread Length
+  * Job 16617
+    * No obvious problems, will try reverse just in case; failing that, will drop to 12k
+  * Reverse - job 16618
+    * Also no obvious problems...
+  * Repeat above with 12k Minimum Subread Length
+    * 16619 - As above...
+  * Retry at 10k for good measure
+    * 16620 - As above...
 
 * Shortest contig - gap between position 8,193 and 9,552
 
 * Check Falcon 10.6k a_ctg.fa file...
- * No alternative contigs...
+  * No alternative contigs...
 
 * Re-perform self-blast as a standard txt output and determine the sequence of these repeated regions...?
 
- * Match between longest and third contig - 6133 bases (100% identity)
-  * Closest match - Roseobacter cell wall-associated hydrolase; however, only 7% query coverage.
-  * Some reads to bridge this whole region of the longest contig...
-   * Longest - 2,841,974 - 2,848,106 (resides in a slight lull in the coverage)
-    * Compared to standard Resequencing job - resides in a relative lull as well)
-   * Third - 155,873 - 162,005 (relatively high coverage, but a slight dip in the centre...)
-    * Compared to standard Resequencing job - high concentration of lower-quality reads...)
+  * Match between longest and third contig - 6133 bases (100% identity)
+    * Closest match - Roseobacter cell wall-associated hydrolase; however, only 7% query coverage.
+    * Some reads to bridge this whole region of the longest contig...
+      * Longest - 2,841,974 - 2,848,106 (resides in a slight lull in the coverage)
+        * Compared to standard Resequencing job - resides in a relative lull as well)
+      * Third - 155,873 - 162,005 (relatively high coverage, but a slight dip in the centre...)
+        * Compared to standard Resequencing job - high concentration of lower-quality reads...)
 
- * 100% identity for such a long sequence seems unusually high...
-  * Spliced the contigs so that the repeat starts each contig
-  * Created a combined contig with longest at start and third at end:
+  * 100% identity for such a long sequence seems unusually high...
+    * Spliced the contigs so that the repeat starts each contig
+    * Created a combined contig with longest at start and third at end:
    []--------------------------------------[]------ (Standard)
    -----------------[]------[]--------------------- (Reversed)
     Where [] is the repeated region.
-  * (Longest 3,572,445; third 292,917)
-   * Reverse - expect bumps at 1,639,765 and 1,932,682
-  * Use as a template for pb_359_6 assembly
-   * Would expect a dramatic drop in coverage around [] if there were an issue with assembly
-   * Standard job 16622 + reversed job 16623 - Does not appear to be a valid fusion...
+    * (Longest 3,572,445; third 292,917)
+      * Reverse - expect bumps at 1,639,765 and 1,932,682
+    * Use as a template for pb_359_6 assembly
+      * Would expect a dramatic drop in coverage around [] if there were an issue with assembly
+      * Standard job 16622 + reversed job 16623 - Does not appear to be a valid fusion...
 
- * Match between longest and second contig - 2758/2759 bases (99% identity, 1 gap)
-  * Closest match - Oceanibulbus (multispecies) transposase (two regions)
-  * Two spaced COG3547 domains. Could this be a repeat region resulting in incorrect assembly?
-  * Many reads span this region of the longest contig...
+  * Match between longest and second contig - 2758/2759 bases (99% identity, 1 gap)
+    * Closest match - Oceanibulbus (multispecies) transposase (two regions)
+    * Two spaced COG3547 domains. Could this be a repeat region resulting in incorrect assembly?
+    * Many reads span this region of the longest contig...
 
 * No strong evidence to suggest that the assembly is incorrect? 
 
@@ -2396,37 +2393,37 @@ Prokka on this sample
 
 ## pb_359_2
 * Regarding the shortest contig which doesn't circularise
- * All-vs-all blast to see whether it fits elsewhere?
-  * Only match is ~1,500 bases with the longest contig...
+  * All-vs-all blast to see whether it fits elsewhere?
+    * Only match is ~1,500 bases with the longest contig...
 
 ## pb_359_7
 * Assembly appears to be alright
- * Double-checking the self-blast xml file, no obvious areas of overlap
+  * Double-checking the self-blast xml file, no obvious areas of overlap
 * Attempt Prokka
- * File used - 01_assemblies/pb_359_7/All_Contigs_Circ/pb_359_7_All_Contigs_Circ_consensus.fasta
+  * File used - 01_assemblies/pb_359_7/All_Contigs_Circ/pb_359_7_All_Contigs_Circ_consensus.fasta
 
 ## pb_359_5
 * Only issue with this assembly is a large spike in coverage
- * Blastx spike to see if its contents are relevant
- * Appears to be involved in mercury/heavy metal detoxification- MerA (detoxification of mercury
-compounds) and HMA (heavy-metal-associated domain) among them
- * Best matches to mercury(II) reductase in various *Marinobacter* species
+  * Blastx spike to see if its contents are relevant
+  * Appears to be involved in mercury/heavy metal detoxification- MerA (detoxification of mercury
+    compounds) and HMA (heavy-metal-associated domain) among them
+  * Best matches to mercury(II) reductase in various *Marinobacter* species
 * Run Prokka
- * File used - 01_assemblies/pb_359_5/Trim/pb_359_5_Trimmed_Circularisation_consensus.fasta
+  * File used - 01_assemblies/pb_359_5/Trim/pb_359_5_Trimmed_Circularisation_consensus.fasta
 
 ## pb_359_8
 * Only issue with his assembly is a large spike in coverage
- * Blastx spike to see if its contents are relevant
- * Appears to be a transposase gene
-  * Best matches to transposase in various *Zobellia* species
-   * Strong matches to *Arenibacter*, the predicted genus of this organism
+  * Blastx spike to see if its contents are relevant
+  * Appears to be a transposase gene
+    * Best matches to transposase in various *Zobellia* species
+      * Strong matches to *Arenibacter*, the predicted genus of this organism
 * Run Prokka
- * File used - 01_assemblies/pb_359_8/Trim/pb_359_8_Trimmed_Circularisation_consensus.fasta
+  * File used - 01_assemblies/pb_359_8/Trim/pb_359_8_Trimmed_Circularisation_consensus.fasta
 
 ## pb_359_4
 * Questionable quality of certain areas of assembly; consider re-assembling using a higher
 seed read length in HGAP
- * This should result in more reads being used to correct the assembly, which should hopefully
+  * This should result in more reads being used to correct the assembly, which should hopefully
 improve its quality.
 * New job - 11k SRL (job ID: 16625)
 
@@ -2453,15 +2450,15 @@ some genes, as though picking up only an RNA sequence...
 ## Number of reads used
 With one exception, all assemblies used at least 90% of reads generated
 * Exception - pb_359_5 only used 85.8% or reads. Does this denote a problem with the assembly?
- * Not the smallest assembly, but has the lowest number of predicted genes thus far
+  * Not the smallest assembly, but has the lowest number of predicted genes thus far
 
 ## Prokka
 * Start a preliminary Prokka for pb_359_3
 * Check the peak at the start of pb_359_2, then Prokka
- * Blast 3,605,637 to 3,646,291
- * Not as discrete a peak as the previous one, but still almost double average coverage...
- * pb_359_2 - first part of the peak - hypothetical protein/acyl-CoA dehydrogenase (Roseovarius)
- * Second part of the peak - transposase/hypothetical protein/phage protein (Roseovarius)
+  * Blast 3,605,637 to 3,646,291
+  * Not as discrete a peak as the previous one, but still almost double average coverage...
+  * pb_359_2 - first part of the peak - hypothetical protein/acyl-CoA dehydrogenase (Roseovarius)
+  * Second part of the peak - transposase/hypothetical protein/phage protein (Roseovarius)
 
 ## Extracting hypothetical protein sequences
 * fasta2tab <FASTA_FILE> | grep "PATTERN_TO_SEARCH_FOR" | tab2fasta > <OUTPUT_FILE>
@@ -2469,41 +2466,41 @@ With one exception, all assemblies used at least 90% of reads generated
 
 ## pb_359_4
 * Blast Falcon vs HGAP assemblies
- * Good match, but reverse-complement
- * 99.9% identity, 0.1% gaps
+  * Good match, but reverse-complement
+  * 99.9% identity, 0.1% gaps
 
 # 10 October 2016
 
 ## Find new DBs for Prokka to aid annotation
 * Will test the effectiveness of a genus-specific database
- * pb_359_5 - Marinobacter
-  * M. hydrocarbonoclausticus
-  * M. excellens
-  * M. lipolyticus
-  * M. algicola
-  * M. daepoensis
-  * M. santoriniensis
-  * M. nanhaiticus
-  * M. manganoxydans
-  * M. adhaerens
-   * + 2 plasmids
-  * M. nitratireducens
-  * M. subterrani
-  * M. psychrophilus
-  * M. salarius
-  * M. similis
+  * pb_359_5 - Marinobacter
+    * M. hydrocarbonoclausticus
+    * M. excellens
+    * M. lipolyticus
+    * M. algicola
+    * M. daepoensis
+    * M. santoriniensis
+    * M. nanhaiticus
+    * M. manganoxydans
+    * M. adhaerens
+      * + 2 plasmids
+    * M. nitratireducens
+    * M. subterrani
+    * M. psychrophilus
+    * M. salarius
+    * M. similis
 * Running pb_359_5_genus
- * Most gene names have been removed...
- * Re-run using the --addgenes option
-  * No improvement...
- * Try using --hmms option to specify all HMMs before Marinobacter database
-  * hmmpress /db/prokka/hmm/TIGR
-  * No improvement...
- * Specifying a genus means that the Bacteria sprot database ISN'T searched...
-  * Use --proteins option to specify Marinobacter database?
+  * Most gene names have been removed...
+  * Re-run using the --addgenes option
+    * No improvement...
+  * Try using --hmms option to specify all HMMs before Marinobacter database
+    * hmmpress /db/prokka/hmm/TIGR
+    * No improvement...
+  * Specifying a genus means that the Bacteria sprot database ISN'T searched...
+    * Use --proteins option to specify Marinobacter database?
 * New plan - cut hypothetical proteins out of the resultant Prokka files, and run
 Prokka on the hypothetical file
- * Not so simple...
+  * Not so simple...
 * Compare first and second jobs by eye?
 
 # 14 October 2016
@@ -2519,10 +2516,10 @@ Run prokka 3x:
 * Standard database (done)
 * Standard + ALL Marinobacter (skip cd-hit step)
 * Standard + non-hypothetical Marinobacter (skip cd-hit step)
- * fasta2tab <FASTA_FILE> | grep -v "PATTERN_TO_SEARCH_FOR" | tab2fasta > <OUTPUT_FILE>
- * Removed 'hypothetical', 'putative', 'unknown' and 'DUF' (capital and lower-case for the first
+  * fasta2tab <FASTA_FILE> | grep -v "PATTERN_TO_SEARCH_FOR" | tab2fasta > <OUTPUT_FILE>
+  * Removed 'hypothetical', 'putative', 'unknown' and 'DUF' (capital and lower-case for the first
 three)
-  * Leave 'possible' results in; only a handful of hits
+    * Leave 'possible' results in; only a handful of hits
 * **Remember to run rSync whenever you modify the database!**
 
 * Standard only - pb_359_5
@@ -2568,7 +2565,7 @@ NCBI:
 * A. certesii
 * A. algicola
 
- * Having trouble compiling: retry Prokka-genbank_to_fasta_db
+  * Having trouble compiling: retry Prokka-genbank_to_fasta_db
 
 * Prepare to present re: Pathway Tools results on Tuesday
 
@@ -2580,12 +2577,12 @@ NCBI:
 
 Observations:
 * Polyisoprenoid biosynthesis (E. coli)
- * All components present EXCEPT for the first one - IPP -> DMAPP
-  * idi gene. Check against pb_359_5 with idi gene (E. coli) as query?
-  * idi gene not present in order Alteromonadales (according to NCBI)
-   * ispA gene present in one Alteromonadales bacterium (according to NCBI)
-  * No hits
-   * **Hypothesis: Is DMAPP produced by S. marinoi (or something else in the microbiome?), and
+  * All components present EXCEPT for the first one - IPP -> DMAPP
+    * idi gene. Check against pb_359_5 with idi gene (E. coli) as query?
+    * idi gene not present in order Alteromonadales (according to NCBI)
+      * ispA gene present in one Alteromonadales bacterium (according to NCBI)
+    * No hits
+      * **Hypothesis: Is DMAPP produced by S. marinoi (or something else in the microbiome?), and
 Marinobacter takes care of the rest?**
 
 * Guanosine -> Guanine step missing (but guanine -(hpg)-> GMP present)
@@ -2594,8 +2591,8 @@ Marinobacter takes care of the rest?**
 
 ## Newly-downloaded databases from NCBI
 * Arenibacter database still not functioning correctly
- * No CDS data! Redownload available genbanks WITH CDS data
- * Arenibacter database now created
+  * No CDS data! Redownload available genbanks WITH CDS data
+  * Arenibacter database now created
 
 ## Pathway Tools
 New overviews created for:
@@ -2607,9 +2604,9 @@ New overviews created for:
 ## Pathway Tools
 Creating Pathway Tools overviews for:
 * Sulfitobacter (pb_359_6)
- * Note - RNA genes found on 'plasmids'...
+  * Note - RNA genes found on 'plasmids'...
 * Sphingorhabdus (pb_359_7)
- * Unsuccessful - retry...
+  * Unsuccessful - retry...
 
 ## pb_359_2
 As the smallest 'plasmid' still doesn't circularise, attempt a Falcon run using 1000 SRL
@@ -2618,10 +2615,10 @@ As the smallest 'plasmid' still doesn't circularise, attempt a Falcon run using 
 ## Canu Assembler
 Attempting assembler on pb_359_4
 * Once again, a single contig is achieved, though it's apparently non-circular
- * Length - 3,486,666 bp (same region as the HGAP assembly, +/- 10 kbp)
- * Blast against itself to determine overlap
-  * Trim the first 7058 bases, and reverse
-  * Once some space frees up on the Annotation nodes, start the jobs to run overnight
+  * Length - 3,486,666 bp (same region as the HGAP assembly, +/- 10 kbp)
+  * Blast against itself to determine overlap
+    * Trim the first 7058 bases, and reverse
+    * Once some space frees up on the Annotation nodes, start the jobs to run overnight
 
 Potentially try pb_359_6 in Canu to resolve the massive amount of 'plasmids'?
 * Check results tomorrow
@@ -2629,13 +2626,13 @@ Potentially try pb_359_6 in Canu to resolve the massive amount of 'plasmids'?
 ## Observations
 * Loktanella appears to be missing some RNA genes
 * Roseovaius appears to also be missing some RNA genes
- * Final step of 'superpathway of dimethylsulfonioproanoate degradation' missing
+  * Final step of 'superpathway of dimethylsulfonioproanoate degradation' missing
 
 # 20 October 2016
 
 ## pb_359_6
 * Canu job still waiting; cancelled, lowered # of CPUs required, and moved to another node.
- * Failed, retry from home directory
+  * Failed, retry from home directory
 
 ## Pathway Tools
 * Marinobacter (5) - done; original and plus
@@ -2648,31 +2645,31 @@ Potentially try pb_359_6 in Canu to resolve the massive amount of 'plasmids'?
 
 ## pb_359_4
 * Trying circularisation of Canu assembly on SMRT Portal
- * Standard job (16628) is relatively convincing (check result near the start)
- * Reversed job (16629) also relatively convincing (no drop at the midpoint)
+  * Standard job (16628) is relatively convincing (check result near the start)
+  * Reversed job (16629) also relatively convincing (no drop at the midpoint)
 * Run Prokka and then attempt to build in Pathway Tools
- * Waiting...
+  * Waiting...
 
 ## Current jobs
 
 * Canu - pb_359_6 - take results, trim and reverse, put into SMRT Portal
- * One extra contig (19366 bp, 11 reads); can this be disregarded?
- * Self-blast - trim:
-  * First 10,853 of tig00000000
-  * First 10,000 of tig00000001
-  * First 15,098 of tig00000002
-  * First 12,401 of tig00000003
-  * First 13,138 of tig00000004
-  * First 9,000 of tig00000005
-  * First 9,992 of tig00000006
-  * tig00000007 has no overlap...
-  * First 12,227 of tig00000008
- * Running in SMRT Portal
- * Blast vs Falcon
-  * When consensus has been obtained from SMRT Portal
+  * One extra contig (19366 bp, 11 reads); can this be disregarded?
+  * Self-blast - trim:
+    * First 10,853 of tig00000000
+    * First 10,000 of tig00000001
+    * First 15,098 of tig00000002
+    * First 12,401 of tig00000003
+    * First 13,138 of tig00000004
+    * First 9,000 of tig00000005
+    * First 9,992 of tig00000006
+    * tig00000007 has no overlap...
+    * First 12,227 of tig00000008
+  * Running in SMRT Portal
+  * Blast vs Falcon
+    * When consensus has been obtained from SMRT Portal
 
 * Prokka - pb_359_4 - take results and put into Pathway Tools
- * Put into Pathway Tools later
+  * Put into Pathway Tools later
 
 ## pb_359_6's numerous contigs
 * Check GC content of each contig?
@@ -2683,38 +2680,38 @@ Potentially try pb_359_6 in Canu to resolve the massive amount of 'plasmids'?
 
 ## pb_359_6
 * Forgot to change the genomeSize parameter; change it now and note any difference...
- * data5 full; run analysis in home directory
- * Slight difference but nothing major
- * Zip pb_359_6
+  * data5 full; run analysis in home directory
+  * Slight difference but nothing major
+  * Zip pb_359_6
 
 ## pb_359_4
 * Put into Pathway Tools
 * Observations
- * Arenibacter associated with Skeletonema costatum known for PAH degradation; evidence of
-this in our Arenibacter
+  * Arenibacter associated with Skeletonema costatum known for PAH degradation; evidence of
+    this in our Arenibacter
 
 ## File compression
 * tar -cf [archive].tar [existing files] | gzip > archive.tar.gz
- * Process is killed; intermediate files should be deleted, the rest should be zipped
- * pb_359_6 Canu can also be deleted; results provided no additional information
+  * Process is killed; intermediate files should be deleted, the rest should be zipped
+  * pb_359_6 Canu can also be deleted; results provided no additional information
 
 ## sg_edges_to_GFA.py
 * Run from inside 2-asm-falcon/ folder
 * Downloaded Bandage (graph viewer)
- * Graphs automatically generated by Canu
- * Graphs must be made using the above Python script for Falcon assemblies
-  * Requires 0 and 1 folders to run
+  * Graphs automatically generated by Canu
+  * Graphs must be made using the above Python script for Falcon assemblies
+    * Requires 0 and 1 folders to run
 
 * Ran on Canu graph for pb_359_4; only one contig shown...
 * Running for pb_359_6 10600 SRL
- * One bubble in the 'chromosome', another in the 'largest plasmid'
+  * One bubble in the 'chromosome', another in the 'largest plasmid'
 
 * Upload Pathway Tools overview (pathways, genes, etc.) to gitlab
 * Rerun prokka of Kordia?
 * Check Albiorix for .ps to .pdf converter
 * Check 'Secondary Metabolite Biosynthesis' for interesting products
- * E.g. trans-lycopene biosynthesis I in Arenibacter
- * Also check hormones and aromatic compounds, and other small groupings
+  * E.g. trans-lycopene biosynthesis I in Arenibacter
+  * Also check hormones and aromatic compounds, and other small groupings
 * PowerPoint for Tuesday
 
 # 24 October 2016
@@ -2758,14 +2755,14 @@ Search for pilus-related genes in the genomes
 * Ensure circularisation is complete!
 
 * Check relevant programs and methods in Alvar's thesis
- * New programs may need to be installed on the system
- * Alvar's code for DLing sequences may need to be altered
+  * New programs may need to be installed on the system
+  * Alvar's code for DLing sequences may need to be altered
 
 * Code for DLing sequences - genome_downloader.py
- * Can it download from ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/genbank/bacteria ?
- * OR ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/refseq/bacteria
+  * Can it download from ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/genbank/bacteria ?
+  * OR ftp://ftp.wip.ncbi.nlm.nih.gov/genomes/refseq/bacteria
 * Attempting to run the script as-is...
- * Check in the morning...
+  * Check in the morning...
 
 # 26 October 2016
 
@@ -2815,19 +2812,19 @@ sequence files...
 
 ## General progess
 * The following assemblies appear to be okay:
- * pb_359_4 (Canu) - Sphingorhabdus - PhyloPhlAn in progress...
- * pb_359_5 (HGAP) - Marinobacter - PhyloPhlAn in progress...
- * pb_359_8 (HGAP) - Arenibacter? - PhyloPhlAn has been run once; need to DL relevant related sequences to run a smaller PhyloPhlAn job
+  * pb_359_4 (Canu) - Sphingorhabdus - PhyloPhlAn in progress...
+  * pb_359_5 (HGAP) - Marinobacter - PhyloPhlAn in progress...
+  * pb_359_8 (HGAP) - Arenibacter? - PhyloPhlAn has been run once; need to DL relevant related sequences to run a smaller PhyloPhlAn job
 
 * The following assemblies need to have the bubbles in their string graphs examined:
- * pb_359_7 (Falcon) - ??? - check bubbles in Bandage...
+  * pb_359_7 (Falcon) - ??? - check bubbles in Bandage...
 
 * The following assemblies need to have their circularisation examined:
- * pb_359_2 (Falcon)
- * pb_359_3 (Falcon)
+  * pb_359_2 (Falcon)
+  * pb_359_3 (Falcon)
 
 * The following assemblies need to be generally checked:
- * pb_359_6 (Falcon/Canu)
+  * pb_359_6 (Falcon/Canu)
 
 ## pb_359_7
 Considering the bubbles, increase the seed read length to determine whether this helps to resolve
@@ -2837,34 +2834,34 @@ circularisation with a view to using this value instead?
 
 * Bubbles in 6k - 11/1/1/0
 * Bubbles in 16k - 1/0/0/0
- * Short path in the current bubble is 19,348 bp long, but 19k and 20k SRLs give 17 and 38
+  * Short path in the current bubble is 19,348 bp long, but 19k and 20k SRLs give 17 and 38
 contigs, respectively...
- * An almost-perfect match exists between 000003887 and 000004729, except the latter is almost
+  * An almost-perfect match exists between 000003887 and 000004729, except the latter is almost
 30,000 bp (cf. almost 20,000 bp)
 
 * Re-run Falcon job
- * Tweak 'overlap filtering options' settings based on average coverage
-(max_diff 3x, max_cov 2x, min_cov 1/4x)
- * Average coverage ~180:
-  * max_diff 540
-  * max_cov 360
-  * min_cov 45
- * Once job is finished, check the number of contigs, then create a string graph with
+  * Tweak 'overlap filtering options' settings based on average coverage
+    (max_diff 3x, max_cov 2x, min_cov 1/4x)
+  * Average coverage ~180:
+    * max_diff 540
+    * max_cov 360
+    * min_cov 45
+  * Once job is finished, check the number of contigs, then create a string graph with
 sg_sequences_to_GFA.py and see whether the bubble has been resolved.
- * Job came back with no results...
-  * Retry with these settings, based on the recommendations of the developer:
-   * max_diff 360 (2x average coverage)
-   * max_cov 540 (3x average coverage)
-   * min_cov 5
- * Results give 7 contigs instead... What else can be tweaked?
+  * Job came back with no results...
+    * Retry with these settings, based on the recommendations of the developer:
+      * max_diff 360 (2x average coverage)
+      * max_cov 540 (3x average coverage)
+      * min_cov 5
+  * Results give 7 contigs instead... What else can be tweaked?
 
 ## pb_359_2 and pb_359_3
 As these didn't circularise properly, attempt with Canu?
 * Started Canu jobs in home directory (reads files still unzipped)
- * pb_359_2
-  * Canu gives three contigs (bubbles file also size 0) - consistent
- * pb_359_3
-  * Canu gives five contigs (bubbles file also size 0) - inconsistent with Falcon
+  * pb_359_2
+    * Canu gives three contigs (bubbles file also size 0) - consistent
+  * pb_359_3
+    * Canu gives five contigs (bubbles file also size 0) - inconsistent with Falcon
 
 ## To do
 * Adjust Falcon settings to improve assembly of pb_359_7
@@ -2876,16 +2873,16 @@ As these didn't circularise properly, attempt with Canu?
 ## pb_359_2 and _3
 Check overlap, then put into SMRT Portal
 * pb_359_2: 3 contigs
- * Contig 1 (tig00000000) - remove first 16,830 bases (should be 4,170,771)
- * Contig 2 (tig00000001) - remove first 14,738 bases (should be 180,122)
- * Contig 3 (tig00000002) - remove first 10,069 bases (should be 30,293)
+  * Contig 1 (tig00000000) - remove first 16,830 bases (should be 4,170,771)
+  * Contig 2 (tig00000001) - remove first 14,738 bases (should be 180,122)
+  * Contig 3 (tig00000002) - remove first 10,069 bases (should be 30,293)
 * pb_359_3: 5 contigs
- * Contig 1 (tig00000000) - remove first 16,012 bases (should be 3,836,915)
- * Contig 2 (tig00000001) - ??? (may be a part of tig00000000)
- * Contig 3 (tig00000002) - remove first 15,928 bases (should be 111,026)
- * Contig 4 (tig00000003) - remove first 13,184 bases (should be 89,752)
- * Contig 5 (tig00000004) - remove first 18,493 bases (should be 39,355)
-  * Hypothesis - Contigs 1 and 2 should be joined?
+  * Contig 1 (tig00000000) - remove first 16,012 bases (should be 3,836,915)
+  * Contig 2 (tig00000001) - ??? (may be a part of tig00000000)
+  * Contig 3 (tig00000002) - remove first 15,928 bases (should be 111,026)
+  * Contig 4 (tig00000003) - remove first 13,184 bases (should be 89,752)
+  * Contig 5 (tig00000004) - remove first 18,493 bases (should be 39,355)
+    * Hypothesis - Contigs 1 and 2 should be joined?
 
 * pb_359_2 standard job - 16648 - shortest contig still a problem
 * pb_359_2 reversed job - 16649 - the ends seem to join fine, but problem remains (see above)
@@ -2915,10 +2912,10 @@ Attempting Canu
 * 4 contigs, consistent with Falcon
 * Size 0 bubbles file
 * Self-blast and circularise
- * Longest contig - trim first 15,834 bp (expected length: 4,722,943 bp)
- * Second contig - trim first 15,633 bp (expected length: 372,257 bp)
- * Third contig - trim first 18,046 bp (expected length: 154,461 bp)
- * Shortest contig - trim first 17,200 bp (expected length: 81,443 bp)
+  * Longest contig - trim first 15,834 bp (expected length: 4,722,943 bp)
+  * Second contig - trim first 15,633 bp (expected length: 372,257 bp)
+  * Third contig - trim first 18,046 bp (expected length: 154,461 bp)
+  * Shortest contig - trim first 17,200 bp (expected length: 81,443 bp)
 
 (Check any matches between different contigs...)
 
@@ -2927,7 +2924,7 @@ Attempting Canu
 
 
 * Check sample 3 splice job and download files
- * Failure
+  * Failure
 
 # 31 October 2016
 
@@ -2937,26 +2934,26 @@ Attempting Canu
 
 Check for any matches between contigs, and coverage dips
 * Match between second and third contigs of ~4kbp
- * Blasting sequence: area contains potentially two protein genes...
- * Average coverage in the two contigs is different; reasonable to assume that
+  * Blasting sequence: area contains potentially two protein genes...
+  * Average coverage in the two contigs is different; reasonable to assume that
 they truly are different contigs?
 * Coverage appears to be reasonable throughout
 
 * pb_359_7 has now been sent to Prokka
- * Numbers of predicted loci and named genes changed fairly drastically... Investigate!
-  * Ensure Prokka database has been synced correctly to all nodes
+  * Numbers of predicted loci and named genes changed fairly drastically... Investigate!
+    * Ensure Prokka database has been synced correctly to all nodes
 
 ## pb_359_5 and _8
 * Conflicts in the assembly cannot be verified; reperform with Canu?
- * Canu jobs started in home directory (be sure to sync results to data5 when completed)
- * Numbers of contigs inconsistent... Investigate!
+  * Canu jobs started in home directory (be sure to sync results to data5 when completed)
+  * Numbers of contigs inconsistent... Investigate!
 
 # 1 November 2016
 
 ## pb_359_5 and _8
 * After Canu jobs the following results were obtained:
- * pb_359_5 - 2 contigs (albeit one very poorly supported...)
- * pb_359_8 - 3 contigs, one with moderate support (and one with negative support?)
+  * pb_359_5 - 2 contigs (albeit one very poorly supported...)
+  * pb_359_8 - 3 contigs, one with moderate support (and one with negative support?)
 * Both 'bubbles.fasta' files are blank, however
 
 Approximate sizes of assembly/longest contig
@@ -2973,31 +2970,31 @@ For _5:
 For _8:
 * Falcon finds a second contig of ~64k
 * Canu finds a second contig of ~960k
- * Canu also finds a third contig of ~87k (poor support)
+  * Canu also finds a third contig of ~87k (poor support)
 
 For pb_359_5, genome size was previously set to 4.5m
 * Attempting at 4.4m
- * No bubbles
- * Once again, 2 contigs (once again, the second contig has ~low support)
+  * No bubbles
+  * Once again, 2 contigs (once again, the second contig has ~low support)
 
 For pb_359_8, genome size was previously set to 5.3m (this appears to have been an error...)
 * Attempting at 5.8m
- * No bubbles
- * Once again, 3 contigs (once again, the third contig has negative coverage)
+  * No bubbles
+  * Once again, 3 contigs (once again, the third contig has negative coverage)
 
 ## pb_359_2
 Both Falcon and Canu are convinced that there is a third contig, but it looks like an M in
 terms of coverage, with an obvious dip in the middle.
 * What is contained within this contig? Blast first ~10k bases
- * None of the best hits are to Roseovarius or Roseobacter, the two proposed genera...
+  * None of the best hits are to Roseovarius or Roseobacter, the two proposed genera...
 * Blast next ~10k bases
- * A few of the best hits are to Roseovarius
+  * A few of the best hits are to Roseovarius
 * Blast final ~10k bases for completeness
- * Again, no convincing Roseo* hits
+  * Again, no convincing Roseo* hits
 
 * Looking at the self-blast results:
- * In the Falcon assembly, the shortest contig has no hits to the other two
- * The same is true in the Canu assembly
+  * In the Falcon assembly, the shortest contig has no hits to the other two
+  * The same is true in the Canu assembly
 
 
 
@@ -3005,17 +3002,17 @@ terms of coverage, with an obvious dip in the middle.
 HGAP and Canu believe there are 5 contigs, whereas Falcon says there are 3
 * All show massive dips in the assemblies of the longest contig; for
 HGAP and Canu, these also exist in the shorter contigs...
- * The coverage always drops to ~50
+  * The coverage always drops to ~50
 * Tweak settings of Canu to try and obtain 3 contigs with it?
 * Check string graph of Falcon assembly?
- * Three bubbles in the chromosome, two of which are huge.
+  * Three bubbles in the chromosome, two of which are huge.
 * Self-blasts of both Canu AND Falcon assemblies give some fairly large hits between contigs...
 * Alter Falcon settings re: coverage? (using 17.1k SRL as reference)
- * Average coverage 177.93 (~180)
-  * max_diff: 360
-  * max_cov: 540
-  * min_cov: 5
- * This resulted in 9 contigs...
+  * Average coverage 177.93 (~180)
+    * max_diff: 360
+    * max_cov: 540
+    * min_cov: 5
+  * This resulted in 9 contigs...
 
 Re: Falcon settings on overlap:  
 "What is the right numbers used for these parameters? These parameters may the most tricky ones
@@ -3025,17 +3022,17 @@ max_cov to be three times of the average coverage and the max_diff to be twice o
 coverage."
 
 * In Falcon, 3-contig assemblies range from SRL 16600-17250 (inclusive)
- * Resultant files have since been deleted; rerun jobs in home directory...
-  * 16600, 16700, 16750, 16800, 16900, 17000, 17100, 17200, 17250
- *All have bubbles...
+  * Resultant files have since been deleted; rerun jobs in home directory...
+    * 16600, 16700, 16750, 16800, 16900, 17000, 17100, 17200, 17250
+  * All have bubbles...
 
 
 
 ## pb_359_6
 No blatant issues with coverage, but a curious patch in the longest contig...
 * In Falcon, 8-contig assemblies range from SRL 10500-11500 (inclusive)
- * 11,400 and 11,500 both have size 0 a_ctg files; switch to these assemblies instead?
- * Problem - not circular!
+  * 11,400 and 11,500 both have size 0 a_ctg files; switch to these assemblies instead?
+  * Problem - not circular!
 
 
 
@@ -3053,17 +3050,17 @@ determine conflicts?
 
 
 * pb_359_4 and _7: Pleased with the assemblies, and genbanks have been produced. 
- * pb_359_7 still needs to be loaded into Pathway Tools
- * Both need to be run through PhyloPhlAn
-  * Via home directory...
-  * 4 has already been run; 7 is currently being run and must be moved from the home directory
+  * pb_359_7 still needs to be loaded into Pathway Tools
+  * Both need to be run through PhyloPhlAn
+    * Via home directory...
+    * 4 has already been run; 7 is currently being run and must be moved from the home directory
 into data5
 
 ## To do
 * Rerun Pathway Tools for _4 and _7 (note which assemblies are used), and name them
 such that you know they use the final assembly
 * Work out why FigTree won't output images anymore!
- * Appears to output them now that Java has been updated...
+  * Appears to output them now that Java has been updated...
 
 # 2 November 2016
 
@@ -3074,9 +3071,9 @@ Try Figtree through Albiorix using sudo
 Both sequences circularise well; the only issue is the coverage spike composed of many short
 reads (~1-5kb), present in both samples... Can this be disregarded?
 * Upload Falcon/Canu reference to see whether they also find this spike
- * 16k Falcon assemblies...
- * _5 job ID: 16662
- * _8 job ID: 16663
+  * 16k Falcon assemblies...
+  * _5 job ID: 16662
+  * _8 job ID: 16663
 
 ## pb_359_4 and _7
 New Figtree strategy - max zoom, then export as jpg for inspection
@@ -3090,15 +3087,15 @@ urlretrieve doesn't support wildcards, so may no longer be possible to automate 
 Late observation - the longest 'plasmid' in pb_359_6 is 428k. MUCH too big for a plasmid?
 * Adding together the 'chromosome' and the biggest plasmids would still give a reasonable size for a complete genome...
 * Looking back at the preliminary Blast results, certain of the contigs matched Sulfitobacter, others matched Roseovarius (pb_359_2?)
- * Blast pb_359_2 and _6?
- * Falcon - _2 SRL 7k vs _6 SRL 10.6k
+  * Blast pb_359_2 and _6?
+  * Falcon - _2 SRL 7k vs _6 SRL 10.6k
 * Expectations:
- * pb_359_2 - Two longest contigs matched Roseovarius, smallest matched Pseudorhodobacter/Thioclava/Oceanibulbus
- * pb_359_6 - ~302k and ~104k contig matches Roseovarius, ~153k contig matches Roseo/Puniceibacterium
+  * pb_359_2 - Two longest contigs matched Roseovarius, smallest matched Pseudorhodobacter/Thioclava/Oceanibulbus
+  * pb_359_6 - ~302k and ~104k contig matches Roseovarius, ~153k contig matches Roseo/Puniceibacterium
 * Lots of matches spanning a couple of kilobases, but nothing huge EXCEPT one hit of 91% identity across ~13.7k
- * 180,096 bp contig of pb_359_2 vs 92,692 bp contig of pb_359_6
- * Blasting sequence...
-  * Match of ~800 bp to 'type IV secretion system"
+  * 180,096 bp contig of pb_359_2 vs 92,692 bp contig of pb_359_6
+  * Blasting sequence...
+    * Match of ~800 bp to 'type IV secretion system"
 
 Add a newline after every Nth character:
 sed -e "s/.\{N\}/&\n/g" < file.txt
@@ -3107,19 +3104,19 @@ sed -e "s/.\{N\}/&\n/g" < file.txt
 
 Check assembly sizes for _5 and _8. If all assemblies come to ~ the same size, use HGAP
 * pb_359_5
- * HGAP 16K   - 1 contig  - 4,406K
- * Falcon 10K - 2 contigs - 4,626K
- * Canu       - 2 contigs - 4,667K
+  * HGAP 16K   - 1 contig  - 4,406K
+  * Falcon 10K - 2 contigs - 4,626K
+  * Canu       - 2 contigs - 4,667K
 
 * pb_359_5 is using only 85% of reads, cf. 90% as with the other samples. HGAP assemblies
 with a higher SRL/more contigs had an assembly size more comparable to the other assemblers...
 * pb_359_5 14k job?
- * 16664
+  * 16664
 
 * pb_359_8
- * HGAP 20K   - 1 contig  - 5,839K
- * Falcon 10K - 2 contigs - 5,886K
- * Canu       - 3 contigs - 5,924K
+  * HGAP 20K   - 1 contig  - 5,839K
+  * Falcon 10K - 2 contigs - 5,886K
+  * Canu       - 3 contigs - 5,924K
 
 * pb_359_8's initial assembly (SciLifeLab) was 2 contig, but it was a slightly bigger assembly,
 around the size of the Canu assembly...
@@ -3127,7 +3124,7 @@ around the size of the Canu assembly...
 ## To do
 
 * Solve size discrepancies between the various assemblies of pb_359_5 and _8
- * Check sample 5 14k job (16664) on SMRT Portal
+  * Check sample 5 14k job (16664) on SMRT Portal
 
 # 3 November 2016
 
@@ -3135,17 +3132,17 @@ around the size of the Canu assembly...
 Job 16664 returned two contigs, the second of which measured ~250k bases, but uses ~92% of the
 reads
 * Previous, one-contig assembly contained only 85% of reads
- * Compared to the contig size of Marinobacter hydrocarbonoclasticus, this size is reasonable
+  * Compared to the contig size of Marinobacter hydrocarbonoclasticus, this size is reasonable
 * New hypothesis - pb_359_5 contains a chromosome plus a plasmid.
- * Attempt to circularise the Canu/Falcon assembly
- * Check string graph for 10K Falcon job
-  * A lot of complex bubbles...
+  * Attempt to circularise the Canu/Falcon assembly
+  * Check string graph for 10K Falcon job
+    * A lot of complex bubbles...
 
 ## genome_downloader.py
 Make a fork of Alvar's code, using wget instead of urllib to extract files (wget accepts
 wildcards)
 * https://www.ncbi.nlm.nih.gov/books/NBK25501/
- * Useful for retrieving accession numbers?
+  * Useful for retrieving accession numbers?
 * Need wget to be installed...
 
 
@@ -3175,8 +3172,8 @@ components, but otherwise functional.
 
 ## To Do
 * Solve problem with remaining assemblies
- * pb_359_5 may be near completion; check last job, then attempt to circularise a 2-contig assembly (Canu?)
- * pb_359_2, _3, _6, _8...
+  * pb_359_5 may be near completion; check last job, then attempt to circularise a 2-contig assembly (Canu?)
+  * pb_359_2, _3, _6, _8...
 * Get a phylogenetic tree for pb_359_7 using PhyloPhlAn and NCBI_Downloader.py
 * Complete creation of pb_359_4 phylogenetic tree
 
@@ -3193,10 +3190,10 @@ and Canu assemblies are, in fact, accurate. Therefore, circularisation and strin
 must be checked
 * String graph of 10k Falcon job - VERY bubbly, including some very complex bubbles
 * Check a_ctg file sizes for other size assemblies of comparable size
- * 16k has a smaller a_ctg file (but the p_ctg file is missing...) so will perform more
-Falcon assemblies around this value to try and find a minimum amount of bubbles.
- * 11k, 12k, 13k, 14k, 15k, 17k, 18k, 19k (and redo 16k for comparison)
- * Running from home directory; tar will have to be rezipped and resynced with data5
+  * 16k has a smaller a_ctg file (but the p_ctg file is missing...) so will perform more
+    Falcon assemblies around this value to try and find a minimum amount of bubbles.
+  * 11k, 12k, 13k, 14k, 15k, 17k, 18k, 19k (and redo 16k for comparison)
+  * Running from home directory; tar will have to be rezipped and resynced with data5
 * Looking at the stats, 18k SRL has the smallest amount of alternate contig data...
 
 ## pb_359_4
@@ -3214,27 +3211,27 @@ spaces with underscores in the FASTA headers (additional section of the code?)
 ## pb_359_8
 Assembly size of 15k SRL is comparable to the previously-checked 10k SRL, BUT a_ctg.fa is blank!
 * Run sg_sequences_to_GFA.py and check this assembly instead.
- * Despite the emptiness of the a_ctg.fa file, the other a_ctg* files weren't empty, and so
+  * Despite the emptiness of the a_ctg.fa file, the other a_ctg* files weren't empty, and so
 the resultant string graph still contains some bubbles...
- * Try some other assembly sizes?
-  * Are the bubbles relevant, if the a_ctg.fa file is empty?
-  * Cannot find an explanation of the difference between a_ctg_all.fa, a_ctg_base.fa,
+  * Try some other assembly sizes?
+    * Are the bubbles relevant, if the a_ctg.fa file is empty?
+    * Cannot find an explanation of the difference between a_ctg_all.fa, a_ctg_base.fa,
 a_ctg_base_tiling_path, a_ctg.fa and a_ctg_tiling_path...
- * The bubble in the 'plasmid' occurs between two nodes of ~17.7Kb and ~19.6Kb
- * BLASTing vs the ~17.7k node shows extensive repetition...
-  * Would a SRL of 18K resolve this?
- * Attempt 18K and a few surrounding values...
-  * 17k, 18k, 19k
- * Running from home directory; tar will have to be rezipped and resynced with data5
- * 17k yielded 2 contigs; 18k yielded 4, 19k yielded 8...
- * 18k and 19k have 0 file size on all a_ctg files...
+  * The bubble in the 'plasmid' occurs between two nodes of ~17.7Kb and ~19.6Kb
+  * BLASTing vs the ~17.7k node shows extensive repetition...
+    * Would a SRL of 18K resolve this?
+  * Attempt 18K and a few surrounding values...
+    * 17k, 18k, 19k
+  * Running from home directory; tar will have to be rezipped and resynced with data5
+  * 17k yielded 2 contigs; 18k yielded 4, 19k yielded 8...
+  * 18k and 19k have 0 file size on all a_ctg files...
 
 ## pb_359_7
 Phylotaxonomic group must be identified in order to shrink the tree.
 * FigTree 1.4.3 appears faster than 1.4.2 on my computer for handling huge trees, so
 should be able to sift through more easily.
- * Dowload sequences from family Rhodobacteraceae
- * Running PhyloPhlAn job...
+  * Dowload sequences from family Rhodobacteraceae
+  * Running PhyloPhlAn job...
 
 * pb_359_4 running PhyloPhlAn
 * pb_359_5 running Falcon
@@ -3258,13 +3255,13 @@ might be worth looking at GenBank as well, as no Antarctobacter species were fou
 ## pb_359_8
 Try 17.5k Falcon assembly?
 * 17k gives 2 contigs but bubbles remain; 18k (and 19k) give more contigs, but no bubbles...
- * Job submitted; will need to redo the tar and gzip files...
- * Result - 4 contigs, but with a_ctg* files of non-zero size...
+  * Job submitted; will need to redo the tar and gzip files...
+  * Result - 4 contigs, but with a_ctg* files of non-zero size...
 * Check whether the 17k assembly gives serious bubbles in the string graph, and if it will
 circularise...
- * Standard job - 16672
- * Reversed job - 16673
- * Two bubbles in the long contig, and not circular...
+  * Standard job - 16672
+  * Reversed job - 16673
+  * Two bubbles in the long contig, and not circular...
 
 ## pb_359_5
 Remove some files to make the .tar file manageable...
@@ -3284,25 +3281,25 @@ Retain files with smallest a_ctg* files; keep 17/18/19
 pb_359_6 10.6k Falcon assembly has a single chromosome bubble
 * Rerun sample 6 jobs to double-check whether any of these give better results in terms of
 bubbles?
- * This has been done, unsuccessfully
+  * This has been done, unsuccessfully
 
 Note: Canu jobs have not been tested in SMRT Portal for samples 5 or 8...
 
 * pb_359_5
- * HGAP 16K   - 1 contig  - 4,406K
- * Falcon 10K - 2 contigs - 4,626K
- * Canu       - 2 contigs - 4,667K
+  * HGAP 16K   - 1 contig  - 4,406K
+  * Falcon 10K - 2 contigs - 4,626K
+  * Canu       - 2 contigs - 4,667K
 
 * pb_359_8
- * HGAP 20K   - 1 contig  - 5,839K
- * Falcon 10K - 2 contigs - 5,886K
- * Canu       - 3 contigs - 5,924K
+  * HGAP 20K   - 1 contig  - 5,839K
+  * Falcon 10K - 2 contigs - 5,886K
+  * Canu       - 3 contigs - 5,924K
 
 Check these two for circularisation...?
 * Use pb_359_5 version rather than pb_359_5_2
 * Use pb_359_8_2 version rather than pb_359_8
- * Canu results must first be trimmed...
- * Before trimming, must be blasted
+  * Canu results must first be trimmed...
+  * Before trimming, must be blasted
 
 ## To do:
 * Check overlap in samples 5 and 8 Canu, with a view to trimming and circularising them...
@@ -3316,15 +3313,15 @@ Surprisingly, despite yesterday's comments, the 17k Falcon assembly SEEMS to cir
 ## Canu
 Trim the Canu assemblies of samples 5 and 8
 * pb_359_5
- * Longest contig: trim first 17,082 bases (length: 4,403,956 to 4,386,874)
- * Shortest contig: trim first 21,124 bases (length: 264,537 to 243,413) - questionable...
- * Standard job - 16676
- * Reversed job - 16677
+  * Longest contig: trim first 17,082 bases (length: 4,403,956 to 4,386,874)
+  * Shortest contig: trim first 21,124 bases (length: 264,537 to 243,413) - questionable...
+  * Standard job - 16676
+  * Reversed job - 16677
 * pb_359_8
- * Longest contig: trim first 
- * Middle contig: trim first
- * Shortest contig: trim first
-  * Attempt when BlastViewer decides to work...
+  * Longest contig: trim first 
+  * Middle contig: trim first
+  * Shortest contig: trim first
+    * Attempt when BlastViewer decides to work...
 
 ## pb_359_5
 Recently-announced species of Marinobacter (http://genomea.asm.org/content/4/5/e00937-16.full),
@@ -3334,7 +3331,7 @@ In preparation for pb_359_5 phylotaxonomic placement, downloading Alteromonadace
 sequences for comparison.
 * REMEMBER TO INCLUDE pb_359_5 .faa FILE ITSELF IN THE ANALYSIS!!!
 * Making a preliminary tree or the sample
- * Based on this, it would appear that both sample 5 AND the above-mentioned species (MCTG268)
+  * Based on this, it would appear that both sample 5 AND the above-mentioned species (MCTG268)
 are very closely related, alongside M. salarius.
 
 After checking the Canu assembly, the second contig circularises poorly BUT even the low-coverage
@@ -3348,30 +3345,30 @@ Still need to assess 'circularisation' of pb_359_8, if BlastViewer will work...
 
 ## pb_359_8
 * Downloading files for small tree.
- * Building preliminary tree...
- * Preliminary tree supports its placement as a species of Arenibacter
+  * Building preliminary tree...
+  * Preliminary tree supports its placement as a species of Arenibacter
 * BlastViewer STILL not working... Attempt to redo the Blast analysis and see whether it's just
 a fluke that the first file isn't working.
- * There are 2000+ HSPs in one of the contigs alone. Feasible that it's just taking a long time
-to load on account of the number of hits. Will leave it for a few hours and see if it works...
+  * There are 2000+ HSPs in one of the contigs alone. Feasible that it's just taking a long time
+    to load on account of the number of hits. Will leave it for a few hours and see if it works...
 
 ## PhyloPhlAn
 While waiting for BlastViewer, will attempt to make preliminary trees for the other three
 samples:
 * pb_359_2
- * Pre-emptively download files based on 16S prediction; Roseovarius, so DL Rhodobacteraceae
-  * Can just transfer over from pb_359_7
- * Closest relatives do, indeed, appear to be Roseovarius
+  * Pre-emptively download files based on 16S prediction; Roseovarius, so DL Rhodobacteraceae
+    * Can just transfer over from pb_359_7
+  * Closest relatives do, indeed, appear to be Roseovarius
 * pb_359_3
- * Pre-emptively download files based on 16S prediction; Loktanella, so DL Rhodobacteraceae
-  * Can just transfer over from pb_359_7
- * Closest relatives do, indeed, appear to be Loktanella (esp. vestfoldensis)
- * Combine pb_359_2 and _3 trees?
+  * Pre-emptively download files based on 16S prediction; Loktanella, so DL Rhodobacteraceae
+    * Can just transfer over from pb_359_7
+  * Closest relatives do, indeed, appear to be Loktanella (esp. vestfoldensis)
+  * Combine pb_359_2 and _3 trees?
 * pb_359_6
- * Pre-emptively download files based on 16S prediction; Sulfitobacter, so DL Rhodobacteraceae
-  * Can just transfer over from pb_359_7
- * Seems (distantly) related to Sulfitobacter?
- * Combine pb_359_2, _3 and _7?
+  * Pre-emptively download files based on 16S prediction; Sulfitobacter, so DL Rhodobacteraceae
+    * Can just transfer over from pb_359_7
+  * Seems (distantly) related to Sulfitobacter?
+  * Combine pb_359_2, _3 and _7?
 
 Attempt individual big trees, then if they hypothesis is correct, can combine them into a small
 tree.
@@ -3379,16 +3376,16 @@ tree.
 ## pb_359_2 and _3
 Both of these assemblies give at least contig with a massive dip in coverage. How to resolve?
 * Altering settings in Falcon? If so, which ones?
- * Rerunning pb_359_2 15k job; see how this compares to the 7k that is my current standard
- * pb_359_3 17.1k has a couple of big bubbles, plus there's something not right about the
-smallest contig...
+  * Rerunning pb_359_2 15k job; see how this compares to the 7k that is my current standard
+  * pb_359_3 17.1k has a couple of big bubbles, plus there's something not right about the
+    smallest contig...
 
 ## pb_359_5
 After asking about the Canu assembly of pb_359_5, and the results of the circularisation, the
 result appears to be acceptable.
 * Although coverage on the short contig is on average ~350, with a dip to ~200, 200x coverage
 is still very high, and the reads supporting it are long (most are between 11Kb and 24Kb)
- * In this case, annotation should be performed on this assembly in Prokka.
+  * In this case, annotation should be performed on this assembly in Prokka.
 
 ## Marinobacter
 Things to compare between pb_359_5 and MCTG268:
@@ -3413,19 +3410,19 @@ simply been missed in the previous assemblies
 * Run through Pathway Tools - ongoing
 
 * Comparison to MCTG268 (http://genomea.asm.org/content/4/5/e00937-16.full)
- * Only one of the contigs from MCTG268 had any matches at all to the shorter plasmid.
-  * BLAST this section of pb_359_5 shortest contig: 140,128 - 152,004
-   * 150,579 - 152,004 (10,451 - 11,876)
-   * 149,705 - 150,355 (9,577 - 10,227)
-   * 140,128 - 140,799 (1 - 671)
-  * Top two almost match to a superfamily I DNA/RNA helicase from M. hydrocarbonoclasticus
-  * Blast the above individually...
-   * Good match to superfamily I DNA/RNA helicase from M. hydrocarbonoclasticus
-   * Mediocre matches to five Marinobacter proteins; best: superfamily I DNA/RNA helicase
-    * M. hydocarbonoclasticus
-   * Mediocre matches to two M. hydrocarbonoclasticus hypothetical proteins
-  * Blasting the best two matches together gets a good match to the same DNA/RNA helicase across
-the whole length of the query
+  * Only one of the contigs from MCTG268 had any matches at all to the shorter plasmid.
+    * BLAST this section of pb_359_5 shortest contig: 140,128 - 152,004
+      * 150,579 - 152,004 (10,451 - 11,876)
+      * 149,705 - 150,355 (9,577 - 10,227)
+      * 140,128 - 140,799 (1 - 671)
+    * Top two almost match to a superfamily I DNA/RNA helicase from M. hydrocarbonoclasticus
+    * Blast the above individually...
+      * Good match to superfamily I DNA/RNA helicase from M. hydrocarbonoclasticus
+      * Mediocre matches to five Marinobacter proteins; best: superfamily I DNA/RNA helicase
+        * M. hydocarbonoclasticus
+      * Mediocre matches to two M. hydrocarbonoclasticus hypothetical proteins
+    * Blasting the best two matches together gets a good match to the same DNA/RNA helicase across
+      the whole length of the query
 
 * Tried installing Mauve but the program will not cooperate.
 * 16S sequence similarity - check SILVA database
@@ -3437,19 +3434,19 @@ Mauve now installed; running an alignment between pb_359_5 and MCTG268
 
 ## Unassembled Samples
 * pb_359_2:
- * Regarding the shortest contig - the coverage dip could appear exaggerated solely due to the
+  * Regarding the shortest contig - the coverage dip could appear exaggerated solely due to the
 short size of the contig.
- * Double-check longest-contig peak, but otherwise accept assembly for the time being.
+  * Double-check longest-contig peak, but otherwise accept assembly for the time being.
 * pb_359_3:
- * Regarding the shortest contig - as above, coverage difference may appear exaggerated on
+  * Regarding the shortest contig - as above, coverage difference may appear exaggerated on
 accoung of short contig size.
- * Dip in longest contig coverage may be due to a long, unresolved repeat region; check this,
+  * Dip in longest contig coverage may be due to a long, unresolved repeat region; check this,
 but otherwise accept for the time being.
 * pb_359_6:
- * Coverage across all contigs is relatively consistent; accept for the time being.
+  * Coverage across all contigs is relatively consistent; accept for the time being.
 * pb_359_8:
- * HGAP (after trim) - 5,824,585 - one contig
-  * Falcon - 5,855,311 - two contigs BUT more reads used.
+  * HGAP (after trim) - 5,824,585 - one contig
+    * Falcon - 5,855,311 - two contigs BUT more reads used.
 
 Assemblies to move forward with:
 
@@ -3465,35 +3462,35 @@ Sample 8 must be redone, as all others used the correct file for the 'test runs'
 
 ## pb_359_8
 * Phylogenetic tree completed; viewing in Figtree
- * Position still similar to previously; close to Arenibacter algicola and A. sp. C-21
+  * Position still similar to previously; close to Arenibacter algicola and A. sp. C-21
 * Pathway Tools compilation ongoing
 
 ## Metaxa2
 Can be used to extract 16S rRNA sequences
 
 * pb_359_2 - compare to Roseovarius sp. TM1035 (or R. mucosus)
- * Metaxa also agrees with Roseovarius classification
- * Downloading all Roseovarius and Roseobacter sequences from SILVA
- * Appears to match exactly to TM1035, but the TM1035 reference is longer; reverse the Blast
+  * Metaxa also agrees with Roseovarius classification
+  * Downloading all Roseovarius and Roseobacter sequences from SILVA
+  * Appears to match exactly to TM1035, but the TM1035 reference is longer; reverse the Blast
 and check whether the full-length TM1035 sequence appears in pb_359_2
 
 * pb_359_3 - compare to Loktanella vestfoldensis (or sp. S4079, CCS2, 1ANDIMAR09, 5RATIMAR09)
- * Metaxa also agrees with Loktanella classification
- * Downloading all Loktanella sequences from SILVA
- * Best matches are to 'Loktanella; uncultured bacterium', but these are still not perfect matches
-  * 2 mismatches; by comparison, L. vestfoldensis differs by 3 bp
+  * Metaxa also agrees with Loktanella classification
+  * Downloading all Loktanella sequences from SILVA
+  * Best matches are to 'Loktanella; uncultured bacterium', but these are still not perfect matches
+    * 2 mismatches; by comparison, L. vestfoldensis differs by 3 bp
 
 * pb_359_4 - compare to Sphingorhabdus sp. M41 (or Sphingopyxis baekryugensis)
- * Note: Metaxa classifies the sequence as Sphingopyxis, not Sphingorhabdus...
+  * Note: Metaxa classifies the sequence as Sphingopyxis, not Sphingorhabdus...
 * pb_359_5 - compare to Marinobacter sp. MCTG268 and M. salarius (or M. algicola)
- * Metaxa also agrees with Mariobacter classification
+  * Metaxa also agrees with Mariobacter classification
 * pb_359_6 - compare to Sulfitobacter pseudonitzschiae and sp. 20_GPM-1509m
- * Note:  Metaxa finds TWO 16S sequences, both agreeing with the Sulfitobacter classification
+  * Note:  Metaxa finds TWO 16S sequences, both agreeing with the Sulfitobacter classification
 * pb_359_7 - compare to Mameliella alba, Ruegeria sp. PBVC088, and various Antarctobacter
- * Note: Metaxa can only classify it down to the family Rhodobacteraceae; no genus classification
- * Antarctobacter sequences do exist within Metaxa2; could this belong to a new genus??
+  * Note: Metaxa can only classify it down to the family Rhodobacteraceae; no genus classification
+  * Antarctobacter sequences do exist within Metaxa2; could this belong to a new genus??
 * pb_359_8 - compare to Arenibacter sp. C-21 and A. algicola (or A. latericius and A. certesii)
- * Metaxa also agrees with Arenibacter classification
+  * Metaxa also agrees with Arenibacter classification
 
 
 
@@ -3502,48 +3499,48 @@ and check whether the full-length TM1035 sequence appears in pb_359_2
 * Mapping Illumina data back to PacBio assemblies for confirmation?
 * Are the two Sulfitobacter 16S sequences identical?
 * Use SILVA to get related sequences and then compare them to those extracted with Metaxa2
- * Check which genus/genera are closest to pb_359_X
- * Download sequences from SILVA, then use these as a blastn database against which to blast our
-sequence.
+  * Check which genus/genera are closest to pb_359_X
+  * Download sequences from SILVA, then use these as a blastn database against which to blast our
+    sequence.
 
 # 15 November 2016
 
 ## Metaxa2
 Continuing to download and compare sequences from SILVA using Metaxa2:
 * pb_359_4:
- * Downloading all Sphingorhabdus and Sphingopyxis sequences from SILVA
- * Best matches to Sphingorhabdus flavimaris and Sphingopyxis sp. ZS1-22
-  * 2 mismatches to both of the above; both differences seem to be at the same residue in each species
+  * Downloading all Sphingorhabdus and Sphingopyxis sequences from SILVA
+  * Best matches to Sphingorhabdus flavimaris and Sphingopyxis sp. ZS1-22
+    * 2 mismatches to both of the above; both differences seem to be at the same residue in each species
 
 * pb_359_5:
- * Downloading all Marinobacter sequences from SILVA
- * Appears to match exactly to 'Marinobacter; uncultured bacterium', 'bacterium ROC5-1', Marinobacter
-sp. R-28770 and Marinobacter sp. R-28768, but the reference sequences are longer; reverse the Blast
-and check whether the full-length reference sequences appear in pb_359_5
- * Three matches to MCTG268 - 2 mismatches in one, and 6 mismatches + 2 gaps in the other two
+  * Downloading all Marinobacter sequences from SILVA
+  * Appears to match exactly to 'Marinobacter; uncultured bacterium', 'bacterium ROC5-1', Marinobacter
+    sp. R-28770 and Marinobacter sp. R-28768, but the reference sequences are longer; reverse the Blast
+    and check whether the full-length reference sequences appear in pb_359_5
+  * Three matches to MCTG268 - 2 mismatches in one, and 6 mismatches + 2 gaps in the other two
 
 * pb_359_6:
- * Downloading all Sulfitobacter, Oceanibulbus and Roseobacter sequences from SILVA
- * Both pb_359_6 sequences appear to match exactly to Sulfitobacter sp. DFL-23 and Sulfitobacter sp. DG885,
-although none of the sequences match for the full length; reverse the Blast and check whether the full-length
-reference sequences appear in pb_359_6
+  * Downloading all Sulfitobacter, Oceanibulbus and Roseobacter sequences from SILVA
+  * Both pb_359_6 sequences appear to match exactly to Sulfitobacter sp. DFL-23 and Sulfitobacter sp. DG885,
+    although none of the sequences match for the full length; reverse the Blast and check whether the full-length
+    reference sequences appear in pb_359_6
 
 * pb_359_7:
- * Downloading all Mameliella, Ruegeria and Antarctobacter sequences from SILVA
- * Appears to match exactly to Antarctobacter sp. 667-12, although the sequence doesn't match the full length;
+  * Downloading all Mameliella, Ruegeria and Antarctobacter sequences from SILVA
+  * Appears to match exactly to Antarctobacter sp. 667-12, although the sequence doesn't match the full length;
 reverse the Blast and check whether the full-length reference sequence appears in pb_359_7
 
 * pb_359_8:
- * Downloading all Arenibacter, Sediminicola and Cellulophaga sequences from SILVA
- * Best matches to two Arenibacter algicola sequences
-  * Single mismatch, at the same residue in both cases
+  * Downloading all Arenibacter, Sediminicola and Cellulophaga sequences from SILVA
+  * Best matches to two Arenibacter algicola sequences
+    * Single mismatch, at the same residue in both cases
 
 ## Mauve
 * pb_359_5 vs MCTG268
- * A majority of the sequences appear to be syntenic; however, there are a couple of areas which appear to be
-large inversions...
- * Based on the similarity between 16S sequences and the high degree of synteny, it seems likely that these two
-may belong to the same species...
+  * A majority of the sequences appear to be syntenic; however, there are a couple of areas which appear to be
+    large inversions...
+  * Based on the similarity between 16S sequences and the high degree of synteny, it seems likely that these two
+    may belong to the same species...
 
 
 
@@ -3570,7 +3567,7 @@ otherwise accept as complete.
 * Samples retrieved for pb_359_2
 * Samples retrieved for pb_359_3
 * Samples retrieved for pb_359_4
- * Are Sphingorhabdus and Sphingopyxis the same...?
+  * Are Sphingorhabdus and Sphingopyxis the same...?
 * Sample retrieval for pb_359_5 is ongoing...
 
 # 17 November 2016
@@ -3581,7 +3578,7 @@ Continuing with yesterday's search for full 16S sequences to compare with pb_359
 * Samples retrieved for pb_359_5
 * Samples retrieved for pb_359_6
 * Samples retrieved for pb_359_7
- * No complete Antarctobacter 16S sequences found...
+  * No complete Antarctobacter 16S sequences found...
 * Sample retrieval for pb_359_8 is ongoing...
 
 Tip - when searching among scaffolds/contigs of whole genome shotgun sequences, search 'tRNA-Ile' as well;
@@ -3596,96 +3593,96 @@ there is usually such a sequence adjacent to the 16S sequence (investigate).
 * Run 16S sequences together
 * 16S samples from the same species have been concatenated together into a single fasta; may
 need to separate out by strain, or separate out individual sequences again.
- * Running pb_359_2 as an initial test
- * PhyloPhlAn accepts amino acid sequences, not nucleotide sequences; cannot use 16S sequences...
+  * Running pb_359_2 as an initial test
+  * PhyloPhlAn accepts amino acid sequences, not nucleotide sequences; cannot use 16S sequences...
 
 ## ClustalW
 Run through the 16S sequences with ClustalW and see which align most closely to pb_359_X
 * http://www.genome.jp/tools-bin/clustalw
 
 * pb_359_2
- * Closest match is to Roseovarius sp. TM1035, although the R. sp. TM1035 sequences are longer;
-closest NAMED species is Roseovarius mucosus (2), whose sequence is even shorter than pb_359_2,
-and three mismatches exist within the sequence.
- * Blast these sequences against pb_359_2 complete assembly.
+  * Closest match is to Roseovarius sp. TM1035, although the R. sp. TM1035 sequences are longer;
+    closest NAMED species is Roseovarius mucosus (2), whose sequence is even shorter than pb_359_2,
+    and three mismatches exist within the sequence.
+  * Blast these sequences against pb_359_2 complete assembly.
 
 * pb_359_3
- * Closest match is to one of the Loktanella vestfoldensis sequences (1), but three mismatches
-still exist, and pb_359_3's sequence is shorter.
- * Blast the sequence against pb_359_3 complete assembly, along with the other L. vestfoldensis
-sequences.
+  * Closest match is to one of the Loktanella vestfoldensis sequences (1), but three mismatches
+    still exist, and pb_359_3's sequence is shorter.
+  * Blast the sequence against pb_359_3 complete assembly, along with the other L. vestfoldensis
+    sequences.
 
 * pb_359_4
- * Closest match is to Sphingorhabdus sp. M41 (1 & 2), but six mismatches still exist, and
-pb_359_4's sequence is shorter.
- * Blast the sequence against pb_359_4 complete assembly.
+  * Closest match is to Sphingorhabdus sp. M41 (1 & 2), but six mismatches still exist, and
+    pb_359_4's sequence is shorter.
+  * Blast the sequence against pb_359_4 complete assembly.
 
 * pb_359_5
- * Closest match is to Marinobacter sp. MCTG268 (2), but three mismatches still exist, and
-pb_359_5's sequence is shorter.
- * Blast the sequence against pb_359_5 complete assembly.
+  * Closest match is to Marinobacter sp. MCTG268 (2), but three mismatches still exist, and
+    pb_359_5's sequence is shorter.
+  * Blast the sequence against pb_359_5 complete assembly.
 
 * pb_359_6
- * Closest match is to Sulfitobacter pseudonitzschiae, but with similarity to S. guttiformis;
-pb_359_6 sequences are shorter than all of these.
- * Blast the sequences against pb_359_6 complete assembly.
+  * Closest match is to Sulfitobacter pseudonitzschiae, but with similarity to S. guttiformis;
+    pb_359_6 sequences are shorter than all of these.
+  * Blast the sequences against pb_359_6 complete assembly.
 
 * pb_359_7
- * Closest matches are to Sagittula stellata and to Rhodobacteraceae bacterium PD-2, but neither
-of these are particularly close
- * Need to find complete Antarctobacter sequences...
+  * Closest matches are to Sagittula stellata and to Rhodobacteraceae bacterium PD-2, but neither
+    of these are particularly close
+  * Need to find complete Antarctobacter sequences...
 
 * pb_359_8
- * Closest matches are to Sediminicola sp. YIK13 (1) and Cellulophaga lytica, not to Arenibacter!
- * The two are more closely related to each other than to pb_359_8...
+  * Closest matches are to Sediminicola sp. YIK13 (1) and Cellulophaga lytica, not to Arenibacter!
+  * The two are more closely related to each other than to pb_359_8...
 
 ## 16S things to do
 
 * pb_359_2
- * Using pb_359_2 as the database, use the following queries:
-  * Roseovarius sp. TM1035
-  * Roseovarius mucosus
+  * Using pb_359_2 as the database, use the following queries:
+    * Roseovarius sp. TM1035
+    * Roseovarius mucosus
 
 * pb_359_3
- * Using pb_359_3 as the database, use the following queries:
-  * Loktanella vestfoldensis
-  * Loktanella sp. S4029
-  * Loktanella sp. 1ANDIMAR09
-  * Loktanella sp. 5RATIMAR09
-  * Roseobacter sp. CCS2
+  * Using pb_359_3 as the database, use the following queries:
+    * Loktanella vestfoldensis
+    * Loktanella sp. S4029
+    * Loktanella sp. 1ANDIMAR09
+    * Loktanella sp. 5RATIMAR09
+    * Roseobacter sp. CCS2
 
 * pb_359_4
- * Using pb_359_4 as the database, use the following queries:
-  * Sphingorhabdus sp. M41
-  * Sphingopyxis baekryungensis
-  * Any other available Sphingorhabdus sequences
+  * Using pb_359_4 as the database, use the following queries:
+    * Sphingorhabdus sp. M41
+    * Sphingopyxis baekryungensis
+    * Any other available Sphingorhabdus sequences
 
 * pb_359_5
- * Using pb_359_5 as the database, use the following queries:
-  * Marinobacter salarius
-  * Marinobacter sp. MCTG268
+  * Using pb_359_5 as the database, use the following queries:
+    * Marinobacter salarius
+    * Marinobacter sp. MCTG268
 
 * pb_359_6
- * Using pb_359_6 as the database, use the following queries:
-  * Sulfitobacter pseudonitzschiae
-  * Sulfitobacter sp. 20_GPM_1509m
-  * Sulfitobacter guttiformis
+  * Using pb_359_6 as the database, use the following queries:
+    * Sulfitobacter pseudonitzschiae
+    * Sulfitobacter sp. 20_GPM_1509m
+    * Sulfitobacter guttiformis
 
 * pb_359_7
- * Using pb_359_7 as the database, use the following queries:
-  * Mameliella alba
-  * Ruegeria sp. PBVC088
-  * Sagittula stellata
-  * Rhodobacteraceae bacterium PD-2
-  * Any available Antarctobacter sequences
+  * Using pb_359_7 as the database, use the following queries:
+    * Mameliella alba
+    * Ruegeria sp. PBVC088
+    * Sagittula stellata
+    * Rhodobacteraceae bacterium PD-2
+    * Any available Antarctobacter sequences
 
 * pb_359_8
- * Using pb_359_8 as the database, use the following queries:
-  * Arenibacter algicola
-  * Arenibacter sp. C-21
-  * Sediminicola sp. YIK13
-  * Cellulophaga lytica
-  * Any other available Arenibacter sequences
+  * Using pb_359_8 as the database, use the following queries:
+    * Arenibacter algicola
+    * Arenibacter sp. C-21
+    * Sediminicola sp. YIK13
+    * Cellulophaga lytica
+    * Any other available Arenibacter sequences
 
 Set up query using concatenation of all SILVA and NCBI hits, then search for '100%', ensuring
 that the length of the query is equal (more or less) to the length of the hit itself
@@ -3699,7 +3696,7 @@ that the length of the query is equal (more or less) to the length of the hit it
 
 
 * 100% and 99% hits:
- * pb_359_2
+  * pb_359_2
 
 | ID (SILVA)                   | Sample                                | Score (Match/Query length) |
 |------------------------------|---------------------------------------|----------------------------|
@@ -3728,13 +3725,13 @@ that the length of the query is equal (more or less) to the length of the hit it
 ...
 (See 02_blast/pb_359_2/16S_Full/Sample_2_Best_Results.md for the full list)
 
- * pb_359_3
+  * pb_359_3
 Check results
 
- * pb_359_4
+  * pb_359_4
 Check results
 
- *pb_359_5-8
+  * pb_359_5-8
 Run Blasts
 
 # 21 November 2016
@@ -3753,43 +3750,43 @@ After extracting the results, the following named species appear to be the most 
 having 16S similarity of 99% or 100%:
 
 * pb_359_2
- * Roseovarius mucosus
-  * Strain DSM 17069
+  * Roseovarius mucosus
+    * Strain DSM 17069
 * pb_359_3
- * Loktanella vestfoldensis
-  * Strain DSM 16212
-  * Strain SKA53
+  * Loktanella vestfoldensis
+    * Strain DSM 16212
+    * Strain SKA53
 * pb_359_4
- * Sphingorhabdus flavimaris - no genome sequence on NCBI or JGI
-  * Previously known as Sphingopyxis flavimaris
- * Agrobacterium luteum - no genome sequence on NCBI or JGI
+  * Sphingorhabdus flavimaris - no genome sequence on NCBI or JGI
+    * Previously known as Sphingopyxis flavimaris
+  * Agrobacterium luteum - no genome sequence on NCBI or JGI
 * pb_359_5
- * Marinobacter algicola
-  * Strain DG893
- * Marinobacter salarius
- * Marinobacter koreensis - no genome sequence on NCBI or JGI
+  * Marinobacter algicola
+    * Strain DG893
+  * Marinobacter salarius
+  * Marinobacter koreensis - no genome sequence on NCBI or JGI
 * pb_359_6
- * Sulfitobacter pseudonitzschiae
- * Sulfitobacter guttiformis
- * Sulfitobacter donghicola
+  * Sulfitobacter pseudonitzschiae
+  * Sulfitobacter guttiformis
+  * Sulfitobacter donghicola
 * pb_359_7
- * Antarctobacter heliothermus - no genome sequence on NCBI
-  * Found at http://genome.jgi.doe.gov/AnthelDSM11445_FD/AnthelDSM11445_FD.download.html
+  * Antarctobacter heliothermus - no genome sequence on NCBI
+    * Found at http://genome.jgi.doe.gov/AnthelDSM11445_FD/AnthelDSM11445_FD.download.html
 * pb_359_8
- * Arenibacter algicola
- * Flexithrix dorotheae
- * Arenibacter palladensis - no genome seqence on NCBI
-  * Found at http://genome.jgi.doe.gov/ArepalAR_2009_79_FD/ArepalAR_2009_79_FD.download.html
-  * Comparing to MAR_2009_79, rather than DSM 17539, as the quality is higher (improved draft cf. minimal draft)
- * Arenibacter troitsensis - no genome seqence on NCBI
-  * Found at http://genome.jgi.doe.gov/AretroDSM19835_FD/AretroDSM19835_FD.download.html
- * Arenibacter echinorum - no genome seqence on NCBI
-  * Found at http://genome.jgi.doe.gov/AreechDSM23522_FD/AreechDSM23522_FD.download.html
+  * Arenibacter algicola
+  * Flexithrix dorotheae
+  * Arenibacter palladensis - no genome seqence on NCBI
+    * Found at http://genome.jgi.doe.gov/ArepalAR_2009_79_FD/ArepalAR_2009_79_FD.download.html
+    * Comparing to MAR_2009_79, rather than DSM 17539, as the quality is higher (improved draft cf. minimal draft)
+  * Arenibacter troitsensis - no genome seqence on NCBI
+    * Found at http://genome.jgi.doe.gov/AretroDSM19835_FD/AretroDSM19835_FD.download.html
+  * Arenibacter echinorum - no genome seqence on NCBI
+    * Found at http://genome.jgi.doe.gov/AreechDSM23522_FD/AreechDSM23522_FD.download.html
 
 Obtain sequences for these samples and run them through Mauve
 * Select pb_359_X first, then the other sample.
 * (pb_359_5 vs MCTG268 was accidentally deleted; this has been rerun)
- * (New screenshot is required, however...)
+  * (New screenshot is required, however...)
 
 Finish making READMEs in pb_359_8
 
@@ -3805,7 +3802,7 @@ command...
 * Using the `du -sh */`, can pinpoint which folders are using the most space
 * Removed most Canu files except for the .sge and any trimmed assemblies
 * The repository itself is now fine; the `.git` folder is now the issue
- * Attempting `git gc --aggressive --prune` to see if the size of /git/pack/object can be reduced
+  * Attempting `git gc --aggressive --prune` to see if the size of /git/pack/object can be reduced
 
 * git reflog expire --expire=now --all && git gc --prune=now --aggressive
 
@@ -3931,7 +3928,7 @@ TGTGTTAAGCATGCCGCCAGCGTTCGTTCTGAGCCAGGATCAAACTCTCAAGTTTGATGTCCTGTAATGGTGGCACAA**
 AATCCACCGAAACAGCTTCATTTCAAGG
 
 * pb_359_5 (2x identical sequences + 1x near-identical): (bracketed bases - unsure whether to include)
- * 2x:
+  * 2x:
 CTTCGTTTAAGGAGGTGATCCAGCCGCAGGTTCCCCTACGGCTACCTTGTTACGACTTCACCCCAGTCATGAACCACACCGTGGTGATCG
 TCCTCCCGAAGGTTAGACTAACCACTTCTGGTGCAATCCACTCCCATGGTGTGACGGGCGGTGTGTACAAGGCCCGGGAACGTATTCACC
 GCGACATTCTGATTCGCGATTACTAGCGATTCCGACTTCACGGAGTCGAGTTGCAGACTCCGATCCGGACTACGATGCGTTTTGTGAGAT
@@ -3951,7 +3948,7 @@ GCTTTCCCCCAAAGGGCGTATGCGGTATTAATCCGGGTTTCCCCGGGCTATCCCCCACTACTGGGCAGTTTCCTATGCAT
 TCCGCCGCTCGTCAGCGGGGAGCAAGCTCCCCCTGTTACCGCTCGACTTGCATGTGTTAAGCCTGCCGCCAGCGTTCAATCTGAGCCATG
 ATCAAACTCTTCAGTTT(A)
 
- * 1x:
+  * 1x:
 CTTCGTTTAAGGAGGTGATCCAGCCGCAGGTTCCCCTACGGCTACCTTGTTACGACTTCACCCCAGTCATGAACCACACCGTGGTGATCG
 TCCTCCCGAAGGTTAGACTAACCACTTCTGGTGCAATCCACTCCCATGGTGTGACGGGCGGTGTGTACAAGGCCCGGGAACGTATTCACC
 GCGACATTCTGATTCGCGATTACTAGCGATTCCGACTTCACGGAGTCGAGTTGCAGACTCCGATCCGGACTACGATGCGTTTTGTGAGAT
@@ -3972,8 +3969,8 @@ TCCGCCGCTCGTCAGCGGGGAGCAAGCTCCCCCTGTTACCGCTCGACTTGCATGTGTTAAGCCTGCCGCCAGCGTTCAAT
 ATCAAACTCTTCAGTTT(A)
 
 * pb_359_6 (2x identical sequences (Longest Contig, and Third Contig)):
- * Metaxa2 found two sequences which differ wildly from the result found by Blast
- * The Blast result is the reverse complement of the Metaxa2 result
+  * Metaxa2 found two sequences which differ wildly from the result found by Blast
+  * The Blast result is the reverse complement of the Metaxa2 result
 
 TTAGAAAGGAGGTGATCCAGCCGCAGGTTCCCCTACGGCTACCTTGTTACGACTTCACCCCAGTCGCTGATCCTACCGTGGTCCGCTGCC
 TCCTCGAAAGGTTGGCGCACGGCCGTCGGGTAGAACCAACTCCCATGGTGTGACGGGCGGTGTGTACAAGGCCCGGGAACGTATTCACCG
@@ -4033,13 +4030,13 @@ AAGCAAGCTTATCCCCGCTGCCCCTCGACTTGCATGTGTTAGGCCTGCCGCTAGCGTTCATCCTGAGCCAGGATCAAACT
 G
 
 * Odd bases on 3 and 5...
- * Trim
+  * Trim
 
 * Finish the Arenibacter echinorum Mauve reordering, and continue with the last few from _8
 
 * Blast 16Ss against NCBI, download full sequence, calculate similarity scores, find most
 closely-related named species.
- * If no tool exists for determining similarity, make one
+  * If no tool exists for determining similarity, make one
 
 * Commit to git copy
 
@@ -4049,130 +4046,130 @@ closely-related named species.
 Regarding the hanging bases on the 16S sequences, go with majority rule and trim them off
 
 * pb_359_2:
- * Closest named species - Roseovarius mucosus strain DFL-24
-  * Score: 2427 bits (1314)
-  * Expect: 0.0
-  * Identities: 1320/1323(99%)
-  * Gaps: 0/1323(0%)
-  * Strand: Plus/Minus
-  * Query cover: 89% (1323bp vs 1472bp)
+  * Closest named species - Roseovarius mucosus strain DFL-24
+    * Score: 2427 bits (1314)
+    * Expect: 0.0
+    * Identities: 1320/1323(99%)
+    * Gaps: 0/1323(0%)
+    * Strand: Plus/Minus
+    * Query cover: 89% (1323bp vs 1472bp)
 
 * pb_359_3:
- * Closest named species - Loktanella vestfoldensis strain R-9477 (based on partial sequence)
-  * Score: 2634 bits (1426)
-  * Expect: 0.0
-  * Identities: 1435/1440 (99%)
-  * Gaps: 0/1440 (0%)
-  * Strand: Plus/Minus
-  * Query cover: 98% (1449bp vs 1468bp)
-  * Note: best full sequence is Leisingera methylohalidivorans, but almost 100 differing bases
+  * Closest named species - Loktanella vestfoldensis strain R-9477 (based on partial sequence)
+    * Score: 2634 bits (1426)
+    * Expect: 0.0
+    * Identities: 1435/1440 (99%)
+    * Gaps: 0/1440 (0%)
+    * Strand: Plus/Minus
+    * Query cover: 98% (1449bp vs 1468bp)
+    * Note: best full sequence is Leisingera methylohalidivorans, but almost 100 differing bases
 
 * pb_359_4:
- * Closest named species - Sphingopyxis flavimaris strain R-36742 (based on partial sequence)
-  * Score: 2651 bits (1435)
-  * Expect: 0.0
-  * Identities: 1439/1441 (99%)
-  * Gaps: 0/1441 (0%)
-  * Strand: Plus/Minus
-  * Query cover: 92% (1441bp vs 1558bp)
-  * Note: same stats against both variants of pb_359_4 16S - differs at same base?
-  * Note: best full sequence is Novosphingobium pentaromativorans, but almost 80 differing bases
+  * Closest named species - Sphingopyxis flavimaris strain R-36742 (based on partial sequence)
+    * Score: 2651 bits (1435)
+    * Expect: 0.0
+    * Identities: 1439/1441 (99%)
+    * Gaps: 0/1441 (0%)
+    * Strand: Plus/Minus
+    * Query cover: 92% (1441bp vs 1558bp)
+    * Note: same stats against both variants of pb_359_4 16S - differs at same base?
+    * Note: best full sequence is Novosphingobium pentaromativorans, but almost 80 differing bases
 
 * pb_359_5:
- * Closest named species - Marinobacter salarius strain R9SW1 (based on complete genome and partial sequence)
-  * Score: 2811 bits (1522) / 2784 bits (1507)
-  * Expect: 0.0 / 0.0
-  * Identities: 1539/1547 (99%) / 1524/1532 (99%)
-  * Gaps: 1/1547 (0%) / 1/1532 (0%)
-  * Strand: Plus/Plus / Plus/Minus
-  * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
-  * Note: searching nr/nt database
- * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
-  * Score: 2731 bits (1479)
-  * Expect: 0.0
-  * Identities: 1483/1485 (99%)
-  * Gaps: 0/1485
-  * Strand: Plus/Minus
-  * Query cover: 95% (1485bp vs 1547bp)
-  * Note: searching 16S-specific database
-  * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
+  * Closest named species - Marinobacter salarius strain R9SW1 (based on complete genome and partial sequence)
+    * Score: 2811 bits (1522) / 2784 bits (1507)
+    * Expect: 0.0 / 0.0
+    * Identities: 1539/1547 (99%) / 1524/1532 (99%)
+    * Gaps: 1/1547 (0%) / 1/1532 (0%)
+    * Strand: Plus/Plus / Plus/Minus
+    * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
+    * Note: searching nr/nt database
+  * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
+    * Score: 2731 bits (1479)
+    * Expect: 0.0
+    * Identities: 1483/1485 (99%)
+    * Gaps: 0/1485
+    * Strand: Plus/Minus
+    * Query cover: 95% (1485bp vs 1547bp)
+    * Note: searching 16S-specific database
+    * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
 
 * pb_359_6:
- * Closest named species - Sulfitobacter pseudonitzschiae strain H3
- * Score: 2573 bits (1393)
- * Expect: 0.0
- * Identities: 1417/1428 (99%)
- * Gaps: 4/1428 (0%)
- * Strand: Plus/Minus
- * Query cover: 97% (1426bp vs 1467bp)
- * Note: Identical results found in partial 16S of 'Staleya guttiformis' (deprecated term for
-Sulfitobacter
+  * Closest named species - Sulfitobacter pseudonitzschiae strain H3
+  * Score: 2573 bits (1393)
+  * Expect: 0.0
+  * Identities: 1417/1428 (99%)
+  * Gaps: 4/1428 (0%)
+  * Strand: Plus/Minus
+  * Query cover: 97% (1426bp vs 1467bp)
+  * Note: Identical results found in partial 16S of 'Staleya guttiformis' (deprecated term for
+    Sulfitobacter
 
 * pb_359_7:
- * Closest named species - Antarctobacter heliothermus strain EL-219 (based on partial sequence)
-  * Score: 2549 bits (1380)
-  * Expect: 0.0
-  * Identities: 1395/1402 (99%)
-  * Gaps: 2/1402 (0%)
-  * Strand: Plus/Plus
-  * Query cover: 96% (1400bp vs 1458bp)
-  * Note: best full sequence is Dinoroseobacter shibae, but ~100 differing bases inc. 19 gaps
+  * Closest named species - Antarctobacter heliothermus strain EL-219 (based on partial sequence)
+    * Score: 2549 bits (1380)
+    * Expect: 0.0
+    * Identities: 1395/1402 (99%)
+    * Gaps: 2/1402 (0%)
+    * Strand: Plus/Plus
+    * Query cover: 96% (1400bp vs 1458bp)
+    * Note: best full sequence is Dinoroseobacter shibae, but ~100 differing bases inc. 19 gaps
 
 * pb_359_8:
- * Closest named species - Flexibacter aggregans strain BSs20185 (based on partial sequence)
-  * Score: 2732 bits (1479)
-  * Expect: 0.0
-  * Identities: 1482/1483 (99%)
-  * Gaps: 1/1483 (0%)
-  * Strand: Plus/Minus
-  * Query cover: 96% (1486bp vs 1531bp)
- * Closest named species - Arenibacter palladensis strain LMG 21972 (based on complete sequence)
-  * Score: 2682 bits (1452)
-  * Expect 0.0
-  * Identities: 1468/1476 (99%)
-  * Gaps: 0/1476 (0%)
-  * Strand: Plus/Minus
-  * Query cover: 96% (1476bp vs 1531bp)
+  * Closest named species - Flexibacter aggregans strain BSs20185 (based on partial sequence)
+    * Score: 2732 bits (1479)
+    * Expect: 0.0
+    * Identities: 1482/1483 (99%)
+    * Gaps: 1/1483 (0%)
+    * Strand: Plus/Minus
+    * Query cover: 96% (1486bp vs 1531bp)
+  * Closest named species - Arenibacter palladensis strain LMG 21972 (based on complete sequence)
+    * Score: 2682 bits (1452)
+    * Expect 0.0
+    * Identities: 1468/1476 (99%)
+    * Gaps: 0/1476 (0%)
+    * Strand: Plus/Minus
+    * Query cover: 96% (1476bp vs 1531bp)
 
 * Next step for 16S comparison: pairwise sequence alignment?
 
 * Note: 99% may not be a high enough similarity score to account for all possible matches
- * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2045242/
+  * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2045242/
 * Need to use local alignment, given the size difference between some of the sequences...
 
 * Use E. coli 16S to determine start/stop?
 * RNAmmer
- * RNAmmer prediction for pb_359_2 is 1456 (x2 sequences); 16 bases shorter, but gets
-the same match stats as the longer prediction
+  * RNAmmer prediction for pb_359_2 is 1456 (x2 sequences); 16 bases shorter, but gets
+    the same match stats as the longer prediction
 
 * CCTCCT at 3' end? (binding to Shine-Delgarno sequence)
- * Problem - in the case of pb_359_2, at least, there is a CCTCCT and an AGGAGG sequence;
-which is 'forward' and which is 'reverse'?
+  * Problem - in the case of pb_359_2, at least, there is a CCTCCT and an AGGAGG sequence;
+    which is 'forward' and which is 'reverse'?
 
 * When performing multiple sequence alignment, ENSURE ALL SEQUENCES ARE GOING IN THE SAME
 DIRECTION! This has produced a much more convincing result!
- * pb_359_2 - Begins with CAACTTGAGAGT, ends with CCTCCTTTCTAA
-  * Alternatively - begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTG
-  * The latter agrees with the results found in the genome
- * pb_359_3 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
-  * Alternatively - begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
-  * The latter agrees with the results found in the genome
- * pb_359_4 - Begins with TCAAACTTGAGAGT, ends with CCTCCTTTCTAAGG
-  * Alternatively - begins with CCTTAGAAAGGAGG, ends with ACTCTCAAGTTTGA
-  * After a little trimming of previous 16S guess, the latter agrees with the results found in
-the genome
- * pb_359_5 - Begins with AAACTGAAGAGT, ends with CCTCCTTAAACGAAG
-  * Alternatively, begins with CTTCGTTTAAGGAGG, ends with ACTCTTCAGTTT
-  * The latter agrees with the results found in the genome
- * pb_359_6 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
-  * Alternatively, begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
-  * The latter agrees with the results found in the genome
- * pb_359_7 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
-  * Alternatively, begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
-  * The former agrees with the results found in the genome
- * pb_359_8 - Begins with TCTAGAAAGGAGG, ends with ACTCTTCATCGTTG
-  * Alternatively, begins with CAACGATGAAGAGT, ends with CCTCCTTTCTAGA
-  * The former agrees with the results found in the genome
+  * pb_359_2 - Begins with CAACTTGAGAGT, ends with CCTCCTTTCTAA
+    * Alternatively - begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTG
+    * The latter agrees with the results found in the genome
+  * pb_359_3 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
+    * Alternatively - begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
+    * The latter agrees with the results found in the genome
+  * pb_359_4 - Begins with TCAAACTTGAGAGT, ends with CCTCCTTTCTAAGG
+    * Alternatively - begins with CCTTAGAAAGGAGG, ends with ACTCTCAAGTTTGA
+    * After a little trimming of previous 16S guess, the latter agrees with the results found in
+      the genome
+  * pb_359_5 - Begins with AAACTGAAGAGT, ends with CCTCCTTAAACGAAG
+    * Alternatively, begins with CTTCGTTTAAGGAGG, ends with ACTCTTCAGTTT
+    * The latter agrees with the results found in the genome
+  * pb_359_6 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
+    * Alternatively, begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
+    * The latter agrees with the results found in the genome
+  * pb_359_7 - Begins with TCAACTTGAGAGT, ends with CCTCCTTTCTAA
+    * Alternatively, begins with TTAGAAAGGAGG, ends with ACTCTCAAGTTGA
+    * The former agrees with the results found in the genome
+  * pb_359_8 - Begins with TCTAGAAAGGAGG, ends with ACTCTTCATCGTTG
+    * Alternatively, begins with CAACGATGAAGAGT, ends with CCTCCTTTCTAGA
+    * The former agrees with the results found in the genome
 
 ## Presumed identities of the samples
 
@@ -4189,14 +4186,14 @@ the genome
 * pb_359_7 is in the opposite alignment to the other samples...
 * All sequences but pb_359_7 reversed so that all contained the CCTCCT near the end
 * Observation - very clear differences between different phyla/classes/orders/families
- * Note: Possible that one or two bases at the ends are missing...?
-  * Specifically - Should there be a T at the start of pb_359_2's sequence?
+  * Note: Possible that one or two bases at the ends are missing...?
+    * Specifically - Should there be a T at the start of pb_359_2's sequence?
 
 * Is RNAmmer cutting off at the first CCT?
- * All sequences start with AGAGTTTGATC and end with TGCGGCTGGA(T/A)CACCT
- * Seems to be making conservative guesses...
+  * All sequences start with AGAGTTTGATC and end with TGCGGCTGGA(T/A)CACCT
+  * Seems to be making conservative guesses...
 * Metaxa2 - also conservative?
- * Unsure what to make of Metaxa2 results; pb_359_8 in particular is twice as long as the others...
+  * Unsure what to make of Metaxa2 results; pb_359_8 in particular is twice as long as the others...
 
 ## Mauve
 Arenibacter echinorum 'Move contigs' keeps crashing; run the others and then retry?
@@ -4216,14 +4213,14 @@ Arenibacter echinorum 'Move contigs' keeps crashing; run the others and then ret
 
 ## Gitlab
 * Repository on data5 has been compressed
- * Repository on personal laptop must also be compressed...
+  * Repository on personal laptop must also be compressed...
 
 * To do:
- * Delete repository on Gitlab
- * Rename _copy repository
- * Point existing repositories to the new one
-  * git remote set-url origin [new SSH address]
-  * git remote set-url --push origin [new SSH address]
+  * Delete repository on Gitlab
+  * Rename _copy repository
+  * Point existing repositories to the new one
+    * git remote set-url origin [new SSH address]
+    * git remote set-url --push origin [new SSH address]
 
 Re: partial sequences:
 * Compare Oskar's data with species description
@@ -4237,36 +4234,36 @@ Re: partial sequences:
 
 ## Similar species to investigate
 * pb_359_2
- * Roseovarius mucosus DSM 17069
-  * R. mucosus description downloaded
-  * R. mucosus genome announcement downloaded
+  * Roseovarius mucosus DSM 17069
+    * R. mucosus description downloaded
+    * R. mucosus genome announcement downloaded
 * pb_359_3
- * Loktanella vestfoldensis DSM 16212 (= R-9477)
-  * L. vestfoldensis description downloaded
-  * REQUIRE GENOME ANNOUNCEMENT
+  * Loktanella vestfoldensis DSM 16212 (= R-9477)
+    * L. vestfoldensis description downloaded
+    * REQUIRE GENOME ANNOUNCEMENT
 * pb_359_4
- * Sphingorhabdus sp. M41
-  * S. sp. M41 genome announcement downloaded
-  * REQUIRE TAXONOMIC DESCRIPTION
- * Sphingopyxis flavimaris strain R-36742
-  * Note: reclassified as Sphingorhabdus flavimaris (paper downloaded)
-  * S. flavimaris description (type strain SW-151, not R-36742) downloaded
-  * REQUIRE GENOME ANNOUNCEMENT
-  * S. flavimaris R-36742 not sequenced (environmental sample)
+  * Sphingorhabdus sp. M41
+    * S. sp. M41 genome announcement downloaded
+    * REQUIRE TAXONOMIC DESCRIPTION
+  * Sphingopyxis flavimaris strain R-36742
+    * Note: reclassified as Sphingorhabdus flavimaris (paper downloaded)
+    * S. flavimaris description (type strain SW-151, not R-36742) downloaded
+    * REQUIRE GENOME ANNOUNCEMENT
+    * S. flavimaris R-36742 not sequenced (environmental sample)
 * pb_359_5
- * Marinobacter algicola DG893
-  * M. algicola description downloaded
-  * REQUIRE GENOME ANNOUNCEMENT
- * Marinobacter sp. MCTG268
-  * M. sp. MCTG268 genome announcement downloaded 
-  * REQUIRE TAXONOMIC DESCRIPTION
+  * Marinobacter algicola DG893
+    * M. algicola description downloaded
+    * REQUIRE GENOME ANNOUNCEMENT
+  * Marinobacter sp. MCTG268
+    * M. sp. MCTG268 genome announcement downloaded 
+    * REQUIRE TAXONOMIC DESCRIPTION
 * pb_359_6
- * Sulfitobacter pseudonitzschiae strain H3
+  * Sulfitobacter pseudonitzschiae strain H3
 * pb_359_7
- * Antarctobacter heliothermus strain EL-21
-  * Partial sequence...
+  * Antarctobacter heliothermus strain EL-21
+    * Partial sequence...
 * pb_359_8
- * Arenibacter algicola strain TG409
+  * Arenibacter algicola strain TG409
 
 
 Send Oskar email with names of closest species; in particular, similar species
@@ -4274,7 +4271,7 @@ to Sphingorhabdus and Antarctobacter
 
 Make a list of the species in the relevant taxonomic groups, with hyperlinks to the relevant papers
 * Highlight those species with a high 16S similarity to pb_359_X (95% and above)
- * NCBI currently very slow...
+  * NCBI currently very slow...
 
 * Wednesday - start from pb_359_5
 
@@ -4283,8 +4280,8 @@ Make a list of the species in the relevant taxonomic groups, with hyperlinks to 
 ## Observation requiring further investigation...
 * Initial GC-MS of Skeletonema marinoi (not axenic, so including the microbiome...) indicated the
 presence of a precursor to domoic acid; this toxin is associated with the diatom Pseudo-nitzschia.
- * pb_359_6 may be Sulfitobacter pseudonitzschiae...
- * Need to know which genes are responsible for domoic acid biosynthesis...
+  * pb_359_6 may be Sulfitobacter pseudonitzschiae...
+  * Need to know which genes are responsible for domoic acid biosynthesis...
 
 ## Rearrangement
 * 16S details are currently scattered, so will move 16S folders into a single place
@@ -4302,7 +4299,7 @@ identity."
 
 ## Taxonomy
 * pb_359_5 results complete; _6, _7 and _8 need completing
- * BlastN acting up...
+  * BlastN acting up...
 
 # 1 December 2016
 
@@ -4312,49 +4309,49 @@ which don't line up.
 * pb_359_3 and Loktanella vestfoldensis DSM 16212 line up fairly well, although SKA53 shows
 a lot of rearrangement.
 * pb_359_5 and Marinobacter algicola DG893 align almost perfectly.
- * MCTG268 is also a close match, but not quite as good as M. algicola.
+  * MCTG268 is also a close match, but not quite as good as M. algicola.
 * pb_359_6 doesn't show hugely convincing results vs. any of the Sulfitobacter species.
 * pb_359_7 and Antarctobacter heliothermus give a very good alignment.
 * pb_359_8 and Arenibacter algicola give a very good alignment.
- * Arenibacter palladensis also gives a good alignment.
- * Arenibacter troitsensis also gives a good alignment.
+  * Arenibacter palladensis also gives a good alignment.
+  * Arenibacter troitsensis also gives a good alignment.
 
 * Attempting to run longest contig of pb_359_6 vs Sulfitobacter pseudonitzschiae, the closest
 named species to pb_359_6 in terms of 16S rRNA similarity
 
 ## Notes on closely-related species
 * pb_359_2 - Roseovarius mucosus
- * Associated with a dinoflagellate (a different group of marine plankton to diatoms)
+  * Associated with a dinoflagellate (a different group of marine plankton to diatoms)
 * pb_359_3 - Loktanella vestfoldensis
- * Found in microbial mats in the Antarctic
+  * Found in microbial mats in the Antarctic
 * pb_359_4 - Sphingorhabdus flavimaris
- * Found in the Yellow Sea, Korea; isolated from sea water...
+  * Found in the Yellow Sea, Korea; isolated from sea water...
 * pb_359_5 - Marinobacter algicola
- * Found associated with dinoflagellates (two species known for producing toxins)
+  * Found associated with dinoflagellates (two species known for producing toxins)
 * pb_359_6 - Sulfitobacter pseudonitzschiae
- * Associated with toxic marine diatom Pseudo-nitzschia
+  * Associated with toxic marine diatom Pseudo-nitzschia
 * pb_359_7 - Antarctobacter heliothermus
- * Found at varying depths in an Antarctic lake
+  * Found at varying depths in an Antarctic lake
 * pb_359_8 - Arenibacter algicola
- * Associated with Skeletonema costatum
+  * Associated with Skeletonema costatum
 
 ## Interesting paper re: diatom-microbiome interaction (Pseudo-nitzschia)
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869016/
 
 * From Supplementary Material - "The family Rhodobacteraceae is highly represented
 (56 - 98%) in all 3 Pseudo-nitzschia species"
- * Predisposition for Rhodobacteraceae to be associated with diatoms? 4/7 of our species
+  * Predisposition for Rhodobacteraceae to be associated with diatoms? 4/7 of our species
 were from this family
 * "Consequently, OTUs homologous to Sulfitobacter, Roseobacter, Phaeobacter, Rhodobacter and
 Sphingophyxis are all common associates of the three Pseudo-nitzschia species (Figure S3).
 Marinobacter, Alteromonas, Roseobacter and Sulfitobacter are also commonly reported to be
 associated with several marine phytoplankton species, and can be considered as the core
 microbiome of marine phytoplankton."
- * These, or closely-related genera, account for 4/7 of our species
+  * These, or closely-related genera, account for 4/7 of our species
 * "Remarkably, bacteria-free Pseudo-nitzschia consistently have low fitness, suggesting that
 microbiota do indeed have a significant role in the well-being of diatom hosts, just like in
 animal and plant host-microbiota systems"
- * Consistent with S. marinoi
+  * Consistent with S. marinoi
 * Roseo(bacter/varius) - parasitic?
 * + DA = - bacterial diversity
 * **Note**: Pseudo-nitzschia only distantly related to Skeletonema; Thalassiosira more closely related...
@@ -4379,10 +4376,10 @@ http://onlinelibrary.wiley.com/doi/10.1111/j.1550-7408.2004.tb00538.x/full
 
 Would presence of chitinase be a potential indication of algicidal activity?
 * S. costatum produces chitin, though unsure of the purpose (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2708456/)
- * pb_359_2 (Roseovarius) has downstream components of a chitin-degradation pathway
-  * Polymeric compounds degradation; Beta-hexosaminidase nagZ predicted
-  * Also present in _3, _4, (not _5), _6, _7 and _8
-  * Also involved in anhydromuropeptide recycling... Likely false positive...
+  * pb_359_2 (Roseovarius) has downstream components of a chitin-degradation pathway
+    * Polymeric compounds degradation; Beta-hexosaminidase nagZ predicted
+    * Also present in _3, _4, (not _5), _6, _7 and _8
+    * Also involved in anhydromuropeptide recycling... Likely false positive...
 
 
 Other identified algicidal compounds - rhamnolipid biosurfactant, PG-L-1 and prodigiosin pigment
@@ -4415,9 +4412,9 @@ fasta2tab <FASTA_FILE> | grep -v "hypothetical_protein" | tab2fasta > <OUTPUT_FI
 
 * Prokka running for pb_359_4, but looking at the .sge.e#### file, it doesn't appear that
 any results have been obtained from Sphingomonadaceae.faa
- * May be a problem with naming conventions; perhaps replace ".1_" with ".1~~~", and remove
+  * May be a problem with naming conventions; perhaps replace ".1_" with ".1~~~", and remove
 underscores?
- * Also remove [species name] from each entry
+  * Also remove [species name] from each entry
 
 # 6 December 2016
 
@@ -4430,17 +4427,17 @@ again...
 * Formatting is STILL being awkward; reviewing the PROKKA manual, it appears that the format
 is VERY specific. If GenBank files can be acquired for the relevant organisms, then the
 `prokka-genbank_to_fasta_db` script can be run, followed by concatenation (SEE MANUAL!)
- * Would require a reworking of the NCBI_Downloader script...
+  * Would require a reworking of the NCBI_Downloader script...
 
 * NCBI_Downloader_GenBank.py now complete
- * **FUTURE TASK** Combine NCBI_Downloader files; add argument which states the file type you
+  * **FUTURE TASK** Combine NCBI_Downloader files; add argument which states the file type you
 wish to download...
 
 * Downloading .gbff (GenBank) files
- * `prokka-genbank_to_fasta_db *.gbff > Sphingo.fasta`
- * `fasta2tab Sphingo.fasta | grep -v "hypothetical protein" | tab2fasta > Sphingo2.fasta`
-  * Ensure that formatting is preserved!
- * 2-3 hypothetical proteins; fasta2tab step unnecessary?
+  * `prokka-genbank_to_fasta_db *.gbff > Sphingo.fasta`
+  * `fasta2tab Sphingo.fasta | grep -v "hypothetical protein" | tab2fasta > Sphingo2.fasta`
+    * Ensure that formatting is preserved!
+  * 2-3 hypothetical proteins; fasta2tab step unnecessary?
 
 Tomorrow - check results of second Prokka run, see if the Sphingo protein file has finally
 been accepted?
@@ -4457,9 +4454,9 @@ Try ONLY including the named genes from Sphingomonadaceae in the fasta file?
 *`fasta2tab Sphingomonadaceae.fasta | grep -v "~~~~~~" | tab2fasta > Sphingomonadaceae_named.fasta`
 * Number of genes drops from 91,915 to 1723...
 * Attempting with Sphingomonadaceae_named.fasta - pb_359_4_3
- * Number of named genes has almost doubled vs. the first attempt - 922 -> 1724
- * Number of hypothetical proteins has increased slightly - 745 -> 818
- * Once pb_359_4_2 has completed in Pathway Tools, run _3 through it and compare results
+  * Number of named genes has almost doubled vs. the first attempt - 922 -> 1724
+  * Number of hypothetical proteins has increased slightly - 745 -> 818
+  * Once pb_359_4_2 has completed in Pathway Tools, run _3 through it and compare results
 
 It seems that at least one of these two approaches will produce a more informative pathway
 analysis; prepare the other samples
@@ -4469,9 +4466,9 @@ analysis; prepare the other samples
 * pb_359_8 - Flavobacteriaceae
 
 * Forgot to run the 'remove hypothetical proteins' step...
- * For Rhodobacteraceae, only 4 hypotheticals so not too big of a problem
- * For Alteromonadaceae, only 2 hypotheticals; not too big of a problem
- * For Flavobacteraceae, 26 hypotheticals - remove these
+  * For Rhodobacteraceae, only 4 hypotheticals so not too big of a problem
+  * For Alteromonadaceae, only 2 hypotheticals; not too big of a problem
+  * For Flavobacteraceae, 26 hypotheticals - remove these
 
 * pb_359_2 - the differences were not quite so dramatic... (rerun?)
 * pb_359_3 - modest difference in the longest chromosome (rerun?)
@@ -4494,10 +4491,10 @@ Comparing the three pb_359_4 runs:
 Overall, annotation appears to have improved, BUT some proteins' predicted functions have changed,
 even those which had a function in the initial run. Which annotation should be trusted?
 * Compromise - cat *.fasta onto the end of the Prokka database file
- * Attempt with both standard and name-only?
- * If the second concatenation gives a comparative result to '+ Named Sphingo prots', run with this
-  * Don't want to overwrite better sprot results with worse Sphingo results, hence concatenation
- * If the Sphingo result is better - can it be trusted?
+  * Attempt with both standard and name-only?
+  * If the second concatenation gives a comparative result to '+ Named Sphingo prots', run with this
+    * Don't want to overwrite better sprot results with worse Sphingo results, hence concatenation
+  * If the Sphingo result is better - can it be trusted?
 
 Compare pb_359_4_3 and pb_359_4_mega_named:
 * _3: 1724 named, 818 hypothetical
@@ -4513,8 +4510,8 @@ Compare pb_359_4_3 and pb_359_4_mega_named:
 
 **Run _mega_named through Pathway Tools?**
 * Can be run without creating a cellular overview, which would save time
- * In which case, run _mega_all for comparison too
- * Differences between pb_359_4 and pb_359_4_3 saved to 'Differences' file
+  * In which case, run _mega_all for comparison too
+  * Differences between pb_359_4 and pb_359_4_3 saved to 'Differences' file
 
 # 8 December 2016
 
@@ -4528,25 +4525,25 @@ Ran pb_359_4 vs. Sphingorhabdus sp. M41 - the two appear almost identical.
 ### Other notes on pb_359_4
 * According to [the paper where Sphingorhabdus was first proposed] (http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.043133-0),
 there is a big disconnect between Sphingorhabdus and Sphingopyxis G+C content:
- * Sphingorhabdus - 52.6%-57.8% (pb_359_4 = 58.0%)
- * Sphingopyxis - 62.3%-69.2%
+  * Sphingorhabdus - 52.6%-57.8% (pb_359_4 = 58.0%)
+  * Sphingopyxis - 62.3%-69.2%
 * Comparing a handful of Sphingorhabdus and Sphingopyxis 16S sequences with pb_359_4,
 there is a clear divide between the two genera, and pb_359_4 definitely seems to fall within
 the Sphingorhabdus genus.
 
 ## Annotation
 * --proteins flag using named only
- * Ensure all species have a result generated for this setting
- * 2, 3, 4, 5, 6, 
+  * Ensure all species have a result generated for this setting
+  * 2, 3, 4, 5, 6, 
 * Identify unique pathways in each bacterium
 
 # 16S
 Compare Alvar's species to pb_359_X to rule out duplicates
 * None of the suspected genus names are the same
 * Will compare to the Metaxa2 predictions to check for, at least, partial similarities
- * Genome4 - No close similarity (~80% similar to pb_359_4 16S)
- * Unitig0 - No close similarity (~50-60% similar to pb_359_5 16S)
- * Kordia - No close similarity (~50-60% similar to pb_359_8 16S)
+  * Genome4 - No close similarity (~80% similar to pb_359_4 16S)
+  * Unitig0 - No close similarity (~50-60% similar to pb_359_5 16S)
+  * Kordia - No close similarity (~50-60% similar to pb_359_8 16S)
 
 ## Annotation problem
 Sometimes, the new annotations give a WORSE result in terms of the number of predicted pathways
@@ -4638,7 +4635,7 @@ Sometimes, the new annotations give a WORSE result in terms of the number of pre
 | Compounds           | 1559    | 1537    | Worse  | 1438        | Worse  |
 
 * **pb_359_4 is the ONLY sample for which the --proteins [named] result is the better result...**
- * Marginally true for pb_359_7...
+  * Marginally true for pb_359_7...
 
 # 9 December 2016
 
@@ -4652,9 +4649,9 @@ Previously, I've been including the entire .gbk file as a single replicon; will 
 them up into their individual chromosomes and plasmids
 
 * Go for max. number of pathways
- * Important - the number of pathways predicted doesn't correspond to the number in the
+  * Important - the number of pathways predicted doesn't correspond to the number in the
 SmartTable; the numbers correlate with the number of pathways relative to one another, however
-  * It includes super-pathways; these should be separated out
+    * It includes super-pathways; these should be separated out
 
 * Extract pathway lists from Pathway Tools and identify unique ones
 
@@ -4663,74 +4660,74 @@ SmartTable; the numbers correlate with the number of pathways relative to one an
 ## Annotation
 * pb_359_4 (Sphingorhabdus) appears to contain some components of the Enterobacterial Common
 Antigen biosynthesis pathway; this pathway is supposedly restricted to Enterobacteriaceae...
- * Double-check vs. original pb_359_4 annotation
-  * TDP-fucosamine acetyltransferase
-   * The annotation only appears when using named genes, but no gene name is given...
-   * Alternate annotation - GCN5 family acetyltransferase
-  * wecB and wecC
-   * As above, only appears when using named genes
-   * Alternate annotation for wecC - UDP-N-acetyl-D-mannosaminuronic acid dehydrogenase
-    * wecB annotation is the same
+  * Double-check vs. original pb_359_4 annotation
+    * TDP-fucosamine acetyltransferase
+      * The annotation only appears when using named genes, but no gene name is given...
+      * Alternate annotation - GCN5 family acetyltransferase
+    * wecB and wecC
+      * As above, only appears when using named genes
+      * Alternate annotation for wecC - UDP-N-acetyl-D-mannosaminuronic acid dehydrogenase
+        * wecB annotation is the same
 
 * pb_359_8 (Arenibacter) contains components of the pectin degradation II pathway
- * Pectin is present in diatom frustules
- * The top part of the pathway is present; do these enzymes have other purposes?
-  * pemA and pehX - no othe purpose
-  * Pathway lacks presence of digalacturonate lyase
-  * Evidence of presence of downstream pathways
-   * pemA not present in annotation using ALL Flavo hits, implying an unnamed hit was better
-    * Unnamed hit - pectate lyase
-     * Multiple pectate lyase hits in this annotation, and nowhere else
-   * pehX, as above, not present in the all Flavo database-using version
-    * Unnamed hit - glycoside hydrolase
- * ["It is known that the members of Flavobacteria are especially proficient in degrading various
-biopolymers, such as cellulose, chitin, and pectin"] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4646686/)
+  * Pectin is present in diatom frustules
+  * The top part of the pathway is present; do these enzymes have other purposes?
+    * pemA and pehX - no othe purpose
+    * Pathway lacks presence of digalacturonate lyase
+    * Evidence of presence of downstream pathways
+      * pemA not present in annotation using ALL Flavo hits, implying an unnamed hit was better
+        * Unnamed hit - pectate lyase
+          * Multiple pectate lyase hits in this annotation, and nowhere else
+      * pehX, as above, not present in the all Flavo database-using version
+        * Unnamed hit - glycoside hydrolase
+  * ["It is known that the members of Flavobacteria are especially proficient in degrading various
+    biopolymers, such as cellulose, chitin, and pectin"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4646686/)
 
 *_3, _5 and _7 only species predicted to have alginate-related pathways (other species seem to
 possess some alginate-related genes, however...)
- * All three have components of the alginate degradation pathway
-  * _5 has one component (algL alginate lyase)
-  * _3 has two components (algE7 alginate lyase and kdgK 2-dehydro-3-deoxygluconokinase)
-  * _7 has two components (algE7 alginate lyase and kdgK 2-dehydro-3-deoxygluconokinase)
- *_5 (Marinobacter) contains all components of the alginate biosynthesis II pathway
+  * All three have components of the alginate degradation pathway
+    * _5 has one component (algL alginate lyase)
+    * _3 has two components (algE7 alginate lyase and kdgK 2-dehydro-3-deoxygluconokinase)
+    * _7 has two components (algE7 alginate lyase and kdgK 2-dehydro-3-deoxygluconokinase)
+  * _5 (Marinobacter) contains all components of the alginate biosynthesis II pathway
 
 * _3, _6 and _8 contain elements of trehalose biosynthesis pathways
- * Trehalose involved in survival of desiccation
- * Implications for when Skeletonema becomes dormant; survival of microbiome?
+  * Trehalose involved in survival of desiccation
+  * Implications for when Skeletonema becomes dormant; survival of microbiome?
 
 * Look into different types of siderophores (e.g. aerobactin, enterobactin)
 
 * Most of the species have various glycolate oxidase subunit genes, implying potential use of
 glycolate as a carbon source; if released by Skeletonema? (produced by photoautotophs)
- * Only _7 seems to possess glcD; many possess glcE and an iron-sulfur subunit
+  * Only _7 seems to possess glcD; many possess glcE and an iron-sulfur subunit
 
 * Pigments - neurosporene
- * _2, _3, _4, _5 and _8 are predicted to contain the neurosporene biosynthesis pathway
- * Under class Carotenoids Biosynthesis:
-  * _2:
-   * Trans-lycopene biosynthesis (all components)
-    * Final step appears spontaneous, but not highlighted?
-   * Spheroidene and spheroidenone biosynthesis (3/5 components)
-   * Spirilloxanthin and 2,2'-diketo-spirilloxanthin biosynthesis (4/5 components)
-  * _3:
-   * Trans-lycopene biosynthesis (all components)
-   * Spheroidene and spheroidenone biosynthesis (3/5 components)
-   * Spirilloxanthin and 2,2'-diketo-spirilloxanthin biosynthesis (4/5 components)
-  * _4:
-   * Trans-lycopene biosynthesis (all components)
-    * Enzymes present in final step, but not highlighted?
-  * _5:
-   * Trans-lycopene biosynthesis (3/5 components (missing first two))
-  * _8:
-   * Trans-lycopene biosynthesis (all components)
-    * Enzymes present in final step, but not highlighted?
+  * _2, _3, _4, _5 and _8 are predicted to contain the neurosporene biosynthesis pathway
+  * Under class Carotenoids Biosynthesis:
+    * _2:
+      * Trans-lycopene biosynthesis (all components)
+        * Final step appears spontaneous, but not highlighted?
+      * Spheroidene and spheroidenone biosynthesis (3/5 components)
+      * Spirilloxanthin and 2,2'-diketo-spirilloxanthin biosynthesis (4/5 components)
+    * _3:
+      * Trans-lycopene biosynthesis (all components)
+      * Spheroidene and spheroidenone biosynthesis (3/5 components)
+      * Spirilloxanthin and 2,2'-diketo-spirilloxanthin biosynthesis (4/5 components)
+    * _4:
+      * Trans-lycopene biosynthesis (all components)
+        * Enzymes present in final step, but not highlighted?
+    * _5:
+      * Trans-lycopene biosynthesis (3/5 components (missing first two))
+    * _8:
+      * Trans-lycopene biosynthesis (all components)
+        * Enzymes present in final step, but not highlighted?
 
 # 13 December 2016
 
 ## Tasks
 * Add references to the announcement papers
 * Continue searching for interesting pathways
- * Investigate presence of secretion pathways?
+  * Investigate presence of secretion pathways?
 
 ## Prokka
 rRNA module now installed for Prokka; rerun annotations to include rRNA information
@@ -4744,19 +4741,19 @@ rRNA module now installed for Prokka; rerun annotations to include rRNA informat
 ## Genome announcements
 * Major references added to Google Docs versions of the announcement papers
 * Rerun Prokka now that rRNA module has been installed; create a Final_Annotations folder cf. the Final_Assemblies folder?
- * Predicted number of loci are more or less consistent with the previous annotation; seems
+  * Predicted number of loci are more or less consistent with the previous annotation; seems
 as though some hypothetical loci were disrupted
 * Consider running Prokka with the --rfam flag for ncRNA prediction?
- * Running for pb_359_2; comparison to previous run:
-  * 
+  * Running for pb_359_2; comparison to previous run:
+    * 
 
 ## Annotation
 * Observation - pb_359_4 has 46 copies of the gene benD?? Involved in benzoate degradation...
- * Degradation of polychlorinated biphenyls (PCBs)?
+  * Degradation of polychlorinated biphenyls (PCBs)?
 * pb_359_7 appears to lack a tmRNA prediction, whereas all others have one; apparently this
 feature is universal among eubacteria
- * SsrA-binding protein smpB is present, however...
- * Possible that Antarctobacter (relatively unstudied genus) has an unrecognised SsrA?
+  * SsrA-binding protein smpB is present, however...
+  * Possible that Antarctobacter (relatively unstudied genus) has an unrecognised SsrA?
 
 
 ## Pathway Tools
@@ -4795,7 +4792,7 @@ To do:
 # 9 January 2017
 
 ## pb_359_2
-[Genome announcement of Roseovarius mucosus] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4511512/)
+[Genome announcement of Roseovarius mucosus](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4511512/)
 
 * Two glycine betaine biosynthesis pathways - I and IV. IV is apparently a very energy-consuming process,
 so is there a benefit to this redundancy...?
@@ -4803,36 +4800,36 @@ so is there a benefit to this redundancy...?
 (where Rhodobacteraceae database is searched first); in final annotation it is labelled as PUCC protein...
 
 * Check the products/pathways on the Roseovarius plasmids and see what they contain
- * Plasmid 1 seems to contain a lot of cytochrome- and metal import/export-related genes
- * Plasmid 2 contains several genes involved in mercury resistance?
+  * Plasmid 1 seems to contain a lot of cytochrome- and metal import/export-related genes
+  * Plasmid 2 contains several genes involved in mercury resistance?
 * Viewed in Pathway Tools (both final annotation and pb_359_2_2), the plasmids seem to encode no obvious pathways by themselves...
- * 2/3 components of phosphatidylcholine biosynthesis V pathway - "This pathway is found in animals, yeast, and bacteria that interact with eukaryotic cells" (BioCyc)
+  * 2/3 components of phosphatidylcholine biosynthesis V pathway - "This pathway is found in animals, yeast, and bacteria that interact with eukaryotic cells" (BioCyc)
 * Found 4x plasmids from previous R. mucosus genome (DSM 17069), but purely by eyeballing, can't see any obvious link to current plasmids...
 
 * Check number of vitamin B12/cobalamin biosynthesis genes in each species and determine which of them have the most complete pathways; these would potentially
 be the most likely ones to be involved in providing the vitamin to Skeletonema
- * Try the same thing with siderophores (and read up on the biology of siderophores)
+  * Try the same thing with siderophores (and read up on the biology of siderophores)
 
 # 10 January 2017
 
 ## pb_359_2
 More reliable way of checking the plasmids - download and concatenate, then blast
 * Decent long match between the longest DSM 17069 plasmid and the longest pb_359_2 plasmid:
- * 26148-74585 on DSM 17069 vs 8350-56784 on pb_359_2 (Identities = 47548/48456 (98%), Gaps = 39/48456 (0%))
-  * This accounts for between one-third and one-quarter of the size of the largest plasmid of pb_359_2
-  * This accounts for between one-half and one-third of the size of the largest plasmid of DSM 17069
- * Three more matches of >1000bp
+  * 26148-74585 on DSM 17069 vs 8350-56784 on pb_359_2 (Identities = 47548/48456 (98%), Gaps = 39/48456 (0%))
+    * This accounts for between one-third and one-quarter of the size of the largest plasmid of pb_359_2
+    * This accounts for between one-half and one-third of the size of the largest plasmid of DSM 17069
+  * Three more matches of >1000bp
 * Shortest DSM 17069 plasmid had one match >1000bp; middle two plasmids had either short or no matches
 
 Blast the pb_359_2 segment which matches the DSM 17069 plasmid
 * Big section in the middle with no matches, but the closest matches are to Ruegeria mobilis, Celeribacter indicus and Marinovum algicola (all plasmid sequences)
- * Marinovum algicola isolated from a dinoflagellate...
+  * Marinovum algicola isolated from a dinoflagellate...
 
 * Regarding Celeribacter indicus:
- * "...the taxonomic distributions of the five plasmid proteomes of strain P73T were different from that of the chromosome, suggesting the chromosome and the plasmids
- may have had potentially different origins... For pP73B they matched Roseovarius (41, 28.67%) and Celeribacter (23, 16.08%)..."
-From [Genomic and metabolic analysis of fluoranthene degradation pathway in Celeribacter indicus P73T] (http://www.nature.com/articles/srep07741)
- * Unfortunately, a lot of the genes on the p73B plasmid appear not to be characterised...
+  * "...the taxonomic distributions of the five plasmid proteomes of strain P73T were different from that of the chromosome, suggesting the chromosome and the plasmids
+    may have had potentially different origins... For pP73B they matched Roseovarius (41, 28.67%) and Celeribacter (23, 16.08%)..."
+    From [Genomic and metabolic analysis of fluoranthene degradation pathway in Celeribacter indicus P73T](http://www.nature.com/articles/srep07741)
+  * Unfortunately, a lot of the genes on the p73B plasmid appear not to be characterised...
 
 
 
@@ -4869,10 +4866,10 @@ Annotation pb_359_2_2 has been thus far disregarded, as most of the genes had no
 any other annotation attempt.
 * Running the resultant .gbk file through Pathway Tools to check number of pathways, in case it has more pathways than the current
 'final' annotation...
- * 236 pathways, less than any other annotation...
- * However, includes pathway for 3,8-divinyl-chlorophyllide a biosynthesis (a chlorophyll intermediate)
-  * This pathway is present in R mucosus DSM 17069...
-  * The chlorophyll a synthase predicted in pb_359_2_2 was inferred from a sequence from Roseobacter
+  * 236 pathways, less than any other annotation...
+  * However, includes pathway for 3,8-divinyl-chlorophyllide a biosynthesis (a chlorophyll intermediate)
+    * This pathway is present in R mucosus DSM 17069...
+    * The chlorophyll a synthase predicted in pb_359_2_2 was inferred from a sequence from Roseobacter
 
 # 11 January 2017
 
@@ -4883,10 +4880,10 @@ of known function.
 
 * 1_Copy_GenBank_Header.py appears to work; can print the initial, non-record elements of the first GenBank file into the output file.
 * 2_Print_GenBank_Record.py can print most of a GenBank record in the correct format
- * Need to work out newline character in translation line
- * Need to work out how to spread Inference and Note across multiple lines, one per entry
+  * Need to work out newline character in translation line
+  * Need to work out how to spread Inference and Note across multiple lines, one per entry
 * 3_Compare_GenBank_Records.py allows a 'hypothetical protein' product in the primary GenBank to be overwritten with a non-'hypothetical protein' entry in another
- * Need to add the capacity to print the rest of the entry as well
+  * Need to add the capacity to print the rest of the entry as well
 
 
 
@@ -4910,9 +4907,9 @@ Some regions of v. low GC content exist in pb_359_2; use gcPlot to check the loc
 * See whether one can search for LOCATION-specific genes in Pathway Tools to see which pathways a particular region's genes are involved in
 
 * Minimum value exists around 3.06 Mb; checking this region against the annotation, there is a cluster of genes:
- * 5 hypothetical proteins
- * Insertion element uncharacterised 12.0 kDa protein
- * Integrase core domain protein
+  * 5 hypothetical proteins
+  * Insertion element uncharacterised 12.0 kDa protein
+  * Integrase core domain protein
 * Slightly further downstream, more hypothetical proteins and transposases
 
 ## To do
@@ -4944,9 +4941,9 @@ Problem - by including a tab in the CDS/tRNA/rRNA/misc line, I've inadvertently 
 ## pb_359_2
 * Split the GenBanks up into individual contigs
 * Generate series of consensuses:
- * Final vs. _2 -> A
- * A vs. _3 -> B
- * B vs. _All -> C
+  * Final vs. _2 -> A
+  * A vs. _3 -> B
+  * B vs. _All -> C
 * Check stats of C
 
 ## Git
@@ -4963,24 +4960,24 @@ Problem - by including a tab in the CDS/tRNA/rRNA/misc line, I've inadvertently 
 
 ## To do:
 * Run GenBank_Consensus script on R. mucosus
- * Attempt to fix the Note problem in the script (if Note exists, overwrite it?)
+  * Attempt to fix the Note problem in the script (if Note exists, overwrite it?)
 * Re-download notes on viral genomes and identify TE/viral elements in R. mucosus
 
 ## GenBank_Consensus
 * Notes problem fixed - duplicate From*.gb/From*.gbk lines removed
 * Running the final consensus file through Pathway Tools results in ten less pathways...
- * Why?
+  * Why?
 * TestRoseoFinal database (NewVersionTest) - running 'final' annotation in Pathway Tools
- * Doesn't yield the same number of pathways as previously
- * Conclusion: The new version of pathway tools predicts the number of pathways differently to the old versions
-  * Analyses will have to be redone to check figures...
+  * Doesn't yield the same number of pathways as previously
+  * Conclusion: The new version of pathway tools predicts the number of pathways differently to the old versions
+    * Analyses will have to be redone to check figures...
 * Written a .sge script to automate the whole process of GenBank_Consensus steps
 
 ## Pathway Tools
 * Rescored the original 'final' Roseovarius result; now shows either 280 or 283 pathways, depending on whether
 the original is rescored, or the original file is reuploaded entirely. Either way, the consensus file appears
 to give the best overall result now in terms of less hypotheticals and the same/more total pathways
- * Will redo the analyses with v20.5 of Pathway Tools (originally done in 20.0)
+  * Will redo the analyses with v20.5 of Pathway Tools (originally done in 20.0)
 
 ## To do
 * Alter GenBank_Consensus.py to prioritise named genes
@@ -4989,12 +4986,12 @@ to give the best overall result now in terms of less hypotheticals and the same/
 
 ## Pathway Tools
 * Rerun old analyses to get a more accurate comparison of the number of pathways predicted between runs
- * All analyses must be brought forward to the new version
+  * All analyses must be brought forward to the new version
 
 ## GenBank_Consensus.py
 * Added an expression to prioritise named genes, if one exists at a locus in the secondary input but not in the primary input
- * Running the GenBank files in reverse order through this script, from the GenBank with the most named entries to the least
- * Results in the same # of named genes, as one would expect...
+  * Running the GenBank files in reverse order through this script, from the GenBank with the most named entries to the least
+  * Results in the same # of named genes, as one would expect...
 
 ## To do
 * Run remaining GenBank_Consensus_4.5 files through Pathway Tools (Starting with Sphingo consensus)
@@ -5005,13 +5002,13 @@ to give the best overall result now in terms of less hypotheticals and the same/
 
 ## Pathway Tools
 * For pb_359_2, Consensus_4.5 has one more pathway predicted than Consensus_Names
- * Would have expected more named genes to equal more predicted pathways
- * If this trend continues, compare the lists of pathways
+  * Would have expected more named genes to equal more predicted pathways
+  * If this trend continues, compare the lists of pathways
 * For pb_359_3, Consensus_Names had three more pathways predicted than Consensus_4.5
 
 * Question - does it matter whether .gbk files are uploaded to Pathway Tools as per-contig files, or can
 they all be uploaded as a single file...?
- * Seems to make no difference; can continue without uploading each contig separately
+  * Seems to make no difference; can continue without uploading each contig separately
 
 | Sample   | Consensus     | Consensus_Names     | Differences |
 |----------|---------------|---------------------|-------------|
@@ -5026,13 +5023,13 @@ they all be uploaded as a single file...?
 * Figures don't appear to add up, as # of pathways doesn't take into account 'superpathways'
 
 * Overall, Consensus_Names seems to give the highest # of predicted pathways
- * Use this for ALL bacteria, or select on case-by-case basis?
+  * Use this for ALL bacteria, or select on case-by-case basis?
 
 ## VirSorter
 * Checking VirSorter predictions versus VirSorter database and R. mucosus results
- * Where neither of these turn up results, attempt Blast search
- * Started making a list of proteins in the viral region in 06_VirSorter/pb_359_2/README.md
-  * Try to work out if the remaining genes have a known/suspected function...
+  * Where neither of these turn up results, attempt Blast search
+  * Started making a list of proteins in the viral region in 06_VirSorter/pb_359_2/README.md
+    * Try to work out if the remaining genes have a known/suspected function...
 
 # 19 January 2017
 
@@ -5043,7 +5040,7 @@ Change GenBank_Consensus scripts to remove 'Both records hypothetical' note
 
 Trying PHASTER bacteriophage predictor (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4987931/):
 * pb_359_2/Roseovarius mucosus - http://phaster.ca/batches/BB_08ded19b26
- * The previously-explored region ~3.05Mb has a score of 100 (/150), whereas two other regions have scores of 140 and 150, respectively
+  * The previously-explored region ~3.05Mb has a score of 100 (/150), whereas two other regions have scores of 140 and 150, respectively
 * pb_359_3/Loktanella - http://phaster.ca/batches/BB_8abd2fdfb8
 * pb_359_4/Sphingorhabdus - http://phaster.ca/submissions/ZZ_0576f774b4
 * pb_359_5/Marinobacter - http://phaster.ca/batches/BB_d095410425
@@ -5063,7 +5060,7 @@ Need to find a convenient way to convert my generated .gbk files into .faa files
 Problem: sometimes a gene name will be mentioned in the product line but not mentioned in the name field
 * Will require manual annotation
 * ~150 changes made to pb_359_2_Consensus_Names
- * Not changed if the line said 'xxx-like' or 'xxx-family'
+  * Not changed if the line said 'xxx-like' or 'xxx-family'
 
 	Try these in Pathway Tools on Monday!
 
@@ -5071,34 +5068,34 @@ Problem: sometimes a gene name will be mentioned in the product line but not men
 
 ## Annotations
 * Running pb_359_2 manually-adjusted annotation through Pathway Tools
- * Pathways - 283
-  * Vs. ~284 from previous best analyses
-  * Despite addition of explicitly-named components of the bacteriochlorophyll a synthesis pathway, these still appear as gaps in the pathway...
+  * Pathways - 283
+    * Vs. ~284 from previous best analyses
+    * Despite addition of explicitly-named components of the bacteriochlorophyll a synthesis pathway, these still appear as gaps in the pathway...
 
 * Comparing photosynthetic gene cluster to that in Roseovariuis mucosus DSM 17069 - VERY similar gene order
- * 39 genes in cluster
+  * 39 genes in cluster
 * Largest plasmid in both cases contains type IV secretion system genes
- * In general, plasmid 1 of R3 seems to be an extension of A123 plasmid in DSM 17069
- * Similarity ends ~100 Kb into R3 plasmid 1
-  * rosmuc_04171 corresponds to 04123 (RÂ3
+  * In general, plasmid 1 of R3 seems to be an extension of A123 plasmid in DSM 17069
+  * Similarity ends ~100 Kb into R3 plasmid 1
+    * rosmuc_04171 corresponds to 04123 (RÂ3
 * R mucosus DSM 17069 appears to have only 265 pathways
- * Flagellar protein region rosmuc00543 - rosmuc00574 matches 01702 - 01733 (R3)
+  * Flagellar protein region rosmuc00543 - rosmuc00574 matches 01702 - 01733 (R3)
 
 * R3 seems to be lacking sulfoquinovosyl diacylglycerol biosynthesis pathway
- * 'found in all photosynthetic organisms'?
- * R3 appears to be missing other components of photosynthetic pathways cf. DSM 17069
+  * 'found in all photosynthetic organisms'?
+  * R3 appears to be missing other components of photosynthetic pathways cf. DSM 17069
 
 * Blast R3 vs DSM 17069 - Blastn
- * Long R3 plasmid appears to be a merger of two of the DSM 17069 contigs; scaffold14 has 2x 100% identical matches to R3 (78 Kb and 8 Kb)
- * Almost all 17 scaffolds of DSM 17069 map to the chromosome and longest plasmid of R3
-  * Scaffolds 11 and 13 do not hit anything in R3
-   * Scaffold 11 - only 1012 bp...
-   * (pRosMuc_C27) Scaffold 13 - 26,795 bp - contains type IV secretory system genes, but is this not redundant? e.g. 2x VirB4 genes in DSM 17069, just 1 in R3
-    * However, DSM 17069 also contains trb genes involved in P-type conjugative transfer, and plasmid segregation genes, and yhaV toxin gene
-  * Scaffold 12 has a short hit on the small R3 plasmid (1,429bp)
-   * 16,653 to 18,078 (scaffold12 (DSM 17069)) (Antirestriction protein in this region)
-   * 968 to 2,395 (short plasmid (R3) (DNA primase TraC in this region)
-   * Both a comparable size in terms of # of base pairs
+  * Long R3 plasmid appears to be a merger of two of the DSM 17069 contigs; scaffold14 has 2x 100% identical matches to R3 (78 Kb and 8 Kb)
+  * Almost all 17 scaffolds of DSM 17069 map to the chromosome and longest plasmid of R3
+    * Scaffolds 11 and 13 do not hit anything in R3
+      * Scaffold 11 - only 1012 bp...
+      * (pRosMuc_C27) Scaffold 13 - 26,795 bp - contains type IV secretory system genes, but is this not redundant? e.g. 2x VirB4 genes in DSM 17069, just 1 in R3
+        * However, DSM 17069 also contains trb genes involved in P-type conjugative transfer, and plasmid segregation genes, and yhaV toxin gene
+    * Scaffold 12 has a short hit on the small R3 plasmid (1,429bp)
+      * 16,653 to 18,078 (scaffold12 (DSM 17069)) (Antirestriction protein in this region)
+      * 968 to 2,395 (short plasmid (R3) (DNA primase TraC in this region)
+      * Both a comparable size in terms of # of base pairs
 
 | DSM 17069 plasmid | Location in R3                                                                                                                  |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -5114,12 +5111,12 @@ Problem: sometimes a gene name will be mentioned in the product line but not men
 
 Three shorter DSM 17069 plasmids and shortest R3 plasmid appear to be unrepresented in the other strain...
 * R3 has mercury resistance?
- * Plasmid seems to be missing a vitally important gene - MerB
- * Even after various Blasts, no MerB hits in shortest plasmid...
- * Doesn't have 'broad spectrumn' resistance to organic mercury compounds
- * DSM 17069 ALSO DISPLAYS MERCURY RESISTANCE
+  * Plasmid seems to be missing a vitally important gene - MerB
+  * Even after various Blasts, no MerB hits in shortest plasmid...
+  * Doesn't have 'broad spectrumn' resistance to organic mercury compounds
+  * DSM 17069 ALSO DISPLAYS MERCURY RESISTANCE
 * Three shorter plasmids in DSM 17069 contain components of phosphatidylcholine biosynthesis pathway
- * R3 contains a different version of this pathway...
+  * R3 contains a different version of this pathway...
 
 Observation - DSM 17069 replicons were never tested for circularity; assumed to be linear
 
@@ -5143,18 +5140,18 @@ CHECK ON TUESDAY - ARE THE PREDICTED VIRAL REGIONS OF STRAIN R3 ALSO PRESENT IN 
 ## Check R3 plasmids vs other Roseovarius/Rhodobacteraceae plasmids?
 * Long plasmid - Patchy, but Blast hits to Ruegeria mobilis plasmid, Celeribacter indicus plasmid, Marinovum algicola plasmid, Phaeobacter gallaeciensis plasmid,
 Confluentimicrobium sp. EMB200-NS6 plasmid, Dinoroseobacter shibae DFL-12 plasmid, etc...
- * Conclusion - conserved Rhodobacteraceae plasmid?
+  * Conclusion - conserved Rhodobacteraceae plasmid?
 * Short plasmid - Even patchier, but Blast hits to Sulfitobacter sp. AM1-D1 plasmid, Roseobacter denitrificans OCh 114 plasmid, Celeribacter indicus strain P73
 plasmid; worse hits to other sequences including Paracoccus denitrificans PD1222 chromosome...
- * Conclusion - check 26,302 - . - 2395 of short plasmid (conserved? region)
-  * Contains primarily transfer genes and hypothetical genes - also gene for molybdopterin-guanine dinucleotide biosynthesis protein A
- * Check 7,929 - 10,035 (matches Paracoccus chromosome)
-  * Contains 3-hydroxy-D-aspartate aldolase and pheylserine dehydratase
+  * Conclusion - check 26,302 - . - 2395 of short plasmid (conserved? region)
+    * Contains primarily transfer genes and hypothetical genes - also gene for molybdopterin-guanine dinucleotide biosynthesis protein A
+  * Check 7,929 - 10,035 (matches Paracoccus chromosome)
+    * Contains 3-hydroxy-D-aspartate aldolase and pheylserine dehydratase
 
 * Blastn vs. refseq_genomic using R3 long plasmid
- * Roseovarius sp. TM1035 1101493006644, whole genome shotgun sequence - Coverage: 78%, E value: 0.0, Identity: 99%
+  * Roseovarius sp. TM1035 1101493006644, whole genome shotgun sequence - Coverage: 78%, E value: 0.0, Identity: 99%
 * Blastn vs refseq_genomic using R3 short plasmid
- * Sulfitobacter sp. EhC04 A4_Contig27, whole genome shotgun sequence - Coverage: 26%, E value:	0.0, Identity: 92%
+  * Sulfitobacter sp. EhC04 A4_Contig27, whole genome shotgun sequence - Coverage: 26%, E value:	0.0, Identity: 92%
 
 
 
@@ -5168,70 +5165,70 @@ plasmid; worse hits to other sequences including Paracoccus denitrificans PD1222
 
 ## refseq_genomic Blastn vs. plasmids - list some of the best hits
 * pb_359_3 long plasmid
- * Best hits to Oceanibulbus and Sulfitobacter, 99% identity but <20% coverage (E value: 0.0)
- * Ruegeria hits with 98% identity and <35% identity (E value: 0.0) - still not amazing coverage...
+  * Best hits to Oceanibulbus and Sulfitobacter, 99% identity but <20% coverage (E value: 0.0)
+  * Ruegeria hits with 98% identity and <35% identity (E value: 0.0) - still not amazing coverage...
 * pb_359_3 short plasmid
- *  Sulfitobacter sp. EhC04 A4_Contig27 - Coverage: 20%, E value: 0.0, Identity: 93%
+  *  Sulfitobacter sp. EhC04 A4_Contig27 - Coverage: 20%, E value: 0.0, Identity: 93%
 
 * pb_359_5 plasmid
- *  Thalassospira xiamenensis strain MCCC 1A03005 contig22 - Coverage: 3%, E value: 0.0, Identity: 98%
+  *  Thalassospira xiamenensis strain MCCC 1A03005 contig22 - Coverage: 3%, E value: 0.0, Identity: 98%
 
 * pb_359_6 Plas_1:
- * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 13%, E value: 0.0, Identity: 86%
- *  Sulfitobacter sp. 20_GPM-1509m ... scaffold00006.6_C - Coverage: 15%, E value: 0.0, Identity: 87%
+  * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 13%, E value: 0.0, Identity: 86%
+  *  Sulfitobacter sp. 20_GPM-1509m ... scaffold00006.6_C - Coverage: 15%, E value: 0.0, Identity: 87%
 * pb_359_6 Plas_2:
- * Sagittula stellata E-37 1101159001451 - Coverage: 6%, E value: 0.0, Identity: 83%
- * Sulfitobacter sp. 20_GPM-1509m ... scaffold00010.10_C - Coverage: 15%, E value: 0.0, Identity: 86%
- * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 16%, E value: 0.0, Identity: 86%
+  * Sagittula stellata E-37 1101159001451 - Coverage: 6%, E value: 0.0, Identity: 83%
+  * Sulfitobacter sp. 20_GPM-1509m ... scaffold00010.10_C - Coverage: 15%, E value: 0.0, Identity: 86%
+  * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 16%, E value: 0.0, Identity: 86%
 * pb_359_6 Plas_3:
- * Sulfitobacter sp. 20_GPM-1509m ... scaffold00003.3_C - Coverage: 7%, E value: 0.0, Identity: 93%
- * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 7%, E value: 0.0, Identity: 93%
+  * Sulfitobacter sp. 20_GPM-1509m ... scaffold00003.3_C - Coverage: 7%, E value: 0.0, Identity: 93%
+  * Sulfitobacter pseudonitzschiae strain DSM 26824 - Coverage: 7%, E value: 0.0, Identity: 93%
 * pb_359_6 Plas_4:
- * Sulfitobacter sp. CB2047 contig_5 - Coverage: 16%, E value: 0.0, Identity: 90%
- * Litoreibacter ascidiaceicola strain DSM 100566 - Coverage: 18%, E value: 0.0, Identity: 90%
- * Celeribacter indicus strain P73 plasmid pP73B - Coverage: 10%, E value: 0.0, Identity: 93%
+  * Sulfitobacter sp. CB2047 contig_5 - Coverage: 16%, E value: 0.0, Identity: 90%
+  * Litoreibacter ascidiaceicola strain DSM 100566 - Coverage: 18%, E value: 0.0, Identity: 90%
+  * Celeribacter indicus strain P73 plasmid pP73B - Coverage: 10%, E value: 0.0, Identity: 93%
 * pb_359_6 Plas_5:
- * Roseovarius sp. MCTG156(2b) ... quiver.4_C - Coverage: 42%, E value: 0.0, Identity: 99%
+  * Roseovarius sp. MCTG156(2b) ... quiver.4_C - Coverage: 42%, E value: 0.0, Identity: 99%
 * pb_359_6 Plas_6:
- * Ruegeria mobilis strain NBRC102038 contig_13 - Coverage: 47%, E value: 0.0, Identity: 97%
- * Rhodobacteraceae bacterium O3.65 TRIHO_contig000128 - Coverage: 61%, E value: 0.0, Identity: 92%
+  * Ruegeria mobilis strain NBRC102038 contig_13 - Coverage: 47%, E value: 0.0, Identity: 97%
+  * Rhodobacteraceae bacterium O3.65 TRIHO_contig000128 - Coverage: 61%, E value: 0.0, Identity: 92%
 * pb_359_6 Plas_7:
- * Celeribacter baekdonensis strain DSM 27375 - Coverage: 80%, E value: 0.0, Identity: 98%
- * Roseobacter sp. MED193 1099517003960 - Coverage: 54%, E value: 0.0, Identity: 100%
+  * Celeribacter baekdonensis strain DSM 27375 - Coverage: 80%, E value: 0.0, Identity: 98%
+  * Roseobacter sp. MED193 1099517003960 - Coverage: 54%, E value: 0.0, Identity: 100%
 
 * pb_359_7 long plasmid
- * Tropicibacter naphthalenivorans scaffold 0009 - Coverage: 13%, E value: 0.0, Identity: 89%
+  * Tropicibacter naphthalenivorans scaffold 0009 - Coverage: 13%, E value: 0.0, Identity: 89%
 * pb_359_7 middle plasmid
- * Marinovum algicola DG 898 plasmid pMaD4 - Coverage: 6%, E value: 0.0, Identity: 76%
+  * Marinovum algicola DG 898 plasmid pMaD4 - Coverage: 6%, E value: 0.0, Identity: 76%
 * pb_359_7 short plasmid
- * Roseobacter sp. MED193 1099517003956 - Coverage: 7%, E value: 0.0, Identity: 91%
- * Rhodobacterales bacterium HTCC2654 - Coverage: 9%, E value: 0.0, Identity: 92%
+  * Roseobacter sp. MED193 1099517003956 - Coverage: 7%, E value: 0.0, Identity: 91%
+  * Rhodobacterales bacterium HTCC2654 - Coverage: 9%, E value: 0.0, Identity: 92%
 
 * pb_359_8 plasmid
- * Muricauda lutaonensis strain CC-HSB-11 - Coverage: 3%, E value: 0.0, Identity: 81%
+  * Muricauda lutaonensis strain CC-HSB-11 - Coverage: 3%, E value: 0.0, Identity: 81%
 
 
 * CAN SEARCH USING 'WHOLE GENOME SHOTGUN CONTIGS' OPTION, but must be specific with which organisms
 you search (e.g. Rhodobacteraceae), or else Blast seems to reject the query
- * This allows me to check the plasmids against whole families, rather than having to download and
+  * This allows me to check the plasmids against whole families, rather than having to download and
 Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 
 * R3 long plasmid finds the same two R. mucosus DSM 17069 contigs as my BlastN
 * R3 short plasmid - no great matches
- * Two regions which don't seem to match anything in particular - 10035-19031 and 19655-23967
-  * 2-iminobutanoate/2-iminopropanoate deaminase yabJ, D-amino acid dehydrogenase dadA1, 2-iminobutanoate/2-iminopropanoate deaminase yabJ,
+  * Two regions which don't seem to match anything in particular - 10035-19031 and 19655-23967
+    * 2-iminobutanoate/2-iminopropanoate deaminase yabJ, D-amino acid dehydrogenase dadA1, 2-iminobutanoate/2-iminopropanoate deaminase yabJ,
     C4-dicarboxylate-binding periplasmic protein dctP, C4-dicarboxylate TRAP transporter large permease protein dctM,
     2,3-diketo-L-gulonate TRAP transporter small permease protein yiaM, HTH-type transcriptional regulator cynR, Abi-like protein, hypo
-   * No good matches among Rhodobacteraceae, scattered matches among Alphaproteobacteria, no matches among diatoms (Bacillariophyceae)
+      * No good matches among Rhodobacteraceae, scattered matches among Alphaproteobacteria, no matches among diatoms (Bacillariophyceae)
 
-  * Hypo, hypo, tRNA(fMet)-specific endonuclease vapC, restriction endonuclease bglII, S-adenosylmethionine-binding protein
-   * No matches among Rhodobacteraceae, Alphaproteobacteria or diatoms
+    * Hypo, hypo, tRNA(fMet)-specific endonuclease vapC, restriction endonuclease bglII, S-adenosylmethionine-binding protein
+      * No matches among Rhodobacteraceae, Alphaproteobacteria or diatoms
 
 
 
 ## Analyses attempted on R. mucosus strain R3
 * PHASTER - phage search
- * Comparing phage regions to R. mucosus type strain (DSM 17069)
+  * Comparing phage regions to R. mucosus type strain (DSM 17069)
 * Comparing contigs and plasmids with type strain (BlastN -> Mauve)
 * Finding unique regions in each and searching for unique genes/functions (not replicated in other regions of the genome)
 * BlastN unique regions of R3 (in particular, second plasmid) to identify an origin
@@ -5241,26 +5238,26 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 
 ## uvrABC genes
 * Blast R3 sequences against DSM 17069
- * Listed as 'excinuclease ABC subunit', rather than uvrABC; still present...
+  * Listed as 'excinuclease ABC subunit', rather than uvrABC; still present...
 
 * vapC found on R3 short plasmid is the toxin part of a toxin/antitoxin system
- * Neutralised by vapB, which appears absent...
+  * Neutralised by vapB, which appears absent...
 
 * Purpose of R3 short plasmid appears to be mercuric resistance, but DSM 17069 also seems to have this capacity...
 
 * Purpose of R3 long plasmid:
- * Phosphate/phosophonate uptake?
- * Cobalt-zinc-cadmium resistance?
-  * At least one copper resistance gene, too
- * Type IV secretion system?
- * A lot of mitochondria-related genes
-  * Many pertaining to cytochrome C (inner mitochondrial membrane)
-  * Cardiolipin synthase A (inner mitochondrial membrane)
-   * Mitochondria hypothesised to derive from alphaproteobacteria, so perhaps unsurprising...
- * entS enterobactin exporter (strongest known siderophore)
-  * But, no enterobactin itself, plus entS also on chromosome...
+  * Phosphate/phosophonate uptake?
+  * Cobalt-zinc-cadmium resistance?
+    * At least one copper resistance gene, too
+  * Type IV secretion system?
+  * A lot of mitochondria-related genes
+    * Many pertaining to cytochrome C (inner mitochondrial membrane)
+    * Cardiolipin synthase A (inner mitochondrial membrane)
+      * Mitochondria hypothesised to derive from alphaproteobacteria, so perhaps unsurprising...
+  * entS enterobactin exporter (strongest known siderophore)
+    * But, no enterobactin itself, plus entS also on chromosome...
 
- * "... there is experimental evidence that cytochrome biosynthesis genes are involved in
+  * "... there is experimental evidence that cytochrome biosynthesis genes are involved in
    copper resistance in Pseudomonas fluorescens"
    (Yang H, Liu MY, Romeo T: Coordinate genetic regulation of glycogen catabolism and biosynthesis in Escherichia colivia the CsrA gene product.
    J Bacteriol. 1996, 178 (4): 1012-1017.)
@@ -5273,7 +5270,7 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 | pb_359_3 - Plas 2 | Mercury resistance?  |
 
 * Loktanella short plasmid seems to contain largely the same genes as R3 short plasmid...
- * Blastn reveals that the two plasmids are almost identical...
+  * Blastn reveals that the two plasmids are almost identical...
 
 | pb_359_5 plasmid  | Mercury resistance? Copper resistance? Type IV secretion? |
 | pb_359_6 - Plas 1 | [Long; check again] |
@@ -5298,11 +5295,11 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 | pb_359_8 plasmid  | Transposition (tra genes)? Many hypothetical proteins... |
 
 * Blastn all-vs-all; get .xml output for all hits with E value >9,000
- * Roseovarius plasmid 1 vs Sulfitobacter plasmid 7 (18,619)
- * Roseovarius plasmid 2 vs Loktanella plasmid 2 (26,797)
- * Loktanella plasmid 1 vs Loktanella chromosome (11,625)
- * Sulfitobacter chromosome vs Sulfitobacter plasmid 2 (11,326)
- * Sulfitobacter plasmid 5 vs Sulfitobacter plasmid 7 (9,310)
+  * Roseovarius plasmid 1 vs Sulfitobacter plasmid 7 (18,619)
+  * Roseovarius plasmid 2 vs Loktanella plasmid 2 (26,797)
+  * Loktanella plasmid 1 vs Loktanella chromosome (11,625)
+  * Sulfitobacter chromosome vs Sulfitobacter plasmid 2 (11,326)
+  * Sulfitobacter plasmid 5 vs Sulfitobacter plasmid 7 (9,310)
 
 * Copy across fasta sequences and run Blasts with .xml output
 
@@ -5329,86 +5326,86 @@ Blast sequences individually, as was done with R. mucosus R3 vs DSM 17069
 ## pb_359_3 vs L. vestfoldensis DSM 16212(T)
 
 * DSM 16212 assembly contains 45 contigs... Most have matches to pb_359_3
- * The matches are generally in the mid-80% similarity range...
- * Contigs with no match:
-  * NZ_KB908004 - hypothetical and CRISPR-related genes
-  * NZ_KB908005 - primarily hypothetical proteins
-  * NZ_KB908007 - various genes
-  * NZ_KB908008 - [check GenBank]
-  * NZ_KB908011 - [check GenBank]
-  * NZ_KB908012 - [check GenBank]
-  * NZ_KB908014 - [check GenBank]
-  * NZ_KB908017 - [check GenBank]
+  * The matches are generally in the mid-80% similarity range...
+  * Contigs with no match:
+    * NZ_KB908004 - hypothetical and CRISPR-related genes
+    * NZ_KB908005 - primarily hypothetical proteins
+    * NZ_KB908007 - various genes
+    * NZ_KB908008 - [check GenBank]
+    * NZ_KB908011 - [check GenBank]
+    * NZ_KB908012 - [check GenBank]
+    * NZ_KB908014 - [check GenBank]
+    * NZ_KB908017 - [check GenBank]
 
 * Running DSM 16212 through Pathway Tools
 
 * Check 'intact' phage regions of pb_359_3 against L. vestfoldensis DSM 16212
- * Region 3 matches NZ_KB907974.1 Loktanella vestfoldensis DSM 16212 genomic scaffold H147DRAFT_scaffold00002.2 (mid-80% match)
- * Region 6 has 4 matches of <2,000bp
+  * Region 3 matches NZ_KB907974.1 Loktanella vestfoldensis DSM 16212 genomic scaffold H147DRAFT_scaffold00002.2 (mid-80% match)
+  * Region 6 has 4 matches of <2,000bp
 
 ## pb_359_5 vs M. algicola DG893(T)
 
 * DG893 assembly contains >100 contigs
- * Two short hits on plasmid; many long hits to chromosome
- * Chromosome hits have 89%-98% identity to pb_359_5
+  * Two short hits on plasmid; many long hits to chromosome
+  * Chromosome hits have 89%-98% identity to pb_359_5
 
 ## pb_359_6 vs S. pseudonitzschiae H3(T)
 
 * H3 assembly contains 80 contigs
- * Many long hits to the chromosome
- * Hits to plasmids rather fragmented
+  * Many long hits to the chromosome
+  * Hits to plasmids rather fragmented
 
 ## pb_359_8 vs A. algicola TG409(T)
 
 * TG409 has only 3 contigs; easier to make comparisons
 * All 3 contigs seem to map to pb_359_8's chromosome
 * A few short (1,936, 212, 63) matches to two of the TG409 contigs on the plasmid; 1,936 region identical in both matches
- * Check 8,328 - 10,243 on pb_359_8 plasmid
-  * Putative transposase and tyrosine recombinase XerD
+  * Check 8,328 - 10,243 on pb_359_8 plasmid
+    * Putative transposase and tyrosine recombinase XerD
 
 # 27 January 2017
 
 ## pb_359_8 vs A. algicola TG409(T)
 * Double-checking matching regions
- * Contig 1: ~1,850,000 - ~4,335,519 on Chromosome
- * Contig 2: ~5,300,000 (9.1 Kb match) on Chromosome
- * Contig 3: ~4,372,000 - ~1,857,451 on Chromosome
+  * Contig 1: ~1,850,000 - ~4,335,519 on Chromosome
+  * Contig 2: ~5,300,000 (9.1 Kb match) on Chromosome
+  * Contig 3: ~4,372,000 - ~1,857,451 on Chromosome
 * Arenibacter contigs match very well to the pb_359_8 chromosome (>95% identity)
 
 # 30 January 2017
 
 ## 16S check
 * pb_359_2 - 1472bp according to previous analyses
- * Check GenBank: 1456bp and 1456bp
- * complement(1417291..1418746) and complement(1684905..1686360)
- * Cut these from the GenBank file and reBlast them
+  * Check GenBank: 1456bp and 1456bp
+  * complement(1417291..1418746) and complement(1684905..1686360)
+  * Cut these from the GenBank file and reBlast them
 * pb_359_3 - 1468bp according to previous analyses
- * Check GenBank:  1451bp and 1451bp
- * complement(2602128..2603578) and complement(3237731..3239181)
- * Cut from fasta, ready to reBlast
+  * Check GenBank:  1451bp and 1451bp
+  * complement(2602128..2603578) and complement(3237731..3239181)
+  * Cut from fasta, ready to reBlast
 * pb_359_4 - 1497bp according to previous analyses
- * Check GenBank: 1477bp and 1477bp
- * complement(1530498..1531974) and complement(1540929..1542405)
- * Cut from fasta, ready to reBlast
+  * Check GenBank: 1477bp and 1477bp
+  * complement(1530498..1531974) and complement(1540929..1542405)
+  * Cut from fasta, ready to reBlast
 * pb_359_5 - 1547bp according to previous analyses
- * Check GenBank: 1528bp, 1528bp and 1528bp
- * complement(2845442..2846969), complement(3612280..3613807) and complement(3824765..3826292)
- * Cut from fasta, ready to reBlast
+  * Check GenBank: 1528bp, 1528bp and 1528bp
+  * complement(2845442..2846969), complement(3612280..3613807) and complement(3824765..3826292)
+  * Cut from fasta, ready to reBlast
 * pb_359_6 - 1467bp according to previous analyses
- * Check GenBank: 1450bp and 1450bp
- * complement(2846175..2847624) and complement(160074..161523) (third contig)
- * Cut from fasta, ready to reBlast
+  * Check GenBank: 1450bp and 1450bp
+  * complement(2846175..2847624) and complement(160074..161523) (third contig)
+  * Cut from fasta, ready to reBlast
 * pb_359_7 - 1458bp according to previous analyses
- * Check GenBank: 1441bp and 1441bp
- * 1369387..1370827 and 2482487..2483927
- * Cut from fasta, ready to reBlast
+  * Check GenBank: 1441bp and 1441bp
+  * 1369387..1370827 and 2482487..2483927
+  * Cut from fasta, ready to reBlast
 * pb_359_8 - 1531bp according to previous analyses
- * Check GenBank: 1512bp, 1512bp and 1512bp
- * complement(552372..553883), complement(5511478..5512989) and complement(5716748..5718259)
- * Cut from fasta, ready to reBlast
+  * Check GenBank: 1512bp, 1512bp and 1512bp
+  * complement(552372..553883), complement(5511478..5512989) and complement(5716748..5718259)
+  * Cut from fasta, ready to reBlast
 
 * Ensure that 16S paragraph contains BLASTn reference, database used, and the acc. no., query cover and identity of the best hit
- * Edited announcement paper paragraphs to relate specifically to the 16S sequences predicted using RNAmmer 1.2
+  * Edited announcement paper paragraphs to relate specifically to the 16S sequences predicted using RNAmmer 1.2
 
 # 31 January 2017
 
@@ -5417,22 +5414,22 @@ Find genes which are suggestive of symbiosis/parasitism
 * Export and compare type strain pathways
 
 * 2x Rhamnan synthesis protein F genes found in pb_359_3 but not in type strain
- * https://www.ebi.ac.uk/interpro/entry/IPR007739
- * Pathogenic factor??
- * Rhamnose produced by diatoms!
+  * https://www.ebi.ac.uk/interpro/entry/IPR007739
+  * Pathogenic factor??
+  * Rhamnose produced by diatoms!
 
 * Tungstate uptake and usage
- * tupABC operon
- * Seemingly absent in the type strain?
+  * tupABC operon
+  * Seemingly absent in the type strain?
 
 * uvrABC only annotated in pb_359_3 - are they present in type strain?
- * Again, labelled as excinuclease ABC subunit... Still present
+  * Again, labelled as excinuclease ABC subunit... Still present
 
 
 
 
 * Check paper:
- * http://bmcevolbiol.biomedcentral.com/articles/10.1186/1471-2148-8-30
+  * http://bmcevolbiol.biomedcentral.com/articles/10.1186/1471-2148-8-30
 
 
 * Compare pb_359_4 to genome of Sphingorhabdus sp. M41?
@@ -5443,10 +5440,10 @@ GitLab acting up; push from laptop to Albiorix when able
 
 ## pb_359_4
 * No phosphatidylcholine synthase?
- * Phosphatidylcholine biosynthesis V pathway - check
- * One required gene present, one missing
+  * Phosphatidylcholine biosynthesis V pathway - check
+  * One required gene present, one missing
 * No acyl-homoserine-lactone synthase? (no autoinducer synthesis/quorum sensing?)
- * AI-2 transporter genes present...
+  * AI-2 transporter genes present...
 * Presence of cob(II)yrinate a,c-diamide biosynthesis II (vitamin B12 synthesis)
 
 * Trehalose utilisation - relevant?
@@ -5455,16 +5452,16 @@ GitLab acting up; push from laptop to Albiorix when able
 ## pb_359_5
 * Two adenosylcobalamin salvage pathways? - check
 * cob(II)yrinate a,c-diamide biosynthesis II pathway - check
- * Cobalamin biosynthesis protein CobD
+  * Cobalamin biosynthesis protein CobD
 * No phosphatidylcholine synthase?
 * No autoinducer?
- * AI-2 transporter genes present...
- * Autoinducer 2 sensor kinase/phosphatase LuxQ	genes present
+  * AI-2 transporter genes present...
+  * Autoinducer 2 sensor kinase/phosphatase LuxQ genes present
 * Abundance of mercuric resistance proteins
 * Putative siderophore-related proteins
 * Tungstate uptake and usage
- * TupABC operon
- * One tungstate-related protein in type strain
+  * TupABC operon
+  * One tungstate-related protein in type strain
 
 ## pb_359_6
 * Three adenosylcobalamin salvage pathways? - check
@@ -5474,34 +5471,34 @@ GitLab acting up; push from laptop to Albiorix when able
 * 3x Invasion associated locus B (IalB) protein
 * 2x leukotoxin genes
 * Luminescence regulatory protein LuxO?
- * From UniProt - "LuxO and sigma-54 have also a role in activating the production of siderophore and in regulating the rugose colony morphology phenotype."
+  * From UniProt - "LuxO and sigma-54 have also a role in activating the production of siderophore and in regulating the rugose colony morphology phenotype."
 * Presence of phosphatidylcholine synthase
 * Putative siderophore-related proteins
 * Multiple copies of the TupABC tungstate operon
- * Seemingly absent from type strain
+  * Seemingly absent from type strain
 
 ## pb_359_7
 * Two adenosylcobalamin salvage pathways? - check
 * cob(II)yrinate a,c-diamide biosynthesis II
 * phosphatidylcholine biosynthesis VI
- * Presence of phosphatidylcholine synthase
+  * Presence of phosphatidylcholine synthase
 * 2x cobalamin biosynthesis protein
 * 2x Invasion associated locus B (IalB) protein
 * Abundance of leukotoxin genes
- * Also leukotoxin-activating lysine-acyltransferase LtxC
+  * Also leukotoxin-activating lysine-acyltransferase LtxC
 * Contains only TupA of tungstate use operon
 
 # pb_359_8
 * 1x adenosylcobalamin salvage pathway - check
 * Autoinducer AI-2 degradation
 * phosphatidylcholine biosynthesis V
- * No phosphatidylcholine synthase?
+  * No phosphatidylcholine synthase?
 * 'pheromone autoinducer 2 transporter'
 
 
 ## Other
 * Check presence/absence of flagellar proteins - pb_359_5 has many, but did pb_359_4?
- * Compare reports of motility
+  * Compare reports of motility
 
 * Read up and check genes for all types of secretion system, not just Type IV
 
@@ -5521,15 +5518,15 @@ GitLab acting up; push from laptop to Albiorix when able
 | pb_359_7 | Antarctobacter (genus)            | 'Daughter cells may be motile'                   | Many flagella-related genes in pb_359_7 |
 | pb_359_8 | A. algicola (type strain)         | Non-motile                                       | Two flagella-related genes in pb_359_8  |
 
- * Conflicts with Flagella observations by Oskar?
+  * Conflicts with Flagella observations by Oskar?
 
 * Tungstate-using samples
- * pb_359_2
- * pb_359_3
- * pb_359_5
- * pb_359_6
- * (Only tupA in pb_359_7)
- * Rhodobacteraceae and Alteromonadaceae
+  * pb_359_2
+  * pb_359_3
+  * pb_359_5
+  * pb_359_6
+  * (Only tupA in pb_359_7)
+  * Rhodobacteraceae and Alteromonadaceae
 
 # 2 February 2017
 
@@ -5548,17 +5545,17 @@ GitLab acting up; push from laptop to Albiorix when able
 * pb_359_8 lacking chloramphenicol acetyltransferase
 * pb_359_8 contains additional transposon proteins?
 * A. algicola has a syringomycin biosynthesis enzyme that pb_359_8 seems to lack
- * Present in plant pathogens...
+  * Present in plant pathogens...
 
 
 
 * Compare presence/absence of the following between pb_359_X and type strains, and among each other
- * transposon- and phage-related genes
- * resistance genes (drugs/metals)
- * General metal-related genes
-  * Tungsten/tungstate, copper, mercury, etc.
- * Presence of tungstate genes vs # of molybdenum-associated genes?
- * -ycin genes (antibiotics, either resistance or production)
+  * transposon- and phage-related genes
+  * resistance genes (drugs/metals)
+  * General metal-related genes
+    * Tungsten/tungstate, copper, mercury, etc.
+  * Presence of tungstate genes vs # of molybdenum-associated genes?
+  * -ycin genes (antibiotics, either resistance or production)
 
 
 ## pb_359_8 vs A. algicola - contigs
@@ -5576,74 +5573,74 @@ GitLab acting up; push from laptop to Albiorix when able
 
 ## Leukotoxins
 * pb_359_2 and _7 have an abundance of leukotoxin genes
- * pb_359_2 - 15
- * pb_359_3 - 1, plus Leukotoxin export ATP-binding protein LtxB
- * pb_359_4 - none
- * pb_359_5 - none
- * pb_359_6 - 2
- * pb_359_7 - 15, plus Leukotoxin-activating lysine-acyltransferase LtxC
+  * pb_359_2 - 15
+  * pb_359_3 - 1, plus Leukotoxin export ATP-binding protein LtxB
+  * pb_359_4 - none
+  * pb_359_5 - none
+  * pb_359_6 - 2
+  * pb_359_7 - 15, plus Leukotoxin-activating lysine-acyltransferase LtxC
 
 * Leukotoxins only appear to affect white-blood cells... similar sequence...?
 * Check pb_359_2:
- * BlastP of the first leukotoxin gene in pb_359_2 gave an excellent hit to a 5'-nucleotidase in R. sp. TM1035 (~99% identity)
- * Second: among others, matches Ca2+-binding protein, RTX toxin-related [Roseovarius azorensis] (best match to a hypo. from TM1035)
- * Third: aggregation factor core protein MAFp3 [Roseovarius sp. TM1035]
- * Fourth: type I secretion protein [Roseovarius sp. TM1035]  (also similar to RTX toxin [Roseovarius mucosus DSM 17069])
- * Fifth: Large exoprotein [Roseovarius sp. TM1035]
- * Sixth: rhizobiocin/RTX toxin [Roseovarius sp. TM1035]
- * Seventh: type I secretion protein [Roseovarius sp. TM1035] (some similarity to Hemolysin-type calcium-binding repeat (2 copies) [Roseovarius mucosus DSM 17069])
- * Eighth: rhizobiocin/RTX toxin [Roseovarius sp. TM1035]
- * Ninth: Hemolysin-type calcium-binding region [Roseovarius sp. TM1035]
- * Tenth: No great matches, but second hit is Ca2+-binding protein, RTX toxin-related [Rhizobium loessense]
- * Eleventh: Haem peroxidase?
- * Twelfth: Ca2+-binding protein, RTX toxin-related [Rhizobium loessense] ? (only accounts for the second-half of the protein; first half had no good hits)
- * Thirteenth: Nidogen, extracellular region [Roseovarius sp. TM1035]
- * Fourteenth: Hemolysin-type calcium-binding protein [Roseovarius sp. TM1035]
- * Fifteenth: Hemolysin-type calcium-binding region, RTX [Roseovarius sp. TM1035]
+  * BlastP of the first leukotoxin gene in pb_359_2 gave an excellent hit to a 5'-nucleotidase in R. sp. TM1035 (~99% identity)
+  * Second: among others, matches Ca2+-binding protein, RTX toxin-related [Roseovarius azorensis] (best match to a hypo. from TM1035)
+  * Third: aggregation factor core protein MAFp3 [Roseovarius sp. TM1035]
+  * Fourth: type I secretion protein [Roseovarius sp. TM1035]  (also similar to RTX toxin [Roseovarius mucosus DSM 17069])
+  * Fifth: Large exoprotein [Roseovarius sp. TM1035]
+  * Sixth: rhizobiocin/RTX toxin [Roseovarius sp. TM1035]
+  * Seventh: type I secretion protein [Roseovarius sp. TM1035] (some similarity to Hemolysin-type calcium-binding repeat (2 copies) [Roseovarius mucosus DSM 17069])
+  * Eighth: rhizobiocin/RTX toxin [Roseovarius sp. TM1035]
+  * Ninth: Hemolysin-type calcium-binding region [Roseovarius sp. TM1035]
+  * Tenth: No great matches, but second hit is Ca2+-binding protein, RTX toxin-related [Rhizobium loessense]
+  * Eleventh: Haem peroxidase?
+  * Twelfth: Ca2+-binding protein, RTX toxin-related [Rhizobium loessense] ? (only accounts for the second-half of the protein; first half had no good hits)
+  * Thirteenth: Nidogen, extracellular region [Roseovarius sp. TM1035]
+  * Fourteenth: Hemolysin-type calcium-binding protein [Roseovarius sp. TM1035]
+  * Fifteenth: Hemolysin-type calcium-binding region, RTX [Roseovarius sp. TM1035]
 
 * Check pb_359_7:
- * TO DO ON FRIDAY
+  * TO DO ON FRIDAY
 
 # 3 February 2017
 
 ## pb_359_7
 
 * Check identity of pb_359_7 'leukotoxins' using BlastP
- * 'Leukotoxin-activating lysine-acyltransferase LtxC': toxin/cytolysin-activating lysine-acyltransferase (only ~80% cover and ~40% identity)
- * First: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (better hits are to 'hypothetical proteins')
- * Second: Hemolysin-type calcium-binding repeat-containing protein [Yangia pacifica] (better hits to type I secretion target repeat protein and hypo. proteins)
- * Third: putative Ca2+-binding protein [Rhodobacteraceae bacterium HLUCCO07] (better hits to type I secretion target repeat protein and hypo. proteins)
- * Fourth: 5'-nucleotidase [Mameliella alba]
- * Fifth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
- * Sixth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] 
- * Seventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
- * Eighth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
- * Ninth: 5'-nucleotidase [Mameliella alba] (several better hit to hypothetical proteins)
- * Tenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
- * Eleventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
- * Twelfth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
- * Thirteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
- * Fourteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
- * Fifteenth: 5'-nucleotidase [Mameliella alba]
+  * 'Leukotoxin-activating lysine-acyltransferase LtxC': toxin/cytolysin-activating lysine-acyltransferase (only ~80% cover and ~40% identity)
+  * First: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (better hits are to 'hypothetical proteins')
+  * Second: Hemolysin-type calcium-binding repeat-containing protein [Yangia pacifica] (better hits to type I secretion target repeat protein and hypo. proteins)
+  * Third: putative Ca2+-binding protein [Rhodobacteraceae bacterium HLUCCO07] (better hits to type I secretion target repeat protein and hypo. proteins)
+  * Fourth: 5'-nucleotidase [Mameliella alba]
+  * Fifth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+  * Sixth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] 
+  * Seventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+  * Eighth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+  * Ninth: 5'-nucleotidase [Mameliella alba] (several better hit to hypothetical proteins)
+  * Tenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+  * Eleventh: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+  * Twelfth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba]
+  * Thirteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+  * Fourteenth: Hemolysin-type calcium-binding repeat-containing protein [Mameliella alba] (many better hits to hypothetical proteins)
+  * Fifteenth: 5'-nucleotidase [Mameliella alba]
 
 ## Leukotoxin/hemolysin
 * Hemolysin forms transmembrane pores in red blood cells and mammalian cells
 * Leukotoxin disturbs the lysosomal membrane so the contents enter the cytosol, causing cell death
 
 * Algicidal compound of DHQ25
- * "... cells of xenic A. tamarense treated  with  culture  filtrate  of  DHQ25 exhibited rounding  and  loss  of  cell  wall  integrity. 
+  * "... cells of xenic A. tamarense treated  with  culture  filtrate  of  DHQ25 exhibited rounding  and  loss  of  cell  wall  integrity. 
 Cells were disrupted, and cellular substances were  decomposed  and  released  with  increased  exposure time."
- * http://onlinelibrary.wiley.com/doi/10.1111/j.1472-765X.2010.02936.x/pdf
+  * http://onlinelibrary.wiley.com/doi/10.1111/j.1472-765X.2010.02936.x/pdf
 
 * Algicidal compound of Brevibacterium sp. BS01
- * "Morphological analysis revealed structural alterations in A. tamarense with algal cells losing the integrity of their organelles"
- * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4633486/
+  * "Morphological analysis revealed structural alterations in A. tamarense with algal cells losing the integrity of their organelles"
+  * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4633486/
 
 * Prediction - pb_359_2 and _7 may be algicidal
- * pb_359_7 has no autoinducer predicted in Pathway Tools...
+  * pb_359_7 has no autoinducer predicted in Pathway Tools...
 
 * Pairwise alignment between similar regions? e.g. pb_359_2 plasmids vs type strain
- * pb_359_2 vs scaffold14; high 90s similarity, but hard to know best way to compare the two and get measurable comparison...
+  * pb_359_2 vs scaffold14; high 90s similarity, but hard to know best way to compare the two and get measurable comparison...
 
 ## Things to do for thesis
 
@@ -5661,7 +5658,7 @@ Cells were disrupted, and cellular substances were  decomposed  and  released  w
 * Check state of S. marinoi annotation
 
 * Check bacterial-diatom adhesion systems
- * BUT bacteria don't have to adhere to be within the phycosphere - biofilms?
+  * BUT bacteria don't have to adhere to be within the phycosphere - biofilms?
 * Any more information on use of tungsten by bacteria?
 
 # 6 February 2017
@@ -5675,47 +5672,47 @@ Cells were disrupted, and cellular substances were  decomposed  and  released  w
 * Trees will be too big using full order trees; have to take a subsample; take outgroup from adjacent branch of the tree
 
 * Syntax: $ ./phylophlan.py -i my_genomes_to_insert --nproc 16
- * .faa input
+  * .faa input
 
 * pb_359_2:
- * All Roseovarius and Roseobacter sequences, plus Thalassobius as outgroup
-  * Roseovarius mucosus downloaded manually; no 'latest assembly version' found...
-  * Roseovarius sp. BRH_c41 downloaded manually; no 'latest assembly version' found...
+  * All Roseovarius and Roseobacter sequences, plus Thalassobius as outgroup
+    * Roseovarius mucosus downloaded manually; no 'latest assembly version' found...
+    * Roseovarius sp. BRH_c41 downloaded manually; no 'latest assembly version' found...
 
 * pb_359_3:
- * All Loktanella, plus Donghicola, Oceanicola, Wenxinia, Rubellimicrobium and Ketogulonicigenium, plus Octadecabacter as outgroup
-  * Download Roseobacter sp. CCS2 manually; rest of Roseobacter in different group...
+  * All Loktanella, plus Donghicola, Oceanicola, Wenxinia, Rubellimicrobium and Ketogulonicigenium, plus Octadecabacter as outgroup
+    * Download Roseobacter sp. CCS2 manually; rest of Roseobacter in different group...
 
 * pb_359_4:
- * All Sphingorhabdus, Sphingopyxis and Blastomonas, plus Sandarakinorhabdus as outgroup
+  * All Sphingorhabdus, Sphingopyxis and Blastomonas, plus Sandarakinorhabdus as outgroup
 
 * pb_359_5:
- * Subset of Marinobacter, plus Agarivorans as outgroup
-  * M. subterrani, sp. YWL01, manganoxydans, sp. CP1, sp. EhC06, sp. EhN04, adhaerens, sp. Hb8, similis, lipolyticus, sp. HL-58, algicola, sp. MCTG268 and salarius
+  * Subset of Marinobacter, plus Agarivorans as outgroup
+    * M. subterrani, sp. YWL01, manganoxydans, sp. CP1, sp. EhC06, sp. EhN04, adhaerens, sp. Hb8, similis, lipolyticus, sp. HL-58, algicola, sp. MCTG268 and salarius
 
 * pb_359_6:
- * All Sulfitobacter, Roseobacter (except CCS2, SK209-2-6 and MED193), Tateyamaria and Oceanibulbus, plus Nautella as outgroup
+  * All Sulfitobacter, Roseobacter (except CCS2, SK209-2-6 and MED193), Tateyamaria and Oceanibulbus, plus Nautella as outgroup
 
 * pb_359_7:
- * All Antarctobacter (if any exist), Tropicibacter naphthalenivorans, Sagittula stellata, Rhodobacteraceae bacterium PD-2, Mameliella alba, Ponticoccus sp. SJ5A-1,
-and Ruegeria sp. PBVC088, with Citreicella as outgroup
+  * All Antarctobacter (if any exist), Tropicibacter naphthalenivorans, Sagittula stellata, Rhodobacteraceae bacterium PD-2, Mameliella alba, Ponticoccus sp. SJ5A-1,
+    and Ruegeria sp. PBVC088, with Citreicella as outgroup
 
 * pb_359_8:
- * All Arenibacter, Cellulophaga, Sediminicola, Maribacter and Zobellia, plus Muricauda as outgroup
+  * All Arenibacter, Cellulophaga, Sediminicola, Maribacter and Zobellia, plus Muricauda as outgroup
 
 * All jobs running at 8 cores each
- * Taking much longer than I had remembered...
- * Because the -u flag was supposed to be used, not the -i flag...
+  * Taking much longer than I had remembered...
+  * Because the -u flag was supposed to be used, not the -i flag...
 
 ## pb_359_2
 * From https://www.ncbi.nlm.nih.gov/bioproject/19363:
- * "Roseovarius sp. TM1035. This strain was isolated from the dinoflagellate Pfiesteria piscicida and actively metabolizes the dinoflagellate secondary product
-dimethylsulfoniopropionate (DMSP)."
+  * "Roseovarius sp. TM1035. This strain was isolated from the dinoflagellate Pfiesteria piscicida and actively metabolizes the dinoflagellate secondary product
+    dimethylsulfoniopropionate (DMSP)."
 * Miller & Belas - "Dimethylsulfoniopropionate Metabolism by Pfiesteria-Associated Roseobacter spp."
- * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/
+  * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC427730/
 * All but final step apparently present in pb_359_2
 * Roseovarius mucosus has all genes for dmdABCD genes in an operon...?
- * Checked vs Ruegeria dmdD (TblastN), but the only hit isn't very convincing...
+  * Checked vs Ruegeria dmdD (TblastN), but the only hit isn't very convincing...
 
 * Toxins present in DSM 17069 - 6 RTX toxins
 
@@ -5725,23 +5722,23 @@ dimethylsulfoniopropionate (DMSP)."
 * Also rename file to be only 'pb_359_X'
 * Remove 'sp.' species
 * Choose an outgroup from further away in the tree
- * pb_359_2 - try Hyphomonas? Still in order Rhodobacterales, but not in family Rhodobacteraceae
-  * Roseobacter denitrificans still appears outside of the expected area...
+  * pb_359_2 - try Hyphomonas? Still in order Rhodobacterales, but not in family Rhodobacteraceae
+    * Roseobacter denitrificans still appears outside of the expected area...
 
 * Check re: best way to generate good trees...
- * Currently re-downloading Rhodobacteraceae fastas; still need an outgroup, something from outside Rhodobacteraceae?
+  * Currently re-downloading Rhodobacteraceae fastas; still need an outgroup, something from outside Rhodobacteraceae?
 
 # 7 February 2017
 
 ## Pathways
 * Make list of relevant pathways and interesting genes
 * Interesting results
- * Toxins - Roseovarius and Antarctobacter have 15 'leukotoxin' genes each
- * Mercury resistance - Marinobacter has 13 genes potentially related to mercuric resistance
- * Cadmium resistance - Arenibacter has 12 genes potentially related to cadmium resistance
- * Drug resistance - Sphingorhabdus has 14 genes related to glyoxalase/bleomycin resistance, and 13 related to multidrug resistance
- * Phosphatidylcholine biosynthesis - Marinobacter doesn't seem to have any phosphatidylcholine biosynthesis pathways
-  * M. shengliensis and M. hydrocarbonoclasticus (and others?) seem to produce phosphatidylcholine...
+  * Toxins - Roseovarius and Antarctobacter have 15 'leukotoxin' genes each
+  * Mercury resistance - Marinobacter has 13 genes potentially related to mercuric resistance
+  * Cadmium resistance - Arenibacter has 12 genes potentially related to cadmium resistance
+  * Drug resistance - Sphingorhabdus has 14 genes related to glyoxalase/bleomycin resistance, and 13 related to multidrug resistance
+  * Phosphatidylcholine biosynthesis - Marinobacter doesn't seem to have any phosphatidylcholine biosynthesis pathways
+    * M. shengliensis and M. hydrocarbonoclasticus (and others?) seem to produce phosphatidylcholine...
 
 
 
@@ -5755,20 +5752,20 @@ a cadmium-dependent carbonic anhydrase has been found in marine diatoms."
 * pb_359_6 contains a rhamnolipid biosynthesis gene
 
 * See also:
- * http://www.sciencedirect.com/science/article/pii/S073497501530029X
- * Algicidal microorganisms and secreted algicides: New tools to induce microalgal cell disruption
+  * http://www.sciencedirect.com/science/article/pii/S073497501530029X
+  * Algicidal microorganisms and secreted algicides: New tools to induce microalgal cell disruption
 
 
 ## Trees
 * pb_359_2 - Take representatives from:
- * Roseovarius, Pseudooceanicola, Roseivivax, Jannaschia, Thalassobius,
-Oceanibulbus, Sulfitobacter, Ruegeria, Leisingera, Loktanella, Paracoccus,
-Rhodobacter
+  * Roseovarius, Pseudooceanicola, Roseivivax, Jannaschia, Thalassobius,
+    Oceanibulbus, Sulfitobacter, Ruegeria, Leisingera, Loktanella, Paracoccus,
+    Rhodobacter
 
 
 ## To do
 * Check for degradation of the following polysaccharides:
- * Agar, alginate, chitin, cellulose, fucoidan, laminarin, pectin, pullulan, starch, xylan
+  * Agar, alginate, chitin, cellulose, fucoidan, laminarin, pectin, pullulan, starch, xylan
 
 * Check pb_359_2 job compared to other attempted trees
 
@@ -5776,27 +5773,27 @@ Rhodobacter
 
 ## pb_359_6
 * Re: Sulfitobacter and diatoms:
- * http://onlinelibrary.wiley.com/doi/10.1111/j.1438-8677.2008.00040.x/abstract;jsessionid=70C450C00E3E37C96D94608D17D6991E.f03t03
+  * http://onlinelibrary.wiley.com/doi/10.1111/j.1438-8677.2008.00040.x/abstract;jsessionid=70C450C00E3E37C96D94608D17D6991E.f03t03
 
 ## Trees
 * pb_359_2 tree always seems to split into three...
 * Arenibacter algicola may also be a poor choice to include, as it always extends further than the other branches...
 * Include two other species from a non-Rhodobacteraceae Rhodobacterales genus?
- * Try Hyphomonas? Otherwise try non-Rhodobacterales alphaproteobacterium
- * Reason for issues with previous iterations - no rooting; attempt midpoint rooting
+  * Try Hyphomonas? Otherwise try non-Rhodobacterales alphaproteobacterium
+  * Reason for issues with previous iterations - no rooting; attempt midpoint rooting
 * 8_Feb_PM_2_pb_359_2.tree.nwk appears to be a good basis for the pb_359_2 tree; include pb_359_3, _6 and _7 to form a single Rhodobacteraceae tree
- * Outgroup - Hyphomonas (within Hyphomonadaceae, sister family to Rhodobacteraceae within order Rhodobacterales)
+  * Outgroup - Hyphomonas (within Hyphomonadaceae, sister family to Rhodobacteraceae within order Rhodobacterales)
 
 
 * For pb_359_4, include in tree of Sphingomonadaceae; outgroup - member of Erythromonadaceae? Sister family within order Sphingomonadales
- * Outgroup - Erythrobacter
- * Considering the lack of represented genera in this family, would it be better to include Erythromonadaceae in the tree and have an outgroup from another class?
+  * Outgroup - Erythrobacter
+  * Considering the lack of represented genera in this family, would it be better to include Erythromonadaceae in the tree and have an outgroup from another class?
 
 * For pb_359_5, include in tree of Alteromonadaceae; outgroup - member of XXX? Sister family within order Alteromonadales
- * Outgroup - 
+  * Outgroup - 
 
 * For pb_359_8, include in tree of Flavobacteriaceae; outgroup - member of XXX? Sister family within order Flavobacteriales
- * Outgroup - 
+  * Outgroup - 
 
 
 * Rhodo_Tree has been trimmed; if a monophyletic group is made up entirely of a single genus, then the group is reduced to a single representative species
@@ -5806,9 +5803,9 @@ Rhodobacter
 * Check new Rhodo tree
 
 * Consider changing the pb_359_4 tree to include Erythro genera and use another class as outgroup
- * Kordia? From order Kordiimonadales, class Alphaproteobacteria
-  * [THIS IS INCORRECT!]
- * Check new pb_359_4 tree (Kordia outgroup)
+  * Kordia? From order Kordiimonadales, class Alphaproteobacteria
+    * [THIS IS INCORRECT!]
+  * Check new pb_359_4 tree (Kordia outgroup)
 
 * Decide on outgroups for pb_359_5 (Altero) and pb_359_8 (Flavo) trees
 
@@ -5820,20 +5817,20 @@ Checking new Rhodo and pb_359_4 trees:
 * pb_359_4 - Also seems okay, but need to trim out the excess branches - 99 tips down to at least 50 again?
 
 * For pb_359_5 - include order Alteromonadales? Few represented genera in Alteromonadaceae alone
- * Running with Kordia as an outgroup [CHANGE OUTGROUP!]
+  * Running with Kordia as an outgroup [CHANGE OUTGROUP!]
 
 * Kordia is not an Alphaproteobacteria... Choose an alternative outgroup for the above...
- * For pb_359_4 - Brucella? (Rhizobiales)
- * For pb_359_5 - Escherichia? (Enterobacterales)
- * For pb_359_8 - Bacteroides? (Bacteroidales)
+  * For pb_359_4 - Brucella? (Rhizobiales)
+  * For pb_359_5 - Escherichia? (Enterobacterales)
+  * For pb_359_8 - Bacteroides? (Bacteroidales)
 
 * Tree statuses:
- * Rhodo - outgroup decided (Hyphomonas, sister family), need to remove branches to resize tree
- * pb_359_4 - outgroup decided (Brucella, sister order), other branches need to be reduced to resize tree
- * pb_359_5 - outgroup needs to be added (old one must be removed), other branched need to be reduced to resize tree
- * pb_359_8 - outgroup decided (Bacteroides, sister class), check results and remove excess branches
-  * May need to change outgroup to something within Flavobacteriales, outside Flavobacteriaceae
-  * New outgroup - two members of Crocinitomicaceae; sister family under Flavobacteriales
+  * Rhodo - outgroup decided (Hyphomonas, sister family), need to remove branches to resize tree
+  * pb_359_4 - outgroup decided (Brucella, sister order), other branches need to be reduced to resize tree
+  * pb_359_5 - outgroup needs to be added (old one must be removed), other branched need to be reduced to resize tree
+  * pb_359_8 - outgroup decided (Bacteroides, sister class), check results and remove excess branches
+    * May need to change outgroup to something within Flavobacteriales, outside Flavobacteriaceae
+    * New outgroup - two members of Crocinitomicaceae; sister family under Flavobacteriales
 
 * Rhodo provisionally done - 50 species
 
@@ -5855,8 +5852,8 @@ Provisional final trees for all 4 groups; now need to generate complete trees fo
 
 ## To do
 * Currently running PhyloPhlAn for full trees; add these to GitHub and include a descriptive readme
- * Include date of retrieval of sequences, and which sequences were left out (_sp._)
- * Mention that Roseovarius mucosus has been 'suppressed'
+  * Include date of retrieval of sequences, and which sequences were left out (_sp._)
+  * Mention that Roseovarius mucosus has been 'suppressed'
 
 # 13 February 2017
 
@@ -5864,7 +5861,7 @@ Provisional final trees for all 4 groups; now need to generate complete trees fo
 'Final' trees moved to repository; readme mentions relevant information
 
 * pb_359_5 is shown on its own branch next to Marinobacter algicola and M. salarius
- * Is it definitely most closely related to M. algicola?
+  * Is it definitely most closely related to M. algicola?
 
 ## Preliminary Blasts
 
@@ -5941,21 +5938,21 @@ when relevant
 Reinvestigate these two plasmids' similarity
 * All of Roseovarius plasmid is accounted for in these areas - 100% identity
 * Areas in Loktanella not covered by Roseovarius:
- * 1 - 2,106
-  * Part of Tn3 transposase DDE domain protein
- * 16,616 - 18,152
-  * Hypothetical protein and transposase
- * 27,780 - 31,556
-  * Tn3 transposase DDE domain protein, DNA-invertase hin, and end of conjugal transfer protein TraG
- * 37,730 - 39,380
-  * Mercuric reductase (merA) and hypothetical protein
+  * 1 - 2,106
+    * Part of Tn3 transposase DDE domain protein
+  * 16,616 - 18,152
+    * Hypothetical protein and transposase
+  * 27,780 - 31,556
+    * Tn3 transposase DDE domain protein, DNA-invertase hin, and end of conjugal transfer protein TraG
+  * 37,730 - 39,380
+    * Mercuric reductase (merA) and hypothetical protein
 * BLASTn-ing the unique areas - two don't match anything (BLASTn), two match other Rhodobacteraceae sequences
 * BLASTx-ing the unique areas reveals that all of them match transposases
 
 * Do the unique regions exist on the Roseovarius chromosome/large plasmid?
- * No BLASTn hits at all
+  * No BLASTn hits at all
 * Are the unique regions present on other Loktanella replicons?
- * Common to either one or both other replicons
+  * Common to either one or both other replicons
 
 ## Trees
 pb_359_Rhodo subsampled tree is much too wide - any way to thin it down to fit on a page?
@@ -5971,7 +5968,7 @@ BLAST all pb_359 samples vs Skeletonema to check for gene transfer
 * s*********a b******a
 * Question: How to tell if a hit truly IS a result of HGT?
 * Check article:
- * http://onlinelibrary.wiley.com/doi/10.1111/1462-2920.12854/full
+  * http://onlinelibrary.wiley.com/doi/10.1111/1462-2920.12854/full
 
 
 ## To do
@@ -5996,31 +5993,31 @@ Settings for exporting trees from FigTree:
 Double-check genome/chromosome sizes vs genus:
 
 * pb_359_2 (Roseovarius) - 4,381,426 / 4,170,996
- * Range - 3.67 Mb - 6.06 Mb
- * Acceptable genome size
- * R. mucosus genome size - 4.24 Mb
+  * Range - 3.67 Mb - 6.06 Mb
+  * Acceptable genome size
+  * R. mucosus genome size - 4.24 Mb
 * pb_359_3 (Loktanella) - 3,987,360 / 3,836,950
- * Range - 3.18 Mb - 4.20 Mb
- * Acceptable genome size
- * L. vestfoldensis genome size - 3.72 Mb
+  * Range - 3.18 Mb - 4.20 Mb
+  * Acceptable genome size
+  * L. vestfoldensis genome size - 3.72 Mb
 * pb_359_4 (Sphingorhabdus) - 3,479,724 / 3,479,724
- * Range - 3.33 Mb - 3.54 Mb
- * Acceptable genome size
+  * Range - 3.33 Mb - 3.54 Mb
+  * Acceptable genome size
 * pb_359_5 (Marinobacter) - 4,630,160 / 4,386,892
- * Range - 3.15 Mb - 5.35 Mb
- * Acceptable genome size
- * M. algicola genome size - 4.41 Mb
- * M. salarius genome size - 4.61 Mb
+  * Range - 3.15 Mb - 5.35 Mb
+  * Acceptable genome size
+  * M. algicola genome size - 4.41 Mb
+  * M. salarius genome size - 4.61 Mb
 * pb_359_6 (Sulfitobacter) - 5,121,602 / 3,572,445
- * Range - 3.45 Mb - 4.94 Mb
- * Chromosome - acceptable chromosome size
- * S. pseudonitzschiae genome size - 4.94 Mb
+  * Range - 3.45 Mb - 4.94 Mb
+  * Chromosome - acceptable chromosome size
+  * S. pseudonitzschiae genome size - 4.94 Mb
 * pb_359_7 (Antarctobacter) - 5,331,190 / 4,723,013
- * No information available
+  * No information available
 * pb_359_8 (Arenibacter) - 5,857,781 / 5,793,053
- * Range - 4.36 Mb - 5.66 Mb
- * Genome a little too big?
- * A. algicola genome size - 5.55 Mb
+  * Range - 4.36 Mb - 5.66 Mb
+  * Genome a little too big?
+  * A. algicola genome size - 5.55 Mb
 
 # 20 February 2017
 
@@ -6035,9 +6032,9 @@ which is non-specific. Should this be entered into Pathway Tools, or would this 
 
 Check no. of secondary metabolites per bacterium
 * Tools:
- * antiSmash
- * Dark Horse
- * BioCompass (when available)
+  * antiSmash
+  * Dark Horse
+  * BioCompass (when available)
 * FIND WAY TO GET A LIST OF SECONDARY METABOLITES - PATHWAY TOOLS DOESN'T SEEM TO HAVE SUCH A FUNCTION...
 
 
@@ -6045,27 +6042,27 @@ Check no. of secondary metabolites per bacterium
 * Small plasmids in Roseovarius + Loktanella: Almost the same!
 
 * Marinobacter identity - algicola or salarius??
- * Re: checking the 16S:
-  * Closest named species - Marinobacter salarius strain R9SW1 (based on complete genome and partial sequence)
-   * Score: 2811 bits (1522) / 2784 bits (1507)
-   * Expect: 0.0 / 0.0
-   * Identities: 1539/1547 (99%) / 1524/1532 (99%)
-   * Gaps: 1/1547 (0%) / 1/1532 (0%)
-   * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
-   * Note: searching nr/nt database
+  * Re: checking the 16S:
+    * Closest named species - Marinobacter salarius strain R9SW1 (based on complete genome and partial sequence)
+      * Score: 2811 bits (1522) / 2784 bits (1507)
+      * Expect: 0.0 / 0.0
+      * Identities: 1539/1547 (99%) / 1524/1532 (99%)
+      * Gaps: 1/1547 (0%) / 1/1532 (0%)
+      * Query cover: 100% / 99% (4,616,532bp / 1531bp vs 1547bp)
+      * Note: searching nr/nt database
 
-  * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
-   * Score: 2731 bits (1479)
-   * Expect: 0.0
-   * Identities: 1483/1485 (99%)
-   * Gaps: 0/1485
-   * Query cover: 95% (1485bp vs 1547bp)
-   * Note: searching 16S-specific database
-   * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
+    * Closest named species - Marinobacter algicola strain DG893 (based on partial sequence)
+      * Score: 2731 bits (1479)
+      * Expect: 0.0
+      * Identities: 1483/1485 (99%)
+      * Gaps: 0/1485
+      * Query cover: 95% (1485bp vs 1547bp)
+      * Note: searching 16S-specific database
+      * Note: best full sequence is Marinobacter adhaerens, but 25 differing bases, inc. 4 gaps
 
- * Re: phylogenetic tree:
-  * salarius and algicola share a MRCA; step above that is pb_359_5
-  * MRCA with salarius; step above that is algicola (in trimmed tree)
+  * Re: phylogenetic tree:
+    * salarius and algicola share a MRCA; step above that is pb_359_5
+    * MRCA with salarius; step above that is algicola (in trimmed tree)
 
 * List of predicted genes/pathways - are these relevant to mention?
 
@@ -6084,9 +6081,9 @@ Check no. of secondary metabolites per bacterium
 ## To do
 Lists of secondary metabolites
 * Must run antiSmash on a contig-by-contig basis...
- * Remember to check pb_359_3 antiSmash bookmark
- * Check 'symbiotically important' succinoglycan - http://www.sciencedirect.com/science/article/pii/009286749390418P?via%3Dihub
- * Also check pb_359_4 antiSmash bookmark
+  * Remember to check pb_359_3 antiSmash bookmark
+  * Check 'symbiotically important' succinoglycan - http://www.sciencedirect.com/science/article/pii/009286749390418P?via%3Dihub
+  * Also check pb_359_4 antiSmash bookmark
 
 Identical short plasmids
 * Look for signs of phage on the identical short plasmids
@@ -6105,7 +6102,7 @@ Cut GenBank files into per-contig files, then run through antiSMASH (appears to 
 
 Find full-length algicola and salarius 16S sequences from NCBI; compare G+C content AND synteny/gene content in general
 * Double-check description papers (if in doubt, go for earliest-described species)
- * Discuss taxonomic considerations in report
+  * Discuss taxonomic considerations in report
 * Compare directly to 16S
 
 * Subsample closest ~25 species into tree, not bredth of coverage across order/family
@@ -6113,160 +6110,160 @@ Find full-length algicola and salarius 16S sequences from NCBI; compare G+C cont
 * Always prioritise more pathways in GenBank/Pathway Tools
 
 * Include incomplete EC numbers
- * Make Pathway Tools files available on GitHub
+  * Make Pathway Tools files available on GitHub
 
 * SMRT Portal now running again
 
 * Report draft in early May
 
 * Test antiSMASH - splice two chromosomes into one GenBank to see if it handles multiple contigs
- * Put antiSMASH results/percentages of genes for secondary metabolites into report
- * List metabolites
+  * Put antiSMASH results/percentages of genes for secondary metabolites into report
+  * List metabolites
 
 ## Tree subsampling
 
 * Rhodo; Hyphomonas as outgroup (2 + 11 + 11 + 12 + 11 = 47 total)
 
- * Hyphomonas x 2
+  * Hyphomonas x 2
 
- * pb_359_7
- * Marinovum algicola
- * Marivita hallyeonensis
- * [Roseivivax x 4] - collapse
- * Salipiger mucosus
- * Pelagibaca x 2
- * Thiobacimonas profunda
- * Mameliella alba
- * Sagittula stellata
- * Tropicibacter naphthalenivorans
+  * pb_359_7
+  * Marinovum algicola
+  * Marivita hallyeonensis
+  * [Roseivivax x 4] - collapse
+  * Salipiger mucosus
+  * Pelagibaca x 2
+  * Thiobacimonas profunda
+  * Mameliella alba
+  * Sagittula stellata
+  * Tropicibacter naphthalenivorans
 
- * pb_359_2
- * [Pseudooceanicola x 3] - collapse
- * Sediminimonas qiaohouensis
- * Roseovarius x 8
+  * pb_359_2
+  * [Pseudooceanicola x 3] - collapse
+  * Sediminimonas qiaohouensis
+  * Roseovarius x 8
 
- * pb_359_6
- * Tateyamaria omphalii
- * [Roseobacter x 2] - collapse
- * Oceanibulbus indolifex
- * Sulfitobacter x 8
+  * pb_359_6
+  * Tateyamaria omphalii
+  * [Roseobacter x 2] - collapse
+  * Oceanibulbus indolifex
+  * Sulfitobacter x 8
 
- * pb_359_3
- * Oceanicola granulosus
- * Loktanella x 6
- * [Rubellimicrobium x 2] - collapse
- * Ketogulonicigenium vulgare
- * [Wenxinia x 2] - collapse
+  * pb_359_3
+  * Oceanicola granulosus
+  * Loktanella x 6
+  * [Rubellimicrobium x 2] - collapse
+  * Ketogulonicigenium vulgare
+  * [Wenxinia x 2] - collapse
 
 * pb_359_4; Brucella as outgroup (36 total)
 
- * Brucella x 2
+  * Brucella x 2
 
- * pb_359_4
- * Sphingorhabdus marina
- * Sphingopyxis x 6
- * [Croceicoccus x 4] - collapse
- * [Novosphingobium x 15] - collapse
- * Altererythrobacter x 7
- * Porphyrobacter x 6
- * Erythrobacter x 8
- * Citromicrobium bathyomarinum
- * Sphingomonas jaspsi
- * Sphingomonas astaxanthinifaciens
+  * pb_359_4
+  * Sphingorhabdus marina
+  * Sphingopyxis x 6
+  * [Croceicoccus x 4] - collapse
+  * [Novosphingobium x 15] - collapse
+  * Altererythrobacter x 7
+  * Porphyrobacter x 6
+  * Erythrobacter x 8
+  * Citromicrobium bathyomarinum
+  * Sphingomonas jaspsi
+  * Sphingomonas astaxanthinifaciens
 
 * pb_359_5; Escherichia as outgroup (43 total)
 
- * Escherichia x 2
+  * Escherichia x 2
 
- * pb_359_5
- * Marinobacter x 16
- * [Marinobacterium x 5] - collapse
- * [Idiomarina x 9] - collapse
- * Lacimicrobium alkaliphilum
- * Aliiglaciecola lipolytica
- * Paraglaciecola x 6
- * Pseudoalteromonas atlantica
- * Aestuariibacter x 2
- * [Glaciecola x 3] - collapse
- * Salinimonas chungwhensis
- * Alteromonas x 9
+  * pb_359_5
+  * Marinobacter x 16
+  * [Marinobacterium x 5] - collapse
+  * [Idiomarina x 9] - collapse
+  * Lacimicrobium alkaliphilum
+  * Aliiglaciecola lipolytica
+  * Paraglaciecola x 6
+  * Pseudoalteromonas atlantica
+  * Aestuariibacter x 2
+  * [Glaciecola x 3] - collapse
+  * Salinimonas chungwhensis
+  * Alteromonas x 9
 
 * pb_359_8; Crocinitomix and Fluviicola as outgroup (24 total)
 
- * Crocinitomix catalasitica
- * Fluviicola taffensis
+  * Crocinitomix catalasitica
+  * Fluviicola taffensis
 
- * pb_359_8
- * Robiginitalea biformata
- * Eudorea adtriatica
- * Pseudozobellia thermophila
- * [Zobellia x 2] - collapse
- * [Maribacter x 6] - collapse
- * Arenibacter x 5
- * [Cellulophaga x 5] - collapse
- * Spongiibacterium flavum
- * Muricauda x 3
- * Croceitalea dokdonensis
- * Joostella marina
- * Galbibacter marinus
- * Sinomicrobium oceani
- * Zhouia amlolytica
- * Imtechella halotolerans
+  * pb_359_8
+  * Robiginitalea biformata
+  * Eudorea adtriatica
+  * Pseudozobellia thermophila
+  * [Zobellia x 2] - collapse
+  * [Maribacter x 6] - collapse
+  * Arenibacter x 5
+  * [Cellulophaga x 5] - collapse
+  * Spongiibacterium flavum
+  * Muricauda x 3
+  * Croceitalea dokdonensis
+  * Joostella marina
+  * Galbibacter marinus
+  * Sinomicrobium oceani
+  * Zhouia amlolytica
+  * Imtechella halotolerans
 
 ## 16S
 Rechecking pb_359_5 16S:
 * Check against all three databases and save best hits
- * nr/nt - 2x M. salarius
- * refseq_genomic - M. algicola
- * bacteria/archaea 16S - M. algicola partial + M. adhaerens complete
+  * nr/nt - 2x M. salarius
+  * refseq_genomic - M. algicola
+  * bacteria/archaea 16S - M. algicola partial + M. adhaerens complete
 
 * Align hits and find the best match (individual PSAs would be better than MSAs...)
 
 * pb_359_5 - 3 x 16S sequences
- * 1 + 2 = identical (column 1)
- * 3 = 1bp difference (column 2)
+  * 1 + 2 = identical (column 1)
+  * 3 = 1bp difference (column 2)
 
 * nr/nt salarius 1 (rev com):
- * Length: 1532 (pb_359_5 = 1528; M. salarius = 1531)
- * Identity:    1519/1532 (99.2%)	1520/1532 (99.2%)
- * Similarity:  1519/1532 (99.2%)	1520/1532 (99.2%)
- * Gaps:           5/1532 ( 0.3%)	5/1532 ( 0.3%)
- * Score: 	7553.0			7562.0
+  * Length: 1532 (pb_359_5 = 1528; M. salarius = 1531)
+  * Identity:    1519/1532 (99.2%)	1520/1532 (99.2%)
+  * Similarity:  1519/1532 (99.2%)	1520/1532 (99.2%)
+  * Gaps:           5/1532 ( 0.3%)	5/1532 ( 0.3%)
+  * Score: 	7553.0			7562.0
 
 * nr/nt salarius 2:
- * Length: 1528 (pb_359_5 = 1528; M. salarius = 1527)
- * Identity:    1519/1528 (99.4%)	1520/1528 (99.5%)
- * Similarity:  1519/1528 (99.4%)	1520/1528 (99.5%)
- * Gaps:           1/1528 ( 0.1%)	1/1528 ( 0.1%)
- * Score:	7553.0			7562.0
+  * Length: 1528 (pb_359_5 = 1528; M. salarius = 1527)
+  * Identity:    1519/1528 (99.4%)	1520/1528 (99.5%)
+  * Similarity:  1519/1528 (99.4%)	1520/1528 (99.5%)
+  * Gaps:           1/1528 ( 0.1%)	1/1528 ( 0.1%)
+  * Score:	7553.0			7562.0
 
 * refseq_genomic algicola:
- * Length: 1528 (pb_359_5 and M. algicola = same length)
- * Identity:    1525/1528 (99.8%)	1526/1528 (99.9%)
- * Similarity:  1525/1528 (99.8%)	1526/1528 (99.9%)
- * Gaps:           0/1528 ( 0.0%)	0/1528 ( 0.0%)
- * Score: 	7613.0			7622.0
+  * Length: 1528 (pb_359_5 and M. algicola = same length)
+  * Identity:    1525/1528 (99.8%)	1526/1528 (99.9%)
+  * Similarity:  1525/1528 (99.8%)	1526/1528 (99.9%)
+  * Gaps:           0/1528 ( 0.0%)	0/1528 ( 0.0%)
+  * Score: 	7613.0			7622.0
 
 * 16S algicola partial (rev com):
- * Length: 1528 (pb_359_5 = 1528; M. algicola = 1485)
- * Identity:    1482/1528 (97.0%)	1483/1528 (97.1%)
- * Similarity:  1482/1528 (97.0%)	1483/1528 (97.1%)
- * Gaps:          43/1528 ( 2.8%)	43/1528 ( 2.8%)
- * Score: 	7398.0			7407.0
+  * Length: 1528 (pb_359_5 = 1528; M. algicola = 1485)
+  * Identity:    1482/1528 (97.0%)	1483/1528 (97.1%)
+  * Similarity:  1482/1528 (97.0%)	1483/1528 (97.1%)
+  * Gaps:          43/1528 ( 2.8%)	43/1528 ( 2.8%)
+  * Score: 	7398.0			7407.0
 
 (* If pb_359_5 trimmed to match ends of M. algicola partial sequence...
-  * Length: 1485
-  * Identity:   1482/1485 (99.8%)	1483/1485 (99.9%)
-  * Similarity: 1482/1485 (99.8%)	1483/1485 (99.9%)
-  * Gaps:          0/1485 ( 0.0%)	0/1485 ( 0.0%)
-  * Score: 	7398.0			7407.0)
+   * Length: 1485
+   * Identity:   1482/1485 (99.8%)	1483/1485 (99.9%)
+   * Similarity: 1482/1485 (99.8%)	1483/1485 (99.9%)
+   * Gaps:          0/1485 ( 0.0%)	0/1485 ( 0.0%)
+   * Score: 	7398.0			7407.0)
 
 * 16S adhaerens complete:
- * Length: 1535/1534 (pb_359_5 = 1528; M. adhaerens = 1532)
- * Identity:    1507/1535 (98.2%)	1505/1534 (98.1%)
- * Similarity:  1507/1535 (98.2%)	1505/1534 (98.1%)
- * Gaps:          10/1535 ( 0.7%)	8/1534 ( 0.5%)
- * Score: 	7403.0			7401.0
+  * Length: 1535/1534 (pb_359_5 = 1528; M. adhaerens = 1532)
+  * Identity:    1507/1535 (98.2%)	1505/1534 (98.1%)
+  * Similarity:  1507/1535 (98.2%)	1505/1534 (98.1%)
+  * Gaps:          10/1535 ( 0.7%)	8/1534 ( 0.5%)
+  * Score: 	7403.0			7401.0
 
 
 
@@ -6274,7 +6271,7 @@ Rechecking pb_359_5 16S:
 * pb_359_5 submitted and completed
 * pb_359_8 submitted and completed
 * Rhodo tree submitted and completed
- * New trees provisionally added to report
+  * New trees provisionally added to report
 
 # 22 February 2017
 
@@ -6311,22 +6308,22 @@ Include incomplete EC numbers to go for maximum number of predictions
 
 
 * Search conjugation genes
- * Searching with the term 'conjug'
-  * pb_359_2 - 4 hits (0 plasmid hits)
-  * pb_359_3 - 12 hits (of which 3 plasmid hits)
-  * pb_359_4 - 11 hits
-  * pb_359_5 - 4 hits (all plasmid hits)
-  * pb_359_6 - 12 hits (of which 10 plasmid hits)
-  * pb_359_7 - 1 hit (0 plasmid hits)
-  * pb_359_8 - 33 hits (of which 6 plasmid hits)
+  * Searching with the term 'conjug'
+    * pb_359_2 - 4 hits (0 plasmid hits)
+    * pb_359_3 - 12 hits (of which 3 plasmid hits)
+    * pb_359_4 - 11 hits
+    * pb_359_5 - 4 hits (all plasmid hits)
+    * pb_359_6 - 12 hits (of which 10 plasmid hits)
+    * pb_359_7 - 1 hit (0 plasmid hits)
+    * pb_359_8 - 33 hits (of which 6 plasmid hits)
 
 * Run type strain gbk through antiSMASH?
- * Check results vs. pb_359
+  * Check results vs. pb_359
 
 * Double-check copy no. of plasmids
 
 * List of genes on each Sulfito plasmid
- * Needs formatting...
+  * Needs formatting...
 
 ## Plasmid copy number
 Compare coverage for chromosome to coverage for plasmids
@@ -6342,7 +6339,7 @@ Compare coverage for chromosome to coverage for plasmids
 | pb_359_8 | ~170x        | ~450x                                         |
 
 ## Sulfitobacter and plasmids
-* Sulfitobacter sp. AM1-D1 has [five plasmids] (http://www.genome.jp/kegg-bin/show_organism?org=suam),
+* Sulfitobacter sp. AM1-D1 has [five plasmids](http://www.genome.jp/kegg-bin/show_organism?org=suam),
 albeit somewhat smaller than those in pb_359_6.
 
 
@@ -6363,19 +6360,19 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 ## % predictions for 2' metabolite clusters
 
 * pb_359_2 - 4,184 CDSs in genome, 3,959 CDSs in chromosome, 154 2' metabolite cluster genes
- * As a percentage - 3.68% of genome (or 3.89% of chromosome)
+  * As a percentage - 3.68% of genome (or 3.89% of chromosome)
 * pb_359_3 - 3,952 CDSs in genome, 3,811 CDSs in chromosome, 125 2' metabolite cluster genes
- * As a percentage - 3.16% of genome (or 3.28% of chromosome)
+  * As a percentage - 3.16% of genome (or 3.28% of chromosome)
 * pb_359_4 - 3,348 CDSs in genome, 104 2' metabolite cluster genes
- * As a percentage - 3.11%
+  * As a percentage - 3.11%
 * pb_359_5 - 4,277 CDSs in genome, 4,011 CDSs in chromosome, 103 2' metabolite cluster genes
- * As a percentage - 2.41% of genome (or 2.57% of chromosome)
+  * As a percentage - 2.41% of genome (or 2.57% of chromosome)
 * pb_359_6 - 4,967 CDSs in genome, 3,497 CDSs in chromosome, 196 2' metabolite cluster genes
- * As a percentage - 3.95% of genome (or 5.60% of chromosome)
+  * As a percentage - 3.95% of genome (or 5.60% of chromosome)
 * pb_359_7 - 5,098 CDSs in genome, 4,504 CDSs in chromosome, 209 2' metabolite cluster genes (190 on chromosome)
- * As a percentage - 4.10% of genome (or 4.22% of chromosome)
+  * As a percentage - 4.10% of genome (or 4.22% of chromosome)
 * pb_359_8 - 4,984 CDSs in genome, 4,901 CDSs in chromosome, 160 2' metabolite cluster genes
- * As a percentage - 3.21% of genome (or 3.26% of chromosome)
+  * As a percentage - 3.21% of genome (or 3.26% of chromosome)
 
 ## To do
 
@@ -6436,8 +6433,8 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 * Individual lists of (non-hypothetical) gene products created
 
 * Question - how are these plasmids being maintained...?
- * 7 plasmids would constitute an enormour metabolic cost to maintain,
-   especially with them being so big...
+  * 7 plasmids would constitute an enormour metabolic cost to maintain,
+    especially with them being so big...
 
 * Each plasmid has an antitoxin gene; this may contribute
 
@@ -6455,35 +6452,35 @@ If UniProtKB gives an incomplete EC number, accept Pathway Tools predictions tha
 
 ## pb_359_6 Plasmids
 * Do the plasmids provide functions that the chromosome doesn't?
- * No unique pathways in plasmid 1
- * **arsenate detoxification II (glutaredoxin)** unique to plasmid 2
-  * Only 'arsen' search result on the chromosome - **arsenite oxidation II (respiratory)**
-  * False positive... (see below)
- * **NAD biosynthesis I (from aspartate)** unique to plasmid 3
-  * Only 'NAD biosynthesis' search result on the chromosome - **NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde**
-  * Another false positive... (see below)
- * No unique pathways in plasmid 4
- * No unique pathways in plasmid 5
- * No unique pathways in plasmid 6
- * No unique pathways in plasmid 7
- * No unique proteins in any plasmid
+  * No unique pathways in plasmid 1
+  * **arsenate detoxification II (glutaredoxin)** unique to plasmid 2
+    * Only 'arsen' search result on the chromosome - **arsenite oxidation II (respiratory)**
+    * False positive... (see below)
+  * **NAD biosynthesis I (from aspartate)** unique to plasmid 3
+    * Only 'NAD biosynthesis' search result on the chromosome - **NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde**
+    * Another false positive... (see below)
+  * No unique pathways in plasmid 4
+  * No unique pathways in plasmid 5
+  * No unique pathways in plasmid 6
+  * No unique pathways in plasmid 7
+  * No unique proteins in any plasmid
 
 * The files compared to the plasmid files were for the whole genome;
 predictions for plasmids are changing depending on the presence of absence of the chromosome...
- * Arsenate oxidation II (respiratory) - predicted genes (full) - aioA_2, aioA_1, aioB
- * Arsenate detoxification II (glutaredoxin) - predicted genes (plasmid 2) - arsC (missing 3.6.3.16)
-  * arsC also exists on the chromosome...
+  * Arsenate oxidation II (respiratory) - predicted genes (full) - aioA_2, aioA_1, aioB
+  * Arsenate detoxification II (glutaredoxin) - predicted genes (plasmid 2) - arsC (missing 3.6.3.16)
+    * arsC also exists on the chromosome...
 
- * NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde - predicted genes (full) - nadC, nadD (also MOLFBGNK_02398), nadE
- * NAD biosynthesis I (from aspartate) - predicted genes (plasmid 3) - nadB, nadA, nadC; lower part of the pathway missing (6.3.1.5 not covered by chromosome;
-   2.7.7.18 and 6.3.5.1 are covered)
-  * Seems to be another false positive...
+  * NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde - predicted genes (full) - nadC, nadD (also MOLFBGNK_02398), nadE
+  * NAD biosynthesis I (from aspartate) - predicted genes (plasmid 3) - nadB, nadA, nadC; lower part of the pathway missing (6.3.1.5 not covered by chromosome;
+    2.7.7.18 and 6.3.5.1 are covered)
+    * Seems to be another false positive...
 
 
 * Double-checked plasmid sizes of Sulfitobacter sp. AM1-D1
- * Plasmids not in size order; this strain also contains some large plasmids (largest 348,874 bp)
- * "Complete genome sequence of Sulfitobacter sp. AM1-D1, a toxic bacteria associated with marine dinoflagellate Alexandrium minutum in East China Sea"
-  * Sadly, paper has not been published yet (submitted Dec 2016)
+  * Plasmids not in size order; this strain also contains some large plasmids (largest 348,874 bp)
+  * "Complete genome sequence of Sulfitobacter sp. AM1-D1, a toxic bacteria associated with marine dinoflagellate Alexandrium minutum in East China Sea"
+    * Sadly, paper has not been published yet (submitted Dec 2016)
 
 * Sulfitobacter guttiformis has three plasmids, including one megaplasmid
 
@@ -6491,16 +6488,16 @@ predictions for plasmids are changing depending on the presence of absence of th
 * Pathway Tools analysis rerun using just pb_359_6 chromosome; pathway and protein lists exported
 
 * Study on number and size of plasmids (within Enterobacteriaceae, not Rhodobacteraceae)
- * http://www.sciencedirect.com/science/article/pii/S0147619X02001075
- * "From 0 to 7 co-resident plasmids were detected within individual bacterial strains"
-  * 7 is at the top end, so Sulfitobacter's other contigs may truly be plasmids...
-  * Plasmids greater than 256 Kbp found (cf. ~428 Kbp of pb_359_6 largest plasmid)
+  * http://www.sciencedirect.com/science/article/pii/S0147619X02001075
+  * "From 0 to 7 co-resident plasmids were detected within individual bacterial strains"
+    * 7 is at the top end, so Sulfitobacter's other contigs may truly be plasmids...
+    * Plasmids greater than 256 Kbp found (cf. ~428 Kbp of pb_359_6 largest plasmid)
 * Megaplasmids present in Sinorhizobium (2x plasmids greater than 1 Mb)
- * https://academic.oup.com/femsec/article-lookup/doi/10.1111/j.1574-6941.2008.00505.x
- * "However, these data do raise the possibility that plasmid size is under the same ecological constraints as chromosome size,
+  * https://academic.oup.com/femsec/article-lookup/doi/10.1111/j.1574-6941.2008.00505.x
+  * "However, these data do raise the possibility that plasmid size is under the same ecological constraints as chromosome size,
    with larger genomes associated with more complex, heterogeneous environments, such as soil."
 * Megaplasmids seen in other Rhodobacteraceae
- * Silicibacter pomeroyi has a megaplasmid of ~491 Kbp
+  * Silicibacter pomeroyi has a megaplasmid of ~491 Kbp
 
 * Problem - is there evidence of large plasmids AND high numbers of different plasmids in the same species/strain?
 
@@ -6508,13 +6505,13 @@ predictions for plasmids are changing depending on the presence of absence of th
 Pathway Hole Filler can take 8+ hours; try on plasmid, let chromosomes run overnight
 * Smallest pb_359_6 plasmid has too few pathways/proteins to act as training data; need at least 50.
 * Running on Sphingorhabdus (pb_359_4), as it is both the smallest chromosome and has the lowest no. of contigs.
- * Process took about an hour; selected top candidate in all cases, and rejected any pathways with less than half of components.
+  * Process took about an hour; selected top candidate in all cases, and rejected any pathways with less than half of components.
 
 # 3 March 2017
 
 ## Blast
 * Blast pb_359_6 against Sulfitobacter sp. AM1-D1
- * Plenty of hits, but not many huge, almost-perfect matches (a lot of the hits on the chromosome seem to contain ~1% gaps)
+  * Plenty of hits, but not many huge, almost-perfect matches (a lot of the hits on the chromosome seem to contain ~1% gaps)
 
 ## Pathway Hole Filling
 * Continue to use Pathway Hole Filler on samples (ensure that a new version number of each KB is created for this)
@@ -6528,44 +6525,44 @@ Pathway Hole Filler can take 8+ hours; try on plasmid, let chromosomes run overn
 
 ## PHASTER vs VirSorter
 * pb_359_2
- * PHASTER prediction locations: 667953-681826, 3056898-3082821, 3609563-3684676 (All intact)
- * VirSorter prediction locations: 3610619-3693782 (cat 5), 2982393-3083217 (cat 6)
-  * Two potential matches; PHASTER predicts one more sequence (scored 140/150, but only 18 proteins present)
+  * PHASTER prediction locations: 667953-681826, 3056898-3082821, 3609563-3684676 (All intact)
+  * VirSorter prediction locations: 3610619-3693782 (cat 5), 2982393-3083217 (cat 6)
+    * Two potential matches; PHASTER predicts one more sequence (scored 140/150, but only 18 proteins present)
 
 * pb_359_3
- * PHASTER prediction locations: 60063-86985 (incomplete), 107037-127863 (incomplete), 1708018-1725675 (intact), 2554203-2572760 (questionable)
-				 2754039-2758904 (incomplete), 3665970-3700784 (intact) (+ Plasmid 1 - 61435-79659 (incomplete))
- * VirSorter prediction locations: 3084744-3178263 (cat 5), 3670268-3705289 (cat 5), 2495680-2580684 (cat 5) (all chromosome)
-                                   3792356-3836998 (cat 6), 2353020-2408937 (cat 6), 3352207-3404798 (cat 6), 826707-869949 (cat 6) (all chromosome)
-  * Two potential matches, one slightly tenuous; overall, not much match-up between the two predictions
-   * **Double-check the prediction methods for the two programs**
+  * PHASTER prediction locations: 60063-86985 (incomplete), 107037-127863 (incomplete), 1708018-1725675 (intact), 2554203-2572760 (questionable)
+				  2754039-2758904 (incomplete), 3665970-3700784 (intact) (+ Plasmid 1 - 61435-79659 (incomplete))
+  * VirSorter prediction locations: 3084744-3178263 (cat 5), 3670268-3705289 (cat 5), 2495680-2580684 (cat 5) (all chromosome)
+                                    3792356-3836998 (cat 6), 2353020-2408937 (cat 6), 3352207-3404798 (cat 6), 826707-869949 (cat 6) (all chromosome)
+    * Two potential matches, one slightly tenuous; overall, not much match-up between the two predictions
+      * **Double-check the prediction methods for the two programs**
 
 * pb_359_4
- * PHASTER prediction locations: 1788211-1822735 (incomplete), 2885186-2900516 (intact)
- * VirSorter prediction locations: 222024-275593 (cat 5), 2172724-2202648 (cat 6)
-  * No overlap
+  * PHASTER prediction locations: 1788211-1822735 (incomplete), 2885186-2900516 (intact)
+  * VirSorter prediction locations: 222024-275593 (cat 5), 2172724-2202648 (cat 6)
+    * No overlap
 
 * pb_359_5
- * PHASTER prediction locations: 2007744-2045050 (incomplete)
- * VirSorter prediction locations: 2557585-2612619 (cat 5)
-  * No overlap
+  * PHASTER prediction locations: 2007744-2045050 (incomplete)
+  * VirSorter prediction locations: 2557585-2612619 (cat 5)
+    * No overlap
 
 * pb_359_6
- * PHASTER prediction locations: 2070068-2092886 (questionable) (+ Plasmid 1 - 	36405-69679 (intact); Plasmid 3 - 223862-249633 (incomplete);
-				 Plasmid 5 - 118518-129108 (incomplete))
- * VirSorter prediction locations: 2068135-2080179 (cat 5), 1718446-1731079 (cat 5) (+ Plasmid 1 - 316148-414273 (cat 6))
-  * Two potential matches
+  * PHASTER prediction locations: 2070068-2092886 (questionable) (+ Plasmid 1 -	36405-69679 (intact); Plasmid 3 - 223862-249633 (incomplete);
+				  Plasmid 5 - 118518-129108 (incomplete))
+  * VirSorter prediction locations: 2068135-2080179 (cat 5), 1718446-1731079 (cat 5) (+ Plasmid 1 - 316148-414273 (cat 6))
+    * Two potential matches
 
 * pb_359_7
- * PHASTER prediction locations: 1720004-1743048 (questionable), 3102869-3117957 (intact), 3498867-3508923 (incomplete), 4649429-4662956 (incomplete)
-				 (+ Plasmid 1 - 2509-36730 (intact), 279460-305254 (incomplete); Plasmid 3 - 54137-60779 (incomplete))
- * VirSorter prediction locations: 3376495-3395782 (cat 5), 3179443-3194320 (cat 6), 3878522-3896803 (cat 6)
-  * Hits in the right areas, but no direct overlap
+  * PHASTER prediction locations: 1720004-1743048 (questionable), 3102869-3117957 (intact), 3498867-3508923 (incomplete), 4649429-4662956 (incomplete)
+				  (+ Plasmid 1 - 2509-36730 (intact), 279460-305254 (incomplete); Plasmid 3 - 54137-60779 (incomplete))
+  * VirSorter prediction locations: 3376495-3395782 (cat 5), 3179443-3194320 (cat 6), 3878522-3896803 (cat 6)
+    * Hits in the right areas, but no direct overlap
 
 * pb_359_8
- * PHASTER prediction locations: 3802794-3809819 (questionable), 4318764-4331621 (questionable)
- * VirSorter prediction locations: 443338-516457 (cat 6)
-  * No overlap
+  * PHASTER prediction locations: 3802794-3809819 (questionable), 4318764-4331621 (questionable)
+  * VirSorter prediction locations: 443338-516457 (cat 6)
+    * No overlap
 
 * The two methods appear to have comparable detection ability for phages; unsure about prophages, as the VirSorter paper doesn't mention its categories 4-6
 
@@ -6576,12 +6573,12 @@ Pathway Hole Filler can take 8+ hours; try on plasmid, let chromosomes run overn
 ## Compare old and new pathway/protein files
 Interesting observations:
 * pb_359_4 now appears to show a cellulose biosynthesis pathway
- * Only the bcsC subunit... bcsA and bcsB are 'necessary and sufficient' to form cellulose chains in vitro.
+  * Only the bcsC subunit... bcsA and bcsB are 'necessary and sufficient' to form cellulose chains in vitro.
 * pb_359_6 now appears to show a polyethylene terephthalate (PET) degradation pathway
- * One of the two components is currently predicted, so not a definite...
+  * One of the two components is currently predicted, so not a definite...
 * pb_359_7 now appears to show cellulose biosynthesis AND polyethylene terephthalate (PET) degradation pathways
- * As with pb_359_4, only bcsC currently predicted
- * As with pb_359_6, only one PET degradation component currently predicted
+  * As with pb_359_4, only bcsC currently predicted
+  * As with pb_359_6, only one PET degradation component currently predicted
 * Cardiolipin biosynthesis I has been added to all species' pathway lists
 * Apparently no interesting (from the perspective of this project) new pathways inferred from the refinement steps
 
@@ -6591,8 +6588,8 @@ Interesting observations:
 Upload sequence (and annotation?) to NCBI for pb_359_2
 * https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/
 * Check conventions for naming annotation loci
- * Cannot contain underscores, so will try to register ROSMUCR3
- * This alteration has been made in the GenBank file, pending acceptance
+  * Cannot contain underscores, so will try to register ROSMUCR3
+  * This alteration has been made in the GenBank file, pending acceptance
 
 Steps to follow:
 1. Establish a BioProject (including all S. marinoi microbiome project samples?)
@@ -6610,23 +6607,23 @@ Steps to follow:
 * Remove /inference fields which say 'similar to AA sequence:[custom database]'
 
 * Start from `grep "/product=\"H" test | sort | uniq`
- * Use `sed -i 's/\"Imely/\"imely/g' test` format to replace upper-case beginnings
+  * Use `sed -i 's/\"Imely/\"imely/g' test` format to replace upper-case beginnings
 
 # 8 March 2017
 
 ## NCBI
 * Remember to add grants to the BioProject
 * Need raw reads - available in H5 format from SMRT portal, but impractical to move these via repository; access denied to relevant area on Albiorix...
- * Where is base modification file? Would this come from Falcon output or from Resequencing?
+  * Where is base modification file? Would this come from Falcon output or from Resequencing?
 * Site to convert GenBank files to .tbl and .fsa: https://chlorobox.mpimp-golm.mpg.de/GenBank2Sequin.html
 * Submission to NCBI requires a protein_id field of format	gnl|XXXX|locus_tag	for CDS entries, where XXXX is a unique centre identifier
 * No obvious way to add this, so will attempt to make a Python script for it
- * Use GotUniMarDep as centre identifier; can always change with `sed` later
- * Written protein_id_Adder.py script for this purpose
+  * Use GotUniMarDep as centre identifier; can always change with `sed` later
+  * Written protein_id_Adder.py script for this purpose
 
 * Certain fields still need to be removed from the .tbl files
- * transl_table
- * codon_start
+  * transl_table
+  * codon_start
 * Strain needs to be changed in .fsa files
 * Header and filename needs to be checked on both .tbl AND .fsa files
 
@@ -6634,62 +6631,62 @@ Steps to follow:
 
 * "Your lab must have sequenced the genome or paid to have it sequenced or been part of the collaboration that sequenced it.
   You cannot submit a genome that you have downloaded from a web site or similar place."
- * COMPLETE
+  * COMPLETE
 
 * "The sequence submission must represent a sequence that occurs biologically in the organism. Do not randomly combine the contigs to create a single sequence;
   you must keep them separate (a traditional WGS submission) or join them with runs of Ns into the correct order and orientation (a gapped WGS submission).
   If you keep them separate in a traditional submission, you can provide the information to assemble them into scaffolds and/or chromosomes or plasmids
   with an AGP file (//www.ncbi.nlm.nih.gov/genbank/wgs.submit#agp)."
- * COMPLETE
+  * COMPLETE
 
 * "Register the source information for each genome in the BioSample database. Multiple BioSamples can be pre-registered at once, with the Batch option.
   For isolated unicellular organisms, chose the appropriate Pathogen package (Clinical or host-associated pathogen OR Environmental, food or other pathogen)
   or the Microbe package. If the same sample is used for two different genome assemblies, then use the same BioSample for both."
- * BIOSAMPLE REGISTRATION ONGOING; MUST DOUBLE-CHECK DETAILS
+  * BIOSAMPLE REGISTRATION ONGOING; MUST DOUBLE-CHECK DETAILS
 
 * "Each genome must belong to a BioProject. Genomes sequenced as part of the same research effort can belong to a single multi-isolate or to a multi-species
   BioProject.  When more BioSamples are added to a BioProject, the assigned locus_tag prefixes are added to the locustagprefix.txt file in the BioProject
   submission portal, https://submit.ncbi.nlm.nih.gov/subs/bioproject/."
- * BIOPROJECT REGISTRATION ONGOING; MUST DOUBLE-CHECK DETAILS
+  * BIOPROJECT REGISTRATION ONGOING; MUST DOUBLE-CHECK DETAILS
 
 * "Raw reads should be submitted to SRA. If the genome was sequenced using PacBio sequencing technology, please also submit to SRA the base modification files,
   eg the motif_summary.csv file. If you have any questions about SRA, contact sra@ncbi.nlm.nih.gov."
- * FIND RAW READS ON ALBIORIX (DOWNLOAD FROM SMRT PORTAL IF NECESSARY)
- * FIND BASE MODIFICATION FILES FROM FALCON/SMRT PORTAL?
+  * FIND RAW READS ON ALBIORIX (DOWNLOAD FROM SMRT PORTAL IF NECESSARY)
+  * FIND BASE MODIFICATION FILES FROM FALCON/SMRT PORTAL?
 
 * "Annotation is not required, but if annotation is provided it must be biologically valid and the product names should follow the
   UniProt-Protein Naming Guidelines."
- * SEEMS TO BE COMPLETE NOW
+  * SEEMS TO BE COMPLETE NOW
 
 * "NCBI's Prokaryotic Genomes Annotation Pipeline (NCBI_PGAP) is used to annotate prokaryotic RefSeq genomes and is available for GenBank submissions, by request.
   No changes by the submitter are needed to make this annotation ready for GenBank submission. Note that all complete prokaryotic genomes will be run through
   NCBI_PGAP for a basic integrity check, to see that the genome contains some required elements like RNAs and has low levels of pseudogenes/frameshifted genes.
   The genome will not be released with this annotation unless you ask us to include it."
- * NOT REQUIRED; ANNOTATION DONE VIA PROKKA
+  * NOT REQUIRED; ANNOTATION DONE VIA PROKKA
 
 * "Provide relevant chromosome, plasmid or organellar assignment information for any sequences in the fasta definition line, as described below."
- * ONGOING
+  * ONGOING
 
 ### Data files
 1. Fasta File
- * "Put the sequences into fasta format of the sequences. These files have the suffix .fsa. Each sequence has a definition line beginning with a '>' and a unique
+  * "Put the sequences into fasta format of the sequences. These files have the suffix .fsa. Each sequence has a definition line beginning with a '>' and a unique
    identifier, eg contig001, contig002, etc."
- * PROVISIONALLY COMPLETE, MAY NEED TO BE CHECKED AND REDONE...
+  * PROVISIONALLY COMPLETE, MAY NEED TO BE CHECKED AND REDONE...
 
 2. "A template file with submitter, publication, BioProject and BioSample information."
- * NEEDS TO BE COMPLETED; SEE TEMPLATE
+  * NEEDS TO BE COMPLETED; SEE TEMPLATE
 
 3. "The Genome-Assembly-Data Structured Comment which includes the assembly method and version, the genome coverage and the sequencing technologies can be
     created on the Structured Comment Template page."
- * COMPLETE - DOWNLOADED AS genome.asm
+  * COMPLETE - DOWNLOADED AS genome.asm
 
 4. "Annotation files, if appropriate. These correspond to and have the same basenames as the .fsa files, but have the suffix .tbl. The .tbl files have a 5-column
    tab-delimited format, as described in the annotation instruction pages. Be sure to read the annotation requirements in the appropriate annotation guidelines."
- * COMPLETE
+  * COMPLETE
 
 5. "Quality scores of the sequences. These files correspond to and have the same basenames as the .fsa files, but have the suffix .qvl.
    The quality scores are optional, but desired."
- * QUALITY SCORES UNAVAILABLE...
+  * QUALITY SCORES UNAVAILABLE...
 
 ## To do
 
@@ -6697,31 +6694,31 @@ Steps to follow:
 * Obtain raw reads and base modification files from SMRT Portal/Falcon file
 * Check that fasta and contig names are acceptable
 * Complete general template
- * Specifically, Sequence Authors
-* Follow the 'Create your submission' instructions [here] (https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
+  * Specifically, Sequence Authors
+* Follow the 'Create your submission' instructions [here](https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
 
 # 9 March 2017
 
 ## protein_id_Adder.py
 * Redo script to simply output the file as a .tbl file...
- * Version 2 of the script has been written, and appears to be working as intended
+  * Version 2 of the script has been written, and appears to be working as intended
 
 ## NCBI
 Be sure to double-check naming conventions...
 
 ## Leukotoxin
 * As the pb_359_2 leukotoxin genes were just labelled as 'leukotoxin', genes of similar function may have been
-found in the other species, but by a different name. Grep alternative search terms based on the BLAST results.
+  found in the other species, but by a different name. Grep alternative search terms based on the BLAST results.
 
- * 5' nucleotidase - fairly frequent in other species
- * hemolysin-type calcium-binding region - common
- * type I secretion protein - common primarily among Rhodobacteraceae
- * putative calcium-binding proteins - relatively uncommon
+  * 5' nucleotidase - fairly frequent in other species
+  * hemolysin-type calcium-binding region - common
+  * type I secretion protein - common primarily among Rhodobacteraceae
+  * putative calcium-binding proteins - relatively uncommon
 
- * aggregation factor core protein MAFp3 - no other matches
- * large exoprotein - no other matches, but vague
- * rhizobiocin/RTX toxin - no other matches to rhizobiocin
- * nidogen, extracellular region - no other matches
+  * aggregation factor core protein MAFp3 - no other matches
+  * large exoprotein - no other matches, but vague
+  * rhizobiocin/RTX toxin - no other matches to rhizobiocin
+  * nidogen, extracellular region - no other matches
 
 # 10 March 2017
 
@@ -6737,52 +6734,52 @@ If system will cooperate, rerun 10% BLASTs on the final assemblies...
 * Obtain raw reads and base modification files from SMRT Portal/Falcon file
 * Check that fasta and contig names are acceptable
 * Complete general template
- * Specifically, Sequence Authors
-* Follow the 'Create your submission' instructions [here] (https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
+  * Specifically, Sequence Authors
+* Follow the 'Create your submission' instructions [here](https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
 
 ## More functional searches
 * Siderophores
- * Marinobacter and Sulfitobacter seem most likely to produce siderophores
-  * Both species contain a multitude of required genes - High numbers of hits when grepping 'siderophore' (including on Sulfitobacter plasmids),
-    and presence of related genes checked (http://onlinelibrary.wiley.com/doi/10.1046/j.1365-2958.2002.02951.x/full)
-   * Fhu hydroxamate uptake family - fhuABCD in Marinobacter, fhuAC in Sulfitobacter
-   * TonB (energy transducer) present in both
-  * Marinobacter siderophore cluster (serobactin) noted by antiSMASH
-  * Sulfitobacter siderophore cluster (vicibactin) noted by antiSMASH
-  * 'Putative siderophore biosynthesis protein SbnA' noted for Marinobacter
-  * 'Enterobactin synthase component D' noted for Sulfitobacter
+  * Marinobacter and Sulfitobacter seem most likely to produce siderophores
+    * Both species contain a multitude of required genes - High numbers of hits when grepping 'siderophore' (including on Sulfitobacter plasmids),
+      and presence of related genes checked (http://onlinelibrary.wiley.com/doi/10.1046/j.1365-2958.2002.02951.x/full)
+      * Fhu hydroxamate uptake family - fhuABCD in Marinobacter, fhuAC in Sulfitobacter
+      * TonB (energy transducer) present in both
+    * Marinobacter siderophore cluster (serobactin) noted by antiSMASH
+    * Sulfitobacter siderophore cluster (vicibactin) noted by antiSMASH
+    * 'Putative siderophore biosynthesis protein SbnA' noted for Marinobacter
+    * 'Enterobactin synthase component D' noted for Sulfitobacter
 
- * Pathway Tools
-  * Marinobacter - 2/4 components predicted for aerobactin biosynthesis
-   * 5/7 components predicted for enterobactin biosynthesis
-  * Sulfitobacter - 2/4 components predicted for aerobactin biosynthesis
+  * Pathway Tools
+    * Marinobacter - 2/4 components predicted for aerobactin biosynthesis
+      * 5/7 components predicted for enterobactin biosynthesis
+    * Sulfitobacter - 2/4 components predicted for aerobactin biosynthesis
 
- * Roseovarius and Sphingorhabdus - enterobactin biosynthesis predicted
-  * Roseovarius - 4/7 components predicted
-  * Sphingorhabdus - 3/7 components predicted
+  * Roseovarius and Sphingorhabdus - enterobactin biosynthesis predicted
+    * Roseovarius - 4/7 components predicted
+    * Sphingorhabdus - 3/7 components predicted
 
- * Curiously, more species seem to code for 'Vibriobactin utilization protein' ViuB than actually produce it.
-  * Multiple bacteria scrounging off of two species actually producing vibriobactin/siderophore?
-   * Xenosiderophores - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3832793/
+  * Curiously, more species seem to code for 'Vibriobactin utilization protein' ViuB than actually produce it.
+    * Multiple bacteria scrounging off of two species actually producing vibriobactin/siderophore?
+      * Xenosiderophores - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3832793/
 
 * Auxins - indole-3-acetate / indole-3-acetic acid biosynthesis pathway
- * Plant hormone, seen in other diatom-microbe interactions
- * Roseovarius - 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
- * Marinobacter - 1/1 predicted for indole-3-acetate biosynthesis V (bacteria and fungi)
- * Sulfitobacter - 2/2 predicted for indole-3-acetate biosynthesis III (bacteria)
-  * 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
- * Antarctobacter - 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
-  * 1/1 predicted for indole-3-acetate biosynthesis V (bacteria and fungi)
+  * Plant hormone, seen in other diatom-microbe interactions
+  * Roseovarius - 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
+  * Marinobacter - 1/1 predicted for indole-3-acetate biosynthesis V (bacteria and fungi)
+  * Sulfitobacter - 2/2 predicted for indole-3-acetate biosynthesis III (bacteria)
+    * 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
+  * Antarctobacter - 2/2 predicted for indole-3-acetate biosynthesis IV (bacteria)
+    * 1/1 predicted for indole-3-acetate biosynthesis V (bacteria and fungi)
 
 * Chitin degradation II (Vibrio) pathway
- * Chitin degradation demonstrated in at least one algicidal species - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4763246/
- * Roseovarius - 2/4 components predicted
- * Loktanella - 2/4 components predicted
- * Sphingorhabdus - 2/4 components predicted
- * Sulfitobacter - 2/4 components predicted
- * Antarctobacter - 2/4 components predicted
- * Arenibacter - 2/4 components predicted
- * As the 2 components predicted are the same protein, and the same two steps are predicted in each example, unconvincing...
+  * Chitin degradation demonstrated in at least one algicidal species - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4763246/
+  * Roseovarius - 2/4 components predicted
+  * Loktanella - 2/4 components predicted
+  * Sphingorhabdus - 2/4 components predicted
+  * Sulfitobacter - 2/4 components predicted
+  * Antarctobacter - 2/4 components predicted
+  * Arenibacter - 2/4 components predicted
+  * As the 2 components predicted are the same protein, and the same two steps are predicted in each example, unconvincing...
 
 (Replace R05AC with RO5AC)
 * Complete Grants section of BioProject
@@ -6802,9 +6799,9 @@ If system will cooperate, rerun 10% BLASTs on the final assemblies...
 * Biosample accession - SAMN06564448
 
 * Files required for SRA submission:
- * modifications.csv
- * motifs.gff
- * motifs_summary.csv
+  * modifications.csv
+  * motifs.gff
+  * motifs_summary.csv
 * Files downloaded; need to be decompressed
 
 
@@ -6819,49 +6816,49 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
 * XML preparation is unnecessary - see email from SRA
 
 * Checksums for files
- * RosMucR3_modifications.csv	9499b9e417f2866f2cf0b04461b90eab
- * RosMucR3_motifs.gff		a4a79df700dcc853d3e874d6e0562b7f
- * RosMucR3_motif_summary.csv	1b0ace9555cad09b954e150fe4315749
+  * RosMucR3_modifications.csv	9499b9e417f2866f2cf0b04461b90eab
+  * RosMucR3_motifs.gff		a4a79df700dcc853d3e874d6e0562b7f
+  * RosMucR3_motif_summary.csv	1b0ace9555cad09b954e150fe4315749
 
 * Seems like .fsa files may need to be merged - awaiting reply from NCBI
- * If this is the case, what about the .tbl files?
+  * If this is the case, what about the .tbl files?
 * tbl2asn may need updating...
 
 * tbl2asn command to be run from C:\Users\matt_\Desktop\PROJECT\Skeletonema_marinoi_microbiome_project\SubmissionPreparations\RosMucR3\NCBI
- * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucR3_Template.sbt -M n -Z discrep -w RosMucR3_StructuredComment.asm
+  * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucR3_Template.sbt -M n -Z discrep -w RosMucR3_StructuredComment.asm
 
 * tbl2asn run on Windows, has returned a mass of error messages for the pb_359_2 records; attempt to solve
- * Protein product containing '?'/ ending in '_'
-  * Offending character removed; change noted in note field
- * Protein product named 'Agrobacterium tumefaciens protein'
-  * Renamed as 'hypothetical protein' (most BLASTp results concur); change noted in note field
+  * Protein product containing '?'/ ending in '_'
+    * Offending character removed; change noted in note field
+  * Protein product named 'Agrobacterium tumefaciens protein'
+    * Renamed as 'hypothetical protein' (most BLASTp results concur); change noted in note field
 
 * Checking additional errors
- * https://blast2go-apps.github.io/ncbi-submission/user_manual/NCBI_Submission_b2g_App_DOC.pdf
+  * https://blast2go-apps.github.io/ncbi-submission/user_manual/NCBI_Submission_b2g_App_DOC.pdf
 
 # 16 March 2017
 
 ## NCBI
 * Receiving a lot of errors about wrong start/stop codons, but no data on WHICH genes are causing the error...
- * Concatenating all contigs into one file doesn't work
- * Issue with printing locations of sequences on the complementary strand
-  * GenBank to .tbl script fixed
+  * Concatenating all contigs into one file doesn't work
+  * Issue with printing locations of sequences on the complementary strand
+    * GenBank to .tbl script fixed
 
 * All other errors fixed; only major issue remaining is DBLinkProblem; this may fix itself once a BioProject is assigned
- * Template will need to be redone afterwards
- * Conflicting gene names present but harder to fix - 555 instances
- * Small, non-critical issues addressed such as products ending in ] and _, and some instances of products of kDa weights
-  * Where relevant, original names have been included in a note
+  * Template will need to be redone afterwards
+  * Conflicting gene names present but harder to fix - 555 instances
+  * Small, non-critical issues addressed such as products ending in ] and _, and some instances of products of kDa weights
+    * Where relevant, original names have been included in a note
 
 # 17 March 2017
 
 ## pb_359_7
 * Double-check classification of pb_359_7 as Antarctobacter; 16S check not convincing...
- * Similarities to genera Ruegeria and Mameliella
- * Based on PhyloPhlAn analysis, more closely related to Mameliella (Ruegeria is in another clade, closer to Sulfitobacter)
- * 16S shows pb_359_7 sequences assorting with Antarctobacter; Mameliella and Ruegeria form their own clade
-  * Download more 16S sequences for a broader survey
- * Re-classify as Mameliella?
+  * Similarities to genera Ruegeria and Mameliella
+  * Based on PhyloPhlAn analysis, more closely related to Mameliella (Ruegeria is in another clade, closer to Sulfitobacter)
+  * 16S shows pb_359_7 sequences assorting with Antarctobacter; Mameliella and Ruegeria form their own clade
+    * Download more 16S sequences for a broader survey
+  * Re-classify as Mameliella?
 
 ## Report
 * Add results of 16S searches; tabulate
@@ -6869,4 +6866,22 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
 ## To do
 * Add 16S results table to report
 * Continue 16S checks on pb_359_7
- * List of sequences saved; may need to reverse-complement some of these...
+  * List of sequences saved; may need to reverse-complement some of these...
+
+# 20 March 2017
+
+## pb_359_7
+* MUSCLE alignment on EBI will only accept 500 sequences; 875 were taken from SILVA; take 500 longest?
+  * 500 longest obtained; pb_359_7 nestled within Antarctobacter, but negative branch lengths according to MUSCLE?
+  * SILVA can only pinpoint pb_359_7 down as far as Rhodobacteraceae family...
+* Reassured of the identity of pb_359_7, based on 16S; unfortunate that no full-length 16S sequences exist for Antarctobacter in NCBI...
+  * Best way to represent this for report?
+
+## Genome Announcements
+* Include accession no. AND locus tag of 16S matches?
+
+## To do
+* Generate 16S tree for pb_359_7 with sequences from Ruegeria, Mameliella and Antarctobacter where available...
+  * NCBI or SILVA?
+    * NCBI has a lot of Ruegeria sequences; Mameliella and Antarctobacter more manageable
+    * Only RefSeq sequences for Ruegeria? Reduces number down to 20...

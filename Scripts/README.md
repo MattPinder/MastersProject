@@ -100,7 +100,7 @@ The hope with this version is that named gene predictions will allow for more nu
 
 * The current version is only intended for use with GenBank files containing a single contig; multi-contig files will not be processed correctly.
 * The 'Translation' line of each locus is not correctly formatted; sequences are displayed on a single line rather than adding line breaks into long sequences.
-  * For the intended purpose - comprehension by the program [Pathway Tools] (http://brg.ai.sri.com/ptools/) - this formatting issue is irrelevant.
+  * For the intended purpose - comprehension by the program [Pathway Tools](http://brg.ai.sri.com/ptools/) - this formatting issue is irrelevant.
 
 ## Version history
 

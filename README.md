@@ -6885,3 +6885,30 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
   * NCBI or SILVA?
     * NCBI has a lot of Ruegeria sequences; Mameliella and Antarctobacter more manageable
     * Only RefSeq sequences for Ruegeria? Reduces number down to 20...
+
+# 21 March 2017
+
+## pb_359_7
+* Search for 16S sequences for Ruegeria, Mameliella and Antarctobacter (plus a couple of sequences as an outgroup?)
+  * 21x Antarctobacter sequences (all partial, but only selected those sequences over 1 Kb)
+  * 6x Mameliella sequences (all partial, but only selected those sequences over 1 Kb)
+  * 19x Ruegeria sequences (two complete, rest partial; over 1,000 search results so only those from RefSeq selected)
+* Remove sequences with N and R in case this complicates the analysis?
+
+(* Process:
+  * Antarctobacter, Mameliella and Ruegeria identified primarily through 16S searches
+  * Search 'genus AND 16S[title]' on NCBI Nucleotide
+  * Exclude any hits less than 1 Kb
+  * For Ruegeria, as there were 1,000+ hits, only those from RefSeq were selected
+  * Sagittula stellata included as outgroup
+  * Any hits with Ns or Rs in the sequence were excluded, to prevent any complications in the analysis
+  * Hits concatenated and inputted into ClustalW to produce a gapped alignment
+  * Gapped alignment run through FastTree
+  * Tree file visualised in FigTree)
+
+* New strategy - run pb_359_7 16S through BLASTn using nr/nt, RefSeq_genomic and 16S databases, and run top four results from each through ClustalW
+
+## To do
+
+* Retry RefSeq_genomic search vs pb_359_7 16S sequence; keeps failing...
+  * If this can be made to work, run through ClustalW and obtain tree

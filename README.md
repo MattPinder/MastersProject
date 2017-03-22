@@ -6912,3 +6912,9 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
 
 * Retry RefSeq_genomic search vs pb_359_7 16S sequence; keeps failing...
   * If this can be made to work, run through ClustalW and obtain tree
+
+# 22 March 2017
+
+## NCBI
+
+Still waiting for response from NCBI re: BLASTN and refseq_genomic

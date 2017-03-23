@@ -6824,8 +6824,8 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
   * If this is the case, what about the .tbl files?
 * tbl2asn may need updating...
 
-* tbl2asn command to be run from C:\Users\matt_\Desktop\PROJECT\Skeletonema_marinoi_microbiome_project\SubmissionPreparations\RosMucR3\NCBI
-  * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucR3_Template.sbt -M n -Z discrep -w RosMucR3_StructuredComment.asm
+* tbl2asn command to be run from C:\Users\matt_\Desktop\PROJECT\Skeletonema_marinoi_microbiome_project\SubmissionPreparations\RosMucSMR3\NCBI
+  * ..\..\..\..\tbl2asn\tbl2asn.exe -p . -t RosMucSMR3_Template.sbt -M n -Z discrep -w RosMucSMR3_StructuredComment.asm
 
 * tbl2asn run on Windows, has returned a mass of error messages for the pb_359_2 records; attempt to solve
   * Protein product containing '?'/ ending in '_'
@@ -6918,3 +6918,23 @@ Raw data stored at /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_
 ## NCBI
 
 Still waiting for response from NCBI re: BLASTN and refseq_genomic
+* Known issue, resolution underway
+
+# 23 March 2017
+
+## Roseovarius mucosus
+
+* New strain designation: SMR3
+* New plasmid names: pSMR3-1 and pSMR3-2
+
+## BLASTn
+* Blast pb_359_2 16S against Roseovarius sp. TM1035 to confirm stats
+* Align R. mucosus type strain 16S against pb_359_2 to get full length identity comparison
+  * Type strain DSM 17069 - their predicted 16S was shorter, but trimming ours or lengthening theirs
+  * Found to have 99.8% similarity with both iterations of the type strain
+
+
+
+## To do
+* Complete pb_359_2 PhyloPhlAn comparison underway, check in the morning
+* Await NCBI email regarding the DBLink errors from tbl2asn

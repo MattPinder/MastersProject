@@ -6938,3 +6938,33 @@ Still waiting for response from NCBI re: BLASTN and refseq_genomic
 ## To do
 * Complete pb_359_2 PhyloPhlAn comparison underway, check in the morning
 * Await NCBI email regarding the DBLink errors from tbl2asn
+
+# 24 March 2017
+
+## PhyloPhlAn
+Completed pb_359_2 vs all Rhodobacteraceae tree
+* Closest to Roseovarius sp. TM1035; this clade shares MRCA with Roseovarius mucosus
+
+## Genome submission
+.sqn files currently being checked on NCBI's [Genome Submission Check Tool](https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi)
+
+## NCBI checker
+* Overlap found in two places on long plasmid
+  * dctM + dctQ - 50 bp overlap, precedent in type strain
+  * ParB + 'regulator' - 62 bp overlap, BLASTx in the region finds no regulator, only ParB...
+* Two potential truncations on the long plasmid
+  * 04025 - ~200 bp 5' truncation?
+  * 04182 - ~250 bp 5' truncation?
+
+* One potential truncation on the short plasmid
+  * 04237 - ~50 bp downstream and ~50 bp upstream missing?
+
+* Chromosome check ongoing...
+
+
+## To Check
+OrcID
+
+* pSMR3-1 has a gene which appears to cross the divide between the start and end of the linearised sequence
+  * Sequence submitted as-is, but see if this can be fixed for an update
+* See whether the chromosome came up with any issues...

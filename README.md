@@ -6968,3 +6968,15 @@ OrcID
 * pSMR3-1 has a gene which appears to cross the divide between the start and end of the linearised sequence
   * Sequence submitted as-is, but see if this can be fixed for an update
 * See whether the chromosome came up with any issues...
+
+# 27 March 2017
+
+## NCBI
+Still waiting for processing of pb_359_2 genome to complete; chromosome showed many errors in the final check,
+so this may come back with requests for corrections...
+
+
+## CeMEB
+Title and abstract for poster sent to Eva Marie
+* Formatting and wording on poster itself almost done; size changed to A0 for ease of printing
+  * Remember to select high quality print-out

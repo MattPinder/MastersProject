@@ -6980,3 +6980,63 @@ so this may come back with requests for corrections...
 Title and abstract for poster sent to Eva Marie
 * Formatting and wording on poster itself almost done; size changed to A0 for ease of printing
   * Remember to select high quality print-out
+
+# 28 March 2017
+
+## pb_359_2 Upload
+Comments received from NCBI:
+
+1. Some ncRNAs are not RNAs, but are signals
+  * Ask to have them included as a note on the feature
+
+2. cspA (cold shock protein A) ncRNA has an incorrect span
+  * Check other Rhodobacteraceae sequences (Roseovarius sp. TM1035?) in search of true span
+  * BLASTp of this sequence vs. refseq_genomic primarily reveals identical/near-identical sequences, of the same length (68aa). However, one Roseovarius sequence
+    is longer on the 5' end
+
+3. Four potential pseudogenes
+  * Check statistics of matches, see whether they are convincing
+    * ROSMUCSMR3_00650 / ROSMUCSMR3_00649: Sum BLAST scores of hits to try and find most convincing hit
+      * gi|568303274|ref|YP_008975559.1| Putative phage tail protein/GTA TIM-barrel-like domain protein (also has the smallest insert; Occam's Razor)
+    * ROSMUCSMR3_01411 / ROSMUCSMR3_01410
+      * gi|56695436|ref|YP_165784.1| glutamate/glutamine/aspartate/asparagine ABC transporter (only narrowly the best hit... Check vs R. sp. TM1035?)
+    * ROSMUCSMR3_03399 / ROSMUCSMR3_03398
+      * gi|507516730|ref|YP_008038347.1| group 1 glycosyl transferase - **not convinced enough; should remain as two genes**
+    * ROSMUCSMR3_03409 / ROSMUCSMR3_03408
+      * gi|377807456|ref|YP_004978648.1| Phytanoyl-CoA dioxygenase (seems to be best match but not amazing; R. sp. TM1035 seems more convincing)
+
+4. Send motif_summary.csv, OR upload to SRA along with raw reads
+  * Will be uploading to SRA anyway
+
+5. CHECK IF LOCUS_TAG NUMBERING WILL BE AFFECTED, AND IF THIS WILL
+   CARRY OVER TO THE OTHER CONTIGS
+
+## Report
+Should pb_359_5 16S tree be extended to the same size as the pb_359_7 16S tree
+
+
+## SRA
+Double-check metadata for pb_359_2 sequence run
+* Files required:
+  * motifs.gff.gz
+  * modifications.csv.gz
+  * motif_summary.csv
+  * m160816_190022_42203_c101086032550000001823265803091732_s1_p0.bas.h5
+  * m160816_190022_42203_c101086032550000001823265803091732_s1_p0.3.bax.h5
+  * m160816_190022_42203_c101086032550000001823265803091732_s1_p0.2.bax.h5
+  * m160816_190022_42203_c101086032550000001823265803091732_s1_p0.1.bax.h5
+* Files CAN be compressed (.gz), and archived (.tar) if wanted
+
+* Copy assembly files (as superuser) and tarball them
+  * /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_359-2/run1/B01_1/Analysis_Results/m160816_190022_42203_c101086032550000001823265803091732_s1_p0.bas.h5
+  * /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_359-2/run1/B01_1/Analysis_Results/m160816_190022_42203_c101086032550000001823265803091732_s1_p0.1.bax.h5
+  * /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_359-2/run1/B01_1/Analysis_Results/m160816_190022_42203_c101086032550000001823265803091732_s1_p0.2.bax.h5
+  * /home/smrtanalysis/userdata/inputs_dropbox/pb_359/rawdata/pb_359-2/run1/B01_1/Analysis_Results/m160816_190022_42203_c101086032550000001823265803091732_s1_p0.3.bax.h5
+
+* Double-check metadata tomorrow...
+* Double-check rules for ftp; file created at NCBI ftp site but unable to submit
+  * `ftp ftp-private.ncbi.nlm.nih.gov`
+    * Username: subftp
+    * Password: w4pYB9VQ
+  * `cd uploads/matt_pinder13@hotmail.com_n7ATBk2o/SAMN06564448_RosMucSMR3`
+  * `put ~/MastersProject/Roseovarius_mucosus_SMR3_assembly.tar.gz`

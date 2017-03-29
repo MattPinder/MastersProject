@@ -7040,3 +7040,31 @@ Double-check metadata for pb_359_2 sequence run
     * Password: w4pYB9VQ
   * `cd uploads/matt_pinder13@hotmail.com_n7ATBk2o/SAMN06564448_RosMucSMR3`
   * `put ~/MastersProject/Roseovarius_mucosus_SMR3_assembly.tar.gz`
+
+# 29 March 2017
+
+## NCBI Uploads
+* Genome data accepted as accession number CP020474, CP020475 and CP020476
+* SRA data needs to be uploaded via ftp
+  * Must be in directory containing file to transfer; linking through other directories doesn't work
+* Additional data (motifs, methylation, etc.) needs to be uploaded via Supplementary Files
+  * Files too big to be transferred via Git, how to save Windows-side for upload?
+  * Mobaxterm has built-in rsync capabilities
+    * .gz files must be unzipped on Albiorix, 7zip doesn't seem to handle this well
+* SRA data uploaded; once processing complete and files have been accepted, delete raw reads from microbiome project directory to save space
+* Supplementary files uploading...
+
+
+
+
+## pb_359_2
+Run NCBI-generated GenBank file through Pathway Tools
+* Initial no. of pathways: 284
+* After Assign Probable Enzymes: 288
+* After Pathway Hole Filler: 295
+
+## To do
+Retry uploading the Supplementary files
+* Retry installing Aspera Connect?
+
+Update details re: pathways in pb_359_2

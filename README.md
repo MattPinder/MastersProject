@@ -7054,9 +7054,6 @@ Double-check metadata for pb_359_2 sequence run
 * SRA data uploaded; once processing complete and files have been accepted, delete raw reads from microbiome project directory to save space
 * Supplementary files uploading...
 
-
-
-
 ## pb_359_2
 Run NCBI-generated GenBank file through Pathway Tools
 * Initial no. of pathways: 284
@@ -7068,3 +7065,16 @@ Retry uploading the Supplementary files
 * Retry installing Aspera Connect?
 
 Update details re: pathways in pb_359_2
+
+
+# 30 March 2017
+
+## NCBI
+Still need to upload Supplementary Files; waiting on reply from SRA regarding upload issues
+
+## Report
+Redo Marinobacter 16S tree; need to obtain additional results from 16S BLASTn
+* Redo Antarctobacter too; trim all ends to line up
+
+## To do
+Update details on the GitLab repository readme file

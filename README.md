@@ -7078,3 +7078,29 @@ Redo Marinobacter 16S tree; need to obtain additional results from 16S BLASTn
 
 ## To do
 Update details on the GitLab repository readme file
+
+# 31 March 2017
+
+## 16S rRNA
+Double-check exact percentages of similarity between pb_359_7 16S rRNA and BLASTn results (after trimming)
+* Antarctobacter_heliothermus_DSM_11445		99.9%
+* Antarctobacter_heliothermus_EL-219		99.5%
+* Antarctobacter_sp_R14				99.5%
+* Antarctobacter_sp_R22				99.4%
+* Antarctobacter_sp_R30				99.4%
+* Antarctobacter_sp_RO5				99.3%
+* Mameliella_alba_CGMCC_1.7290			96.3%
+* Mameliella_alba_UMTAT08			96.3%
+* Ruegeria_sp_PBVC088				96.3%
+* Alkalimicrobium_pacificum_F15			95.8%
+* Ponticoccus_lacteus_strain_JL351		95.8%
+* Sagittula_stellata_E-37			95.6%
+
+**pb_359_7 is 99.9% similar to A. heliothermus, but pb_359_6 is only 99.2% similar to S. pseudonitzschiae; therefore,
+either _7 is a strain of A. heliothermus, or _6 is not a strain of S. pseudonitzschiae**
+
+
+## To do
+Double-check percentages for Marinobacter 16S similarity
+
+Add bold to Figure legends in report

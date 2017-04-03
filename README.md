@@ -7104,3 +7104,79 @@ either _7 is a strain of A. heliothermus, or _6 is not a strain of S. pseudonitz
 Double-check percentages for Marinobacter 16S similarity
 
 Add bold to Figure legends in report
+
+
+# 3 April 2017
+
+## 16S Checks
+
+* pb_359_4 - 99.9% (trimmed) similarity to Sphingorhabdus flavimaris R-36742 (formerly Sphingopyxis flavimaris)
+* pb_359_7 - 99.9% (trimmed) similarity to Antarctobacter heliothermus DSM 11445
+
+* pb_359_6 - 99.2% (trimmed) similarity to Sulfitobacter pseudonitzschiae H3T (= DSM 26824T); is classification reliable?
+
+
+Marinobacter 16S checks
+* nr/nt
+  * Marinobacter sp. 114Z-4 16S ribosomal RNA gene, partial sequence					JX310122.1		99.8%/99.9%
+  * Marinobacter sp. 132Z-4 16S ribosomal RNA gene, partial sequence					JX310148.1		99.5%
+  * Marinobacter sp. 114Z-23 16S ribosomal RNA gene, partial sequence					GU584144.1		99.5%
+  * Marinobacter sp. R-28770 partial 16S rRNA gene, strain R-28770					AM944523.1		99.9%/100%
+  * Marinobacter sp. R-28768 partial 16S rRNA gene, strain R-28768					AM944524.1		99.9%/100%
+  * Marinobacter sp. EZ43 16S ribosomal RNA gene, partial sequence					EU704111.1		99.3%
+  * Marinobacter salarius strain R9SW1 16S ribosomal RNA gene, partial sequence				KJ547705.1		99.4%/99.5%
+  * Marinobacter salarius strain R9SW1, complete genome							CP007152.1		99.4%/99.5%
+  * Marinobacter algicola partial 16S rRNA gene, strain 407-13						AJ294359.1		99.9%
+
+* refseq_genomic
+  * Marinobacter sp. C18 contig_42, whole genome shotgun sequence					NZ_LQXJ01000037.1	99.9%/100%
+  * Marinobacter sp. MCTG268 U734DRAFT_scf7180000000032_quiver.11_C, whole genome shotgun sequence	NZ_JQMK01000002.1	99.5% + 99.9%
+    * Marinobacter sp. MCTG268 U734DRAFT_scf7180000000033_quiver.14_C, whole genome shotgun sequence	NZ_JQMK01000005.1	99.5%
+  * Marinobacter algicola DG893 1103407001930, whole genome shotgun sequence				NZ_ABCP01000031.1	99.8% + 99.9%
+  * Marinobacter salarius strain R9SW1, complete genome							NZ_CP007152.1		99.4%/99.5%
+
+* 16S
+  * Marinobacter algicola strain DG893 16S ribosomal RNA gene, partial sequence				NR_042807.1		99.8%/99.9%
+  * Marinobacter adhaerens strain HP15 16S ribosomal RNA gene, complete sequence			NR_074765.1		98.4%
+  * Marinobacter adhaerens strain HP15 16S ribosomal RNA gene, partial sequence				NR_115177.1		98.4%
+  * Marinobacter flavimaris strain SW-145 16S ribosomal RNA gene, partial sequence			NR_025799.1		98.0%/97.9%
+  * Marinobacter sediminum strain R65 16S ribosomal RNA gene, partial sequence				NR_029028.1		97.1%
+  * Marinobacter salsuginis strain SD-14B 16S ribosomal RNA gene, partial sequence			NR_044044.1		97.9%/97.5%
+  * Marinobacter gudaonensis strain SL014B61A 16S ribosomal RNA gene, partial sequence			NR_043796.1		97.5%
+  * Marinobacter lipolyticus strain SM-19 16S ribosomal RNA gene, partial sequence			NR_025671.1		98.0%
+
+
+Arenibacter 16S checks
+* nr/nt
+  * Flexibacter aggregans strain BSs20185 16S ribosomal RNA gene, partial sequence			DQ514301.1		99.9%
+  * Flexibacter sp. BSs20182 16S ribosomal RNA gene, partial sequence					DQ514299.1		99.9%
+  * Flexibacter aggregans gene for 16S rRNA, strain:IFO 15975						AB078039.1		99.9%
+  * Arenibacter sp. MBE 61 16S ribosomal RNA gene, partial sequence					KF724487.1		99.4%
+  * Arenibacter palladensis strain LMG 21972 16S ribosomal RNA gene, complete sequence			NR_042188.1		99.5%
+  * Arenibacter troitsensis strain NBRC 101532 16S ribosomal RNA gene, partial sequence			NR_114004.1		99.4%
+
+* refseq_genomic
+  * Arenibacter algicola strain TG409 U735DRAFT_scf7180000000011_quiver.3_C, whole genome shotgun sequence	NZ_JPOO01000003.1	99.9% (x3)
+  * Arenibacter palladensis strain DSM 17539, whole genome shotgun sequence				NZ_FQUX01000024.1	99.7%
+  * Sediminicola sp. YIK13, complete genome								NZ_CP010535.1		93.7% + 93.2% + 93.2%
+
+* 16S
+  * Arenibacter palladensis strain LMG 21972 16S ribosomal RNA gene, complete sequence			NR_042188.1		99.5%
+  * Arenibacter troitsensis strain NBRC 101532 16S ribosomal RNA gene, partial sequence			NR_114004.1		99.4%
+  * Arenibacter echinorum strain KMM 6032 16S ribosomal RNA gene, partial sequence			NR_044271.1		99.4%
+  * Arenibacter hampyeongensis strain HP12 16S ribosomal RNA gene, partial sequence			NR_109412.1		97.9%
+  * Arenibacter troitsensis strain KMM 3674 16S ribosomal RNA gene, partial sequence			NR_024790.1		99.4%
+  * Arenibacter nanhaiticus strain NH36A 16S ribosomal RNA gene, partial sequence			NR_116526.1		95.8%
+  * Arenibacter latericius strain EI10 16S ribosomal RNA gene, partial sequence				NR_024893.1		92.9%
+  * Arenibacter certesii strain KMM 3941 16S ribosomal RNA gene, partial sequence			NR_025747.1		93.6%
+
+* Flexibacter aggregans > Flexithrix dorotheae
+
+* All three sequences - pb_359_8, Arenibacter algicola (NZ_JPOO01000003.1) and Flexithrix dorotheae (AB078039.1) - align VERY well together
+* Full tree - pb_359_8 assorts with Cellulophaga (sister to Arenibacter according to small tree); Flexithrix/Flexibacter same phylum (Bacteroidetes) but different
+class (Cytophagia)
+  * Most likely Arenibacter algicola
+
+## To do
+
+* 16S section of Results largely complete; round up and begin on analysis of pathway analysis

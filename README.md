@@ -7180,3 +7180,75 @@ class (Cytophagia)
 ## To do
 
 * 16S section of Results largely complete; round up and begin on analysis of pathway analysis
+
+# 4 April 2017
+
+## 16S
+
+* pb_359_2
+  * Roseovarius mucosus strain DFL-24 16S ribosomal RNA gene, complete sequence		NR_042159	99.8%
+  * Roseovarius tolerans strain EL-172 16S ribosomal RNA gene, partial sequence		NR_026405	95.7%
+  * Roseovarius marisflavi strain H50 16S ribosomal RNA gene, partial sequence		NR_125678	95.4%
+  * **Roseovarius mucosus** is the obvious best match
+
+* pb_359_3
+  * Loktanella vestfoldensis DSM 16212 genomic scaffold H147DRAFT_scaffold000XX.XX	NZ_ARNL00000000 99.8%
+  * Loktanella agnita strain R10SW5 16S ribosomal RNA gene, partial sequence		NR_043097	96.9%
+  * Loktanella maritima strain KMM 9530 16S ribosomal RNA gene, partial sequence	NR_126190	95.6%
+  * Loktanella salsilacus strain R-8904 16S ribosomal RNA gene, partial sequence	NR_025539	96.1%
+  * Loktanella fryxellensis strain LMG 22007 16S ribosomal RNA gene, partial sequence	NR_025607	95.6%
+  * Loktanella salsilacus strain NBRC 102486 16S ribosomal RNA gene, partial sequence	NR_114115	96.0%
+  * **Loktanella vestfoldensis** is the obvious best match
+
+* pb_359_4
+  * Sphingorhabdus sp. M41, complete genome						CP014545	99.5%
+  * Sphingopyxis flavimaris partial 16S rRNA gene, strain R-36742			FR691421	99.9%
+  * Sphingorhabdus marina DSM 22363, whole genome shotgun sequence			NZ_FSQW01000002	97.6%
+  * Sphingorhabdus pacifica strain n34 16S ribosomal RNA, partial sequence		NR_134813	95.6%
+  * Sphingopyxis marina strain FR1087 16S ribosomal RNA gene, partial sequence		NR_043954	98.1%
+  * **Sphingopyxis flavimaris** is the obvious best match (now **Sphingorhabdus flavimaris**)
+
+* pb_359_5
+  * See yesterday's results
+  * Marinobacter salarius has 99.4%/99.5% similarity, but **Marinobacter algicola** has 99.8%/99.9% similarity
+    * Some unnamed species have 99.9%/100% similarity
+
+* pb_359_6
+  * Sulfitobacter sp. SAG13 16S ribosomal RNA gene, partial sequence			KX268604			99.9%
+  * Sulfitobacter pseudonitzschiae strain H3 16S ribosomal RNA gene, complete sequence	KF006321			99.2%
+  * Staleya guttiformis gene for 16S ribosomal RNA, partial sequence, strain: R16	AB607871			99.2%
+  * Staleya guttiformis gene for 16S ribosomal RNA, partial sequence, strain: R28	AB607880			98.8%
+  * Sulfitobacter guttiformis strain PM-3 16S ribosomal RNA gene, partial sequence	JQ675546			98.5%
+  * Sulfitobacter donghicola strain DSW-25 16S ribosomal RNA gene, partial sequence	NR_044164			97.2%
+  * Sulfitobacter sp. 20_GPM-1509m N517DRAFT_scaffold00003.3_C, whole genome shotgun sequence	NZ_JIBC01000005		99.2%
+  * Sulfitobacter pseudonitzschiae strain DSM 26824, whole genome shotgun sequence	NZ_FQVP01000024			99.2%
+  * Sulfitobacter pseudonitzschiae strain H3 contig37, whole genome shotgun sequence	NZ_JAMD01000037			99.2%
+  * Sulfitobacter donghicola contig23_scaffold23, whole genome shotgun sequence		NZ_JAMC01000023			97.2%
+  * Sulfitobacter donghicola KCTC12864_contig5, whole genome shotgun sequence		NZ_JASF01000005			97.2%
+  * Sulfitobacter donghicola strain DSW-25 16S ribosomal RNA gene, partial sequence	NR_044164			97.2%
+  * Sulfitobacter dubius strain KMM 3554 16S ribosomal RNA gene, partial sequence	NR_025691			96.6%
+  * Roseobacter litoralis strain Och 149 16S ribosomal RNA gene, complete sequence	NR_074143			96.0%
+  * Sulfitobacter mediterraneus strain CH-B427 16S ribosomal RNA gene, partial sequence	NR_026472			96.6%
+  * Sulfitobacter delicatus strain KMM 3584 16S ribosomal RNA gene, partial sequence	NR_025692			96.2%
+  * Sulfitobacter geojensis strain MM-124 16S ribosomal RNA, partial sequence		NR_134204			96.3%
+  * Sulfitobacter noctilucicola strain NB-77 16S ribosomal RNA, partial sequence	NR_134206			96.2%
+  * Staleya guttiformis (Sulfitobacter guttiformis) a good hit, but so is **Sulfitobacter pseudonitzschiae** and that agrees with the PhyloPhlAn
+    * Still only 99.2%... Sulfitobacter sp. SAG13 99.9%
+
+* pb_359_7
+  * See yesterday's results
+  * **Antarctobacter heliothermus** is the obvious best match
+
+* pb_359_8
+  * See yesterday's results
+  * Both Flexibacter aggregans (Flexithrix dorotheae) and **Arenibacter algicola** scored 99.9%, but A. algicola agrees with PhyloPhlan
+
+## pb_359_6
+
+Still unconvinced re: identity of pb_359_6, given only 99.2% 16S identity
+* Create super-tree of ALL Rhodo species, named and unnamed
+  * pb_359_6 is a sister species to the clade S. pseudonitzschiae + S. sp. 20_GPM-1509m
+
+
+## To do
+Add siderophore predictions to report table

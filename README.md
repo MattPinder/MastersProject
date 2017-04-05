@@ -7252,3 +7252,10 @@ Still unconvinced re: identity of pb_359_6, given only 99.2% 16S identity
 
 ## To do
 Add siderophore predictions to report table
+
+# 5 April 2017
+
+
+Check GC content of Marinobacter species vs. pb_359_5
+
+Precedent for plasmids in Marinobacter/M. algicola?

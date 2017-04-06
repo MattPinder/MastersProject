@@ -7259,3 +7259,155 @@ Add siderophore predictions to report table
 Check GC content of Marinobacter species vs. pb_359_5
 
 Precedent for plasmids in Marinobacter/M. algicola?
+
+
+# 6 April 2017
+
+## To do today
+* Check GC contents
+* Precedent for Marinobacter/M. algicola plasmids?
+  * Precedent for plasmids in Marinobacter, but not specifically in M. algicola
+
+## GC content
+
+* pb_359_2
+  * Average 60.9%, chrom 60.9%, plas 60.1% + 58.3%
+  * Roseovarius mucosus DSM 17069 - 61.9% (25 contigs/17 scaffolds)
+
+* pb_359_3
+  * Average 60.7%, chrom 60.8%, plas 57.4% + 58.2%
+  * Loktanella vestfoldensis DSM 16212 - 61.8% (49 contigs/45 scaffolds)
+  * Loktanella vestfoldensis SKA53 - 59.9% (14 contigs/3 scaffolds)
+
+* pb_359_4
+  * Average 58.0%, chrom 58.0%
+  * Sphingorhabdus flavimaris - unknown
+    * Sphingorhabdus marina - 57.4%
+    * Sphingorhabdus sp. M41 - 56.7%
+
+* pb_359_5
+  * Average 57.0%, chrom 57.2%, plas 53.7%
+  * Marinobacter algicola DG893 - 57.0%
+
+* pb_359_6
+  * Average 59.5%, chrom 59.5%, plas 58.4% + 58.8% + 58.4% + 56.8% + 60.3% + 60.7% + 58.9%
+  * Sulfitobacter pseudonitzschiae H3 - 61.7%
+  * Sulfitobacter pseudonitzschiae DSM 26824 - 61.7%
+  * Sulfitobacter guttiformis KCTC 32187 - 56.1%
+
+* pb_359_7
+  * Average 61.5%, chrom 61.6%, plas 60.3% + 62.8% + 60.4%
+  * Antarctobacter heliothermus DSM 11445 - 62.68%
+  * Mameliella alba UMTAT08 - 65.0%
+  * Mameliella alba CGMCC 1.7290 - 65.2%
+
+* pb_359_8
+  * Average 39.8%, chrom 39.8%, plas 43.8%
+  * Arenibacter algicola TG409 - 39.7%
+  * Flexithrix dorotheae DSM 6795 - 36.3%
+
+## Genome sizes
+
+* pb_359_2
+  * Total 4,381,426, chrom 4,170,996, plas 180,135 + 30,295
+  * Roseovarius mucosus DSM 17069 - 4,247,720
+
+* pb_359_3
+  * Total 3,987,360, chrom 3,836,950, plas 111,030 + 39,380
+  * Loktanella vestfoldensis DSM 16212 - 3,721,600
+  * Loktanella vestfoldensis SKA53 - 3,066,850
+
+* pb_359_4
+  * Total 3,479,724, chrom 3,479,724
+  * Sphingorhabdus flavimaris - unknown
+    * Sphingorhabdus marina - 3,547,930
+    * Sphingorhabdus sp. M41 - 3,339,520
+
+* pb_359_5
+  * Total 4,630,160, chrom 4,386,892, plas 243,268
+  * Marinobacter algicola DG893 - 4,413,000
+
+* pb_359_6
+  * Total 5,121,602, chrom 3,572,445, plas 428,095 + 292,917 + 284,777 + 209,222 + 142,107 + 99,245 + 92,794
+  * Sulfitobacter pseudonitzschiae H3 - 4,945,290
+  * Sulfitobacter pseudonitzschiae DSM 26824 - 4,951,640
+  * Sulfitobacter guttiformis KCTC 32187 - 3,976,670
+
+* pb_359_7
+  * Total 5,331,190, chrom 4,723,013, plas 372,263 + 154,467 + 81,447
+  * Antarctobacter heliothermus DSM 11445 - 5,174,374
+  * Mameliella alba UMTAT08 - 5,837,380
+  * Mameliella alba CGMCC 1.7290 - 5,258,330
+
+* pb_359_8
+  * Total 5,857,781, chrom 5,793,053, plas 64,728
+  * Arenibacter algicola TG409 - 5,550,230
+  * Flexithrix dorotheae DSM 6795 - 9,536,820
+
+
+## Marinobacter
+
+* pb_359_5 very similar to both M. algicola and M. salarius in terms of G+C content and assembly size
+  * How do M. algicola and M. salarius compare to each other?
+    * Similar but not perfectly identical...
+
+| Trait                            | M. algicola                                        | M. salarius                              |
+|----------------------------------|----------------------------------------------------|------------------------------------------|
+| **Gram stain**                   | Negative                                           | Negative                                 |
+| **Oxidase**                      | Positive                                           | Positive                                 |
+| **Catalase**                     | Positive                                           | Positive                                 |
+| Spore forming?                   | No                                                 | ?                                        |
+| **Shape**                        | Rod                                                | Rod                                      |
+| Size                             | 1.6-2.5 x 0.45-0.55 um                             | 1.9-3.2 x 0.40-0.72 um                   |
+| Occurence                        | Single cells/pairs/short chains                    | ?                                        |
+| **Motility**                     | Single, non-sheathed, polar flagellum              | Single polar flagellum                   |
+| Growth in salt                   | 1-9%, 1-12% (optimal 3-6%)                         | 0.5-20% (none at 0% or 25%)              |
+| **Temperature**                  | 5-40C (optimal 25-30C)                             | 4-40C (optimal 25-30C)                   |
+| **pH**                           | 5-10 (optimal 7.5)                                 | 6-9 (optimal 7.5)                        |
+| **Nitrate/nitrite reduction**    | Negative                                           | Negative                                 |
+| **Aerobic growth**               | Positive                                           | Positive                                 |
+| Anaerobic growth                 | With nitrate and acetate, not glucose              | ?                                        |
+| **Hydrolysis**                   | Tweens 40 and 80 and starch, not gelatin or casein | Tweens 40 and 80 and starch, not gelatin |
+| Urease                           | Strain-dependent                                   | ?                                        |
+| Arginine dihydrolase activity    | Positive                                           | Negative                                 |
+| **Indole activity**              | Negative                                           | Negative                                 |
+| **B-glucosidase activity**       | Negative                                           | Negative                                 |
+| **B-galactosidase activity**     | Negative                                           | Negative                                 |
+| **Utilisation of glycerol**      | Positive                                           | Positive                                 |
+| **Utilisation of D-fructose**    | Positive                                           | Positive                                 |
+| Utilisation of D-glucose         | Positive                                           | Negative                                 |
+| **Utilisation of maltose**       | Positive                                           | Positive                                 |
+| Utilisation of D-mannitol        | Strain-dependent                                   | Negative                                 |
+| Utilisation of sucrose           | Negative                                           | Negative                                 |
+| Utilisation of citric acid       | Positive                                           | Negative                                 |
+| Utilisation of DL-lactic acid    | Positive                                           | Positive                                 |
+| Utilisation of cis-aconitic acid | Positive                                           | Negative                                 |
+| Utilisation of D-gluconic acid   | Positive                                           | Negative                                 |
+| Utilisation of L-alanine         | Strain-dependent                                   | Weakly positive                          |
+| Utilisation of L-leucine         | Positive                                           | Weakly positive                          |
+| Utilisation of L-phenylalanine   | Positive                                           | Negative                                 |
+| Utilisation of L-proline         | Positive                                           | Positive                                 |
+| Sole carbon/energy source        | n-hexadecane, n-tetradecane, other carbon sources  | ?                                        |
+| Main fatty acids                 | C16:0 (22.0%-25.5%)                                | C16:01                                   |
+|                                  | C16:1 w7 c/iso-C15:0 2-OH (19.5%-20.5%)            | C16:1 w7c                                |
+|                                  | C18:1 w9c (9.7%-11.5%)                             | C18:1 w9c                                |
+|                                  | C12:0 3-OH (8.7%-10.0%)                            | C18:1 w7c                                |
+| Principal isoprenoid quinone     | Q-9                                                | ?                                        |
+| G+C content                      | 54%-55%                                            | 57.1%                                    |
+
+
+Gene no.
+_5 - 4,277
+algicola - 3,960
+salarius - 3,036
+
+
+
+## To do
+* Work on Marinobacter [species] SMR5 submission
+* Email NCBI re: submission
+  * Waiting on response...
+* Check 16S on SILVA? Way to grab best hits?
+
+* Check through descriptions of Marinobacter for one that matches pb_359_5 character profile
+  * Double-check algicola and salarius papers for similar species with different flagellar structure?

@@ -7411,3 +7411,20 @@ salarius - 3,036
 
 * Check through descriptions of Marinobacter for one that matches pb_359_5 character profile
   * Double-check algicola and salarius papers for similar species with different flagellar structure?
+
+
+# 7 April 2017
+
+## Marinobacter
+
+Search for description papers of Marinobacter species, and see if they match the profile of pb_359_5
+* In particular, look for ones with a 'MF' (non-polar?) flagellum, and oxidase-negative
+
+(* Marinobacter koreensis - 16Ss shorter, but only 0-2 differences in the matching regions
+  * DQ097526.1 - 96% query cover, 2/3 mismatches, 0 gaps
+  * AB274772.1 - 80% query cover, 0/1 mismatches, 0 gaps
+  * JF789469.1 - 56% query cover, 1/2 mismatches, 1 gap
+
+* Amylase +++ in pb_359_5, but starch not hydrolysed in M. koreensis)
+
+* Redone capitals as far as M, start on N on Monday

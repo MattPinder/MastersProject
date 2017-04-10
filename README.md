@@ -7428,3 +7428,25 @@ Search for description papers of Marinobacter species, and see if they match the
 * Amylase +++ in pb_359_5, but starch not hydrolysed in M. koreensis)
 
 * Redone capitals as far as M, start on N on Monday
+
+
+# 10 April 2017
+
+## Marinobacter
+* MF = Multiple flagella
+* Oxidase test perhaps not the most reliable indicator (level of blueness in the stain is subjective)
+
+* Most common lipids in pb_359_5
+  * 16:0
+  * 16:1d?2
+  * 18:1d9
+  * 18:1d?1
+
+* Narrowed down results to those species which don't specify 'single flagellum'
+  * 16S vs nr/nt, top results for salarius, algicola, koreensis, adhaerens, similis; none in the shortlist...
+  * refseq_genomic, top results for algicola, salarius, adhaerens, lipolyticus, similis, subterrani, etc... lipolyticus is on the shortlist
+    * lipolyticus only 97.8% similar...
+  * 16S DB, top results algicola, adhaerens, flavimaris, sediminum, salsuginis, gudaoensis, etc... sediminum is on the shortlist
+    * sediminum only 97.1% similar...
+
+* Double-check colours and the agar type associated with them (pb_359_5 grown on MA)

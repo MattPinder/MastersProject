@@ -7450,3 +7450,43 @@ Search for description papers of Marinobacter species, and see if they match the
     * sediminum only 97.1% similar...
 
 * Double-check colours and the agar type associated with them (pb_359_5 grown on MA)
+
+# 11 April 2017
+
+## Marinobacter
+
+* Compare Marinobacter guineae to pb_359_5
+  * 16S - Massive 5' gaps in the alignment...
+  * 
+
+* Searches for 'variable flagellar number' always bring up eukaryotes and/or mutants, rather than wild strains
+
+* Marinobacter lutaoensis has 'one to several' polar flagella; precedent for subspecies...?
+
+* Searching random sequences of ~2000 bp in BLASTn (nr/nt)
+  * First 1920 bases - M. salarius, 1 substitution
+  * About 9000 bases in - M. salarius, 15 substitutions, 1 gap
+  * About 100,000 bases in - M. salarius, 6 substitutions, 1 gap
+  * About 200,000 bases in - M. salarius, 24 substitutions
+  * About 1,000,000 bases in - M. salarius, 42 substitutions
+  * About 2,000,000 bases in - M. salarius, 22 substitutions, 3 gaps
+  * About 3,000,000 bases in - Only short hits
+  * About 4,000,000 bases in - M. salarius, 95% identity, 97% query cover
+  * Almost at the end - M. salarius, 36 substitutions, 1 gap
+
+* Repeat with refseq_genomic
+  * First 1920 bases - M. salarius, 1 substitution
+    * M. algicola, 90% query cover, 93% identity
+  * About 9000 bases in - M. salarius, 15 substitutions, 1 gap
+    * M. algicola, 38 substitutions, 6 gaps
+  * About 100,000 bases in - M. salarius, 6 substitutions, 1 gap
+    * M. algicola, 100% query cover, 90% identity
+  * About 200,000 bases in - M. salarius, 24 substitutions
+    * M. algicola, 99% query cover, 93% identity
+  * About 1,000,000 bases in - M. salarius, 42 substitutions
+    * M. algicola, 99% query cover, 94% identity
+  * About 2,000,000 bases in - M. salarius, 22 substitutions, 3 gaps
+    * M. algicola, 100% query cover, 89% identity
+  * About 3,000,000 bases in - 
+
+* BLASTn results are starting to look like Marinobacter salarius rather than Marinobacter algicola

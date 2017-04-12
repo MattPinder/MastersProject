@@ -7393,12 +7393,12 @@ Precedent for plasmids in Marinobacter/M. algicola?
 |                                  | C18:1 w9c (9.7%-11.5%)                             | C18:1 w9c                                |
 |                                  | C12:0 3-OH (8.7%-10.0%)                            | C18:1 w7c                                |
 | Principal isoprenoid quinone     | Q-9                                                | ?                                        |
-| G+C content                      | 54%-55%                                            | 57.1%                                    |
+| G+C content                      | 54%-55% (NCBI says 57%                             | 57.1%                                    |
 
 
-Gene no.
-_5 - 4,277
-algicola - 3,960
+Gene no.:  
+_5 - 4,277  
+algicola - 3,960  
 salarius - 3,036
 
 
@@ -7487,6 +7487,52 @@ Search for description papers of Marinobacter species, and see if they match the
     * M. algicola, 99% query cover, 94% identity
   * About 2,000,000 bases in - M. salarius, 22 substitutions, 3 gaps
     * M. algicola, 100% query cover, 89% identity
-  * About 3,000,000 bases in - 
+  * About 3,000,000 bases in - Seems like a rearrangement has taken place; big gap in the middle where nothing is present... (490 to 1344 of the query)
+  * About 4,000,000 bases in - M. salarius, 97% query cover, 95% identity
+    * M. algicola, 100% query cover, 93% identity
+  * Almost at the end - 33 substitutions, 1 gap
+    * M. algicola, 99% query cover, 92% identity
+
+  * Beginning of plasmid - No matches...
+  * About 100,000 bases in - Marinobacter aquaeolei (now M. hydrocarbonoclasticus), 38% query cover, 75% identity
+  * About 200,000 bases in - No matches...
 
 * BLASTn results are starting to look like Marinobacter salarius rather than Marinobacter algicola
+
+# 12 April 2017
+
+## Marinobacter
+
+See whether there are core genes/pathways that will help to distinguish between the two Marinobacter species
+* Based on the fatty acid content, it appears most likely that pb_359_5 is M. salarius
+  * Another M. algicola 'type strain', M. algicola LMG 23835T, apparently has similar fatty acid stats...
+
+Identify unique pathways/proteins in M. algicola/salarius relative to each other, then see how many are shared by pb_359_5
+* M. algicola seems to share more unique pathways and proteins with pb_359_5, but M. salarius has more hypotheticals, so could be an annotation issue
+
+Based on the M. salarius announcement paper, compare gyrB and rpoD genes for each species vs. pb_359_5
+* Identity score
+
+|             | gyrB  | rpoD   |
+|-------------|-------|--------|
+| M. algicola | 99.4% | 99.7%  | (check DNA)
+| M. salarius | 99.9% | 99.8%* |
+
+* Similarity score
+
+|             | gyrB | rpoD  |
+|-------------|------|-------|
+| M. algicola | 100% | 100%  | (check DNA)
+| M. salarius | 100% | 100%* |
+
+* rpoD of M. salarius has been pseudogenised; 1 bp missing ~2/3 of the way through the gene
+  * Scores above reflect replacement of the deleted base
+
+On the basis of other gene markers (see Sims_and_Diffs.md file), it was decided that pb_359_5 should be classified as **M. salarius**
+
+
+
+# To do
+Is it possible to copy certain elements of a Git repository into a new repository, but retain their version history information?
+
+Begin process of registering BioSample for M. salarius SMR5

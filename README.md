@@ -7532,7 +7532,26 @@ On the basis of other gene markers (see Sims_and_Diffs.md file), it was decided 
 
 
 
-# To do
+## To do
 Is it possible to copy certain elements of a Git repository into a new repository, but retain their version history information?
 
 Begin process of registering BioSample for M. salarius SMR5
+
+# 13 April 2017
+
+## Marinobacter salarius strain SMR5
+* BioSample submitted - SAMN06718375
+* Next step: WGS
+  * Put the sequence files through the relevant checks
+
+* Consistency checker not working, but will attempt upload anyway and address issues if they are pointed out to me
+
+* Reads submitted to SRA; need to generate additional files in SMRT Portal
+
+## To do
+
+* Edit tbl conversion script to remove notes containing 'note From *.gb' and 'inference Similar to *.fasta' lines
+
+* Check pb_359_6 vs. Sulfitobacter pseudonitzschiae on gyrB, rpoB and rpoD for similarity, to determine if they are the same species
+
+* Check PhyloPhlAn results including all Alteromonadaceae (REMEMBER TO INCLUDE E. coli AND E. albertii OUTGROUP!)

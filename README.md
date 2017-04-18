@@ -7555,3 +7555,31 @@ Begin process of registering BioSample for M. salarius SMR5
 * Check pb_359_6 vs. Sulfitobacter pseudonitzschiae on gyrB, rpoB and rpoD for similarity, to determine if they are the same species
 
 * Check PhyloPhlAn results including all Alteromonadaceae (REMEMBER TO INCLUDE E. coli AND E. albertii OUTGROUP!)
+
+# 18 April 2017
+
+## M. salarius SMR5
+* Preparing to upload the supplementary material for this organism (pending accession no.)
+  * Example command for ftp transfer from Albiorix to laptop:
+    * rsync -hav matt@albiorix.bioenv.gu.se:/nobackup/data5/Skeletonema_marinoi_microbiome_project/SubmissionPreparations/MarSalSMR5/SRA/motif_summary.csv .
+
+* Check PhyloPhlAn - Aside from M. salarius and M. algicola, M. sp. C18, M. sp. MCTG268, M. sp. HL-58 and M. lipolyticus were also found in the clade
+
+* Try to find dmdD sequences from other Marinobacter species and BLAST against SMR5
+  * crt appears to fill the hole, according to Pathway Hole Filler
+
+## Species names
+* pb_359_2 - Roseovarius mucosus - final designation
+ * pb_359_3 - Loktanella vestfoldensis - very confident - check anyway
+ * pb_359_4 - Sphingorhabdus flavimaris - fairly confident - CHECK REQUIRED
+* pb_359_5 - Marinobacter salarius - final designation
+ * pb_359_6 - Sulfitobacter pseudonitzschiae - fairly confident - CHECK REQUIRED
+ * pb_359_7 - Antarctobacter heliothermus - fairly confident - CHECK REQUIRED
+ * pb_359_8 - Arenibacter algicola - very confident - check anyway
+
+* Find gyrB, rpoD and rpoB for all species
+  * Cannot reliably identify rpoD in pb_Â359_; try again later?
+
+* Search NCBI nucleotide database for Loktanella vestfoldensis rpoD, and go to the NZ_... contig and search for rpoD (may be under sigma subunit)
+* Run pairwise alignment on pb_359_3 vs DSM 16212 and SKA53, then DSM 16212 vs SKA53, and note the results in the appropriate file in 05_results/pb_359_3
+* Repeat the above for all species where possible

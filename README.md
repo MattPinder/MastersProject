@@ -7393,7 +7393,7 @@ Precedent for plasmids in Marinobacter/M. algicola?
 |                                  | C18:1 w9c (9.7%-11.5%)                             | C18:1 w9c                                |
 |                                  | C12:0 3-OH (8.7%-10.0%)                            | C18:1 w7c                                |
 | Principal isoprenoid quinone     | Q-9                                                | ?                                        |
-| G+C content                      | 54%-55% (NCBI says 57%                             | 57.1%                                    |
+| G+C content                      | 54%-55% (NCBI says 57%)                            | 57.1%                                    |
 
 
 Gene no.:  
@@ -7578,8 +7578,77 @@ Begin process of registering BioSample for M. salarius SMR5
  * pb_359_8 - Arenibacter algicola - very confident - check anyway
 
 * Find gyrB, rpoD and rpoB for all species
-  * Cannot reliably identify rpoD in pb_Â359_; try again later?
+  * Cannot reliably identify rpoD in pb_359_; try again later?
 
 * Search NCBI nucleotide database for Loktanella vestfoldensis rpoD, and go to the NZ_... contig and search for rpoD (may be under sigma subunit)
 * Run pairwise alignment on pb_359_3 vs DSM 16212 and SKA53, then DSM 16212 vs SKA53, and note the results in the appropriate file in 05_results/pb_359_3
 * Repeat the above for all species where possible
+
+# 19 April 2017
+
+## Marker genes
+* pb_359_3 - relatively low scores (>90%) but within the bounds of two strains' similarity to one another
+* pb_359_4 - only 16S available for Sphingorhabdus/Sphyngopyxis flavimaris, but this is a 99.9% similarity
+  * CHECK LIPIDS?
+* pb_359_6 - Marker genes were 100% identical between S. pseudoniitzschiae strains, but not identical to pb_359_6...
+  * Check lipids, re-think classification...
+
+* Complete pb_359_7/8
+
+# 20 April 2017
+
+## Marker genes
+* pb_359_7 - Only partial sequences available for gyrB and rpoB from A. heliothermus DSM 11445; nothing from EL-219, and nothing for rpoD
+  * Check lipids
+* pb_359_8 - >99% identity on all three markers found; rpoD not found in pb_359_8, but the three sequences in A. algicola TG409 differ a lot from one another
+  * Fairly confident on classification, but double-check lipids
+
+## Strain designations
+
+* SMR1 - Sulfitobacter (pb_359_6)
+* SMR3 - Roseovarius (pb_359_2)
+* SMR4r - Loktanella (pb_359_3)
+* SMR4y - Sphingorhabdus (pb_359_4)
+* SMR5 - Marinobacter (pb_359_5)
+* (SMR6w - Maribacter; N/A)
+* SMS3 - Antarctobacter (pb_359_7)
+* SMS7 - Arenibacter (pb_359_8)
+
+| Strain   | Prediction                     | Markers                                                                                                           |
+|----------|--------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| pb_359_3 | Loktanella vestfoldensis       | 99.8% identity on 16S; ~90% identity on gyrB, rpoB and rpoD, but same as between L. vestfoldensis strains         |
+| pb_359_4 | Sphingorhabdus flavimaris      | 99.9% identity on 16S; no other marker information available... (refseq_genomic BLASTn - best hit to S. M41)      |
+| pb_359_6 | Sulfitobacter pseudonitzschiae | 99.2% identity on 16S; ~50%-93% identity on gyrB, rpoB and rpoD, but 100% between S. pseudo strains               |
+| pb_359_7 | Antarctobacter heliothermus    | 99.5%/99.9% identity on 16S; 88.1% identity on gyrB, 92.6% on rpoB (both partial)                                 |
+| pb_359_8 | Arenibacter algicola           | 99.9% identity on 16S; >99% identity on gyrB and rpoB (refseq_genomic BLASTn - best hits to A. algicola and C-21) |
+
+* Re: G+C content - based on R. mucosus description paper, a G+C difference of +/- 2% appears to be acceptable between strains of the same species
+  * On the G+C content basis, all of the predictions qualify
+
+| Strain   | Prediction                     | Lipids                                                                      | G+C content                         |
+|----------|--------------------------------|-----------------------------------------------------------------------------|-------------------------------------|
+| pb_359_3 | Loktanella vestfoldensis       | Lipid composition similar to L. vestfoldensis AND L.salsilacus/fryxellensis | _3 = 60.8%; L. vest = 62.1% - 63.1% |
+| pb_359_4 | Sphingorhabdus flavimaris      | Not perfect but somewhat comparable                                         | _4 = 58.0%; S. flavi = 58%          |
+| pb_359_6 | Sulfitobacter pseudonitzschiae | ???                                                                         | _6 = 59.5%; S. pseudo = 61.7%       |
+| pb_359_7 | Antarctobacter heliothermus    | Lipid composition similar to A. heliothermus (and other similar species)    | _7 = 61.6%; A. helio = 62.3%        |
+| pb_359_8 | Arenibacter algicola           | Similar to A. algicola vs. other Arenibacter species, particularly C17:1    | _8 = 39.8%; A. algicola = 41.9%     |
+
+| Strain   | Prediction                     | Other comparisons                                                             | Conclusion                   |
+|----------|--------------------------------|-------------------------------------------------------------------------------|------------------------------|
+| pb_359_3 | Loktanella vestfoldensis       | Correct shape + colour (colour variable among Loktanella)                     | Loktanella vestfoldensis     | *
+| pb_359_4 | Sphingorhabdus flavimaris      | Correct shape + colour, growth temps slightly different (no genome available) | ?                            | *
+| pb_359_6 | Sulfitobacter pseudonitzschiae | Correct shape + colour, similar growth temps, assembly size + gene no.        | ?                            | *
+| pb_359_7 | Antarctobacter heliothermus    | Right shape, different colour, similar growth temps, assembly size + gene no. | ?                            | *
+| pb_359_8 | Arenibacter algicola           | Correct shape + colour (same for a lot of Arenibacter...)                     | Arenibacter algicola         | *
+
+* pb_359_6 stats, to compare with other Sulfitobacter species
+  * G+C = 59.9%
+  * Assembly size = 5,121,602 bp
+  * CDS = 4,967
+* No other Sulfitobacter species has such a large assembly size/so many CDS
+
+
+* S. pseudo strains - where were the two taken from?
+* Ns before/after Antarcto molecules to achieve same length of marker gene
+
+* All species and strain names now decided

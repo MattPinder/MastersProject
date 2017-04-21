@@ -7618,7 +7618,7 @@ Begin process of registering BioSample for M. salarius SMR5
 |----------|--------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | pb_359_3 | Loktanella vestfoldensis       | 99.8% identity on 16S; ~90% identity on gyrB, rpoB and rpoD, but same as between L. vestfoldensis strains         |
 | pb_359_4 | Sphingorhabdus flavimaris      | 99.9% identity on 16S; no other marker information available... (refseq_genomic BLASTn - best hit to S. M41)      |
-| pb_359_6 | Sulfitobacter pseudonitzschiae | 99.2% identity on 16S; ~50%-93% identity on gyrB, rpoB and rpoD, but 100% between S. pseudo strains               |
+| pb_359_6 | Sulfitobacter pseudonitzschiae | 99.2% identity on 16S; ~89%-93% identity on gyrB, rpoB and rpoD, but 100% between S. pseudo strains               |
 | pb_359_7 | Antarctobacter heliothermus    | 99.5%/99.9% identity on 16S; 88.1% identity on gyrB, 92.6% on rpoB (both partial)                                 |
 | pb_359_8 | Arenibacter algicola           | 99.9% identity on 16S; >99% identity on gyrB and rpoB (refseq_genomic BLASTn - best hits to A. algicola and C-21) |
 
@@ -7652,3 +7652,26 @@ Begin process of registering BioSample for M. salarius SMR5
 * Ns before/after Antarcto molecules to achieve same length of marker gene
 
 * All species and strain names now decided
+
+# 21 April 2017
+
+* Double-check features of pb_359_2 and pb_359_5 for completeness
+
+| Feature       | pb_359_2 vs R. mucosus                   | pb_359_5 vs M. salarius                                                       |
+|---------------|------------------------------------------|-------------------------------------------------------------------------------|
+| 16S           | 99.8% identity                           | 99.4/5% identity (99.9% vs. algicola)                                         |
+| gyrB          | 99.0% identity                           | 99.5% identity (94.1% vs. algicola)                                           |
+| rpoB          | 93.6% identity                           | 99.8% identity (95.6% vs. algicola)                                           |
+| rpoD          | 92.7% identity (0.3% gaps)               | 99.5% identity (95.4% vs. algicola)                                           |
+| Lipids        | Matches well (also to other Roseovarius) | M. salarius closest type strain; algicola non-type strain also close          |
+| G+C           | 60.85% vs. 61.90%/62.9%/60.9%            | 57.0% vs. 57.1% (57.0% vs. algicola)                                          |
+| Genome size   | 4.38 Mb vs. 4.24 Mb                      | 4.63 Mbp vs. 4.62 Mbp (4.41 Mbp vs. algicola)                                 |
+| # of genes    | 4,101 vs. 3,790                          | 4,277 vs. 2,973 (+ 1,352 pseudogenes) (3,960 (+ 63 pseudogenes) vs. algicola) |
+| Shape/colours | Pink/red rods vs. whitish/pink rods      | White rods vs. non-pigmented/creamy rods (creamy/beige vs. algicola)          |
+
+
+## To do
+
+WRITE UP A TUTORIAL (ALBIORIX WIKI) FOR NCBI SUBMISSION
+
+UPDATE # of CDS and other features for R. mucosus in report

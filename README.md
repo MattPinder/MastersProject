@@ -7675,3 +7675,27 @@ Begin process of registering BioSample for M. salarius SMR5
 WRITE UP A TUTORIAL (ALBIORIX WIKI) FOR NCBI SUBMISSION
 
 UPDATE # of CDS and other features for R. mucosus in report
+
+# 24 April 2017
+
+## Antarctobacter
+
+Genome size - 5,174,374 bp  
+No. of protein-coding genes - 5197
+
+## Alterations to be made to the pb_359_5 submission
+* MARSALSMR5_00556 (cspA ncRNA) removed, as completely overlapped the subsequent cspC cold shock protein gene (which matches the one in the type strain)
+* MARSALSMR5_01807 (cspA ncRNA) removed, as completely overlapped the subsequent cspA cold shock protein gene (which matches the one in the type strain)
+* MARSALSMR5_02982 (cspA ncRNA) removed, as completely overlapped the subsequent cspE cold shock protein gene (which matches the one in the type strain)
+
+* MARSALSMR5_02000 (bacteria_large_SRP) removed; two overlapping SRPs (large and small), and the bacteria_smalll_SRP is the same size as that in the type strain
+
+* MARSALSMR5_00224 and MARSALSMR5_00225 merged as a pseudogene
+* MARSALSMR5_00615 and MARSALSMR5_00616 merged as a pseudogene
+* MARSALSMR5_01194 and MARSALSMR5_01195 merged as a pseudogene (frameshift)
+* MARSALSMR5_02424 and MARSALSMR5_02425 merged as a pseudogene
+* MARSALSMR5_02441 and MARSALSMR5_02442 merged as a pseudogene
+* MARSALSMR5_03121 and MARSALSMR5_03122 merged as a pseudogene (frameshift)
+* MARSALSMR5_04217 / MARSALSMR5_04218
+
+Genome resubmitted

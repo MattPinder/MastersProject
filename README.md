@@ -7699,3 +7699,10 @@ No. of protein-coding genes - 5197
 * MARSALSMR5_04217 / MARSALSMR5_04218
 
 Genome resubmitted
+
+# 28 April 2017
+
+## pb_359_5
+Adjust figures based on the NCBI annotation
+* Only the chromosome has been processed so far; email NCBI if plasmid has not been processed by the end of the day
+

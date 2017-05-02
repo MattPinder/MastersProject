@@ -7706,3 +7706,34 @@ Genome resubmitted
 Adjust figures based on the NCBI annotation
 * Only the chromosome has been processed so far; email NCBI if plasmid has not been processed by the end of the day
 
+# 2 May 2017
+
+## pb_359_5
+* Data has now been released; re-check figures for features
+
+| Feature      | Chrom | Plas | Total |
+|--------------|-------|------|-------|
+| CDS (total)  | 3999  | 264  | 4263  |
+| Pseudo       | 6     | 1    | 7     |
+| Hypothetical | 577   | 178  | 755   |
+| Named        | 2411  | 40   | 2451  |
+| tRNA         | 51    | 0    | 51    |
+| rRNA         | 9     | 0    | 9     |
+| tmRNA        | 1     | 0    | 1     |
+| ncRNA        | 10    | 1    | 11    |
+| misc_binding | 0     | 0    | 0     |
+| Pathways     | -     | -    | 
+
+* Pathways at start - 261
+* Pathways after manual assignment - 
+* Pathways after Pathway Hole Filler - 
+
+## To do
+* Write Albiorix wiki page on NCBI submission
+* Work on thesis
+* Run enzyme assignment (make notes) and pathway hole filler on SMR5 (post-submission version)
+* Get .fna and .faa files for each genome
+* Look into making separate Git repositories for each species, inc. version history
+* Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
+  * May need to reinstate the Aspira workaround for Firefox
+* Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check

@@ -7737,3 +7737,31 @@ Adjust figures based on the NCBI annotation
 * Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
   * May need to reinstate the Aspira workaround for Firefox
 * Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check
+* Re-download the .faa files for each species, but replace locus data with replicon name
+  * One .fasta and .faa per species
+  * http://rocaplab.ocean.washington.edu/tools/genbank_to_fasta
+
+# 3 May 2017
+
+## Useful command
+* To add a pattern to the end of all fasta header lines
+  * `sed '/^>/ s/$/pattern/' file`
+
+## To do
+* Write Albiorix wiki page on NCBI submission
+* Work on thesis
+* Run enzyme assignment (make notes) and pathway hole filler on SMR5 (post-submission version)
+* Look into making separate Git repositories for each species, inc. version history
+* Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
+  * May need to reinstate the Aspira workaround for Firefox
+* Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check
+* Copy summary of all bacterial interesting features (inc. virus information) and send to Skeletonema group
+* Plot bacterial genomes as a circle (see Zostera chloroplast supplementary from Nature)
+* Loktanella genome submission
+
+## Done
+
+* Get .fna and .faa files for each genome
+* Re-download the .faa files for each species, but replace locus data with replicon name
+  * One .fasta and .faa per species
+  * http://rocaplab.ocean.washington.edu/tools/genbank_to_fasta

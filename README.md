@@ -7750,12 +7750,9 @@ Adjust figures based on the NCBI annotation
 ## To do
 * Write Albiorix wiki page on NCBI submission
 * Work on thesis
-* Run enzyme assignment (make notes) and pathway hole filler on SMR5 (post-submission version)
 * Look into making separate Git repositories for each species, inc. version history
 * Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
   * May need to reinstate the Aspira workaround for Firefox
-* Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check
-* Copy summary of all bacterial interesting features (inc. virus information) and send to Skeletonema group
 * Plot bacterial genomes as a circle (see Zostera chloroplast supplementary from Nature)
 * Loktanella genome submission
 
@@ -7765,3 +7762,32 @@ Adjust figures based on the NCBI annotation
 * Re-download the .faa files for each species, but replace locus data with replicon name
   * One .fasta and .faa per species
   * http://rocaplab.ocean.washington.edu/tools/genbank_to_fasta
+* Run enzyme assignment (make notes) and pathway hole filler on SMR5 (post-submission version)
+* Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check
+* Copy summary of all bacterial interesting features (inc. virus information) and send to Skeletonema group
+
+# 4 May 2017
+
+## pb_359_5
+
+* Pathways at start - 261
+* Pathways after manual assignment - 265
+* Pathways after Pathway Hole Filler - 270
+
+## Info to send to Skeletonema group
+* Ensure that pb_359 names are replaced with species + strain names
+
+* Information on interesting features (pathways + searches)
+* Information on secondary metabolite analysis
+* Information on viruses
+
+* Information compiled and sent
+
+## Remaining to-do list
+* Write Albiorix wiki page on NCBI submission
+* Work on thesis
+* Look into making separate Git repositories for each species, inc. version history
+* Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
+  * May need to reinstate the Aspira workaround for Firefox
+* Plot bacterial genomes as a circle (see Zostera chloroplast supplementary from Nature)
+* Loktanella genome submission

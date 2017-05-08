@@ -7791,3 +7791,14 @@ Adjust figures based on the NCBI annotation
   * May need to reinstate the Aspira workaround for Firefox
 * Plot bacterial genomes as a circle (see Zostera chloroplast supplementary from Nature)
 * Loktanella genome submission
+
+# 5 May 2017
+
+List actual genes present in each pathway/search result - Done
+Visualise Roseo + Lokta plasmids (and chromosome)
+
+# 8 May 2017
+
+## Circos
+Circular visualisation software for genomes download
+* Some issues with Perl modules on Windows; check where these are installed, so that the program can find them

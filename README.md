@@ -7802,3 +7802,7 @@ Visualise Roseo + Lokta plasmids (and chromosome)
 ## Circos
 Circular visualisation software for genomes download
 * Some issues with Perl modules on Windows; check where these are installed, so that the program can find them
+
+# 9 May 2017
+
+Finish formatting the last few thesis citations...

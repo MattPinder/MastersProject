@@ -7806,3 +7806,13 @@ Circular visualisation software for genomes download
 # 9 May 2017
 
 Finish formatting the last few thesis citations...
+
+# 10 May 2017
+
+Thesis work
+
+# 11 May 2017
+
+Thesis work
+
+

@@ -2,6 +2,9 @@
 
 #NCBI Downloader, version 3
 
+#Heavily inspired by genome_downloader.py (Almstedt, A.)
+#https://github.com/alvaralmstedt/python_genome_ref_collab/blob/master/genome_downloader.py
+
 #Import relevant modules
 
 import sys

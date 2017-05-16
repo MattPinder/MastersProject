@@ -7822,3 +7822,26 @@ Thesis work
 # 15 May 2017
 
 Thesis work
+
+# 16 May 2017
+
+## Thesis
+Updated to version 1.1 of thesis
+
+## Circos
+* Open Perl command line and change directory
+  * `cd C:\Users\matt_\Desktop\PROJECT\circos-0.69-5\bin`
+
+* Downloading required modules, as trying to run Circos as-is fails
+  * Requires CPAN module (found in Start folder for Strawberry Perl)
+  * Modules installed
+
+* Circos requires a .conf configuration file to specify what it is drawing
+  * Research required syntax
+
+* Tutorials downloaded; base syntax off of these?
+  * Read tutorials/find course info from the website
+  * http://circos.ca/tutorials/lessons/quick_guide/
+  * http://circos.ca/documentation/course/
+
+* Important first to know WHAT I'm intending to show...

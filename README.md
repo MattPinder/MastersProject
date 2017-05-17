@@ -7845,3 +7845,13 @@ Updated to version 1.1 of thesis
   * http://circos.ca/documentation/course/
 
 * Important first to know WHAT I'm intending to show...
+
+# 17 May 2017
+
+Thesis work
+
+## M. salarius strain SMR5 paper
+Added a few lines and references
+
+## GitLab repository readme
+Began updating the GitLab main readme

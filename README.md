@@ -7855,3 +7855,20 @@ Added a few lines and references
 
 ## GitLab repository readme
 Began updating the GitLab main readme
+
+# 18 May 2017
+
+Re-examine phosphate-related genes?
+Interkingdom quorum sensing?
+Choline uptake?
+* Genes labelled 'choline transporter' present in some genomes; check gene names
+
+
+
+
+BEfore summer: Get M. salarius paper submitted, and submit other genomes to NCBI
+Pathway Analysis of S marinoi + Thalassosira and phaeo
+
+Nature podcast - beneficial double knockout study (13 April)
+
+Useful link: http://www.nature.com.secure.sci-hub.io/articles/nmicrobiol201665

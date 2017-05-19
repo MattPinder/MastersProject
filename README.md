@@ -7866,9 +7866,18 @@ Choline uptake?
 
 
 
-BEfore summer: Get M. salarius paper submitted, and submit other genomes to NCBI
+Before summer: Get M. salarius paper submitted, and submit other genomes to NCBI
 Pathway Analysis of S marinoi + Thalassosira and phaeo
 
 Nature podcast - beneficial double knockout study (13 April)
 
 Useful link: http://www.nature.com.secure.sci-hub.io/articles/nmicrobiol201665
+
+# 19 May 2017
+
+## Pathway Tools
+Important note - Pathway Tools Cellular Overview poster output is in PostScript (.ps) format, so requires
+a program such as EPS/PS Viewer to view and convert to a conventional image type
+
+## Albiorix tutorials
+Continue work on the NCBI upload tutorial, while amending the Loktanella files

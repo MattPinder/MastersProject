@@ -7879,5 +7879,17 @@ Useful link: http://www.nature.com.secure.sci-hub.io/articles/nmicrobiol201665
 Important note - Pathway Tools Cellular Overview poster output is in PostScript (.ps) format, so requires
 a program such as EPS/PS Viewer to view and convert to a conventional image type
 
-## Albiorix tutorials
+## Albiorix tutorial
 Continue work on the NCBI upload tutorial, while amending the Loktanella files
+
+# 22 May 2017
+
+## Albiorix tutorial
+Next - amend Loktanella files and then continue the tutorial with Step 5
+
+# 23 May 2017
+
+## Loktanella vestfoldensis
+* "1635 genes overlap another gene on the same strand"!
+* Need to BLASTx overlapping genes to identify pseudogenes...
+* Run https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi on all three contigs

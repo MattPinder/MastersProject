@@ -7893,3 +7893,16 @@ Next - amend Loktanella files and then continue the tutorial with Step 5
 * "1635 genes overlap another gene on the same strand"!
 * Need to BLASTx overlapping genes to identify pseudogenes...
 * Run https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi on all three contigs
+
+# 24 May 2017
+
+## Marinobacter salarius
+Methylation data submitted via Albiorix
+* `ssh -X -Y username@albiorix.bioenv.gu.se`
+* `firefox &`
+
+## Loktanella vestfoldensis
+* Started methylation analysis of pb_359_3 ready for submission after genome is submitted
+* NCBI submission portal is claiming that there are sequence gaps...
+  * All sequences now accepted, unsure why it was claiming that there were gaps...
+* Require sudo rights to copy the raw reads from /home/smrtanalysis

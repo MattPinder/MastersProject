@@ -7906,3 +7906,15 @@ Methylation data submitted via Albiorix
 * NCBI submission portal is claiming that there are sequence gaps...
   * All sequences now accepted, unsure why it was claiming that there were gaps...
 * Require sudo rights to copy the raw reads from /home/smrtanalysis
+
+# 29 May 2017
+
+Thesis work
+
+# 30 May 2017
+
+Thesis work
+
+## To do
+Investigate genes claiming to be for 'toxin coregulated pilus biosynthesis' on Marinobacter plasmid?
+* May be wrongly-labelled secretion proteins, based on BLASTp of one of the genes

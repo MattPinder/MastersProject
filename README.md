@@ -7618,7 +7618,7 @@ Begin process of registering BioSample for M. salarius SMR5
 |----------|--------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | pb_359_3 | Loktanella vestfoldensis       | 99.8% identity on 16S; ~90% identity on gyrB, rpoB and rpoD, but same as between L. vestfoldensis strains         |
 | pb_359_4 | Sphingorhabdus flavimaris      | 99.9% identity on 16S; no other marker information available... (refseq_genomic BLASTn - best hit to S. M41)      |
-| pb_359_6 | Sulfitobacter pseudonitzschiae | 99.2% identity on 16S; ~50%-93% identity on gyrB, rpoB and rpoD, but 100% between S. pseudo strains               |
+| pb_359_6 | Sulfitobacter pseudonitzschiae | 99.2% identity on 16S; ~89%-93% identity on gyrB, rpoB and rpoD, but 100% between S. pseudo strains               |
 | pb_359_7 | Antarctobacter heliothermus    | 99.5%/99.9% identity on 16S; 88.1% identity on gyrB, 92.6% on rpoB (both partial)                                 |
 | pb_359_8 | Arenibacter algicola           | 99.9% identity on 16S; >99% identity on gyrB and rpoB (refseq_genomic BLASTn - best hits to A. algicola and C-21) |
 
@@ -7652,3 +7652,269 @@ Begin process of registering BioSample for M. salarius SMR5
 * Ns before/after Antarcto molecules to achieve same length of marker gene
 
 * All species and strain names now decided
+
+# 21 April 2017
+
+* Double-check features of pb_359_2 and pb_359_5 for completeness
+
+| Feature       | pb_359_2 vs R. mucosus                   | pb_359_5 vs M. salarius                                                       |
+|---------------|------------------------------------------|-------------------------------------------------------------------------------|
+| 16S           | 99.8% identity                           | 99.4/5% identity (99.9% vs. algicola)                                         |
+| gyrB          | 99.0% identity                           | 99.5% identity (94.1% vs. algicola)                                           |
+| rpoB          | 93.6% identity                           | 99.8% identity (95.6% vs. algicola)                                           |
+| rpoD          | 92.7% identity (0.3% gaps)               | 99.5% identity (95.4% vs. algicola)                                           |
+| Lipids        | Matches well (also to other Roseovarius) | M. salarius closest type strain; algicola non-type strain also close          |
+| G+C           | 60.85% vs. 61.90%/62.9%/60.9%            | 57.0% vs. 57.1% (57.0% vs. algicola)                                          |
+| Genome size   | 4.38 Mb vs. 4.24 Mb                      | 4.63 Mbp vs. 4.62 Mbp (4.41 Mbp vs. algicola)                                 |
+| # of genes    | 4,101 vs. 3,790                          | 4,277 vs. 2,973 (+ 1,352 pseudogenes) (3,960 (+ 63 pseudogenes) vs. algicola) |
+| Shape/colours | Pink/red rods vs. whitish/pink rods      | White rods vs. non-pigmented/creamy rods (creamy/beige vs. algicola)          |
+
+
+## To do
+
+WRITE UP A TUTORIAL (ALBIORIX WIKI) FOR NCBI SUBMISSION
+
+UPDATE # of CDS and other features for R. mucosus in report
+
+# 24 April 2017
+
+## Antarctobacter
+
+Genome size - 5,174,374 bp  
+No. of protein-coding genes - 5197
+
+## Alterations to be made to the pb_359_5 submission
+* MARSALSMR5_00556 (cspA ncRNA) removed, as completely overlapped the subsequent cspC cold shock protein gene (which matches the one in the type strain)
+* MARSALSMR5_01807 (cspA ncRNA) removed, as completely overlapped the subsequent cspA cold shock protein gene (which matches the one in the type strain)
+* MARSALSMR5_02982 (cspA ncRNA) removed, as completely overlapped the subsequent cspE cold shock protein gene (which matches the one in the type strain)
+
+* MARSALSMR5_02000 (bacteria_large_SRP) removed; two overlapping SRPs (large and small), and the bacteria_smalll_SRP is the same size as that in the type strain
+
+* MARSALSMR5_00224 and MARSALSMR5_00225 merged as a pseudogene
+* MARSALSMR5_00615 and MARSALSMR5_00616 merged as a pseudogene
+* MARSALSMR5_01194 and MARSALSMR5_01195 merged as a pseudogene (frameshift)
+* MARSALSMR5_02424 and MARSALSMR5_02425 merged as a pseudogene
+* MARSALSMR5_02441 and MARSALSMR5_02442 merged as a pseudogene
+* MARSALSMR5_03121 and MARSALSMR5_03122 merged as a pseudogene (frameshift)
+* MARSALSMR5_04217 / MARSALSMR5_04218
+
+Genome resubmitted
+
+# 28 April 2017
+
+## pb_359_5
+Adjust figures based on the NCBI annotation
+* Only the chromosome has been processed so far; email NCBI if plasmid has not been processed by the end of the day
+
+# 2 May 2017
+
+## pb_359_5
+* Data has now been released; re-check figures for features
+
+| Feature      | Chrom | Plas | Total |
+|--------------|-------|------|-------|
+| CDS (total)  | 3999  | 264  | 4263  |
+| Pseudo       | 6     | 1    | 7     |
+| Hypothetical | 577   | 178  | 755   |
+| Named        | 2411  | 40   | 2451  |
+| tRNA         | 51    | 0    | 51    |
+| rRNA         | 9     | 0    | 9     |
+| tmRNA        | 1     | 0    | 1     |
+| ncRNA        | 10    | 1    | 11    |
+| misc_binding | 0     | 0    | 0     |
+| Pathways     | -     | -    | 
+
+* Pathways at start - 261
+* Pathways after manual assignment - 
+* Pathways after Pathway Hole Filler - 
+
+## To do
+* Write Albiorix wiki page on NCBI submission
+* Work on thesis
+* Run enzyme assignment (make notes) and pathway hole filler on SMR5 (post-submission version)
+* Get .fna and .faa files for each genome
+* Look into making separate Git repositories for each species, inc. version history
+* Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
+  * May need to reinstate the Aspira workaround for Firefox
+* Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check
+* Re-download the .faa files for each species, but replace locus data with replicon name
+  * One .fasta and .faa per species
+  * http://rocaplab.ocean.washington.edu/tools/genbank_to_fasta
+
+# 3 May 2017
+
+## Useful command
+* To add a pattern to the end of all fasta header lines
+  * `sed '/^>/ s/$/pattern/' file`
+
+## To do
+* Write Albiorix wiki page on NCBI submission
+* Work on thesis
+* Look into making separate Git repositories for each species, inc. version history
+* Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
+  * May need to reinstate the Aspira workaround for Firefox
+* Plot bacterial genomes as a circle (see Zostera chloroplast supplementary from Nature)
+* Loktanella genome submission
+
+## Done
+
+* Get .fna and .faa files for each genome
+* Re-download the .faa files for each species, but replace locus data with replicon name
+  * One .fasta and .faa per species
+  * http://rocaplab.ocean.washington.edu/tools/genbank_to_fasta
+* Run enzyme assignment (make notes) and pathway hole filler on SMR5 (post-submission version)
+* Complete Probable Enzyme Table for MarSalSMR5 post-NCBI check
+* Copy summary of all bacterial interesting features (inc. virus information) and send to Skeletonema group
+
+# 4 May 2017
+
+## pb_359_5
+
+* Pathways at start - 261
+* Pathways after manual assignment - 265
+* Pathways after Pathway Hole Filler - 270
+
+## Info to send to Skeletonema group
+* Ensure that pb_359 names are replaced with species + strain names
+
+* Information on interesting features (pathways + searches)
+* Information on secondary metabolite analysis
+* Information on viruses
+
+* Information compiled and sent
+
+## Remaining to-do list
+* Write Albiorix wiki page on NCBI submission
+* Work on thesis
+* Look into making separate Git repositories for each species, inc. version history
+* Upload supplementary data for MarSalSMR5 to NCBI (from a different computer?)
+  * May need to reinstate the Aspira workaround for Firefox
+* Plot bacterial genomes as a circle (see Zostera chloroplast supplementary from Nature)
+* Loktanella genome submission
+
+# 5 May 2017
+
+List actual genes present in each pathway/search result - Done
+Visualise Roseo + Lokta plasmids (and chromosome)
+
+# 8 May 2017
+
+## Circos
+Circular visualisation software for genomes download
+* Some issues with Perl modules on Windows; check where these are installed, so that the program can find them
+
+# 9 May 2017
+
+Finish formatting the last few thesis citations...
+
+# 10 May 2017
+
+Thesis work
+
+# 11 May 2017
+
+Thesis work
+
+# 12 May 2017
+
+Thesis work
+
+# 15 May 2017
+
+Thesis work
+
+# 16 May 2017
+
+## Thesis
+Updated to version 1.1 of thesis
+
+## Circos
+* Open Perl command line and change directory
+  * `cd C:\Users\matt_\Desktop\PROJECT\circos-0.69-5\bin`
+
+* Downloading required modules, as trying to run Circos as-is fails
+  * Requires CPAN module (found in Start folder for Strawberry Perl)
+  * Modules installed
+
+* Circos requires a .conf configuration file to specify what it is drawing
+  * Research required syntax
+
+* Tutorials downloaded; base syntax off of these?
+  * Read tutorials/find course info from the website
+  * http://circos.ca/tutorials/lessons/quick_guide/
+  * http://circos.ca/documentation/course/
+
+* Important first to know WHAT I'm intending to show...
+
+# 17 May 2017
+
+Thesis work
+
+## M. salarius strain SMR5 paper
+Added a few lines and references
+
+## GitLab repository readme
+Began updating the GitLab main readme
+
+# 18 May 2017
+
+Re-examine phosphate-related genes?
+Interkingdom quorum sensing?
+Choline uptake?
+* Genes labelled 'choline transporter' present in some genomes; check gene names
+
+
+
+
+Before summer: Get M. salarius paper submitted, and submit other genomes to NCBI
+Pathway Analysis of S marinoi + Thalassosira and phaeo
+
+Nature podcast - beneficial double knockout study (13 April)
+
+Useful link: http://www.nature.com.secure.sci-hub.io/articles/nmicrobiol201665
+
+# 19 May 2017
+
+## Pathway Tools
+Important note - Pathway Tools Cellular Overview poster output is in PostScript (.ps) format, so requires
+a program such as EPS/PS Viewer to view and convert to a conventional image type
+
+## Albiorix tutorial
+Continue work on the NCBI upload tutorial, while amending the Loktanella files
+
+# 22 May 2017
+
+## Albiorix tutorial
+Next - amend Loktanella files and then continue the tutorial with Step 5
+
+# 23 May 2017
+
+## Loktanella vestfoldensis
+* "1635 genes overlap another gene on the same strand"!
+* Need to BLASTx overlapping genes to identify pseudogenes...
+* Run https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi on all three contigs
+
+# 24 May 2017
+
+## Marinobacter salarius
+Methylation data submitted via Albiorix
+* `ssh -X -Y username@albiorix.bioenv.gu.se`
+* `firefox &`
+
+## Loktanella vestfoldensis
+* Started methylation analysis of pb_359_3 ready for submission after genome is submitted
+* NCBI submission portal is claiming that there are sequence gaps...
+  * All sequences now accepted, unsure why it was claiming that there were gaps...
+* Require sudo rights to copy the raw reads from /home/smrtanalysis
+
+# 29 May 2017
+
+Thesis work
+
+# 30 May 2017
+
+Thesis work
+
+## To do
+Investigate genes claiming to be for 'toxin coregulated pilus biosynthesis' on Marinobacter plasmid?
+* May be wrongly-labelled secretion proteins, based on BLASTp of one of the genes

@@ -7918,3 +7918,77 @@ Thesis work
 ## To do
 Investigate genes claiming to be for 'toxin coregulated pilus biosynthesis' on Marinobacter plasmid?
 * May be wrongly-labelled secretion proteins, based on BLASTp of one of the genes
+
+# 31 May 2017
+Thesis work
+
+## To do
+Update Loktanella numbers on GitLab main README
+* After Assign Probable Enzymes - 309 pathways
+  * After Pathway Hole Filler - 317 pathways
+
+New Loktanella figures post-NCBI submission:
+* CDS - 3936
+* Named - 2180
+  * For finding named gene number in GenBank: `grep -A1 " CDS " filename.gb | grep "/gene=" | wc -l`
+* Hypothetical - 669
+* Pseudogenes - 8
+* tRNA - 45
+* tmRNA - 1
+* rRNA - 6
+* ncRNA - 19
+* Misc. binding - 0
+* Pathways - 317
+
+Proteins with assigned function for each species:
+* R. mucosus (pb_359_2) - 3542
+* L. vestfoldensis (pb_359_3) - 3267
+* S. flavimaris (pb_359_4) - 2530
+* M. salarius (pb_359_5) - 3508
+* S. pseudonitzsciae (pb_359_6) - 3919
+* A. heliothermus (pb_359_7) - 3948
+* A. algicola (pb_359_8) - 3515
+
+# 1 June 2017
+
+Thesis submitted
+
+R. mucosus SMR3 genome announcement published
+
+# 2 June 2017
+
+Thesis re-submitted with amended genome announcement reference
+
+## Immediate to-do list
+* Finish thesis defence PowerPoint
+
+## Future work
+* Complete genome papers for Marinobacter and Loktanella
+* Upload remaining genomes, starting with Sphingorhabdus
+  * BioSample for Sphingorhabdus registered
+
+## Useful time-saving tip for Falcon
+If you want to rerun an assembly with slightly different settings, remove/rename the 2-asm-falcon folder and rerun the script;
+the generation of preassembled reads etc. will be skipped
+
+## Useful website for drawing plasmid genomes
+http://ogdraw.mpimp-golm.mpg.de/index.shtml
+
+## Priority - Assembly of the S. marinoi RO5 chloroplast (and mitochondria?)
+### Chloroplast
+* Make a Blast DB out of the contigs of RO5 (/nobackup/data5/Skeletonema_marinoi_genome_project/01_Assembly/FALCON_1.8.2/RO5/seed_read_10k/10_2-asm-falcon/)
+* Query the database with the ST54 chloroplast genome (in home directory)
+* See section 2.2 of https://www.nature.com/article-assets/npg/nature/journal/v530/n7590/extref/nature16548-s1.pdf regarding assembly of chloroplast genome
+  * Assembly should have [end of IR region] [SSC region] [IR region] [LSC region] [start of IR region]
+  * Once this has been identified, paste inversion of IR region onto the end of the LSC region, and trim front end of SSC
+    * Start at beginning of first gene in SSC?
+
+### Mitochondria
+* Blast RO5 contigs vs. mitochondrial assembly from another diatom genome? (ST54 mito not available)
+
+### BLASTn results
+First BLASTn of ST54 chloroplast vs. RO5 database only got hits on a few small pieces of the chloroplast genome...
+* Attempt with a_ctg? Or p_ctg + a_ctg combined database?
+
+
+Search for bacterial respiration/sulfate-usage genes in Skeletonema genome

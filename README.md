@@ -7992,3 +7992,54 @@ First BLASTn of ST54 chloroplast vs. RO5 database only got hits on a few small p
 
 
 Search for bacterial respiration/sulfate-usage genes in Skeletonema genome
+
+# 7 June 2017
+
+Thesis defence complete!
+* Check reasons for phosphatidylcholine's (and succinoglycan's) importance in bacteria-eukaryote interactions
+
+## S. marinoi R05 chloroplast
+* How similar are diatom chloroplast genomes - can they be compared between S. marinoi and other species?
+  * [P. tricornutum and T. pseudonana (and Odontella sinensis) show similarities](https://doi.org/10.1007/s00438-006-0199-4)
+    * "The chloroplast genomes of the pennate diatom Phaeodactylum tricornutum and the centric diatom Thalassiosira pseudonana have been completely sequenced
+and are compared with those of other secondary plastids of the red lineage: the centric diatom Odontella sinensis, the haptophyte Emiliania huxleyi, and the
+cryptophyte Guillardia theta. All five chromist genomes are compact, with small intergenic regions and no introns. The three diatom genomes are similar in gene
+content with 127-130 protein-coding genes, and genes for 27 tRNAs, three ribosomal RNAs and two small RNAs (tmRNA and signal recognition particle RNA). All three
+genomes have open-reading frames corresponding to ORFs148, 355 and 380 of O. sinensis, which have been assigned the names ycf88, ycf89 and ycf90. Gene order is
+not strictly conserved, but there are a number of conserved gene clusters showing remnants of red algal origin. The acpP, tsf and psb28 genes appear to be on the
+way from the plastid to the host nucleus, indicating that endosymbiotic gene transfer is a continuing process."
+
+* BLASTn hits comparing ST54 chloroplast genome to database of RO5 contigs
+  * Best matches
+    * ~9.4 kb hit on a ~9.2 kb contig - complete contig
+      * 000341F 000049492:E~000049492:E~000212722:B~000212722:B ctg_linear 9210 2224
+    * ~7.4 kb hit (and ~1.5 kb hit) (slightly overlapped, so ~9 kb overall) on a ~9 kb contig - complete contig
+      * 000342F 000112110:E~000112110:E~000157366:B~000157366:B ctg_linear 9024 3901
+    * ~6.4 kb hit (and ~0.5 kb hit) (only slightly separated, so ~7 kb overall) on a ~12.7 kb contig - doesn't match complete contig...
+      * 000317F 000104389:E~000035561:B~000070978:E~000070978:E ctg_linear 12755 8869
+  * Okay matches
+    * 2x ~1 kb hits on a ~46.6 kb contig - these are inverted - IR region? (Only 1 kb; how long is IR supposed to be...?)
+      * 000198F 000187197:E~NA~000215021:B~000187197:E ctg_linear 46612 261070
+  * Other matches
+    * 33 bp hit on a ~1.3 mb contig
+      * 000013F 000334707:B~000344960:E~000029879:E~000339826:B ctg_linear 1344556 6153684
+    * 30 bp hit on a ~1.9 mb contig
+      * 000002F 000266224:B~000210826:B~000175585:B~000235253:E ctg_linear 1932284 8825238
+
+* Assuming that the three 'best match' contigs form the complete assembly (including areas not found by BLAST), this would give a ~20.7 kb construct
+  * ST54 chloroplast 127 kb...
+  * Adding the 'okay' match would only give a ~67.3 kb construct
+
+* Other diatom chloroplasts contain ~160 genes (genes in the IR are only counted once)
+  * ~4 overlapping genes
+  * 0 introns
+  * ~120 ATG start codons
+  * ~5 GTG start codons
+
+* BLASTn of RO5 contigs to self generates too big of an output file; try something else...
+
+## RO5 mitochondrion
+* **000198F 000187197:E~NA~000215021:B~000187197:E ctg_linear 46612 261070** appears to be a mitochondrial contig
+
+## To do
+Check the other two contigs of relatively low G+C content

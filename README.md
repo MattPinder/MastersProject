@@ -8043,3 +8043,21 @@ way from the plastid to the host nucleus, indicating that endosymbiotic gene tra
 
 ## To do
 Check the other two contigs of relatively low G+C content
+
+# 8 June 2017
+
+## S. marinoi organelles
+* Start a Materials and Methods file in a new Git repository - done
+  * See Zostera paper supplementary for structure (inc. SRL and other FALCON parameters, as these differ from the nuclear genome settings)
+* Ensure that chloroplast can circularise (19x SMRT cells vs. reversed reference in SMRT Portal)
+* Find diatom mitochondrial reference to check for S. marinoi mitochondrial genome
+* Map Illumina reads
+* Move on to annotation
+
+* Check sequencing tech used for pre-existing S. marinoi mito genome; if Illumina, may have been difficulty resolving repeats, which would explain apparent
+length diff vs. RO5
+* Check for S. marinoi mito genome paper
+
+* [Repeats in diatom mito genomes](http://www.sciencedirect.com/science/article/pii/S0378111911000527)
+
+* Mito circ tests submitted along with chloro; check in morning

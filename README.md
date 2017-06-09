@@ -8061,3 +8061,15 @@ length diff vs. RO5
 * [Repeats in diatom mito genomes](http://www.sciencedirect.com/science/article/pii/S0378111911000527)
 
 * Mito circ tests submitted along with chloro; check in morning
+
+# 9 June 2017
+
+All overnight SMRT Portal jobs failed due to lack of space
+* Jobs - 16707, 16708, 16713, 16714, 16716, 16717
+  * Compress and store these jobs elsewhere, then run them one at a time...
+  * Inadequate permissions...
+  * Enormous old microbiome project directory; tar and compress these files if possible
+* Files have been compressed and moved to data5 - move to e.g. sparc1?
+* Rerunning chloroplast reverse job; run jobs one at a time from now on
+  * File sizes currently 80G (016719) and 16K (016720-016723)
+  * Free space on partition1 - 232G

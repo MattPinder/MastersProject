@@ -8073,3 +8073,104 @@ All overnight SMRT Portal jobs failed due to lack of space
 * Rerunning chloroplast reverse job; run jobs one at a time from now on
   * File sizes currently 80G (016719) and 16K (016720-016723)
   * Free space on partition1 - 232G
+
+# 12 June 2017
+
+* SMRT Portal (reverse) jobs have all run; is the coverage convincing...?
+  * Re-running the short mitochondrial sequence (regular sequence) to check whether the full pattern is two peaks and one trough, or just one trough
+    * Should be complete ~1pm
+
+* sparc1 data11 - make microbiome folder, move old microbiome backups from data5 to new folder on sparc1 data11
+  * Permission denied, will need to get access
+
+* Check reads in SMRT View for chloro + mito, see if the low regions are consistently covered by full reads, if there are lots of errors, etc.
+  * Chloroplast - lots of red in the trough and second peak, first peak fairly has only ~1 red read
+  * Mito long - lots of red in the trough; some in the peaks
+  * Mito short - lots of red in the trough; some in the peaks
+
+* Rerun Falcon with different parameter values?
+  * Top chloroplast hits were achieved with 20k SRL
+    * 20k currently highest SRL; go higher?
+  * Top mito hits were achieved with 15k SRL
+    * But no better results were found in 20k...?
+
+
+* Set Map QV threshold in SMRT Portal Resequencing?
+
+* Coverage acceptable for chloroplast; realign so that sequence starts with start codon of first gene in SSR region?
+* Check CPGAVAS + DOGMA (see Zostera paper) for annotation of chloroplast
+  * DOGMA userid - Matt_Pinder2
+    * PW - *maets*
+  * CPGAVAS ID - 149725777623118
+    * Results relatively consistent with expectations from T. pseudonana and P. tricornutum
+      * Protein-coding genes - 125 (-10 = 115)
+      * tRNA - 32 (-3/4 = 28/29)
+      * rRNA - 6 (-3 = 3)
+    * IR regions - ccsA to trnP-TGG OR rrn16S
+      * Protein-coding genes - 10
+      * tRNA - 3 or 4
+      * rRNA - 3
+    * Some inconsistencies exist between CPGAVAS and DOGMA results
+      * CPGAVAS consistently includes extra codons at the end of a coding region cf. DOGMA
+        * This could be the result of CPGAVAS including the stop codon *, and DOGMA not
+
+* Mitochondrial genome coverage
+  * Many low quality reads mapping to certain mito regions, inc. large predicted deletions...
+  * Rerun Resequencing but set Mapping -> Maximum Divergence to 5%
+  * Need ~100G on partition1 before I can safely run the analysis...
+* Mitochondrial annotation?
+
+## Chloroplast gene content
+Conflicts between DOGMA and CPGAVAS
+
+| Position | DOGMA                                      | CPGAVAS            |
+|----------|--------------------------------------------|--------------------|
+| ~8630    | Two tufA hits with possible infB within    | tufA               |
+| ~10300   | -                                          | trnL-TAA           |
+| ~19700   | ycf46                                      | -                  |
+| ~21300   | rpl34                                      | -                  |
+| ~26000   | -                                          | trnL-TAG           |
+| ~26000   | rpl32                                      | -                  |
+| ~26800   | -                                          | rrn5S              |
+| ~31000   | ycf89                                      | -                  |
+| ~32000   | -                                          | trnP-TGG           |
+| ~34000   | ycf41                                      | -                  |
+| ~39000   | ycf90                                      | -                  |
+| ~42000   | secG overlapping ycf47                     | secG               |
+| ~48000   | -                                          | trnS-GCT, trnI-CAT |
+| ~48000   | ycf33                                      | -                  |
+| ~49000   | -                                          | trnT-TGT           |
+| ~52000   | psaM                                       | -                  |
+| ~74000   | ycf45                                      | -                  |
+| ~76000   | Three ycf42 hits with possible bas1 within | -                  |
+| ~78000   | psbB overlaid on psi_psbT                  | psbB               |
+| ~85000   | ycf16 overlaid on sufC                     | ycf16              |
+| ~86000   | Two ycf24 hits with possible sufB within   | ycf24              |
+| ~87000   | rbcLr and rbcSr                            | rbcL and rbcS      |
+| ~90000   | psbX                                       | -                  |
+| ~91000   | -                                          | trnR-CCG, trnM-CAT |
+| ~92000   | petF                                       | -                  |
+| ~97000   | -                                          | trnP-TGG           |
+| ~98000   | ycf89                                      | -                  |
+| ~104000  | -                                          | rrn5S              |
+| ~104000  | rpl32                                      | -                  |
+| ~104000  | -                                          | trnL-TAG           |
+| ~109000  | rpl34                                      | -                  |
+| ~110000  | ycf46                                      | -                  |
+| ~116000  | thiS and ycf40 hits overlaid               | -                  |
+| ~117000  | psb28                                      | -                  |
+| ~117000  | -                                          | psbW               |
+| ~124000  | ycf88                                      | -                  |
+| ~126500  | -                                          | rpl29              |
+
+
+* Line up RO5A chloroplast genome to match ST54, using the ST54-cp header as reference (incl. info such as SRL and other settings, location of features?)
+* Compare the two sequences to determine why there is an 84 bp disrepancy (and then check for seq. errors)
+  * Aligning ST54 and RO5A reveals that there are no massive gaps to account for the discrepancy; biggest gaps are only 4bp each
+  * Rerunning CPGAVAS with realigned sequence: ID no. 149727885030125
+    * Once complete, this should be saved as a GenBank file and drawn as a circle using OGDraw
+  * Rerunning DOGMA with realigned sequence: saved under Matt_Pinder2 login
+
+* Chloroplast genome (realigned) to be uploaded to genome browser for use at the jamboree; check file requirements (GFF or GBK?)
+* Take another look at the mitochondrial genome(s)...
+  * Get some kind of annotation...

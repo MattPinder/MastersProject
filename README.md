@@ -8174,3 +8174,37 @@ Conflicts between DOGMA and CPGAVAS
 * Chloroplast genome (realigned) to be uploaded to genome browser for use at the jamboree; check file requirements (GFF or GBK?)
 * Take another look at the mitochondrial genome(s)...
   * Get some kind of annotation...
+
+# 13 June 2017
+
+## Mito genome
+Rerunning (short) mito genome using 5% divergence threshold
+* Entirely unsuccessful...
+
+* Regarding the preliminary sequences, after corrections the new lengths are:
+  * Long - 46,734 bp
+  * Short - 46,377 bp
+* Most of this difference appears in large blocks of gaps
+  * Compared to JK029 mitochondrion (from Korea) - only 38,515 bp
+  * RO5 samples show 31.3% G+C, JK029 shows 29.7%
+
+## Organelles
+Copied files to data5 Skeletonema_marinoi_genome_project, under 08_RO5_Organelles
+* Files for the genome browser being saved under 08_RO5_Organelles/Chloroplast/Files_for_Browser
+
+* Files were using un-corrected reads... redownload and rerun
+  * Genome length now 127,193 - only 13 bp shorter than ST54
+  * Reannotating
+    * CPGAVAS - 149734343341758
+    * DOGMA - RO5_Chloroplast_Corrected_and_Realigned
+
+* BLAST search highlighted sequences close to mito of JK029
+  * Matches lower down the rankings may be the most accurate if the sequences are suitably diverged
+  * Retry with some other hits...
+    * Seed read 12k - 000272F 000003247:E~000116290:E~000099470:E~000003247:E ctg_linear 41646 198742
+  * Try rerunning the FALCON assemblies with higher SRL?
+
+* Attempting a preliminary annotation of mito genome with DOGMA produced very poor results...
+  * Attempting with MITOFY... Poor results again
+
+* Start manual curation of chloroplast genome

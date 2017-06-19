@@ -8208,3 +8208,40 @@ Copied files to data5 Skeletonema_marinoi_genome_project, under 08_RO5_Organelle
   * Attempting with MITOFY... Poor results again
 
 * Start manual curation of chloroplast genome
+
+# 14 June 2017
+
+Jamboree Day 1
+
+# 15 June 2017
+
+Jamboree Day 2
+* Examine coverage for primary vs. associated contigs on S. marinoi genome?
+
+# 16 June 2017
+
+Jamboree Day 3
+
+# 19 June 2017
+
+Priority - bacterial genomes or chloroplast?
+* Work on mitochondrion when memory allows
+
+* Compare cp intron-including gene models vs. transcript
+* Note which contigs of the reference genome assembly are from the chloroplast
+* Upload results to Git
+* Read mapping
+* Once annotation is ~complete, generate GenBank and run through OGDraw
+
+* Mito next week
+* Bacteria over the summer
+
+* Investigate possible LSC flippage vs. T. pseudonana
+  * Identify boundary
+  * Look at ycf1?
+  * Attempt to locate ffs (signal recognition particle RNA) after dnaB
+  * Attempt to locate ssra (tmRNA) between psbV and rpl19
+  * rRNA sequences out of sync with one another vs. T. pseudonana
+
+* CHECK ORIENTATIONS OF RRNAs
+* Write findings + M&M section

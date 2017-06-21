@@ -8238,10 +8238,68 @@ Priority - bacterial genomes or chloroplast?
 
 * Investigate possible LSC flippage vs. T. pseudonana
   * Identify boundary
-  * Look at ycf1?
-  * Attempt to locate ffs (signal recognition particle RNA) after dnaB
-  * Attempt to locate ssra (tmRNA) between psbV and rpl19
+  * DONE - Look at ycf1? - not apparently present
+  * DONE - Attempt to locate ffs (signal recognition particle RNA) after dnaB
+  * DONE - Attempt to locate ssra (tmRNA) between psbV and rpl19
   * rRNA sequences out of sync with one another vs. T. pseudonana
 
 * CHECK ORIENTATIONS OF RRNAs
 * Write findings + M&M section
+* MAUVE analysis
+
+# 21 June 2017
+
+Additional annotation notes:
+* First trnM-CAT (~61,000) appears to be false positive as too long and not present in T. pseudonana (or S. costatum apparently)
+* Determine orientation of rRNAs
+* Prokka labels ycf46 as ftsH - investigate
+* Prokka labels rbcR as cysL - investigate
+* Prokka labels ycf39 as azoB - investigate
+* psbL not predicted by Prokka...
+* ycf33 not predicted by Prokka...
+* Check sequences, e.g. of ftsH (~63,000)
+* rpl33 not predicted by Prokka...
+* Prokka labels dnaB as dnaC - investigate
+* Prokka labels atpD as atpH - investigate
+* Prokka labels atpH as atpE - investigate
+* Prokka labels atpI as atpB - investigate
+* 
+
+trnL-CAA missing
+trnL-TAG present instead (twice)
+2 trnM-CAT (outside of repeat region!)
+Repeat region - trnP-TGG, trnI-GAT, trnA-TGC, trnL-TAG
+trnI-CAT -> trnM-CAT?
+
+Run chloroplast genome through Prokka to get second opinion on the tRNAs?
+* Prokka supports current rRNA orientation
+How to verify tRNAs and rRNAs
+
+
+
+In S. marinoi, check region:
+* trnP-TGG and psaJ (44742-45057)
+* psaA and trnP-TGG (97727-109102)
+
+In T. pseudonana, check region between:
+* psaJ and trnP-TGG (65074-65404)
+* trnP-TGG and psaA (128661-2401)
+
+
+Cut point 44887-44888 and 108953-108954, about 75bp from trnP-TGG
+
+Deletions:
+* T deletion @ 70,127-70,128 (rpl33)
+* A deletion @ 71,629-71,630 (rpoB)
+* T deletion @ 117,274-117,275 (rbcR)
+* T (or C) deletion @ 122,109-122,110 (ycf46)
+
+Inverted repeats between trnP-TGG and ccsA
+
+BLASTp all protein sequences 'to identify obvious errors'
+
+Decrease MAUVE resolution for general overview?
+* DL Fragilariopsis and MAUVE align with the others (+ Phaeo)
+  * DL other diatom genomes
+  * Individual RO5 alignments?
+* Are there any genes on the break point where the inversion occurs?

@@ -8265,10 +8265,10 @@ Additional annotation notes:
 * Prokka labels atpI as atpB - investigate
 * 
 
-trnL-CAA missing
-trnL-TAG present instead (twice)
-2 trnM-CAT (outside of repeat region!)
-Repeat region - trnP-TGG, trnI-GAT, trnA-TGC, trnL-TAG
+trnL-CAA missing  
+trnL-TAG present instead (twice)  
+2 trnM-CAT (outside of repeat region!)  
+Repeat region - trnP-TGG, trnI-GAT, trnA-TGC, trnL-TAG  
 trnI-CAT -> trnM-CAT?
 
 Run chloroplast genome through Prokka to get second opinion on the tRNAs?
@@ -8303,3 +8303,68 @@ Decrease MAUVE resolution for general overview?
   * DL other diatom genomes
   * Individual RO5 alignments?
 * Are there any genes on the break point where the inversion occurs?
+
+# 22 June 2017
+
+Get other diatom cp-genomes
+* Fragilariopsis cylindrus (FIND!)
+* Pseudo-nitzschia multiseries
+* Eunotia naegelii
+* Fistulifera solaris
+* Didymosphenia geminata
+* etc...
+
+-----
+T. pseudonana
+
+cgtaaa ataaaaaact ctaataaaaa  
+ttcgctaatt attgtttatt aacagtgtaa tttaattgta agacaaaaaa ttgt
+
+acaatttttt gtcttacaat taaattacac  
+tgttaataaa caataattag cgaattttta ttagagtttt ttattttacg
+
+-----
+
+In T. pseudonana, the 80 bp leading from trnP-UGG to the end of the IR is the same (albeit inverted) in both instances
+* Check vs. S. marinoi
+* In P. tricornutum, this region is 110bp long
+
+-----
+
+Phaeo
+
+a gtcaaagact cattaaattg aagttttcaa aatacccaca  
+cccatgataa cgaatttctt gaaattagac aaggtttaaa attgttttga aaattctaag  
+caagaatta
+
+taattc ttgcttagaa ttttcaaaac aattttaaac cttgtctaat  
+ttcaagaaat tcgttatcat gggtgtgggt attttgaaaa cttcaattta atgagtcttt  
+gact
+
+-----
+
+* Low 'unmatched' areas of RO5 vs T. pseudonana in MAUVE correspond to the IR - why?
+
+Suspected extent of IR:
+* 26,644 - 44,887 (18,244 bp)
+* 108,954 - 127,193 (18,240 bp)
+
+Thalassiosira pseudonana's IR region is 18,337 bp, so this would appear accurate
+
+* RO5 SSC - 26,643
+* RO5 LSC - 64,066
+
+Total length - 127,193
+
+-26,643----18,244----64,066----18,240-
+
+| Feature | RO5           | T. pseudonana | P. tricornutum |
+|---------|---------------|---------------|----------------|
+| Genome  | 127,193       | 128,814       | 117,369        |
+| IR      | 18,240/18,244 | 18,337        | 6,912          |
+| SSC     | 26,643        | 26,889        | 39,871         |
+| LSC     | 64,066        | 65,250        | 63,674         |
+
+* Any other mention of non-identical inverted repeats?
+
+* ST54 IRs same length and identical...

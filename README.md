@@ -8346,25 +8346,102 @@ gact
 * Low 'unmatched' areas of RO5 vs T. pseudonana in MAUVE correspond to the IR - why?
 
 Suspected extent of IR:
-* 26,644 - 44,887 (18,244 bp)
-* 108,954 - 127,193 (18,240 bp)
+* IRa (ends with rps16) - 108,954 - 4 (18,244 bp)
+* IRb - 26,640 - 44,887 (18,248 bp)
 
 Thalassiosira pseudonana's IR region is 18,337 bp, so this would appear accurate
 
-* RO5 SSC - 26,643
+* RO5 SSC - 26,635
 * RO5 LSC - 64,066
 
 Total length - 127,193
 
--26,643----18,244----64,066----18,240-
+-26,635----18,248----64,066----18,244-
 
 | Feature | RO5           | T. pseudonana | P. tricornutum |
 |---------|---------------|---------------|----------------|
 | Genome  | 127,193       | 128,814       | 117,369        |
-| IR      | 18,240/18,244 | 18,337        | 6,912          |
-| SSC     | 26,643        | 26,889        | 39,871         |
+| IR      | 18,244/18,248 | 18,337        | 6,912          |
+| SSC     | 26,635        | 26,889        | 39,871         |
 | LSC     | 64,066        | 65,250        | 63,674         |
 
 * Any other mention of non-identical inverted repeats?
 
 * ST54 IRs same length and identical...
+
+# 26 June 2017
+
+Why is MAUVE not showing similarity in the inverted repeat regions?
+* Align the repeats of RO5 and T. pseudonana (and P. tricornutum)
+* Regions to align (approximate)
+  * RO5 - 30,456 - 44,726 / 108,894 - end
+  * T. pseudonana (realigned) - 30,743 - 45,301 / 110,618 - end
+  * P. tricornutum (realigned) - 27,200 - 37,256 / 100,370 - end
+* Trimming one IR from the end of the sequence fixes the issue (see 'Conserved Gene Order and Expanded Inverted Repeats
+Characterize Plastid Genomes of Thalassiosirales')
+  * Using mauveAligner instead of progressiveMauve (mauveAligner used in other chloroplast papers) shows the inverted repeats
+aligned incorrectly UNLESS one is removed as above...
+
+* T. pseudonana (unaligned) region to include: 83581- + -65250
+
+* Does IR overlap the RO5 wraparound? i.e. Does it include part of rps16?
+  * IR extends 4bp into rps16 (cf. 8bp in T. pseudonana)
+
+* New limits for IRs in RO5
+  * IRa (ends with rps16) - 108,954 - 4 (18,244 bp)
+  * IRb - 26,640 - 44,887 (18,248 bp)
+  * Numbers above corrected
+
+| Feature | **IR can't overlap gene**   | IR can overlap gene              |
+|---------|-----------------------------|----------------------------------|
+| SSC     | 1 -> 26,643 = 26,643        | 5 -> 26,639 = 26,635             |
+| IRb     | 26,644 -> 44,887 = 18,244   | 26,640 -> 44,887 = 18,248        |
+| LSC     | 44,888 -> 108,953 = 64,066  | 44,888 -> 108,953 = 64,066       |
+| IRa     | 108,954 -> 127,193 = 18,240 | 108,954 -> 127,193 -> 4 = 18,244 |
+|         | Accept for now              |                                  |
+
+
+Can't access SMRT Portal...
+* When available, try to delete failed jobs to make room for mitochondrial analyses
+
+* Q1 - Does the SSC region start with the stop codon of rps16, or does it start 5bp into the gene?
+  * Appear to be some instances of a chloroplast gene straddling this boundary (e.g. T. pseudonana)
+* Q2 - Should one IR be removed from MAUVE alignment in order to show the alignment of the IRs?
+  * When old MAUVE is used and one IR isn't removed, MAUVE aligns them in reverse... 
+
+* Cut each sequence to start with the SSC (disregarding the gene overlap), and removing IRa
+  * RO5 (aligned to rps16)	- 5 -> 108,953 (108,949 bp)
+  * T. pseudonana (unaligned)	- 83,589 -> 128,814 -> 65,250 ()
+  * P. tricornutum (unaligned)	- 70,587 -> 117,369 -> 63,674 ()
+
+* Unless P. tricornutum can be included and the IRs remain, use OLDMAUVE_RO5_Thala
+
+* **Double-check and tidy up RNA start/stop**
+
+
+
+
+(* Check reasons for phosphatidylcholine's (and succinoglycan's) importance in bacteria-eukaryote interactions)
+
+## Mitochondrial assembly attempt
+* Trying a 17k SRL mito assembly
+  * overlap_filtering_setting = --max_diff 70 --max_cov 110 --min_cov 5 --bestn 10 --n_core 6
+
+* Trying a resequencing based on another potential hit from 12k SRL data set
+  * 000272F 000003247:E~000116290:E~000099470:E~000003247:E ctg_linear 41646 198742
+
+* Would running one of the Resequencing results through Resequencing again be able to confirm if the result from before was accurate?
+  * Before - After
+    * Short (16723): 46611 - 46377
+    * Long (16721): 46929 - 46734
+    * Third (16730): 41646 - 
+
+* Others to try from pre-existing assemblies?:
+  * Length 46612
+  * Length 46608
+
+## To do
+* Check on new mitochondrial assembly attempt - FALCON
+* Check on mitochondrial circularisation attempt - SMRT Portal
+  * Should one of the previous attempts be rerun as a further polishing attempt?
+* Check all chloroplast RNAs vs. T. pseudonana

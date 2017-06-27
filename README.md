@@ -8434,14 +8434,46 @@ Can't access SMRT Portal...
   * Before - After
     * Short (16723): 46611 - 46377
     * Long (16721): 46929 - 46734
-    * Third (16730): 41646 - 
+    * Third (16730): 43570 - 43595
 
 * Others to try from pre-existing assemblies?:
-  * Length 46612
-  * Length 46608
+  * Length 46612 - number_5
+  * Length 47628 - number_4
+  * Length 41543 - 17k_1
 
 ## To do
 * Check on new mitochondrial assembly attempt - FALCON
 * Check on mitochondrial circularisation attempt - SMRT Portal
   * Should one of the previous attempts be rerun as a further polishing attempt?
 * Check all chloroplast RNAs vs. T. pseudonana
+
+# 27 June 2017
+
+## Chloroplast
+* tRNAs seem to line up with T. pseudonana
+* rRNAs seem to line up with T. pseudonana
+* ssrA seems to line up with T. pseudonana
+* ffs seems to line up with T. pseudonana
+  * Sequences should be BLASTed, as there appear to be substitutions...
+
+* PROKKA predicts ccsA to be much longer; investigate
+  * May be other examples
+    * psbC
+* DONE - Add locations of IRs, SSC and LSC
+* DONE - Revise locus tags (renumber to include those skipped by PROKKA)
+* Check product names/sequences
+* DONE - Add gene names to tRNAs?
+* Make final decision on strange trnM-CAT
+
+## Mitochondrion
+Circularisation attempt in SMRT Portal poor...
+
+Running new attempts:
+* number_4 - job 16736 (done)
+* number_5 - job 16737 (check tomorrow)
+* 17k_1 - job 16738
+
+## TO DO
+* RETRY OGDRAW WITH CHLORO_RO5.GBK
+* Check number_5 job and kick off 17k_1 job
+* Investigate remaining issues with chloroplast annotation

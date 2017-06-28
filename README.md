@@ -8426,6 +8426,7 @@ Can't access SMRT Portal...
 ## Mitochondrial assembly attempt
 * Trying a 17k SRL mito assembly
   * overlap_filtering_setting = --max_diff 70 --max_cov 110 --min_cov 5 --bestn 10 --n_core 6
+  * Good hit: 000019F 000024568:E~000030828:B~000005413:B~000024568:E ctg_linear 41543 158632
 
 * Trying a resequencing based on another potential hit from 12k SRL data set
   * 000272F 000003247:E~000116290:E~000099470:E~000003247:E ctg_linear 41646 198742
@@ -8477,3 +8478,30 @@ Running new attempts:
 * RETRY OGDRAW WITH CHLORO_RO5.GBK
 * Check number_5 job and kick off 17k_1 job
 * Investigate remaining issues with chloroplast annotation
+
+# 28 June 2017
+
+## Mitochondrion
+* Number 4	- Still an area of low coverage, though off to one side...
+* Number 5	- Still an area of low coverage in the centre
+* 17k_1		- Not terrible but still questionable...
+
+* Starting 17k_2 (overlap_filtering_setting = --max_diff 400 --max_cov 2200 --min_cov 5 --bestn 10 --n_core 6)
+* Good hit same stats as previous run - 000022F 000024568:E~000030828:B~000005413:B~000024568:E ctg_linear 41543 158632
+  * 17k_1 -				000019F 000024568:E~000030828:B~000005413:B~000024568:E ctg_linear 41543 158632
+
+* Starting 17k_3 (overlap_filtering_setting = --max_diff 800 --max_cov 1200 --min_cov 5 --bestn 10 --n_core 6)
+* Good hit same stats as previous runs - 000021F 000024568:E~000030828:B~000005413:B~000024568:E ctg_linear 41543 158632
+
+* Switch to 18k?
+  * 18k job running...
+
+* In SMRT Portal, running a re-reversed second Quiver of 17k_1, after first run (16743)
+  * Consider running the direct output of first round as well?
+    * Dip is in the centre so long reads needed to correct the trough...
+  * Second round appears to have improved coverage. Try one more round?
+
+* Run an annotation on the current mitogenome (Prokka?) and see WHERE the problem area is
+  * Problem area does appear to be repeat region; align multiple assembly attempts and see whether this accounts for all potential errors
+* Experiment with 18k SRL Falcon once it has finished
+  * Try other parameter values for 17k (not ones taken from the previous experiments which gave identical results to one another...)

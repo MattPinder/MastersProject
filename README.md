@@ -8505,3 +8505,57 @@ Running new attempts:
   * Problem area does appear to be repeat region; align multiple assembly attempts and see whether this accounts for all potential errors
 * Experiment with 18k SRL Falcon once it has finished
   * Try other parameter values for 17k (not ones taken from the previous experiments which gave identical results to one another...)
+
+# 29 July 2017
+
+## Mitochondrion
+Aligning corrected sequences to see whether the coverage dips are consistently in the repeat region (6kb - 6.1kb into the sequence of 17k_1_quiver2)
+* 17k_1_quiver2 used as reference (41,522 bp)
+  * vs. 17k_1 (41,522 bp)	- Same length, 2 gaps...
+  * vs. Short (46,377 bp)	- Big gap at 7,196 (on 17k_1), of around 5kb, with a few smaller gaps after
+  * vs. Long (46,734 bp)	- One ~50bp gap at 4,649 (on 17k_1), then big gap at 5,338 of around 5kb
+  * vs. Third (43,595 bp)	- Big gap at 5,320 (on 17k_1), of around 2kb
+  * vs. Fourth (47,656 bp)	- Big gap at 7,196 (on 17k_1), of around 6kb
+  * vs. Fifth (46,365 bp)	- Big gap at 7,196 (on 17k_1), of around 5kb, with a few smaller gaps after
+* Aligning these large multi-kb gaps shows that the gaps are, indeed, repeats
+  * In reference, spans from 4,458 (or 4,533) - 7,196
+
+* 18k attempt also started - job 16746 - still a dip in the repeat region (41,521 bp)
+  * Three diffs vs. 17k_1_quiver2
+* 19k attempt waiting to start - job 16747 - big, strange dip in repeat region (38,922 bp)
+* Rerunning 17k_1 in Resequencing but with 10k minimum polymerase read length - job 16748 - still a dip in the repeat region (41,521 bp)
+  * Three diffs vs. 17k_1_quiver2
+
+
+* "In T. pseudonana, the enzyme that catalyzes the first step of the urea cycle [carbamoyl phosphate synthase (CPS III)]
+   appears to be targeted to mitochondria (table S4)"
+  * http://science.sciencemag.org/content/306/5693/79
+  * No apparent evidence of CPS in S. marinoi mitochondrial genome
+    * Possibly in P. tricornutum
+
+* Run another job through Quiver a second time to determine where issues lie - indels in the genome or just the repeat region?
+  * Run third through Quiver again - closest in length to T. pseudonana - Job 16750
+    * Maybe run fourth through later as it is the longest? - Job 16751
+
+* Repeat sequence	- GAAACACGATTTGAGCCTTATAGGGTACCATATAATGCATTATGGCTTAGACCCTTATAGCATAAGGCTCTGTT
+  * Possibly		- GAGCCTTATAGGGTACCATATAATGCATTATGGCTTAGACCCTTATAGCATAAGGCTCTGTTGAAACACGATTT
+* In T. pseudonana	- GAGGTCCGATTTAAGCCGTTTGTAGAACGGATATTTCACACTATGTGAAATACCCGTTTGTAGAACGGGTATTTT
+  * Reportedly		- AAGCCGTTTGTAGAACGGATATTTCACACTATGTGAAATACCCGTTTGTAGAACGGGTATTTTGAGGTCCGATTT
+
+
+* When done, compare quiver2 Third (16750) with quiver2 17k_1
+  * Do the same for quiver2 Fourth (16751) as well
+
+
+## Preliminary annotation
+* Loci 5 and 6 (subunit L) appear to be two parts of the same protein?
+* 13-15 false positive?
+* 16 and 17 (subunit N) appear to be two parts of the same protein?
+* 40 and 41 (subunit H/8) appear to be two parts of the same protein?
+* 32 false positive?
+* 55-57 (chain 3/subunit G) appear to be three parts of the same protein?
+* 62 and 63 (chain 5) appear to be two parts of the same protein?
+* 64 and 65 (subunit D) appear to be two parts of the same protein?
+* 66 and 67 (cytochrome b) appear to be two parts of the same protein?
+* 70 false positive?
+* Check wraparound...

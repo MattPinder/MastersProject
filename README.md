@@ -8579,8 +8579,16 @@ Aligning corrected sequences to see whether the coverage dips are consistently i
 * Sequences flanking repeat region (search term for preassembled reads?) 48 ----- 81
   * TTCCCCTTATATTATGATCAAAATTTGAAAAAAGGAAAAAACACTATT ---------- AATAGAGCCTTATGTTATAAGGGTTTGTGTCATAATGCATTACATGTTCCTGAATCCTAGATTAAACTATACCGAGAAAAA
   * TTTTTCTCGGTATAGTTTAATCTAGGATTCAGGAACATGTAATGCATTATGACACAAACCCTTATAACATAAGGCTCTATT ---------- AATAGTGTTTTTTCCTTTTTTCAAATTTTGATCATAATATAAGGGGAA
+    * Need better flanking region than the 48mer...
+     * 70bp a little upstream
+     * CCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGT
+     * Still nothing...
 
 
+* grep against /nobackup/data5/Skeletonema_marinoi_genome_project/00_Data/pb_354/subreads_from_resequencing_on_Albiorix/filtered_subreads_NO_ADAPTER.fasta ?
+  * 2.3m raw reads...
+  * 275.3m lines...
+  * BLASTn using database of S. marinoi raw reads
 
 ## Mitochondrion annotation
 
@@ -8630,3 +8638,9 @@ Compare 'pseudogenes' with other diatom cp-genomes in NCBI
       ADRIIDIAIVGGDIPTGLKKNLEIEDFVEDELILIIPKSHPFARKKKKKISKEDLYHLNFITLNSNSTIH
       KFIDNILIQNNIQTKQFNTIMELNSIEAIKTAVSLGLGAAFVSSSSIEKEIELKTVEIITIENIKITRTL
       SIITNTDSHRSKAFDFFYNELWLLKNL
+
+
+
+## To do
+Extract the reads from S_marinoi_raw_reads which hit the end 81mer, and see where they start/end - align them?
+* Find out why they don't appear to hit the section at the start of the repeat...

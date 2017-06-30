@@ -8506,7 +8506,7 @@ Running new attempts:
 * Experiment with 18k SRL Falcon once it has finished
   * Try other parameter values for 17k (not ones taken from the previous experiments which gave identical results to one another...)
 
-# 29 July 2017
+# 29 June 2017
 
 ## Mitochondrion
 Aligning corrected sequences to see whether the coverage dips are consistently in the repeat region (6kb - 6.1kb into the sequence of 17k_1_quiver2)
@@ -8559,3 +8559,74 @@ Aligning corrected sequences to see whether the coverage dips are consistently i
 * 66 and 67 (cytochrome b) appear to be two parts of the same protein?
 * 70 false positive?
 * Check wraparound...
+
+# 30 June 2017
+
+## Mitochondrion assembly
+
+* 10k polymerase attempt yielded no better results - increasing to 35k
+* Round 2 quiver of Third and Fourth complete; compare to 17k_1
+  * Even after second round of quiver, discrepancies still remain between the three attempts (half a dozen single bases outside of the repeat region)
+
+* Deleted some old jobs to make room
+  * Low_Max_Div_RO5_Mito_Short_Circ_Test_Reverse_Attempt_2 (ref: RO5_Mito_short_Reverse, Maximum divergence 5%)
+  * RO5_Mito_Fifth_Circ_Test_Reverse_2 (ref: RO5_Mito_Fifth_Reverse, normal parameters)
+
+* Currently most-used template - 17k_1 - may be causing reads spanning the true length of the repeat region to be discarded
+  * Retry 35k polymerase cutoff analysis with Third and Fourth, in case one of these represents the correct length
+
+
+* Sequences flanking repeat region (search term for preassembled reads?) 48 ----- 81
+  * TTCCCCTTATATTATGATCAAAATTTGAAAAAAGGAAAAAACACTATT ---------- AATAGAGCCTTATGTTATAAGGGTTTGTGTCATAATGCATTACATGTTCCTGAATCCTAGATTAAACTATACCGAGAAAAA
+  * TTTTTCTCGGTATAGTTTAATCTAGGATTCAGGAACATGTAATGCATTATGACACAAACCCTTATAACATAAGGCTCTATT ---------- AATAGTGTTTTTTCCTTTTTTCAAATTTTGATCATAATATAAGGGGAA
+
+
+
+## Mitochondrion annotation
+
+* Mito uses translation table 4, not 11. Specify this in another Prokka run
+  * This made minimal difference; only the addition of some Ws to the ends of genes (one gene name added, one tRNA identity switched?)
+
+
+
+
+## Chloroplast
+
+Compare 'pseudogenes' with other diatom cp-genomes in NCBI
+* Check rpl33, rpoB and ycf46
+  * Also check lengthened rbcR (also vs. rbcR')
+* rpl33 (9aa), should be 195bp
+  * MAKIKVLEY
+* rpoB (187aa), should be 4149bp
+  * MNYTTALPDFIEMQRVSFCWFIAQGLNEELTSFSRIYDFSQNTEYILFGQEYSLVKPVYNIVRAKKYTAN
+    YSAQLVIPLEVRNKKTNIIKYHSKFPIINLPLMTSSATFVINGCERVIVSQIIRSPGVYFEKNKHQKKNK
+    KVKRVISSEIGKLKNFTPPSEILPTESRLYFLKSRVKKKLISDKKRK
+  * Contradiction with transcript data...
+* ycf46 (388aa), should be 1494bp
+  * MKFTDELTLLLKARYPIIYINTIEEDRVEYIIRKYIKTSLNRSIYSWDFIDGYTNNPNNEGFAKRNPVQA
+    LELVERLTAQTPALFLLKDFNRFLTDVSISRKLKNISRILKLQPKTIIIIGSDLNIPKELYDLITVLQFQ
+    LPVESEINYELKRLIDSLNIEIEPQVLESLTRACQGLSLERIRRVLSKIIATYKTIDENSINLLLNEKKQ
+    IISQTEILEYWSANETISKIGGVDNLKNWLKKRKTSFGIQASNYGLPTPRGLLLVGIQGTGKSLTAKAIA
+    TEWQLPLLKLDVGKLFGGIVGESESRLRQMIEVAETISPCILWIDEIDKAFSNNVNTGDSGTSNRVLATF
+    ISWLSEKTKPVFVVATANNVELLPLEIIRKGRFDEIFF
+  * ycf46' (497aa)
+    * MKFTDELTLLLKARYPIIYINTIEEDRVEYIIRKYIKTSLNRSIYSWDFIDGYTNNPNNEGFAKRNPVQA
+      LELVERLTAQTPALFLLKDFNRFLTDVSISRKLKNISRILKLQPKTIIIIGSDLNIPKELYDLITVLQFQ
+      LPVESEINYELKRLIDSLNIEIEPQVLESLTRACQGLSLERIRRVLSKIIATYKTIDENSINLLLNEKKQ
+      IISQTEILEYWSANETISKIGGVDNLKNWLKKRKTSFGIQASNYGLPTPRGLLLVGIQGTGKSLTAKAIA
+      TEWQLPLLKLDVGKLFGGIVGESESRLRQMIEVAETISPCILWIDEIDKAFSNNVNTGDSGTSNRVLATF
+      ISWLSEKTKPVFVVATANNVELLPLEIIRKGRFDEIFFLDLPQKQEREQIFKIHIQEFRPNRWESFDYSK
+      LAQLSDSFSGAEIRQSIIEAMYHAFYEKREFTTEDICLALTQLIPLSQLENDQTLKLKNWAVSGRIRLAS
+      SKIIPMN
+* rbcR (310aa), 933bp 
+  * MVLPFTLQQLRIFKAIASEKSFTQAAEILFVSQPSLSKQIKTLENRLGILLLNRTGNKIFLTEAGIVFLQ
+    YAERILALCEESCRALNDLKDGERGNLKVGASQTIGAYLMPRVLTLFAQSYPQINLNIDIDSTRIIAKKV
+    ADRIIDIAIVGGDIPTGLKKNLEIEDFVEDELILIIPKSHPFARKKKKKISKEDLYHLNFITLNSNSTIH
+    KFIDNILIQNNIQTKQFNTIMELNSIEAIKTAVSLGLGAAFVSSSSIEKEIELKTVEIITIENIKITRTL
+    SIITNTDSHRSKAFDFFIMNYGYLKTYNFI
+  * rbcR' (307aa), 924bp
+    * MVLPFTLQQLRIFKAIASEKSFTQAAEILFVSQPSLSKQIKTLENRLGILLLNRTGNKIFLTEAGIVFLQ
+      YAERILALCEESCRALNDLKDGERGNLKVGASQTIGAYLMPRVLTLFAQSYPQINLNIDIDSTRIIAKKV
+      ADRIIDIAIVGGDIPTGLKKNLEIEDFVEDELILIIPKSHPFARKKKKKISKEDLYHLNFITLNSNSTIH
+      KFIDNILIQNNIQTKQFNTIMELNSIEAIKTAVSLGLGAAFVSSSSIEKEIELKTVEIITIENIKITRTL
+      SIITNTDSHRSKAFDFFYNELWLLKNL

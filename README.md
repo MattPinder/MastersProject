@@ -8644,3 +8644,31 @@ Compare 'pseudogenes' with other diatom cp-genomes in NCBI
 ## To do
 Extract the reads from S_marinoi_raw_reads which hit the end 81mer, and see where they start/end - align them?
 * Find out why they don't appear to hit the section at the start of the repeat...
+
+# 3 July 2017
+
+## Mitochondrion
+
+Use fp.py to grep the best hits to the reverse sequence
+
+(* Sequences flanking repeat region (search term for preassembled reads?) 48 ----- 81
+  * TTCCCCTTATATTATGATCAAAATTTGAAAAAAGGAAAAAACACTATT ---------- AATAGAGCCTTATGTTATAAGGGTTTGTGTCATAATGCATTACATGTTCCTGAATCCTAGATTAAACTATACCGAGAAAAA
+  * TTTTTCTCGGTATAGTTTAATCTAGGATTCAGGAACATGTAATGCATTATGACACAAACCCTTATAACATAAGGCTCTATT ---------- AATAGTGTTTTTTCCTTTTTTCAAATTTTGATCATAATATAAGGGGAA
+    * Need better flanking region than the 48mer...
+     * 70bp a little upstream
+     * CCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGTTCCCGGCCCGGT
+     * Still nothing...)
+
+* No good alignment; check whether the sequences span the repeat region
+
+* Two sequences seem to span the repeat region, albeit with different numbers of repeats
+  * ~108 repeats found in m160810_080809_42203_c101084512550000001823238903091755_s1_p0/93737/11172_21805
+  * ~103 repeats found in m160907_093109_42203_c101088662550000001823265803091707_s1_p0/59477/0_17561
+
+* Check results of Upstream_Test
+
+
+
+## Sphingo
+
+Check NCBI consistency checker re: SphFlaSMR4y

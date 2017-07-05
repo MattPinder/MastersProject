@@ -8695,5 +8695,57 @@ Consistency checked on NCBI; annotation uploaded
 * Need to upload additional information
 
 ## To do
-* Addiitonal Sphingo information
+* Additional Sphingo information
 * Try to align the above raw reads and determine number of repeats
+
+# 5 July 2017
+
+Number of repeats in mito genome
+* Span1 - 108 repeats
+* Span2 - 76 repeats
+* Span3 - 108 repeats
+* Span4 - 103 repeats
+
+Compare this to the previous runs through SMRT Portal
+* Long		- 108 repeats (some apparently truncated repeats)
+* Short 	- 103 repeats (some longer/shorter variants)
+* Third		- 65 repeats (one slightly longer)
+* Fourth	- 120 repeats
+* Fifth		- 103 repeats (some longer/shorter variants)
+* 17k_1		- 37 repeats
+* 18k		- 37 repeats
+* 19k		- 13 repeats (starts in low quality region however)
+
+Used upstream and downstream regions 100bp to check for any additional reads to check:
+* m160809_233148_42203_c101084512550000001823238903091753_s1_p0/98665/0_14272
+* m160906_163330_42203_c101088662550000001823265803091704_s1_p0/110484/0_16498
+* m160906_225243_42203_c101088662550000001823265803091705_s1_p0/61208/0_13107
+* m160907_135022_42203_c101088552550000001823265803091740_s1_p0/84347/19711_29680
+
+* Span5 - 108 repeats
+* Span6 - 40 repeats
+* Span7 - 87 repeats (one VERY extended)
+* Span8 - 76 (last one extended)
+
+* As the 19k assembly appears to be of poor quality, delete job to increase space
+  * 16747: RO5_Mito_19k_1_Circ_Test_Reverse, RO5_Mito_19k_1_Reverse reference, normal parameters
+
+## Microbiome
+
+Remaining modification analyses prepared for once the current Mito job is complete
+* Raw reads will also be required
+
+* Check extraction details for ST54, specifically:
+  * Isolation source - top-layer sediment?
+  * Collection date - 2009?
+  * Geographic location - Sweden: Oresund?
+  * Depth - 14m?
+  * Environment biome - marine sediment?
+* Waiting on reply from Anna regarding these details
+
+
+## To do
+* Check Mito polish job on SMRT Portal and then run the remaining bacterial modification analyses
+* Wait for Anna's reply, then submit final two BioSample registrations
+* If Mito polish job doesn't return good results, try making a custom number of repeats and see what the coverage does
+* Polish annotations for Sulfitobacter, Antarctobacter and Arenibacter (perform corrections on GenBank file rather than .tbl files?)

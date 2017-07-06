@@ -8749,3 +8749,31 @@ Remaining modification analyses prepared for once the current Mito job is comple
 * Wait for Anna's reply, then submit final two BioSample registrations
 * If Mito polish job doesn't return good results, try making a custom number of repeats and see what the coverage does
 * Polish annotations for Sulfitobacter, Antarctobacter and Arenibacter (perform corrections on GenBank file rather than .tbl files?)
+* Check Anna's request re: genes
+
+# 6 July 2017
+
+## Bacteria
+Registration of last BioSamples complete (for the 7 initial bacteria); can proceed to inspection and submission of the annotations
+* Sphingo genome accepted; must upload raw reads (ask Mats later)
+
+## Mito
+On round 2 Long resequencing, check ~17,450 - ~25,330
+  * 106 repeats, one elongated (19,458-19,546)
+
+## Sulphur metabolism search
+* Any instances of SO4 -> H2S pathways in the microbiome?
+* If so, any homologues in Skeletonema?
+* "We have been discussing a bit on how in the world Skeletonema survive 100 years in the sediment. How can they respire? We know that they respire NO3.
+But NO3 disappear completely at 10 cm depth (in best case).  What is left below is SO4. There are many bacteria capable of reducing SO4 with the end product H2S.
+If you have time at some point would you be willing to look if any of those bacteria are sequenced? and if the pathway is confirmed and genes annotated?
+The idea I had was if we could look in the Skeletonema genome for homologous sequences.
+If you could,  just make a brief look. I do not really have any support that this is the case, more than plain sediment chemistry and a feeling that they have
+to respire (although at a very low level) over the course of 100 years."
+
+* Most of the bacteria appear to have instances of sulfate reduction pathways
+
+## To do
+* Move on to Sulfitobacter genome
+* Further investigation of repeats issue
+  * Clear space for further analyses?

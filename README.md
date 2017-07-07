@@ -8777,3 +8777,11 @@ to respire (although at a very low level) over the course of 100 years."
 * Move on to Sulfitobacter genome
 * Further investigation of repeats issue
   * Clear space for further analyses?
+
+# 7 July 2017
+
+## Sulphur metabolism
+Add extra information to the annotations, e.g. species, any publications
+* Acc. nos. added, but no truly relevant publications found
+
+Report on findings from sulfate search; also check Plaza browser

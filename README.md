@@ -8785,3 +8785,51 @@ Add extra information to the annotations, e.g. species, any publications
 * Acc. nos. added, but no truly relevant publications found
 
 Report on findings from sulfate search; also check Plaza browser
+
+# 10 July 2017
+
+## Sulphur metabolism
+Sulfate results found for incorrect pathway - sulfate assimilation rather than dissimilation...
+* Search for components of the latter pathway
+* No convincing evidence... See Sulfur_metabolism in home folder
+
+## Bacterial genome uploads
+* Sphingorhabdus flavimaris files all uploaded, can proceed to paper
+* Check frameshift results for Sulfitobacter
+  * Chrom
+
+  * pSMR1-1
+
+  * pSMR1-2
+
+  * pSMR1-3 - Overlaps - one accepted as a frameshift (04499 removed)
+    * Frameshifts - 04335 removed; single-base mutation = premature stop codon mid-protein
+    * Truncations - a few potential truncations noted
+    * Missing AAs? - tRNA(Asp) removed
+  * pSMR1-4 - One overlap, which appears to highlight a massively truncated protein... This has been noted
+    * Possible truncations - Unconvinced by the two possible truncations highlighted
+  * pSMR1-5 - A few overlaps, but no obvious frameshifts, etc. for dismissal
+    * Possible truncations - one of the predictions is convincingly a true truncation, this has been noted
+  * pSMR1-6 - Two overlaps between decent proteins and hypotheticals, but no evidence to dismiss (e.g. obvious frameshift)
+    * Should hypothetical protein be removed from annotation?
+    * Match hypothetical proteins in other species so leave for now
+  * pSMR1-7 - No issues
+
+## Mitochondrial genome
+* Artificially create a 50-repeat reference, and check coverage
+  * Third quiver2 as a base (reference RO5_Mito_50_repeat_(Third_quiver2)), default settings
+  * Job 16765
+* Download consensus, and delete to make space...
+* Problem - low-repeat assemblies have more support in the trough because longer-repeat reads are mapping (poorly?) to the trough...
+  * Change max divergence? 5% worked poorly, but compare raw read divergence to other assemblies to see what level of divergence is allowable
+  * Start with 10%, move up to 12%/15%?
+* Start with 10% - job 16766 (RO5_Mito_long_Quiver1 reference, 10% max divergence)
+  * Only one spanning read (...98665)
+  * Delete to make space
+* 15% - 
+
+
+
+## To do
+* Continue pSMR1-2 checks, and finish -1 and Chrom
+* Check results of 15% mito job

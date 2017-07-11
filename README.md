@@ -8801,7 +8801,7 @@ Sulfate results found for incorrect pathway - sulfate assimilation rather than d
   * pSMR1-1
 
   * pSMR1-2
-
+    * 
   * pSMR1-3 - Overlaps - one accepted as a frameshift (04499 removed)
     * Frameshifts - 04335 removed; single-base mutation = premature stop codon mid-protein
     * Truncations - a few potential truncations noted
@@ -8833,3 +8833,40 @@ Sulfate results found for incorrect pathway - sulfate assimilation rather than d
 ## To do
 * Continue pSMR1-2 checks, and finish -1 and Chrom
 * Check results of 15% mito job
+
+# 11 July 2017
+
+## Mito
+
+* 15% divergence on Long reference produces an unsupported longer repeat on the 28th repeat; try with shorter repeat #
+* Attempting job with Third quiver1 reference - job 16768
+  * Still some supporting reads as with the Long reference...
+  * HOW TO PROCEED?
+
+
+## Sulfitobacter
+
+* pSMR1-1
+  * 5011 removed; frameshift(?) of 5010 (exact nature uncertain...)
+  * 4658-4659 (pSMR1-1) removed; frameshift of 4657
+  * 4768 removed; frameshift of 4767
+* Chrom
+  * 00152 removed - massive overlap with 00151 and no BLASTx matches
+  * 00091 (ncRNA cspA) removed; totally overlapped 00092 cspA gene (which is identical to type strain version)
+  * 00686 removed - overlaps with 00687 and no BLASTp matches
+  * 00153 removed - overlaps with 00154 and no BLASTp matches
+  * 01683 removed - frameshift of 01682
+  * 01726 removed - overlaps with 01725 and no BLASTp matches
+
+BLAST website is being unusably slow; begin alterations of Antarcto and Areni
+
+## pb_359_7/8
+
+
+---
+
+## To do
+
+* Continue Sulfitobacter checks from 01901/01902 overlap (+ frameshifts, truncations and 'missing' RNAs)
+* Continue checking Ant_Are (start from R)
+* Think about the repeat problem some more...

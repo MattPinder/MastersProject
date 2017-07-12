@@ -8839,10 +8839,10 @@ Sulfate results found for incorrect pathway - sulfate assimilation rather than d
 ## Mito
 
 * 15% divergence on Long reference produces an unsupported longer repeat on the 28th repeat; try with shorter repeat #
-* Attempting job with Third quiver1 reference - job 16768
+* Attempting job with Third quiver1 reference - job 16768 (15% divergence, RO5_Mito_Third_Quiver1_Reverse reference)
   * Still some supporting reads as with the Long reference...
   * HOW TO PROCEED?
-
+* Deleted for space
 
 ## Sulfitobacter
 
@@ -8870,3 +8870,47 @@ BLAST website is being unusably slow; begin alterations of Antarcto and Areni
 * Continue Sulfitobacter checks from 01901/01902 overlap (+ frameshifts, truncations and 'missing' RNAs)
 * Continue checking Ant_Are (start from R)
 * Think about the repeat problem some more...
+
+# 12 July 2017
+
+## Mito repeats
+
+Third - 65 repeats
+Third quiver2 repeats 26,401 - 31,211
+In reference -		26,414 - 31,229
+
+5' end - Over a dozen fall just short of crossing
+3' end - Over a dozen fall just short of crossing
+Around 14 that span the whole length (4 near-misses)
+Verdict - Too short
+
+
+Long - 106 -> 108 repeats
+Long quiver2 repeats 17,460 - 25,319
+In reference		17,460 - 25,414
+(Odd repeat - 19,458 - 19,547
+
+5' end - 3 fall just short of crossing
+3' end - None fall just short of crossing
+Around 15 that span the whole length (2 near-misses)
+Verdict - around the right length
+
+Question - the long 28th read in Long_quiver2 (shorter read in Long_quiver1) - is this true or merely an artifact?
+* Fix length, upload reference and try again
+  * Job 16770
+  * Correction is made, so can't confirm or deny its veracity...
+
+
+
+## Sulfitobacter annotation polishing
+
+* 02833 removed, pseudogene along with 02832
+* 02304 removed, pseudogene along with 02303
+* 03400 removed, pseudogene along with 03399
+* 03553-03555 removed - incorporated into 00001B
+
+
+## To do
+* Continue checking domains for Sulfitobacter, rerun tbl2asn and submit (ask re. formatting of the wraparound gene?) (Domains_to_check.txt file)
+* Continue formatting of Ant_Are
+* Any other things to try re. repeat region?

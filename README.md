@@ -8914,3 +8914,26 @@ Question - the long 28th read in Long_quiver2 (shorter read in Long_quiver1) - i
 * Continue checking domains for Sulfitobacter, rerun tbl2asn and submit (ask re. formatting of the wraparound gene?) (Domains_to_check.txt file)
 * Continue formatting of Ant_Are
 * Any other things to try re. repeat region?
+
+# 13 July 2017
+
+## Sulfitobacter annotation
+* First gene on chromosome apparently wraps around, but may be pseudogenised, so has been noted as potentially missing the N-terminus
+  * Annotation files submitted to NCBI for checking
+
+## Antarctobacter and Arenibacter
+* .sqn files generated - submitted to consistency checker
+* Replicon checklist
+  * AntHelSMS3_Chrom - 
+  * AntHelSMS3_pSMS3-1 - 
+  * AntHelSMS3_pSMS3-2 - Checked
+  * AntHelSMS3_pSMS3-3 - 
+  * AreAlgSMS7_Chrom - 
+  * AreAlgSMS7_pSMS7 - 
+Complete the above ^
+
+NOTE - Add Acc. Nos. before uploading methylation data!
+
+
+## Pathway Tools
+Run NCBI Sphingo through Pathway Tools and update feature figures

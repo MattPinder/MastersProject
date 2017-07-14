@@ -8937,3 +8937,24 @@ NOTE - Add Acc. Nos. before uploading methylation data!
 
 ## Pathway Tools
 Run NCBI Sphingo through Pathway Tools and update feature figures
+
+# 14 July 2017
+
+* Get NCBI Sphingo to run through Pathway Tools
+
+* Continue checking AntHelSMS3 and AreAlgSMS7 in consistency checker (AntHelSMS3_Chrom failed, retry)
+
+* Upload and submit raw reads; accession number required for methylation data...
+  * Raw reads all submitted, ensure they are accepted
+
+## Pathway Tools
+Sphingorhabdus flavimaris from 249 to 247 pathways after NCBI checks (+ Assign Probable Enzymes and Pathway Hole Filler)
+* # of pathways has dipped slightly...
+
+## Genome papers
+Continue working on genome papers; ensure figures are up-to-date and observe formatting of R. mucosus paper
+
+
+Checking annotations - Start from AreAlgSMS7_Chrom : Partial Overlaps : _02016 + _02017
+
+NCBI still very slow...

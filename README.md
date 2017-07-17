@@ -8958,3 +8958,29 @@ Continue working on genome papers; ensure figures are up-to-date and observe for
 Checking annotations - Start from AreAlgSMS7_Chrom : Partial Overlaps : _02016 + _02017
 
 NCBI still very slow...
+
+# 17 July 2017
+
+* Realign mito genome to after the repeat region and begin annotation attempt
+  * Using Third_quiver2 or Fourth_quiver2
+  * First post-repeat gene predicted at 35529 (Fourth_quiver2) (but contains a LOT of stops WITHIN the prediction...)
+
+  * Prelim Prokka annotation ready, waiting for MITOS annotation (Third_quiver2), then can realign the contig to start at the first post-repeat gene start/stop
+    * Then rerun annotation(s)
+
+* Upload methylation data for Sulfitobacter, now an accession number has been assigned
+  * Uploaded; Sulfitobacter complete. When data is released in ~2 days, rerun Pathway Tools
+* Finish polishing the annotations for Antarctobacter and Arenibacter
+
+
+* Replicon checklist
+  * AntHelSMS3_Chrom -
+  * AntHelSMS3_pSMS3-1 -
+  * AntHelSMS3_pSMS3-2 - Checked
+  * AntHelSMS3_pSMS3-3 -
+  * AreAlgSMS7_Chrom - ...
+  * AreAlgSMS7_pSMS7 -
+
+Note - AreAlgSMS7_Chrom seems to have a lot of in-frame stop codons pseudogenising various genes
+
+(start from AreAlgSMS7_Chrom - 02597)

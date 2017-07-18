@@ -8975,12 +8975,21 @@ NCBI still very slow...
 
 * Replicon checklist
   * AntHelSMS3_Chrom -
-  * AntHelSMS3_pSMS3-1 -
+  * AntHelSMS3_pSMS3-1 - Checked
   * AntHelSMS3_pSMS3-2 - Checked
-  * AntHelSMS3_pSMS3-3 -
-  * AreAlgSMS7_Chrom - ...
-  * AreAlgSMS7_pSMS7 -
+  * AntHelSMS3_pSMS3-3 - Checked
+  * AreAlgSMS7_Chrom - Checked
+  * AreAlgSMS7_pSMS7 - Checked
 
 Note - AreAlgSMS7_Chrom seems to have a lot of in-frame stop codons pseudogenising various genes
 
 (start from AreAlgSMS7_Chrom - 02597)
+
+# 18 July 2017
+
+Where do the T. pseudonana and P. tricornutum mitogenomes start?
+
+Arenibacter algicola SMS7 submitted
+* Upload methylation data once an accession number is assigned (if NCBI don't highlight any issues)
+
+Start from AntHelSMS3_Chrom frameshifts - 2672/3

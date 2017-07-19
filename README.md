@@ -8974,7 +8974,7 @@ NCBI still very slow...
 
 
 * Replicon checklist
-  * AntHelSMS3_Chrom -
+  * AntHelSMS3_Chrom - Checked
   * AntHelSMS3_pSMS3-1 - Checked
   * AntHelSMS3_pSMS3-2 - Checked
   * AntHelSMS3_pSMS3-3 - Checked
@@ -8993,3 +8993,12 @@ Arenibacter algicola SMS7 submitted
 * Upload methylation data once an accession number is assigned (if NCBI don't highlight any issues)
 
 Start from AntHelSMS3_Chrom frameshifts - 2672/3
+
+# 19 July 2017
+
+Antarctobacter heliothermus genome submitted
+
+## To do
+* Work on mito genome
+* Download Sulfitobacter genome from NCBI and run through Pathway Tools + extras
+* Update figures in the WIP genome papers

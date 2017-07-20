@@ -9002,3 +9002,13 @@ Antarctobacter heliothermus genome submitted
 * Work on mito genome
 * Download Sulfitobacter genome from NCBI and run through Pathway Tools + extras
 * Update figures in the WIP genome papers
+
+# 20 July 2017
+
+Moved RO5 organelle folder to data5
+
+Mito appears to contain many in-frame stop codons BUT, it should use translation table 4, NOT 11
+* Check 'in-frame stop codons' using table 4, rather than 11
+
+* Rename/reannotate tRNAs in RO5.gbk - Ts -> Us, and adhere to conventions of other diatom genome annotations
+* rRNAs need checking, especially the initial rRNA which appears to overlap several tRNAs

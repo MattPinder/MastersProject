@@ -9012,3 +9012,68 @@ Mito appears to contain many in-frame stop codons BUT, it should use translation
 
 * Rename/reannotate tRNAs in RO5.gbk - Ts -> Us, and adhere to conventions of other diatom genome annotations
 * rRNAs need checking, especially the initial rRNA which appears to overlap several tRNAs
+
+# 21 July 2017
+
+Check distance between flanking motifs of repeat regions, and find assembly with a repeat region of about this **length**, rather than focusing on # of reps
+* Ask Magnus re: mitochondrial annotation
+
+2 new bacterial genomes - pb_398 - now in home directory (use subreads)
+
+ST54 raw data - pb_354 (untreated) in SMRT portal, 11 SMRT cells
+* '3cells' was a first test
+  * Check if 3cells are included in the other 11; if not, run together
+    * Otherwise, just use bigger one
+* Second run - pb_77 - 'axenic' (antibiotic treated)
+* Run separately, maybe combine later?
+* ~10k SRL, but change other settings
+
+* Run analyses in data 5, 8 and/or 7
+
+SulPseSMR1 released; run through Pathway Tools
+* Running...
+  * 307 pathways
+  * After Assign Probable Enzymes - 313
+  * After Pathway Hole Filler - 321
+    * Did SulPseSMR1 always have predictions for vit B12 production? Two new pathways inferred...
+
+Skype Friday morning
+
+## pb_398_001 and pb_398_002 assemblies
+* Falcon assemblies - start with 10k SRL in both instances
+  * Fastq doesn't appear to work - are there Fasta files available instead?
+
+Convert fastq to fasta:  
+
+cat input_file.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > output_file.fa
+* (If compressed: zcat input_file.fastq.gz | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > output_file.fa)
+
+Initial 10k SRL:
+* pb_398_001 - 17 contigs, ~9.5 Mb
+* pb_398_002 - 8 contigs, ~5.1 Mb
+
+15k SRL:
+* pb_398_001 - 4 contigs, ~63.8 Kb
+* pb_398_002 - 29 contigs, ~614.7 Kb
+
+20k SRL:
+* pb_398_001 - No result
+* pb_398_002 - No result
+
+12k SRL:
+* pb_398_001 - 88 contigs, ~6.5 Mb
+* pb_398_002 - 8 contigs, ~5.1 Mb
+
+## Arenibacter algicola SMS7
+Accession numbers - CP022515 and CP022516
+
+
+
+## To do
+* Update figures for Sulfitobacter pseudonitzschiae post-NCBI
+* Check distance between flanking motifs of repeat regions, and find assembly with a repeat region of about this **length**, rather than focusing on # of reps
+* Continue trying to assemble two new bacterial genomes; convert other fastq files and assemble ST54 in Falcon (see above re: 3cells)
+  * Check results of 7k Falcon assemblies for pb_398_00X
+
+* 3cells appear to be present in full read file (double check using grep -A)
+* Check results of 10k Falcon assemblies for 2x ST54 data sets

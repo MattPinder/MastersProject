@@ -9077,3 +9077,68 @@ Accession numbers - CP022515 and CP022516
 
 * 3cells appear to be present in full read file (double check using grep -A)
 * Check results of 10k Falcon assemblies for 2x ST54 data sets
+
+# 24 July 2017
+
+## pb_398_00X
+* Put preliminary (7k) assemblies into SILVA and try to obtain a preliminary genus/species identity
+  * Doesn't appear to find anything; try RNAmmer or Metaxa2
+  * pb_398_001 - possibly Sulfitobacter or Marinobacter
+  * pb_398_002 - Sulfitobacter?
+    * Looking at genome sizes, could 001 be a mixed S. pseudo + M. sal sample, and 002 be a S. pseudo sample?
+    * pb_398_002 contig # consistent with this
+    * pb_398_001 inconsistent; would expect 10 contigs
+
+* Attempting 11k Falcon of pb_398_00X
+  * Attempt 10.6k? Attempt Canu?
+
+* pb_398_002 vs pb_359_6 - 10.6k Falcon
+
+|       | pb_359_6  | pb_398_002 |
+|-------|-----------|------------|
+| Total | 5,121,602 | 5,125,074  |
+| Chrom | 3,572,445 | 3,571,298  |
+| Plas1 |   428,095 |   427,966  |
+| Plas2 |   292,917 |   292,827  |
+| Plas3 |   284,777 |   284,706  |
+| Plas4 |   209,222 |   209,134  |
+| Plas5 |   142,107 |   142,088  |
+| Plas6 |    99,245 |    99,216  |
+| Plas7 |    92,794 |    92,715  |
+
+When aligned, these sequences are VERY similar to one another (>99% similarity)
+
+## ST54
+
+10k run results:
+* pb_354 - 470 contigs
+* pb_77 - 109 contigs
+
+* Try an initial Metaxa2 analysis to get a rough idea of which bacteria I can expect to find
+  * pb_354 - All Skeletonema, mito and chloro; no bacteria??
+  * pb_77 - 2x Skeletonema, 1x Flavobacteriaceae
+    * Check this sequence in SILVA: Kordia...
+
+Run new assemblies and rerun Metaxa2
+* Try Canu once one or two more Falcon assemblies have been run, and an estimated genome size can be reliably included
+* 15k failed for pb_77; try 12k, then 7k (for both samples)
+  * Then start tinkering with other settings
+
+## Mitochondrion
+Check size of repeat region as predicted by the spanning raw reads (length in bp, not number of repeats)
+* Span1 - 7796 bp (108 repeats)
+* Span2 - 5730 bp (76 repeats)
+* Span3 - 8309 bp (108 repeats)
+* Span4 - 7601 bp (103 repeats)
+* Span5 - 8299 bp (108 repeats)
+* Span6 - 3006 bp (40 repeats)
+* Span7 - 7438 bp (87 repeats)
+* Span8 - 5693 bp (76 repeats)
+  * Span9 - 7646 bp (111 repeats)
+Length of repeat region still not close to constant...
+
+
+## To do
+* Check results of ongoing ST54 Falcon runs
+* Check results of 2x PhyloPhlAn runs (and move files appropriately)
+* Any more ideas on resolving the repeat issue)

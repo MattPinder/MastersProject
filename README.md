@@ -9142,3 +9142,63 @@ Length of repeat region still not close to constant...
 * Check results of ongoing ST54 Falcon runs
 * Check results of 2x PhyloPhlAn runs (and move files appropriately)
 * Any more ideas on resolving the repeat issue)
+
+
+# 25 July 2017
+
+## Useful command
+To sum numbers, one per line:
+`awk '{s+=$1} END {print s}'`
+
+## ST54 Falcon
+15k completed, 7k and 12k still ongoing
+* 12k complete, 7k still ongoing
+
+* Attempt Canu on pb_354 with genomeSize of 80.5m
+
+* As pb_77 has had poor results, try tweaking other parameters
+  * Try lowering max_diff from 500 to 400
+    * No difference
+  * Try lowering min_cov from 3 to 2
+    * More contigs, slightly longer
+  * Try lowering bestn from 10 to 8
+    * No difference
+
+## PhyloPhlAn
+Rerun analyses to ensure that comparisons are all up-to-date
+* Delete some of the zipped files in PhyloPhlAn folder; excessive duplication
+
+Comparisons
+* pb_359_2 - Roseovarius
+  * Moved own uploaded file out of folder; moved 'suppressed' version in
+* pb_359_3 - Loktanella
+  * Moved own uploaded file out of folder
+* pb_359_4 - Sphingorhabdus
+  * Moved own uploaded file out of folder
+* pb_359_5 - Marinobacter
+  * Moved own uploaded file out of folder
+* pb_359_6 - Sulfitobacter
+  * Moved own uploaded file out of folder
+* pb_359_7 - Antarctobacter
+  * Own file isn't there yet (A. heliothermus DSM 11445T uploaded a week ago)
+* pb_359_8 - Arenibacter
+  * Own file isn't there yet (A. algicola TG409T there instead)
+
+16S notes
+* pb_359_2 - 2x identical sequences
+* pb_359_3 - 2x identical sequences
+* pb_359_4 - 2x identical sequences
+* pb_359_5 - 3x sequences (one differs by a single base sub)
+* pb_359_6 - 2x identical sequences (inc. one on plasmid?)
+* pb_359_7 - 2x identical sequences
+* pb_359_8 - 3x identical sequences
+
+
+## To do
+* Check Rhodo PhyloPhlAn to confirm figures
+  * Continue work on the genome announcements as a whole
+* Download pb_359_8 from NCBI when able (releases on 26th) and await pb_359_7
+* Repeat problem...
+* Check 2x assembly attempts for pb_354
+  * Falcon + Canu
+* Consider running new Falcon jobs for other SRLs than 7k

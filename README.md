@@ -9202,3 +9202,34 @@ Comparisons
 * Check 2x assembly attempts for pb_354
   * Falcon + Canu
 * Consider running new Falcon jobs for other SRLs than 7k
+
+
+# 26 July 2017
+
+## ST54
+* pb_354 7k Falcon crashed; restarted
+* pb_354 Canu crashed; restarted
+
+* Changing parameters of pb_77 7k Falcon appears to have no effect; try 10k instead
+
+* Trying pb_77 in Canu with the same parameter (80.5m) as pb_354...
+
+
+
+
+## pb_398
+
+* pb_398_002 apparently Sulfitobacter pseudonitzschiae
+  * Sequences non-identical - 2 substitutions
+  * vs. pb_359_6, 2 subs in one, perfect match in the other
+
+* pb_398_001 16S sequences matched to Sulfitobacter and Marinobacter; potentially mixed sample?
+  * One sequence has its best match to Marinobacter algicola (similarly to pb_359_5; compare)
+    * Manually searching reveals two such regions in pb_398_001
+    * These match perfectly with one of the 16S regions in pb_359_5
+  * Two (identical) sequences have their best matches to Sulfitobacter mediterraneus (compare to pb_359_6)
+    * Identical to pb_359_6
+  * Run Canu with 4.5m genomeSize (parameter used for M. salarius)
+
+  * Compare pb_398_001 (10.6k Falcon) with pb_359_5 and _6, check whether evidence can be found of this being a mixed sample
+    * Seems likely; try again with 4.5m Canu when complete

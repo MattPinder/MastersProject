@@ -9233,3 +9233,96 @@ Comparisons
 
   * Compare pb_398_001 (10.6k Falcon) with pb_359_5 and _6, check whether evidence can be found of this being a mixed sample
     * Seems likely; try again with 4.5m Canu when complete
+
+# 27 July 2017
+
+* pb_354 - Falcon - 7k still running
+
+* Check pb_354 and pb_77 80.5m Canu runs
+  * pb_354 complete
+  * pb_77 complete
+
+* Check pb_398_001 4.5m Canu run
+  * Run complete
+
+## pb_398_001
+
+Results of 4.5m Canu
+* 15 contigs, two of which are roughly the same size as those in pb_359_5
+  * Compare in Mauve
+
+# pb_354 and pb_77
+
+pb_354 80.5m Canu
+* 1404 contigs, totalling ~115 Mb
+  * Size range - 8,031 to 712,488
+  * Not even big enough for a bacterial chromosome...
+
+pb_77 80.5m Canu
+* 195 contigs, totalling ~17 Mb
+  * Size range - 2,404 to 4,069,201
+  * Three contigs bigger than 1 Mb
+    * All apparently belong to bacteria!
+
+Run this info through Metaxa2
+* pb_354
+  * 6 sequences found, all Skeletonema
+
+* pb_77
+  * 6 sequences found:
+    * tig00000003     Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae    97.2    1322    80.80
+      * 2,436,254 bp - Bacterial chromosome?
+      * New?
+      * BlastN of 16S database predicts Sulfitobacter
+    * tig00000007     Chloroplast;;;;;        99.57   1409    97.99
+      * 122,694 bp - approximately correct size of S. marinoi chloroplast
+
+    * tig00000039     Eukaryota;Chromalveolata;Stramenopiles;Diatomea;Bacillariophytina;Mediophyceae;Skeletonema      100     1718    99.71
+      * 22,481 bp - Skeletonema...
+
+    * tig00000251     Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhodobiaceae;Parvibaculum;alpha proteobacterium NAMAF008;       98.96   1346    100
+      * 12,880 bp - ???
+      * Matches a species found by Alvar
+
+    * tig00000531     Bacteria;Bacteroidetes;Flavobacteria;Flavobacteriales;Flavobacteriaceae 96.85   1492    80.15
+      * 4,069,201 bp - Bacterial chromosome?
+      * Kordia?
+
+    * tig00000534     Bacteria;Proteobacteria;Gammaproteobacteria     94.2    1413    89.48
+      * 2,680,853 bp - Bacterial chromosome?
+      * Congregibacter?
+
+| Contig      | Length (bp) | Classification                        | Match in SILVA          | Vs. Alvar's findings                   |
+|-------------|-------------|---------------------------------------|-------------------------|----------------------------------------|
+| tig00000003 | 2,436,254   | Rhodobacteraceae                      | None...                 | ???                                    |
+| tig00000251 |    12,880   | Parvibaculum                          | Uncultured Rhodobiaceae | Fragment, but Alvar's also fragmented? |
+| tig00000531 | 4,069,201   | Flavobacteriaceae (Kordia?)           | Kordia (algicida?)      | Maybe ~1 Mb too short?                 |
+| tig00000534 | 2,680,853   | Gammaproteobacteria (Congregibacter?) | None...                 | Maybe ~1 Mb too short?
+
+* Attempt to circularise the three large contigs?
+  * Is there space on disk?
+    * Only 62 Gb... Any way to cut space?
+  * Delete jobs from SMRT Portal:
+    * 16770 - RO5_Mito_Long_Quiver_28th_Repeat_Normalised reference, other HGAP settings normal
+    * 16700 - RS_Modification_and_Motif_Analysis.1 - pb_359_2_All_Contigs reference (results saved in SubmissionPreparations/RosMucSMR3/SRA)
+    * 16701 - RS_Modification_and_Motif_Analysis.1 - pb_359_5_Canu_Trimmed reference (results saved in SubmissionPreparations/MarSalSMR5/SRA)
+    * 16703 - RS_Modification_and_Motif_Analysis.1 - pb_359_3_All_Contigs reference (results saved in SubmissionPreparations/LokVesSMR4r/SRA)
+    * 16760 - RS_Modification_and_Motif_Analysis.1 - pb_359_4_Canu_Trimmed_reupload reference (results saved in SubmissionPreparations/SphFlaSMR4y/SRA)
+    * 16761 - RS_Modification_and_Motif_Analysis.1 - pb_359_6_All_Contigs reference (results saved in SubmissionPreparations/SulPseSMR1/SRA)
+    * 16762 - RS_Modification_and_Motif_Analysis.1 - pb_359_7_Canu_Trimmed reference (results saved in SubmissionPreparations/AntHelSMS3/SRA)
+    * 16763 - RS_Modification_and_Motif_Analysis.1 - pb_359_8_17k_Falcon_Assembly reference (results saved in SubmissionPreparations/AreAlgSMS7/SRA)
+  * 205 Gb available
+    * Need to trim first
+    * (Negative covStat, likely to be repetitive...? According to Canu manual)
+* Circularisation
+  * None appear to circularise correctly...
+
+* Keep an eye on pb_354 Falcon seed_read_7k job; taking a long time and generating very large files
+  * Job deleted - files growing too large to be practical
+  * Over 120 Gb; log file alone was 10 Gb
+* As previous Canu runs produced no circularisable bacterial contigs, attempt with a new parameter
+  * genomeSize 55m (predicted size of the S. marinoi genome)
+
+## To do
+* Check the above Canu jobs
+* Continue working on genome announcement papers

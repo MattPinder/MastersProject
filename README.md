@@ -9274,6 +9274,7 @@ Run this info through Metaxa2
       * 2,436,254 bp - Bacterial chromosome?
       * New?
       * BlastN of 16S database predicts Sulfitobacter
+
     * tig00000007     Chloroplast;;;;;        99.57   1409    97.99
       * 122,694 bp - approximately correct size of S. marinoi chloroplast
 
@@ -9326,3 +9327,33 @@ Run this info through Metaxa2
 ## To do
 * Check the above Canu jobs
 * Continue working on genome announcement papers
+
+# 28 July 2017
+
+## Arenibacter algicola SMS7
+Released on NCBI - rerun through Pathway Tools and update feature numbers
+* Feature numbers updated
+* Pathway Tools (originally 268 pathways)
+  * First run                     - 258
+  * After Assign Probable Enzymes - 
+  * After Pathway Hole Filler     - 
+
+
+## ST54 Canu
+Check 55m jobs
+* pb_354
+
+* pb_77
+
+
+## To do
+* Verify that pb_398_00X are duplicate samples
+* Run contig overlap graphs (R) for Falcon assemblies (p.47 of https://scilifelab.github.io/courses/assembly/1611/files/PacBio_Assembly.pdf)
+* Make a list of contig lengths (sorted) and save them
+  * `fp.py --length FILE.fa | sort -n -r > FILE_Length.txt`
+  * One for primary, one for associated
+* Generate `sg_edges_to_GFA.py > Sm_Ref_v1.gfa`
+  * Can view in Bandage (redownload?)
+* Add the above commands to the runFalcon.sge script for automation
+* Look at quality score in fastq file for mito repeats region reads?
+* Finish AreAlgSMS7 Assign Probable Enzymes, then proceed to Pathway Hole Filler

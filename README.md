@@ -9357,3 +9357,9 @@ Check 55m jobs
 * Add the above commands to the runFalcon.sge script for automation
 * Look at quality score in fastq file for mito repeats region reads?
 * Finish AreAlgSMS7 Assign Probable Enzymes, then proceed to Pathway Hole Filler
+
+
+# 14 August 2017
+* Finish 'Assign Probably Enzymes' jobs
+* Check ST54 55m Canu jobs?
+* See above

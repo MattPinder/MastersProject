@@ -9349,17 +9349,59 @@ Check 55m jobs
 ## To do
 * Verify that pb_398_00X are duplicate samples
 * Run contig overlap graphs (R) for Falcon assemblies (p.47 of https://scilifelab.github.io/courses/assembly/1611/files/PacBio_Assembly.pdf)
-* Make a list of contig lengths (sorted) and save them
-  * `fp.py --length FILE.fa | sort -n -r > FILE_Length.txt`
-  * One for primary, one for associated
-* Generate `sg_edges_to_GFA.py > Sm_Ref_v1.gfa`
-  * Can view in Bandage (redownload?)
-* Add the above commands to the runFalcon.sge script for automation
+  * DONE - Make a list of contig lengths (sorted) and save them
+    * DONE - `fp.py --length FILE.fa | sort -n -r > FILE_Length.txt`
+    * DONE -  One for primary, one for associated
+  * DONE - Generate `sg_edges_to_GFA.py > Sm_Ref_v1.gfa`
+    * DONE - Can view in Bandage (redownload?)
+* Add the above commands to the runFalcon.sge script for automation (string graph script needs automating)
 * Look at quality score in fastq file for mito repeats region reads?
-* Finish AreAlgSMS7 Assign Probable Enzymes, then proceed to Pathway Hole Filler
+  * DONE - Finish AreAlgSMS7 Assign Probable Enzymes, then proceed to Pathway Hole Filler
 
 
 # 14 August 2017
 * Finish 'Assign Probably Enzymes' jobs
 * Check ST54 55m Canu jobs?
 * See above
+
+## Arenibacter algicola SMS7
+* Completing Pathway Tools analyses (originally 268 pathways)
+  * First run                     - 258
+  * After Assign Probable Enzymes - 259
+  * After Pathway Hole Filler     - 268
+  * No change!
+
+## Antarctobacter heliothermus SMS3 (originally 320 pathways)
+* Feature numbers updated on GitLab
+  * First run                     - 295
+  * After Assign Probable Enzymes - 302
+  * After Pathway Hole Filler     - 315
+  * Five less than before...
+
+## Assembly graphs for Falcon assemblies
+* Bandage reinstalled on local machine
+
+* Add these commands to runFalcon.sge scripts:
+fp.py --length 2-asm-falcon/p_ctg.fa | sort -n -r > 2-asm-falcon/p_ctg_length.txt
+fp.py --length 2-asm-falcon/a_ctg.fa | sort -n -r > 2-asm-falcon/a_ctg_length.txt
+(# sg_edges_to_GFA.py > String_Graph.gfa)
+
+* sg_edges_to_GFA.py cannot be run, find a way to automate this
+  * Needs to be run from the 2-asm-falcon subdirectory, not the seed_read_Xk directory
+
+## Contig overlap graph syntax for R
+
+$ R 
+> library(MASS) 
+> data <- read.table("ovlp_stats.txt") 
+> plot(data$V3,data$v4) 
+> z <- kde2d(data$V3,data$v4) 
+> contour(z,add=TRUE)
+
+* Double-check syntax to output graph to file
+
+## Still to-do
+* Verify that pb_398_00X are duplicate samples
+* Run contig overlap graphs (R) for Falcon assemblies (p.47 of https://scilifelab.github.io/courses/assembly/1611/files/PacBio_Assembly.pdf)
+* Look at quality score in fastq file for mito repeats region reads?
+* Find way to automate string graph generation from Falcon

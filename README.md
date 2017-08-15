@@ -9405,3 +9405,57 @@ $ R
 * Run contig overlap graphs (R) for Falcon assemblies (p.47 of https://scilifelab.github.io/courses/assembly/1611/files/PacBio_Assembly.pdf)
 * Look at quality score in fastq file for mito repeats region reads?
 * Find way to automate string graph generation from Falcon
+  * DONE (AWAITING FEEDBACK) - Update announcement papers
+* Attempt to assemble/circularise bacterial genomes from within ST54 S. marioni genomes
+
+
+
+
+
+# 15 August 2017
+
+## Announcement papers
+Genome feature figures now up-to-date; must include details on interesting features...
+* R. mucosus announcement - 436 words
+
+* Double-check crt result in DMSP superpathway of M. salarius when MetaCyc is available again...
+
+* Papers updated, need to determine which other information to include in the shorter papers...
+
+## Mito repeat region
+* Don't have fastq file for ...
+  * Do any fastq files exist for pb_354 in e.g. SMRT Portal?
+  * FASTQ file located in SMRT Portal job directories (can't access raw SMRT Portal data due to permissions)
+    * Example: /home/smrtanalysis/userdata/jobs/016/016759/data/filtered_subreads.fastq
+    * Quality scores seem very low overall...
+* Find repeat sections from each raw read
+  * m160810_080809_42203_c101084512550000001823238903091755_s1_p0/93737/11172_21805	2447-10242	AAAC-GTTC
+  * m160907_135022_42203_c101088552550000001823265803091740_s1_p0/84347/631_10058	1007-6737	GAAC-TCCT
+  * m160809_233148_42203_c101084512550000001823238903091753_s1_p0/98665/14321_28605	2986-11294	GAAA-GTTC
+  * m160907_093109_42203_c101088662550000001823265803091707_s1_p0/59477/0_17561		2090-9690	GAAA-TTCT
+  * m160809_233148_42203_c101084512550000001823238903091753_s1_p0/98665/0_14272		2967-11265	AACA-TTTC
+  * m160906_163330_42203_c101088662550000001823265803091704_s1_p0/110484/0_16498	998-4003	AAGC-TTTC
+  * m160906_225243_42203_c101088662550000001823265803091705_s1_p0/61208/0_13107		4093-11530	GAAA-TGTT
+  * m160907_135022_42203_c101088552550000001823265803091740_s1_p0/84347/19711_29680	1590-7282	GGAA-TGTT
+
+  * head -n4 Repeat_Spanning_Raw_Reads.fastq | cut -c2447-10242 > TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * head -n8 Repeat_Spanning_Raw_Reads.fastq | tail -n4 | cut -c1007-6737 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * head -n12 Repeat_Spanning_Raw_Reads.fastq | tail -n4 | cut -c2986-11294 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * head -n16 Repeat_Spanning_Raw_Reads.fastq | tail -n4 | cut -c2090-9690 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * tail -n16 Repeat_Spanning_Raw_Reads.fastq | head -n4 | cut -c2967-11265 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * tail -n12 Repeat_Spanning_Raw_Reads.fastq | head -n4 | cut -c998-4003 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * tail -n8 Repeat_Spanning_Raw_Reads.fastq | head -n4 | cut -c4093-11530 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+  * tail -n4 Repeat_Spanning_Raw_Reads.fastq | cut -c1590-7282 >> TRIMMED_Repeat_Spanning_Raw_Reads.fastq
+
+* To count each character X in each line of file Y
+  * `tr -d -c 'X\n' < Y | awk '{ print length; }'`
+* `sed G`
+  * Adds a newline after each output line
+
+* Massive extension in one of the repeat regions has low quality; can rule this out
+
+* Calculated quality percentages for each repeat region; IS THERE SOFTWARE THAT CAN GENERATE A HEATMAP OF THIS INFORMATION?
+
+## pb_398_00X
+* Email Oskar re: physical characteristics of pb_398_001 and _002
+  * Waiting for response

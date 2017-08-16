@@ -9458,4 +9458,120 @@ Genome feature figures now up-to-date; must include details on interesting featu
 
 ## pb_398_00X
 * Email Oskar re: physical characteristics of pb_398_001 and _002
-  * Waiting for response
+  * No physical data yet, aside from looking similar to Sulfitobacter and having slightly-similar qualities re: antibiotics
+
+
+# 16 August 2017
+
+## Mito repeat region
+Running FastQC on each spanning sequence
+* Trough in span 7 (the extended read)
+* Trough in span 4 (103 reps)
+
+* Average quality scores:
+  * Span1	m160810_080809_42203_c101084512550000001823238903091755_s1_p0/93737/11172_21805		10.57824525
+  * Span2	m160907_135022_42203_c101088552550000001823265803091740_s1_p0/84347/631_10058		11.24777526
+  * Span3	m160809_233148_42203_c101084512550000001823238903091753_s1_p0/98665/14321_28605		10.90071007
+  * Span4	m160907_093109_42203_c101088662550000001823265803091707_s1_p0/59477/0_17561		11.0078937
+  * Span5	m160809_233148_42203_c101084512550000001823238903091753_s1_p0/98665/0_14272		9.868538378
+  * Span6	m160906_163330_42203_c101088662550000001823265803091704_s1_p0/110484/0_16498		10.26779774
+  * Span7	m160906_225243_42203_c101088662550000001823265803091705_s1_p0/61208/0_13107		10.09438021
+  * Span8	m160907_135022_42203_c101088552550000001823265803091740_s1_p0/84347/19711_29680		11.16318286
+
+* Highest averages (those above 11) belong to:
+  * Span 2 - 76 reps
+  * Span 4 - 103 reps - This does have a quality dip in the middle...
+  * Span 8 - 76 reps (last one very extended, which does have noticably lower average quality)
+
+* Lowest average - Span 5 (<10) - 108 reps
+
+### Repeat number evidence
+
+* Of the eight spanning hits:
+  * Three show 108 reps
+  * Two show 76 reps
+  * One each of 103, 87, 40 reps
+
+* Highest average FASTQ scores (>11):
+  * Span 2 (76 reps)
+  * Span 4 (103 reps)
+  * Span 8 (76 reps) (low quality at the start where initial repeat is very (falsely) extended)
+
+* Lowest average FASTQ score (<10):
+  * Span 5 (108 reps)
+
+* Double-check FULL read quality, not just repeat region
+  * Lowest (<10):  Span 6 (40 reps)
+  * Highest (>11): Span 2 (76 reps)
+    * Spans 4 (103 reps) and 8 (76 reps) close behind once again
+
+* 76 reps generally produces better quality results?
+
+(See also Excel spreadsheet)
+(Can check in FastQC)
+
+## pb_398
+Have pb_398_001 and pb_398_002 been compared to pb_359_5 and pb_359_6 for ALL of the relevant assemblies?
+* pb_398_001 (Canu 4.5m)
+* pb_398_001 (Falcon 10.6k)
+* pb_398_002 (Falcon 10.6k)
+* pb_359_5 (Canu 4.5m)
+* pb_359_6 (Falcon 10.6k)
+
+* Check percantage similarity between pb_398_00X and pb_359_X
+  * pb_398_002 vs pb_359_6 (Sulfito) (Falcon)
+
+| Replicon | 002 length | Sulf length | % ID  |
+|----------|------------|-------------|-------|
+| Total    |  5,125,074 |   5,121,602 |   -   |
+| Chrom	   |  3,571,298 |   3,572,445 | 
+| pSMR1-1  |    427,966 |     428,095 | 99.9% |
+| pSMR1-2  |    292,827 |     292,917 | 99.9% |
+| pSMR1-3  |    284,706 |     284,777 | 99.9% |
+| pSMR1-4  |    209,134 |     209,222 | 99.9% |
+| pSMR1-5  |    142,088 |     142,107 | 99.9% |
+| pSMR1-6  |     99,216 |      99,245 | 99.9% |
+| pSMR1-7  |     92,715 |      92,794 | 99.8% |
+
+  * pb_398_001 vs pb_359_5 (Marino) (Canu)
+
+| Replicon | 001 length | Marino length | % ID  |
+|----------|------------|---------------|-------|
+| Total    |  4,642,139 |     4,630,160 |   -   |
+| Chrom    |  4,398,909 |     4,386,892 |       | (tig00000013)
+| pSMR5    |    243,230 |       243,268 | 98.8% | (tig00000000_rev_comp) (two long gaps, one in each; rearrangement or limited misassembly?)
+
+  * pb_398_001 vs pb_359_6 (Sulfito) (Falcon)
+
+| Replicon | 001 length | Sulf length | % ID  |
+|----------|------------|-------------|-------|
+| Total    |            |   5,121,602 |   -   |
+| Chrom    |            |   3,572,445 |       | (Multiple...)
+| pSMR1-1  |    427,911 |     428,095 | 99.9% | (21)
+| pSMR1-2  |269,041(..?)|     292,917 | 91.8% | (000008F_rev_comp) (gap as expected)
+| pSMR1-3  |    284,657 |     284,777 | 99.9% | (22)
+| pSMR1-4  |    209,124 |     209,222 | 99.9% | (24)
+| pSMR1-5  |122,994(..?)|     142,107 | 86.5% | (000011F) (20k gap as expected)
+| pSMR1-6  |28,663 (...)|      99,245 |       | (000019F_rev_comp)
+| pSMR1-7  |31,268 (...)|      92,794 |       | (000018F)
+
+Any way to align sequences longer than 1Mb and get a % identity score without having to slice the sequence?
+
+
+## To do
+* Align longer sequences
+* Double-check 16S sequences for pb_398...
+
+* Contig overlap graphs in R for Falcon sequences (ST54 data)
+  * cd 1-preads_ovl
+  * module load FALCON/v1.8.2
+  * fc_ovlp_stats --fofn merge-gather/las.fofn > ovlp_stats.txt
+    * 'AssertionError' - problem with Falcon script?
+      * Other Falcon versions on Albiorix throw a 'DistributionNotFound' error
+
+  * $ R
+    > library(MASS)
+    > data <- read.table("ovlp_stats.txt")
+    > plot(data$V3,data$v4)
+    > z <- kde2d(data$V3,data$v4)
+    > contour(z,add=TRUE)

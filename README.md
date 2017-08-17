@@ -9575,3 +9575,124 @@ Any way to align sequences longer than 1Mb and get a % identity score without ha
     > plot(data$V3,data$v4)
     > z <- kde2d(data$V3,data$v4)
     > contour(z,add=TRUE)
+
+
+# 17 August 2017
+
+## pb_398 Identity checks
+* pb_398_001 - Sulfitobacter + Marinobacter mix (S. pseudonitzschiae + M. salarius?)
+  * 16S checks
+     * Based on 10.6k Falcon (Sulfito)
+       * Metaxa2 predicts 3 16S sequences - 1x Marinobacter (should be 3...), 2x Sulfitobacter
+       * Searching conserved 5' region (50bp, identical between Marino and Sulfito) reveals 5 potential 16S regions, as expected
+         * Marino sequences - two identical, _1 differs from the _2 and _3 by +1 bp and 1 bp substitution
+           * _1 vs pb_359_5 1+2 - +1bp, 1bp sub
+           * _1 vs pb_359_5 3   - +1bp
+           * _2+_3 vs pb_359_5 1+2 - identical
+           * _2+_3 vs pb_359_5 3   - 1bp sub
+           * SMR5 top BLASTn result; vs M. salarius R9SW1 - 99.4% (R9SW1 predicted longer, but longer parts match in _001)
+         * Sulfito sequences - both identical
+           * _1+_2 vs pb_359_6 1+2 - identical
+           * SMR1 top BLASTn result; vs S. pseudonitzschiae H3 - 99.2% (H3 16S is shorter at the 5' end)
+
+     * Based on 4.5m Canu (Marino)
+       * Metaxa2 predicts 3 16S sequences - 1x Marinobacter (should be 3...), 2x Sulfitobacter
+       * Searching conserved 5' region (50bp, identical between Marino and Sulfito) reveals 5 potential 16S, as expected
+         * Marino sequences - two identical, _3 differs from _1 and _2 by 1bp substitution
+           * _1+_2 vs pb_359_5 1+2 - identical
+           * _1+_2 vs pb_359_5 3   - 1bp sub
+           * _3 vs pb_359_5 1+2 - 1bp sub
+           * _3 vs pb_359_5 3   - identical
+           * SMR5 top BLASTn result; vs M. salarius R9SW1 - 99.4%/99.5%
+         * Sulfito sequences - both identical
+           * _1+_2 vs pb_359_6 1+2 - identical
+           * SMR1 top BLASTn result; vs S. pseudonitzschiae H3 - 99.2%
+
+* pb_398_002 - Sulfitobacter (pseudonitzschiae?)
+  * Assembly size and contig number/sizes are consistent
+  * 16S checks
+    * Compared to pb_359_6: 0/1bp sub (002_Plas1 copy identical to pb_359_6; 002_Chrom copy 1bp substitution vs _6)
+    * SMR1 top BLASTn result; vs S. pseudonitzschiae H3 - 99.2% (H3 16S is shorter at the 5' end)
+
+* Issues with the Canu assembly of pb_398_001, but evidence seems to suggest that:
+  * pb_398_001 = Marinobacter salarius (SMR5?)
+  * pb_398_002 = Sulfitobacter pseudonitzschiae (SMR1?)
+
+
+
+## Points for Skype Call
+
+* Mito repeats
+  * See /nobackup/data5/Skeletonema_marinoi_genome_project/08_RO5_Organelles/Mito_Repeats_Evidence.md
+  * See more in-depth statistics in Excel spreadsheet?
+  * 76 reps the best result?
+
+* Identities of pb_398 samples
+  * See /nobackup/data5/Skeletonema_marinoi_microbiome_project/01_assemblies/pb_398/README.md
+  * pb_398_001 = S. pseudonitzschiae + M. salarius
+  * pb_398_002 = S. pseudonitzschiae
+    * Oskar - "I have not performed much characterization on the two new ones, although they appear very similar to each other and slightly to the Sulfitobacter.
+               This is only based on appearance and antibiotic production. (Though they seem to differ in severeness in antibiotic amount)"
+  * Supported by 16S evidence and contig lengths/identities (particularly pb_398_002)
+    * !!!Check pb_359_5 assemblies, try Falcon parameters which gave 2-contig results, try to get good results for both Sulfito AND Marino
+
+* Contig overlap graphs
+  * 'AssertionError' when running fc_ovlp_stats; problem with Falcon script?
+
+* String graphs and lists of contig length
+  * !!!Need to find a way to automate graph production in runFalcon.sge script
+    * Graph generation script should run in subdirectory, find syntax (should be simple?)
+
+* Find bacterial sequences in ST54
+  * !!!Ongoing...
+  * See below re. pb_354
+
+* Announcement papers
+  * !!!Feedback? Need to know what else to include if necessary (see notes in Google Docs)
+    * Are pathways with elements missing still worthy of inclusion in the announcement papers?
+  * Double-check crt result in DMSP superpathway of M. salarius when MetaCyc is available again...
+
+* Is pb_354 from ST54 or RO5?
+  * pb_354 present in ST54 directory in ~/PacBio_raw_data
+  * pb_354 used for RO5 jobs in SMRT Portal, including those for the mitochondrial assembly
+  * Seems most lilkely that pb_354 is from RO5
+    * This might explain why 'untreated' sample apparently has no bacteria
+
+
+
+## pb_398_002 vs S. pseudonitzschiae SMR1 - difference in antibiotic sensitivity
+
+Searching for large stretches (>3) of missing bases in genes that may have relevance to antibiotic sensitivity
+* Chromosome
+  * pb_398_002 shows 4 deletions, 1 insertion and 1 substitution in 'penicillin-binding protein 2' mrdA gene
+  * (phnH and phnG, involved in 'organic phosphonate catabolic process', appear to have undergone many deletions in pb_398_002 vs. SMR1)
+  * (Mutations in ftsH and hflC?)
+* Plasmid 1
+  * pb_398_002 missing a chunk ~8bp in 'acylase ACY 1' acyI gene
+    * GO biological process - response to antibiotic (http://www.uniprot.org/uniprot/P15557)
+* Plasmid 2
+  * ?
+* Plasmid 3
+  * pb_398_002 missing a chunk ~6bp in 'rhodocoxin reductase' thcD gene
+    * Required for herbicide degradation, but may still be of interest
+  * (Massive differences in 'von Willebrand factor type A domain protein' (SULPSESMR1_04358))
+* Plasmid 4
+  * ?
+* Plasmid 5
+  * ?
+* Plasmid 6
+  * ?
+* Plasmid 7
+  * ?
+
+## To do
+* See above
+* Determine where the predicted differences between pb_398_002 and S. pseudonitzschiae SMR1 are
+  * Could this influence the difference in antibiotic sensitivity?
+  * Try with pb_398_001 and SMR1 (and SMR5) if cleaner assemblies can be obtained
+
+			| SMR1 vs pb_398_002
+------------------------|--------------------------------
+-900,000		| 899608/900483 (99.9%)		674/900483 ( 0.1%)	SMR1 - 900292
+900,001-1,800,000	| 899810/900321 (99.9%)		416/900321 ( 0.0%)	SMR1 - 900226
+1,800,001-2,700,000     | 

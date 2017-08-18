@@ -9626,6 +9626,13 @@ Any way to align sequences longer than 1Mb and get a % identity score without ha
   * See /nobackup/data5/Skeletonema_marinoi_genome_project/08_RO5_Organelles/Mito_Repeats_Evidence.md
   * See more in-depth statistics in Excel spreadsheet?
   * 76 reps the best result?
+  * WOULD REPEAT LENGTH DIFFER BETWEEN MITOCHONDRIA IN AN INDIVIDUAL CELL?
+  * LOOK AT RAW READ QUALITY INDIVIDUALLY TO ELIMINATE LOW-QUALITY REGIONS
+    * FIND ASSEMBLY WITH # OF REPEATS CLOSEST TO THE BEST-QUALITY RAWS
+    * CHECK STRINGENCY OF SETTINGS AND SPANNING READS OF e.g. 'THIRD', AND IF ALL LOOKS WELL THEN GO WITH THIS (NOTE THIS IN M&M SECTION)
+      * RETRY MITOS AND DOGMA ANNOTATORS
+      * USE TRANSLATION TABLE 4
+      * HOLD FIRE FOR NOW UNTIL ILLUMINA DATA ARRIVES
 
 * Identities of pb_398 samples
   * See /nobackup/data5/Skeletonema_marinoi_microbiome_project/01_assemblies/pb_398/README.md
@@ -9646,27 +9653,38 @@ Any way to align sequences longer than 1Mb and get a % identity score without ha
 * Find bacterial sequences in ST54
   * !!!Ongoing...
   * See below re. pb_354
+  * BLAST 16S OF pb_77 SULFITOBACTER
 
 * Announcement papers
   * !!!Feedback? Need to know what else to include if necessary (see notes in Google Docs)
     * Are pathways with elements missing still worthy of inclusion in the announcement papers?
   * Double-check crt result in DMSP superpathway of M. salarius when MetaCyc is available again...
+  * INCLUDE DETAILS ON INCOMPLETE PATHWAYS IF INTERESTING
 
 * Is pb_354 from ST54 or RO5?
   * pb_354 present in ST54 directory in ~/PacBio_raw_data
   * pb_354 used for RO5 jobs in SMRT Portal, including those for the mitochondrial assembly
-  * Seems most lilkely that pb_354 is from RO5
+  * Seems most likely that pb_354 is from RO5
     * This might explain why 'untreated' sample apparently has no bacteria
-
+  * pb_354 BELONGS TO RO5
 
 
 ## pb_398_002 vs S. pseudonitzschiae SMR1 - difference in antibiotic sensitivity
 
 Searching for large stretches (>3) of missing bases in genes that may have relevance to antibiotic sensitivity
-* Chromosome
+* Chromosome (pt1)
   * pb_398_002 shows 4 deletions, 1 insertion and 1 substitution in 'penicillin-binding protein 2' mrdA gene
   * (phnH and phnG, involved in 'organic phosphonate catabolic process', appear to have undergone many deletions in pb_398_002 vs. SMR1)
   * (Mutations in ftsH and hflC?)
+* Chromosome (pt2)
+  * (Mutations in 2x B12 binding proteins)
+  * pb_398_002 shows 12bp deletion in katA catalase gene, 'involved in resistance to paraquat when fur is absent and to tert-butyl hydroperoxide' (http://www.uniprot.org/uniprot/Q2FYU7)
+  * pb_398_002 shows 2 deletions and 1 substitution in phosphoglucomutase pgm gene, useful vs antimicrobial peptides? (https://www.ncbi.nlm.nih.gov/pubmed/19589833)
+  * pb_398_002 shows scattered deletions/mutations in "antilisterial bacteriocin subtilosin biosynthesis protein AlbA", involved in production of antibacterials (http://www.uniprot.org/uniprot/O07623)
+* Chromosome (pt3)
+  * ?
+* Chromosome (pt4)
+  * In pt3 and pt4, multiple genes pertaining to vitamin B12 appear to differ between pb_398_002 and SMR1
 * Plasmid 1
   * pb_398_002 missing a chunk ~8bp in 'acylase ACY 1' acyI gene
     * GO biological process - response to antibiotic (http://www.uniprot.org/uniprot/P15557)
@@ -9697,3 +9715,30 @@ Searching for large stretches (>3) of missing bases in genes that may have relev
 900,001-1,800,000	| 899810/900321 (99.9%)		416/900321 ( 0.0%)	SMR1 - 900226
 1,800,001-2,700,000     | 899646/900594 (99.9%)		827/900594 ( 0.1%)	SMR1 - 900361
 2,700,001-              | 870975/871730 (99.9%)		596/871730 ( 0.1%)	SMR1 - 871566 (_002 - 871298)
+
+
+# 18 August 2017
+
+See capitals above:
+* In announcement papers, include details on incomplete pathways if there is a decent amount of evidence for them
+* Blast 16S of pb_77 bacteria, in particular Sulfitobacter (not predicted by Alvar)
+* Re: mito repeats
+  * WOULD REPEAT LENGTH DIFFER BETWEEN MITOCHONDRIA IN AN INDIVIDUAL CELL?
+  * LOOK AT RAW READ QUALITY INDIVIDUALLY TO ELIMINATE LOW-QUALITY REGIONS
+    * FIND ASSEMBLY WITH # OF REPEATS CLOSEST TO THE BEST-QUALITY RAWS
+    * CHECK STRINGENCY OF SETTINGS AND SPANNING READS OF e.g. 'THIRD', AND IF ALL LOOKS WELL THEN GO WITH THIS (NOTE THIS IN M&M SECTION)
+      * RETRY MITOS AND DOGMA ANNOTATORS
+      * USE TRANSLATION TABLE 4
+      * HOLD FIRE FOR NOW UNTIL ILLUMINA DATA ARRIVES
+
+## ST54 bacteria
+
+* pb_77 16S of unidentified species
+  * Appears to be either Sulfitobacter or Tateyamaria
+    * If Sulfito, doesn't seem to be SMR1
+
+* Three of the four predicted bacterial species appear on long contigs
+
+* Previous attempt to circularise failed...
+  * Can't find any data for this; retry
+  * grep tig00000003, tig00000531 and tig00000534 (tig00000251 currently too short)

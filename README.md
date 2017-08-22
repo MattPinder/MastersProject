@@ -9154,7 +9154,7 @@ To sum numbers, one per line:
 15k completed, 7k and 12k still ongoing
 * 12k complete, 7k still ongoing
 
-* Attempt Canu on pb_354 with genomeSize of 80.5m
+* Attempt Canu on pb_354 with genomeSize of 80.5m (estimate from Falcon assembly sizes)
 
 * As pb_77 has had poor results, try tweaking other parameters
   * Try lowering max_diff from 500 to 400
@@ -9709,12 +9709,12 @@ Searching for large stretches (>3) of missing bases in genes that may have relev
   * Could this influence the difference in antibiotic sensitivity?
   * Try with pb_398_001 and SMR1 (and SMR5) if cleaner assemblies can be obtained
 
-			| SMR1 vs pb_398_002
-------------------------|--------------------------------
--900,000		| 899608/900483 (99.9%)		674/900483 ( 0.1%)	SMR1 - 900292
-900,001-1,800,000	| 899810/900321 (99.9%)		416/900321 ( 0.0%)	SMR1 - 900226
-1,800,001-2,700,000     | 899646/900594 (99.9%)		827/900594 ( 0.1%)	SMR1 - 900361
-2,700,001-              | 870975/871730 (99.9%)		596/871730 ( 0.1%)	SMR1 - 871566 (_002 - 871298)
+|                     | SMR1 vs pb_398_002 |
+|---------------------|--------------------------------|
+| -900,000            | 899608/900483 (99.9%)		674/900483 ( 0.1%)	SMR1 - 900292	|
+| 900,001-1,800,000   | 899810/900321 (99.9%)		416/900321 ( 0.0%)	SMR1 - 900226	|
+| 1,800,001-2,700,000 | 899646/900594 (99.9%)		827/900594 ( 0.1%)	SMR1 - 900361	|
+| 2,700,001-          | 870975/871730 (99.9%)		596/871730 ( 0.1%)	SMR1 - 871566 (_002 - 871298)	|
 
 
 # 18 August 2017
@@ -9742,3 +9742,67 @@ See capitals above:
 * Previous attempt to circularise failed...
   * Can't find any data for this; retry
   * grep tig00000003, tig00000531 and tig00000534 (tig00000251 currently too short)
+
+* pb_77 (Canu 80.5m) doesn't circularise; obvious gaps when checking the reversed sequence
+  * Template wasn't trimmed... DELETE JOB ON SMRT PORTAL?
+  * Doesn't seem to be overlap in either Canu 80.5m or 55m... Try another set of parameters?
+
+
+# 22 August 2017
+
+## RO5 Mitogenome
+* Go through the fastq files individually
+* Select the most likely assembly size based on what has been obtained, and ensure that it circularises
+* Repeat lengths of spanning reads - 108, 76, 108, 103, 108, 40, 87, 76
+  * Spans 4 and 7 have large dips in quality in the middle - 108, 76, 108, 108, 40, 76
+  * Span 5 has some areas of particularly low/middling coverage (i.e. few of the higher-quality symbols) - 108, 76, 108, 40, 76
+    * 1, 2, 3, 6, 8 remaining
+  * 1 has a couple of short stretches of lower quality, but otherwise okay
+  * 2 has generally good quality throughout
+  * 3 has generally good quality throughout
+  * 6 has low quality at the start, but otherwise okay
+  * 8 has low quality at the ends, but otherwise okay
+* After two polishes, none of the assemblies show either 108 or 76 repeats; for completeness, attempt 16k SRL Falcon
+
+## ST54 bacteria
+Circularising the genomes is proving difficult
+* How big is the expected overlap at the ends of contigs, based on the overlaps seen in the pb_359 samples?
+  * If no useful information can be gained from the previous attempt at circularisation, delete it to save space
+* Is it worth trying a new assembly size?
+  * Sum the S. marinoi genome size (inc. chloroplast + mito) plus the predicted genome sizes of Kordia, Sulfito, Parvibaculum and Congregibacter
+    * 55m + 127k + 46k (estimate) + 5.5m + 3.6m + 3.9m + 2.4m (much too small for a Sulfitobacter...)
+    * ~75m, accounting for increased Sulfitobacter genome size and possible plasmids
+    * Rerunning Canu, check later...
+      * If the above fails, try 16.8m Canu job? (pb_77 Canu jobs have been producing this result)
+    * Genome stats appear to be the same as for previous assemblies; attempting with 16.8m...
+      * Different from previous assemblies; check 16S
+      * 'Kordia' and 'Congregibacter' may now be complete
+      * selfBlast on tig00000000 and tig00000232
+      * Based on selfBlast, try removing start (-c4963-) or end (-c-3586076)
+        * No goood results for 'Kordia', it seems...
+
+## Genome announcements
+Begin rewording the papers and adding additional details as necessary
+
+
+## pb_354
+Continue compressing this data just in case it's needed
+
+
+
+## To do
+* Check results of pb_77 75m Canu
+  * If required, attempt 16.8m Canu?
+    * Attempting...
+
+* Check results of 16k RO5 Falcon assembly (mito repeat resolution)
+  * Afterwards, make final decision re: repeat region
+
+* T. pseudonana vs. P. tricornutum comparison paper mentions a '183nt inverted repeat' bracketing the repeat array
+  * Does this exist in S. marinoi?
+    * T. pseudonana repeat is 75bp, S. marinoi's is apparently 74bp, so similar in this regard...
+    * T. pseudonana repeats are slightly variable; have RO5 repeats been overcorrected by Quiver?
+
+* Check T. oceanica mitogenome (and if there are any other new, related mitogenomes?)
+
+* Check SMRT Portal job re: possible Congregibacter

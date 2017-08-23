@@ -9805,4 +9805,51 @@ Continue compressing this data just in case it's needed
 
 * Check T. oceanica mitogenome (and if there are any other new, related mitogenomes?)
 
-* Check SMRT Portal job re: possible Congregibacter
+* Check SMRT Portal job re: possible Congregibacter (job 16775)
+
+
+# 23 August 2017
+
+## RO5 Mito
+* Check 16k RO5 Falcon assembly, check # of repeats
+  * 103 repeats
+* Has RO5 Canu assembly been tried/checked?
+  * Canu is designed to resolve tricky repeat regions...
+  * ********** Canu has been used but with what appears to be a slightly different dataset (not the one I've used for the Falcon assemblies)
+    * For the sake of consistency, rerun Canu assembly, maintaining 55m genomeSize parameter *************
+
+## ST54 Bacteria
+* Congregi - deletion of first ~5kb seems more convincing than deletion of final ~11kb (job 16775)
+  * Large peak near to cut point, BUT plenty of reads spanning the cut...
+  * Run a second time for polish, and check quality again (job 16778)
+  * A couple of other corrections made, but situation same as above; reads that map to the ENTIRE contig are low-quality, but there are plenty of them...
+    * Get second opinion on job 16775
+* How to proceed with Kordia, Sulfito and Parvibaculum?
+  * Double-check earlier results for possible end overlaps
+  * Similar regions found at start and end of 'Kordia' (55m Canu) but on opposite strands...
+    * ~4Mb contig, which has a precedent in the genus - K. zhangzhouensis
+* Some Falcon 7k SRL contigs are big enough to potentially be bacterial contigs
+  * **** Run these through Metaxa2, consider running other intermediate SRL values; pb_77 Falcon attempts have produced very short assemblies in the past... ****
+  * 1_2-asm-falcon - 4,081,918bp - Kordia?
+  * 2_2-asm-falcon - as 1_
+  * 3_2-asm-falcon - 4,082,453bp (Kordia?) and 3,586,013 (Gamma?)
+    * 0.88Mb contig which also contains a potential Kordia 16S
+    * Checked for overlap but can't find anything major...
+  * 4_2-asm-falcon - 4,081,918bp (Kordia) and 2,167,864 (Gamma?)
+    * 0.88Mb contig which also contains a potential Kordia 16S
+  * 5_2-asm-falcon - as 4_
+  * 6_2-asm-falcon - 2,782,980 + 1,274,487 + 881,737 (Kordia) and 1,670,729 + 480,505 (Gamma?)
+  * 7_2-asm-falcon - as 4_
+  * 8_2-asm-falcon - 4,070,733 (Kordia) + 3,598,446 (Gamma?)
+    * 0.88Mb contig which also contains a potential Kordia 16S
+
+## Genome announcements
+* pb_359_3 - should be okay
+* pb_359_4 - many pathways considered relevant don't stand up to scrutiny; check hydrocarbon degradation pathways mentioned in M41 paper (check NCBI annotation of
+pb_359_4...)
+
+
+## To do
+* Check Falcon assemblies (try more Canu assemblies?) for pb_77
+* Check onging RO5 Canu for mito
+* Continue genome announcement adjustments

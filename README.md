@@ -9844,7 +9844,7 @@ Continue compressing this data just in case it's needed
     * 0.88Mb contig which also contains a potential Kordia 16S
 
 ## Genome announcements
-* pb_359_3 - should be okay
+* pb_359_3 (Lokta) - should be okay
 * pb_359_4 - many pathways considered relevant don't stand up to scrutiny; check hydrocarbon degradation pathways mentioned in M41 paper (check NCBI annotation of
 pb_359_4...)
 
@@ -9853,3 +9853,56 @@ pb_359_4...)
 * Check Falcon assemblies (try more Canu assemblies?) for pb_77
 * Check onging RO5 Canu for mito
 * Continue genome announcement adjustments
+
+
+# 24 August 2017
+
+## RO5 Canu mito assembly
+* Added command to runCanu.sge to print line lengths to file
+  * `grep ">" ${NAME}.contigs.fasta | cut -d' ' -f1,2 | sed 's/len=//g' | sort -h -k2 > ${NAME}.contigs.length.txt`
+  * Canu predicts 108 repeats...
+    * Trim, then reverse and correct in SMRT Portal (job 16779)
+    * Failed (ran out of space)
+    * Job 16748 deleted (results compressed and saved)
+    * 16779 restarted as job 16782
+    * Corrects to 107/108 repeats
+
+* Compare repeat number in T. pseudonana
+  * 75nt repeats (cf. 74nt in S. marinoi)
+  * Repeat region 4.97kb (equates to ~66 repeats)
+    * Best raw reads in S. marinoi - 76 reps
+    * Closest assembly to this - 65
+    * Accept Third (from 12k assembly) (2_2, 43570bp)
+    * Need to realign to whatever the first post-repeat gene is; run Prokka on Annotation-1 or Annotation-4 when able
+      * Should be nad5
+      * Realigned - start writing M&M
+
+## Genome announcements
+* pb_359_4 (Sphingo) - check NCBI PGAP annotation; Prokka annotation unhelpful...
+* pb_359_5 (Marino) - should be okay
+* pb_359_6 (Sulfito) - should be okay
+* pb_359_7 (Antarcto) - ~439 words, but should be okay
+* pb_359_8 (Areni) - check NCBI PGAP annotation; Prokka annotation unhelpful...
+
+## ST54 (pb_77) bacteria
+* Kordia
+  * Appears to be ~5Mb, but genome always fragmented - 2-3 pieces
+
+* Congregibacter
+  * MAY have a result
+    * Double-check results of 16775
+
+* Sulfitobacter
+  * ~2.5Mb contig found but too short in isolation...
+
+* Parvibaculum
+  * Seemingly very fragmented - ~13Kb
+
+* Canu results often come out the same (55m ~ 75m ~ 80.5m) but 16.8m gave slightly different results with some better bacterial hits (e.g. fuller Congregibacter)
+  * Try more Canu assemblies
+    * 35m (midway between 16.8m and 55m) and 100m
+
+## To do
+* Genome announcements for Sphingo and Areni
+* Keep checking for bacteria in ST54; check Canu results (35m and 100m)
+* Start writing M&M for mitochondrion, and check the Prokka annotation to ensure it has been aligned correctly

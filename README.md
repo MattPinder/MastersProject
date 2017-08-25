@@ -9891,6 +9891,7 @@ pb_359_4...)
 * Congregibacter
   * MAY have a result
     * Double-check results of 16775
+    * minus_start appears to be best in terms of circularisation
 
 * Sulfitobacter
   * ~2.5Mb contig found but too short in isolation...
@@ -9906,3 +9907,43 @@ pb_359_4...)
 * Genome announcements for Sphingo and Areni
 * Keep checking for bacteria in ST54; check Canu results (35m and 100m)
 * Start writing M&M for mitochondrion, and check the Prokka annotation to ensure it has been aligned correctly
+
+
+# 25 August 2017
+
+## Shortcut for 'nonewline-ing' a Canu fasta file
+`tr -d '\n' < NAME.contigs.fasta | sed 's/>/\n>/g' | sed 's/suggestCircular=no/suggestCircular=no\n/g' > NAME.contigs.nonewline.fasta`
+
+
+## Update Pathway Tools to 21.1 when able (when website is available)
+
+## ST54 bacteria search
+* Canu genomeSize parameters >55m make ~no difference in results, so stick to smaller assemblies
+* Before trimming, in 35m there is a ~100 Kb size increase in the size of the Kordia contig vs. previous attempt
+  * Doesn't appear to be a good overlap...
+
+
+Compare possible Congregibacter vs. C. litoralis
+* Use it to search for other Congregibacter contigs
+* Either Congregibacter or Dasania (Alvar refers to this as Unitig_0, and mentions that it's very hard to classify)
+  * Blast parts of the assembly to try and determine identity
+  * PhyloPhlAn
+  * Accept minus_start build (peak in coverage, but better overlap support)
+    * Accept minus_start_reversed_quiver|quiver
+
+Start looking for plasmids and viruses
+* Establish pipeline/protocol to follow including virus search
+
+Create a complete, automated Canu pipeline
+* Test with 25m and 45m Canu runs
+  * Trying 50m...
+
+## Announcement paper drafts
+* Arenibacter may be okay
+* Sphingorhabdus still needs a hook
+
+## Mito M&M
+
+
+## Question
+When is it best to use Falcon, and when to use Canu?

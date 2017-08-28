@@ -9873,6 +9873,7 @@ pb_359_4...)
     * Best raw reads in S. marinoi - 76 reps
     * Closest assembly to this - 65
     * Accept Third (from 12k assembly) (2_2, 43570bp)
+      * 43,577bp after double Quiver correction
     * Need to realign to whatever the first post-repeat gene is; run Prokka on Annotation-1 or Annotation-4 when able
       * Should be nad5
       * Realigned - start writing M&M
@@ -9947,3 +9948,55 @@ Create a complete, automated Canu pipeline
 
 ## Question
 When is it best to use Falcon, and when to use Canu?
+
+
+# 28 August 2017
+
+## ST54 bacteria
+New plan for finding contigs belonging to certain bacteria
+* Find the contig with the 16S and BLAST it to determine a species identity (or near enough)
+* DL the closest-related species and make a BLAST nucleotide database
+* BLAST the rest of the Skeletonema assembly against it, and try to piece together the rest of the bacterium
+
+Also start looking for plasmids by BLASTing for common plasmid genes
+
+* Made BlastDB of 3x Kordia sequences (algicida, jejudonensis and zhangzhouensis)
+  * Test against 35m Canu assembly - this contains the longest single Kordia contig thus far
+    * tig00000012 appears to be part of the Kordia genome and may have a repeating element in it (BLASTn 29,096 - 30,366)
+      * Matches almost perfectly to the diatom 16Ss - S. pseudocostatum, S. costatum, T. pseudonana
+      * BLASTing Kordia database vs. Canu assembly ~75% identity, but the Canu contig section is ~99% identical to diatom 16S
+      * BLAST Kordia version hits Kordia 16S, so this is probably purely down to conservation of 16S sequence...
+    * Some extra hits on other contigs, but not easy to assess as no Kordia has been fully assembled...
+
+* Check genomes related (presumably) to Congregibacter/Dasania, and compare these to the possibly-circularised genome from pb_77
+  * Problem - Congregi/Dasania size and coverage both lower than the result obtained by Alvar...
+  * Quiver will deal with corrections, so attempt 5k and 6k Falcon assemblies of pb_77?
+    * 31822 + 31823 on Annotation-2
+    * Previous largest contigs obtained were 4.1 Mb; 6k gives 4.6 Mb, 5k gives 5.5 Mb
+    * 16S rRNA search using Metaxa2
+
+| 6k contig | Length    | Identity                         |
+|-----------|-----------|----------------------------------|
+| 000000F   | 4,581,041 | Kordia                           |
+| 000001F   | 3,585,991 | Gammaproteo - Congregi/Dasania?  |
+| 000002F   |   883,184 | Flavobacteriaceae (Kordia again) |
+
+| 5k contig | Length    | Identity                        |
+|-----------|-----------|---------------------------------|
+| 000000F   | 5,474,541 | Flavobacteriaceae (Kordia?)     |
+| 000001F   | 3,585,984 | Gammaproteo - Congregi/Dasania? |
+
+    * Try circularising the 5k contigs - SMRT Portal job 16784
+
+* Falcon only ever finds Kordia and Gammaproteo
+* Canu finds Kordia, Gammaproteo, Parvibaculum and Sulfitobacter(?), but no obviously complete contigs...
+
+
+## RO5 mitogenome paper
+Completed assembly part; need to wait before proceeding with annotation section
+* Reattempt MITOS and DOGMA annotations with translation table 4 just in case
+  * DOGMA still only returns a handful of genes - rRNA genes, plus nad5, cox1, cox2 and cob genes at the start of the genome
+  * Waiting for MITOS to complete...
+
+
+* Check results of SMRT Portal job!

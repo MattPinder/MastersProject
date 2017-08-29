@@ -10000,3 +10000,54 @@ Completed assembly part; need to wait before proceeding with annotation section
 
 
 * Check results of SMRT Portal job!
+
+
+# 29 August 2017
+
+## pb_77 5k Falcon circularisation tests
+* Kordia coverage looks excellent, but definite gap in the centre of the assembly
+  * Retry assembly using 4k SRL?
+  * Adjust other parameters?
+  * BLAST centre region to predict if something is missing?
+* Gammaproteo coverage good put still a peak/trough partway through (not at the centre however...)
+  * Compare to other predicted 'complete' sequence
+    * Mapping quality is MUCH better in Falcon assembly than in Canu assembly...
+    * A few hundred bp shorter than the previous assembly but much better quality...
+
+* Attempting 4k Falcon assembly
+  * Exactly the same scenario
+* Attempting second polish of the 5k bacterial contigs
+  * No improvement in Kordia, gap still remains
+
+* Parvibaculum appears at 55m Canu assembly and above; not present at 50m or below...
+  * Consistently 12,880 bp long...
+  * P. lavamentivorans (best BLASTn hit) is 3,914,745 bp long...
+  * Closest 16S match to Alpha proteobacterium NAMAF008 (acc. no. AB377222)
+    * 91% identity to P. lavamentivorans partial 16S
+    * 94% identity to Tepidicaulis marinus
+  * P. lavamentivorans not the nearest relative, BUT it has a single-contig assembly on NCBI, so could be a useful BLAST database for a Canu_55m query...
+    * No obvious good hits to speak of...
+
+* Canu assemblies of genomeSize 55m and above are all ~the same (difference in contigs identified by 16S search negligible...)
+  * Compressing 75m, 80.5m and 100m Canu 01_assembly directories
+
+
+## Remaining announcement papers
+Pathway Tools updated from 20.5 to 21.0; does this make a difference to the SphFla or AreAlg pathway predictions...?
+* Apparently not...
+
+Short comments have been included in these papers, but unsure if there's anything else to be added...
+
+
+## Start looking for plasmids
+* Suitable targets for searches
+  * BLASTn of 10 kb stretches of non-16S-highlighted contigs
+  * Contigs to check
+    * 1_ SRL_7k contig 000002F - bacterial hits
+    * 7k -n10 checking BLASTx...
+    * 1_ SRL_7k contig 000005F - bacterial hits
+
+
+## To do
+Check Canu assemblies for 53m and 54m
+* If this fails, any other approaches for obtaining longer 'Parvibaculum' sequences?

@@ -10051,3 +10051,34 @@ Short comments have been included in these papers, but unsure if there's anythin
 ## To do
 Check Canu assemblies for 53m and 54m
 * If this fails, any other approaches for obtaining longer 'Parvibaculum' sequences?
+
+
+# 30 August 2017
+
+## ST54
+
+* Canu 53m and 54m get no better results...
+
+* Attempt different Falcon parameters (except SRL) to get a closed Kordia sequence
+  * Changing min_cov of 5k SRL to 2 (default 3) appears to lengthen the Kordia contig (5,474,541 -> 5,487,619)
+    * Congregi/Dasania stays the same, however...
+    * Run the two contigs through SMRT Portal
+      * Still a spike in Congregi/Dasania
+      * Low-coverage area in Kordia; when checked with BLASTx, best hits are to K. algicida but massively disrupted (75% identity, many early stops in the reading frame
+        * Either pseudogene or misassembly
+        * Certain stretches have no hits to Kordia protein
+          * Hits on    49-1761, 4650-6698, 6698-7891, 7882-9387, 13688-15970	1762-4649 and 9388-13687 unaccounted for
+                     1484-2053,  734-1422, 1423-1819, 1816-2315,  1472--2229	Implies repetitive regions...?
+          * Assembly should perhaps be ~5,478,000-5,480,000 (7-9 kb) smaller (16kb -> ~7.5 kb)
+        * Try polishing just in case
+  * Change max_cov or max_diff parameter for Congregi/Dasania? (spike in coverage may be reliable but, just in case
+    * min_cov 2 (default 3) and max_diff 50 (default 500)
+      * Shortens both Kordia and Congregi/Dasania
+    * min_cov 2 (default 3) and max_cov 100
+      * Shortens both Kordia and Congregi/Dasania
+      * May try Congregi/Dasania contigs, in case the shortening alters the assembly and improves coverage consistency
+  * Lowering the min_cov seems to overestimate the length, yet changing other parameters appears to underestimate it...
+  * Tried many variants of parameter values; try running them all through SMRT Portal and see if any of them come out better
+
+
+4k + 5k Kordia references aren't loading into SMRT Portal - why not?

@@ -10071,7 +10071,7 @@ Check Canu assemblies for 53m and 54m
                      1484-2053,  734-1422, 1423-1819, 1816-2315,  1472--2229	Implies repetitive regions...?
           * Assembly should perhaps be ~5,478,000-5,480,000 (7-9 kb) smaller (16kb -> ~7.5 kb)
         * Try polishing just in case
-  * Change max_cov or max_diff parameter for Congregi/Dasania? (spike in coverage may be reliable but, just in case
+  * Change max_cov or max_diff parameter for Congregi/Dasania? (spike in coverage may be reliable but, just in case)
     * min_cov 2 (default 3) and max_diff 50 (default 500)
       * Shortens both Kordia and Congregi/Dasania
     * min_cov 2 (default 3) and max_cov 100
@@ -10082,3 +10082,97 @@ Check Canu assemblies for 53m and 54m
 
 
 4k + 5k Kordia references aren't loading into SMRT Portal - why not?
+
+
+# 31 August 2017
+
+Re-attempting to upload the 4k/5k Kordia potential sequences
+* 1/6, 2/7 and 3/8 are duplicates; remove 6, 7 and 8 and retry
+* This upload now works; the file may have been too big
+* Job 16794
+
+Check 4k, 5k and 6k Gammas
+* 1/2/6/7 and 5/8 are duplicates; remove 2, 6, 7, 8
+* Job 16805
+
+Problem - When multiple references for the same sequence are added in one file, they compete with one another for reads...
+
+| Both                         | Gamma | Job no. |
+|------------------------------|-------|---------|
+| 4k                           | ----- | 16814   | .
+| 5k-1 (Kordia+6, Gamma+2,6,7) | ----- | 16815   | .
+| 5k-2 (Kordia+7, Gamma+1,6,7) | ----- | 16816   | .
+| 5k-3 (Kordia+8)              | ----- | 16817   | .
+| 5k-4                         | ----- | 16818   | .
+| 5k-5 (gamma+8)               | ----- | 16819   |
+| ---------------------------- | 6k    | 16820   |
+
+* May be a good idea to try a second polish, as there are a lot of corrections made during round 1
+  * Re-BLAST Kordia problem areas from uncorrected assembly (5k2), in case this has resulted in adequate correction
+  * Premature stops seem to have disappeared - compare more closely
+* Gamma 4k assembly also had problem area in uncorrected version - check corrected
+  * Protein-coding genes in the area appear to be acceptable matches (to domains, at least, if not to the whole protein...)
+  * Lack of complete hits may be due to this species having no closely-studied relatives?
+
+
+
+* Use of HGAP for assembling bacteria from metagenomes
+  * https://standardsingenomics.biomedcentral.com/articles/10.1186/s40793-017-0224-8
+
+
+
+
+Kordia and Gamma checks running from Falcon
+* What about Rhodo(Sulf?) and Parvibaculum from Canu?
+  * If nothing else, should Alvar's data be used for Parvibaculum?
+  * Re: Rhodo, check Canu_53m (only 2.4 Mb but may provide some insight)
+    * 2,436,252 bp (differs by 1-2 bp with higher genomeSize parameters)
+    * No overlapping regions; definitely not a complete chromosome
+
+
+Check first 20k of 5k_2 to identify potential plasmids
+
+| Contig | Apparent identity (BLAST) |	| Contig | Apparent identity (BLAST)  |
+|--------|---------------------------|	|--------|----------------------------|
+|  1     | Bacterial (30bp match)    |	| 21     | Bacterial (~4 kb match)    |
+|  2     | Bacterial (~0.3 kb match) |  | 22     | -----                      |
+|  3     | Skeletonema               |  | 23     | Bacterial (~1 kb match)    |
+|  4     | T. pseudonana (Skele...)  |  | 24     | Bacterial? (tiny hits...)  |
+|  5     | Skeletonema               |  | 25     | Bac. plasmid? (~3 kb)      |
+|  6     | Bacterial (~1 kb matches) |  | 26     | Bacterial? (~0.1 kb match) |
+|  7     | -----                     |  | 27     | Bacterial? (~0.7 kb match) |
+|  8     | Bacterial (~2 kb matches) |  | 28     | Bacterial (~1 kb match)    |
+|  9     | Bacterial (~0.5 kb match) |  | 29     | Bacterial? (~0.6 kb match) |
+| 10     | ? (tiny hits to eagle...) |  | 30     | Bacterial (~1 kb match)    |
+| 11     | Skeletonema               |  | 31     | Bacterial? (~0.7 kb match) |
+| 12     | ? (tiny hits to mouse...) |  | 32     | ?                          |
+| 13     | Bacterial (2-3 kb match)  |  | 33     | -----                      |
+| 14     | Bacterial (~2 kb match)   |  | 34     | Bacterial (~1 kb match)    |
+| 15     | Bacterial (~1 kb match)   |  | 35     | Bacterial? (~0.8 kb match) |
+| 16     | S. marinoi chloroplast    |  | 36     | ?                          |
+| 17     | Bacterial (~1 kb match)   |  | 37     | Bacterial (~1 kb match)    |
+| 18     | -----                     |  | 38     | -----                      |
+| 19     | Bacterial (~3 kb match)   |  | 39     | Bacterial? (~0.4 kb match) |
+| 20     | Bacterial (~1 kb match)   |  | 40     | -----                      |
+
+
+Many hits to Tateyamaria (and some of the SMR species, particularly Sulfito...)
+
+
+
+
+## S. marinoi double-knockout concept
+* Human study - http://www.nature.com/nature/journal/v544/n7649/full/nature22034.html
+  * Lipid metabolism
+* Beneficial knockdown in T. pseudonana - http://www.pnas.org/content/110/49/19748.full
+  * Also lipid metabolism; potential for biofuel production
+  * KnockDOWN, not knockOUT
+* Double(?) knockout in P. tricornutum - https://www.nature.com/articles/ncomms4831
+  * Again, lipid metabolism
+
+
+
+
+
+
+* Address 5k_5 and Gamma_6k on SMRT Portal, then upload and begin Round 2 resequencing

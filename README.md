@@ -10171,8 +10171,73 @@ Many hits to Tateyamaria (and some of the SMR species, particularly Sulfito...)
   * Again, lipid metabolism
 
 
-
-
-
-
 * Address 5k_5 and Gamma_6k on SMRT Portal, then upload and begin Round 2 resequencing
+
+
+# 1 September 2017
+
+## ST54
+
+May have an acceptable assembly for Kordia and Gamma; check the twice-Quivered results
+
+Still leaves the problem of Parvibaculum and Rhodo(Sulfito?)
+* Rhodo - High genomeSize Canu assemblies (53+ Mb) give 2.4 Mb (most likely too small...)
+  * 3.4 Mb the smallest Sulfitobacter genome thus far, and indications pointed to this being a Sulfitobacter
+    * 3.6 Mb for Roseovarius, the other possibility...
+    * Tateyamaria genomes are 4+ Mb
+  * Rhodobacteraceae of this size do exist according to NCBI; check circularisation just in case?
+* Parvibaculum consistently 12,880 bp in higher Canu genomeSize assemblies
+  * Alvar got a circularised genome using HGAP, should this be used instead?
+
+
+
+* Rhodo doesn't circularise so clearly incomplete, yet Canu seems unable to bridge the gap (BLAST other assemblies of similar size to be sure...?)
+  * 16S appears to be either Sulfitobacter or Tateyamaria
+    * SILVA finds 'Roseobacter prionitis' and 'Tateyamaria sp. KS9-11' along with uncultured species
+    * Best hits to uncultured marine bacteria...
+
+Falcon assemblies and parameters attempted for pb_77 (may be worth trying min_cov 2 on other SRL assemblies):
+
+| Sample     | 3k        | 4k        | 5k                                    | 6k      | 7k           | 8k      | 9k      | 10k          | 12k     |
+|------------|-----------|-----------|---------------------------------------|---------|--------------|---------|---------|--------------|---------|
+| Parameters | Default   | Default   | Default                               | Default | Default      | Default | Default | Default      | Default |
+|            |           | min_cov 2 | min_cov 2                             |         | max_diff 400 |         |         | max_diff 400 |         |
+|            |           |           | max_diff 50 + min_cov 2               |         | min_cov 2    |         |         | min_cov 2    |         |
+|            |           |           | max_cov 100 + min_cov 2               |         | bestn 8      |         |         | bestn 8      |         |
+|            |           |           | max_diff 50 + max_cov 100             |         | max_cov 5k   |         |         | max_cov 5k   |         |
+|            |           |           | max_diff 1k + max_cov 2k              |         | min_cov 5    |         |         | min_cov 5    |         |
+|            |           |           | max_diff 1k + max_cov 2k + min_cov 2  |         | max_diff 2k  |         |         | max_diff 2k  |         |
+|            |           |           | max_diff 50 + max_cov 100 + min_cov 2 |         | max_diff 50  |         |         | max_diff 50  |         |
+
+
+Other Canu parameters exist aside from genomeSize; potentially useful ones:
+
+* correctedErrorRate <float=unset> [now corErrorRate]
+  * The allowed difference in an overlap between two corrected reads, expressed as fraction error. Sets obtOvlErrorRate, utgOvlErrorRate, obtErrorRate,
+    utgErrorRate, and cnsErrorRate. The correctedErrorRate can be adjusted to account for the quality of read correction, for the amount of divergence
+    in the sample being assembled, and for the amount of sequence being assembled. The default is 0.045 for PacBio reads, and 0.144 for Nanopore reads.
+  * For low coverage datasets (less than 30X), we recommend increasing correctedErrorRate slightly, by 1% or so.
+  * For high-coverage datasets (more than 60X), we recommend decreasing correctedErrorRate slighly, by 1% or so.
+  * Raising the correctedErrorRate will increase run time. Likewise, decreasing correctedErrorRate will decrease run time, at the risk of missing overlaps
+    and fracturing the assembly.
+
+* minOverlapLength <integer=500>
+  * Overlaps shorter than this will not be discovered. Smaller values can be used to overcome lack of read coverage, but will also lead to false overlaps and
+    potential misassemblies. Larger values will result in more correct assemblies, but more fragmented, assemblies.
+  * Must be no bigger than minReadLength.
+
+Try tweaking these parameters on a 55m genomeSize assembly
+  * Increase corErrorRate to 0.05 and decrease minOverlapLength to 400
+    * No result
+  * Change one at a time
+  * Decrease minOverlapLength to 400 (Second_Attempt)
+  * Increase corErrorRate to 0.05 (Third_Attempt)
+
+May be advisable to compress/delete some of the newer jobs on SMRT Portal to save space
+
+
+## To do
+
+* Check decreased minOverlapLength Canu 55m run
+* Check the assemblies that have potentially-acceptable overlaps
+  * Why, in Gamma, is there consistently a peak with poor reads...?

@@ -10232,6 +10232,8 @@ Try tweaking these parameters on a 55m genomeSize assembly
   * Change one at a time
   * Decrease minOverlapLength to 400 (Second_Attempt)
   * Increase corErrorRate to 0.05 (Third_Attempt)
+    * Failed
+    * Try 0.046
 
 May be advisable to compress/delete some of the newer jobs on SMRT Portal to save space
 
@@ -10241,3 +10243,100 @@ May be advisable to compress/delete some of the newer jobs on SMRT Portal to sav
 * Check decreased minOverlapLength Canu 55m run
 * Check the assemblies that have potentially-acceptable overlaps
   * Why, in Gamma, is there consistently a peak with poor reads...?
+
+
+# 4 September 2017
+
+## ST54 Canu
+Did the new parameters work?
+* Parvibaculum and Rhodo(Sulfito?) still elusive...
+* Decreasing min overlap changes results but gives LESS contigs than before
+* Changing corrected error rate still gives no results
+  * Checking the log files, the corErrorRate actually appears to be 0.075, NOT 0.045 as claimed in the documentation
+    * corErrorRates in previous attempts have therefore been LOWERED, not RAISED as intended!
+  * Increase to 0.08 instead?
+* corErrorRate appears to be from a more recent version of the software, and yet is still accepted...?
+  * If this fails, attempt to use the errorRate parameter
+    * "The expected error in a single corrected read. The seven error rates were then set to three times this value (except for corErrorRate)."
+* corErrorRate is actually 0.30 by default?
+  * corErrorRate should be 0.303? (documentation recommends 1% increase at low coverage)
+* Some difference but not a lot; try combination of corErrorRate=0.303 + minOverlapLength=400
+* As above, makes some difference but not a lot
+  * Make parameters gradually more lax?
+  * corErrorRate=0.306 + minOverlapLength=350 - Again, no real change...
+  * corErrorRate=0.310 + minOverlapLength=300 - 
+
+## Kordia and Gamma
+Check the following jobs:
+* For Gamma:
+  * 4k, 5k1, 5k2, 5k4, 6k
+  * 5k4 in particular seems to have more even coverage; mildly suspicious when looking closely, as there's a deletion just before the coverage anomaly which
+    seems to imply that two different sets of reads have overlaid there incorrectly
+  * 4k - mixed-quality area appears to disrupt a 'large adhesive protein'
+
+  * 6k - checking annotation in the disputed region to determine if any proteins are obviously truncated
+    * Some appear to be truncated; several instances of 'T1SS secreted agglutinin RTX' (also in 4k), definitely seems like there is a repeat issue here...
+    * Checked sequence of the 'T1SS secreted agglutinin RTX' genes in 6k. Definitely repeat sequences...
+      * Searching this gene name on NCBI reveals that the gene CAN be of incredibly variable length...
+    * Annotate entire region, including flanks, and determine once and for all if anything is missing...
+
+  * Misassembling/mixed-quality region may be a repeat region?
+  * Alvar noted the presence of a repeat region (see 'unitig_0')
+
+* For Kordia: 
+  * 5k2 - 3.36M to 3.38M contains many low quality reads
+    * Check BLASTx and BLASTp results for this region
+    * Seems to be a misassembly...
+  * 5k3 unlikely but vaguely possible - SOME overlap and a few supporting reads
+    * Check the region around the breakpoint - breakpoint at ~2,738,418, so check 2.72M to 2.76M
+    * Cuts 'peptide chain release factor 3' gene, so misassembly...
+
+  * Genome size is, however, consistent with Alvar's findings
+
+* Both species appear to be disrupted by a secretion protein of some kind...
+
+
+## Things to try
+* Investigate flanking regions in case genes suddenly cut off
+* Try limiting search to a few species/groups of bacteria so not all of the BLAST results are filled up with variants of a single gene
+
+------------
+---
+---
+---
+---
+---
+---
+   [        ] <- what about here?
+
+* QuickBLAST?
+
+* Try altering parameters of other Canu assemblies besides 55m? The smaller assemblies appear to give long Kordia + Gamma results which may
+  be useful if Falcon is consistently giving incomplete results
+
+
+
+
+## To do
+
+### Specific bacteria
+* Kordia - even the Falcon assemblies that have circularised have questionable region, and the Canu assemblies don't circularise...
+  * Try other parameters for the slightly lower genomeSize estimates; default settings give a longer Kordia result
+* Gamma - check the outcome of RAST annotation, and see whether any genes in the region are obviously truncated; if not, may be acceptable
+  * Try other parameters for the slightly lower genomeSize estimates; default settings give a longer Kordia result
+* Rhodo(Sulfito?) - continue attempting new Canu builds?
+  * Could this be a false positive...?
+* Parvibaculum - continue attempting new Canu builds?
+  * HGAP? Alvar circularised this one, but it was fragmented and had to undergo gap closing
+
+### Canu
+* Check Canu 55m_7
+  * If this fails, either try other genomeSize parameters or continually more lax parameters in other areas
+    * Try lower genomeSize estimates, as some of these results in longer Kordia and Gamma results
+* 52m and below give longer results for Kordia and Gamma, so attempt different parameters here?
+  * First try lowering minOverlapLength of 55m in isolation; this increases the size of the smallest contig and results in fewer contigs
+  * Attempt 350?
+
+* Currently running:
+  * 52m - minOverlapLength=400
+  * 55m - minOverlapLength=350

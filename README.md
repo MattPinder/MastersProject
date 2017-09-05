@@ -10340,3 +10340,69 @@ Check the following jobs:
 * Currently running:
   * 52m - minOverlapLength=400
   * 55m - minOverlapLength=350
+
+
+# 5 September 2017
+
+## Canu
+No joy with the assemblies from yesterday
+* Attempting 52m with minOverlapLength=350
+
+## Gamma
+Check disputed region from 4k and 6k assemblies
+* BLASTp RAST annotation proteins
+
+4k										6k
+
+| Protein                                 | Length | Expected length | Okay? |  | Protein                                  | Length | Expected length | Okay? |
+|-----------------------------------------|--------|-----------------|-------|  |------------------------------------------|--------|-----------------|-------|
+| --------------------------------------- | ------ | --------------- | ----- |  | peg.17 Integral membrane protein         | 320aa  | 320 - 330       | Maybe |
+| peg.1 Hypothetical protein              | 637aa  | 624 - 662       | Yes   |==| peg.18 acyltransferase family protein    | 637aa  | 624 - 662       | Yes   |
+| peg.2 dTDP-rhamnosyl transferase RfbF   | 293aa  | 290 - 310       | Yes   |==| peg.19 dTDP-rhamnosyl transferase RfbF   | 293aa  | 290 - 310       | Yes   |
+| peg.3 dTDP-rhamnosyl transferase RfbF   | 296aa  | 290 - 310       | Yes   |==| peg.20 dTDP-rhamnosyl transferase RfbF   | 296aa  | 290 - 310       | Yes   |
+| peg.4 Glycosyltransferase               | 274aa  | 270 - 290       | Yes   |==| peg.21 Hypothetical protein              | 274aa  | 270 - 290       | Yes   |
+| peg.5 Hypothetical protein              | 385aa  | 370 - 390       | Yes   |==| peg.22 Glycosyltransferase               | 385aa  | 370 - 390       | Yes   |
+| peg.6 ABC transporter...                | 709aa  | 710 - 720       | Yes   |==| peg.23 ABC transporter...                | 709aa  | 710 - 720       | Yes   |
+| peg.7 T1SS membrane fusion protein LapC | 478aa  | 460 - 480       | Yes   |==| peg.24 T1SS membrane fusion protein LapC | 478aa  | 460 - 480       | Yes   |
+| peg.8 T1SS secreted agglutinin RTX      | 2331aa | 5000 - 6200 *   | ???   |==| peg.25 T1SS secreted agglutinin RTX      | 2331aa | 5000 - 6200 *   | ???   |
+| peg.9 T1SS secreted agglutinin RTX      | 90aa   | 130+            | ???   |	| peg.26 T1SS secreted agglutinin RTX      | 137aa  | 135+            | Maybe |
+| peg.10 T1SS secreted agglutinin RTX     | 851aa  | 3100+ *         | ???   |	| peg.27 T1SS secreted agglutinin RTX      | 1576aa | 4000 - 6200 *   | ???   |
+| peg.11 T1SS secreted agglutinin RTX     | 454aa  | 2700+ *         | ???   |	| ---------------------------------------- | ------ | --------------- | ----- |
+| peg.12 T1SS secreted agglutinin RTX     | 37aa   | 1200+           | No    |  | ---------------------------------------- | ------ | --------------- | ----- |
+| peg.13 T1SS secreted agglutinin RTX     | 363aa  | 1000+ *         | ???   |  | ---------------------------------------- | ------ | --------------- | ----- |
+| peg.14 T1SS secreted agglutinin RTX     | 4259aa | 3100+ *         | Maybe |~~| peg.28 T1SS secreted agglutinin RTX      | 4342aa | 3100+ *         | Maybe |
+| peg.15 Flagellar protein MotB           | 766aa  | 600 - 630       | Maybe |
+| peg.16 Cytochrome c5                    | 125aa  | 130 - 140       | Maybe |
+
+* Matches 'large adhesive protein'
+
+Large adhesive protein begins with a repetitive region (albeit non-identical repeats); this may be confusing the assembler?
+* Summing the AA sizes of the 'T1SS secreted agglutinin RTX' proteins in each assembly, this region appears to be a bit too big
+  * SOME OF THE SMALLER ASSEMBLIES MAY, IN FACT, BE CORRECT!
+  * Should be ~6.3kb shorter?
+    * 3,585,981/3,585,991 -> ~3,579,600
+* Large adhesive protein seems to be cut in two...
+  * Check structure of examples
+  * KZO51822.1 large adhesive protein [Pseudomonas chlororaphis subsp. piscium]
+    * First ~1940aa are part of repeat structure - 19x100aa repeats (or 9x200aa + 1x~140aa repeat) (not all repeats are identical...)
+      * May be alternating repeats?
+    * ~1940*3 = ~5820 bp in repeat region
+    * ~1237 aa non-repeating = ~3711bp not in repeat region
+  * WP_085533211.1 MULTISPECIES: large adhesive protein [Pseudomonas]
+    * 48x100aa repeats (or 24x200aa?)
+    * ~4800*3 = ~14400 bp in repeat region
+    * 1413*3 = ~4239 bp not in repeat region
+
+* Possibly pseudomonad family?
+  * BLASTp of the repeat region yields no good results; ~50% match at best...
+  * Are there genes which consistently flank this gene?
+    * NAD-dependent epimerase upstream of the region appears to be accurate
+    * Cytochrome c5 downstream of the region appears to be accurate
+  * No hits in the upstream match a species in the downstream, and vice versa
+  * This species appears to be novel (new genus??), so hard to determine if these assemblies are accurate
+
+* Examine annotation of 5k4 and see if there is any concensus between this, 4k and 6k
+
+* 4k and 6k seem to largely agree, but 5k4 disagrees in the disputed area (good agreement earlier on...)
+  * 5k4 = max_cov 100 (default 1000) and min_cov 2 (default 3); inclined to agree with 4k/6k as the min_cov is higher
+  * 4k and 6k almost identical along the entire disputed region, with 8 gaps and a handful of mismatches...

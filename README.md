@@ -10401,8 +10401,64 @@ Large adhesive protein begins with a repetitive region (albeit non-identical rep
   * No hits in the upstream match a species in the downstream, and vice versa
   * This species appears to be novel (new genus??), so hard to determine if these assemblies are accurate
 
-* Examine annotation of 5k4 and see if there is any concensus between this, 4k and 6k
+* Examine annotation of 5k4 and see if there is any consensus between this, 4k and 6k
 
 * 4k and 6k seem to largely agree, but 5k4 disagrees in the disputed area (good agreement earlier on...)
   * 5k4 = max_cov 100 (default 1000) and min_cov 2 (default 3); inclined to agree with 4k/6k as the min_cov is higher
   * 4k and 6k almost identical along the entire disputed region, with 8 gaps and a handful of mismatches...
+
+
+# 6 September 2017
+
+## Prokka
+Attempt Prokka assembly on 6k Gamma assembly
+* May help to detemine whether the centre region is misassembled
+* Even if it is, this may help determine its location in the bacterial tree (compare with Alvar's result)
+* Two other regions with some poorly-mapping reads has appeared in the Gamma assembly... 6k AND 4k
+  * Both regions in question appear to contain 'cell wall-associated hydrolase'; stop codons within (appears to be the same sequence...)
+  * Identical nucleotide sequences
+    * Best hits to suspicious region are from BETAproteobacteria!
+    * False positive - this region is actually the 23S rRNA
+      * This would explain why there were apparently beta genes in a gamma...
+      * This misannotation is a known problem: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3203614/
+* As 6k doesn't appear to be obviously wrong (disputed area may just be repeat region resolution problem), try this and see
+
+(Also running finalised mito sequence through annotation, just to see what comes up)
+
+## Remaining bacteria
+* Kordia
+  * 5k2 might be okay but unsure whether to trust 'min_cov 2' results
+    * Check coverage and see whether there are any troublesome regions
+      * ~473,000-497,000 hits a repeating region of 'putative aggregation factor core protein MAFp3, isoform C'
+      * **~1,121,000-1,133,000 very questionable...**
+      * ~2,892,000-2,900,000 rRNA region
+      * ~3,098,000-3,106,000 hits 'cell wall associated RhsD protein precursor' and 'hypothetical' protein in K. algicida
+      * ~3,364,000-3,382,000 hits T9SS C-terminal target domain-containing protein/hypothetical protein (possible repeating region?)
+        * This is the massive coverage dip
+      * ~3,585,000-3,592,000 rRNA region
+      * ~5,011,000-5,022,000 rRNA region
+* Doesn't appear trustworthy...
+
+
+* Parvibaculum
+* Rhodo (Sulfito?)
+
+## Unique sequences
+Finding Marino and Sulfito sequences unique among the microbiome (1500bp+)
+* As the sequences are uploaded to NCBI, can just BLAST against NCBI to determine uniqueness
+* Also BLAST against ST54 to ensure that it isn't a sequence present in Skeletonema
+
+* Unique Marinobacter sequence
+  * MARSALSMR5_02539 - 2,3-dimethylmalate dehydratase large subunit (also labelled as aconitate hydratase)
+  * Other microbiome species apparently also have aconitate hydratase, but they don't show up in the BLASTn results
+
+* Unique Sulfitobacter sequence
+  * SULPSESMR1_02470 - geranial dehydrogenase (also labelled as aldehyde dehydrogenase)
+  * Other microbiome species apparently also have aldehyde dehydrogenase, but they don't show up in the BLASTn results
+
+
+
+## To do
+* Examine preliminary Gamma 6k annotation on RAST
+* Try circularising more Canu assemblies of Kordia, see if ANY will circularise
+  * Check results ini BLAST directory

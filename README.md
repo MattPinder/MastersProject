@@ -10462,3 +10462,53 @@ Finding Marino and Sulfito sequences unique among the microbiome (1500bp+)
 * Examine preliminary Gamma 6k annotation on RAST
 * Try circularising more Canu assemblies of Kordia, see if ANY will circularise
   * Check results ini BLAST directory
+
+
+# 7 September 2017
+
+Check contents of zipped microbiome project backups on data5; if the contents aren't required then they should be deleted
+* pb_354 zip file deleted from home directory
+
+Checking BLASTed Canu Kordia assemblies
+* RAST-annotating 200k from each end of 45m assembly to check possible overlap...
+  * No convincing overlap evidence from RAST
+* LOOKING FOR AN OVERLAP OF ~50 Kb OR LESS IDEALLY
+* None of the BLASTs appear to suggest an overlap...
+  * Align in Mauve vs. K. algicida and determine what is missing?
+
+* MAUVE WILL NOT WORK IF THERE ARE WHITE SPACES IN THE FASTA HEADERS!
+
+* Gamma - check if there is a precedent for multiple 'T1SS secreted agglutinin RTX' genes in sequence, cf. one long gene
+  * Appears to be at least a few examples of this
+    * Halomonas sp. R57-5 genome assembly HalomonasR57-5, chromosome : I (acc. no. LN813019.1)
+      * HALO1786-HALO1790 - four putative uncharacterized proteins and a leukotoxin (at least two of which share some repetitive elements)
+
+  * Many hits to Halomonas... Potentially a member of the genus...? If not, possibly a close relative... Investigate
+
+* Annotated hits from 3242517-3270408
+  * Within this region are 46 repeats, two of which are 3x longer than the rest (and identical to each other)
+    * #10 (3,246,533 - 3,247,507) and #27 (3,252,406 - 3,253,380)
+    * Any reads spanning **3,246,533 - 3,253,380**?
+      * Three raw reads span this region, one which stretches a long way to either side (the other two stop less than 1 kb outside the long repeats)
+      * There appear to be few entirely-identical reads, each differing by at least one base from the others; I think there are enough distinct repeats
+        that the region may well be accurate
+
+* LEAVE FOR NOW, AND ASSUME CORRECT
+
+* Run both Gamma annotations - Prokka and RAST - through PhyloPhlAn, and try to determine a classification more specific than Gammaproteobacterium
+  * Closest hit - Unclassified bacterium HTCC2143
+    * Gamma genome appears to be shorter than that of HTCC2143... Mauve
+  * Closest named hit - Congregibacter litoralis (unclassified within the Gammaproteobacteria...)
+    * Other nearby hits - Cellvibrio japonicus, Teredinibacter turnerae, Saccharophagus degradans, Candidatus Endobugula
+    * Most near relatives unclassified...
+
+## Kordia
+
+* One 264,570 bp (~5136707-5401276) region of Kordia appears to not line up with K. algicida
+  * BLASTn reveals no good matches
+  * BLASTx reveals...
+
+
+## To do
+* Continue checking Kordia vs. K. algicida
+* Run Mauve of Gamma vs. HTCC2143 and see whether the size discrepancy can be resolved

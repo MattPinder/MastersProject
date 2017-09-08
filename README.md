@@ -10512,3 +10512,72 @@ Checking BLASTed Canu Kordia assemblies
 ## To do
 * Continue checking Kordia vs. K. algicida
 * Run Mauve of Gamma vs. HTCC2143 and see whether the size discrepancy can be resolved
+
+
+# 8 September 2017
+
+## Gamma
+
+Running Mauve of Gamma vs. HTCC2143; they appear to share similarities, so will double-check that nothing obvious is missing between Gamma and HTCC
+* If something is missing, BLAST for it
+* Mauve analysis appears to suggest that Gamma and HTCC aren't particularly close...
+* Get complete 16S sequence for Gamma
+  * 16S from Metaxa2 includes a large chunk which doesn't seem to be part of Gamma
+    * Prokka trims a few bases off of each end, but still close enough; much closer than Metaxa2
+  * SILVA yields no results
+  * BLASTn vs. nr/nt gives Dasania marina as closest named match (only partial sequence...)
+  * BLASTn vs. 16S gives partial D. marina as well
+    * D. marina also noted for similarity to HTCC2143...
+
+
+## Kordia
+
+Check Kordia (5k Falcon) ~2,411,279-2,668,319 in BLASTx, as this region is apparently missing from K. algicida (although Alvar drew the same conclusion...)
+* Repeat expansion?
+* Still need to circularise the contig...
+  * Has the additional region been assembled incorrectly?
+* Running preliminary annotation to determine presence of genes in the region which doesn't match up with K. algicida
+  * Try Mauve-ing with other Kordia genomes as well?
+* The non-matching region includes many tyrocidine and gramacidin synthase genes - antibiotics
+  * Fusion of chromosome and plasmid...?
+  * BLASTx seems to show that this area contains a non-ribosomal peptide synthetase gene which IS present in Kordia
+* Check .faa for proteins DOACHMHN_02080 - DOACHMHN_02190
+
+
+## Parvibaculum and Rhodo(Sulfito?)
+* Parvibaculum BLAST turned up no obvious good hits
+* Rhodo...
+  * 16S check (Metaxa2 prediction, which may be truncated...)
+    * BLASTn vs. nr/nt: many uncultured/unnamed bacteria - closest named hit Tateyamaria sp. KS9-11 (98% hit [same as many unnamed])
+    * BLASTn vs. 16S: many Sulfitobacter and Tateyamaria species - closest hit Sulfitobacter mediterraneus (97% hit)
+    * SILVA: Two closest hits are an uncultured Sulfito and an uncultured Tateyamaria
+  * Full 16S (or fuller, at least)
+    * BLASTn vs. nr/nt: As for partial 16S
+    * BLASTn vs. 16S: 96% hit to Roseobacter litoralis and R. denitrificans (complete 16S); partial 16S hits to many Sulfitobacter
+    * SILVA: As for partial 16S
+* BLASTn/BLASTx portions of Rhodo? (uncorrected...)
+  * Some hits to A. heliothermus SMS3, S. pseudonitzschiae SMR1, and other SMR species
+  * Consistent hits to Tateyamaria omphalii strain DOK1-4 (at the beginning of the contig at least...)
+    * |-------------------------------|       |
+    * End piece doesn't match to Tateyamaria
+    * Tateyamaria omphalii strain DOK1-4 has 7 plasmids, a la S. pseudonitzschiae SMR1
+* Rhodobacteraceae genome = 2.4 Mb
+* T. omphalii DOK1-4 genome = 3.86 Mb
+  * _~2,164,981 - end_ don't match up
+    * Misassembly?
+* Rhodo vs. Tateyamaria Mauve
+  * ~775,000 - ~2,090,000 of Tateyamaria missing from Rhodo
+  * BLAST this region vs. rest of the 55m assembly
+  * Hits to regions of tig00000004, tig00000005 and tig00000006
+    * Must improve Rhodo assembly...
+
+
+
+## All ST54 bacteria
+BLAST/align with Alvar's assemblies? May help to determine completeness
+
+
+
+## To do
+
+* Rewrite/reword genome announcements!

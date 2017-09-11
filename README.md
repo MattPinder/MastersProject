@@ -10581,3 +10581,51 @@ BLAST/align with Alvar's assemblies? May help to determine completeness
 ## To do
 
 * Rewrite/reword genome announcements!
+
+
+# 11 September 2017
+
+## Genome annnouncements
+
+Before rewording, making copies of all announcements in case I need to fall back to the original wording
+
+## Gamma
+Running BUSCO vs. gammaproteobacteria database
+* Check results; maybe run vs. proteobacteria database afterwards?
+* Cannot run BUSCO due to issue with Augustus dependency
+
+
+## ST54 - Rhodo
+Rhodo current genome size (Canu 55m) - 2,436,251 bp
+* Seems to be closely related to Tateyamaria omphalii strain DOK1-4 - chromosome 3.86 Mb
+* 98% 16S similarity to S. pseudonitzschiae strain H3 - chromosome 4.94529 Mb
+  * As with T. omphalii BLAST, tig00000004, tig00000005 and tig00000006 show fairly good hits to Rhodo
+    * However, only hits poorly to tig00000003, the main Rhodo chromosome
+* Assuming that tig00000003-6 were all part of the same chromosome, this would give a genome size of 4.28 Mb
+  * G+C content for these contigs similar - 58%-59%
+busco?
+* BLAST sections of contigs 4-6
+* Definitely seems like Rhodo consist of - at least - contigs 3-6
+  * In which case, how to combine them???
+
+* Annotate and try to discern expected gene order?
+  * Would require a close relative, and Tateyamaria has already exhibited rearrangement relative to Rhodo...
+  * Can't annotate currently; required nodes unavailable
+  * BLASTx the ends?
+    * BLASTx limited to Tateyamaria
+
+| Contig      | BLASTx in first 100000bp                                     | BLASTx in last 100000bp  |
+|-------------|--------------------------------------------------------------|--------------------------|
+| tig00000003 | Precorrin genes (vit B12 synth cluster?)                     | Various... transporters? |
+| tig00000004 | Various... 5-oxoprolinase, 2-methylcitrate dehydratase, etc. | Various... transporters? |
+| tig00000005 | Various... 5-aminolevulinate synthase, etc.                  | Various...               |
+| tig00000006 | Various...                                                   | Various...               |
+
+
+Looking at the corErrorRate, try decreasing a LITTLE?
+* Default is 0.3, Canu recommends lowering by ~1% for high (60x+) coverage, and three of the four predicted Rhodo contigs fit this criterion
+  * Ninth_Attempt - corErrorRate 0.297
+
+
+## To do
+Check Canu 55m ninth attempt

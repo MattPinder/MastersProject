@@ -10629,3 +10629,128 @@ Looking at the corErrorRate, try decreasing a LITTLE?
 
 ## To do
 Check Canu 55m ninth attempt
+
+
+# 12 September 2017
+
+## Canu
+Running Canu with corErrorRate of 2.9 (Tenth_Attempt)
+
+Check 9th attempt
+* Doesn't appear to be any improvement over previous assemblies
+
+* tig00000003 Rhodo - 2,436,252
+* tig00000247 Parvi - 12,876
+* tig00000531 Flavo (Kordia) - 3,443,411
+* tig00000534 Gamma - 2,680,853
+
+Kordia smaller than usual (~0.6 Mb), other contigs around the same
+
+Check 10th attempt
+
+* tig00000004 Rhodo - 2,436,240
+* tig00000245 Parvi - 12,877
+* tig00000531 Flavo (Kordia) - 3,443,418
+* tig00000534 Gamma - 2,680,853
+
+As above
+
+
+
+## Skeletonema marinoi microbiome project backups
+Moving to laptop for storage on external HD; shouldn't need them but just in case
+
+
+
+## Rhodo
+Still comparing to Tateyamaria omphalii (albeit the uncorrected Rhodo main contig)
+* Evidence of rearrangement but still definite synteny observable
+* Next gene upstream of main Rhodo contig should be 'cobalamin biosynthesis protein CobW'
+  * BLAST assembly - no hits found
+* Try a gene a region a bit further along
+  * cobW gene was 2,211,948-2,213,003
+  * Get region 2,200,000-2,210,000 and BLAST vs. Rhodo
+  * Still no hits found...
+* tBLASTn using CobW?
+  * Best match appears to be to tig00000004, albeit gappy
+  * BLAST the matching region? 413991-414464
+    * BLAST 412000-416000
+    * Partial match appears, but this is in the middle of the ~600 Kb contig. Either rearrangement or misassembly...
+
+One last attempt at 55m assembly, lowering the corErrRate to 0.2 (default 0.3) - Eleventh_Attempt
+* Largest contig is slightly larger, and another large contig appears (>3Mb)
+* Try 0.15 corErrorRate - Twelfth_Attempt
+
+* Eleventh_Attempt Metaxa2
+  * tig00000047 - Rhodo - 43,724
+  * tig00000255 - Flavo - 3,439,608
+  * tig00000259 - Gamma - 3,590,645
+  * No Parvo...?
+
+## Kordia
+
+Check ends of the annotation of the current contig, and compare with other Kordia genomes (may be difficult as the other Kordia genomes are very fragmented...)
+* First gene - 'Starch-binding protein SusD'
+  * MKQLKYISFLMLMIGFQSCHKDLLEPVPQAAISSEGYFLNDAQIETGVIAIYDAMQGVNSTDLRDNRGVQEEYYVTEMRSDNTRTKNQEGEAAQFESYAITPNNGIVENYYRSCYSTIFRANLVLENLANASETMSPVFEGEAKFARAYSYFNLVRLF
+    GDVPLVERPITPQEDELAFTRVATATVYDLIVSDLETAAANLSNGEYTRASKAAAEALLAKVHLTLGNYLDAQILCENVMSYGYTLEPNFNDIFYNEGNNELIFVIAYSIGVEADSQDFSAEFMNGVGRTVGVNYVTQDAATFLDNNGGNRTEFSYRI
+    DPFQPTQRQVVKYLPNGEDGGANGNQFNSDATLSGNDWVVLRYADVLLMHTEAILAGNQETTNTAAIGSFQMVRNRAGLTDPVTSITKQELLDERRAELAFENQRLYDLLRFGEAQNVLSALSTANNYSFTATDLLLPIPQREINLSNGVMTQNPGY
+* Last gene - 'Cupin domain protein'
+  * MKTFGASKEFIYDNDLDWEVVGEGVKRKIMGYDDKIMLVKVHFEKGGIGYKHEHHHSQVTYVESGSFEFSIGEETKVVKGGDTVYIPPHVLHGAICTEEGILIDVFSPIREDFME
+
+* First gene matches 'RagB/SusD family nutrient uptake outer membrane protein' in K. algicida and K. jejudonensis
+  * Four instances in the K. algicida genome but all on one contig (plus one which is skipped over due to too many ambiguous residues)
+  * Best match to first instance - KAOT1_RS03915
+* Last gene matches 'cupin domain-containing protein' in K. algicida
+  * Three instances in the K. algicida genome
+  * Best match to first instance - KAOT1_RS03905
+* Genes in this genome annotated in increments of 5, so only gene separating them is 'SusC/RagA family TonB-linked outer membrane protein'
+  * (This is labelled as 'frameshifted; internal stop'), so may not appear when checked
+    * Check wraparound - success
+
+* Check annotation around the cutpoint rather than the ends (annotation on REVERSED contig...)
+  * Break occurs at ~2,743,720 on the reversed contig used for the annotation
+  * Break occurs in the middle of a gene?
+    * 'Multifunctional conjugation protein TraI' (DOACHMHN_02262)
+    * MIRMFQSQTSAQAKDYFRDALSRADYYIEDQELNGVFNGKIAKRLGIENQMIDKATFEKLCDNINPITNQSLTPKTVHDRRVGYDISFHCPKSVSILHALGDDERVLKSFETSVHETMLEIEADVQTRIRLNKQNDDRQTSELLWTNFVHQTAR
+      PVDGHAPDPHLHCHCFTFNVTYDEVESKFKAGQFHNIKRDMPYYQARFQKRLADKLSNCGYDIRKTRDAFEVAVVPQKAIEHFSKRTDLIGRIAKEKGITNPQELAQLGARTRQAKNKNLTMPELQEEWLEQLADKDITSETPEEIKTTDINMS
+      AEHAVNHAINHVFTRNSVKRDRQILAQSYLYAIDNSDITFADIEQAFDTNDEVFKIKMGSQMLCTTQLVHAEERRMISLARDGIGKVRPLQAGFDLRQYQQLNDEQQLALNHVMTSQDRLSMIRGGAGTGKTTLLKSAVPAIEQTGKSCFLFAP
+      TSEASRDVLHKEGFDKADTVARLLLDTRLQEQTRNQVIWVDEAGMLGSQDMAQLLDLAEQQQARLILSGDPRQHSAVMRGDAMRLLQSVGHIPIVSMEQIYRQKVDYYKQAVHEISKGNVRTAFTMLHDKGHIKTREASEINAQLVHDFIESKL
+      NKKSVLVVIEQIIHKIYFF
+  * Fairly decent match to first 3/4 of 'conjugal transfer protein' in various species (no Kordia hits in top search results)
+    * BLASTp specifying Kordia - no significant matches found
+
+
+  * Check flanking proteins, just in case
+    * Upstream - 'hypothetical protein' (DOACHMHN_02261)
+    * MSDKIKYEIEFPIQSSPQLLFQYLSTPSGLSEWYADNVNSRGELFTFIWDGSEETAKLLAKKNNERIRFQWEENEDTPYYFELKIVVDEITKDVSLIVIDHADDDEEVEEGKMLWENQIGSLKQVLGSR
+      * Very good match to 'hypothetical protein' in K. algicida and 'SRPBCC superfamily protein' in K. jejudonensis and K. zhangzhouensis
+      * Locus tag in K. algicida - KAOT1_RS01855
+
+    * Next upstream - 'D-alanine aminotransferase' (DOACHMHN_02260)
+    * MVNFNGNISEETTLLDVENRGIKYGDSLFETLRIVGHKILFWEDHYFRLMESMRILRMEIPMNFTMEFLEAEILNTIKTNDLTNARVRFTVYRGNGGLYMPTSNEIEYVITVNTLTSPFYLLSDATFEVDLYKDFYINKGLLSTLKTNNKVIHV
+      LGSIYAKENALDNCLLVNEDKSVVEALNGNIFLVKDNVIKTPPITDGCLKGILRKQLIEILEKTPNYELKEESISPFEIQKADEFFITNVIKGIVPITKYRKKQFESTVARDLIAKLNMKIRLGA
+      * 'Aminotransferase class IV' in K. algicida, K. jejudonensis and K. zhangzhouensis
+      * Locus tag in K. algicida - KAOT1_RS01860 (next to the hypothetical protein above)
+
+    * Downstream genes
+      * 'Hypothetical protein' (DOACHMHN_02263) - No matches in Flavobacteriaceae
+      * 'Hypothetical protein' (DOACHMHN_02264) - Partial matches to Maribacter and Aquimarina proteins (shorter than the query sequence)
+      * 'N-6 DNA Methylase' (DOACHMHN_02265)
+        * 'SAM-dependent DNA methyltransferase' in Dokdonia pacifica, very good match
+        * Partial mid-protein matches to parts of proteins in K. jejudonensis and K. zhangzhouensis
+      * 'Hypothetical protein' (DOACHMHN_02266) - Very poor matches...
+      * 'Hypothetical protein' (DOACHMHN_02267) - Very poor matches...
+      * 'TraM recognition site of TraD and TraG' (DOACHMHN_02268) - Hypothetical protein in various species but nothing in Kordia
+
+Only good Kordia hits from all of these checks were 'hypothetical protein' and 'Aminotransferase class IV'
+
+
+* When relevant annotation server is available, re-reverse corrected contig and annotate again for comparison?
+  * Job queued... Job no. 35131
+
+* Another low-coverage trough around 630k-640k is full of 'hypothetical proteins' - red flag
+
+
+## To do
+* Check Canu_55m_Twelfth_Attempt
+* Check Kordia re-reversed annotation if complete

@@ -10754,3 +10754,38 @@ Only good Kordia hits from all of these checks were 'hypothetical protein' and '
 ## To do
 * Check Canu_55m_Twelfth_Attempt
 * Check Kordia re-reversed annotation if complete
+
+
+
+# 13 September 2017
+
+## Canu_55m_Twelfth_Attempt
+* errCorrRate 0.15 gave no results; try again with 0.175
+
+
+## Kordia re-reversed annotation
+* Check ends
+  * Results no better than before...
+
+
+## ST54
+* May have to attempt HGAP in order to complete genome assembly of the remaining species
+  * Must wait until Annotation nodes clear up
+
+* SRLs attempted by Alvar
+  * 15k, 13k, 10k, 8k, 6k, 4k, 2k
+  * SRL 8k was the assembly eventually decided upon
+  * Possible values to try
+    * 3k, 5k, 7k, 9k, 11k, 12k, 14k
+    * Non-integer values?
+  * As 8k worked best for Alvar, attempt 7k and 9k initially
+
+* Attempt additional SRLs in Falcon...?
+  * Try to obtain Rhodo and Parvi sequences?
+  * Attempt 5.5k (at 6k the Kordia genome starts to break down)
+
+
+Hold fire on ST54 assemblies until Annotation nodes are operational
+* Canu - Canu_55m_Twelfth_Attempt (corErrorRate=0.175)
+* Falcon - 5.5k SRL
+* HGAP - 7k + 9k SRL

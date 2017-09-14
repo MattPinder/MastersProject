@@ -10789,3 +10789,29 @@ Hold fire on ST54 assemblies until Annotation nodes are operational
 * Canu - Canu_55m_Twelfth_Attempt (corErrorRate=0.175)
 * Falcon - 5.5k SRL
 * HGAP - 7k + 9k SRL
+
+
+# 14 September 2017
+
+
+## Question
+How much do the cp- and mito-genomes differ between strains in the same species?
+* Caveat - the strains are taken from the same location (Mariagerfjord)
+  * Apparently chloroplast not suitable?
+
+
+## RO5 Chloroplast
+
+From T. pseudonana vs P. tricornutum comparison paper:  
+"The protein-coding gene complement of the three diatom species is almost identical, with three notable exceptions (Table 2).
+The P. tricornutum plastid retains three genes, acpP (acyl carrier protein), syfB (Phe tRNA synthetase) and tsf (EF-Ts homolog),
+which have all been lost in T. pseudonana. The tsf gene is found on the chloroplast genome of another heterokont, Fucus vesiculosus
+(accession no. DQ307683), suggesting that the loss in T. pseudonana may be relatively recent. The syfB gene is found on the plastid
+genomes of three red algae and in cyanobacteria; the only other significant homologs are in two insects."
+
+* Check RO5 Chloroplast
+  * None of the three were found
+
+* Checking final RO5 mitogenome annotation
+  * Double-check cytochrome b cob locus, may now be too small
+    * Compare with preliminary Prokka

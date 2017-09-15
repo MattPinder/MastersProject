@@ -10815,3 +10815,19 @@ genomes of three red algae and in cyanobacteria; the only other significant homo
 * Checking final RO5 mitogenome annotation
   * Double-check cytochrome b cob locus, may now be too small
     * Compare with preliminary Prokka
+
+# 15 September 2017
+
+* Read Trinity paper
+
+* Falcon - in future, submit only to Annotation nodes as a 40-core job, to avoid competition for resources
+
+Assembly attempts still to do:
+* Canu - Canu_55m_Twelfth_Attempt (corErrorRate=0.175) - CHECK (Contigs much too small)
+* Falcon - 5.5k SRL - CHECK (Incomplete)
+* HGAP - 7k (Running) + 9k SRL
+
+
+Note - for RO5 mito, may need to double-check tRNA boundaries
+
+Continue checking RO5 mito

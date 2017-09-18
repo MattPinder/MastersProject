@@ -10831,3 +10831,96 @@ Assembly attempts still to do:
 Note - for RO5 mito, may need to double-check tRNA boundaries
 
 Continue checking RO5 mito
+
+
+# 18 September 2017
+
+## pb_77 HGAP2 assembly attempts
+
+* 7k keeps failing; if current attempt fails, check error logs
+
+Stats of Alvar's chosen assembly attempt (22 SMRT cells, cf. pb_77's 11 SMRT cells)
+
+| SRL | Contigs | 1st contig | 2nd contig | 3rd contig | 4th contig | Mapped reads | Unmapped subreads | Total reads |
+|-----|---------|------------|------------|------------|------------|--------------|-------------------|-------------|
+| 8k  | 215     | 3.612 Mb   | 3.520 Mb   | 1.987 Mb   | 1.516 Mb   | 343,160      | 125,121           | 468,281     |
+
+
+| SRL | Contigs | 1st contig | 2nd contig | 3rd contig | 4th contig | Mapped reads | Unmapped subreads | Total reads | Kordia    | Gamma     | Rhodo  | Parvi |
+|-----|---------|------------|------------|------------|------------|--------------|-------------------|-------------|-----------|-----------|--------|-------|
+| 7k  | -       | -          | -          | -          | -          | -            | -                 | -           | -         | -         | -      | -     |
+| 8k  |
+| 9k  | 268     | 3,964,418  | 3,620,570  | 760,724    | 500,797    | 104,409      | ?                 | 162,832     | 3,964,418 | 3,620,570 | 29,095 | -     |
+
+
+* Alvar's data was run on a different data set (confirm?), so may be worth rerunning his SRLs and see whether different results are obtained
+
+* 7k persistently failing; try other SRLs
+  * 8k?
+
+* 9k job finished in 495.28 minutes (~8.5 hours); check tonight
+
+Expected genome sizes
+* Kordia - 5.51 Mb
+* Gamma - 3.61 Mb
+* Rhodo - ?
+* Parvi - 3.85 Mb
+
+* 8k - many of the biggest contigs don't contain 16S sequences; fragments of bacteria or of Skeletonema?
+* BLASTn first 100k bases of contigs >100 Kb
+  * scf7180000001278 (760,724)
+    * Dokdonia/Polaribacter (Flavobacteria - Kordia?)
+  * scf7180000001277 (500,797)
+    * Polaribacter
+  * scf7180000001279 (270,143)
+    * Tenacibaculum/Polaribacter (Flavobacterium - Kordia?)
+  * Compared to main Kordia contig
+    * Winogradskyella + other Flavobacteria
+* Checking Flavobacteriaceae phylogeny, it seems that Kordia is fairly closely related; perhaps all of the long contigs here are from Kordia?
+  * Would give the correct total genome size...
+
+BLASTx the ends of the Kordia contigs vs. K. algicida OT-1
+
+| Contig           | Length    | BLASTx in first 10,000bp                                | BLASTx in last 10,000bp                                               |
+|------------------|-----------|---------------------------------------------------------|-----------------------------------------------------------------------|
+| scf7180000001276 | 3,964,418 | ~1.03 Mb into contig 1103813601120 (ftsK)               | ~1.06 Mb (or ~2.95 Mb) (or ~5.03 Mb) into contig 1103813601120 (rhsD) |
+| scf7180000001277 |   500,797 | ~0.49 Mb into contig 1103813601120 (cas9)               | ~1.06 Mb (or ~2.95 Mb) (or ~0.06 Mb) into contig 1103813601120 (rhsD) |
+| scf7180000001278 |   760,724 | ~2.57 Mb (or ~1.84 Mb) into contig 1103813601120 (hagB) | ~2.39 Mb into contig 1103813601120 (rimO) *                           |
+| scf7180000001279 |   270,143 | ~5.05 Mb (or ~0.50 Mb) into contig 1103813601120 (hypo) | ~0.54 Mb (or ~2.42 Mb) into contig 1103813601120 (TonB-dep. receptor) |
+
+rhsD contains repeats...
+* * extreme end of third contig matches nothing in K. algicida...
+
+scf7180000001277 (_7) seems to match the end of scf7180000001276 (_6), albeit in the opposite alignment
+* With the exception of three gaps, there is a ~3.1 Kb region which overlaps almost exactly between the two contigs
+* _7 variant matches its part of the protein more accurately than the _6 variant - one piece vs. 4-5 pieces
+
+Possibly BLAST the rest of the assembly, to try to find overlaps? Or check GC content
+* Re: GC content, this group of 4 contigs seems to be out on its own
+
+Mauve of Kordia vs. K. algicida OT-1
+* Good matches covering ~all of the OT-1 genome, but the first ~340 Kb of scf7180000001278 don't match anything in K. algicida; BLASTn comes back with poor
+results, but seems to confirm Flavobacteriaceae
+
+Gamma is also roughly the right size in this assembly - attempt to citcularise?
+* Still a similar size to Alvar's, but can't find a final size for his assembly post-trimming
+
+CHECK COVERAGE FOR ALL SUSPECTED BACTERIAL CONTIGS
+
+## RO5 Mito
+
+* Check cox1 for intron?
+* Try to verify orf138 in RO5 (seen in other S. marinoi strain but not T. pseudonana)
+  * Similar proteins apparently predicted in other diatoms, but somewhat unconvincing...
+* Confirm identity of 'tRNA-Met' (EDMIKGCJ_00034); according to T. pseudonana genome should be tRNA-Ile
+
+MITOS annotation conflicts with Prokka + BLAST predictions
+* Compare - http://mitos.bioinf.uni-leipzig.de/result.py?hash=M0N4YZ1N
+
+
+
+
+
+
+
+boop

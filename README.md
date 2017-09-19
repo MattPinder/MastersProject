@@ -10918,8 +10918,114 @@ MITOS annotation conflicts with Prokka + BLAST predictions
 * Compare - http://mitos.bioinf.uni-leipzig.de/result.py?hash=M0N4YZ1N
 
 
+# 19 September 2017
+
+## HGAP
+Rerunning 7k; 8k completed
+* Compare to Alvar's results, as seem to be using only half of his data set
+
+Two contigs with G+C ~35% again seem to compose the entirity of the Kordia genome
+* BLAST ends again?
+
+| Contig           | Length    | BLASTx in first 10,000bp                                              | BLASTx in last 10,000bp                                |
+|------------------|-----------|-----------------------------------------------------------------------|--------------------------------------------------------|
+| scf7180000001357 | 4,725,570 | ~2.4 Mb into contig 1103813601120 (rimO + serine hydrolase) *         | ~1.05 Mb (or ~4.2 Mb) into contig 1103813601120 (RhsD) |
+| scf7180000001358 |   773,484 | ~0.54 Mb (or ~2.42 Mb) into contig 1103813601120 (TonB-dep. receptor) | ~1.06 Mb (or ~0.7 Mb) into contig 1103813601120 (RhsD) |
+
+| Contig           | Length    | BLASTx in first 10,000bp                                    | BLASTx in last 10,000bp                                              |
+|------------------|-----------|-------------------------------------------------------------|----------------------------------------------------------------------|
+| scf7180000001357 | 4,725,570 | WP_007094738.1 + WP_007094739.1 (end unmatched in algicida) | WP_007093511.1 + WP_007093512.1                                      |
+| scf7180000001358 |   773,484 | ???                                                         | WP_007093511.1 + WP_007093512.1 (or WP_007096356.1 + WP_007096357.1) |
+
+* MAUVE of HGAP-vs-all implies that the two currently unjoined ends should go together, but unsure how much of a gap is present, or if they overlap?
+  * Based on BLASTx, overlap highly unlikely...
+  * BLAST ends against database of raw reads...?
+    * Front end of long + tail end of short
+
+* Reads to check:
+m140703_150930_42203_c100662682550000001823127411271496_s1_p0/8527/0_7929  
+m140703_150930_42203_c100662682550000001823127411271496_s1_p0/91318/843_9347 (rev comp)  
+m140705_063417_42203_c100663432550000001823133012201404_s1_p0/26930/0_9308 (Maybe... Hit trails into short contig but doesn't appear to match too well?)  
+m140705_095330_42203_c100663432550000001823133012201405_s1_p0/137800/0_3170 (rev comp)  
+m140705_131546_42203_c100663432550000001823133012201406_s1_p0/42948/531_10949  
+m140705_163156_42203_c100663432550000001823133012201407_s1_p0/102807/0_10299 (hits short contig twice... accidentally sequenced same part twice? Or repeat...)  
+m140705_163156_42203_c100663432550000001823133012201407_s1_p0/10934/0_3979 (rev comp)  
+m140705_220046_42203_c100662632550000001823127411271440_s1_p0/61507/0_8540  
+m140706_011855_42203_c100662632550000001823127411271441_s1_p0/89533/0_7312 (hits short contig twice... accidentally sequence same part twice? Or repeat...)  
+m140706_043808_42203_c100662632550000001823127411271442_s1_p0/64113/0_6611 (rev comp) (hits long contig three times...)  
+m140706_111634_42203_c100662632550000001823127411271444_s1_p0/90105/0_5334 (rev comp) (hits long contig twice...)  
+
+* (m140705_220046_42203_c100662632550000001823127411271440_s1_p0/39493/1094_8327 (appears to change strand halfway through, odd...))
+* Interrogation of raw reads appears to give no consensus; implication was that there was a repeat breaking the sequence but no evidence of this...
 
 
+* * End not represented in K. algicida
+  * Poor hits to TonB-dependent receptor, alpha/beta hydrolase and hypothetical proteins from other Kordia species in this region
+
+* Obtain reverse complement of scf7180000001358, then BLAST the two contigs together to search for overlap
+  * If sufficient overlap is found, try to circularise in HGAP
+
+* Overlap of ~7k found on one end (rhsD end) (99.8% identity)
+* No obvious overlap on the other end...
+  * BLAST the ends together on BLASTx to see whether they may feasibly be close together
+  * Definitely something missing in between... identify and BLAST vs. other contigs?
+
+* Hypothetical protein appears to overhang the unpaired end of the short contig; use this protein as a tBLASTn query and try to find the other contig
+  * If a result is obtained, try comparing this to the beginning of the long contig
+  * There is a hit near the end of the long contig, albeit imperfect - 4,717,899 - 4,721,249 (total length 4,725,570)
+  * This might imply a ~4kb overlap, but wrong end; this conflicts with the rhsD find...
+
+
+* HGAP 7k assembly attempt still consistently failing, but 8k and 9k work... try 7.5k
+
+* CONSIDER - Perhaps raise the expected genome size to account for bacteria and organelles? This might allow for a lower coverage and more joined contigs?
+
+* Checked GC contents of other assemblies; Kordia appears distinct from the other contigs in terms of GC content, but Rhodo/Parvi/Gamma seem to have similar
+GC content to Skeletonema itself...
+
+
+
+
+## Python
+Write a script to automatically 'one-line' fasta sequences, i.e. remove newlines and then add them before > and after the header end
+* Will need a check to determine if HGAP, Falcon or Canu (Falcon may not have newlines in the first place? Check)
+  * No newlines in Falcon output, but perhaps remove spaces and colons to avoid confusing interpreters?
+  * For HGAP, remove '|quiver', again to avoid confusion caused by the pipe character? (possibly just replace pipe with underscore
+  * Canu - also remove spaces, possibly also equals signs?
+
+
+
+
+## Mapping transcriptome data from S. marinoi to the bacterial genomes
+
+Folder: /nobackup/data5/Skeletonema_marinoi_transcriptome_project
+
+* BWA/Bowtie2
+* **Alvar's shell script**
+  * https://github.com/alvaralmstedt/shell_scripts/blob/master/mapping_filtering.sh
+
+* Only ~60% of transcriptome reads mapped to S. marinoi; therefore, suspicion that the remainder may map to bacteria
+
+
+
+## Something to check
+Are Parvibaculum and Rhodobacteraceae species the same?
+* Both belong to Alphaproteobacteria
+  * Parvibaculum belongs to Rhizobiales > Rhodobiaceae
+
+## TO do
+* Start Gamma writeup, find more info to possibly classify it
+  * Pathway analysis
+
+* MAUVE align each Kordia assembly to see whether breaks are occurring in the same places each time
+  * If not, could perhaps scaffold them off of one another?
+  * Based on Mauve alignment of 4k Falcon vs. 8k HGAP, MAY be able to scaffold off of one another...
+    * Around 1,129,590 on the 4k Falcon contig (contigs are in reverse alignment)
+    * BLAST them?
+      * Area seems to be missing, looking at the MAUVE results...
+    * Check BLAST at 02_blast/ST54_Bacteria_Search/Kordia_Comparison_Files/Kordia_assemblies_comparison
+
+Magnus - DNA server, SMRT Portal?
 
 
 

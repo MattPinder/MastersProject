@@ -11111,6 +11111,10 @@ to save space on the home directory
 * Try transcriptome assembly?
 * Delete OLD S. marinoi backups from data5?
 
+* New cells are now in SMRT Portal - pb_0066...; try assembling with these together with pb_77?
+
+
+
 
 
 boop

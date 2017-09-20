@@ -11013,7 +11013,7 @@ Are Parvibaculum and Rhodobacteraceae species the same?
 * Both belong to Alphaproteobacteria
   * Parvibaculum belongs to Rhizobiales > Rhodobiaceae
 
-## TO do
+## To do
 * Start Gamma writeup, find more info to possibly classify it
   * Pathway analysis
 
@@ -11026,6 +11026,90 @@ Are Parvibaculum and Rhodobacteraceae species the same?
     * Check BLAST at 02_blast/ST54_Bacteria_Search/Kordia_Comparison_Files/Kordia_assemblies_comparison
 
 Magnus - DNA server, SMRT Portal?
+
+
+# 20 September 2017
+
+## ST54 assembly
+
+Started a 7k assembly with estimated genome size 80m (to allow for 55m nuclear genome + bacteria and organelles)
+* Check results of 7.5k assembly attempt (genome size estimate 55m (S. marinoi default setting))
+* Flavo at 5.4m (untrimmed); seems promising - BLAST ends
+  * 4,227 bp overlap??
+    * Remove 1 - 4,227 (4,227 bp) = 5,485,000 bp total
+    * Remove 5,484,991 - 5,489,227 (4,238 bp) = 5,484,990 bp total
+  * Attempt circularisation individually, as reads will compete otherwise
+  * BLASTx hits the same proteins when the ends are compared, so hopeful...
+  * Seems that the ends do hit a repeat region, so may have difficulties resolving this...
+    * A couple of proteins seem to be missing in the end 20k of the contig vs. K. algicida
+  * Both trimmed assemblies seem to circularise well; which to choose?
+    * 2bp difference in assembly size
+    * 46 mismatches, 26 gaps
+      * Mismatches start at 2,735,821, end at 5,058,288
+      * Specific areas of difference; check with BLASTx
+        * 2,735,821 - 2,738,693 - both versions produce some premature stops in 'probable aggregation factor core protein MAFp3, isoform C'
+          * Repeat region
+          * This gene only appears in K. algicida; lost from other lineages?
+          * BLASTn - no hits
+        * 3,931,250 - 3,931,370 (repeat no. difference)
+          * Difference is a single missing repeat in a hypothetical protein
+        * 5,058,110 - 5,058,288
+          * Poor hits to a calcium-binding protein in K. algicida/hypothetical protein in K. jejudonensis
+          * End-trim adds an additional 'error', it seems
+  * Go with front trim?
+
+| Trim  | Bases removed | Assembly length after Quiver | Mean cov. | Mapped reads | Corrections | Notes             |
+|-------|---------------|------------------------------|-----------|--------------|-------------|-------------------|
+| Front | 4,227         | 5,484,999                    | 67.47     | 68,385       | 37          | Additional repeat |
+| End   | 4,238         | 5,485,001                    | 67.46     | 68,386       | 31          | Adds an error?    |
+
+  * Realign both to a gene, annotate both and compare
+    * Reverse complement to facilitate comparison to K. algicida and K. zhangzhouensis (possibly also K. jejudonensis?)
+    * Taking too long - can reverse complement later if necessary
+
+
+## Gamma Write-up
+* Also check whether the Gamma assemblies of HGAP are any good vs. Gamma from Falcon
+  * Current Gamma assembly (Falcon 6k) - 3,593,020 bp
+  * Gamma assemblies from HGAP (pre-trim) - 3,601,894 (7.5k); 3,623,906 (8k); 3,620,570 (9k)
+
+| Assembly | Length    | Overlap         | Final length           |
+|----------|-----------|-----------------|------------------------|
+| 7.5k     | 3,601,894 | 7,157 or 8,356  | 3,594,737 or 3,593,538 |
+| 8k       | 3,623,906 | 7,417 or 20,324 | 3,616,489 or 3,603,582 |
+| 9k       | 3,620,570 | 9,203 or 18,256 | 3,611,367 or 3,602,314 |
+
+* Current 'final' assembly may be underestimating the true size of the genome
+
+## Transcriptome assembly
+File to attempt mapping to: /nobackup/data5/Skeletonema_marinoi_microbiome_project/01_assemblies/Final_Assemblies/All_Bacterial_Genomes.fasta
+* Running script via an sge script; see if it works...
+
+
+
+## Skeletonema axenic treatment
+Respond to Luca...
+* Fairly confident that Sulfitobacter contains at least 1 unique component from the 'adenosylcobalamin biosynthesis from cobyrinate a,c-diamide II' pathway
+  * 'Adenosylcobinamide-GDP ribazoletransferase'
+* Marinobacter, at least, supplies growth hormone
+
+* Check siderophores?
+
+
+
+## Note
+Many of my jobs on SMRT Portal have now been deleted and their reports/resulting sequences compressed and saved in the relevant data5-based directories,
+to save space on the home directory
+
+
+## To do
+* Continue checking for Skeletonema axenic treatment possible issues
+* Check Gamma against itself to determine if current 'final' assembly is incomplete
+* Check attempted 7k ST54 assembly in HGAP
+* Check transcript read mapping attempt
+* Check Kordia annotation attempts
+* Try transcriptome assembly?
+* Delete OLD S. marinoi backups from data5?
 
 
 

@@ -11073,11 +11073,11 @@ Started a 7k assembly with estimated genome size 80m (to allow for 55m nuclear g
   * Current Gamma assembly (Falcon 6k) - 3,593,020 bp
   * Gamma assemblies from HGAP (pre-trim) - 3,601,894 (7.5k); 3,623,906 (8k); 3,620,570 (9k)
 
-| Assembly | Length    | Overlap         | Final length           |
-|----------|-----------|-----------------|------------------------|
-| 7.5k     | 3,601,894 | 7,157 or 8,356  | 3,594,737 or 3,593,538 |
-| 8k       | 3,623,906 | 7,417 or 20,324 | 3,616,489 or 3,603,582 |
-| 9k       | 3,620,570 | 9,203 or 18,256 | 3,611,367 or 3,602,314 |
+| Assembly | Length    | Overlap         | Match start/end    | Final length           |
+|----------|-----------|-----------------|--------------------|------------------------|
+| 7.5k     | 3,601,894 | 7,157 or 8,356  |   445 or 3,600,252 | 3,594,737 or 3,593,538 |
+| 8k       | 3,623,906 | 7,417 or 20,324 |     1 or 3,603,583 | 3,616,489 or 3,603,582 |
+| 9k       | 3,620,570 | 9,203 or 18,256 | 1,267 or 3,602,314 | 3,611,367 or 3,602,314 |
 
 * Current 'final' assembly may be underestimating the true size of the genome
 
@@ -11112,6 +11112,69 @@ to save space on the home directory
 * Delete OLD S. marinoi backups from data5?
 
 * New cells are now in SMRT Portal - pb_0066...; try assembling with these together with pb_77?
+
+
+# 21 September 2017
+
+## Kordia annotation comparison
+
+End trim seems to have one more 'hypothetical protein' than Front trim
+* Compare the results to determine if one seems strictly better than the other
+  * yehU - End longer in the front end
+  * Branched-chain-amino-acid aminotransferase - both match ~well, but End is too long at the front
+  * HNH endonuclease - Front variant appears truncated
+  * FeoA-domain protein - Front ~correct size, End longer in the front
+  * DNA-binding transcriptional regulator ChbR - End exactly the correct size, Front a little too short
+  * hypothetical protein - End closer to correct length, Front longer
+  * ...
+* Try correcting both one more time, see if they come to a consensus?
+* Front removes one base, End adds ~25 bases (seems like it adds an additional repeat)
+
+
+
+
+## Transcript mapping
+
+First result seems to show little mapping to bacterial sequences; continue with the remaining data sets
+
+## ST54 HGAP assemblies
+
+* Assembly may take ~10 hours (according to Alvar's notes), so should finish around 5pm
+* pb_0066* data is now in home directory; attempt a pb_77 + pb_0066* assembly in Falcon/Canu?
+  * Falcon input.fofn file will accept multiple sources of data
+  * Not specified for Canu but appears that it should be possible...
+
+## Skeletonema axenic treatment
+* Vit B12?		At least one species is confirmed to contain a unique pathway component
+* Growth hormone?	This has been tested in excess in the lab
+* Siderophore?		**Check for vibrioferrin-like synthesis genes**, particularly in Marinobacter
+  * Running antiSmash again with the PGAP version of annotation
+
+## Gamma
+Chunk of ~40 Kb which doesn't match up between assemblies
+* As the longest, attempt to circularise 8k
+
+
+
+
+
+## To do
+* Check Gamma against itself to determine if current 'final' assembly is incomplete
+  * Attempting to circularise the longest assembly (HGAP 8k); if this works - accept
+* Try transcriptome assembly?
+* Delete OLD S. marinoi backups from data5?
+
+* New cells are now in SMRT Portal - pb_0066...; try assembling with these together with pb_77?
+  * To use the new pb_0066 data in the home directory, must run RS_Subreads to get fasta output
+  * Job saved; run when other jobs have completed to avoid overload
+* Can now delete ST54_1 directory in home, but lack privileges...
+
+
+**Blobology? - classifying transcriptome reads**
+* Search 'Taxonomic classification RNAseq'?
+
+* Is mapping script still running...?
+
 
 
 

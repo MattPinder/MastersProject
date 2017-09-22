@@ -11176,6 +11176,46 @@ Chunk of ~40 Kb which doesn't match up between assemblies
 * Is mapping script still running...?
 
 
+# 22 September 2017
+
+| ST54 assembly                           | Transcript mapping                   | Gamma                                    | Kordia                              |
+|-----------------------------------------|--------------------------------------|------------------------------------------|-------------------------------------|
+| 7.5k assembly of pb_77 + pb_066 failed. | Jobs had completed but scripts were  | Cut point has a lot of red reads; fairly | Selected Front trim, as when BLASTx |
+| As Alvar never ran 9k SRL, attempting   | still running ...Next time, try to   | certain this is a repeat region issue... | checking an area of slightly lower  |
+| this instead (job 16863)                | run as shell script without the .sge | Any related species I can refer to, i.e. | coverage, seems to have marginally  |
+|                                         |                                      | for flanking genes?                      | better match to other Kordia hits   |
+|                                         | Reads mapping to bacteria:           | Note - repeat region is also the cause   | than End trim                       |
+|                                         | * cleaned + control - 0.04%          | of the spike in the 6k Falcon assembly   |                                     |
+|                                         | * cleaned + treated - 0.03%          |                                          | Running Prokka now...               |
+|                                         | * trimmed + control - 0.12%          | Try to circularise 9k instead?           | Use Metaxa and attept to obtain     |
+|                                         | * trimmed + treated - 0.10%          | Checked repeat region, overlap seems     | complete 16S?                       |
+|                                         |                                      | reasonable; almost matching non-repeat   | Seems to be 3x identical 16S, but   |
+|                                         |                                      | area moves into more repeats then longer | one in a different orientation to   |
+|                                         | Still need to try Blobology or its   | non-repeat (missing from front end but   | the other two                       |
+|                                         | successor - BlobTools                | low-quality bases there anyway...)       | * 97% identity to K. algicida OT-1  |
+|                                         |                                      |                                          |   16S (NR_027568.1) (complete)      |
+|                                         |                                      | 9k still has a circularisation problem   | * 98% identity to K. jejudonensis   |
+|                                         |                                      | Try 7.5k; if that fails, trim longer end |   SSK3-3 16S (NR_126287.1) (partial)|
+|                                         |                                      | from other assemblies?                   | * 96% identity to K. zhangzhouensis |
+|                                         |                                      |                                          |   MCCC 1A00726 16S (NR_137411.1)    |
+|                                         |                                      | Manually checking trims on all three:    |   (partial)                         |
+|                                         |                                      | * 7.5k - first 10,023 removed            |                                     |
+|                                         |                                      | * 8k - doesn't seem to cleanly overlap   | Running PhyloPhlAn vs. all Flavo    |
+|                                         |                                      | * 9k - patchy area in middle doesn't     |                                     |
+|                                         |                                      |        seem to overlap well...           |                                     |
+|                                         |                                      |                                          |                                     |
+|                                         |                                      |                                          |                                     |
+
+Check 9k assembly and Gamma 7.5k circ on SMRT Portal
+
+
+
+
+
+Useful Unix Command: **fold** for adding newline after every N characters!
+
+
+
 
 
 

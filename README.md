@@ -11217,8 +11217,52 @@ Useful Unix Command: **fold** for adding newline after every N characters!
 
 # 25 September 2017
 
+## ST54 - pb_77 + pb_0066 assembly
+
+* HGAP.2 assemblies continuing to fail; retrying with 100M estimated genome size (increased from 55M)
+  * Failed; attempting pb_0066 on its own...
+* Attempting a Falcon assembly of the same data (SRL 7k)
+  * 55m Canu assembly queued behind Falcon attempt
+
+* Falcon results
+  * Kordia - ~Consistent with previous findings
+  * Parvi  - ~Consistent with Alvar's results - investigate further!
+    * Size around 100 Mb smaller than only other sequenced genus member - P. lavamentivorans
+    * Previously only appeared in Canu assemblies with genomeSize 54m+
+    * MAUVE comparison between Parvi and P. lavamentivorans shows ~good matches, albeit substantial rearrangement in ~half the genome
+    * Test circularisation
+      * Circularisation appears promising, albeit with almost 20,000 corrections (no Quiver correction in Falcon)
+      * Download consensus, re-reverse and reupload for second correction round
+  * Gamma  - ~Consistent with previous findings
+  * No Rhodo...
+    * Found in all Canu assemblies, biggest at 53m+
 
 
 
+
+## Kordia annotation
+Check current annotation stats
+
+| CDS  | Named | Pseudo | Hypo | tRNA | tmRNA | rRNA | ncRNA | Pathways |
+|------|-------|--------|------|------|-------|------|-------|----------|
+| 4659 | 1690  |  ???   | 1899 | 63   |   1   |  9   | 0     | 218      |
+
+Run initial Pathway Tools analysis (w/o Hole Filler or Manual Assignment)
+
+Pathway Tools errors out when trying to create ANY new database
+* Uninstall/reinstall?
+
+tr -d '\n' < Kordia.faa | sed 's/>/\n>/g' | grep "hypothetical" | sed 's/protein/protein\n/g' | fold -c60 > test
+
+
+
+## To do
+* Keep checking the hypothetical annotations for Kordia, starting with #904
+* If Kordia still hasn't run through the Frameshift checker, try it again
+* Check pb_0066 HGAP assembly attempt
+* Download second-Quiver Parvi genome and double-check the coverage spikes/troughs
+  * On the whole it looks okay...
+* Check the Gamma contigs from the new Falcon/Canu assemblies
+* Check Canu assembly results and run more Falcon/Canu assemblies
 
 boop

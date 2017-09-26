@@ -11265,4 +11265,56 @@ tr -d '\n' < Kordia.faa | sed 's/>/\n>/g' | grep "hypothetical" | sed 's/protein
 * Check the Gamma contigs from the new Falcon/Canu assemblies
 * Check Canu assembly results and run more Falcon/Canu assemblies
 
+
+# 26 September 2017
+
+## Kordia genome
+
+* Retry consistency checker
+* Check later: JSID_01_100079_130.14.22.21_9009__frame_shifts
+  * Job failed...
+* Kordia seems to encode several examples of proteins from the newly-discovered type 9 secretion system
+  * http://journal.frontiersin.org/article/10.3389/fcimb.2017.00215/full
+
+## ST54 assembly
+
+* pb_0066 still fails in HGAP; trying again with 85m genome size and 5k SRL
+* Attempt some more all-data assemblies in Falcon and Canu
+  * Falcon doesn't seem to find Rhodo, but may yield a decent Gamma...
+  * Running Canu 80.5m SRL
+    * Rhodobacteraceae assembly seems to be split into MANY pieces (implies many 16S sequences...)
+    * So far yielding less than 0.5 Mb (largest Rhodo contig in pb_77-only was multi-Mb)
+
+
+## Parvibaculum
+
+* Check circularisation of second-round Quiver
+  * Midpoint seems fine but medium-sized peak/trough near the middle...
+  * MAUVE vs. alpha proteobacterium Mf 1.05b.01
+    * By comparison to the above genome, the coverage spike appears to be caused by the rRNA operon
+    * Obvious rearrangement but Parvi matches VERY well to the above alpha proteobacterium
+    * Parvi ~40 Kb bigger than alpha proteobacterium
+    * Alpha proteobacterium isolated from a dinoflagellate!
+  * Consider this genome complete!
+  * Proceed to annotation
+
+
+
+## To do
+
+* Finish Kordia annotation corrections and retry frameshift checker...
+  * Start with #2701
+* Check on HGAP assembly and if it fails, stick with Canu and Falcon
+* Check on Canu 53m run
+  * Continue using different parameter values for Canu to try and obtain a complete Rhodobacteraceae genome
+* Check annotation of Parvi and make the relevant corrections/hypo checks
+* Check new assembly attempts for a better Gamma build (use previous builds still on SMRT Portal to estimate genome size
+
+
+
+
+
+
+
+
 boop

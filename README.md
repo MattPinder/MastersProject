@@ -11311,10 +11311,61 @@ tr -d '\n' < Kordia.faa | sed 's/>/\n>/g' | grep "hypothetical" | sed 's/protein
 * Check new assembly attempts for a better Gamma build (use previous builds still on SMRT Portal to estimate genome size
 
 
+# 27 September 2017
+
+## Trinity
+Trying test run of subset of transcriptome data - cleaned control
+* Headers must be identical besides /1 or /2 at the end
+  * sed 's/1:N:0:/N:0:/g' FILENAME | sed '/^@NB501037/ s/$/\/1/' > FILENAME_headerformat.fq
+  * sed 's/::2:N:0:/ N:0:/g' FILENAME | sed '/^@NB501037/ s/$/\/2/' > FILENAME_headerformat.fq
+* OR
+  * sed '/^@NB501037/ s/$/\/1/' FILENAME > FILENAME_headerformat.fq
+  * sed '/^@NB501037/ s/$/\/2/' FILENAME > FILENAME_headerformat.fq
+* Still erroring out in both cases...
+
+## ST54 assembly
+Check Canu 53m
+* Rhodobacteraceae genome still appears to be fragmented...
+  * Much shorter than others; increase the genomeSize parameter again
+* Try 100m parameter?
+
+Falcon doesn't seem to be providing Rhodobacteraceae contigs (at least, in terms of 16S); abandon?
+
+## Kordia
+Continue annotation
+* Many T9SS-related genes, but some of these are hitting to 'gliding motility' genes as well (albeit poorer hits)
+  * Does this imply that this species of Kordia is NOT algicidal? Or can both types of T9SS coexist in one species?
+
+* Check - how were the other Kordia species differentiated? Is our Kordia species algicida, or a novel species?
+
+
+
+## Gene family analysis
+Waiting on details...
+
+
+
+## To do
+* Kordia annotation - start at #4100
+* Begin work on Skeletonema gene family analysis (see Adrian's email)
+* Continue assembly attempts
+* Check Parvibaculum initial stats
 
 
 
 
+
+
+
+
+
+
+
+
+
+| CDS  | Named | Pseudo | Hypo | tRNA | tmRNA | rRNA | ncRNA | Pathways |
+|------|-------|--------|------|------|-------|------|-------|----------|
+|
 
 
 boop

@@ -11352,6 +11352,23 @@ Waiting on details...
 * Check Parvibaculum initial stats
 
 
+# 28 September 2017
+
+## Transformation paper queries
+
+1. How confident are we that the mutated gene in the mapped Skeletonema transformant encodes the following unusual protein?
+
+2. Phylogenetic analysis of the putative FA transporter
+
+3. Ortholog search in Apicomplexan parasites
+
+4. Search for possible Skeletonema (and diatom-wide) orthologs to the Arabidopsis FAX1 (and FAX2-4, other predicted chloroplast-localized FAX proteins)
+
+5. Search for possible Skeletonema (and diatom-wide) orthologs to the Arabidopsis LACS9
+   (might be complicated due to the ATP-binding domain and its broad conservation in many different proteins that use ATP as an energy source)
+
+
+See ~/Transformant_Sequence_Analysis and continue from there
 
 
 

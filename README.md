@@ -11371,6 +11371,51 @@ Waiting on details...
 See ~/Transformant_Sequence_Analysis and continue from there
 
 
+# 29 September 2017
+
+Adrian's query sequence - search in RO5 PacBio (**uncorrected**) (Sm_Ref.v1), ST54, CCMP1332 (Skeletonema_MiSeq_20151016_novo),
+        Illumina (/nobackup/data5/data/skeletonema/assemblies/Sm_300-650_clc-assembly_novo_2000bp.fa)
+	Transcriptomes x2 (Sm_transcriptome_mincpm1per2 [Remo] + Sm_transcriptome_sex [Mattias][possible errors?])
+* BLAST server + data5
+* Find sequence in genome browser - transcriptome, at least, should be there; any repeats or other interesting features?
+  * Protein matches from other species?
+  * Plaza (if Maker annotated these as two proteins, may need to check two entries)
+    * Check length of other species' proteins in region
+
+Confirm transcript is full-length, not fused
+* Read mapping to the transcript (/nobackup/data5/skeletonema_sex_project/data/treated-data/skeletonema-pairend-data/fastq_quality_filter_results)
+  * Map reads to transcripts and discard reads which don't align (use Alvar's script)
+  * Check results in IGV
+
+Query transcriptome with protein sequence and save the relevant hit(s), to get the full-length transcript
+* Use Mattias's transcript but save Remo's as well, for comparison
+
+
+Search other diatom genomes (genomic sequence) for evidence of this gene
+* Fragilariopsis, Thalassiosira, Phaeodactylum, others present in data5/data
+* https://genome.jgi.doe.gov/pages/tree-of-life.jsf - check alveolates/heterokonts
+  * DL sequences from tree-of-life, update genomes on data5 if new versions are available
+* Transcripts preferable to gene models
+* CHECK SYNTENY - are genes always found together? If so, suggests it may be a single gene in these other species
+
+
+Set up GitLab repository within Bioinformatics group
+S marinoi fax/fat mutant or similar
+
+
+CONTINUE WORKING ON THIS ON MONDAY, STARTING FROM THE LINES JUST ABOVE ***************************
+AND CHECK MAPPING JOB
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11407,10 +11407,27 @@ CONTINUE WORKING ON THIS ON MONDAY, STARTING FROM THE LINES JUST ABOVE *********
 AND CHECK MAPPING JOB
 
 
+# 2 October 2017
+
+Mapping - nearly filled home partition...
+
+SAM Tools - index file
+
+Annotate transcript - start methionine, intron boundaries, etc
+Use BLASTx hits on annotation server for domain comparison
+* Double-check Fragilariopsis
+
+Take whole user annotation for the gene, take genomic sequence (+1000bp on either size)
+* Map transcriptome reads to this region
+* Use splice-aware mapper (BWA or Bowtie won't work) - **TopHat**
+  * Anything more up-to-date? - HISAT2 but run with Tophat anyway...
+  * Only save information about mapped reads to save space
+    * In future, use --no-discordant and --no-mixed to save space?
+
+**CHECK RESULTS OF MAPPING, ENSURE THAT SPACE HASN'T RUN OUT ON THE HOME PARTITION**
 
 
-
-
+Any transcriptome data from T. pseudonana in-house?
 
 
 

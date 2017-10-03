@@ -11430,13 +11430,65 @@ Take whole user annotation for the gene, take genomic sequence (+1000bp on eithe
 Any transcriptome data from T. pseudonana in-house?
 
 
+# 3 October 2017
+
+Results of yesterday's Tophat mapping run
+** Change read-mismatch parameter to ~5 and retry
+* Blast unmapped pairs, see where the unmapped partner aligned
+  * Grep the sam file for the unmapped sequence in the pair and query transcriptome/genome
+** Map Wiebke's RO5 transcriptome data and map to reference
+  * Make subdirectories for ST54 and RO5 transcriptome mapping
+  ** Concatenate all forwards and all reversed to save time
+    ** Note the command used in the relevant readme
+  * Running in temp-Mapping-to-genomic-region, move to main folder when all jobs are completed
+* Use $NSLOTS for the -p value
+
+* RO5 reference is uncorrected - any reads with more than 2 edits are discarded
+  * Were the unpaired reads being thrown out because they weren't accurate enough??
+  * Examples:
+    * HISEQ:162:H72EEADXX:1:2205:10371:29930
+      * One read mapped to one side of a gap in coverage (2 mismatches)
+      * Other read unmapped, but BLAST found that it would have crossed a suspected (genome browser) exon boundary (6 mismatches)
+    * HISEQ:162:H72EEADXX:1:2107:6067:100463
+      * One read maps; other read is reverse complement of the first, plus another piece roughly the same size which maps to nothing...
+    * HISEQ:162:H72EEADXX:2:2114:15648:26940
+      * One read mapped to one side of a gap in coverage (1 mismatch)
+      * Other read unmapped, but BLAST found that it would have crossed a suspected (genome browser) exon boundary (7 mismatches) (reads overlap...)
+        * Also finds hits in other places in the genome...
+    * HISEQ:162:H72EEADXX:1:1104:3266:74679
+      * One read mapped to one side of a gap in coverage (2 mismatches)
+      * Other read unmapped (only 2 mismatches?), but BLAST found that it would have crossed a suspected (genome browser) exon boundary (substantial read overlap)
+        * Both reads also have fairly decent hits to other parts of the genome
+
+CHECK MAPPING_TO_TRANSCRIPT TOPHAT RUN AT ~15:00 TO ENSURE IT'S RUNNING SMOOTHLY; SHOULD PROCEED TO NEXT STEP AROUND THEN
+
+TEMP-MAPPING_TO_GENOME discarded some reads (~0.1%), but might be worth trying to fix after this run has completed, dependent on the result...
+* Also perhaps raise threshold from 5 to 10, just in case?
+* Job seems to be progressing much faster than expected...
+
+** Check - 3'-bias in RNA seq
+
+** Create .bed file track showing the positions of the exons (see genome browser) relative to the +/- 1000bp reference sequence
+
+Any value in running Tophat for transcript only? (i.e. the reference for the original mapping run)
+* Giving it a try anyway...
+
+
+* `--read-edit-dist 5 -N5` may be insufficient; found one unpaired read with 6 errors...
+  * Depending on the results of the current analysis, perhaps increase threshold to 10?
+
+
+## Handling .bam files - sorting and indexing
+`samtools sort test.bam test_sorted`
+`samtools index test_sorted.bam test_sorted.bai`
 
 
 
-
-
-
-
+## To do
+* Continue Kordia annotation checks from #04407
+* Check results of RO5 mapping - could imply correct transcript
+  * Why did the previous results seem to cut so cleanly along with clumps of exons?
+  * If this result is correct, it may have identified the 5' UTR
 
 
 

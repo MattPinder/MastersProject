@@ -11492,6 +11492,34 @@ Any value in running Tophat for transcript only? (i.e. the reference for the ori
 
 
 
+# 4 October 2017
+
+Tophat jobs failed due to running out of space
+* Sex strain reads to genomic region, error threshold 5  - retry now
+* Sex strain reads to genomic region, error threshold 10 - retry later
+* Sex strain reads to transcript with Tophat - less relevant...
+
+RO5 mapping results
+* 5' UTR appears to be shown, but introns have disappeared...
+* Between exons, particularly in the second half of the gene, there is consistently at least one insertion...
+
+
+
+Compare the genomic region between RO5 and CCMP1332 (and ST54?), and note differences
+* 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 | CDS  | Named | Pseudo | Hypo | tRNA | tmRNA | rRNA | ncRNA | Pathways |

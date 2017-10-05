@@ -11509,10 +11509,32 @@ Compare the genomic region between RO5 and CCMP1332 (and ST54?), and note differ
 * 
 
 
+## 5 October 2017
+
+Check 5-error run
+Clear space to make room for the 10-error run!
+
+Killing 10-error run as will likely give no more informative results
+
+Instead, running Trinity assembler to assemble transcripts
+* Assemble treated and untreated separately, in case the strange results are a consequence of alternative splicing
+* Investigate whether strand specificity should be chosen in the Trinity/Tophat options
+* Based on https://www.nature.com/articles/s41598-017-07275-9 and https://www.illumina.com/documents/products/technotes/RNASeqAnalysisTopHat.pdf, it seems:
+  * RO5 transcriptome data in Tophat should be mapped with the `--library-type fr-firststrand` parameter
+  * RO5 transcriptome data assembled with Trinity should use the `--SS_lib_type RF` parameter
+
+Add predicted chloroplast transit peptide to .bed file
+* Combine .bed files, and move to a more central location
+  * Combined .bed file does not display overlapping regions correctly, so has been scrapped
+
+Retry Tophat using the RO5 data and `--library-type fr-firststrand`?
 
 
+122G on home partition; keep an eye on this in case Trinity fills it...
 
-
+Is T. oceanica data valid? 8.7-fold coverage for contigs >10kb; contig containing our gene of interest is only 6.7kb...
+* See https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-245, additional figure 1
+* Backed up by transcriptomics data, however...
 
 
 

@@ -11537,6 +11537,43 @@ Is T. oceanica data valid? 8.7-fold coverage for contigs >10kb; contig containin
 * Backed up by transcriptomics data, however...
 
 
+RERUNNING RO5 WITH STRANDEDNESS
+CHECK IN THE MORNING TO ENSURE IT DIDN'T FILL UP THE DRIVE AND THEN CRASH
+
+
+# 6 October 2017
+
+* Check results of Trinity assembly
+* Rerunning the RO5 mapping completed - rename the files appropriately and check
+
+Appears to be no major difference between RO5 Tophat runs despite inclusion of the strandedness parameter
+* The files ARE slightly different sizes, however...
+
+
+Trinity assembly
+* BLASTing the Trinity assemblies to the gene genomic region (+/- 1kb), both control and treated get 10 hits
+  * Control - 7 hits to the region of interest (one only a short hit), 3 downstream and on the opposite strand
+    * Gene of interest corresponds to locus DN22955
+  * Treated - 5 hits to the region of interest, 5 downstream and on the opposite strand (one only a short hit)
+    * Gene of interest corresponds to locus DN23179
+* Results only poorly line up with one another, and there doesn't appear to be a single result spanning the whole region of interest
+  * Longest Control hit = 2,314 bp
+  * Longest Treated hit = 1,603 bp
+  * Length of region of interest = ~5,000 bp
+
+
+*Rerun Trinity with ALL RO5 data, and digital normalisation turned OFF
+  * Running...
+
+BLAST ST54 transcript and any good RO5 results to the RO5 assembly, and see how it looks
+
+
+Kordia annotation
+* Start from #04605 next time
+
+
+
+
 
 
 

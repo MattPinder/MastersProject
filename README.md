@@ -11562,7 +11562,7 @@ Trinity assembly
   * Length of region of interest = ~5,000 bp
 
 
-*Rerun Trinity with ALL RO5 data, and digital normalisation turned OFF
+* Rerun Trinity with ALL RO5 data, and digital normalisation turned OFF
   * Running...
 
 BLAST ST54 transcript and any good RO5 results to the RO5 assembly, and see how it looks
@@ -11572,18 +11572,38 @@ Kordia annotation
 * Start from #04605 next time
 
 
+# 9 October 2017
+
+Check new RO5 Trinity assembly
+* Results show two contigs, but clearly separated...
+  * No other genes with the same DN##### identifier, so nothing else on that locus
+  * Trinity still clusters the two genes; is this purely a matter of proximity and same reading frame?
+
+Send to Oskar - sent
+* Transcripts mapping to the region of interest
+  * All_DN26479_c0_g1_i1.fasta
+  * All_DN26479_c0_g2_i1.fasta
+* The regions in between (the parts without insertions, where the reads agree with the reference sequence)
+  * Region_Between_Transcripts.fasta
 
 
+Running frameshift checker on Kordia - check job JSID_01_110036_130.14.22.21_9009__frame_shifts
 
-
-
-
-
+## Parvibaculum initial stats
 
 
 | CDS  | Named | Pseudo | Hypo | tRNA | tmRNA | rRNA | ncRNA | Pathways |
 |------|-------|--------|------|------|-------|------|-------|----------|
-|
+| 3811 | 2012  | ?      | 847  | 42   | 2     | 3    | 0     | ?        |
+
+Started removing upper-case letters from beginning of protein products; begin from D
+
+
+
+
+
+
+
 
 
 boop

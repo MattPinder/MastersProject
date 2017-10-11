@@ -11601,6 +11601,47 @@ Started removing upper-case letters from beginning of protein products; begin fr
 
 
 
+# 10 October 2017 (CeMEB)
+
+* Long transcript (ATPase) at end of region of interest seems to be complete, and contains both a 5' and 3' UTR
+  * Predicted to have a 62aa transit peptide
+* Short transcript (FABP) at start of region of interest doesn't end in a stop codon!
+  * Compare results from individual assemblies
+  * BLAST to determine completeness
+    * Truncated by at least 30-40aa on the 3' end
+    * No indication of introns in assembly...
+  * No transit peptide predicted
+    * Could just mean that it isn't transported to the chloroplast?
+  * Compare with equivalent transcripts from individual data sets
+    * Transcript from the control data set starts 33bp earlier, but stops at the same position as this short transcript...
+    * Transcript from the treated data set stops is even shorter at both ends...
+    * Both of these fail to hit an in-frame stop...
+  * Errors less likely as this data comes from the transcripts - compare results in IGV?
+
+* Question - how far would transcript have to extend to hit an in-frame stop codon?
+  * OR - has it hit an exon/intron boundary and somehow been misassembled
+  * Note - Treated has an overlapping transcript... Check
+    * Even taken together, these do not end at a stop codon...
+      * Appears to be pretty much full length however, when BLASTed (end of query hits ~end of Fistulifera, Phaeodactylum, Thalassiosira, etc.)
+    * 5' end of the protein hits nothing in BLAST? (BLASTx vs nucleotide sequence trimmed to start at protein start codon)
+
+
+# 11 October 2017 (CeMEB)
+
+Is this gene veeery elongated? Keep stretching it and STILL doesn't hit a stop...
+* It also seems to run into the ATPase gene, which returns us to the original problem...
+
+Based on comparison to T. pseudonana sequence (XP_002286126.1), the coding sequence should stop at:  
+gacagtattgtcgagaatagctgcgac - position 1,796
+COMPARE TO CURRENT PREDICTIONS
+
+
+
+
+
+
+
+
 
 
 

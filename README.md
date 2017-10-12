@@ -11604,14 +11604,11 @@ Started removing upper-case letters from beginning of protein products; begin fr
 # 10 October 2017 (CeMEB)
 
 * Long transcript (ATPase) at end of region of interest seems to be complete, and contains both a 5' and 3' UTR
-  * Predicted to have a 62aa transit peptide
 * Short transcript (FABP) at start of region of interest doesn't end in a stop codon!
   * Compare results from individual assemblies
   * BLAST to determine completeness
     * Truncated by at least 30-40aa on the 3' end
     * No indication of introns in assembly...
-  * No transit peptide predicted
-    * Could just mean that it isn't transported to the chloroplast?
   * Compare with equivalent transcripts from individual data sets
     * Transcript from the control data set starts 33bp earlier, but stops at the same position as this short transcript...
     * Transcript from the treated data set stops is even shorter at both ends...
@@ -11636,12 +11633,23 @@ gacagtattgtcgagaatagctgcgac - position 1,796
 COMPARE TO CURRENT PREDICTIONS
 
 
+# 12 October 2017 (CeMEB)
+
+No TrinAll hits in this region; hit to TrinCon (two transcripts hitting the same location, in fact...) and TrinTre, however...
+* Checked two same-location transcripts from TrinCon - stop codons in both, so presumably not true transcripts?
+
+Compared to T. pseudonana, the sequence should stop at position 1,796 of the reference, but actually stops at 1,700, nearly 100bp early
+* NOTE: Doesn't hit a stop codon in either case
+
+DISAGREEMENTS BETWEEN TRINITY ASSEMBLY TRANSCRIPTS, MAPPED READS AND REFERENCE SEQUENCE - HOW TO RESOLVE?
+* See area around 1,010 - 1,020 vs. TrinAll1 track DN26479_c0_g2_i1 as an example
+  * Only ~1/6 of reads agree with the transcript (TG vs. CA at 1,014-1,015)
+    * Uncommon allele at heterozygous site? (If you wanted to test this, could always look at a_ctg.fa file for the Falcon assembly?
+
+NOT A REFERENCE-BASED ASSEMBLY, SO SHOULDN'T BE INCORPORATING ERRORS FROM THE PACBIO-DERIVED RO5 GENOME SEQUENCE...
 
 
-
-
-
-
+(Read up on Nanopore technology)
 
 
 

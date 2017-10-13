@@ -11652,6 +11652,47 @@ NOT A REFERENCE-BASED ASSEMBLY, SO SHOULDN'T BE INCORPORATING ERRORS FROM THE PA
 (Read up on Nanopore technology)
 
 
+# 13 October 2017
+
+Rerunning Trinity on all data WITH normalisation, to see if this makes any difference...
+
+
+BLAST NEW TRINITY ASSEMBLY!
+
+Extract:
+* TRINITY_DN24111_c0_g3_i1 len=2690 path=[2470:0-46 2494:47-76 2524:77-145 6110:146-169 2617:170-175 6103:176-199 2647:200-672 3120:673-707 3155:708-1198 6106:1199-1222 3670:1223-1255 3703:1256-1303 3751:1304-1602 4050:1603-2562 5010:2563-2689] [2470, 2494, 2524, 6110, 2617, 6103, 2647, 3120, 3155, 6106, 3670, 3703, 3751, 4050, 5010, -2]
+  * Complete hit
+* TRINITY_DN24111_c0_g2_i1 len=1068 path=[5398:0-39 1351:40-71 6105:72-95 1407:96-418 1730:419-894 2206:895-973 2285:974-1051 6040:1052-1067] [5398, 1351, 6105, 1407, 1730, 2206, 2285, 6040, -2]
+  * Complete hit
+* TRINITY_DN19690_c0_g1_i1 len=487 path=[618:0-64 1357:65-88 684:89-244 1358:245-268 864:269-448 1044:449-473 1069:474-486] [618, 1357, 684, 1358, 864, 1044, 1069, -2]
+  * Opposite, complete hit
+* TRINITY_DN24111_c0_g1_i1 len=462 path=[6100:0-46 443:47-59 456:60-183 6109:184-207 604:208-272 6107:273-296 693:297-393 6108:394-417 814:418-461] [6100, 443, 456, 6109, 604, 6107, 693, 6108, 814]
+  * Complete hit
+* TRINITY_DN19690_c0_g2_i1 len=402 path=[239:0-49 266:50-66 283:67-218 1356:219-242 459:243-251 1106:252-293 510:294-351 568:352-377 1359:378-401]
+ [239, 266, 283, 1356, 459, 1106, 510, 568, 1359]
+  * Opposite, complete hit
+
+New Trinity assembly doesn't seem to help...
+
+Notes made on current issues with the Trinity assembly at ~/S_marinoi_FA_transporter_mutant/02_RO5_Transcriptome_Assembly/Current_Problem.md
+
+
+## Kordia annotation
+
+* Overlaps checked, continue with Frameshifts/Partial products/Missing RNAs
+  * https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi?job_key=JSID_01_110036_130.14.22.21_9009__frame_shifts
+
+* Check KORSEPSMSX_02373 - KORSEPSMSX_02378 - all Calx-beta domain protein so may be one protein with errors?
+* Check KORSEPSMSX_03526 + KORSEPSMSX_03528 - removed intermediate hypothetical protein, both now tRNA pseudouridine synthase C
+
+
+
+
+
+
+
+
+
 
 
 

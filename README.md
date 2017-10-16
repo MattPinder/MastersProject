@@ -11686,10 +11686,61 @@ Notes made on current issues with the Trinity assembly at ~/S_marinoi_FA_transpo
 * Check KORSEPSMSX_03526 + KORSEPSMSX_03528 - removed intermediate hypothetical protein, both now tRNA pseudouridine synthase C
 
 
+# 16 October 2017
+
+## RO5 gene
+
+Check for presence of RNAs, just in case there has been a misannotation
+* RNAmmer predicts no rRNAs
+* Running RFAM - no hits
+* Checking miRBase for miRNAs - very poor hits (best e-value only 0.17...)
+
+Would inclusion of unpaired reads help...?
+* Looking at Google, probably not. The Trinity wiki only mentions unpaired reads in relation to non-strand-specific data, whereas ours IS strand-specific...
+
+Search literature for explicit reference to the T. oceanica gene/transcript, or the domains being mentioned together?
+* Gene - EJK45223.1, THAOC_36171, 
+* Domain 1 - chalcone isomerase/FABP - PLN02311, pfam16036, cl03589
+* Domain 2 - ATPase - cd02083, TIGR01116
+  * See also - COG0474, PRK10517, pfam00122, smart00831, cl02930, cl21460, cl27747
+
+Checked Gene deFuser, but no results at all
+
+Repetition - the (extended) first part of the region seems to hit its BLASTp matches twice; is this result of any significance?
+* Hits two slightly shifted regions on its BLAST result; so our sequence only contains one of these regions?
+  * Query  88-497 - Subject 141-539
+  * Query 167-497 - Subject   1-292
+
+* BLASTp of the first section of the T. oceanica protein also indicates multi-hits, and also the double chalcone isomerase domain as seen in the RO5 sequence...
+  * After checking multiple BLAST matches of the T. oceanica long protein, based on top results it seems that only T. oceanica proteins have this
+    double chalcone isomerase domain, and there are a relatively high number of T. oceanica hits in the BLAST results
+    * Transposable element??
+      * Searching 'Thalassiosira pseudonana [orgn] transpos*' doesn't hit T. pseudodnana Chr3, where the other genes of interest are...
+      * Also no hits to T. oceanica contig To_g49379, where the gene of interest is located...
+      * Any way to detect a TE signature in case it is an undiscovered/unannotated TE?
+        * Flowering plant example of a transposable element disrupting a chalcone isomerase - https://www.ncbi.nlm.nih.gov/pubmed/12040106
+        * DFAM search predicts no repetitive DNA elements
+
+
+## Kordia annotation
+
+As previous frameshift check expired, rerun now that partial overlaps have been addressed
+* Check KORSEPSMSX_02373 - KORSEPSMSX_02378 - all Calx-beta domain protein so may be one protein with errors?
+* Check RNAs
 
 
 
 
+
+
+
+
+## To do
+Provide Oskar with required details regarding Sphingorhabdus
+* Investigate whether this should be revised as a new species, rather than just a S. flavimaris strain
+  * Compare phage regions
+
+Finish Kordia annotation (as far as possible)
 
 
 

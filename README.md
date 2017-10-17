@@ -11743,6 +11743,91 @@ Provide Oskar with required details regarding Sphingorhabdus
 Finish Kordia annotation (as far as possible)
 
 
+# 17 October 2017
+
+## Checking Kordia annotation
+RNAs match well enough to K. algicida that I won't make changes
+* Calx-beta domain proteins
+  * KORSEPSMSX_02373	2640455-2652385
+  * KORSEPSMSX_02374	2652348-2652713
+
+  * KORSEPSMSX_02375	2652742-2653539
+
+  * KORSEPSMSX_02376	2653536-2654303
+  * KORSEPSMSX_02377	2654248-2654721
+  * KORSEPSMSX_02378	2654675-2654953
+
+  * KORSEPSMSX_02379	2661434-2662312
+Clustered as highlighted by NCBI, as unsure how to cluster them otherwise
+
+Rerunning frameshift checker one more time - JSID_01_260042_130.14.22.10_9000__frame_shifts
+
+
+## Sphingo (pb_359_4) paper
+
+Compare housekeeping genes between Sphingomonadaceae (and Erythromonadaceae?)
+* 16S already compared - compare atpD and rpoB (and gyrB/rpoD for consistency?)
+  * These two previously used in Sphingopyxis (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4741004/)
+
+* atpD (1446bp)
+  * vs. Sphingorhabdus sp. M41 (1446 bp)
+    * 1331/1446 (92.0%) identity; 0 (0.0%) gaps (Emboss Needle)
+  * vs. Sphingorhabdus marina strain DSM 22363 (1446 bp)
+    * 1299/1451 (89.5%) identity; 10 (0.7%) gaps (Emboss Needle)
+    * 1293/1446 (89.4%) identity; 0 (0.0%) gaps (Emboss Stretcher)
+  * vs. Sphingomonadales bacterium EhC05 (1446 bp)
+    * 1276/1446 (88.2%) identity; 0 (0.0%) gaps (Emboss Needle)
+  * vs. Altererythrobacter epoxidivorans strain CGMCC 1.7731 (1458 bp)
+    * 1201/1480 (81.1%) identity; 56 (3.8%) gaps (Emboss Needle)
+    * 1193/1466 (81.4%) identity; 28 (1.9%) gaps (Emboss Stretcher)
+
+* rpoB (4404 bp)
+  * vs. Sphingorhabdus sp. M41 (4398 bp)
+    * 4005/4404 (90.9%) identity; 6 (0.1%) gaps (Emboss Needle)
+  * vs. Sphingorhabdus marina strain DSM 22363 (4401 bp)
+    * 3808/4420 (86.2%) identity; 35 (0.8%) gaps (Emboss Needle)
+    * 3795/4404 (86.2%) identity; 3 (0.1%) gaps (Emboss Stretcher)
+  * vs. Sphingomonadales bacterium EhC05 (4398 bp)
+    * 3815/4410 (86.5%) identity; 18 (0.4%) gaps (Emboss Needle)
+    * 3808/4404 (86.5%) identity; 6 (0.1%) gaps (Emboss Stretcher)
+
+| Gene | M41   | Marina | EhC05 |
+|------|-------|--------|-------|
+| atpD | 92.0% |  89.5% | 88.2% |
+| rpoB | 90.9% |  86.2% | 86.5% |
+
+
+For reference, check similarity of differnet strains of the same species
+
+* Sphingopyxis granuli
+  * atpD - 1542bp
+    * TFA x ku-sg	97.8%
+    * TFA x NBRC	99.4%
+    * ku-sg x NBRC	97.8%
+  * rpoB
+    * TFA x ku-sg       98.2%
+    * TFA x NBRC        98.1%
+    * ku-sg x NBRC      98.3%
+
+* Sphingopyxis macrogoltabida
+  * atpD
+    * 203 x EY-1	97.1%
+    * 203 x 203N	100.0%
+    * EY-1 x 203N	97.1%
+  * rpoB
+    * 203 x EY-1	96.8%
+    * 203 x 203N	100.0%
+    * EY-1 x 203N	96.8%
+
+* SPHINGORHABDUS FLAVIMARIS NOT PREVIOUSLY SEQUENCED SO COMPARISON IMPOSSIBLE
+
+* Check antiSmash results, see again whether PHASTER is working...
+
+
+## To do
+Try MiGAP annotation pipeline? - http://www.migap.org/index.php/en/about-migap
+
+
 
 
 

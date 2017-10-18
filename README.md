@@ -11828,6 +11828,42 @@ For reference, check similarity of differnet strains of the same species
 Try MiGAP annotation pipeline? - http://www.migap.org/index.php/en/about-migap
 
 
+# 18 October 2017
+
+For comparison - check marker genes for Antarctobacter to determine if this, too, should be a new species.
+
+* rpoB
+  * vs. A. heliothermus DSM 11445 - 3877/4137 (93.7%) identity, 0 (0.0%) gaps (Emboss Stretcher)
+  * (Next closest - Alkalimicrobium, ~88% identity
+* 16S rRNA
+  * vs. A. heliothermus DSM 11445 - 1457/1458 (99.9%) identity, 0 (0.0%) gaps (Emboss Stretcher)
+    * SMS7 sequence is predicted to be shorter, but lengthening it to match the length of DSM 11445 gives the above result
+
+## Kordia zosterae
+
+Only 16S available
+* Vs. candidatus K. septentrionalis
+  * 1399/1448 (96.6%) identity; 2 (0.1%) gaps
+
+
+
+## Region of interest vs. apicomplexa
+
+Note - If the DN26479_c0_g1_i1 transcript is correct (containing both the ATPase domain and the chalcone synthase domain), the coding sequence only contains
+the very end of the chalcone synthase domain (the last 12-22 AAs; the whole domain is ~107 AA long)
+* Now NCBI predicts E1-E2_ATPase superfamily or HAD_like superfamily (haloacid dehalogenase-like hydrolase)
+
+
+## To do
+
+Email Anna re: resting stage pathway question
+* Try to upload S. marinoi annotation to Pathway Tools
+
+
+
+
+
+
 
 
 

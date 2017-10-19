@@ -11834,7 +11834,7 @@ For comparison - check marker genes for Antarctobacter to determine if this, too
 
 * rpoB
   * vs. A. heliothermus DSM 11445 - 3877/4137 (93.7%) identity, 0 (0.0%) gaps (Emboss Stretcher)
-  * (Next closest - Alkalimicrobium, ~88% identity
+  * (Next closest - Alkalimicrobium, ~88% identity)
 * 16S rRNA
   * vs. A. heliothermus DSM 11445 - 1457/1458 (99.9%) identity, 0 (0.0%) gaps (Emboss Stretcher)
     * SMS7 sequence is predicted to be shorter, but lengthening it to match the length of DSM 11445 gives the above result
@@ -11860,8 +11860,29 @@ Email Anna re: resting stage pathway question
 * Try to upload S. marinoi annotation to Pathway Tools
 
 
+# 19 October 2017
+
+Download 16S, atpD and rpoB from Sphingomonas, Sphingopyxis, Sphingobium, Novosphingobium and Sphingorhabdus
+* Downloaded 16S for closest 50 BLAST hits of SMR4y 16S (BLASTn, 16S database)
+
+Redo .bed files for domains
+* Transcript versions, predicted domains, transcripts from RO5, ST54, T. oceanica
+* .bed files fixed
+
+No convincing evidence that a fusion protein such as the one predicted in RO5 exists in apicomplexans...
 
 
+## Skeletonema pathway predictions
+Determine whether components of the following pathways exist in Skeletonema
+* DNRA (Dissimilatory nitrate reduction to ammonium)
+* Denitrification 
+* Anammox (ANaerobic AMMonium OXidation)
+* Sulphate dissimilatory pathway - already done
+
+Is it possible to get GenBank annotation of S. marinoi for Pathway Tools...?
+
+
+Check nitrate reductase - Sm_00007229-RA
 
 
 

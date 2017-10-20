@@ -11885,6 +11885,50 @@ Is it possible to get GenBank annotation of S. marinoi for Pathway Tools...?
 Check nitrate reductase - Sm_00007229-RA
 
 
+# 20 October 2017
+
+
+In addition to the above, also double-check results from (dissimilatory) sulphate pathways
+
+* DNRA (Dissimilatory nitrate reduction to ammonium)
+  * Doesn't appear to exist
+* Denitrification
+  * Doesn't appear to exist
+* Anammox (ANaerobic AMMonium OXidation)
+  * Doesn't appear to exist
+* Sulphate dissimilatory pathway - already done
+  * Doesn't appear to exist
+
+Many nitrogen pathway components seem to exist in Skeletonema-associated bacteria
+* By MetaCyc standards, none seem to contain ALL components of any pathway
+  * Double-check by adding all PGAP GenBank files into Pathway Tools and looking at the overview
+
+
+## Fucus
+
+Check the following:
+* AllpathLG
+* Platanus
+* Diploid assembly in general (cf. bacterial assembly)
+* RADseq? (Principles at least...)
+
+**Skeletonema project directories are now in /proj/data5/**
+
+## Kordia
+Annotation tweaking should be complete, move on to Parvibaculum
+
+
+## Parvibaculum
+Start checking 'hypothetical proteins'
+* Note similarity to 'alpha proteobacterium Mf 1.05b.01'
+* Start hypothetical check from 400 (430)
+
+
+
+
+
+
+
 
 
 

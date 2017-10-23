@@ -11924,6 +11924,118 @@ Start checking 'hypothetical proteins'
 * Start hypothetical check from 400 (430)
 
 
+# 23 October 2017
+
+* Still waiting on more info for FABP investigation
+* Write more on the Kordia paper
+  * Should the annotation be uploaded to NCBI?
+* Continue polishing Parvi annotation
+* Resolve repeat issue in Gamma
+* Continue attempting to assemble Rhodobacter
+* Bjorn's project - find regions of 300-1000bp with high enough variation between individuals in Mariagerfjord
+  * Map resequenced data to S. marinoi cp-genome
+* Check R05 transcriptome vs Kordia, Parvi, and current Gamma assembly?
+
+* BEFORE PROCEEDING WITH SUBMISSION, MUST DETERMINE FOR CERTAIN WHETHER KORDIA SPECIES IS NEW OR MERELY A STRAIN
+  * Also double-check origin of other species
+
+* Kordia algicida has been identified in Denmark - Limfjord (salinity - 25-30PSU) - but still more southerly than Kosterfjord (where ST54 was isolated)
+  * 16S sequence uploaded in August 2017
+  * According to 'High-Latitude Bioerosion: The Kosterfjord Experiment', salinity in Kosterfjord between 8-30PSU and 30-35PSU
+  * "Off the northern Swedish west coast, in the Kosterfjord area, the surface water circulates with a pre-dominating northern heading consisting of the
+     Northern Jutland Current, which continues as the Norwegian Coastal Current along the Norwegian coastline. In addition, more brackish water is added
+     from the Baltic Current, entering the Skagerrak through the Kattegat and the Sound to the south (Svansson 1975). This surface circulation is compensated
+     by a deep counter current that brings in saline Atlantic water through the up to 700m deep Norwegian Trench into the Skagerrak and the Kattegat (Dahl 1978)."
+* Could these populations of Kordia be related...?
+  * When our Kordia 16S is trimmed to same length as the Danish sequence (acc. no. FJ015036.1), the similarity is only 96%
+  * However, when OT-1 (type strain; acc. no. NR_027568.1) and Danish sequence are trimmed and compared, these are only 96.5% similar
+    * Danish strain is only known from 16S sequence, so cannot compare other markers!
+  * Turkish strain is 92.4% identical to our Kordia (when ours is trimmed, again)
+    * Turkish strain and OT-1 are only 91.4% identical
+    * Turkish strain only known from 16S, so potentially misclassified?
+
+* Compare 16S sequences of all available Kordia algicida strains
+  * Danish strain, Tunisian strain and septentrionalis seem to form their own clade away from OT-1
+
+* Check gyrB gene
+  * OT-1 vs. septentrionalis - 86.7% identity
+  * 89.7% identity to Kordia jejudonensis SSK3-3 gyrB
+    * 16S similarity to K. jejudonensis SSK3-3 - 98.1% identity (after trimming)
+
+* "Within the genus Flavobacterium, values of 97.2-98.7% 16S rRNA gene sequence similarity are found between distinct Flavobacterium species
+   (Bernardet & Bowman, 2006)."
+  * 'The gyrB gene is a useful phylogenetic marker for exploring the diversity of Flavobacterium strains isolated from terrestrial and aquatic
+     habitats in Antarctica' (Peeters & Willems, 2011)
+  * 16S alone may not be the best indicator...
+
+* Based on G+C content (35.6%), our Kordia is at least 1% higher than algicida, jejudonensis AND zhangzhouensis
+  * algicida: 34.3%
+  * jejudonensis: 34.9% (according to announcement paper; 34% on NCBI)
+  * zhangzhouensis: 33.8%
+  * periserrulae: 37.3%!
+  * aquimaris: 36.4%
+  * antarctica: 35.1%
+
+* Closest G+C content is K. antarctica
+
+* Looking at Mauve alignment between our Kordia and K. algicida, there is some disagreement in gene order,
+  but not excessive compared to e.g. Roseovarius comparisons when classifying R. mucosus SMR3...
+
+
+## Kordia annotation stats
+
+|        | CDS  | Named | Pseudo | Hypo | tRNA | tmRNA | rRNA | ncRNA | Pathways |
+|--------|------|-------|--------|------|------|-------|------|-------|----------|
+| Before | 4659 | 1690  |  ???   | 1899 | 63   |   1   |  9   | 0     | 218      |
+| AFTER  | 4632 | 1688  |    6   | 1568 | 63   |   1   |  9   | 0     | *        |
+* Still awaiting NCBI confirmation before uploading to Pathway Tools
+
+Number of genes is in the correct ballpark for algicida and jejudonensis (zhangzhouensis is in the 3000s)
+
+PhyloPhlAn gives low bootstrap support for the algicida-jejudonensis-septentrionalis clade
+
+ |--------- zhangzhouensis
+-| 1
+ |    |---------- jejudonensis
+ |----| 0.056
+      |          |---------- algicola
+      |----------| 0.403
+                 |---------- septentrionalis
+
+'Subsampling' Kordia phylogenetic tree, in case there are too many species for accurate resolution (plus I was previously midpoint rooting...
+* 4x Kordia species + 2x Flavobacterium species as an outgroup
+* 100% bootstrap support for a septentrionalis-jejudonensis clade
+
+         |--- zhangzhouensis
+   |-----| 1
+   |     |   |--- algicola
+   |     |   | 1
+   |     |---|   |--- jejudonensis
+   |         |---| 1
+   |             |--- septentrionalis
+---|
+   |   |-----F. antarcticum
+   |---| 1
+       |-----F. psychrophilum
+
+* Rerun analysis with all Flavobacteriaceae again, plus Roseovarius and Loktanella as an outgroup
+
+
+* 16S
+  * Sept vs. Jeju (trimmed) (NZ_LBMG01000119.1) - 98.2%
+  * Sept vs. Algicida (trimmed) (NZ_DS544873.1) - 97.1%
+  * Sept vs. Zhang (trimmed) (NZ_LBMH01000029.1) - 96.0%
+
+  * From K. zhangzhouensis description paper
+    * "Given several species delimitation thresholds of 16S rRNA gene sequence similarities, such as 98.65% (Kim et al., 2014),
+       98.7-99.0% (Stackebrandt & Ebers, 2006) and 98.2-99.0% (Meier-Kolthoff et al., 2013a)..."
+  * By the above reasoning, our Kordia species is on the cusp of a new species cf. a strain of K. jejudonensis
+
+* Check this paper on gyrB - http://onlinelibrary.wiley.com/doi/10.1111/j.1574-6968.2011.02326.x/pdf
+
+
+## To do
+Check results of full Kordia PhyloPhlAn
 
 
 

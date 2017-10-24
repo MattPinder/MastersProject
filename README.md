@@ -11998,17 +11998,17 @@ PhyloPhlAn gives low bootstrap support for the algicida-jejudonensis-septentrion
 -| 1
  |    |---------- jejudonensis
  |----| 0.056
-      |          |---------- algicola
+      |          |---------- algicida
       |----------| 0.403
                  |---------- septentrionalis
 
-'Subsampling' Kordia phylogenetic tree, in case there are too many species for accurate resolution (plus I was previously midpoint rooting...
+'Subsampling' Kordia phylogenetic tree, in case there are too many species for accurate resolution (plus I was previously midpoint rooting...)
 * 4x Kordia species + 2x Flavobacterium species as an outgroup
 * 100% bootstrap support for a septentrionalis-jejudonensis clade
 
          |--- zhangzhouensis
    |-----| 1
-   |     |   |--- algicola
+   |     |   |--- algicida
    |     |   | 1
    |     |---|   |--- jejudonensis
    |         |---| 1
@@ -12038,9 +12038,59 @@ PhyloPhlAn gives low bootstrap support for the algicida-jejudonensis-septentrion
 Check results of full Kordia PhyloPhlAn
 
 
+# 24 October 2017
+
+## Kordia
+
+Phylogenetic tree outgroup-rooted with Rhodobacter group bacteria (R. mucosus and L. vestfoldensis) gives yet another potential tree
+
+ |----- jejudonensis
+-| 1
+ |     |----- zhangzhouensis
+ |-----| 0.245
+       |     |----- algicida
+       |-----| 0.54
+             |----- septentrionalis
+
+
+From K. jejudonensis description paper (Park et al., 2014):  
+"In this study, we describe a bacterial strain, designated SSK3-3T, which was isolated from water collected at Jeju island, South Korea,
+   **at the place where the ocean and a freshwater spring meet**."
+
+Tested presence of proteorhodopsin in the genome with a Kordia partial gene; no hits
+
+
+## Parvi annotation
+
+Note similarity to 'alpha proteobacterium Mf 1.05b.01'
+* Start hypothetical check from 400 (430)
+
+* Many proteins in the 00900s either have no hits or only very poor ones...
+  * Check region quality in case of poor assembly...
 
 
 
+
+
+## To do
+
+### 'Kai's project'
+* Perform checksums in data17 RAW_DATA
+  * md5sum -c *.md5 > checksums.txt
+* Write a readme file to explain what the data is, what has been done, etc.
+* In data17, start a new Git repository (with an informative name)
+* After performing checksums, copy data across from RAW_DATA into 00_data
+* for_each_dir_do.sh (?)
+* for_each_dir_do.sh fastqc *.fastq.gz
+
+### Pathway Tools
+Should our genomes be uploaded for inclusion in Pathway Tools v21.5
+
+### Parvi annotation
+Continue checking hypotheticals from 1100 (1103)
+
+
+RERUN RSYNC SCRIPT TO ENSURE THAT ALL DATA HAS BEEN DOWNLOADED, AND RUN CHECKSUM
 
 
 

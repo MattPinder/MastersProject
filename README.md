@@ -12063,6 +12063,7 @@ Tested presence of proteorhodopsin in the genome with a Kordia partial gene; no 
 ## Parvi annotation
 
 Note similarity to 'alpha proteobacterium Mf 1.05b.01'
+* Appears to have been isolated from a dinoflagellate...
 * Start hypothetical check from 400 (430)
 
 * Many proteins in the 00900s either have no hits or only very poor ones...
@@ -12091,6 +12092,32 @@ Continue checking hypotheticals from 1100 (1103)
 
 
 RERUN RSYNC SCRIPT TO ENSURE THAT ALL DATA HAS BEEN DOWNLOADED, AND RUN CHECKSUM
+
+
+# 25 October 2017
+
+## Adaptation to warming project
+
+rsync complete, run checksums on data in both locations
+* Change permissions on the 00_data copy
+* Running FastQC on all fastq.gz files
+  * Ensure that all files have been checked; often seeing this message - Skipping '*.fastq.gz' which didn't exist, or couldn't be read
+
+
+## RO5 long transcript
+PCR suggests that the region of interest IS one long transcript!
+* Get sequence for predicted 'chalcone isomerase' regions of RO5 region of interest
+
+## Parvi annotation
+Hypo check - start from 02200 (02203)
+
+
+## To do
+Check on progress of FastQC in 00_data - check output and error files for .sge script running for_each_dir_do.sh
+
+
+
+
 
 
 

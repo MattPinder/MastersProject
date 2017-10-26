@@ -12117,6 +12117,37 @@ Check on progress of FastQC in 00_data - check output and error files for .sge s
 
 
 
+# 26 October 2017
+
+All FastQC reports seem to have completed successfully
+* Require MultiQC to proceed...
+
+
+
+## Where do the genes for these mRNAs appear in the T. pseudonana genome?
+
+XM_002286090 - Chr1 (THAPSDRAFT_1254)
+XM_002296109 - Chr7 (THAPS_6896)
+XM_002288248 - Chr3 (THAPSDRAFT_268458)
+
+
+## Note
+
+Falcon installation may need to be altered; still points to /nobackup/data5
+
+
+
+## To do
+
+Continue polishing annotation of Parvi
+* sed -i 's/product\tGly/product\tgly/g' Parvi.tbl
+* Start from G
+
+
+
+
+
+
 
 
 

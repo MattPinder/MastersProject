@@ -12144,7 +12144,49 @@ Continue polishing annotation of Parvi
 * Start from G
 
 
+# 27 October 2017
 
+## Trimming 'adaptation to warming' samples
+
+* Quality all above 20, so OK
+* Trim Illumina universal adapter
+
+trim_galore --paired --illumina -adapter
+
+* Adapters:
+  * ATCGGAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATG
+  * ATCGGAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCAACTCGTATG
+  * ATCGGAAGAGCACACGTCTGAACTCCAGTCACGAATTCGTATCTCGTATG
+  * GATCGGAAGAGCACACGTCTGAACTCCAGTCACGAATTCGTATCTCGTAT
+  * ... Start with Illumina and check results
+
+(TruSeq Adapter, Index 3 + 7)
+
+...then rerun FastQC + MultiQC
+
+Can trim_galore be multithreaded?
+* No; Trimmomatic can but unsure how to work syntax with for_each_dir_do...
+
+* trim_galore .sge files created for each subdirectory
+
+
+RNAseq paper, Nature Methods?
+
+
+## To do
+
+* Check the results of Trim_Galore and FastQC, and run MultiQC again
+* Consider changing Kordia annotations for 'kDa' proteins, removing 'originally annotated as' (see Roseovarius annotation for example)
+
+* Parvi product fields de-capitalised; CHECK NOTE FIELDS
+
+
+
+## Installing on local computer
+* ssh matt@130.241.94.21
+* What needs installing?
+
+POSITION ANNOUNCEMENT ON 2ND - APPLY
 
 
 

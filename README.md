@@ -12189,6 +12189,98 @@ RNAseq paper, Nature Methods?
 POSITION ANNOUNCEMENT ON 2ND - APPLY
 
 
+# 30 October 2017
+
+## Temperature project
+Trimming of Illumina universal adapter seems to have improved the quality of the temperature project reads
+* Some issues seem to have arisen but may not be a problem; see MultiQC report and 00_data/README.md
+
+## Genome annotation polishing
+* A few tweaks have been made to the Kordia annotation to improve consistency with previously-submitted genomes
+* Parvibaculum preliminary polishing has been completed; currently undergoing frameshift check on NCBI
+  * https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi?job_key=JSID_01_120029_130.14.22.21_9009__frame_shifts
+
+## Parvibaculum
+How much do we expect G+C content to differ within a genus?
+* Our Parvibaculum's G+C content - 55.1%
+* P. lavamentivorans (only other sequenced Parvi) - 62.3%
+  * Tepidicaulis marinus - 61.1% (60.7% in article)
+* Most sequenced Rhodobiaceae have G+C content in the 60%-70% range, except:
+  * Candidatus Phaeomarinobacter ectocarpi - 58.9%
+  * Many samples from a metagenome study, but these may not be complete
+    * Rhodobiaceae bacterium UBA7378 - 53.1%
+    * Rhodobiaceae bacterium UBA6963 - 45.7%
+    * Rhodobiaceae bacterium UBA6516 - 52.3%
+    * Rhodobiaceae bacterium UBA5952 - 45%
+    * Rhodobiaceae bacterium UBA5957 - 45%
+    * Rhodobiaceae bacterium UBA5112 - 54.6%
+    * Rhodobiaceae bacterium (NVSO00000000.1) - 51.8%
+    * Rhodobiaceae bacterium UBA4205 - 54.5%
+    * Rhodobiaceae bacterium UBA1855 - 44.9%
+    * Rhodobiaceae bacterium UBA1906 - 54.9%
+    * Rhodobiaceae bacterium UBA1277 - 45%
+    * Rhodobiaceae bacterium UBA1279 - 53.6%
+
+* Run PhyloPhlAn
+  * Only 7 sequenced Rhodobiaceae species available, so include all Rhizobiales species in analysis
+  * REMEMBER TO INCLUDE AN OUTGROUP!
+    * Added R. mucosus and L. vestfoldensis (same class, different order)
+
+* Check 16S and gyrB genes of Parvi
+* Based on previous work (my own and Alvar's), have been assuming that it is a Parvibaculum, but 16S similarity only 92%...
+  * 2/3 top 16S hits are to Rhizobiales > Rhodobiaceae, whereas 1/3 is to Rhodobacterales > Rhodobacteraceae
+  * Running PhyloPhlAn vs. Rhizobiales, but should also run vs. bacterial tree of life (-i flag?)
+
+* Note phylogenetic tree in Tepidicaulis marinus description paper
+  * Tepidicaulis shares MRCA with Parvibaculum clade, and P. lavamentivorans appears more basally from P. indicum and P. hydrocarboniclasticum (based on 16S)
+
+         |--- P. hydrocarboniclasticum
+     |---|
+     |   |--- P. indicum
+ |---|
+ |   |--- P. lavamentivorans
+-|
+ |--- T. marinus
+
+  * Tepidicaulis genome is present in PhyloPhlAn analysis, as is P. lavamentivorans
+  * P. indicum and P. hydrocarboniclasticum have never appeared near the top of 16S search results of our Parvi...
+
+Note: Tepidicaulis is distinguished from other genera - including Parvibaculum - by "morphological, biochemical [and] physiological" data, as well as genetic
+
+Rhizobiales tree places our Parvi as sister to T. marinus; this clade is sister to P. lavamentivorans
+
+ |--- P. lavamentivorans
+-|
+ |   |--- Parvi
+ |---|
+     |--- T. marinus
+
+Placing Parvi in the bacterial tree of life - sister to P. lavamentivorans, but Tepidicaulis is not included in the analysis...
+
+
+
+Check atpD, gapA, gyrB, recA, rplB and dnaJ?
+* [dnaJ is a useful phylogenetic marker for alphaproteobacteria](http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.2008/001636-0#tab2)
+* gyrB already checked
+
+* Some Parvi marker genes, when BLASTed, get no hits whatsoever
+* Try reverse approach - tBLASTn P. lavamentivorans/T. marinus markers against the Parvi genome?
+
+
+
+
+
+
+## To do
+
+Check SmartBLAST?
+* https://ncbiinsights.ncbi.nlm.nih.gov/2015/07/29/smartblast/
+
+Skype with Mats
+
+Get PROTEIN sequences for Parvibaculum/Tepidicaulus markers
+
+
 
 
 

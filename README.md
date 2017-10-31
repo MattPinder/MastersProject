@@ -10902,7 +10902,7 @@ Mauve of Kordia vs. K. algicida OT-1
 * Good matches covering ~all of the OT-1 genome, but the first ~340 Kb of scf7180000001278 don't match anything in K. algicida; BLASTn comes back with poor
 results, but seems to confirm Flavobacteriaceae
 
-Gamma is also roughly the right size in this assembly - attempt to citcularise?
+Gamma is also roughly the right size in this assembly - attempt to circularise?
 * Still a similar size to Alvar's, but can't find a final size for his assembly post-trimming
 
 CHECK COVERAGE FOR ALL SUSPECTED BACTERIAL CONTIGS
@@ -11308,7 +11308,7 @@ tr -d '\n' < Kordia.faa | sed 's/>/\n>/g' | grep "hypothetical" | sed 's/protein
 * Check on Canu 53m run
   * Continue using different parameter values for Canu to try and obtain a complete Rhodobacteraceae genome
 * Check annotation of Parvi and make the relevant corrections/hypo checks
-* Check new assembly attempts for a better Gamma build (use previous builds still on SMRT Portal to estimate genome size
+* Check new assembly attempts for a better Gamma build (use previous builds still on SMRT Portal to estimate genome size)
 
 
 # 27 September 2017
@@ -12279,6 +12279,65 @@ Check SmartBLAST?
 Skype with Mats
 
 Get PROTEIN sequences for Parvibaculum/Tepidicaulus markers
+
+
+
+# 31 October 2017
+
+## Parvi tBLASTn vs. P. lavamentivorans and T. marinus
+tBLASTn matches between all marker genes checked, so unsure why these aren't hitting on BLAST
+* Retry?
+
+
+Is there an argument for classifying this species as Tepidicaulis, rather than Parvibaculum?
+* Any chance it may be a novel genus? G+C content is very unusual...
+  * Trying to double-check circularisation but SMRTview won't open in Java...
+
+
+Highly similar to the dinoflagellate-associated strain 'alpha proteobacterium Mf 1.05b.01'
+* Would it be safest to classify this as 'Rhizobiales sp.'?
+
+https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi?job_key=JSID_01_120030_130.14.22.21_9009__frame_shifts
+
+
+
+
+## Gamma
+
+Check Canu 53m
+
+None of the pb_77 + pb_0066 assemblies have yet been checked for Gamma
+
+Lots of overlap in the terminal ends, so definitely feels like a repeat problem
+
+Cut the ends off of each contig and try to align?
+As the ends have so many points of similarity, try to work out what's going on
+* 53m - cut off -6,472 and 3,583,954-, and compare
+* 54m - cut off -4,180 and 3,585,190-, and compare
+
+
+Try to identify the repeat unit...
+* Repeat unit is ~306bp
+
+ACCGACACGGTTGATAACACGACGGTGACGTTGACGGGGCCAAGTACGGTAGCGGAAGGTGACAATGTCACGATTACAGCGACTGTCTCAACGGCTCCTTCTGGTGGCACGTTGGTGATCAACTTAGATAACGGTCAGACGATTACGATTGCT
+GATGGCGCGACGACGGGAACGGTGACGTTCTGGCACAAAGTGAAGATGTGTTTGTTGATGCAGAGACAGCGACGTATGCGGTAGCGAGTGCGACCAATAACGGTACGGCGTATGAGAACTTAATTACGACTGACACCGTTGATGTTGGTATT
+(With some variation, bearing in mind that this hasn't undergone Quiver correction)
+
+This is consistent in both 53m and 54m variants
+
+* BLASTn returns nothing re: repeat region; BLASTx returns some low-quality hits to type I secretion system proteins
+
+Tried cutting the 53m and uploading to SMRT Portal
+* Running FrontRemoved first; run EndRemoved once that's complete
+
+
+If these fail, then attempt 54m; as there were many instances of the BLAST hits meeting the ends of the contig, would be harder to determine which was correct
+
+
+
+## To do
+* Check SMRT Portal job(s)
+* Continue checking Parvi frameshifts - start from Overlaps: 01730-01733
 
 
 

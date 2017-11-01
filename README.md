@@ -12342,6 +12342,76 @@ If these fail, then attempt 54m; as there were many instances of the BLAST hits 
 
 
 
+# 01 November 2017
+
+## Gamma assembly attempts
+Both attempts - FrontTrimmed and EndTrimmed - have a coverage peak around 600x (average 200x) in the centre, so something is apparently still wrong...
+* Is this region longer than in the assembly?
+* Insertions have lengthened the assemblies post-Quiver
+
+* Is this centre region like anything in other species?
+  * Does it translate to a protein with a consistent repeat length between species?
+
+* Running a test Prokka on front end removed variant
+
+
+
+## Note
+Was --rfam flag used in Kordia and Parvi annotations to search for non-coding RNAs? If not, redo and add to existing annotations
+* Rerunning; add to already-curated annotation when complete, then rerun frameshift check to ensure that the predictions don't cause issues
+
+Prokka won't run because 'sequence databases haven't been indexed'
+* Sequence databases HAVE been indexed, but it seems as though Prokka is looking in the original location of the databases, not the new location
+  * Can't see why; the code in the prokka script is still pointing to the new location...
+
+
+
+
+
+## Skeletonema resequencing investigation
+
+/proj/data17/pierre/pop_data/bam
+* Each bam is one strain (MF = Mariagerfjord) (first numbers = depth (cm)) (second numbers = SciLifeLab ID?)
+  * 19.5cm = 1930
+  *  9.5cm = 1970
+  *  2.5cm = 2010
+
+* Why is the data looking strange, e.g. the screenshot from Mats?
+  * Particular subset of data causing issues?
+  * Contamination?
+
+* Worth remapping with a lower Phred score threshold? (previously 30, lower to 20? 25?)
+  * If so, remove revcomp sequences mentioned in /proj/data6/skeletonema_resequencing/00_reference_genes/README.md
+
+* Reference to align .bam files to - /proj/data6/skeletonema_resequencing
+  * /nobackup/data6/skeletonema_resequencing/gene_search/20160323_SNPs_HFMF/LONG/long_fwrev_fixedheaders_c44fix_3discarded_7_mar.fasta
+
+* Genes of interest - /proj/data6/skeletonema_resequencing/01_extracted_sequences
+
+* **Update Mats + Anna tonight/tomorrow**
+
+* Change ownership of the skeletonema_resequencing folder to myself
+  * Then try git push - can push to git repository
+
+
+**First observation**
+Based on where the coverage spikes in contig_3964 are, it appears that bacteria MAY be contaminating the sample
+* Doesn't explain the lack of coverage elsewhere, unless the bacterial contamination was extreme
+
+IGV struggling to display data on laptop; IGV installed on Ubuntu machine, currently transferring .bam + .bai files across
+
+TRY VIEWING ON UBUNTU MACHINE TOMORROW
+
+
+
+
+
+
+## Parvi checking
+
+Continue from 02025/02026
+
+
 
 
 

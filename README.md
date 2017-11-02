@@ -12404,12 +12404,28 @@ TRY VIEWING ON UBUNTU MACHINE TOMORROW
 
 
 
-
-
-
 ## Parvi checking
 
 Continue from 02025/02026
+
+
+
+
+# 02 November 2017
+
+Continue interrogating the resequencing anomalies
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

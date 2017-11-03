@@ -12416,10 +12416,22 @@ Continue from 02025/02026
 Continue interrogating the resequencing anomalies
 
 
+# 03 November 2017
+
+Continue interrogating the resequencing anomalies
+* If not obvious pattern has emerged by the end of the day, start remapping with a lower quality threshold
+* Created new directory - 05_remapping -but need to know exactly whereabouts the relevant data is sitting
+
+**How else to proceed with the investigation?**
+* Doesn't appear to be tied to bacterial CDS
+* SEARCH FOR ncRNAs?
+* Remap with a lower quality threshold? 30 -> 20
+  * From what I've seen in the documentation it looks as though the quality threshold WAS 20...
 
 
 
-
+Genome announcement meeting w/c Nov 13th?
+* Perform additional A. heliothermus classification checks beforehand
 
 
 

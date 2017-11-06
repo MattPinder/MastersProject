@@ -12429,13 +12429,28 @@ Continue interrogating the resequencing anomalies
   * From what I've seen in the documentation it looks as though the quality threshold WAS 20...
 
 
-
 Genome announcement meeting w/c Nov 13th?
 * Perform additional A. heliothermus classification checks beforehand
 
+# 06 November 2017
 
+## Parvi check
+* Continue from 02025/02026
+  * Check complete, rerunning frameshift check
+    * Kordia - JSID_01_270031_130.14.22.10_9000__frame_shifts
+    * Parvi - JSID_01_120044_130.14.22.21_9009__frame_shifts
 
+## A. heliothermus
+* Gather further marker gene information
+  * Make comparisons to other related families' strain differences
 
+Rerunning Kordia and Parvi annotations to find ncRNAs
+* Some problems syncing with GitLab, so running tbl2asn in a temporary folder on local machine
+
+## Adaptation to warming project
+Despite the MultiQC file post-trimming stating "No samples found with any adapter contamination > 0.1%", looking at one individual FastQC file reveals that
+adapter sequences are still present - TruSeq Adapter, Index X; is further action required?
+* Files containing the adapters which were found have been saved in the relevant folders; would the Illumina Standard Adapter need to be included in the list too?
 
 
 

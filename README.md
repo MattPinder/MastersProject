@@ -12453,6 +12453,57 @@ adapter sequences are still present - TruSeq Adapter, Index X; is further action
 * Files containing the adapters which were found have been saved in the relevant folders; would the Illumina Standard Adapter need to be included in the list too?
 
 
+# 07 November 2017
+
+## Kordia
+Should be ready to go; ncRNAs haven't triggered any errors on the NCBI consistency checker
+
+## Parvi
+Note: allophanate hydrolase (PARVISMSY_03419) may be false positive as it overlaps tmRNA which is apparently present in all bacterial genomes  
+**More frameshifts need checking; see .txt file in Parvi_test**
+
+
+
+## Resequencing data
+
+Check fastqc reports in /proj/data6/skeletonema_resequencing/data/A.Godhe_15_01/P1872_596/150723_BC6T2NANXX 
+
+* Trim first base only?
+
+Run MultiQC on all raw data FastQC reports and improve the protocol
+* Remove adapters; skip the fastx_trim step
+
+Use (or adapt) /nobackup/data6/skeletonema_resequencing/code prepare-sequence.sh
+
+1) Running MultiQC vs. raw data
+  * MultiQC report doesn't note the specific adapter sequences, have to grep these from the zip files
+    * zgrep/zipgrep?
+    * Doesn't accept wildcards...
+  * Use the adapter trims that Sylvie did, just skip the initial fastx_trimmer step
+
+2) Copy raw data into new subdirectory so as not to accidentally overwrite previous analyses
+Lines pertaining to fastx_trimmer have been commented out of the prepare_sequences.sh script
+* Currently copying data across to 05_retrimming; ensure it's all in place tomorrow
+
+
+
+## ad to warming
+
+Check if a LOT of reads contain the remaining adapters, and if so, save the ones you can
+
+node_0?
+
+
+## To do
+* Make sure raw files have all copied across
+  * Will need to move them up a few levels...
+
+Run prepare_sequences.sh
+
+
+
+
+
 
 
 

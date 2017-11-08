@@ -12500,10 +12500,12 @@ node_0?
 
 Run prepare_sequences.sh
 
+CHECK WHETHER THE PROCESS CAN BE RUN WITHOUT UNZIPPING; IF NOT MUST DO THIS ONE AT A TIME...
 
 
+# 08 November 2017
 
-
+../../P1872_404/150723_BC6T2NANXX/run...sge submitted, continue submitting; see if other queues empty during the evening...
 
 
 

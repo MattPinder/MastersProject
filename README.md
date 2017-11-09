@@ -12509,6 +12509,66 @@ CHECK WHETHER THE PROCESS CAN BE RUN WITHOUT UNZIPPING; IF NOT MUST DO THIS ONE 
 
 
 
+# 09 November 2017
+
+## skeletonema_resequencing re-trim
+
+All sequences have been rerun; rerun MultiQC and compare to previous report
+* Still contamination from Illumina universal adapter; seems that the previous trim skipped the first base...
+* Test whether adding 'A' to the start of the adapters makes a difference
+  * Running test on _103
+* Test whether removing the first base makes a difference
+* Test whether adding the 'Illumina Single End PCR Primer 1' works (still removing first base)
+* Attempting the above but with the longer variant that Sylvie used
+
+* Possibly attempt with JUST the Illumina sequence from previously?
+
+* Double-check which adapters are present in all FastQC reports?
+
+* The 'TruSeq Adapter, Index 1' from the raw _103_1 isn't the same as the one removed by the script?
+  * From report - GATCGGAAGAGCACACGTCTGAACTCCAGTCACATTACTCGATCTCGTAT
+  * From script - GATCGGAAGAGCACACGTCTGAACTCCAGTCACATCACGATCTCGTATGCCGTCTTCTGCTTG
+
+
+_103 is a bad sample to test on as it doesn't seem to possess the Illumina
+* _489 is flagged with a warning so try that
+* Running with '1bp trim + additional adapter' variant
+
+* In future - use for_each_dir_do.sh to submit all jobs simultaneously
+  * Ensure that they are spread across nodes for the sake of load average
+  * 140 jobs; 70 across 2 nodes? So as not to hog ALL of them 
+    * Jobs submitted to Annotation-2 and Annotation-3
+
+
+
+## 'Parvi' annotation
+'Parvi' annotation should now be complete; pending classification
+
+
+## Gamma circularisation
+53m front- and end-trims didn't work; still huge central peak
+* Too much mapping to that area
+  * Area too short?
+
+
+
+## To do
+
+Check trim data, run MultiQC, and plan course of action
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

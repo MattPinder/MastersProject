@@ -12551,12 +12551,58 @@ _103 is a bad sample to test on as it doesn't seem to possess the Illumina
   * Area too short?
 
 
-
 ## To do
 
 Check trim data, run MultiQC, and plan course of action
 
 
+# 10 November 2017
+
+## Resequencing Retrimming
+
+All jobs completed; running MultiQC
+* Adapter sequences no longer appearing on the MultiQC report
+
+* **To find reads in Sylvie's data, check BAM file**
+  * Figures in BAM files don't match up with those from Sylvie's data; multiple-aligning reads are counted twice...
+
+* <1% of data has been salvaged from Sylvie's data after my own checks
+  * Currently checking how many of her reads actually mapped...
+
+
+
+## Mapping Illumina data to bacterial genomes
+
+/proj/data17/Bacterial_Illumina_Data
+* Make subdirectories for each bacterial genome
+  * Start with Roseo
+* Take Illumina data and map to the bacteria using Alvar's script
+  * Include full- and half-mappers
+  * Reads in /proj/data5/data/skeletonema/reads
+* Which bacteria are present, and how abundant?
+  * BacteriaName/IlluminaLibrary/
+  * Raw reads AND filtered reads separately
+    * Include README explaining what's what
+  * Create a pipeline
+  * For time being, leave intermediate files, perhaps remove later
+    * Looking at the current size of the directory (>0.5 TB), may be a good idea to remove intermediate files...
+
+
+
+
+
+## To do
+
+* Check how many of Sylvie's reads mapped to the references (see /proj/data17/skeletonema_resequencing_NEW/MappedReads.txt)
+* Map my reads to the reference (need to double-check exactly how this ought to be done; is there a script remaining from Sylvie's attempts?)
+
+* Check results of Roseovarius mapping; if need be (will probably be necessary), delete intermediate files, remove `-k` flag from other scripts, and run
+  the rest of the bacteria
+
+* Adaptation to warming data needs to be checked for quality; additional adapter trimming may be required, so perhaps run the script being used for the
+  resequencing data?
+
+* Gamma assembly? Repeat region ought to be longer...
 
 
 

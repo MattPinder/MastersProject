@@ -12613,7 +12613,10 @@ Roseo, Lokta, Sphingo and Marino have all been run, but unsure whether they actu
   * Note - -k flag has been retained, see whether this has an effect
 
 
+Marinobacter okay
+* Roseo, Lokta, Sphingo and Antarcto being rerun
 
+* If these are successful, run Sulfito, Areni, Kordia and Gamma later
 
 
 

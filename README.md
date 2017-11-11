@@ -12598,6 +12598,7 @@ All jobs completed; running MultiQC
 
 * Check results of Roseovarius mapping; if need be (will probably be necessary), delete intermediate files, remove `-k` flag from other scripts, and run
   the rest of the bacteria
+  * Lok, Sph and Mar have been submitted too; `-k` flag removed after seeing the size of the Roseovarius directory
 
 * Adaptation to warming data needs to be checked for quality; additional adapter trimming may be required, so perhaps run the script being used for the
   resequencing data?
@@ -12605,10 +12606,11 @@ All jobs completed; running MultiQC
 * Gamma assembly? Repeat region ought to be longer...
 
 
+**NOTE** Getting error messages that the temp folder in Annotation-# is full; does this mean the jobs are failing?
 
-
-
-
+Roseo, Lokta, Sphingo and Marino have all been run, but unsure whether they actually worked completely
+* Run Antarcto jobs, one job per node, in case this is the problem
+  * Note - -k flag has been retained, see whether this has an effect
 
 
 

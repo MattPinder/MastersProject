@@ -12614,9 +12614,88 @@ Roseo, Lokta, Sphingo and Marino have all been run, but unsure whether they actu
 
 
 Marinobacter okay
-* Roseo, Lokta, Sphingo and Antarcto being rerun
+* Roseo, Lokta, Sphingo and Antarcto being rerun (Marino was fine before)
 
 * If these are successful, run Sulfito, Areni, Kordia and Gamma later
+  * All jobs now submitted
+
+
+# 13 November 2017
+
+## Bacterial Illumina mapping
+
+Double-check whether the remaining 4x4 jobs completed successfully
+* All appear to have completed successfully
+* Most results map 0.01%, except:
+  * Marinobacter - 150 Raw - <0.01% alignment
+  * Arenibacter - 650 Trim - 0.02% alignment
+  * Kordia - 300 Trim - 1.51% alignment
+  * Kordia - 650 Trim - 1.62% alignment
+  * Parvibaculum - 300 Trim - 0.46% alignment
+  * Parvibaculum - 650 Trim - 0.47% alignment
+
+
+## Resequencing data
+
+Transcriptome assembly using Trinity and see how many reads map?
+* Try with one sample first and see if it fares any better than Sylvie's attempt
+* What is the next step - transcriptome assembly? Or just mapping reads...?
+
+
+## Adaptation to warming
+Check quality; number of reads remaining with adapters
+* If there are still adapters remaining, perhaps run the script from the resequencing project?
+* zipgrep "TruSeq Adapter" in the FastQC files
+  * Sequences added to the prepare_sequences script
+
+
+
+## A2W
+Still finding adapter sequences; should I re-trim all samples?
+* If so, have I selected the correct adapter targets?
+  * Some adapters which seemed to be shifted only by 1-2 bases
+  * Adapters are also shorter than those included in the resequencing script - how were THOSE obtained?
+
+## Reseq
+How to proceed?
+* How was it done previously?
+  * TopHat for mapping? - If so, what was the library prep method, as this is required for the strandedness parameter
+  * Test-running on a single sample
+* Ensure that all adapters HAVE been found 
+  * Checked 'runFindAdapters.sge'; no adapters found
+  * Also no adapters found in first assembly attempt, according to zipgrep? Yet MultiQC highlights Illumina universal adapter...
+
+
+
+
+## To do
+* Adaptation to warming
+  * Specify one representative for each adapter index?
+  * See Mats' email
+  * Try just running Trim_Galore? With -a flag this should be sufficient...
+* Check results of both test runs!
+
+* Resequencing
+  * Run from scratch using Bowtie2
+  * Use for_each_dir_do to submit all to one queue?
+
+* Bacterial assemblies - Gamma + 'Rhodo'?
+  * Most recent assembly still a failure; try lengthening the repeat region, and FIX JAVA!
+
+* Antarctobacter classification
+  * Ensure final evidence is in place for Wednesday
+    * Check Sulfito similarity for comparison
+  * Check Sphingo information one more time
+
+* FABP gene - status?
+
+
+
+
+
+
+
+
 
 
 

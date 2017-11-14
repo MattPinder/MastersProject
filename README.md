@@ -12691,6 +12691,110 @@ How to proceed?
 
 
 
+# 14 November 2017
+
+## Resequencing
+
+Read Bowtie2 manual, figure out decent parameters
+* Based on Alvar's mapping_filtering.sh script, made a basic Bowtie2 + Samtools script
+  * Tested that inputs were accepted, now run for_each_dir_do.sh to run scripts in each folder (queue all to Annotation-2)
+  * Scripts being submitted...
+  * Bowtie2 jobs failing because 'fewer reads in file specified with -2 than in file specified with -1'
+  * Revise scripts
+    * Only use *.FXT.CA.FQF.Pair.fastq.gz files
+    * Run on 40 cores each (Annotation-3)
+  * Jobs resubmitted
+    * `samtools sort` failing for some reason
+    * When run separately, `samtools view` also fails; should use `-bS` flag rather than solely `-b`?
+  * Jobs resubmitted AGAIN
+
+
+
+## A2W
+* Check results of test runs
+  * Adapters still present in Trim_Galore-only run, but the remaining adapters weren't in Mats' reference document (newer?)
+  * Running new Trim_Galore test using [complete adapters](https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/experiment-design/illumina-adapter-sequences-1000000002694-03.pdf)
+    * Gives all (current?) TruSeq Adapters
+  * Results of new test - Index 27 from the Illumina documentation doesn't match up to the one highlighted by FastQC
+    * May have to go through all samples' FastQC files and determine which exact adapters are present...
+
+## Bacterial mapping
+
+Some more MP-libraries to map to the bacterial genomes, but unsure which
+* Taken the remaining datasets from `/proj/data5/data/skeletonema/reads` and started mapping those to Kordia and Parvi
+  * After double-checking, these are the correct datasets
+  * Prepare directories for other samples, once Kordia and Parvi are finished
+    * All other samples prepped and ready to go when space opens up on the nodes
+  * Note: Although the analyses appear to be progressing, Candidatus*/P1355/BestPractice both throw an error:
+    * `mkdir: cannot create directory `._2017_11_14': File exists`
+    * Why do neither P1354 and/or Raw throw this error? And is the result okay despite this error...?
+      * Shouldn't be a problem in subsequent analyses as I've specified an output file other than `.`
+
+
+## To change qsub details for queued jobs
+
+`qalter job_ID -q queue_name -pe mpich no_of_cores`
+
+(Can view specific queues with `qstat -q quene_name`)
+
+
+
+## To do
+* Check Bowtie2 resequencing jobs to see ensure that they are completing as required (including creation of *_sorted.bai)
+  * Based on the first completed job (P1872_420), the jobs seem to be proceeding as intended...
+* Check reruns of Candidatus*/P1355/BestPractice jobs in case the `mkdir` error is affecting the results...
+  * Does >30% of the reads truly map to Kordia from P1355/BestPractice??
+  * If the reruns give the same results then can delete them...
+* When all bacterial jobs have run, queue up the P135* jobs for all other species
+  * Be sure to rename the inadvertantly hidden result folders from the Candidatus runs...
+
+* A2W data
+  * TruSeq adapters from reference document STILL not matching those flagged by FastQC
+    * Check an adapter other than 27 (which is dubious anyway...)
+    * P8352_105/02-FASTQ/171012_D00483_0240_BCBDHGANXX/ - adapters present:
+      * _1 - TruSeq Adapter, Index 3
+        * ATCGGAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATG (still remaining after original trim...)
+        * GATCGGAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTAT
+      * _2 - Illumina Single End PCR Primer 1 (should this be listed? Doesn't seem to show up in trimmed results currently...)
+        * GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTCTTCGCCTGTGTAGATCT
+    * Index 3 from documentation: GATCGGAAGAGCACACGTCTGAACTCCAGTCACTTAGGCATCTCGTATGCCGTCTTCTGCTTG
+    * Run two _105 tests using Trim_Galore
+      * Using Illumina Universal Adapter and adapter from documentation
+      * Using results from FastQC
+    * Check results of the two tests tomorrow!
+
+
+* Future project - make an all-in-one tool for the mapping analysis
+  * Map to bacterial genomes + Skeletonema reference genome
+  * Remove files which aren't required, print statistics about what % reads map to each of the known bacterial species and the reference genome, and what %
+    belongs to unknown species...
+
+
+
+
+
+
+* Annotation-3 - Job ID 46853 running
+	Check 46851
+* Annotation-4 - 20 cores in use (4*5 core jobs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

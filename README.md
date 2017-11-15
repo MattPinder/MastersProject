@@ -12770,30 +12770,78 @@ Some more MP-libraries to map to the bacterial genomes, but unsure which
     belongs to unknown species...
 
 
-
-
-
-
 * Annotation-3 - Job ID 46853 running
 	Check 46851
 * Annotation-4 - 20 cores in use (4*5 core jobs)
 
 
+# 15 November 2017
+
+SMRT job used for Kordia assembly - 16858
+* Note - the start point was moved to align to a gene start, so the fastq downloaded straight from Albiorix will start in a different position
+
+A2W project:
+* /proj/data17/Skeletonema_marinoi_adaptation_to_warming_project/00_data
+* Check test results and proceed with all samples
+  * It seems that taking adapter sequences from the raw data FastQC reports would be the best strategy
+  * All adapters in every script, or only sample-specific adapters?
+* Note: Only TruSeq adapters have been searched for in the raw data...
+  * Adapt script to locate ALL adapters
+  * Can then adapt the trimming script to include all relevant adapters (plus Illumina universal adapter)
+    * Ensure that the main body of the code is altered to include all specified variables pertaining to adapter sequences
+  * Can't use Trim_Galore - doesn't allow for multiple adapters
+    * Must use cutadapt
+  * Multiple samples per directory will cause issues
+    * Separate into _L001 and _L002 folders
+    * Altered prepare_sequences_A2W.sge script to account for file nomenclature
+    * Submitted
+
+Resequencing project:
+* Mapping appears to have been successful
+  * How many reads mapped vs Sylvie's attempt?
+  * Bam files are missing from those in Pierre's directory - why?
+  * Determine how many of our reads map in bams that match up with Pierre's?
+
+Bacterial Illumina Mapping:
+* Check that Candidatus*/P135* jobs worked; if so, run the P135*/ jobs for the other samples
+  * All additional samples submitted
 
 
 
 
 
 
+# To do
+
+* A2W - check on results of the current trimming run
+  * 47040 - 47156 (117 jobs)
+  * Compress the original Trimmed directory?
+
+* Resequencing - Determine if a higher number of reads map after my trim vs. original trim
+  * Specifically comparing with the bam files in Pierre's directory
+    * When only comparing the above, mapping reads fall by roughly 1/6th
+    * Could this be due to unpaired reads not being included?
+      * Considering the proportions involved that may not be impossible...
+    * **Run analyses with unpaired reads and merge with paired?**
+
+* Bacterial Illumina Mapping - Check on all non-Canditatus P135* jobs
+  * 47159 - 47186
+
+Make sure that data17 hasn't run out of space...
 
 
 
 
 
 
+* Pipeline for all-in-one mapping analysis
+  * Map to bacterial + Skele genomes, remove files which aren't required, print mapping % stats to bacteria/Skele/unknown
+  * Can this include quality control...? Would require some way of conveying quality statistics
+    * Print statistics, `Continue?` - Y/N
+      * Possibly flag any statistics which suggest questionable quality
 
-
-
+* (EXPRESSION ANALYSIS NOTES???)
+* (cTP on orthologs/paralogs of sequence of interest?)
 
 
 

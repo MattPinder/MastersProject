@@ -12844,6 +12844,45 @@ Make sure that data17 hasn't run out of space...
 * (cTP on orthologs/paralogs of sequence of interest?)
 
 
+# 16 November 2017
+
+## Adaptation to warming
+Original trimming job has been deleted to save space (SGE scripts have been retained in case a rerun is required)
+
+
+
+## Resequencing
+Should unpaired reads be mapped?
+* Can .sam and unsorted .bam files be compressed to save space?
+ * `tar.zcvf` - reduces space required by ~2/3
+ * Remove unwanted .sam and .bam files, then compress the _sorted.bam files
+ * Merge samples from the same layer and view results (individual results not good)
+
+## Bacterial Illumina mapping
+Which secondary files can be removed?
+* Candidatus*/P135* files accidentally hidden have now been renamed and unhidden
+* non_mapped_reads/ directories now removed from all *-lib subdirectories (some P135* mapping runs still in progress, so won't remove these yet)
+
+
+## Current job statuses
+
+Bac Illumina - 47169 - 47177
+
+A2W trimming - 47040 - 47099
+
+
+* Delete sam and unsorted bam, compress sorted bam
+  * Merge sorted bams for each population
+  * .sam and unsorted .bam files all deleted
+  * runBowtie2.sge.p* all deleted
+* New merged MF02.5 bam file bigger than Pierre's??
+  * Merging files into 7 merged bams...
+
+P*_sorted.ba* being tarzipped, run script later to remove the unzipped files
+
+
+
+
 
 
 

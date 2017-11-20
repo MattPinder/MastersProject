@@ -12882,6 +12882,101 @@ P*_sorted.ba* being tarzipped, run script later to remove the unzipped files
 
 
 
+# 17 November 2017
+
+## A2W
+Remaining trims ongoing
+* Remaining jobs won't begin as no space on /state/partition1 for submission...
+
+## Resequencing
+View merged .bam files in IGV
+* Need to be indexed first!
+
+* Calculate average coverage of each population (SHOULD have same coverage across all contigs, roughly)
+  * Calculate per contig first
+  * Identify problematic regions/contigs
+  * Should be ~consistent coverage in region of interest (outside of these regions, less important)
+    * Generate new .bam based on gff regions?
+
+* Samtools? Bamtools? Bedtools?
+  * Bamtools gives coverage for each position, so the *.sge.e* file is enormous...
+
+Home partition is full...
+
+Deleting Kordia end-trim jobs from SMRT Portal (11x pb_77 cells only)
+* 16850
+  * Kordia_HGAP_7.5k_Circ_Attempt_End_Trim
+  * "Attempt to circularise HGAP assembly (7.5k SRL) of Kordia genome - last 4,238 bases trimmed for overlap"
+  * Reference - Kordia_HGAP_7.5k_End_Trim_Reversed
+* 16859
+  * Kordia_HGAP_EndTrim_FinalCheck
+  * "Compare Quiver correction of Front and End Trims for Kordia"
+  * Reference - Kordia_HGAP_EndTrim_Final
+
+## Bacteria Illumina
+Ongoing, but last ones are underway
+
+
+## Mapping analysis tool
+If elements of for_each_dir_do.sh and mapping_filtering.sh are going to be included in the tool, a shell script would probably be the best option, cf. Python.
+
+
+
+UNABLE TO RUN ANY JOBS DUE TO /state/partition1 BEING FULL
+* IF ABLE, RUN THE REQUIRED SCRIPTS TOMORROW (see desktop post-it)
+
+
+# 20 November 2017
+
+## Resequencing project
+
+Average coverage of regions of interest has been calculated; obtain average coverage of each contig itself
+* Running Bedtools' genomecov, but this is producing a big *.sge.o##### file. Keep an eye on the output to ensure it doesn't get too big
+  * It's currently calculating coverage at every position; will this cut down once everything is calculated?
+  * Calculates average for some kind of interval; best bet may be to run bedtools coverage for whole contigs if possible?
+    * This seems to be working...
+
+All data now obtained
+* Check contigs where average feature coverage is outside of X% of the average contig coverage
+* Upon checking the first two contigs of MF02.5, this method is shown to be flawed
+  * contig_10096_revcomp - -0.63% difference - patches of no coverage alongside large coverage peaks
+  * contig_10471 - -36.54% difference - relatively consistent coverage tapering off at the 5' end
+* Is the only way of figuring this out to eyeball it??
+  * Seems so...
+  * This method will take much too long
+* Is there a way to obtain the max and min coverage for positions within the gff-specified range?
+
+  * `bedtools genomecov -ibam aln.bam -bga`
+    * This outputs coverage for EVERY set of positions in each contig, not just those relevant to the .gff (which isn't specified)
+      * Can the parameters be used together? - Apparently not...
+  * `bedtools coverage`
+    * Would 'proportion of non-zero bases' be a useful metric to compare by?
+      * Unsure, as this would flag indels which may simply be an obvious product of sequencing errors, and would ignore stretches of 1x-2x coverage
+
+* Examples of good coverage contigs in MF02.5
+  * contig_1816			Seems to have pretty decent coverage throughout (13x-66x)
+  * contig_2080			25x-69x coverage (one small dip to 12x for a single base)
+  * contig_3395_revcomp		30x-69x coverage for two separate genes on the contig
+
+* Examples of poor coverage contigs in MF02.5
+  * contig_10096_revcomp	Big 0x gaps in middle of reference, including one end of the gene of interest
+  * contig_1464_revcomp		Central stretch of 0x-1x coverage
+  * contig_3151_revcomp		Big 0x gap in middle of reference, including one end of gene 3 of interest
+
+
+
+
+
+## To do
+Using average feature/contig coverage doesn't always give a good reflection of the quality of the coverage for a given feature of interest
+* Any other good metrics to use?
+* If not, would it be useful to make a script to calculate cumulative coverage?
+  * Bedtools only gives non-zero-coverage fraction, could this be extended to >1x coverage fraction, >2x coverage fraction, etc.?
+  * If no such tool exists already, script it?
+    * Discuss with Mats whether this would be useful - would likely save time in the long run vs. eyeballing
+
+
+
 
 
 

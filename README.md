@@ -12999,11 +12999,17 @@ MultiQC reports "[...] less than 1% of reads made up of overrepresented sequence
   * Some way to find the lowest coverage for a given contig+feature combination?
     * Or lowest few coverage numbers in case of an outlier
 
-Try to write shell script (/07_coverage/coverage_range_test/FindLowestCoverage.sh)
 
+
+Shell script - /07_coverage/coverage_range_test/FindLowestCoverage.sh
+* Finds lowest coverage for each feature and highlights those that fall below a specified threshold
+* Needs to be simplified and scaled up...
+
+If this is a decent method, repeat for all merged BAM files - from Bamtools through to FindLowestCoverage.sh
 
 
 Talk to Mats re: coverage results Wednesday PM
+
 
 
 

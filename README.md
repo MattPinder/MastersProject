@@ -12976,6 +12976,40 @@ Using average feature/contig coverage doesn't always give a good reflection of t
     * Discuss with Mats whether this would be useful - would likely save time in the long run vs. eyeballing
 
 
+# 21 November 2017
+
+## A2W Trimming
+MultiQC reports "[...] less than 1% of reads made up of overrepresented sequences" and "No samples found with any adapter contamination > 0.1%".
+* Running runFindAllAdapters.sge to ensure that none remain
+  * runFindAllAdapters.sge returns no results; all adapters have successfully been removed
+
+
+## Resequencing
+
+`bedtools genomecov` does almost what I want it to do, but it does it for the ENTIRE genome, not just the areas specified in the .gff file
+* Doesn't accept .gff files as input
+  * Attempting to include a .bam, a .gff AND a .fasta file results in failure...
+  * Trying to trim the .fasta would disrupt the coordinates for the .bam...
+* `bedtools coverage -hist` gives the output I require...
+
+* How best to make use of this data?
+  * `awk '$3 == 0' ../testme`
+  * Allows us to find zeroes in the coverage column of the output (having grabbed columns 1,3,10,11,12)
+    * Adapt this to find 'less than or equal to N' rather than only 0
+  * Some way to find the lowest coverage for a given contig+feature combination?
+    * Or lowest few coverage numbers in case of an outlier
+
+Try to write shell script (/07_coverage/coverage_range_test/FindLowestCoverage.sh)
+
+
+
+Talk to Mats re: coverage results Wednesday PM
+
+
+
+
+
+
 
 
 

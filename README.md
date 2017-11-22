@@ -13012,6 +13012,47 @@ Talk to Mats re: coverage results Wednesday PM
 
 
 
+# 22 November 2017
+
+## Resequencing (eutrophication)
+Running `bedtools coverage -hist` for all samples...
+* MF09.5 keeps getting killed...
+
+Next step - when SNP analysis is complete, verify interesting-looking SNPs (e.g. do they appear in a low-coverage region or are they well-supported?)
+
+
+## A2W
+Trimming seems to have been successful - next step mapping?
+* Same procedure as for eutrophication project?
+* FIRST - fix four erroneous samples (would first-base trim be sufficient?)
+  * P8352_132_S18_L002_R1_001.CA.FQF
+  * P8352_132_S18_L003_R1_001.CA.FQF
+  * P8352_136_S19_L002_R1_001.CA.FQF
+  * P8352_136_S19_L003_R1_001.CA.FQF
+
+
+## Bacteria
+* Finish draft of Kordia announcement paper
+  * Can't check number of pathways prior to NCBI submission; need .gbk file (PTools doesn't accept .tbl)
+* Classify 'Parvibaculum' - what evidence is there that it is a new genus?
+  * See above re: pathways
+  * 'Parvi' appears to have 2 tmRNA sequences? Is one of these a false positive...?
+    * Assuming this is possibly a new genus, that may not be impossible...
+  * Investigate 'Pyruvatibacter mobilis' (same clade as Parvibaculum and Tepidicaulus, lives with an alga)
+    * 'Candidatus Phaeomarinobacter ectocarpi Ec32' and 'Alphaproteobacterium GMD21A06' also in this clade
+* Running antiSMASH on preliminary annotations of Kordia and Parvi
+
+* Circularise Gamma
+* Can Rhodo be completely assembled?
+
+
+## To do
+Check that trimming of dodgy A2W samples has run and completed, if so run MultiQC again to confirm that they're all okay
+
+
+
+
+
 
 
 

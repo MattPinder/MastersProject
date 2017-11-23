@@ -13050,12 +13050,43 @@ Trimming seems to have been successful - next step mapping?
 Check that trimming of dodgy A2W samples has run and completed, if so run MultiQC again to confirm that they're all okay
 
 
+# 23 November 2017
 
+## A2W
+Check status of trim
+* Seems to have succeeded
 
+## Bacteria
+'Parvi' - Compare P. lavamentivorans marker genes with those from other Parvibaculum species, determine how far outside of this similarity our species falls
+* MANY putative clusters in antiSMASH...
 
+* Compare to Candidatus Phaeomarinobacter ectocarpi
+  * Is it a member of genus Phaeomarinobacter?
+  * Problem - only 'species' in the proposed genus is C. P. ectocarpi
+  * Associated with Ectocarpus siliculosus
+    * A filamentous brown alga
+* Compare to Alpha proteobacterium Mf 1.05b.01
+  * Fairly certain this is the same bacterium
+  * Associated with 'Symbiodinium' - an endosymbiotic dinoflagellate
+    * Associated with an alga
 
+* Compare to Parvibaculum
+  * Isolated from a sewage treatment plant (P. lavamentivorans), hydrothermal vent fluids (P. hydrocarboniclasticum) and Indian Ocean deep-sea water (P. indicum)
+    * Not a symbiote?
+    * The Parvibaculum species to which our species shares the highest 16S similarity - enrichment culture clone Aspi13 - is associated with a dinoflagellate
+      * JN864945.1
+  * Is it a member of genus Parvibaculum?
+  * Problem - only species with full genome sequence is P. lavamentivorans
+* Compare to Tepidicaulis
+  * Isolated from marine sediments
+    * Not a symbiote?
+  * Problem - T. marinus is distinguished from Parvibaculum "by the formation of stalked cells, optimal growth temperature and fatty acid composition."
+    * Untestable as uncultured...
 
-
+* Can't be sure on the identity of the genus/species, but family = Rhodobiaceae
+  * Based on the marker gene dissimilarity (see Skeletonema_marinoi_microbiome_project/05_results/ST54_Bacteria_Search/Parvi/Shortlist.md and README.md),
+    can we propose a new genus?
+  * Maybe BLASTn some of the markers vs 'Parvi' to be sure? (ensure that the annotation hasn't mislabelled the important marker genes)
 
 
 

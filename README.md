@@ -13089,6 +13089,36 @@ Check status of trim
   * Maybe BLASTn some of the markers vs 'Parvi' to be sure? (ensure that the annotation hasn't mislabelled the important marker genes)
 
 
+# 24 November 2017
+
+## 'Parvi'
+Download the nucleotide sequences for the marker genes of related species and BLASTn them vs. 'Parvi'
+* Also align same-genus Rhodobiaceae marker sequences to get an idea of how similar these SHOULD be between species of the same genus
+
+BLASTn is consistent with previous results, so no great hits appear to have been missed
+* Comparing marker genes at different taxonomic levels, 'Parvi' may be a new genus, or perhaps even a new family...?
+* See README.md and Shortlist.md in /proj/data5/Skeletonema_marinoi_microbiome_project/05_results/ST54_Bacteria_Search/Parvi/
+
+
+## Kordia
+Double-check new species status
+* Looking at a handful of new marker genes, it looks as though septentrionalis, algicida and jejudonensis may form a closely-related clade, as they all seem
+to have roughly the same level of similarity to one another on the marker genes (+/- 3%) (with zhangzhouensis being an outlier)
+* algicida and septentrionalis have a second fusA gene with the other two lack, but as the assemblies are fragmented, they could just not have been annotated
+
+
+## Conclusions
+* 'Parvi' appears to be a new genus within the family Rhodobiaceae
+  * May be a new family within Rhizobiales but harder to justify, e.g. SILVA classifies as Rhodobiaceae
+
+* Kordia is roughly as dissimilar from algicida and jejudonensis as they are from each other; shares similarities to both, so likely a new species
+  * Continue with classification Candidatus Kordia septentrionalis
+
+
+
+## To do
+Continue working on Gamma and Rhodo
+
 
 
 

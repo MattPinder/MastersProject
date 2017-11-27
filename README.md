@@ -13115,9 +13115,26 @@ to have roughly the same level of similarity to one another on the marker genes 
   * Continue with classification Candidatus Kordia septentrionalis
 
 
-
 ## To do
 Continue working on Gamma and Rhodo
+
+
+# 27 November 2017
+
+Working on announcement manuscripts for Kordia and 'Parvi'
+* Need to decide on a final identity for 'Parvi'
+  * New genus within Rhodobiaceae?
+  * New family within Rhizobiales?
+  * New order within Alphaproteobacteria?
+
+* Need to determine interesting features which make them noteworthy for genome announcements
+  * Kordia - Cyanophycin synthetase - mainly found in cyanobacteria but also found in some other species, inc. K. algicida and K. jejudonensis
+  * 'Parvi' - Phosphatidylcholine synthase - eukaryote interaction?
+
+
+
+
+
 
 
 

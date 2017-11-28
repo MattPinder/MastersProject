@@ -10411,7 +10411,7 @@ Large adhesive protein begins with a repetitive region (albeit non-identical rep
 # 6 September 2017
 
 ## Prokka
-Attempt Prokka assembly on 6k Gamma assembly
+Attempt Prokka annotation on 6k Gamma assembly
 * May help to detemine whether the centre region is misassembled
 * Even if it is, this may help determine its location in the bacterial tree (compare with Alvar's result)
 * Two other regions with some poorly-mapping reads has appeared in the Gamma assembly... 6k AND 4k
@@ -13132,9 +13132,125 @@ Working on announcement manuscripts for Kordia and 'Parvi'
   * 'Parvi' - Phosphatidylcholine synthase - eukaryote interaction?
 
 
+# 28 November 2017
+
+
+## To do
+
+* Finish drafting genome papers
+  * Specifically, decide on a taxonomic position for 'Parvi'
+  * Specifically, find interesting features of Kordia and 'Parvi' genomes
+* Upload Kordia and 'Parvi' genomes to NCBI
+
+* Continue trying to circularise Gamma
+* Continue trying to assemble a complete Rhodo
+
+
+## Gamma
 
 
 
+
+
+
+## Skeletonema data structure
+
+Genome	Transcriptome	etc...
+	V	V
+RO5	ST54	Projects (resequencing, etc.)
+
+
+Metadata
+* Include 'agreement of commissioned activities' in each directory
+* README.md describing the project
+
+* rsyncing data - use `screen` command
+
+* NAS - ssh to NAS and run rsyncs directly
+  * /export/data#
+
+(#!/bin/bash
+
+ssh -Y nas-0-0)
+
+* sparc1 - /data11/skeletonema
+  * Store in e.g. A.Blomberg_12_01, and include symbolic link indicating library size (include additional info in README.md)
+  * Compress raw files (can use xz for max compression if uncompressed)
+  * Generate md5sum for compressed raw files
+    * md5sum <filename> > <filename>.md5
+  * Transfer fastq, fastqc AND .md5, and Pair/Single files (inc. fastqc if available)
+    * Leave intermediate files (can compress these, but need sparc1 sudo rights [see Magnus])
+  * Transfer additional files like .pdf, summaries, etc.
+  * Transfer my.cfg if present
+
+* TRANSFER TO DATA21
+  * DO NOT USE DELETE FLAG!
+  * Check md5 sums once transferred
+
+
+* Transfer '/proj/data5/Skeletonema_marinoi_transcriptome_project' first, as a test
+  * Running md5sum first; when complete login to NAS, start a screen and begin rsync
+
+
+
+
+
+
+
+
+## Resequencing
+
+Is the mapping OK?
+* Compare mine vs. Sylvie's
+  * Compare new- and old- mapping side-by-side
+  * Copying previous files over to Ubuntu machine, remember to sort and index .bam file
+    * `samtools sort test.bam test_sorted`
+    * `samtools index test_sorted.bam test_sorted.bai`
+
+Quorum sensing review - Nature?
+
+Genome announcements - reword titles so as not to be ~identical to Roseovarius paper
+
+Rerun pb_359_8 PhyloPhlAn but include Flexithrix dorotheae as its 16S is so similar
+* Include this (and any other Flexithrix species?) in a new tree
+* Flexithrix may be misclassified...
+
+
+
+## Transferred
+* data5/Skeletonema_marinoi_transcriptome_project
+* data5/skeletonema_sex_project - ONGOING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Eutrophication
+
+Compare my mapping vs. Sylvie's (regions of interest), and try to determine whose is 'better'
+* Make contig-by-contig observations, and note anything weird
+
+## PhyloPhlAn
+
+Rerun the Rhodo analysis but include both pb_359_6 and Sulfitobacter pseudonitzschiae type strain
+* Ensure that Roseo, Lokta and Antarcto are all present, too, and include an outgroup!
+
+Also check the re-run pb_359_8 analysis
+* Did this include the other Arenibacter algicola...?
+
+## Transfer
+
+Reattach screen (screen -r) and check transfer of sex project
 
 
 

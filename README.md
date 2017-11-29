@@ -13216,23 +13216,9 @@ Rerun pb_359_8 PhyloPhlAn but include Flexithrix dorotheae as its 16S is so simi
 * Flexithrix may be misclassified...
 
 
-
 ## Transferred
 * data5/Skeletonema_marinoi_transcriptome_project
 * data5/skeletonema_sex_project - ONGOING
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Eutrophication
@@ -13251,6 +13237,47 @@ Also check the re-run pb_359_8 analysis
 ## Transfer
 
 Reattach screen (screen -r) and check transfer of sex project
+
+
+
+
+
+
+
+
+
+# 29 November 2017
+
+## Announcement papers
+
+* Loktanella seems fine aside from links in Funding Information section
+* Sulfitobacter - as above
+* Antarctobacter - as above, and do we want to include Anna's citation?
+
+* Sphingo waiting for species identity confirmation, Marino and Areni still not checked
+
+
+
+## PhyloPhlAn
+* Rerunning Areni tree as a precaution
+* Downloaded relevant Rhodo files; delete files for 'R. mucosus', 'L. vestfoldensis', 'S. pseudonitzschiae' and 'A. heliothermus', and replace with versions in
+  Downloads folder (also copy across Hyphomonas outgroup)
+* Trees have been rerun and all appears to be OK
+
+
+## Transfer
+
+Will need to rerun rsync of sex project as sudo as some files are protected; this must be done from the login node as no sudo rights on NAS
+* Because some adaptation_to_warming raw data directories were divided when more than one dataset was included in a subdirectory, may need to rerun md5sums
+  * Generate new md5sums in data17, check vs. data21
+
+
+## Eutrophication project
+
+Compare my mapping vs. Sylvie's (regions of interest), and try to determine whose is 'better'
+* Make contig-by-contig observations, and note anything weird
+* Continue tomorrow...
+
 
 
 

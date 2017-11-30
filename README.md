@@ -13280,6 +13280,74 @@ Compare my mapping vs. Sylvie's (regions of interest), and try to determine whos
 
 
 
+# 30 November 2017
+
+## Eutrophication project
+
+Comparisons between the datasets for each contig have been made; general trend is that my retrim removes any odd peaks from Sylvie's trim, has lower coverage at
+the end(s) of genes/contigs, but has generally higher coverage elsewhere
+
+
+## Transfer
+
+Data transfer is still ongoing
+* Start transferring data from sparc if possible
+  * /data11/skeletonema
+    * A.Blomberg_17_16-P8511 directory will need resyncing as some files are protected
+
+
+## ST54 Bacteria
+
+* Kordia - awaiting second opinion on classification
+* 'Parvi' - awaiting second opinion on classification
+* Gamma - must circularise...
+  * Try trimming Canu 54m Gamma contig
+  * 54m - cut off -4,180 and 3,585,190-, and compare
+  * First_4180bp or Last_4590bp
+* Rhodo - must find complete assembly...
+
+Note - SMRT Portal is still looking at /nobackup/data20 for raw reads; data is now stored at /proj/data20
+* Backup jobs 016899 and above, move these to /opt/smrtanalysis/userdata/jobs_dropbox/ and try again
+  * Click import and manage
+  * Click import SMRT Pipe Jobs
+  * https://github.com/PacificBiosciences/SMRT-Analysis/issues/235
+* Backup taking a long time as there are 4x 140G directories
+
+
+`/home/smrtanalysis/userdata/jobs/016/016908/data/filtered_subreads.fastq` has been truncated...
+* If the file can be restored from backup, follow these instructions: https://askubuntu.com/questions/267344/how-can-i-update-a-tar-gz-file
+  * Decompress the archive
+  * tar -uvf Backup_016899_and_above2.tar 016899/ 0169*/
+  * Recompress
+  * USE SCREEN FOR THIS PROCESS JUST IN CASE!!!
+
+## Rhodo
+
+* Which assembly methods/parameters have resulted in Rhodo-identified contigs?
+  * Have assembly attempts with similar parameters failed to yield anything?
+
+pb_77:
+* Canu
+  * 16.8m - only 42k
+  * 25m - only 150k
+  * 35m - only 150k
+  * 45m - 542k + 7.5k
+  * 50m - 542k + 7.5k
+  * 52m - 542k + 7.5k
+  * 53m+ - 2.4m
+
+pb_77 + pb_0066:
+* Canu
+  * 53m-100m - many small fragments
+
+Only seems to appear in Canu assemblies...
+* Try smaller genomeSize in all-data Canu assembly?
+  * ENSURE THAT RAW DATA IS WHERE IS SHOULD BE, SO THAT CANU POINTS TO THE RIGHT PLACE
+
+
+
+
+
 
 
 

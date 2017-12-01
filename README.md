@@ -13346,6 +13346,56 @@ Only seems to appear in Canu assemblies...
 
 
 
+# 01 December 2017
+
+## Data transfer
+Ongoing - start generating checksums and checking them post-transfer
+* Can't write to the directory so can't check; require either sudo privileges or file permissions for the skeletonema directory
+
+## SMRT Portal
+Jobs 016899+ compressed, moving to /opt/smrtanalysis/userdata/jobs_dropbox/ on Albiorix; when complete, reimport via SMRT Portal
+* Import and Manage > Import SMRT Pipe Jobs
+* Then try creating a new job in the Portal and see what happens...
+  * Job creation successful
+* Jobs - 16902 (FrontRemoved) and 16903 (EndRemoved)
+  * If required, remove these jobs when complete
+* Both jobs for Gamma_54m gave a peak in the middle; need to lengthen repeat region?
+
+
+
+## Rhodobacter
+Best assembly so far is pb_77 cells only, genomeSize 53m+
+* pb_77 + pb_0066 yields only Rhodobacter fragments (53m gives ~100 kb total, 54m+ gives ~435 kb total), and not enough for a complete genome
+* Try a smaller genomeSize using all data?
+  * Start with 52m, as this is the next smallest genomeSize used with pb_77 only
+    * Same as 53m
+  * Try 35m; in pb_77-only gave different results to 52m/53m
+    * May take a while as SMRT Portal jobs are filling the node at the moment...
+
+
+## To do
+
+* Contact Chalmers re: CID to log into C3SE cluster
+  * Make a start on Fucus genome when able
+    * Long MP library not quality checked
+  * https://it.portal.chalmers.se/itportal/NonStuDATWindows/VPN2 - Connect to Chalmers Network via VPN
+* Using 16908 (2nd correction of Skeletonema genome), run Pilon using Illumina reads for error correction
+  * Reads available at /proj/data5/data/skeletonema/reads/A.Blomberg_17_16-P8511/01-QC/P8511_101/fastq_trimmed/
+  * Save analysis to /proj/data5/Skeletonema_marinoi_genome_project/09_error_correction/
+
+* Check Bowtie2 for RO5, and proceed to Pilon
+* Check 35m Canu assembly
+* Continue transfer (`screen`)
+
+
+
+
+NOTE: Uncorrected contigs are removed from the Quiver output, so must retrieve from initial input file
+
+
+
+
+
 
 
 

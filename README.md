@@ -13379,6 +13379,7 @@ Best assembly so far is pb_77 cells only, genomeSize 53m+
   * Make a start on Fucus genome when able
     * Long MP library not quality checked
   * https://it.portal.chalmers.se/itportal/NonStuDATWindows/VPN2 - Connect to Chalmers Network via VPN
+  * Waiting for them to send details by physical mail
 * Using 16908 (2nd correction of Skeletonema genome), run Pilon using Illumina reads for error correction
   * Reads available at /proj/data5/data/skeletonema/reads/A.Blomberg_17_16-P8511/01-QC/P8511_101/fastq_trimmed/
   * Save analysis to /proj/data5/Skeletonema_marinoi_genome_project/09_error_correction/
@@ -13387,10 +13388,55 @@ Best assembly so far is pb_77 cells only, genomeSize 53m+
 * Check 35m Canu assembly
 * Continue transfer (`screen`)
 
-
-
-
 NOTE: Uncorrected contigs are removed from the Quiver output, so must retrieve from initial input file
+
+
+# 04 December 2017
+
+## Pilon
+
+Rerunning Bowtie2 step; failed to specify complete path to Illumina reads...
+* Problem - this may fill data5...
+  * If so, run on data17 instead as a temporary measure...
+  * Pilon requires BAM files, not SAM, so can convert and then delete the .sam file(s)
+
+
+## Gamma assembly attempt
+
+Check 35m Canu assembly
+* Smaller assembly but large contigs are consistent in size with Kordia, 'Parvi' and Gamma
+* If Gamma is present, check size and BLAST vs. itself
+  * Gamma is ~1 kb larger in this assembly?
+  * May just be the result of repeat expansion... BLAST to identify overlap
+    * Only one overlap hits both ends of the contig perfectly, the rest are partway into the contig
+    * Remove -3,043 and 3,590,402-
+      * Try this first; if it fails then try the other deeper trims?
+  * Jobs 16906 + 16907 in SMRT Portal...
+    * Another giant peak at the centre...
+    * Compare the three available assemblies and see whether the source/cause of the peak can be determined
+  * 16912-16915 - trimming less of the front end to lengthen the repeat region, and see if that helps
+
+## Eutrophication
+Message Pierre and let him know where the data is?
+
+
+## Data transfer
+Check which other data needs moving?
+* Get higher permissions for sparc1
+
+
+
+
+## To do
+
+* Run jobs 16912-16915 when the references have uploaded, and check outcome
+* Ensure that Bowtie2 jobs complete (may fill up data5...), generate sorted bams, delete sams, and run Pilon
+* Contact Pierre re: eutrophication data
+
+* Check Pilon - a.) Did samtools finish successfully? b.) Did Pilon finsih successfully?
+  * Check temp file on data21; can delete the original .sam files on data5 if everything was successful
+
+
 
 
 

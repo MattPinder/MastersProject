@@ -13424,9 +13424,6 @@ Message Pierre and let him know where the data is?
 Check which other data needs moving?
 * Get higher permissions for sparc1
 
-
-
-
 ## To do
 
 * Run jobs 16912-16915 when the references have uploaded, and check outcome
@@ -13435,6 +13432,54 @@ Check which other data needs moving?
 
 * Check Pilon - a.) Did samtools finish successfully? b.) Did Pilon finsih successfully?
   * Check temp file on data21; can delete the original .sam files on data5 if everything was successful
+
+
+
+# 05 December 2017
+
+## Pilon correction
+Indexing of bam files failed; rerun, then rerun Pilon script
+* `qalter job_ID -q queue_name -pe mpich no_of_cores` if needed
+* Pilon is failing with no error messages...
+* From Pilon article:
+  * "While we did not investigate every change that Pilon made to this assembly, our results indicate that Pilon is suitable to be run on larger diploid genomes
+     and can improve the quality of a draft assembly, resulting in fewer and longer contigs and an improved gene set."
+* Pilon appears to be running by using `java -Xmx64G -jar /usr/local/packages/pilon-1.22/pilon-1.22.jar`, rather than `pilon`
+
+Works:	java -Xmx64G -jar /usr/local/packages/pilon-1.22/pilon-1.22.jar
+Fails:	pilon
+
+java>	/usr/local/packages/jdk1.8.0_91/bin/java
+pilon>	/usr/local/packages/jdk1.8.0_91/bin/java -Xmx64G -jar /usr/local/packages/pilon-1.22/pilon-1.22.jar
+
+
+* Rerun Pilon on the corrected version (from the beginning - bowtie2 + pilon), to see whether bases are being corrected back and forth as with Quiver
+
+
+
+
+## Gamma circ. attempts
+Running Alt_Gamma_35m_First1824Removed_DELETE_WHEN_COMPLETE (job 16912)
+* Run jobs 16913 (-2130), 16914 (-2436), 16915 (-2738) when complete
+
+
+## One-cell Falcon assembly
+
+* How much data is needed for a diatom genome project?
+* FALCON assembly on ONE SMRTcell of the RO5 data we used for our genome (we have 19 cells so you can pick anyone of them)
+  * Use the config file in `Skeletonema_marinoi_genome_project/tree/master/01_Assembly/FALCON_1.8.2/RO5/seed_read_10k/10_2-asm-falcon`
+  * Change the `maxdiff`parameter to some 'sensible' value
+    * Less data, lower thresholds for the 'diff-value'
+* Falcon is having issues, require a workaround...
+  * Load FALCON/v1.8.2~, which refers to the (still-mounted) /nobackup/data5, not /proj/data5
+
+## To do
+* Check Falcon
+* Check Gamma
+* Check Pilon
+* Continue deleting unnecessary compressed files from /proj/data5/Skeletonema_marinoi_microbiome_project/01_assemblies/ST54_Bacteria_Search
+
+
 
 
 

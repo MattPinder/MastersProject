@@ -3846,7 +3846,7 @@ Plan of action:
 ## 16S extraction
 
 Full 16S sequences must be extracted from each sample:
-* Check matches in Blast results, cut ~100bp up- and downsteam of the longst matches, then
+* Check matches in Blast results, cut ~100bp up- and downstream of the longst matches, then
 perform multiple sequence alignment (http://www.genome.jp/tools/clustalw/) and trim according
 to closest matches
 
@@ -13478,6 +13478,25 @@ Running Alt_Gamma_35m_First1824Removed_DELETE_WHEN_COMPLETE (job 16912)
 * Check Gamma
 * Check Pilon
 * Continue deleting unnecessary compressed files from /proj/data5/Skeletonema_marinoi_microbiome_project/01_assemblies/ST54_Bacteria_Search
+
+
+
+# 06 December 2017
+
+## Pilon Round 2
+First attempt has produced an error, rerun the analysis just in case (put first run in a subfolder in case this is correct)
+
+## Gamma circularisation
+
+Running first and last quiver1 through SMRT Portal again
+* Job 16923 - still has a peak/trough
+* Job 16924 - still has a peak/trough
+
+Peak is roughly 4x the average, so should the region be 4x as long?
+* Reads in SMRT Portal map uniquely, so that would flatten the peak...?
+
+* Try aligning the sequences and determining exactly where they differ...?
+
 
 
 

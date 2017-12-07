@@ -13497,6 +13497,58 @@ Peak is roughly 4x the average, so should the region be 4x as long?
 
 * Try aligning the sequences and determining exactly where they differ...?
 
+Continue running through Pilon one step at a time
+
+
+# 7 December 2017
+
+* Transfer data from UPPMAX to data21
+* Delete any intermediate files from data21, check md5sums and compress other things to conserve space
+  * Should be able to copy from sparc1 but will need more permissions in order to generate md5sums (check with Mats?)
+  * Use screen to compress, as the process takes a long time and disconnection could be problematic
+* Continue checking Pilon
+  * Complete
+* Continue trying to circularise Gamma
+  * Generated Prokka annotation but unsure of the exact bases where the problem lies...
+    * Have emailed PacBio support re: SMRT View problem
+  * Repeat region seems centred around copies of 'Alpha-2-macroglobulin family protein'
+  * Run the other quiver1 variant and compare?
+
+|                           1824 (MKHEIDBP_01687)                                |                           2738 (PMHKNANI_01686)                                |
+|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| 1783871 - 1785307 (1,436) Type I secretion system membrane fusion protein PrsE = 1783416 - 1784852 (1,436) Type I secretion system membrane fusion protein PrsE |
+| 1785304 - 1785918   (614) Transcriptional regulatory protein DegU              = 1784849 - 1785463   (614) Transcriptional regulatory protein DegU              |
+| 1786030 - 1794585 (8,555) Alpha-2-macroglobulin family protein                 ~ 1785575 - 1793596 (8,021) Alpha-2-macroglobulin family protein                 |
+| 1794572 - 1794931   (359) hypothetical protein (no equivalent in 2738)         |                                                                                |
+|                                                                                / 1794127 - 1794774   (647) hypothetical protein                                 |
+| 1794895 - 1798908 (4,013) Alpha-2-macroglobulin family protein                 ~ 1794738 - 1795505   (767) hypothetical protein                                 |
+|                                                                                \ 1795568 - 1797832 (2,264) Alpha-2-macroglobulin family protein                 |
+| 1798872 - 1800497 (1,625) Alpha-2-macroglobulin family protein                 ~ 1797796 - 1799151 (1,355) Alpha-2-macroglobulin family protein                 |
+| 1800532 - 1810104 (9,572) Leukotoxin                                           = 1799148 - 1808720 (9,572) Leukotoxin                                           |
+| 1810468 - 1812765 (2,297) Outer membrane porin F                               = 1809084 - 1811381 (2,297) Outer membrane porin F                               |
+| 1812873 - 1813289   (416) Cytochrome c5                                        = 1811489 - 1811905   (416) Cytochrome c5                                        |
+
+
+MKHEIDBP_01690 hypothetical protein				PMHKNANI_01691 Alpha-2-macroglobulin family protein
+MKHEIDBP_01691 Alpha-2-macroglobulin family protein		PMHKNANI_01690 hypothetical protein
+								PMHKNANI_01689 hypothetical protein
+
+
+MKHEIDBP_01690 doesn't seem to exist in 2738, but gives BLASTp hits; does the whole region give BLASTx hits?
+* Best hits seem to be to Halomonas? And 'uncultured bacterium 21'
+  * (Halomonas ventosae [CP022737.1] - either mislabelled or GIANT plasmid (>5Mb))
+
+BLASTp regions either side of the region in question and see if any hit the same bacterium, and compare what's in the middle
+* Can't find a region which matches, which begs the question - is this assembly even accurate?
+  * Either that or it's so novel that there's nothing very similar...
+
+
+* Contact Oskar re: genome announcements
+  * Waiting on his feedback
+
+* pigz for compression using multiple cores?
+
+* gzip still running on `screen`, resume and continue
 
 
 

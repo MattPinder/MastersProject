@@ -13544,11 +13544,69 @@ BLASTp regions either side of the region in question and see if any hit the same
 
 
 * Contact Oskar re: genome announcements
-  * Waiting on his feedback
+  * Thumbs-up from Oskar
 
 * pigz for compression using multiple cores?
 
 * gzip still running on `screen`, resume and continue
+
+
+# 8 December 2017
+
+## Gamma
+SMRT View problem is ~resolved; have to load from the command line
+* "C:\Program Files\Java\jre1.8.0_151\bin\javaws.exe" C:\Users\matt_\Desktop\PROJECT\SMRT_View\FILENAME.jnlp
+* Haven't run the original (best?) overlap runs through a second round...
+
+Comparing the SMRT View with the genome; the peak starts WITHIN the repeat region (-1824)
+* Compare with -2738
+  * This peak seems to begin after an odd, non-repeat feature...
+* Bradyrhizobium hits which seem to cross this peak, but this is an alphaproteobacterium, not a gamma...
+
+
+## data21
+Continue compressing data...
+* rsync previously unsyncable data from sparc1
+* Download data from UPPMAX
+* Try using xz compression in place of gzip
+  * 238M /proj/data21/Skeletonema_marinoi/Genome/skeletonema_resequencing/data/A.Godhe_15_01/P1872_103/150723_BC6T2NANXX/2_150723_BC6T2NANXX_P1872_103_1.fastq.gz
+  * With xz compression - 2_150723_BC6T2NANXX_P1872_103_1.fastq.gz.xz = 238M?
+  * Decompressed - 2_150723_BC6T2NANXX_P1872_103_1.fastq = 1.1G
+  * Decompress and recompress - 2_150723_BC6T2NANXX_P1872_103_1.fastq.xz = 191M (default compression)
+  * Decompress and recompress - 2_150723_BC6T2NANXX_P1872_103_1.fastq.xz = 156M (max compression [level 9]) (takes ~20 mins per file on one core)
+* skeletonema_resequencing directory is ~3.3T
+  * Default xz compression would shrink it to ~80% (~2.64T), saving 650 Gb
+  * Maximum xz compression would shrink it to ~65.5% (~2.16T), saving 1.14b
+* Use `for z in */*.txt; do gunzip ${z}.gz; xz -9 ${z}; done` or similar
+  * Running runXZCompression.sge using 4 cores on high_mem; keep an eye on this to ensure it doesn't crash itself or anything else on the node...
+
+
+## Pilon Round 3
+Script has been submitted to high_mem
+
+
+## Fucus
+Waiting on replacement CID scratch card...
+
+
+
+
+## To do
+
+Local BLASTx of the Gamma peak region?
+* Less likely to break than running it on the website
+* Visualising may be a problem...
+
+Ensure that Pilon and compression are going as planned
+* Ensure that no errors popped up on Pilon
+* Compression shouldn't quite fill data21, but check in just to be sure
+  * Recompress files in /proj/data21/Skeletonema_marinoi/Genome/skeletonema_resequencing/data/A.Godhe_15_01/P1872_103/150723_BC6T2NANXX/BACKUP?
+
+CID scratch card?
+
+
+
+
 
 
 

@@ -13606,14 +13606,43 @@ CID scratch card?
 
 
 
+# 11 December 2017
+
+## Pilon
+Round 4 is underway but space is low on the disk; has already failed once
+* Compress what can be compressed; transcriptome project fastq files are still uncompressed!
+* Pilon correction itself is now underway...
+
+
+## C3SE
+New scratch card still doesn't work, awaiting further instructions
+* Account request was on 20 October 2017; is my account locked out...?
+  * Unsure when account CREATION took place...
+
+## Gamma
+For comparison, a second Quiver correction step is underway (pending available space on Annotation nodes...)
+
+
+## Phylogenetic analysis of FABP/ABC fusion
+* RNA data seems to indicate that this is one protein (reference genome inaccuracies in the region complicated the analysis, as suspected)
+  * Does the single protein exist in other diatoms? (or other organisms? Recheck apicomplexans)
+  * Phyogenetic analysis of FABP (two domains; compare domains with other diatoms) and ABC domain ('should be straightforward')
+
+* Take relevant contig from Round3 correction and try to get the sequence, see whether it has been corrected
+  * Awaiting Adrian's email with the RNA-corrected sequence...
+  * Nothing in the Round3 correction matching the suspected protein sequence, still errors to correct?
 
 
 
+## To do
+Install Circlator?
+* Need to install MUMmer first (only missing dependency)
 
-
-
-
-
+* Circlator - http://sanger-pathogens.github.io/circlator/
+* MUMmer - https://sourceforge.net/projects/mummer/files/
+  * MUMmer display programs which MAY be required
+    * fig2dev
+    * xfig
 
 
 

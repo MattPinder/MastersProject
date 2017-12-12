@@ -2782,7 +2782,7 @@ Search for pilus-related genes in the genomes
 
 Numerous errors regarding missing modules, plus several which seem to result from not running the
 program from its install folder...
-**Installing to home directoy for the time being; will discuss options for a global installation later**
+**Installing to home directory for the time being; will discuss options for a global installation later**
 Usearch requires version 5.32; does not work with the latest version
 
 ## Alvar's genome_downloader.py
@@ -13643,6 +13643,42 @@ Install Circlator?
   * MUMmer display programs which MAY be required
     * fig2dev
     * xfig
+
+
+# 12 December 2017
+
+## Pilon Corrections
+
+Continue running Pilon round 5 corrections; the script for round 6 should be fixed so as not to overfill data5 (deleting the .sam file immediately after the .bam
+is generated, and deleting the .bam after the .sorted.bam is generated)
+
+
+## Installing Circlator
+
+Must load the following modules with Circlator
+* MUMmer
+* (Anaconda3?)
+* Prodigal
+* Must unload and reload bwa/v0.7.13 to ensure it is first in the path (ahead of Anaconda3, I assume)
+* SPAdes
+  * circlator.external_progs.Error: Found spades but couldn't get version.
+
+SPAdes may produce errors, but try Circlator and see if it errors out...
+* Using Canu should overcome this issue...
+
+
+
+## To do
+
+Chalmers login is working again; re-read notes for use of the cluster
+
+Check Pilon round 6
+* Note - round 5 left behind a 'core.#####' file after it had completed, but I checked for errors in the log files and found none...
+  * If the results of round 6 cast doubt, then rerun round 5 and round 6
+
+Retry Circlator if possible
+
+
 
 
 

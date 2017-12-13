@@ -13680,8 +13680,68 @@ Retry Circlator if possible
 
 
 
+# 13 December 2017
+
+## Pilon
+Round 6 complete, commencing round 7
+* Again, consider running round 5 again...
+* Check specific corrections - is there back-and-forth?
 
 
+## Circlator
+Still awaiting guidance from the devs...
+
+
+## Fucus
+Re-read tutorials on using the C3SE system
+* Copy Fucus genome data across, install Illumina assembler (Platanus, SOAP, SPAdes?) and attempt assembly
+* Note - Must quality-check Fucus input data first
+  * 'Long MP library not quality checked'
+
+
+## FA Transporter
+Check Adrian's email and begin analyses
+
+
+## Unique genes
+Identify unique genes in the other cultured bacterial strains, plus the three/four uncultured strains
+(Previous instructions: "Could one of you pull out a genomic region (preferably a gene) ~1500+bp unique to Marinobacter and one to Sulfitobacter,
+among all identified bacteria (both the isolated ones and the ones previously found in metagenomic data) and Skeletonema. So that it would be possible
+to identify the presence of these two by PCR.")
+* REMEMBER TO BLAST vs. Skeletonema as well (can BLAST vs. RO5 and ST54)
+
+
+## Additional microbiome questions from Oskar
+"I'm trying to compile a draft manuscript for a paper on the initial microbiome results, including the marinobacter growth effect. I have already asked Matt
+for some gene sequences for our bacteria but I have some questions that I would like you to contribute with an answer to when you have some time (no rush,
+do the transformation things first!). My data points to IAN instead of IAA being the active substance.
+
+1. In the original sequencing that had bacterial contaminants (where you found Kordia), how many 16S sequences could you pull out from that data? Was this
+   **ST54** or R05? Is it possible to compile a list of potential bacteria from this?
+* /proj/data8/16S_sequences_in_imago_data.tgz
+* Move to data17 and unzip; Skeletonema results
+  * Compare with 016-016536-data-polished_assembly, ensure nothing has been missed
+
+2. In the Marinobacter genome (and potentially also some other?) , is there a biosynthetic pathway to produce Indole Acetonitrile (IAN)
+
+3. Is there a similar pathway in Skeletonema? (I tried to find CYP71A13 and ESP, that is in the pathway in Arabidopsis, but the hits was low)
+* Ask Tomas re: gbk?
+
+4. Can the gene sequences for the IAN pathway be pulled out of Marinobacter (If it exists)"
+
+
+## Module files
+More complex example: /usr/local/modulefiles/Phylogeny/Beast2/v2.3.2
+
+
+
+
+
+
+
+CHECK ON DATA5
+
+Double-check Rhodo assembly in case it IS complete (check Rhodo size range)
 
 
 

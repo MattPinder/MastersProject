@@ -13734,16 +13734,32 @@ do the transformation things first!). My data points to IAN instead of IAA being
 More complex example: /usr/local/modulefiles/Phylogeny/Beast2/v2.3.2
 
 
-
-
-
-
-
 CHECK ON DATA5
 
 Double-check Rhodo assembly in case it IS complete (check Rhodo size range)
 
 
+
+# 14 December 2017
+
+## Pilon
+Round 7 completed, still fewer and fewer corrections; commencing round 8 (round 5 recheck came back identical to the original run, so no problems)
+* Start to investigate the nature of the corrections being made; is there any back and forth?
+
+
+
+
+Move completed Pilon analyses to data21
+
+
+
+
+COMPARE HOUSEKEEPING GENES OF PB_359_4 AND S. SP. M41, to check whether S. sp. M41 is also an S. flavimaris strain
+* Compare to Sphingorhabdus flavimaris strain YGSMI21
+* REDO PHYLOPHLAN ANALYSIS, INCLUDE NEW S. FLAVIMARIS GENOME
+* Include Brucella outgroup again
+  * Double-check which version of Sphingorhabdus flavimaris is included
+* Check results in the morning
 
 
 

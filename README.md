@@ -13759,7 +13759,107 @@ COMPARE HOUSEKEEPING GENES OF PB_359_4 AND S. SP. M41, to check whether S. sp. M
 * REDO PHYLOPHLAN ANALYSIS, INCLUDE NEW S. FLAVIMARIS GENOME
 * Include Brucella outgroup again
   * Double-check which version of Sphingorhabdus flavimaris is included
-* Check results in the morning
+
+* Run analysis in the morning
+
+
+# 15 December 2017
+
+## Pilon
+
+Round 8 results - still getting better, although there are now more deletions happening...
+* Running round 9
+
+
+## PhyloPhlAn
+
+Running new analysis on SphingoErythro to compare our strain to the new S. flavimaris
+
+
+
+ |----- S. marina
+ |
+-| 1
+ |
+ |     |----- SphFlaSMR4y
+ |     |
+ |-----| 1   |----- S. sp M41
+       |     |
+       |-----| 0.834
+             |
+             |----- S. flavimaris YGSMI21
+
+Compare marker genes
+
+
+
+
+## S. marinoi Pathway Analysis
+
+Tomas has provided the current .gff file for S. marinoi
+* Convert to .gbk
+* Simplify if at all possible
+* Run through Pathway Tools
+
+
+## Continue work on FABP analysis
+
+
+
+## Potential resubmission of genome announcements
+
+* Genome Announcements - our current go-to journal
+
+* Genome Biology and Evolution - perhaps outside of our scope
+  * "Genome Reports are focused papers, usually of about 1500 words, that publish the main evolutionary message of new genome sequences as they become submitted
+    to GenBank."
+  * https://academic.oup.com/gbe/pages/General_Instructions#Types%20of%20Manuscripts
+
+* Journal of Biotechnology - inapplicable
+  * "Submissions without relevance to Biotechnology [...] do not fall within the scope of the Short Genome Communications section and will be rejected outright."
+  * https://www.elsevier.com/journals/journal-of-biotechnology/0168-1656/guide-for-authors
+
+* Journal of Genomics - Short Research Communication - this may be more promising!
+  * "Short Research Communication presents a concise study, or sometimes preliminary but innovative research finding that might be less substantial than a full
+     research paper. It is limited to 2500 words excluding references and abstract. The number of references is limited to 30 and the number of figures and/or
+     tables combined is limited to 4."
+  * For examples, see [this Roseovarius](http://www.jgenomics.com/v05p0051.htm) and [this Brucella](http://www.jgenomics.com/v03p0095.htm) paper
+  * Some extra information would need to be included
+
+* Memorias do Instituto Oswaldo Cruz - inapplicable
+  * "[...] publishes original research throughout the fields of tropical medicine [...], medical and veterinary parasitology [...], and medical microbiology [...]"
+
+* Mitochondrial DNA - inapplicable
+
+* Molecular Ecology Resources - no longer publishes 'Genomic resources notes'
+  * "Please prepare the material as a regular manuscript for Ecology & Evolution or a species-specific journal."
+  * http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1755-0998/homepage/ForAuthors.html
+
+* Standards in Genomic Science - Short Genome Report (requires phenotypic data, so perhaps outside the scope of what we intend to submit currently)
+  * https://standardsingenomics.biomedcentral.com/submission-guidelines/preparing-your-manuscript/short-genome-report
+
+
+## Bacteria
+
+Consider rerunning Quiver a few times on Kordia and Parvi?
+
+S. flavimaris SMR4y, S. flavimaris YGSMI21 and S. sp. M41 likely belong to the same taxon, based on the marker genes tested (16S, gyrB, rpoB and rpoD)
+* See /proj/data5/Skeletonema_marinoi_microbiome_project/05_results/pb_359_4/README.md
+
+
+
+
+
+Priority is Adrian's FABP/ABC project, so finish this on Monday + Tuesday!
+
+
+
+
+
+
+
+
+
 
 
 

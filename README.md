@@ -13848,17 +13848,27 @@ S. flavimaris SMR4y, S. flavimaris YGSMI21 and S. sp. M41 likely belong to the s
 
 
 
-
-
 Priority is Adrian's FABP/ABC project, so finish this on Monday + Tuesday!
 
 
+Note: Pilon corrections are being moved to data21 for the time being, and symbolically linked from the original location in data5
 
 
+# 18 December 2017
+
+Start looking to download the new Skeletonema data
+
+Continue work on FABP analysis!
+* Am I sure that there are no other examples of FABP/ABC combos?
 
 
+## data21
 
+The S. marinoi directory here should only be for raw data, not analyses
 
+Agreement of commissioned activities
+
+Download data from GRUS! (must be done by ~end of January)
 
 
 

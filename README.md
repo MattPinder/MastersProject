@@ -13874,6 +13874,30 @@ Download data from GRUS! (must be done by ~end of January)
 
 
 
+# 19 December 2017
+
+## Comparing FABPs
+
+
+## Coding project
+
+(* LATER - automate quality control)
+* Map reads to database of species (Skeletonema reference, each of the bacteria)
+  * Use of 
+* Determine what % of reads map to each taxon
+  * How much is plasmid data is there? Does it fluctuate between samples?
+  * How much is the bacterial data differing from the reference? Evolution?
+  * Differences in organellar sequence?
+* Check 18S value of Skeletonema and determine if it is, indeed, S. marinoi
+* Any good way to handle/classify 'unknown taxon' data?
+
+
+
+
+
+
+
+
 
 
 

@@ -13893,6 +13893,39 @@ Download data from GRUS! (must be done by ~end of January)
 
 
 
+# 09 January 2018
+
+* Check what is required of longer manuscripts, and see which bacteria would be best for longer manuscripts, and which should remain as short manuscripts
+* Install Filezilla on Albiorix and download data for Anna's project
+  * If unable to compile, download Filezilla to either Ubuntu machine or laptop and rsync across
+  * Downloaded source code for Filezilla and libfilezilla but need C++14 to compile either?
+    * Loading GCC v7.2.0 doesn't help - 'C++ compiler cannot create executables', even as root?
+  * Tallying up directory sizes, there will be ~150GB data
+    * Temporarily transfer to another project directory, rsync to Albiorix, remove from temporary project directory
+* Look at how to move necessary Fucus files across to C3SE, and install relevant programs
+* Consider the points in Adrian's email, can any prep be done for meeting next week?
+
+* Microsatellites
+  * Concatenate primer sequences
+  * BLASTn (`-task blastn-short`?) reference genome provided and extract hit + 500bp up/downstream
+    * blastn-short: BLASTN program optimized for sequences shorter than 50 bases
+
+  * BLASTn only gives results for three primer pairs - Smar1, Smar3, Smar6
+    * Why only these three...?
+  * Try querying unconcatenated sequences?
+    * No better result
+  * What happens if one queries the reference on the BLAST server instead...?
+    * Hits found to at least 7 of the 8 concatenated pairs using the Sm_Ref.v1 reference
+
+
+* Coding project?
+* Start more Pilon runs, continue to monitor progress of corrections
+  * Round13 apparently truncated one of the files, so rerun...
+
+
+Check Round13 Pilon
+Check screen to see if rsync has finished, then if so, delete from source and check md5 sums
+* May be worth DLing all files to the project directory on Milou again and then rsyncing again, to ensure the files have transferred completely
 
 
 

@@ -13928,6 +13928,62 @@ Check screen to see if rsync has finished, then if so, delete from source and ch
 * May be worth DLing all files to the project directory on Milou again and then rsyncing again, to ensure the files have transferred completely
 
 
+# 10 January 2018
+
+## Pilon
+Round13 failed again; move some more of the previous analyses to data21 and try again
+* If this fails, try one step at a time
+
+## Anna's Data
+Redownloading some of the data to perform a complete rsync check prior to checking md5sums
+* ACKNOWLEDGEMENTS.txt seems to be missing from 00-Reports?
+
+# Microsatellite check
+If unable to find the other regions of interest, try searching the current corrected assembly for additional guidance
+* /state/partition3/Skeletonema_annotation_2018/originals/ on Annotation-2
+
+Create a new version of results file to include +/- 500bp from hit, to allow better mapping
+* Smar1 - hit 4469-4661
+  * Cut 3969-5161
+* Smar3 - hit 6298-6477
+  * Cut 5798-6977
+* Smar6 - hit 7364-7683
+  * Cut 6864-8183
+
+* Smar2 - despite consistent hits in 000159F_quiver, 000009F_quiver and 000009F-005-01_quiver, nothing matching in Sm_300-650_clc-assembly_novo_2000bp
+* Smar4 - despite consistent hits in 000001F-013-01_quiver and 000001F_quiver, nothing matching in Sm_300-650_clc-assembly_novo_2000bp
+* Smar5 - hits 000045F_quiver; this result hits the end of contig_14771 and the repeats flow into the break
+  * Can't find the other end of the break...
+* Smar7 - can't find a good hit in Sm_Ref.v1 for comparison at all...
+* Smar8 - despite consistent hits in 000140F_quiver, nothing matching in Sm_300-650_clc-assembly_novo_2000bp
+
+Check corrected reference, see if they're found there too
+* Useful to know how likely it is to find sequences in future datasets
+
+REMEMBER - only MF samples required; zip SGE scripts for HF samples just in case
+* First four jobs queued; run them four at a time and don't queue too many, to avoid the major slowdown from last time
+
+
+
+
+
+## ONGOING
+* Pilon Round13 correction - Check output to ensure that this has completed properly this time, otherwise run step-by-step
+* Microsatellite mapping - Four 10-core runs queued behind Pilon on Annotation-2; queue four at a time, otherwise may slow the whole system down again
+* ACKNOWLEDGEMENTS.txt appears to be missing from Anna's data; otherwise the checksums are correct
+  * Check again when Uppmax maintenance window has passed
+
+* Check what is required of longer manuscripts
+* Try installing Filezilla and dependencies on Albiorix
+* Start moving Fucus files to C3SE and installing necessary software
+  * Long MP library not quality checked?
+  * Assemblers to try - Platanus, SOAP, SPAdes?
+    * Precompiled versions have been moved to Hebbe
+
+* Check on details for meeting Adrian next week re: FABP
+
+
+
 
 
 

@@ -13983,6 +13983,146 @@ REMEMBER - only MF samples required; zip SGE scripts for HF samples just in case
 * Check on details for meeting Adrian next week re: FABP
 
 
+# 11 January 2018
+
+Fucus - data13
+* rsync A.Blomberg directories from data13 to data21 (new Fucus_vesiculosus directory)
+* Then rsync the data to C3SE
+
+Check Pilon Round13
+
+Merge skeletonema_resequencing and skeletonema_resequencing_NEW on data17
+Check requirements of other journal(s) regarding bacterial genome submission
+
+-----
+
+Journal of Genomics - Short Research Communication
+* "Short Research Communication presents a concise study, or sometimes preliminary but innovative research finding that might be less substantial than a full
+   research paper. It is limited to 2500 words excluding references and abstract. The number of references is limited to 30 and the number of figures and/or
+   tables combined is limited to 4."
+* For examples, see [this Roseovarius](http://www.jgenomics.com/v05p0051.htm) and [this Brucella](http://www.jgenomics.com/v03p0095.htm) paper
+
+Extras required:
+* Background on the genus/species (expand paragraph 1)
+* Perhaps bulk out the existing methods paragraph if possible?
+* Compare to type strain, include information on more pathways
+* Maybe add a table/figure?
+* Despite the 2500 word limit, the two papers noted above are ~500 and ~800 words respectively
+  * [This paper](http://www.jgenomics.com/v04p0042.htm) is ~1000 words
+    * Seems to be bulked out by pathway info and genomic island analysis
+  * [This paper](http://www.jgenomics.com/v05p0119.htm) is ~1100 word
+    * Half of this is taken up by a lengthy introduction about the genus
+
+
+-----
+
+## ONGOING
+* rsync of Fucus A.Blomberg directories to data21
+* Mapping runs for microsatellites
+  * All done, check stats?
+  * Some have few/no reads mapped; would increasing the size of the area (e.g. +/- 1kb?) help?
+    * Read length is 126bp or less so, with reference sequences of ~1kb, this shouldn't be an issue...
+  * Samples with no (or very few) mapped reads:
+    * P1872_127
+    * P1872_132
+    * P1872_167
+    * P1872_467 (TWO mapped read)
+    * P1872_475 (FOUR mapped reads)
+    * P1872_486 (THREE mapped reads)
+    * P1872_491 (THREE mapped reads)
+    * P1872_492 (THREE mapped reads)
+    * P1872_495 (ONE mapped read)
+    * P1872_513 (ONE mapped read)
+    * P1872_514
+    * P1872_534 (FOUR mapped reads)
+    * P1872_557
+    * P1872_558 (TWO mapped reads)
+    * P1872_562 (FIVE mapped reads)
+  * Of 82 samples, FIVE have no mapping and TEN have very low mapping
+
+* Double-check the ACKNOWLEDGEMENTS.txt file from Anna's data
+  * ACKNOWLEDGEMENTS.txt not present on Grus at all; remaining files all present and downloaded to
+    /proj/data21/Skeletonema_marinoi/Genome/Skeletonema_sexual_reproduction/00_data/A.Godhe_17_02-P9105
+* rsyncing skeletonema_resequencing from data6 to data17 via SGE script; when complete, merge with
+  skeletonema_resequencing_NEW and remove directory on data6 to free up 3.3T (consider compressing the data further?)
+
+
+* Double-check the files on data21 and ensure that no intermediate, etc. files are still in the Skeletonema
+  directories
+
+* Size of Fucus data directories:
+  *  30G	A.Blomberg_15_01	180 lib. (Illumina TruSeq PCR-free library)
+  * 541G	A.Blomberg_15_17	300bp lib.
+  *  39G	A.Blomberg_15_20	MPL lib.
+  * 165G	A.Blomberg_16_07	550bp lib.
+  * 267G	A.Blomberg_16_15	MPS lib.
+
+  *  25G quota	SNIC_BACKUP
+  * 200G quota	SNIC_NOBACKUP
+
+  * May need to apply for a storage project?
+
+* Try installing Filezilla?
+
+
+
+
+
+
+
+
+
+
+
+
+
+## To do
+
+* Microsatellite mapping
+  * Mapping appears to be done - merging the relevant files...
+    * NOTE - some samples have zero mapped reads...
+
+* Check rsync of skeletonema_resequencing from data6 to data17, merge with _NEW and remove from data6
+  * Currently running on node0
+
+* Check files on data21 and remove any which aren't RAW DATA
+  * Save contract files to relevant directories
+  * /proj/data21/Skeletonema_marinoi/Genome/skeletonema_resequencing is 3.3T, most can be removed I think
+    * Ensure that the original files are present in data6/data17 before removing from data21
+
+* Retry installing Filezilla
+
+* Work out how to proceed with moving Fucus files to C3SE
+  * Discuss setup with Mats
+  * Fucus raw data (A.Blomberg* directories) has been rsynced from data13 to data21
+
+* Inform Anna that her files have been DLed from Grus
+  * Mention lack of ACKNOWLEDGEMENTS.txt file
+
+* Rework announcement papers for Journal of Genomics
+
+* Check Pilon Round14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

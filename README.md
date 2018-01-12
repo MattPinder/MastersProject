@@ -14078,43 +14078,52 @@ Extras required:
 
 ## To do
 
-* Microsatellite mapping
-  * Mapping appears to be done - merging the relevant files...
-    * NOTE - some samples have zero mapped reads...
-
-* Check rsync of skeletonema_resequencing from data6 to data17, merge with _NEW and remove from data6
-  * Currently running on node0
-
+*! Microsatellite mapping
+  *! Mapping appears to be done - merging the relevant files...
+    *! NOTE - some samples have zero mapped reads...
+*! Check rsync of skeletonema_resequencing from data6 to data17, merge with _NEW and remove from data6
+  *! Currently running on node0
 * Check files on data21 and remove any which aren't RAW DATA
   * Save contract files to relevant directories
   * /proj/data21/Skeletonema_marinoi/Genome/skeletonema_resequencing is 3.3T, most can be removed I think
     * Ensure that the original files are present in data6/data17 before removing from data21
-
 * Retry installing Filezilla
-
 * Work out how to proceed with moving Fucus files to C3SE
   * Discuss setup with Mats
   * Fucus raw data (A.Blomberg* directories) has been rsynced from data13 to data21
-
-* Inform Anna that her files have been DLed from Grus
-  * Mention lack of ACKNOWLEDGEMENTS.txt file
-
+*! Inform Anna that her files have been DLed from Grus
+  *! Mention lack of ACKNOWLEDGEMENTS.txt file
 * Rework announcement papers for Journal of Genomics
-
-* Check Pilon Round14
-
+*! Check Pilon Round14
 
 
+# 12 January 2018
+
+* Microsatellite mapping - merges have been indexed, should be ready to go!
+
+* rsync of skeletonema_resequencing from data6 to data17 appears to have been successful; merging with skeletonema_resequencing_NEW
+  * Check with Mats before removing from data6
+
+* Pilon Round14 was successful; prepare Round15
+  * Number of corrections is increasing again; Round15 should be the final run
+
+
+* Merging skeletonema_resequencing and skeletonema_resequencing_NEW on data17; when complete, delete old skeletonema_resequencing_NEW,
+  then check with Mats before removing skeletonema_resequencing from data6
+
+* Resync /proj/data6/skeletonema_resequencing/gene_search from data6 to data17, as something appears to have gone awry
+
+
+* skeletonema_resequencing DIRECTORIES HAVE BEEN MERGED ON DATA17
+  * Now need to remove the non-raw data files from data21
+
+
+* Expand upon the Antarctobacter paper and prepare for submission as a **Short Research Communication** to **Journal of Genomics**
 
 
 
 
-
-
-
-
-
-
+* Reopen SCREEN to check transfer of raw skele_reseq data from data17 to data21 (should be transferring data and potentially 05_retrimming directory, plus check other directories for raw data)
 
 
 

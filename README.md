@@ -14099,17 +14099,17 @@ Extras required:
 
 # 12 January 2018
 
-* Microsatellite mapping - merges have been indexed, should be ready to go!
+*! Microsatellite mapping - merges have been indexed, should be ready to go!
 
-* rsync of skeletonema_resequencing from data6 to data17 appears to have been successful; merging with skeletonema_resequencing_NEW
-  * Check with Mats before removing from data6
+*! rsync of skeletonema_resequencing from data6 to data17 appears to have been successful; merging with skeletonema_resequencing_NEW
+  *! Check with Mats before removing from data6
 
-* Pilon Round14 was successful; prepare Round15
-  * Number of corrections is increasing again; Round15 should be the final run
+*! Pilon Round14 was successful; prepare Round15
+  *! Number of corrections is increasing again; Round15 should be the final run
 
 
-* Merging skeletonema_resequencing and skeletonema_resequencing_NEW on data17; when complete, delete old skeletonema_resequencing_NEW,
-  then check with Mats before removing skeletonema_resequencing from data6
+*! Merging skeletonema_resequencing and skeletonema_resequencing_NEW on data17; when complete, delete old skeletonema_resequencing_NEW,
+   then check with Mats before removing skeletonema_resequencing from data6
 
 * Resync /proj/data6/skeletonema_resequencing/gene_search from data6 to data17, as something appears to have gone awry
 
@@ -14121,14 +14121,29 @@ Extras required:
 * Expand upon the Antarctobacter paper and prepare for submission as a **Short Research Communication** to **Journal of Genomics**
 
 
-
-
 * Reopen SCREEN to check transfer of raw skele_reseq data from data17 to data21 (should be transferring data and potentially 05_retrimming directory, plus check other directories for raw data)
 
 
 
+# 15 January 2018
+
+* rsynced 05_retrimming from data17 to data21
+
+* Pilon 15 has completed; stats checked and files compressed
+  * Lines in corrections file has increased again; stop attempting to correct the assembly, as optimum appears to have been reached and passed
+
+* rsyncing more files from sparc1 to data21 (still 1.7T remaining on data21, should be sufficient?)
+
+* Antarctobacter paper ongoing
+  * Add isolation/culturing details (waiting on Oskar's reply)
+  * How much novel sequence vs. type strain? - HOW SHOULD THIS BE CALCULATED?
+    * Is this possible in Mauve? - Check http://genome.cshlp.org/content/14/7/1394.full
 
 
+* rsyncing /data11/skeletonema/skeletonema_MP/A.Blomberg_14_09
+  * May need to remove some folders from this and A.Blomberg_14_08 on data21?
+
+* Double-check if checksums can be generated in some of the sparc directories now
 
 
 

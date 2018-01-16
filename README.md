@@ -14146,7 +14146,33 @@ Extras required:
 * Double-check if checksums can be generated in some of the sparc directories now
 
 
+# 16 January 2018
 
+Rerunning Rhodo tree for Antarctobacter
+* REMEMBER TO ADD PB_359_7 .FAA AS WELL AS INCLUDING THE OTHER A. HELIOTHERMUS
+  * REMEMBER TO INCLUDE AN OUTGROUP! COPY ACROSS HYPHOMONAS ATLANTICA AND HYPHOMONAS NEPTUNIUM
+* Once run, rerun a subtree
+
+
+NOTE: Must update NCBI_Downloader script to download all strains, not just one strain per species...
+* Is it possible to read a file online ([filename]_assembly_report.txt) and compare values?
+* Instead of taking the bottom-most assembly only, work from the bottom up, and if the strain is different, download that too
+* Must change file name designations to include strain as well, so as not to overwrite
+
+
+
+Find chloro and mito contigs in corrected Skele assembly (compute-0-3:/state/partition3/Skeletonema_annotation_2018/originals/ - v1.1)
+* Use mito and chloro references to blast the assembly and find ALL contigs which correspond (in the reference assembly v1.1 the organelles will be fragmented)
+* Slack contig names to Mats
+  * NB - chloroplast seems to be poorly assembled in the reference assembly; only about 1/4 of the chloroplast genome can be accounted for...
+  * Try circularising Sm_000198F in the reference assembly? May be complete...
+
+
+
+
+
+Re: % novel sequence vs. Antarctobacter - is it possible to concatenate all type strain contigs into one long sequence and use this as a BLASTn db to query SMS3?
+* In theory this should give a query coverage %age for the whole genome?
 
 
 

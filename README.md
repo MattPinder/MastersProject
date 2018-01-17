@@ -14177,6 +14177,67 @@ Re: % novel sequence vs. Antarctobacter - is it possible to concatenate all type
 
 
 
+# 17 January 2018
+
+----------
+
+Chloroplast and mito corrections should be a top priority
+* Quiver to standstill, then Pilon
+
+Running Quiver a second time on chloroplast to bring things up to the same level as the mt-genome
+* Should take ~3 hours based on previous Resequencing step
+  * Check ~3:45/4:00
+
+* To run Quiver from command line - restoreHeaders.py?
+  * If this is simply removing '|quiver' from the contig headers, this can easily be done manually for the organelles
+
+RUN QUIVER VIA SMRT PORTAL
+* Command line usage is apparently problematic...
+
+----------
+
+Determine how best to get a figure for novel sequence in SMS3 vs. A heliothermus type strain
+* Try concatenating contigs?
+
+Have obtained results from both BLAST (using concatenated contigs of type strain) and MAUVE (using 'gaps')
+* These produce different results, which one is best to use?
+
+----------
+
+SignalP/ChloroP vs. first ~100aa of proteins of interest?
+
+1. Full length protein - only found in other diatoms
+  * Only in T. oceanica and T. pseudonana (only one binding domain in T. pseudonana)
+  * Seq alignment
+
+
+2. Split functional domains
+  * Transporter is conserved (check type - P-type?), so should be simple
+    * Is there any novelty here?
+    * Starts ~576aa, based on BLASTp AND CDD
+    * Orthologs of JUST transporter?
+
+  * Binding domain - interesting part
+    * Compare to FABP in plants...?
+    * Compare single/double domain to other diatoms (e.g. pennates?)
+
+    * Where to cut between FABP domains?
+
+  * IS this a duplication? Phylogenetic analysis of FABPs in diatoms, do they have independent origins?
+
+
+* Check v1.1 Sm_000028F - 686174-691148
+
+Difference between v1.0 and v1.1 - still some differences vs. Adrian and Oskar's sequencing...
+* Check region of interest in Pilon Round10 bam file(s)
+* Rsyncing to Ubuntu machine (in a `screen`) for visualisation in IGV
+
+
+
+
+
+
+
 
 
 

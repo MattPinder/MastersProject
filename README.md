@@ -14234,6 +14234,52 @@ Difference between v1.0 and v1.1 - still some differences vs. Adrian and Oskar's
 
 
 
+# 18 January 2018
+
+Find products unique to our AntHel strain vs. type strain
+* Nothing in the plasmids seem as though it provides a novel function...
+
+* Try reordering contigs in Mauve again, see if it will go to completion
+  * Can possibly use as a figure in article?
+  * Mauve keeps crashing/freezing after a few iterations, which [may be a threading issue](https://sourceforge.net/p/mauve/mailman/message/26797862/)
+    * Can pick up from the crash with the fasta files from the last successful iteration
+
+### Percentage gap
+
+Note - different runs of the 'same' analysis give different results, so take an average
+
+| Analysis     | Whole assembly | Chromosome | pSMS3-1     | pSMS3-2     | pSMS3-3  |
+|--------------|----------------|------------|-------------|-------------|----------|
+| reorder15    | 27.02859962    | 20.1496587 | 93.50217454 | 91.41175785 | - (100)  |
+| DibDibDib_11 | 27.00266       | 20.06454   | 94.21243    | 91.40723    | - (100)  |
+| Un-reordered | 26.8672        | 19.96      | 93.64       | 91.36       | - (100)  |
+|--------------|----------------|------------|-------------|-------------|----------|
+| Average      | 27% gap        | 20% gap    | 94% gap     | 91% gap     | 100% gap |
+
+
+Try alignment/rearrangement using CSAR?
+
+
+
+
+
+## Organelle corrections
+* mt-genome - 4 rounds of Quiver appear to have been sufficient; can proceed to Pilon
+* cp-genome - still finding corrections...
+
+Running 8th round, but corrections seem to be localised at this point, although not to the EXACT same bases, just a general region...
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

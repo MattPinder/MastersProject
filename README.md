@@ -14271,6 +14271,55 @@ Running 8th round, but corrections seem to be localised at this point, although 
 
 
 
+# 19 January 2018
+
+## Organelle corrections
+* mt-genome is ready for Pilon correction
+* cp-genome is still finding corrections and getting progressively shorter...
+  * Already ~1kb shorter than T. pseudonana cp-genome; run a few more rounds of Quiver and see if it stabilises
+
+## Antarctobacter paper
+* Can't find any noteworthy genes on plasmids...
+* Won't include figure from Mauve as it seems to confuse the issue...
+* Waiting on some further isolation and culturing details from Oskar
+
+## Fucus
+Need to come up with strategy for how to run the analysis
+* NEED TO RUN QUALITY CHECKS ON THE RAW DATA!
+
+| Directory        | Dir. size |             Library type             | Quality checked?                    |
+|------------------|-----------|--------------------------------------|-------------------------------------|
+| A.Blomberg_15_01 |     30G   | 180bp lib (Illumina TruSeq PCR-free) | Yes, but needs rerunning - adapters |
+| A.Blomberg_15_17 |    541G   | 300bp lib                            | Yes? (no overrep. seqs in FastQC)   |
+| A.Blomberg_15_20 |     39G   | MPL lib                              | No overrep. seq, but other probs?   |
+| A.Blomberg_16_07 |    165G   | 550bp lib                            | PROBLEM - adapter seqs and quality  |
+| A.Blomberg_16_15 |    267G   | MPS lib                              | PROBLEM - some adapter seqs         |
+
+The FastQC files from the above datasets were generated using an older version of the FastQC software
+* Use the latest version and regenerate?
+
+
+
+Large directory sizes may be due to the uncompressed fastq files... Compress!
+
+## FABP
+
+Check read mapping to new reference (Round 10); this requires checking the 'Round 11' mapped reads
+* Also transfer the Round10 reference to Ubuntu machine
+
+Adrian's query hits 686,174-691,148 in new reference
+
+
+
+
+
+Check results of NEW_fastqc runs of Fucus
+Compress the large Fastq files (in `screen`!)
+Check results of Quiver/Pilon corrections
+FINISH ANTARCTOBACTER PAPER
+CeMEB?
+
+
 
 
 

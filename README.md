@@ -14320,12 +14320,28 @@ FINISH ANTARCTOBACTER PAPER
 CeMEB?
 
 
+# 22 January 2018
 
+## Organelle correction
+* Running round 14 Quiver correction for cp-genome; if size hasn't levelled out by round 15, pick an assembly?
+  * Running round 15 Quiver correction
+  * Running round 16 Quiver correction; the number of corrections appears to be slowing...
+  * Running round 17 Quiver correction
+* Running round 2 Pilon correction for mt-genome
+  * This returned no corrections; 4 rounds of Quiver and one round of Pilon have done the job
 
+## Fucus
+* Check results of new FastQC analyses and see what QC needs redoing
+* Seems like 4 of the 5 datasets may need QC
+* Compressing some of the uncompressed huge files on data21 (do the same on data13 later?)
+  * Still compressing in `screen`
 
+* MPL not quality-checked? Looking at fastqc results it appears to be...
+  * All datasets have been through the basic quality checks by SciLifeLab
+  * Two other datasets still require PCR duplicate filtering
 
-
-
+* 300bp lib (A.Blomberg_15_17) appears to be of good quality
+  * Running fastqc of PCR duplicate-removed data to see whether this is okay
 
 
 

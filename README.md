@@ -14344,6 +14344,74 @@ CeMEB?
   * Running fastqc of PCR duplicate-removed data to see whether this is okay
 
 
+# 23 January 2018
+
+## Fucus
+* 300bp lib (A.Blomberg_15_17) PCR duplicate-removed data appears good based on fastQC
+
+* Questions:
+  * If adapter content is present at <5%, but still visible on the graph, should it be removed?
+  * Do the other libraries require PCR duplicate removal?
+    * Rerunning runFilterPCRduplr.sge on A.Blomberg_16_15
+    * Removing many read pairs; is this a problem...?
+    * Started with 356.04m reads
+  * Kmer content; is this a problem?
+    * Peaks in QCed 'adaptation to warming' data so perhaps admissible?
+
+* Starting a QC run on A.Blomberg_16_07; check when complete
+
+
+## Organelles
+* cp-genome has increased in size following the last Quiver correction
+  * Iteration 18 - FINAL attempt; if this still makes corrections, choose an earlier iteration and Pilon it
+  * Using ClustalW2 to determine WHERE these corrections are occurring
+  * The corrections being made appear to be small; would running Pilon on two intermediate Quivers give the
+    same result?
+  * Running in Temporary_Pilon_Storage directory on data21 due to space concerns
+
+* mt-genome
+  * Perform preliminary annotation using Prokka; can compare to previous attempt
+
+
+## NCBI_Downloader.py
+
+Need to implement an alternative workflow
+
+* Current workflow
+  * Check for bottom assembly in latest_assembly_versions directory
+  * Download the relevant file type
+
+* Improved workflow (concept)
+  * Check *_assembly_report.txt file for the strain name
+    * Save strain name
+  * Download relevant file from ALL subdirectories in latest_assembly_versions
+  * Rename the files as Species_Genus_Strain, rather than just Species_Genus
+    * If there are multiple versions of the same strain, add distinguishing feature to file name
+      * e.g. Include the NCBI identifier
+
+
+
+## Check 
+* Alignment of first 17 iterations of chloroplast Quiver correction (data5)
+* Pilon correction of three of the above iterations (data21)
+* Filtering PCR duplicates of A.Blomberg_16_15 (data21)
+* Attempting quality control of A.Blomberg_16_07 (data13)
+* Prokka annotation of corrected RO5 mt-genome (data5)
+  * As this is aimed at bacteria, this is incredibly flawed; compare to annotation of uncorrected RO5 sequence,
+    T. pseudonana mt-genome annotation, and check ongoing MITOS annotation attempt
+* Corrected vs uncorrected mt-genome alignment (data5)
+  * As with cp-genome, seems to be only a few differences...
+  * Size difference is only 9 bp (corrected genome is slightly longer than uncorrected)
+
+
+Continue compressing in `screen`
+
+
+
+
+
+
+
 
 
 

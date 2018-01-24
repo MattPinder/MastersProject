@@ -14407,6 +14407,41 @@ Need to implement an alternative workflow
 Continue compressing in `screen`
 
 
+# 24 January 2018
+
+## Pilon correction
+Running a second round of Pilon correction on all three samples
+* Check the mapping info when round 2 is done - does anything map to the end section of Quiver2?
+
+## cp-Quiver alignment
+Ongoing...
+
+## mt-genome correction
+* Size difference of 9 bp; need to tweak annotation
+
+* rps14 (ribosomal protein 14) fixed in new annotation!
+* rps11 fixed(?) in new annotation
+* Continue checking...
+
+
+(Double-check circ?)
+
+##Fucus
+Push sge scripts, reports, etc. to github
+Clone to chalmers and move data separately
+AIM TO START ASSEMBLIES START OF NEXT WEEK
+Use Platanus, Soap and DiscovarDeNovo (NOT Spades)
+* Is there a precomplied version of Discovar?
+  * No - must install from source
+Should be able to run rsync on the login node
+
+(See existing assembly attempts in `/proj/data13/Fucus_vesiculosus_genome_project/01_Assembly/` for scripts)
+
+Need to zip A.Blomberg_15_20 files
+
+
+Download RNA-seq data for Adrian + Oskar
+
 
 
 

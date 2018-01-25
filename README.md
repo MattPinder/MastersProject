@@ -14443,15 +14443,33 @@ Need to zip A.Blomberg_15_20 files
 Download RNA-seq data for Adrian + Oskar
 
 
+# 25 January 2018
+
+## cp-Pilon correction
+None of the second Pilons made any changes; therefore all three assemblies of different sizes are 'correct'
+* The difference is ~100bp, so unsure how much difference this will make...
+
+## Fucus
+A.Blomberg_16_07 still has low quality bases present, and pairSeq.py wasn't in the directory; rerunning...
+* Once this has been rerun with the pairSeq step, transfer to C3SE can be done and the Platanus job can be submitted
+* Tweak the script for Slurm
+
+
+## mt-genome
+Corrected genome has been annotated
 
 
 
+DL Adrian's data! Try to DL via sftp (see instructions on UPPMAX website)
 
+Continue compressing data
 
-
-
-
-
+Once _16_07 QC is complete, check C3SE script and try submitting to the queue
+* Does average insert size need to be included in the script?
+* How does setting variables (FILE1, FILE2, etc...) work on this system?
+  * Must these be stated when submitting the command?
+* FILE NAMES ANDN LOCATIONS MUST BE CHANGED TO A.) AVOID DUPLICATIONS, AND B.) STILL WORK WHEN THE FILES ARE MOVED TO $TMPDIR, AS THE FILE PATHS WILL HAVE CHANGED
+* Check path to Platanus
 
 
 

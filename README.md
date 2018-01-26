@@ -14472,6 +14472,68 @@ Once _16_07 QC is complete, check C3SE script and try submitting to the queue
 * Check path to Platanus
 
 
+# 26 January 2018
+
+## Fucus
+
+Final Fucus QC is almost complete; send across the completed (Pair) files
+md5sum the relevant files which have been transferred to C3SE
+* Zipping A.Blomberg_15_20 on data13, and still zipping A.Blomberg_16_07, so generate these md5sums when complete!
+
+
+## R05 RNAseq
+
+This data has now been downloaded; however, no recursive sftp...?
+
+
+
+## C3SE
+Testing
+
+1. Testing overall job submission, function of SBATCH commands, recognition of set variables (FILE1, etc.),
+   performing commands pertaining to $TMPDIR, and running platanus (at least the `-h` help screen for each
+   of the three modules)
+  * Result: copying the file across filled the disc space, so try making a smaller zip file to test on
+  * Second attempt: successful, albeit the platanus help screens saved to the error file, not the .md files
+
+2. Testing full operation on a smaller scale; use a very small subset of the data (~1000 reads per file),
+   and use a smaller node than the 1TB node (attempt it on one of the default nodes, but scale up if needed)
+  * Result: Error
+    * /tmp/slurmd/job1774253/slurm_script: line 78:  9457 Segmentation fault      (core dumped) platanus assemble -o $PREFIX -f $FILE1 $FILE2 $FILE3 $FILE4 -t $SLURM_NPROCS -m $MEM 2> ${PREFIX}_assemble.log
+    * May need more memory, so requesting a 128G node rather than standard 64G
+    * 2.34375% of the node's RAM isn't available, based on end-job output
+      * Allocating 60G instead of 64G still doesn't work. Lower this further (trying 30)
+      * ...
+
+
+3. Full job!
+* Attempting to run full job using `MEM=XXX` on the 1TB node...
+
+(Rerun the third platanus test but try to capture `core.*` if any appear...)
+
+
+
+Need to ensure that contents of data13 Fucus directory match those of data21...
+
+
+
+
+
+
+
+
+## Downloading data for research groups
+Try to include the following in the email once download is complete:
+`The data has been downloaded` This gives a timestamp
+`The data is located in...` Then we know later on where to find the files
+`The data has been md5sum checked` Then we know that we have the versions of the files delivered by SciLifeLab
+
+
+
+
+
+
+
 
 
 

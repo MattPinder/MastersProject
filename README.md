@@ -14517,16 +14517,59 @@ Need to ensure that contents of data13 Fucus directory match those of data21...
 
 
 
-
-
-
-
-
 ## Downloading data for research groups
 Try to include the following in the email once download is complete:
 `The data has been downloaded` This gives a timestamp
 `The data is located in...` Then we know later on where to find the files
 `The data has been md5sum checked` Then we know that we have the versions of the files delivered by SciLifeLab
+
+
+
+
+# 29 January 2018
+
+Attempting more tests on C3SE re:Segmentation Fault on Platanus jobs...
+
+Compressing the unzipped fastq files on data13/data21; ensure that the files at each location match up
+* Some files can potentially be removed from data21
+
+Re: requirements for assembling Fucus:
+* Some statistics are given in the Platanus paper about computing power
+
+|                 |    Oyster (Platanus paper)    |       Fucus / C3SE        |
+|-----------------|-------------------------------|---------------------------|
+|  Genome size    |           565.7 Mbp           |         ~1.2 Gbp          | Fucus is about 2x bigger
+|       RAM       |            512 GB             |        Trying 1 TB        |
+|   Processor     | Intel Xeon CPU X7560 2.27 GHz | 2x Xeon E5-2650v3 2.3 GHz |
+| # of processors |             32                |         Trying 20         |
+|   Peak memory   |           98.2 GB             |
+|   Time taken    | 691 CPU hours; 32 real hours  |
+
+
+
+
+Upload mt-genome and cp-genome to Marcela's workspace
+
+cp-genome - choose an assembly and go with it
+* Go with iteration 2? Only 1 correction was made to it by Quiver; it is the largest version, and correction was completed after one run of Pilon
+* Iteration 2 fixes many errors, but also introduces one new one...
+
+
+
+AllPaths LG - requires overlapping reads?
+DipSPAdes? - diploid SPAdes
+
+
+Cannot compile DiscovarDeNovo...
+* Same problem encountered with AllPaths LG
+
+
+
+
+
+
+
+
 
 
 

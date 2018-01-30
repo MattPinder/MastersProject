@@ -14430,7 +14430,7 @@ Ongoing...
 Push sge scripts, reports, etc. to github
 Clone to chalmers and move data separately
 AIM TO START ASSEMBLIES START OF NEXT WEEK
-Use Platanus, Soap and DiscovarDeNovo (NOT Spades)
+Use Platanus, Soap and DiscovarDeNovo (NOT cSpades)
 * Is there a precomplied version of Discovar?
   * No - must install from source
 Should be able to run rsync on the login node
@@ -14564,8 +14564,109 @@ Cannot compile DiscovarDeNovo...
 * Same problem encountered with AllPaths LG
 
 
+# 30 January 2018
+
+To do:
+* Decide on cp/mt-genomes for S. marinoi
+* Work on conference abstract
+* Discuss issue re: genome announcements
+* Try to install other assemblers on C3SE
 
 
+## Genome announcements
+Loktanella, Sulfitobacter and Antarctobacter can now be submitted as separate papers
+* Antarctobacter has already been altered for submission elsewhere
+* Loktanella and Sulfitobacter must be altered to 'avoid self-plagiarism'
+  * Switch the sections on 16S rRNA and Prokka annotation?
+  * All methods first, then proceed to results? (e.g. "Assembly was performed... Identification was performed... Annotation was performed using... Assembly results:...  The phylogenetic analysis showed... The annotation showed...")
+    * [See here](http://genomea.asm.org/content/6/4/e01140-17.full)
+
+
+## cp/mt-genomes
+* Mitogenome is complete; 4 rounds of Quiver + 1 round of Pilon
+* Chloroplast genome still requires work...
+  * The Quiver corrections keep shifting back and forth
+  * One Pilon run fixes 'all' errors; no changes occur after the first
+  * Quiver round 2 (the longest iteration) fixes the noted errors in the uncorrected assembly, BUT introduces one coding-region error...
+    * This error changes back and forth between iterations, other iterations with this error fixed may have the other errors fixed too? Check...
+  * 1, 9 and 11 seem to have the error fixed, but appear to introduce other errors elsewhere...
+
+
+## Fucus
+Problem 1: Genome assembly has errored out at the final step
+* NOTE: This step can be rerun on its own without having to rerun the previous steps!
+* Error: `Error(2): File format exception!!
+          Different file type in paired-file.`
+* Looking at the input file names this shouldn't be the case...?
+  * Considering that the assembly and scaffolding steps worked, the problem appears to lie in input files 1-4
+  * Do they have the same number of sequences? - Yes
+  * Do they have a strange end-of-line problem at the end of the file? - No
+* Attempting a fix involving -IP and -OP numbering
+  * Would having flags numbered as -IP1 and -OP1 cause conflict with one another?
+    * Implied by the Platanus website but contrasting examples exist online... Altered the flags so that the integers of IPs and OPs don't match; job submitted and waiting...
+
+Problem 2: The size of the initial assembly fasta file is about 10% of what we would expect
+* How can the assembly process be optimised in order to produce better results?
+  * Can more information be used in the assembly step? i.e. not JUST the 550bp library
+    * Precedent for this in the scaffolding step, already being done in gap closure step
+    * [At least one other instance of this being done](https://pdfs.semanticscholar.org/b750/6ceff265f4d7d71958b4bacaf5414df93be7.pdf)
+      * Again, there's a potential issue of running out of memory; four datasets hit 768 GB, would additional datasets push this over 1 TB...?
+    * Other non-mate-pair libraries could be used? The website advises against use of mate-pair libraries in this step
+  * Are any of the other parameters relevant?
+    * Most other parameters involve k-mer size. The biggest issue with this would be that we are likely to run out of memory, as 768.28 GB was used in the initial run...
+      * Also 'bubble crush' and 'branch cutting'?
+  * Is the issue caused by quality concerns in input files 5-8? No sequences flagged as low quality, but some error bars stray into a quality below 20...
+
+
+
+
+Version naming of S. marinoi organelles, and addition to the reference genome dataset
+* Removal of organellar fragments/contigs from existing dataset
+
+
+
+
+## RO5 transcriptome
+
+Running initial fastqc run on all data
+
+* All appear to require removal of Illumina universal adapter: AGATCGGAAGAGC
+
+* May need to trim ATTACATCACCACGCAACACTATTGCCAGTATAGTAGCATCAACGCTCTT from 102-R2 (no hit)
+* May need to trim ATTACATCACCACGCAACACTATTGCCAGTATAGTAGCATCAACGCTCTT from 103-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 109-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 110-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 112-R2 (no hit)
+                   ATTACATCACCACGCAACACTATTGCCAGTATAGTAGCATCAACGCTCTT
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 117-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 118-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 119-R2 (no hit)
+                   ATTACATCACCACGCAACACTATTGCCAGTATAGTAGCATCAACGCTCTT
+                   CACAAAGGTAACATACACGTACACTAACAATCAAGAAGCAAACGACGACG
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 120-R2 (no hit)
+                   CACAAAGGTAACATACACGTACACTAACAATCAAGAAGCAAACGACGACG
+                   AATCCACAAAGGTAACATACACGTACACTAACAATCAAGAAGCAAACGAC
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 125-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 126-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 128-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 134-R2 (no hit)
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 135-R2 (no hit)
+                   CACAAAGGTAACATACACGTACACTAACAATCAAGAAGCAAACGACGATA
+                   AATCCACAAAGGTAACATACACGTACACTAACAATCAAGAAGCAAACGAC
+* May need to trim GAAATATCAAAACAAACACAACAACAATAATAACATAATGATGCTTACTA from 136-R2 (no hit)
+
+* Note: all of the above (including Illumina universal adapter) are at low frequency
+
+* Where multiple adapters must be trimmed, may need to use CutAdapt instead; Trim Galore only takes a single
+adapter sequence...
+
+
+
+1. CHECK MAPPING ON UBUNTU MACHINE FOR CP-GENOME READS
+2. CONTINUE QC FOR RO5 TRANSCRIPTOME
+3. START MAKING ALTERATIONS TO THE OTHER GENOME ANNOUNCEMENTS
+4. CHECK ON C3SE MATTERS - DID JOB RERUN START YET? CAN THE OTHER ASSEMBLERS BE INSTALLED? WHAT CAN BE IMPROVED IN THE PLATANUS RUN?
+5. ABSTRACT FOR CONFERENCE IN MAY
 
 
 

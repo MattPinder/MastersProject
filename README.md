@@ -14669,6 +14669,62 @@ adapter sequence...
 5. ABSTRACT FOR CONFERENCE IN MAY
 
 
+# 31 January 2018
+
+## C3SE
+
+* Gap closing
+  * Running gap_close with one data set at a time on 64G to try and eliminate potential issues
+  * Samples 3+4 fail (A.Blomberg_15_17; 300bp)
+  * Samples 1+2 passed (A.Blomberg_15_01; 180bp)
+
+  * Samples 3+4 are the issue - why?
+  * Can cancel 1TB job; may not even need 1TB for this job...
+    * platanus assemble
+  * Samples 3+4 were already QCed before I received the data; rerunning filterPCRdupl.pl (need to rerun FastQC too)
+    * On data21
+
+## cp-genome reads
+
+* Check mapping of fixed vs. errored
+  * 'Fixed' version of second copy only supported by a few reads, yet first copy well-supported
+    * CHECK COVERAGE OF BOTH COPIES
+  * Forward 'OK' copy - 26,880-27,857 (deletion in other copy corresponds to ~27,247)
+    * Coverage ~98,800 - local maximum!
+  * Reverse 'deletion' copy - complement(125,989-126,965) (deletion at ~126,594)
+    * Coverage ~1,500 - local minimum!
+
+* WHEN CORES OPEN UP, try twisting the reference such that the 'incorrect' version comes closest to the 5' end, in case the reads are mapping 5' > 3'
+
+* Are IR regions identical in the correction, aside from the noted 'error'?
+  * No, there appear to be three discrepancies, including the one noted above...
+    * All three appear as deletions in the second IR (i.e. the one to the 3' end of the reference)
+  * Double-check this - new IR coordinates - 26646-44889 + 108959-127199
+
+
+## Transcriptome QC
+* Low-quality bases still appear to exist at the start of _101_R1. Is this an issue?
+* From seqanswers thread: "This means that the qualities are assessed in windows over the read, and trimmed at a position where the score is lowest. If I understand this correctly then a read may temporarily 'dip' below
+  the threshold you have selected, but allow the sequence to survive it the quality comes back up afterwards. So occasionally you might get a few scores that are lower than 20bp, but I personally wouldn't too worried about
+  it as most downstream programs have their own means of dealing with low quality basecalls."
+
+* _102_R2 requires removal of both universal adapter AND a FastQC-reported 'overrepresented sequence'
+  * (Universal adapter:                         AGATCGGAAGAGC)
+  * (Reverse complement:                        GCTCTTCCGATCT)
+  * ATTACATCACCACGCAACACTATTGCCAGTATAGTAGCATCAACGCTCTT
+                                                ^^^^^^
+* Will try removing the 'overrepresented' sequence only; this may cause issues with the R1 sequence (like leaving behind the Universal adapter)...
+
+* Still quality issues, primarily in the _102_R1, but Universal Adapter still left behind in both files...
+  * Should we return to the previous pipeline...?
+  * How to identify the exact adapter used...? Can only determine part of it from the kmer graph
+
+
+* Protocol - Illumina TruSeq Stranded mRNA (poly-A selection)
+
+
+
+
 
 
 

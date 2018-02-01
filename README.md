@@ -14723,6 +14723,60 @@ adapter sequence...
 * Protocol - Illumina TruSeq Stranded mRNA (poly-A selection)
 
 
+# 1 February 2018
+
+## Fucus
+Rerun of filterPCRdupl.pl is still underway on data21 for A.Blomberg_15_17 (throwing errors on Platanus gap_close step)
+
+
+## cp-genome
+All three points where the second repeat differ from the first occur at very obvious local coverage minima
+* Do they correspond to maxima in the forward repeat? - Yes
+
+| 'Deletion' in IRb | Corresponds to... |
+|-------------------|-------------------|
+|      125,087      |      28,759       |
+|      125,570      |      28,276       |
+|      126,598      |      27,248       |
+
+* Is there anywhere else in the cp-genome where the coverage drops so low?
+  * Central region is ~60,000x coverage
+  * First region is ~60,000x coverage (excepting the maxima mentioned above, which hit ~90,000x)
+  * 
+* Can find evidence of deleted genes in one copy of the IR
+  * SNPs found in rRNA genes in IR
+  * IR indels have been noted in haptophyte algae, but only in the rRNA operon?
+
+
+## RO5 transcriptome
+Unconvinced by the results of cutadapt, so may return to the previous pipeline
+* Prepare the script and queue it for when space opens up on the nodes
+* Problem - there are k-mer issues in pretty much every sample; is this due to enzymes targetting a specific sequence?
+* Opinion online is that it's due to random priming and can be ignored; will still attempt to trim the sequences of the Illumina adapter and the 'overrepresented sequences', and see whether this affects the results
+
+* Identified five overrepresented sequences across all samples, some of which correspond to parts of the overrepresented kmers; have added these to the prepare_sequences.sh script; testing on _101
+* Note: none of the five sequences were expected to be found in the _101 files, however some instances have been found and removed... Does this constitute overtrimming...?
+
+
+## Marine Bio abstract
+What else to include...?
+
+
+
+SEND ABSTRACT TONIGHT!
+
+FRIDAY - TABLE PROBLEM
+       - CHLOROPLAST GENOME ISSUE
+       - ANY PROGRESS ON RO5 TRANSCRIPTOME DATA?
+
+
+
+
+
+
+
+
+
 
 
 

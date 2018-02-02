@@ -14770,6 +14770,50 @@ FRIDAY - TABLE PROBLEM
        - ANY PROGRESS ON RO5 TRANSCRIPTOME DATA?
 
 
+# 2 February 2018
+
+## Fucus
+Rerun of PCR duplicate filtering (_15_17) is still ongoing...
+* The filtration itself is complete, but the compression is still ongoing. File 2 still compressing...
+  * The compressed file size of both rounds of file 1 filtration differs only by 4 bytes...
+  * File 2 size difference is also only 4 bytes...
+    * The difference in file name is 4 characters but this shouldn't have any effect...
+* Running zdiff
+
+
+## cp-genome
+Check coverage
+* 1-25,000		Paired coverage is between ~41k and ~58k
+* 25,001-30,000		Peaks of ~85k-98k, otherwise coverage is ~40k-~70k (70k occurs near the peaks...)
+* 30,001-60,000		
+* 60,001-90,000
+* 90,001-120,000
+* 120,001-end
+
+Sort out storage re: Pilon files on data21 and data5 (keep pilon 10 and 11 bams, delete the rest)
+
+Manually curate cpgenome
+Update header, inc. version no.
+Make links to cp-genome and mt-genome in root of error correction directory - *_v1.1.fst
+Generate md5sum of links
+Then copy links and md5sums to Marcela's home directory and change ownership to her
+DONE
+
+
+## RO5 Transcriptome
+
+Overrep sequences hit the S. marinoi genome perfectly... Bias in library prep?
+
+Make git repository on Github - bioinformatics group, private repo
+
+Trim only low-quality bases, and the Universal adapter
+
+
+## Tables
+
+1.) Everything in Supp table 2 should appear in Supp table X once each
+2.) Every contig in exon/intron sheets should appear in Supp table 2; all contigs in Supp table 2 should appear in exon
+3.) Check intergenic sheet; unlikely to find a match but just in case
 
 
 
@@ -14777,17 +14821,30 @@ FRIDAY - TABLE PROBLEM
 
 
 
+When transfer of _15_17 are rsynced, rerun fastQC, then rerun filterPCRdupl script, then retransfer, then retry test on Hebbe
+Check md5sums for remaining data
+* Only other .md5 file exists for A.Blomberg_16_15, and these did not match!
+
+* Matches between Supp. Table 2 and Table X okay
 
 
+* _15_17 requires PCR deduplication
+* _15_20 requires PCR deduplication
+* _16_15 requires PCR deduplication
+
+* 15_01 and _16_07 DO NOT require PCR deduplication
+
+* 15_01 - best_practice sufficient
+* 15_17 - best_practice > deduplication
+* 15_20 - best_practice > deduplication > (additional trimming may be required?)
+* 16_07 - best_practice > prepare_sequences script
+* 16_15 - best_practice > deduplication
 
 
+Add .md5 generation to trimming + filtering pipeline
 
 
-
-
-
-
-
+PREP 16_07 AND 16_15 FOR RUNNING OVER WEEKEND, AND UPDATE NOTES.MD TO LET MATS KNOW WHERE THEY ARE!
 
 
 

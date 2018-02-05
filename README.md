@@ -14848,4 +14848,79 @@ PREP 16_07 AND 16_15 FOR RUNNING OVER WEEKEND, AND UPDATE NOTES.MD TO LET MATS K
 
 
 
+# 5 February 2018
+
+## Fucus
+
+* _15_01 - apparently Universal Adaptor DOES need removing? - running Trim_Galore now
+  * Trim_Galore running...
+  * New md5sums OK
+
+* _15_17 - compression ongoing, then fastqc will be performed afterwards...
+  * Waiting
+
+* _15_20 - does Nextera transposase sequence need trimming...? md5sums now OK
+  * Nextera sequence - CTGTCTCTTATA
+  * Not all of the high-kmer sequences match this sequence... trim arbitrarily?
+  * Trimming Nextera sequence using Trim_Galore...
+
+
+* _16_07 - analysis ongoing? - CHECKING MD5SUMs - PREVIOUSLY ANALYSED FILES FAILED
+  * Rechecking md5sums - new md5s OK
+  * Analysis seemed to have stopped so rerunning...
+
+* _16_15 - forgot to make the output directories for FastQC, so have to rerun the final step
+  * Finding Nextera transposase sequence again...
+
+
+| Sample |         Status         | md5sums? | Job ID |
+|--------|------------------------|----------|--------|
+| _15_01 | Trim_Galore running... |    OK    | 67959  |
+| _15_17 | Compress+fastqc...     |    OK    | 67951  |
+| _15_20 | Trim_Galore running... |    OK    | 67962  | Removed Nextera adapter but now reverse is appearing?
+| _16_07 | Rerunning PrepSeq...   |    OK    | 67963  |         ^ Appear on at most 0.2% of kmer content graph
+| _16_15 | Rerunning Filter...    |    OK    | 67972  |
+
+
+## RO5 Transcriptome
+
+Check results of _101 test
+* Apparently still some remnant of the Illumina sequence at 3' end (kmer graph) but not enough to trigger
+  the adapter content graph. Quality okay, so leave as OK for now
+* FastQC is being performed on the full FXT.CA.FQF files, not the Pair files;
+  redo this for _101 and _102, and add it to the script for the other samples
+
+
+
+## RO5 Chloroplast
+
+Run preliminary PROKKA when space opens up on Annotation-1 or Annotation-4
+* `/proj/data5/Skeletonema_marinoi_genome_project/08_RO5_Organelles/Chloroplast/Annotation/runProkkaRO5Chloro.sge`
+
+
+
+
+## TO DO
+
+* Transfer LATEST_filterPCRdupl_AB_15_20_uniq1_val_1.fq.gz and LATEST_filterPCRdupl_AB_15_20_uniq2_val_2.fq.gz
+  * Transferring to Hebbe via `screen` on Hebbe
+  * Check with Mats, but the sequence seems to appear in <0.2% of the 77m sequences...
+* Check other datasets and transfer those if they're okay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 boop

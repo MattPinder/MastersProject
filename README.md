@@ -14875,11 +14875,11 @@ PREP 16_07 AND 16_15 FOR RUNNING OVER WEEKEND, AND UPDATE NOTES.MD TO LET MATS K
 
 | Sample |         Status         | md5sums? | Job ID |
 |--------|------------------------|----------|--------|
-| _15_01 | Trim_Galore running... |    OK    | 67959  |
-| _15_17 | Compress+fastqc...     |    OK    | 67951  |
+| _15_01 | Trim_Galore running... |    OK    | 67959  | Transferred
+| _15_17 | Compress+fastqc...     |    OK    | 67951  | Transferred
 | _15_20 | Trim_Galore running... |    OK    | 67962  | Removed Nextera adapter but now reverse is appearing?
-| _16_07 | Rerunning PrepSeq...   |    OK    | 67963  |         ^ Appear on at most 0.2% of kmer content graph
-| _16_15 | Rerunning Filter...    |    OK    | 67972  |
+| _16_07 | Rerunning PrepSeq...   |    OK    | 67963  |...      ^ Appear on at most 0.2% of kmer content graph
+| _16_15 | Rerunning Filter...    |    OK    | 67972  |...
 
 
 ## RO5 Transcriptome
@@ -14905,7 +14905,77 @@ Run preliminary PROKKA when space opens up on Annotation-1 or Annotation-4
 * Transfer LATEST_filterPCRdupl_AB_15_20_uniq1_val_1.fq.gz and LATEST_filterPCRdupl_AB_15_20_uniq2_val_2.fq.gz
   * Transferring to Hebbe via `screen` on Hebbe
   * Check with Mats, but the sequence seems to appear in <0.2% of the 77m sequences...
+  * GENERATE MD5SUMS and copies these over too!
 * Check other datasets and transfer those if they're okay
+
+
+
+# 6 February 2018
+
+* Transferring _15_01, _15_17 and _15_20 datasets
+  * Generate and transfer md5sums as well
+  * Checking md5s for _15_01 - OK
+  * Checking md5s for _15_17 - OK
+  * Checking md5s for _15_20 - OK
+  * Still waiting for _16_07 and _16_15...
+
+  * Need to remove Nextera adapter from _16_15 ... Trim_Galore...
+
+  * Double-check the fastqc reports to ensure these are alright, and note when there are issues
+* Wait for _16_07 and _16_15 to finish, check, md5sum and transfer
+
+
+* _15_17 is fine
+
+* _15_01 + _15_20 may need additional trimming?
+
+* _16_07 ongoing...
+
+* _16_15 needs Nextera trimming using Trim_Galore
+
+
+NEED TO TRIM THESE ADAPTERS INSTEAD/AS WELL:
+* READ 1 - AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+* READ 2 - AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Rerunning _15_01 - Final_Test
+Running FastQC on raw _15_20 data...
+Rerunning deduplication + trimming of both Nextera adapter and reverse complement from both reads...
+* Running this as two separate trim_galore analyses; would be more efficient to run as a single cutadapt
+  analysis but unsure of the required syntax - experiment later on
+
+The directories are getting incredibly cluttered; what can be deleted?
+
+Note - may have to target PARTS of each adapter sequence, to account for truncations
+
+_15_20 has no individual md5 files; need to recheck these...
+* Zipping and unzipping files could be causing this discrepancy
+
+* Need to generate .md5 checksums for UNZIPPED files; add a line into future SGE scripts to md5sum if
+  the file is decompressed for e.g. PCR deduplication
+
+* _16_07 is taking so long because there are two datasets in there...
+
+
+
+* Continue RO5 transcriptome QC
+  * All jobs submitted to Annotation-2
+  * All jobs complete; check
+
+* Run preliminary corrected Chloro annotation
+
+
+* Check `screen` and finish md5 of unzipped fastq file(s)
+
+
+
+
+
+
+
+
+
+
 
 
 

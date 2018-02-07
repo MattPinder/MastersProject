@@ -14964,12 +14964,63 @@ _15_20 has no individual md5 files; need to recheck these...
 
 * Run preliminary corrected Chloro annotation
 
-
 * Check `screen` and finish md5 of unzipped fastq file(s)
 
 
+# 7 February 2018
+
+## Fucus
+
+* _15_20 is now transferred to Hebbe
+* Rerunning _15_01 as per Mats' recommendations
+* _16_15 ongoing, but compare to _15_20 if there are still kmer issues; may still be acceptable
+* _16_07 is still going...
 
 
+Jobs still running -
+* 68028 - 16_15
+* 68031 - 15_01
+
+* 16_07:
+L001_R1:
+* 5' end ACGTCTGAA
+* 3' end (T/A)AGATCGGA
+* Base quality poor in the last few rungs; need to adjust adapter trimming
+  * Not the last one, but the three before that
+
+L001_R2:
+* 5' end CGTGTAGGGAA
+* 3' end TAGATCGGA
+* Base quality poor in a lot of the ending...
+  * Final twelve rungs
+
+L002_R1:
+* 5' end ACGTCTGAA
+* 3' end (T/A)AGATCGGA
+* Base quality poor in the last few rungs; need to adjust adapter trimming
+  * Not the last one, but the three before that
+
+L002_R2:
+* 5' end CGTGTAGGGAA
+* 3' end AGATCGGA
+* Base quality poor in a lot of the ending...
+  * Final twelve rungs
+
+Running job 68046 on high_mem
+
+
+
+## RO5 transcriptome
+
+* QC
+  * Trim 'TTTTTTT' from 5' end of R1 reads; this may leave 'AA...' behind, so may need to retrim
+  * Reduce the size of the sought-after adapter from the 3' end, to try and catch the left-behind scraps
+  * Testing - see job for P9502_101 (id: 68033, Annotation-2)
+	* Still some adapter left at 3' end; rerunning with a shorter target sequence (68048, Annotation-2)
+
+* When QC is complete:
+  * Run Trinity
+  * Align with a splice-aware aligner (STAR?) and assemble using Scallop
 
 
 

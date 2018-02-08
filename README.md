@@ -15024,8 +15024,56 @@ Running job 68046 on high_mem
 
 
 
+# 8 February 2018
+
+## Fucus
+
+* _15_01 - Still some overrepresented kmers in the 5', and the 3' now has a strange splayed pattern...
+
+* _15_20 - MUST RERUN BECAUSE SOME ILLUMINA ADAPTER IS STILL PRESENT...
+	 - RERUNNING... JOB 68051 on Annotation-2
+
+* _16_07 - Still running...
+
+* _16_15 - RERUNNING TO REMOVE ILLUMINA ADAPTER
+	 - JOB 68052 on Annotation-2
+
+## RO5 transcriptome
+
+* Still some adapter present, so moved the start of the Illumina adapter sequence back one base
+  * This may be a mistake - the C isn't part of the adapter sequence! Stop job and readjust?
 
 
+
+## Eutrophication data
+
+!!!!!
+Map only to rev_comp of 2985 (eutrophication data) - 3x MF datasets
+!!!!!
+* Remapping done, merging underway...
+  * Need to index the merged BAMs
+  * Done
+
+
+
+## Ongoing
+
+* _15_01 - no ongoing jobs but needs work...
+  * Bias remaining apparently, but is it acceptable?
+
+* _15_20 - 68051 (Annotation-2)
+
+
+* _16_07 - 68046 (high_mem)
+  * Problems with quality, rerunning with a higher quality trim - q22
+    * 68157 + 68158
+
+* _16_15 - 68052 (Annotation-2)
+
+* RO5 transcriptome
+  * _101 - 68155 (Annotation-2)
+    * Test; previously trimmed AGATCGG, now trying AGATCG
+    * Still showing very weird Kmer Content patterns...
 
 
 

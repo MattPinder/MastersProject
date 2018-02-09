@@ -15076,10 +15076,72 @@ Map only to rev_comp of 2985 (eutrophication data) - 3x MF datasets
     * Still showing very weird Kmer Content patterns...
 
 
+# 9 February 2018
+
+## Fucus
+
+Check
+
+* _15_01 - is this acceptable? - No
+  * Target the matching TruSeq controls rather than arbitrarily cutting
+    * Also target ending 7-mer + arbitrarily remove last 5 bases
+    * Job 68183 on high_mem
+
+* _15_20 - 68051 (Annotation-2)
+  * Removing Illumina adapter as well leaves behind high levels of Nextera adapter...?
+  * Go with first Final_Test - more pairs saved, and being used for scaffolding, not assembly
+
+* _16_07 - 68157 + 68158 (high_mem)
+  * Trim 7x T from R2, try and reduce the abundance from over 1m!
+  * Jobs 68181 + 68182 on high_mem
+
+* _16_15 - 68052 (Annotation-2)
+  * Use first Final_Test, as above
+
+Mate pair libraries transferred to Hebbe
 
 
 
+## RO5 transcriptome
 
+Check
+
+* _101 - still looks weird...
+
+Making a clean start on testing with _109
+* 68196 on high_mem
+  * Remove first base of R1 reads
+  * Remove full Illumina universal adapter from both reads (-b)
+  * Remove T 7mer from R1 reads (-g)
+
+
+## RO5 Chloroplast
+
+Running new annotation attempt on Annotation-1 (job 68197)
+
+## Tables
+
+Check tables
+* Data for each row in Supp 2
+  * No contigs or data NOT in Supp 2
+* Only within the Start-Stop boundaries
+  * Ensure the midpoints are at least 100 within the bounds of the Start/Stop?
+
+
+
+## Ongoing
+
+* _15_01 - job 68183 on high_mem
+* _16_07 - jobs 68181 + 68182 on high_mem
+
+* _109 - 68196 on high_mem
+
+
+
+## Circlator
+
+Circlator v1.5.5 installed, now showing a different nucmer-related error message
+* external_progs.py - says it's looking for nucmer in the right place but finds version . (should find version 3.1...)
 
 
 

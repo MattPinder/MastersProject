@@ -15141,7 +15141,54 @@ Check tables
 ## Circlator
 
 Circlator v1.5.5 installed, now showing a different nucmer-related error message
-* external_progs.py - says it's looking for nucmer in the right place but finds version . (should find version 3.1...)
+* external_progs.py - says it's looking for nucmer in the right place but finds version .
+  (should find version 3.1...)
+
+
+
+# 12 February 2018
+
+## Fucus
+
+Check Fucus jobs from Friday
+
+* _15_01 - results seem good but final analysis didn't run; unzip, change file extension and run pairSeq.py
+  * 68235 on Annotation-1
+
+* _16_07 - still major kmer issues at 3' end of R2 reads even after removal of TTTTTTT
+  * Kmer issues have now been reintroduced to the R1 reads... How to proceed?
+  * Check reads for overlap
+
+
+## RO5 transcriptome
+
+* Running a second round on _109 using a shortened Illumina adapter (first 7 bases of the usual 13bp target)
+  * 68238 on Annotation-1
+
+
+Check _15_01 and _109 jobs...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

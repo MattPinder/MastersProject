@@ -15176,6 +15176,54 @@ Check _15_01 and _109 jobs...
 
 
 
+# 13 February 2018
+
+
+## Fucus
+
+* _15_01 -> val_* files were copy-pasted to Final_Test_2 but file-sizes don't match up!
+            Check md5 sums, may need to rerun analyses... Does Final_Test_1/*val_*.fq.md5 match Final_Test_2/*val_*.fq.md5?
+              val_1 matches, val_2 [waiting]
+            val_* files were copied from Final_Test to Final_Test_2
+            * Still generating the relevant md5_sums...
+            * Transferring Pair files to Hebbe; need to generate, send and check md5sums for Pair.fastq.gz files, too
+
+* _16_07 -> ??????
+            Checking the 25th read of the first pair of files gives reads which are long enough to overlap
+              296 bp and 297 bp long, respectively; after getting reverse complement of read 2, an overlap of
+              65 bp was found
+              All most-overrepresented 7mers in Kmer Content graph appear with a peak at position 295
+              * Will arbitrarily removing 6-7 bases from the end of the sequence 
+	Removing 7bp from 3' end of all reads - 68258/9 on Annotation-3
+
+## RO5 transcriptome
+
+* _109 -> 3' Illumina adaptor problem is fixed
+          5' end still showing massive kmer overrepresentation
+
+  * Attempting to remove possible CTL/CTE contamination (68261 on Annotation-2)
+    * Check to ensure that legitimate sequences remain - "GTGTGGCCCGGGGGATC"
+
+
+## Antarctobacter paper
+
+Check Tomas' and Mats' feedback
+* Feedback addressed
+
+
+## Circlator
+
+Posted on the Github page; waiting on dev's reply
+
+
+## VR Proposal
+See document linked by Mats
+
+
+
+
+
+
 
 
 

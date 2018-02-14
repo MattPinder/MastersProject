@@ -15221,8 +15221,41 @@ See document linked by Mats
 
 
 
+# 14 February 2018
+
+## Fucus
+
+* Generate md5sums for _15_01; queues full, so run on login node
+  * Checked and OK
+
+* Check results of _16_07
+  * The results have removed the overrepresented kmers, BUT we now have low-quality sequence in some positions,
+    particularly L002 R2
+  * Can everything be done in a single pass?
+    * May require two...
+    * Quality cutoff of 25 instead
+    * Length cutoff of 50
+
+  * Moving data to Hebbe, will run this analysis there...
+    * Running /c3se/NOBACKUP/users/pinder/Fucus_vesiculosus_genome_project/00_Data/A.Blomberg_16_07/best_practice_qc/P4453_101/fastq_trimmed/runCutadapt_(1/2).sh
+  * Check fastqc reports after the analyses have finished; if necessary, run a second round where the final 7bp are trimmed from each read (-u 7 -U 7)
+
+  * Zipping on `screen` on Hebbe; resume, and rerun FastQC; reconfigure FastQC to include kmer graph
+    * In FastQC Configuration folder, go to limits.txt and change `kmer ignore 1` to `kmer ignore 0`
 
 
+## RO5 transcriptome
+
+* Job still queued...
+  * Can removal of reads matching CTE/CTL sequences be achieved using `grep`??
+
+
+## RO5 cp- and mt-genomes
+
+Is there a difference between, e.g., trnS(gct) and trnS(gcu)
+* What's the difference between including a 't' and a 'u' here?
+
+Continue checking cp-genome (inc. 86107..86215 - ffs exact location?)
 
 
 

@@ -15260,6 +15260,46 @@ Continue checking cp-genome (inc. 86107..86215 - ffs exact location?)
 
 
 
+# 15 February 2018
+
+## RO5 transcriptome
+
+Job transferred to node0 (job id: 68274)
+Running next attempt on node0 (job id: 68278)
+
+## Fucus
+
+Running FastQC on _16_07 to see whether a final trim is required
+* R2s require additional 3' trimming - remove 5bp?
+  * FastQC detects 7mers but hopefully this will minimise arbitrary trimming
+* L002 retrim errored out...
+  * Make md5sum and rerun?
+  * Rerunning L002
+    * If this works, ready to go
+* Rerunning produced the same error, AND gave a different number of reads for the same analysis
+  * Is `cp`ing the files causing issues?
+  * Running all-in-one scripts using rsync and checking md5sums
+
+
+## Chloroplast
+
+Determine limits of the inverted repeats:
+
+Gene boundaries: IRb - ccsA' to trnP(ugg)'
+                      >26583 - 44933<
+                       26646 - 44889
+                 IRa - trnP(ugg) to ccsA/end
+                      >108829 - 127202<
+                       108959 - 127202
+
+
+## Pigz
+
+Already installled on Hebbe, try installing on Albiorix
+
+
+
+
 
 
 

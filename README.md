@@ -15279,7 +15279,7 @@ Running FastQC on _16_07 to see whether a final trim is required
 * Rerunning produced the same error, AND gave a different number of reads for the same analysis
   * Is `cp`ing the files causing issues?
   * Running all-in-one scripts using rsync and checking md5sums
-
+  * Same error, reads in L002 different once again...
 
 ## Chloroplast
 
@@ -15299,14 +15299,67 @@ Already installled on Hebbe, try installing on Albiorix
 
 
 
+# 16 February 2018
+
+## RO5 transcriptome
+
+Latest test moved to Annotation-1 (job id 68282)
+* Remnants of CTE/CTL still remain
+
+Attempting a new test on Annotation-1 (job id 68289)
+* As THIRD, but changing cutadapt `-n` to 2
+  * THEN, anti-grep "AGTATGGCCCGGGGGATCC" (present in the controls, not in Skeletonema)
+* cutadapt? `cutadapt -b AGTATGGCCCGGGGGATCC -B AGTATGGCCCGGGGGATCC -e 0 --no-indels --discard --pair-filter=any 
+-o out1 -p out2 in1 in2`
+  * Should remove 400 from read 1 and 1841 from read 2
+
+The results are in, but are they acceptable?
+* Kmer spikes don't correspond to any specific primers, and appear to represent real sequences in S. marinoi?
+  * Discuss with Mats on Monday
 
 
+## Fucus
+
+The same analysis on AB_16_07 L002 has given different results 3 times, and given an error message.
+Remove the read and try again?
+
+After first pass of cutadapt:
+* OLD - L001 = 71,719,415
+        L002 = 70,828,347
+* NEW - L001 = 71,719,415
+        L002 = 70,828,347
+
+After second pass of cutadapt:
+* OLD - L001 = 71,399,981
+      - L002 = 70,489,325***
+* NEW - L001 = 71,399,981
+      - L002 = 70,482,884***
 
 
+Reads flanking the problem-causing read:
+@D00450:261:HY3MNBCXX:2:2214:17416:101329 1:N:0:1
+**@D00450:261:HY3MNBCXX:2:2214:17460:101332 1:N:0:1**
+@D00450:261:HY3MNBCXX:2:2214:17490:101344 1:N:0:1
+
+@D00450:261:HY3MNBCXX:2:2214:17416:101329 2:N:0:1
+**@D00450:261:HY3MNBCXX:2:2214:17460:101332 2:N:0:1**
+@D00450:261:HY3MNBCXX:2:2214:17490:101344 2:N:0:1
+
+sed '/TARGET/{N;N;N;d;}' FILE
+              ^ ^ ^ ^
+    Delete target + three lines below
 
 
+Read has now been removed from both P4453_101_S1_L002_R1_001_cutadapt.fastq and
+P4453_101_S1_L002_R2_001_cutadapt.fastq
+* P4453_101_S1_L002_R1_001_cutadapt_NEW.fastq + P4453_101_S1_L002_R2_001_cutadapt_NEW.fastq
+* Rerun analysis; do this twice to ensure that the numbers match up
+  * Both analyses now running on Hebbe
+
+Test 2.1 failed; the read BELOW the original read has now failed...
 
 
+Pigz successfully installed in home directory - install on Albiorix?
 
 
 

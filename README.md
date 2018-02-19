@@ -15360,6 +15360,100 @@ Test 2.1 failed; the read BELOW the original read has now failed...
 
 
 Pigz successfully installed in home directory - install on Albiorix?
+* Requires loading gcc v4.9.0 in order to compile
+
+
+# 19 February 2018
+
+## Fucus
+
+### A.Blomberg_16_07
+
+The entry BELOW the originally-erroring one is now erroring with the first problem removed
+* Is there a problem in read "@D00450:261:HY3MNBCXX:2:2214:17416:101329 1:N:0:1"?
+  * Appears on line 283,312,177 of P4453_101_S1_L002_R1_001_cutadapt.fastq (the input into the failing analysis)
+  * Total line count of file: 283,313,388 (same for R2 file)
+  * No obvious issues with this part of the file (hidden characters, etc.)
+
+  * Try removing the last 303 entries from the file
+
+  * `head -n -1212 P4453_101_S1_L002_R1_001_cutadapt.fastq > P4453_101_S1_L002_R1_001_cutadapt.BIGTRIM.fastq`
+  * `head -n -1212 P4453_101_S1_L002_R2_001_cutadapt.fastq > P4453_101_S1_L002_R2_001_cutadapt.BIGTRIM.fastq`
+
+  * Jobs 1852290 and 1852291 on Hebbe
+
+
+
+
+## RO5 Transcriptome
+
+Discuss with Mats
+
+
+
+
+## Sulfitobacter paper
+
+* Further analysis of (larger) plasmids
+* Gene content comparison with Sulfitobacter sp. AM1-D1 + Tateyamaria omphalii + ? (any other Rhodobacteraceae with lots of plasmids?)
+* Any other aspects worth comparing?
+
+* Realigning SMR1 genome vs. the two other S. pseudonitzschiae strains - H3 and DSM 26824
+
+* Phosphatidylcholine synthase gene present in SMR1 genome, but no genes for choline synthesis
+  * Phosphatidylcholine synthase gene is unique to the phosphatidylcholine biosynthesis pathway, so could Sulfitobacter be getting
+    choline from Skeletonema itself? Or another bacterial species?
+    * "It is known that marine bacteria can rapidly acquire choline from seawater [...]" - http://onlinelibrary.wiley.com/doi/10.1111/1462-2920.12943/full
+    * "In many bacteria, such as Sinorhizobium meliloti and Pseudomonas aeruginosa, catabolism of choline provides a growth advantage when forming close associations with their eukaryotic hosts [...]" (from paper above)
+      * Transport of choline can occur by:
+        * BCCT-type choline transporter - there is a "BCCT family transporter" in SMR1
+        * ABC-type choline transporter (ChoXWV) - none which is obvious in SMR1
+        * There is a gene simply labelled 'choline transporter'...
+          * Does this appear in the type strain? Yes...
+      * Choline metabolism genes betIABC are present in SMR1...
+
+  * S. pseudonitzschiae H3 appears to be in the minority among Sulfitobacter in having NO phosphatidylcholine
+    (see http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.064972-0)
+    * Could this be a strain-specific thing?
+      * Phosphatidylcholine synthase gene is also present in H3...
+      * How likely is it that phosphatidylcholine would have been missed in the H3...?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

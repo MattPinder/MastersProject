@@ -15420,22 +15420,53 @@ Discuss with Mats
 
 
 
+# 20 February 2018
 
 
+## Fucus 
+Fucus job submitted!
+* Main Platanus job is queued, a 'dry run' is also underway to ensure that the files copy and the assembly at least STARTS correctly (only on a regular node so will only last a short time)
+  * Note: If the job fails the first time, change the `cp` commands to `rsync` commands in the script, and add an md5sum check step
 
 
+## Kordia + 'Parvi'
+Run further Quiver corrections, as there appear to be a lot of errors (based on number of 'pseudogenes')
+* Align to gene start to ensure that a gene isn't broken by the wraparound (already done!)
+  * Note - Kordia was originally only run with the 11 Pb_77 cells, whereas 'Parvi' was run with 22 cells - Pb_77 + PB_0066
+    * Both samples being run together with all 22 cells, so note whether this has a big effect on Kordia
+* 4th Kordia Quiver + 3rd Parvi Quiver: job 16964 on SMRT Portal
+  * Errored out!? Why?
+  * Rerun the two separately, with 11/22 cells respectively
+    * Jobs 16967 and 16969; wait to submit until the A2W work is complete...
+
+## A2W
+Map to new reference sequence
+* Using multithreading in `samtools view` and `samtools sort` (not index)
+  * Using v1.3.1, as opposed to v1.3; shouldn't cause errors but bear in mind
+    * Test run in `P8352_101/02-FASTQ/171012_D00483_0240_BCBDHGANXX`
+* All trims failed the pairSeq.py step because pairSeq.py wasn't in the directory it should have been in...
+  * Rerun the pairSeq.py step for all samples (starting with 101, run them a few at a time)
+  * The pairSeq itself doesn't take too long; compression takes a little while, but not too long
+    * When _101 tests are complete, rename the runPairSeq.sge scripts in the directory and run for_each_dir_do
+      to submit the rest
+      * Running so many in parallel is slowing the process...
+    * Then run multiQC, specifying `Pair.fastq` (or similar) as the target
+
+## RO5 v1.1.1
+Remove organellar sequences from v1.1 to create v1.1.1 (directory 12 in genome folder)
+* Syntax for removal of lines
+  * `sed '10d;14d' TEST` - removes lines 10 and 14 from TEST
+  * `sed '10,14d' TEST` - removes lines 10-14 from TEST
+* THERE MUST BE A SIMPLER WAY TO DO THIS!
 
 
+## Marine Genomics
+Another potential journal to submit genome announcements to?
+* See https://www.sciencedirect.com/science/article/pii/S1874778717303100
+* Also - can a genome be classed as 'candidatus' AND 'sp.'?
+  * Possibly - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4608319/
 
-
-
-
-
-
-
-
-
-
+* Also - check out PANNZER2 and eggNOG to try and improve annotation?
 
 
 

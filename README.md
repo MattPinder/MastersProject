@@ -15471,8 +15471,50 @@ Another potential journal to submit genome announcements to?
 
 
 
+# 21 February 2018
+
+## Fucus
+* Dry run ongoing
+* Main job queued
+
+## A2W
+* Still waiting for pair analysis to complete
+  * Afterwards, run MultiQC to confirm quality, then proceed to mapping again
+
+## RO5 v1.1.1
+Is there an elegant way to remove the contigs in question?
+* Used a `sed`-based method to remove the relevant lines, SHOULD be okay
+
+## RO5 transcriptome
+Stick with current settings for now
+* Remove first base of R1 reads
+* Remove first 6 bases of Illumina universal adapter (AGATCG) from both reads (-b)
+* Remove T 7mer from R1 reads (-g)
+* Afterwards, fully remove reads containing the fragment of control sequence (AGTATGGCCCGGGGGATCC)
+
+* Note - other control sequences may be present, but check these after assembly
+  * e.g. Ensure "GTATGGCCCGGGGGATC" is still present, but that "CAGGACCCAGGCGTGC" isn't
+
+REMEMBER TO RERUN PAIRSEQ AFTER REMOVAL OF THE ADDITIONAL SEQUENCES!
+
+Change made to prepare_sequences.sh in `00_data/A.Clarke_17_01/P9502`
+* Rerunning from scratch to ensure consistent results
+  * In theory, both runs should result in the same number of reads
+  * Is all data from a certain condition to be assembled together?
+
+## Marine Genomics
+Work out what extra needs doing for submission of genome announcements
+
+## Skeletonema paper
+Submit FABP sequence
 
 
+## To do
+
+* Check to ensure _109/SIXTH has the same results with the new pipeline (node0 - 68686)
+* Check Trinity (node0 - 68687)
+* Check progress of Adaptation to Warming
+* Check progress of Fucus on Hebbe
 
 
 

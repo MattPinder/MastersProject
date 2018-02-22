@@ -15517,6 +15517,71 @@ Submit FABP sequence
 * Check progress of Fucus on Hebbe
 
 
+# 22 February 2018
+
+## RO5 Transcriptome
+New pipeline produces the same results as the old one
+* Remaining 19 jobs currently being trimmed
+  * Double-check that the last two datasets in each quartet don't need another base trimming
+
+Trinity on _109 finished without any errors
+
+Note - assemble each condition separately, then all together
+* DON'T assemble each individual separately! Need to reshuffle file structure
+
+
+
+
+
+
+## Adaptation to warming
+* Rerunning MultiQC
+  * Certain files are being ignored where the names collide... Rename them slightly and check if it helps
+    * Still seems to be acting up; resolve later...
+      * Rerun all FastQCs for duplicated file names, specify a different output directory
+
+* Once mapping has been performed, is it possible to extract consensus sequence from certain coordinates,
+  e.g. using a BED file?
+
+* RUNNING FASTQC ON FIRST PAIR OF FILES... _102?
+
+
+
+## Fucus
+Email admins?
+* Are final files rsynced to Albiorix?
+
+
+## Software
+* Install Pigz
+* Delete folders for older iterations of Circlator
+
+
+
+## Repeat regions
+Some of the shorter contigs in the v1.1(.1) assembly appear to be entirely composed of a repeat of a larger contig;
+these should be removed from the assembly to give a truer impression of the number of primary contigs
+
+
+
+## RO5 mapping
+
+Concatenate v1.1 of organellar genomes onto the end of v1.1.1 to make a new v1.1.1 (remember md5sum), then
+map reads to this new reference
+
+
+
+
+## To do
+
+* Continue submitting the new FastQC analyses for A2W, then MultiQC
+* Check progress of QC of RO5 transcriptome data
+* Check progress of Bowtie2 mapping for v1.1.1
+* Check nitrogen cycle genes
+* Install Pigz and delete old Circlator files
+* Check progress of Platanus on Hebbe
+
+
 
 
 

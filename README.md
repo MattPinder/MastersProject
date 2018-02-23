@@ -15584,17 +15584,52 @@ map reads to this new reference
 
 
 
+# 23 February 2018
+
+## A2W
+
+Continue submitting FastQC jobs to Annotation-1
+
+* MultiQC submitted
+
+## RO5 transcriptome
+
+Running interactive MultiQC report on transcriptome data
+* Seems okay
+
+Running Trinity assemblies on each of the 5 conditions
+* Once these are complete, run all together
+
+
+## v1.1.1 mapping
+Bowtie2 mapping of v1.1.1 didn't complete successfully; rerun
+* This was because of a change in syntax requirements on the newer version of SamTools
+
+
+## Platanus
+
+Transferred data, unzipped, comes to ~617.5 Gb
+Did Platanus itself use up 1 Tb of space????
+
+
+## Read up on LOF mutations
+
+
+## Rework Sphingo and/or **Areni** for submission to GenomeA while avoiding self-plagiarising
+* Arenibacter
+
+* Sulfitobacter for Journal of Genomics
+
+* Other journals to submit to?
 
 
 
-
-
-
-
-
-
-
-
+## Trancript ORF prediction
+`getorf` on ST54 transcript
+* BLAST sequence in email to piece together AA sequence
+  * Note locations of e.g. introns and start/stop, etc
+  * Can add signal+transit peptides, and UTRs
+  * Repeat for Seq1
 
 
 

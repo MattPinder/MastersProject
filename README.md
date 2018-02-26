@@ -15622,14 +15622,102 @@ Did Platanus itself use up 1 Tb of space????
 
 * Other journals to submit to?
 
-
-
 ## Trancript ORF prediction
 `getorf` on ST54 transcript
 * BLAST sequence in email to piece together AA sequence
   * Note locations of e.g. introns and start/stop, etc
   * Can add signal+transit peptides, and UTRs
   * Repeat for Seq1
+
+
+
+# 26 February 2018
+
+## Fucus
+
+Job failed again; seems to fail during the first steps of kmer graph construction?
+* Convert the fastq files to fasta? Will ~halve the size, and Platanus does not use quality values
+
+| Sample |  Compressed size (fq)  | Compressed size (fa) |
+|--------|------------------------|----------------------|
+| _15_01 |        10G + 11G       |
+| _15_17 |        24G + 26G       |
+| _15_20 |       4.1G + 4.7G      |
+| _16_07 | 11G + 10G + 11G + 9.8G |
+| _16_15 |       4.8G + 5.3G      |
+
+
+
+## A2W
+
+Check MultiQC
+* Should be okay to start mapping
+* Running on P8352_101 - 171012_ as a test run
+  * Finished okay; can proceed to remaining
+    * Altogether, the mappings will take up ~250-300Gb; should be enough space on data17
+  * Submitted all for _101 and _102
+* rsync trimmed files to data21
+  * Should other files be deleted from data17?
+* Submitting a few files at a time - now running _103 and _104
+
+* Merge .bam files for each directory after mapping is complete
+* Rewrite .sge script to include ALL data from a given sample in a single mapping run
+  * Leave completed ones as they are
+  * Redo all using --no-unal flag, on 24 cores so only one runs at a time on Annotation-1
+    * RESUBMITTED ALL SAMPLES
+
+
+## Transcriptome
+
+* Check assembly results
+  * No sign of the complete protein of interest...
+  * Delete other files from Trinity folder to free up space?
+    * Retain `trinity.fasta` and job script - DONE
+* Running all-samples assembly
+
+## Other
+
+* Check nitrogen cycle genes
+* Install Pigz and delete old Circlator files
+  * Done; send message on Slack - DONE
+
+## Send cp-genome annotation to Marcela
+* Send and CC Mats and Olga - DONE
+* Label as v1.1.0 in fasta and Genbank
+  * DO THIS
+
+## Tree for Oskar
+
+Submitted - Skele_Species; runPhyloPhlAn_All on high_mem
+
+
+
+## To do
+
+* Check progress of Fucus fastq_to_fasta jobs
+* Check progress of A2W mapping
+* Check progress of RO5 transcriptome assembly
+* Check tree for Oskar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

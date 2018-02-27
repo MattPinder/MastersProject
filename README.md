@@ -15701,11 +15701,83 @@ Submitted - Skele_Species; runPhyloPhlAn_All on high_mem
 
 
 
+# 27 February 2018
+
+Tree sent to Oskar; may need changing?
+* Seems to be okay
 
 
+## Fucus
+
+Check that jobs didn't run out of memory...
+* Jobs failed as the disk ran out of memory (shared node); require a full node to myself...
+* Try again on a 128G node and see if this is sufficient
+  * All resubmitted, should begin mid-morning
+
+* AB_15_01 conversion successful!
+* AB_15_17 
+* AB_15_20 conversion successful!
+* AB_16_07 conversion successful!
+* AB_16_15 conversion successful!
 
 
+## A2W
 
+Jobs completed - tabulating mapping percentages
+* Small oddity with some of the .sge.e files ('merging from X files' line at the bottom), but seems trivial
+  * May be related to number of reads and memory availability/temp files
+
+* Calculate coverage statistics?
+  * Combination of `bedtools genomecov -bga` and `expr`?
+  * See `/proj/data17/skeletonema_resequencing/07_coverage/coverage_range_test/FindLowestCoverage.sh` for help
+    * Maybe use `-max` flag?
+
+* If column 4 >= threshold, sum (column 3 - column 2) of all such columns, then calculate % using this figure
+  and the length of the contig (can use column 3 of contig's final row?)
+* Would be easier to just count lines, using a per-base coverage count
+  * File size may become a problem...
+
+* Use `fp.py --length --header` to generate a reference file
+* `grep -P "^${contig}\t" | cut -f3 | awk '$1>=${threshold}{c++} END{print c+0}' |
+  expr 100 / ${contig_length} \* result`
+* Running job in /proj/data17/Skeletonema_marinoi_adaptation_to_warming_project/01_mapping/P8352_101
+  to see whether results of Bedtools can be written to specified output, rather than to the STDOUT file
+  * Seems to be working
+  * Writing to a temporary output may be a bit clunkier than piping directly, but otherwise one risks running
+    out of RAM?
+
+
+## RO5 transcriptome
+
+AllSamples complete
+* Partial FAT1 transcript assembled, but lacks 3' end...
+	TRINITY_DN9449_c0_g1_i1 len=4303 path=[1:0-529 4609:530-553 532:554-807 4613:808-831 810:832-865
+	844:866-898 877:899-925 904:926-979 958:980-993 4617:994-1017 996:1018-1054 1033:1055-1079
+	1058:1080-1111 4615:1112-1135 1114:1136-1332 4614:1333-1356 1335:1357-1663 4616:1664-1687
+	1666:1688-2572 4610:2573-2596 2575:2597-3205 4612:3206-3229 3208:3230-3595 4611:3596-3619
+	3598:3620-4302] [-1, 1, 4609, 532, 4613, 810, 844, 877,	904, 958, 4617, 996, 1033, 1058,
+	4615, 1114, 4614, 1335,	4616, 1666, 4610, 2575, 4612, 3208, 4611, 3598, -2]
+
+* 3' end covered by another contig
+	TRINITY_DN1612_c0_g1_i1 len=871 path=[1:0-111 90:112-133 112:134-870] [-1, 1, 90, 112, -2]
+
+* Align these two transcripts and translate alignment
+  * The nucleotide overlap is perfect between the ends
+    * Feasible that these should have been assembled together?
+
+
+## RO5 remapping
+Remap RO5 Illumina data to v1.1.1 - 69428 on Annotation-1
+* Investigate weird gapping in, e.g. contig 000011F (pos ~963k)
+
+
+## To do
+
+* Check if final set of fasta files is ready to go on Hebbe; if so, start Platanus_DryRun
+* A2W - continue working on script to give coverage statistics
+* RO5 - ?
+* v1.1.1 - Check RO5 mapping, and check weird gapping
+* If space allows, run Quiver on Kordia and Parvi?
 
 
 

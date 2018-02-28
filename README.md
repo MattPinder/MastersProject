@@ -15715,7 +15715,7 @@ Check that jobs didn't run out of memory...
   * All resubmitted, should begin mid-morning
 
 * AB_15_01 conversion successful!
-* AB_15_17 
+* AB_15_17 conversion
 * AB_15_20 conversion successful!
 * AB_16_07 conversion successful!
 * AB_16_15 conversion successful!
@@ -15779,6 +15779,47 @@ Remap RO5 Illumina data to v1.1.1 - 69428 on Annotation-1
 * v1.1.1 - Check RO5 mapping, and check weird gapping
 * If space allows, run Quiver on Kordia and Parvi?
 
+
+# 28 February 2018
+
+## Fucus
+Final Fucus file conversion has finished; start Platanus_DryRun
+* Delete fastq files; quota has been exceeded
+* Start clearing unnecessary secondary files from Albiorix; retain only raw files, scripts and end files
+
+
+
+## v1.1.1 mapping
+Mapping complete, copy files to Ubuntu machine for viewing in IGV
+* Compressing skeletonema_resequencing files first to free up some space
+  * Attempting this fills the machine; must be done in pieces
+
+## A2W
+Continue working on script for statistics
+
+
+
+
+
+TELOMERES
+* Mats' run failed (database issue), so redirected the BLAST and reran the analysis
+  * 22 contigs found
+
+INSTALL BLOBTOOLS ON UBUNTU MACHINE
+
+CONCATENATE QC'd SEQUENCES FOR EACH SAMPLE, E.G. P...._101_R1.FASTQ.GZ
+* Should this be done for the Paired, Single, Full, or a combination?
+* Mats' whatisit script has been run on the unQCd sequences...
+* Move files from Trimmed to A.Godhe_XXXX_XX
+
+* CONCATENATION ONGOING IN SCREEN
+
+
+BANDAGE + .gfa
+
+
+Make git repository for Bam project
+* Adapt into a Python script using the template script, now downloaded to the repository
 
 
 

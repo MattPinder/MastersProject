@@ -15823,16 +15823,38 @@ Make git repository for Bam project
 
 
 
+# 1 March 2018
+
+## A2W
+Continue concatenating files
+
+
+## Fucus
+Node becomes unresponsive, so:
+* Submit the job to the 1TB node
+* Subsample 1m reads from each file and submit this job to a lower-memory node
+
+
+## Bamboozle
+Is it possible to get contig name + length directly from the BAM, rather than obtaining it separately from fp.py?
+
+
+## Automation script
+* QC + Trimming
+* Concatenate all R1s and R2s in each sample
+* Running mapping_filtering.py and remove reads associated with known species
+* Run metagenome assembly on the remaining reads
+* Run Metaxa2 (or similar) on the resultant assemblies to identify species
+
+
+## Telomeres
+Identify telomere sequences from the 22 identified contigs, BLAST these against the reference and try to identify more telomeres
 
 
 
 
 
-
-
-
-
-
+Check whether concat+compress script worked
 
 
 

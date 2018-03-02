@@ -15842,7 +15842,7 @@ Is it possible to get contig name + length directly from the BAM, rather than ob
 ## Automation script
 * QC + Trimming
 * Concatenate all R1s and R2s in each sample
-* Running mapping_filtering.py and remove reads associated with known species
+* Running mapping_filtering.sh and remove reads associated with known species
 * Run metagenome assembly on the remaining reads
 * Run Metaxa2 (or similar) on the resultant assemblies to identify species
 
@@ -15851,10 +15851,73 @@ Is it possible to get contig name + length directly from the BAM, rather than ob
 Identify telomere sequences from the 22 identified contigs, BLAST these against the reference and try to identify more telomeres
 
 
-
-
-
 Check whether concat+compress script worked
+
+
+
+# 2 March 2018
+
+## Fucus
+Still waiting on job to submit...
+
+
+## A2W
+Concat+compress scripts prepared and ready to run
+
+* Gapping on contig 000011F (pos ~963k), more precisely:
+  * ~959k - 965.5k
+    * One transcript hit - BLASTx gives an okay hit to a predicted protein in T. oceanica
+  * ~973k - 974.5k
+    * No transcripts
+
+
+
+## Telomeres
+
+Size and number of other diatom chromosomes:
+
+| Species                   | Chrom # | Longest |   2nd   |   3rd   |   4th   |
+|---------------------------|---------|---------|---------|---------|---------|
+| Thalassiosira pseudonana  |   24    | 3.04 Mb | 2.71 Mb | 2.44 Mb | 2.4  Mb |
+| Phaeodactylum tricornutum |   33    | 2.54 Mb | 1.5  Mb | 1.46 Mb | 1.36 Mb |
+
+* Tried looking at the ends of T. pseudonana contigs for comparison
+  * Nothing
+* Tried eyeballing the ends of contigs and grepping for the suspected telomere (forward and reverse)
+  * Nothing
+
+
+
+
+## Bamboozle
+
+Script is running in screen; see whether latest attempt - running through each line and (hopefully)
+adding relevant lines to a per-key total - has worked
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

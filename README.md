@@ -15886,9 +15886,6 @@ Size and number of other diatom chromosomes:
 * Tried eyeballing the ends of contigs and grepping for the suspected telomere (forward and reverse)
   * Nothing
 
-
-
-
 ## Bamboozle
 
 Script is running in screen; see whether latest attempt - running through each line and (hopefully)
@@ -15896,6 +15893,38 @@ adding relevant lines to a per-key total - has worked
 
 
 
+
+
+# 5 March 2018
+
+## Bamboozle
+
+Alter script so that it looks at the whole assembly
+* Dictionary should have each coverage level as a key, not contig
+  * Per-contig can be added as an extension of this later
+
+
+## FABP/FAT1
+
+Compare ST54 transcript with Adrian's sequence; was this the sequence he based his analysis on originally?
+
+* Perfect match to 3' end found in STRINITY_DN8764_c0_g1_i1, from skeletonema_sex_project
+  * /proj/data21/Skeletonema_marinoi/Transcriptome/skeletonema_sex_project/transcriptome
+  * This dataset came from Trinity 2.1.1
+  * Was this the one I uploaded to NCBI?
+
+* Check overlap with Adrian's sequence
+  * Adrian's sequence shorter in 5' UTR
+
+Features required:
+
+| Feature              | Seq1 (Adrian) | Seq2 (Trancriptome) |
+|----------------------|---------------|---------------------|
+| 5' UTR               | 1 - 14        | 1 - 192             |
+| Signal peptide       | 75 - 92       | 250 - 267           |
+| (cp) Transit peptide | 93 - 134      | 268 - 309           |
+| CDS                  | 15 - 2837+    | 193 - 5121          |
+| 3' UTR               | -             | 5122 - 5169         |
 
 
 

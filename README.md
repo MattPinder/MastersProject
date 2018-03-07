@@ -15935,12 +15935,33 @@ Features required:
 * Bam script
 
 
+## Tomorrow
+TRANSRATE!
 
 
+# 7 March 2018
+
+## Transrate
+
+Run 6x analyses, one for each of the assemblies
+* Then visualise in R to decide a cutoff
+
+(Use nice option)
+Start with AllSamples, then WT, then MAR, then 3x mutants
+
+/usr/local/transrate/transrate-1.0.1-linux-x86_64/transrate
+
+Check `screen` transfer of AllSamples from DNA to Albiorix, then end `screen` and remove fastq files from DNA
 
 
+## To do
 
-
+* Results of repeat analysis
+* Results of Transrate
+  * Visualise in R (check how!)
+* Upload of FAT1 sequences to BankIt
+  * Check alignments of Adrian vs Trinity
+* Merge BAM scripts
 
 
 

@@ -15965,6 +15965,58 @@ Check `screen` transfer of AllSamples from DNA to Albiorix, then end `screen` an
 
 
 
+# 8 March 2018
+
+Transrate results > R
+
+Bamboozle:
+* Possible new feature - find stretches of 0 coverage?
+  * May require the use of bedtools...
+  * Output the reference sequence here to see, e.g. if it's a G+C rich region
+
+#1
+Make RO5 RNAseq repository on group research page (private)
+* Combine good contigs from all 6 datasets
+  * FIRST, add assembly name to end of all headers
+  * Put WT at the beginning of the file, to influence CD-HIT
+    * Use order from README file
+    * Then remove temporary name-changed files after concatenation
+* Run CD-Hit (start at 100% similarity, then 99%, etc.)
+  * Save in new directory
+
+#2
+Upload Bandage BLAST figure to genome GitHub
+* Clean up repository?
+
+#3
+Ensure the reference assemblies that we have for the annotation are the latest ones (from JGI)
+* Psemu1 - Appears to be most up-to-date (no Psemu2, or any date later than 2011)
+* Phatr2 - FilteredModels2 appears to be the most up-to-date (no FilteredModels3 except for koginfo)
+  * Is Phatr2_bd relevant? ('Bottom drawer', irrelevant)
+* Thaps3 - FilteredModels2 appears to be the most up-to-date (no FilteredModels3)
+* Fracy - FilteredModels3 appears to be the most up-to-date (no FilteredModels4)
+
+#4
+Chloroplast and mito
+* Skeletonema_marinoi_RO5_Chloroplast_v1.1_LENGTH
+* Skeletonema_marinoi_RO5_Mitochondrion_v1.1_LENGTH
+* Include full data (inc. md5 sum) in README, create version 1.1.2 of the genome, and make changelog
+  * v1.1.1 had already had the headers changed, so this is no longer necessary
+
+Transrate:
+Compress BAM files
+
+
+
+## To do
+
+Rerunning CD-HIT w/o AllSamples transcripts:
+Aim for ~40k transcripts
+* Then run Transrate AGAIN on this result
+
+Ensure re-mapping of A2W samples is complete
+
+Continue work on zero-regions code for Bamboozle
 
 
 

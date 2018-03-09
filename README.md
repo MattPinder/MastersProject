@@ -16007,7 +16007,6 @@ Transrate:
 Compress BAM files
 
 
-
 ## To do
 
 Rerunning CD-HIT w/o AllSamples transcripts:
@@ -16020,10 +16019,30 @@ Continue work on zero-regions code for Bamboozle
 
 
 
+# 9 March 2018
+
+## RO5 transcriptome
+Running Transrate on last night's CD-HIT results
+* Depending on results, re-run CD-HIT? Aim was 40k transcripts, but 97% CD-HIT was only down to 67k...
+* Transrate running on DNA
+
+* Running CD-HIT for 96% and 95% on Annotation-1
+
+
+## A2W Remapping
+Remapped with same % mapping as previously
+
+
+## Nitrogen metabolism
+Re-checking genomes with targets suggested in email
+* tBLASTn of anammox genes in Kordia and Parvi found nothing
 
 
 
-
+## To do
+RERUN TRANSRATE on DNA for CD-HIT 98
+* Then run the 96 and 95 when complete (rsync over)
+Wait for results of CD-HIT on Annotation-1
 
 
 

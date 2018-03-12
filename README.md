@@ -16037,12 +16037,49 @@ Remapped with same % mapping as previously
 Re-checking genomes with targets suggested in email
 * tBLASTn of anammox genes in Kordia and Parvi found nothing
 
-
-
 ## To do
 RERUN TRANSRATE on DNA for CD-HIT 98
 * Then run the 96 and 95 when complete (rsync over)
 Wait for results of CD-HIT on Annotation-1
+
+
+
+
+# 12 March 2018
+
+## To do
+DONE. Complete Fucus data in readme
+DONE. Set up S. marinoi respiration repository on GitHub
+  * Also work out respiration details/meet with Anna
+3. Debug code
+4. Start another round of bacterial genome correction?
+  * This should probably wait until the annotation is running?
+
+
+
+
+* Use HMMER to look for the meiosis proteins?
+
+Re: nitrogen assimilation
+* UniProt has gene sequences backed up by experimental evidence. Use to confirm results from our bacteria?
+* DISSIMILATORY are the genes we're after
+  * No evidence as far as I can see; attempt HMM search?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -16055,15 +16055,26 @@ DONE. Set up S. marinoi respiration repository on GitHub
 4. Start another round of bacterial genome correction?
   * This should probably wait until the annotation is running?
 
-
-
-
 * Use HMMER to look for the meiosis proteins?
 
-Re: nitrogen assimilation
+Re: nitrogen metabolism
 * UniProt has gene sequences backed up by experimental evidence. Use to confirm results from our bacteria?
 * DISSIMILATORY are the genes we're after
   * No evidence as far as I can see; attempt HMM search?
+
+
+# 13 March 2018
+
+## Nitrogen metabolism in S. marinoi
+
+Need to devise new search strategies for the dissimilatory genes
+
+
+## S marinoi RO5 assembly
+
+Determine the nature of the 'short-name' contigs - Repeats? Circular?
+
+See Blast directory and directory 13
 
 
 

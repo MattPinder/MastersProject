@@ -16077,6 +16077,21 @@ Determine the nature of the 'short-name' contigs - Repeats? Circular?
 See Blast directory and directory 13
 
 
+# 14 March 2018
+
+Check short contigs
+* Most have been accounted for, two unknowns
+
+* Investigate possibility of diatom plasmids??
+
+
+
+Nitrogen metabolism
+* Still no sign of dissimilatory pathways in Skeletonema; devise alternative strategies
+
+
+
+
 
 
 

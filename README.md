@@ -16085,9 +16085,48 @@ Check short contigs
 * Investigate possibility of diatom plasmids??
 
 
-
 Nitrogen metabolism
 * Still no sign of dissimilatory pathways in Skeletonema; devise alternative strategies
+
+
+# 15 March 2018
+
+G+C content of S. marinoi primary contigs - 45.3%
+* Compared to P. tricornutum - 48.8432% (or 47% based on centromere paper?)
+* Compared to T. pseudonana - 46.905%
+* Compared to F. solaris - 45.6%
+
+## Short contigs
+
+Unlikely to be plasmids, as no evidence that they appear in centric diatoms?
+
+
+## Nitrogen metabolism
+
+No obvious signs in Phaeodactylum or Thalassiosira
+* Again, is there a way to tell apart assimilatory and dissimilatory (and respiratory) genes?
+  If the diatom system works in the same way as fungi, then the same genes may be performing
+  these differing functions depending on context...
+
+* Generated an HMM for p450nor based on paper "Detection and Diversity of Fungal Nitric Oxide Reductase
+  Genes (p450nor) in Agricultural Soils", yielded some results although the E values were lower than for
+  the initial P450 search (but, bear in mind that the model was generated using fungal sequences)
+
+
+## For later investigation!
+
+"The acetate-generating enzyme of Entamoeba, acetyl-CoA synthase (ADP forming), is a comparatively rare enzyme
+among eukaryotes, but the same enzyme is used in the core energy metabolism of Giardia intestinalis, and
+homologs occur in the genome of the diatom Thalassiosira pseudonana, in apicomplexan genomes (several
+Plasmodium species and Cryptosporidium muris), in the stramenopile Blastocystis hominis, and in the
+excavate taxon Naegleria gruberi."
+(Biochemistry and Evolution of Anaerobic Energy Metabolism in Eukaryotes: MMBR, Muller et al, 2012)
+
+
+
+
+
+
 
 
 

@@ -16123,6 +16123,16 @@ excavate taxon Naegleria gruberi."
 (Biochemistry and Evolution of Anaerobic Energy Metabolism in Eukaryotes: MMBR, Muller et al, 2012)
 
 
+# 16 March 2018
+
+Waiting on hmmscan...
+
+
+Bamboozle - GC content calculations have been fixed
+* Need to round down the number of decimal places, otherwise the output looks messy
+
+
+
 
 
 

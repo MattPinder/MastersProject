@@ -16132,10 +16132,47 @@ Bamboozle - GC content calculations have been fixed
 * Need to round down the number of decimal places, otherwise the output looks messy
 
 
+# 19 March 2018
+
+## Nitrogen metabolism
+
+No good hits found using Pfam HMMscan; try using TIGR database instead
+* TIGR database appears to be even worse!?
+* Is it worth trying others, e.g. HAMAP?
+
+* Check with Anna if she has enough for her application as-is, otherwise may need to discuss other approaches
 
 
+## Meiosis genes
+
+Use HMMs to search for MUS81
+
+Three candidates identified:
+* Sm_00003301-RA (may be ERCC4 instead)
+* Sm_00027161-RA
+* Sm_00000006-RA
 
 
+## RO5 transcriptome - expression analysis
+
+Software: edgeR?
+* See also `/nobackup/data1/mtop/projects/Zebrafish_expression_silver_2/zebrafisk/analysis`
+  * In particular workflow.R
+  * NB. Batch effect may be complicated?
+* See also: https://bioinformatics-core-shared-training.github.io/cruk-bioinf-sschool/Day3/rnaSeq_DE.pdf
+
+* Check notes from Emil's sessions
+
+## Fucus
+
+Map Fucus reads to `/proj/data13/Fucus_vesiculosus_genome_project/03_Blast/contaminants`, and retry assembly
+with only the unmapped reads (i.e. the non-contaminant reads)
+
+
+## ST54 bacteria
+
+Run/check bacterial corrections - Kordia and Parvi
+* Kordia running, start Parvi after completion
 
 
 

@@ -16167,6 +16167,7 @@ Software: edgeR?
 
 Map Fucus reads to `/proj/data13/Fucus_vesiculosus_genome_project/03_Blast/contaminants`, and retry assembly
 with only the unmapped reads (i.e. the non-contaminant reads)
+* Mats is currently running the contaminant BLAST
 
 
 ## ST54 bacteria
@@ -16175,12 +16176,52 @@ Run/check bacterial corrections - Kordia and Parvi
 * Kordia running, start Parvi after completion
 
 
+# 20 March 2018
+
+## RO5 differential expression
+
+Should I map reads to the genome or the transcriptome?
+* Transcriptome, as we have it available
+* Using bowtie2 mapper, as each isoform has a different entry in the fasta file so a splice-aware
+  mapper isn't strictly required
+
+How to get from mapping to reading into edgeR?
+* Need to calculate raw expression values
+
+Should end up with a table like:
+	Ctrl	WT_1	WT_2	WT_3	WT_4	10_1	...
+Trns1	1	2	3	4	5	6	...
+Trns2	2	3	4	5	6	7	...
+Trns3	3	4	5	6	7	8	...
+Trns4	4	5	6	7	8	9	...
+...	...	...	...	...	...	...	...
+
+* Should unpaired data be included?
+  * Need to run fastqc on Singles, then MultiQC to check quality
+
+Installed `htseq-count` to extract the number of mapped reads per transcript, BUT opting for featureCounts now
+
+
+Workflow so far:
+* Ongoing mapping of reads using Bowtie2; the rest have been queued
+* Opting to use featureCounts to get the table of features; script is ready when the jobs are finished
+
+Next:
+* Read this into R when able
+  * R package edgeR has now been installed following the instructions at
+    http://bioconductor.org/packages/release/bioc/html/edgeR.html
+  * May still be issues...
 
 
 
 
 
 
+
+
+
+* Kallisto + sleuth?
+  * Compare to results from Bowtie pipeline
 
 
 

@@ -16212,19 +16212,77 @@ Next:
     http://bioconductor.org/packages/release/bioc/html/edgeR.html
   * May still be issues...
 
-
-
-
-
-
-
-
-
 * Kallisto + sleuth?
   * Compare to results from Bowtie pipeline
 
 
+# 21 March 2018
 
+## RO5 differential expression
+
+Reads have been mapped, now run featureCounts
+
+edgeR has been installed locally; might be worth doing an Albiorix-wide install?
+* Also install NBPSeq?
+
+* edgeR installed for v3.3.2 of R:
+  * source("https://bioconductor.org/biocLite.R")
+  * biocLite("edgeR")
+* Also had to install qvalue using this method as a dependency of NBPSeq
+* NBPSeq itself was installed using the local install method below:
+	(For local install, see this example: https://www.r-bloggers.com/installing-r-packages/)
+	> install.packages("ggplot2", lib="/data/Rpackages/")
+	> library(ggplot2, lib.loc="/data/Rpackages/")
+
+* Note: See `keep` line in R code, may be set too high?
+  * Should DN18489_c0_g1_i1 be kept, for example?
+
+
+Based on results of the MDS plot:
+* First dimension separated by condition
+  * WT and MAR cluster; relatively nearby to the 10 and 509 cluster; 297 distant from all of them
+* Second dimension separated by sample
+  * Sample 1 is consistently ~far from the others
+
+Note: When generating design matrix, batch 1 is missing from the table; is this normal?
+* Table from Emil's notes suggests so, but seems odd...
+
+Based on results of the BCV plot:
+* Apparently a Common Dispersion of 0.2-0.4 is considered reasonable, so ours seems O
+  * http://bioinformatics.cvr.ac.uk/blog/some-key-factors-for-number-of-significant-de-genes/
+* Unsure about Trended Dispersion, but should be okay?
+
+Tables obtained for up- and downregulated genes for each condition
+
+
+# 22 March 2018
+
+Read and check VR application - Check
+
+Investigate potential LoF mutations in A2W data
+* Start by looking through warm mutants, then compare side-by-side with cold mutants
+
+Investigate parallelising variant calling in each strain to identify alleles? Long term project...
+
+Photos of servers in office
+
+
+
+## Searching for mutants
+* 50 samples in A2W dataset, can screen for zero-coverage regions using Bamboozle
+  * ~2.5 minutes per sample per contig, would take ~3 hours for 50 samples
+
+* Take the second column (zero region) and compare between samples?
+
+
+
+
+
+
+* Check results of the above
+  * Start a similar analysis for the chloroplast/mitochondrion?
+
+* Go through the nitrate reductase problem with Mats
 
 
 

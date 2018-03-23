@@ -16276,13 +16276,41 @@ Photos of servers in office
 
 
 
-
-
-
 * Check results of the above
   * Start a similar analysis for the chloroplast/mitochondrion?
 
 * Go through the nitrate reductase problem with Mats
+
+
+# 23 March 2018
+
+## Bamboozle
+
+Make an altered version of the zero_regions function which looks for regions between X and Y coverage, and
+prints their whereabouts
+
+* Do we know which associated contigs correspond to which parts of each primary?
+  * Will need to realign myself at some point
+* Compare primaries and associated
+* LOOK FOR WARM VS COLD SIGNALS!
+
+
+
+
+
+Nitrates
+* tBLASTn of bacterial proteins of interest to Skeletonema genome
+  * Find protein/gene with associated literature and use that protein sequence (confirmed function if paper published)
+    * Check papers from Liz
+    * Align vs. multiple examples from other species and identify conserved regions?
+  * Try to find some for fungi too?
+
+
+Add Bamboozle function!
+
+
+
+
 
 
 

@@ -16294,10 +16294,6 @@ prints their whereabouts
 * Compare primaries and associated
 * LOOK FOR WARM VS COLD SIGNALS!
 
-
-
-
-
 Nitrates
 * tBLASTn of bacterial proteins of interest to Skeletonema genome
   * Find protein/gene with associated literature and use that protein sequence (confirmed function if paper published)
@@ -16305,8 +16301,34 @@ Nitrates
     * Align vs. multiple examples from other species and identify conserved regions?
   * Try to find some for fungi too?
 
-
 Add Bamboozle function!
+
+
+# 26 March 2018
+
+## Genome size estimation
+
+findGSE 3.3.2 - R
+* Requirement for corrected+trimmed, short-read data; removal of organellar reads?
+  * Which data? - RO5 Illumina used for PacBio correction...
+  * Use Alvar's mapping script to remove organellar sequences, then run analyses
+
+* Currently waiting on mapping_filtering.sh (this may fill up data5 so keep checking...)
+  * RESTARTED JOB ON DATA21 AS A TEMPORARY MEASURE; WHEN COMPLETE, MOVE ONLY REQUIRED FILES BACK
+    TO DATA5 (UNMAPPED READS) AND DELETE THE REST
+
+
+## Bamboozle
+
+Change in approach from original idea, following discussion with Mats:
+* Look at file step-by-step in a given window (e.g. 10) (perhaps better to use Samtools approach, per-base cov)
+* Save the coverage values to a list, and for each step, append the new value and remove the first
+* If there is a significant drop (e.g. >50%) within the window, report the positions
+
+
+Check results of test_deletion.py, refine and add to Bamboozle (and close `screen`)
+
+
 
 
 

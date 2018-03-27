@@ -16317,7 +16317,6 @@ findGSE 3.3.2 - R
   * RESTARTED JOB ON DATA21 AS A TEMPORARY MEASURE; WHEN COMPLETE, MOVE ONLY REQUIRED FILES BACK
     TO DATA5 (UNMAPPED READS) AND DELETE THE REST
 
-
 ## Bamboozle
 
 Change in approach from original idea, following discussion with Mats:
@@ -16328,6 +16327,26 @@ Change in approach from original idea, following discussion with Mats:
 
 Check results of test_deletion.py, refine and add to Bamboozle (and close `screen`)
 
+
+# 27 March 2018
+
+## Genome size estimation
+
+Rerun unpaired filtering...
+
+
+## Bamboozle
+
+Running the new (WIP) deletion function on all of the high-coverage samples, then comparing the results
+between warm and cold to try and find anything notable
+
+Check results
+
+## Associated contigs
+
+Has the reference v1.1.1 already been BLASTed to itself? If so, can start finding associated contig positions
+
+Continue in /proj/data5/Skeletonema_marinoi_genome_project/02_Blast/Ref_v1.1.1_to_Ref_v1.1.1
 
 
 

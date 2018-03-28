@@ -16350,6 +16350,61 @@ Continue in /proj/data5/Skeletonema_marinoi_genome_project/02_Blast/Ref_v1.1.1_t
 
 
 
+# 28 March 2018
+
+## Genome size estimation
+
+The unpaired job froze up, so attempting to rerun; if this fails, maybe run with just paired...?
+* Froze again but appears to have completed the final step, just not recompressed the fastq files...
+
+## Bamboozle
+
+Check results of comparison
+* Unless I've made a mistake in handling the files, there appear to be no unique deletions/heterozygous sites
+  in the warm samples...
+
+* Look for hits with, e.g. 10 or 11 hits among the warm samples, rather than all 12
+
+
+## Application
+
+Add preliminary deletion results
+References
+Abstract
+Overall format/readability/relevance
+
+## Transcriptome
+
+Merged transcript annotations with differential expression results, sent to Oskar
+
+
+## Primary vs. Associated contigs
+When complete, convert table to a BED file for the genome browser
+* Continue inputting lengths of primary contigs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

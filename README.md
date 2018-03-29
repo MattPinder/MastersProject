@@ -16406,6 +16406,15 @@ Set the environment to R, or get R to call a list of commands
 
 
 
+Set up the new Bamboozle pipeline to run on ALL samples; may have to use only the high-coverage ones further in the pipeline
+
+
+
+
+
+
+
+
 
 
 

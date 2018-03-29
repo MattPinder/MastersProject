@@ -16383,15 +16383,25 @@ When complete, convert table to a BED file for the genome browser
 * Continue inputting lengths of primary contigs
 
 
+# 29 March 2018
+
+## Warm deletions
+Look for instances of only 10-11 of the 12 samples bearing deletions
+* Finding results when looking at ~8/9 frequency
+  * Once Bamboozle is refined, any way to output such data automatically?
 
 
+NiiA!
+
+## Bamboozle
+Running a test in screen to determine how many frameshift deletion events are present in sample 113 (Warm)
+
+Generate a bed file using `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Org_Skeletonema_marinoi_v1.gff` (Exon feature)
+* Parse the mutation result files (events, for simplicity, not per-site) and determine how many frameshifts appear in 
 
 
-
-
-
-
-
+## R implementation
+Set the environment to R, or get R to call a list of commands
 
 
 

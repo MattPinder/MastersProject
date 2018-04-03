@@ -16399,15 +16399,33 @@ Running a test in screen to determine how many frameshift deletion events are pr
 Generate a bed file using `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Org_Skeletonema_marinoi_v1.gff` (Exon feature)
 * Parse the mutation result files (events, for simplicity, not per-site) and determine how many frameshifts appear in 
 
-
 ## R implementation
 Set the environment to R, or get R to call a list of commands
 
-
-
-
 Set up the new Bamboozle pipeline to run on ALL samples; may have to use only the high-coverage ones further in the pipeline
 
+
+
+# 3 April 2018
+
+A list of Warm frameshift heterozygous/HomoDel mutations has been identified. This list has been fed into a
+Python script to identify which of these fall within exons.
+Note 1: If the mutation is similar to a Cold feature (e.g. 1bp deletion in Warm vs. 2bp deletion in Cold at the
+        same position), this will still be counted as a unique Warm feature.
+Note 2: If it's a >1bp mutation which starts outside an exon but then goes into one, this won't be flagged.
+Note 3: The annotation file referenced is for the pre-corrected (v1.0) S. marinoi annotation, so some positions
+        may be incorrect.
+Note 4: Where there are overlapping exon predictions, only one of these is counted.
+Note 5: This approach will consider all such mutations appearing in Warm samples, even if they appear in only
+        one; this should probably be refined at a later date
+        * Running another instance looking only at mutations in 2+ samples
+
+Examples found in 1+ samples: 46,011
+Examples found in 2+ samples:  5,696
+
+There appear to be a lot of false positives, so the pipeline must be refined
+
+Also - generate .bed file containing positions of associated contigs on the primaries
 
 
 

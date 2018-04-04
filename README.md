@@ -16428,12 +16428,18 @@ There appear to be a lot of false positives, so the pipeline must be refined
 Also - generate .bed file containing positions of associated contigs on the primaries
 
 
+# 4 April 2018
 
+## Kordia + Parvi corrections
+Attempt to rerun the latest iteration of each; last time both failed...
 
+# LoF investigation
+Find the functions of the genes in which the most well-supported Warm-only mutations appear
 
-
-
-
+Can stats be obtained to see whether the flagged Warm mutations are homo- or heterozygous?
+* `samtools depth` works
+* Problem - if there are two consecutive mutations, then samtools merges the two
+  * How to fix this?
 
 
 

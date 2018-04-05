@@ -16440,19 +16440,24 @@ Can stats be obtained to see whether the flagged Warm mutations are homo- or het
 * `samtools depth` works
 * Problem - if there are two consecutive mutations, then samtools merges the two
   * How to fix this?
+  * Check coverage[2]; if it's consecutive, only delete the coverage[0], else delete first two items
 
 
+# 5 April 2018
+
+## Kordia + Parvi corrections
+Parvi shows no corrections BUT its genome size is now 1 bp less than before...?
 
 
+## Heterozygotes vs. homozygous deletions
+Code has been fixed to account for adjacent mutations
+
+exon_check.py and HomoDel_or_Hetero.py have been copied to the Bamboozle directory for later incorporation
 
 
+## To do
 
-
-
-
-
-
-
+Work on abstract for VR application, make it more exciting
 
 
 

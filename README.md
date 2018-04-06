@@ -16454,10 +16454,39 @@ Code has been fixed to account for adjacent mutations
 
 exon_check.py and HomoDel_or_Hetero.py have been copied to the Bamboozle directory for later incorporation
 
-
 ## To do
 
 Work on abstract for VR application, make it more exciting
+
+
+# 6 April 2018
+
+## Kordia and Parvi
+
+* Parvi q5 same as q7; one more round to see if it reverts to q6?
+* Kordia still changing; go up to 10 and then decide on a version?
+
+* Parvi has stabilised between two variants; align, find the variant and determine which one makes the most sense,
+  most likely the one that doesn't represent a frameshift
+  * Then re-annotation that one
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -16466,19 +16466,25 @@ Work on abstract for VR application, make it more exciting
 * Parvi q5 same as q7; one more round to see if it reverts to q6?
 * Kordia still changing; go up to 10 and then decide on a version?
 
-* Parvi has stabilised between two variants; align, find the variant and determine which one makes the most sense,
-  most likely the one that doesn't represent a frameshift
+* Parvi has stabilised between two variants; align, find the variant and determine which one makes the most
+  sense, most likely the one that doesn't represent a frameshift
   * Then re-annotation that one
 
 
+# 9 April 2018
 
+## Kordia and Parvi
 
+* Kordia - Try another round of correction
+* Parvi - Determine which version of the sequence gives the complete, non-frameshifted gene
+  * Go with v5; attempt a Prokka annotation
+  * Despite the Quiver corrections having reached a 'steady state', there's relatively little difference in
+    the Annotations; perhaps Pilon correction IS required
+    * If that's the case, where is the ST54 Illumina data?
+      * `/proj/data21/Skeletonema_marinoi/Genome/skeletonema_[1-3]`
+      * Also `skeletonema_MP`, but this hasn't been QCed by us, only SLL...
 
-
-
-
-
-
+* Running Pilon round 1 on Parvi; consider running some Pilon tests on Kordia as it is unlikely to reach a steady state...
 
 
 

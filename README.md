@@ -16487,6 +16487,45 @@ Work on abstract for VR application, make it more exciting
 * Running Pilon round 1 on Parvi; consider running some Pilon tests on Kordia as it is unlikely to reach a steady state...
 
 
+# 10 April 2018
+
+## Kordia and Parvi
+
+* Check Parvi Pilon 1
+  * 198 corrections (188 ins, 10 subs)
+  * Running round 2
+
+* Figure out what to do with Kordia
+  * Chosen three to go forward with, to see whether corrections convergee
+    * Shortest
+    * The one with the least number of corrections in the subsequent round
+    * One of the joint longest
+
+## Bamboozle
+
+Merge the two new features into Bamboozle
+* Done, although the two newly-added features should be incorporated into an existing function at some point to
+  remove the requirement for intermediate files
+
+
+## To do
+* Continue working on Pilon corrections
+* Look at Bjorn's R script and see if it can be fixed (Mats thinks it can be wrapped in a Bash script?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

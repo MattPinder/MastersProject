@@ -16513,6 +16513,31 @@ Merge the two new features into Bamboozle
 * Look at Bjorn's R script and see if it can be fixed (Mats thinks it can be wrapped in a Bash script?)
 
 
+# 11 April 2018
+
+## Kordia and Parvi
+
+* Kordia
+  * Check round 2 of Pilon correction attempts
+
+
+
+* Parvi
+  * Check latest round of Pilon corrections
+
+
+## Bamboozle
+
+Removing some redundancy from the code by defining functions for repeated chunks of text
+* Print functions have been compressed using the new print syntax in Python 3 (https://www.python-course.eu/python3_print.php)
+* Also altered the readme to be more readable
+
+
+
+
+
+
+
 
 
 

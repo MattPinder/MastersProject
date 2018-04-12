@@ -16520,8 +16520,6 @@ Merge the two new features into Bamboozle
 * Kordia
   * Check round 2 of Pilon correction attempts
 
-
-
 * Parvi
   * Check latest round of Pilon corrections
 
@@ -16533,16 +16531,52 @@ Removing some redundancy from the code by defining functions for repeated chunks
 * Also altered the readme to be more readable
 
 
+# 12 April 2018
+
+## Fucus filtering
+
+A.Blomberg_15_20 and A.Blomberg_16_15 failed because the files were already unzipped
+* Rerun with unzipped file extension
+* Then recompress these unzipped files...
+* Note: mapping_filtering does not output zipped files, therefore despite the file extension,
+  the .fastq.gz files weren't actually compressed...
+
+* Note: mapping_filtering.sh contains a bug whereby if the input file is in .gz format, the resultant
+  UNCOMPRESSED output still bears the .gz file extension. Can this be easily fixed?
+  * https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash
+    * The script currently uses a filename extraction format that deals with 'unpredictable file extensions'
 
 
+* Convert the others from fastq to fasta to conserve space
+  * _15_01 - ongoing...
+  * _15_17 - script ready...
+  * _16_07_1 - script ready...
+  * _16_07_2 - script ready...
 
+  * _15_20 - 
+  * _16_15 - 
 
+Continue conversions and ensure the rerun of the two failures worked, then transfer
 
+## Kordia and Parvi
 
+* Kordia
+  * Still ~50 corrections occurring per sample; Q15 has dropped to ~2,000 bp smaller than the other two
+  * Most of the corrections made are consistent between the three assemblies...
 
+* Parvi
+  * Consistently showing 2 substitutions, but not in exactly the same positions, just in the same region...
+  * As this isn't pure bacterial data, it could be a problem with low coverage... See whether earlier corrections
+    result in premature stop codons; if not, accept an earlier correction?
+    * Go up to 10 attempts, then stop if it hasn't reached a stable state
+  * Iterations 8 and 9 were identical
+    * **Final iteration of Parvi - 5x Quiver, 8x Pilon
+      * Perhaps attempt an annotation using only the first round of Pilon?
+      * Avoids any issues of 'overcorrection'
+    * The differences between Pilon8 and Pilon1 are all within the 23S rRNA, so coding regions aren't affected;
+      can fix one of the GenBank files, then use whichever fasta file is decided on
 
-
-
+  * There are some issues with the formatting of the current .tbl file (on local machine) - FIX!
 
 
 

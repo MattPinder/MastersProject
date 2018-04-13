@@ -16548,13 +16548,13 @@ A.Blomberg_15_20 and A.Blomberg_16_15 failed because the files were already unzi
 
 
 * Convert the others from fastq to fasta to conserve space
-  * _15_01 - ongoing...
-  * _15_17 - script ready...
-  * _16_07_1 - script ready...
-  * _16_07_2 - script ready...
+  * _15_01 - done
+  * _15_17 - ongoing...
+  * _16_07_1 - done
+  * _16_07_2 - ongoing...
 
-  * _15_20 - 
-  * _16_15 - 
+  * _15_20 - done
+  * _16_15 - ongoing...
 
 Continue conversions and ensure the rerun of the two failures worked, then transfer
 
@@ -16570,7 +16570,7 @@ Continue conversions and ensure the rerun of the two failures worked, then trans
     result in premature stop codons; if not, accept an earlier correction?
     * Go up to 10 attempts, then stop if it hasn't reached a stable state
   * Iterations 8 and 9 were identical
-    * **Final iteration of Parvi - 5x Quiver, 8x Pilon
+    * **Final iteration of Parvi - 5x Quiver, 8x Pilon**
       * Perhaps attempt an annotation using only the first round of Pilon?
       * Avoids any issues of 'overcorrection'
     * The differences between Pilon8 and Pilon1 are all within the 23S rRNA, so coding regions aren't affected;
@@ -16579,8 +16579,27 @@ Continue conversions and ensure the rerun of the two failures worked, then trans
   * There are some issues with the formatting of the current .tbl file (on local machine) - FIX!
 
 
+# 13 April 2018
+
+## To do
+* Install Platanus on Triolith
+* Check Kordia corrections
+* Find way to reformat Parvi .tbl file for tbl2asn (laptop is most up-to-date)
+  * Change .fst file to be used to the q5p8 version (i.e. no more corrections)
+* Continue converting filtered Fucus fastq files to fasta, generate md5sums, compress and transfer
+  * Ongoing, two more to run; ensure original fastq/fq files are compressed to save space
+* Check progress of Platanus on Hebbe
+  * Still running; still at k=32 step...
+  * `top` doesn't show that Platanus is running...
+  * Usage of local is at 761G; if this hasn't changed soon, change the max memory usage parameter to
+    900G rather than 1000G, just in case this has caused issues
+
+* dada2 installation
+  * Can this be achieved on the Ubuntu machine?
 
 
+* Formatting of ParviSMSX.tbl still ongoing; is there a faster way to reformat tbl files, i.e. reorder
+  the rows in an entry?
 
 
 

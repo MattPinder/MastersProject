@@ -16603,7 +16603,19 @@ Continue conversions and ensure the rerun of the two failures worked, then trans
 
 
 
+# 16 April 2018
 
+## Platanus
+
+Job on Hebbe failed due to 'node failure'; resubmitted and waiting...
+
+Transferring filtered data to Triolith, once complete can write submission script for Slurm
+
+Job has been submitted on Triolith; once it is submitted, keep an eye on it to ensure syntax was correct...
+
+## Parvi .tbl file
+
+Continue reformatting
 
 
 

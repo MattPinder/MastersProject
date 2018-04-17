@@ -16618,6 +16618,30 @@ Job has been submitted on Triolith; once it is submitted, keep an eye on it to e
 Continue reformatting
 
 
+# 17 April 2018
+
+## Platanus
+
+Waiting on return of jobs on both Triolith and Hebbe
+
+## Parvi/Kordia
+
+Check requirements for proposing a new name for species
+
+* Run more Kordia corrections?
+* Parvi annotation encountering issues re: RNAs when attempting frameshift checker...
+  * Work on the corrections from the other tests...
+
+
+
+
+
+
+
+
+
+
+
 
 
 

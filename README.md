@@ -16633,12 +16633,26 @@ Check requirements for proposing a new name for species
   * Work on the corrections from the other tests...
 
 
+# 18 April 2018
 
+## R
 
+Check R script
 
+## Parvi/Kordia
 
+* Continue Parvi annotation corrections
+  * Features of cspA ncRNA?
+* Try more corrections on Kordia
+  * Same corrections are now happening to each sample, BUT why are they all still different sizes?
+* Check requirements for proposing a new name for species
 
+## Platanus
 
+Check job progress on Triolith and Hebbe
+* Still seems to be going? Triolith job may be in danger of timing out as only set to 3(?) days
+  * Smaller dataset than the Hebbe job though so might be okay
+  * Triolith job still going, Hebbe may have stalled; Triolith may run out of time though...
 
 
 

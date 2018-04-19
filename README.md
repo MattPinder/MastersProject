@@ -16655,6 +16655,51 @@ Check job progress on Triolith and Hebbe
   * Triolith job still going, Hebbe may have stalled; Triolith may run out of time though...
 
 
+# 19 April 2018
+
+## R
+Bjorn now appears to have the data he requires
+
+## Platanus
+Both jobs seem to be running, albeit slowly; request for time extension sent to Triolith
+* Time has been extended for another 3 days - 6 days maximum
+
+## Parvi/Kordia
+* Check Kordia results and alignment
+
+* Continue Parvi annotation checks; specifically, cspA ncRNA overlap...
+  * cspA ncRNAs have been deleted, as the exact span is unknown
+
+* 'Parvi' classification
+  * SILVA places it in Alphaproteobacteria>Parvibaculales>Parvibaculaceae>Mf105b01
+    * Corresponds to the stain's suspected identity - [Alpha proteobacterium Mf 1.05b.01](https://www.ncbi.nlm.nih.gov/nuccore/NZ_BAOK01000001.1)
+    * Can't find much information on taxon Parvibaculales? Primarily appears in SILVA...
+  * According to NCBI, Parvibaculum belongs to Alphaproteobacteria>Rhizobiales>Rhodobiaceae
+    * When searching Parvi's 16S sequence in BLASTn, 88/101 hits appear in Rhizobiales; some of the top hits
+      appear in Rhodobiaceae
+  * Also rerunning PhyloPhlAn for 'Parvi''s new annotation (.faa file from initial annotation, pre-corrections)
+
+
+* 'Parvi' paper
+  * Running RS_Resequencing.1 to get final stats for read coverage on Parvi
+
+## Running jobs
+
+* Annotation-4 - Kordia Pilon 6
+* high_mem - Parvi in PhyloPhlAn
+* node0 - ClustalW2 on Kordia
+
+* Hebbe - Fucus assembly
+* Triolith - filtered Fucus assembly
+
+
+
+
+
+
+
+
+
 
 
 

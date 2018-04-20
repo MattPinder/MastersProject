@@ -16693,17 +16693,38 @@ Both jobs seem to be running, albeit slowly; request for time extension sent to 
 * Triolith - filtered Fucus assembly
 
 
+# 20 April 2018
+
+## Fucus
+Both jobs still running...
+
+## Parvi PhyloPhlAn
+
+Parvi still forms a clade with Parvibaculum; download all Rhizobiales from NCBI
+* Too few Rhodobiaceae species on NCBI to form a good tree
+* Also download Alpha proteobacterium Mf 1.05b.01 due to its similarity to Parvi
+* Require an outgroup - Roseovarius mucosus and Loktanella vestfoldensis (SMR# strains)
+  * From another order of the same class
+
+## Kordia
+
+Corrections still ongoing; despite correction convergence between the three samples,
+there are still 50+ corrections in each round
+* Stop at 10 iterations?
 
 
 
+## To check
 
+Double-check DoubleKO papers re: diatoms and biofuels?
+* Skeletonema is apparently a poor biofuel candidate, could this be improved via double KO?
 
+Email NCBI re: PARVISMSX_00445/6?
+* In-frame stop codon but domain is intact, so still functional?
 
-
-
-
-
-
+Continue checking potential truncations in Parvi
+* Start from 01010
+https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi?job_key=JSID_01_340028_130.14.22.10_9000__frame_shifts
 
 
 

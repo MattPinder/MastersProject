@@ -16712,8 +16712,6 @@ Corrections still ongoing; despite correction convergence between the three samp
 there are still 50+ corrections in each round
 * Stop at 10 iterations?
 
-
-
 ## To check
 
 Double-check DoubleKO papers re: diatoms and biofuels?
@@ -16727,17 +16725,43 @@ Continue checking potential truncations in Parvi
 https://www.ncbi.nlm.nih.gov/genomes/frameshifts/frameshifts.cgi?job_key=JSID_01_340028_130.14.22.10_9000__frame_shifts
 
 
+# 23 April 2018
+
+## Fucus
+Jobs on both Triolith and Hebbe timed out, and now I cannot submit to Triolith again for some time as I've used
+too much of my allocated core hours in too short a time.
+* Any improvement I can make to my workflow on Hebbe??
 
 
+_15_01 - remove anything below 120bp (quality OK)
+_15_17 - remove anything below 150bp (quality OK)
+_16_07 - remove anything below 295bp (quality..?)
 
+Removing shorter reads and converting from fastq to fasta
 
+## Parvi
 
+Find papers regarding formalities of describing new taxa
+* E.g. http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.02710-0#tab2
+* http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.000778
+  * New taxa must be published in the IJSB/IJSEM
+  * See appendix 11 re: Candidatus
+    * More than just the genome sequence is required; would pathway analysis be sufficient?
+      * Or even just its association with Skeletonema?
+* Regarding use of only genome data for classification: http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.002516#tab2
+  * Calculation of OGRI + phylogenomic treeing are required (treeing can be achieved with PhyloPhlAn)
 
+Parvi itself is ~ready to go aside from naming and classification
 
+* Double check the marker gene comparison job for Old vs New Parvi
 
+## Kordia
 
-
-
+Running round 8 of corrections; round 7 seems to be bringing the total number of corrections down
+* Clustal alignment attempt has frozen
+* Looking at the sequences side-by-side, single-base differences start to appear around 2,645,200
+  * Disalignment starts around 2,651,780
+  * Most of the first half of the sequence is okay
 
 
 

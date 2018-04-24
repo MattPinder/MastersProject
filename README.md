@@ -16764,6 +16764,56 @@ Running round 8 of corrections; round 7 seems to be bringing the total number of
   * Most of the first half of the sequence is okay
 
 
+# 24 April 2018
+
+## Fucus
+
+* _15_01 - 69.2% of reads saved; running FastQC
+  * Quality seems fine, proceed
+* _15_17 - 79.7% of reads saved; running FastQC
+  * Quality seems fine, proceed
+* _16_07 - only <10% of reads saved; rerunning with a lower threshold
+
+
+## Parvi
+
+All issues should now be addressed; finalise classification
+* Compare nucleotide sequences of marker genes
+
+## Grant application
+
+Check through latest grant application
+
+
+## Server configuration
+
+ProLiant DL170h G6
+* Problems re: memory configuration, RAM chip compatibility...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -16774,7 +16774,6 @@ Running round 8 of corrections; round 7 seems to be bringing the total number of
   * Quality seems fine, proceed
 * _16_07 - only <10% of reads saved; rerunning with a lower threshold
 
-
 ## Parvi
 
 All issues should now be addressed; finalise classification
@@ -16784,14 +16783,42 @@ All issues should now be addressed; finalise classification
 
 Check through latest grant application
 
-
 ## Server configuration
 
 ProLiant DL170h G6
 * Problems re: memory configuration, RAM chip compatibility...
 
 
+# 25 April 2018
 
+## Fucus
+
+* 15_01
+* (120*(133,085,157*2))/1,200,000,000		26.6x
+  * Increase reads - 118+
+  * Running...
+
+* 15_17
+* (150*(285,302,301*2))/1,200,000,000		71.3x
+  * Reduce reads - 151 only
+  * Running...
+
+* 16_07
+* (290*(14,982,190*2))/1,200,000,000		7.2x
+  * Increase reads - 285+
+  * Running...
+
+* Job on Triolith now cancelled, as was going to be queued for weeks on account of excessive usage
+
+
+## Parvi
+Something to try - where the similarity of marker genes to non-Alpha species is low, take e.g. Sphingopyxis C-1
+rplB and BLASTn against 'Parvi', in case the problem is misannotation
+* This example was chosen becauuse there was no similarity to the other species usually close to Parvi, such as
+  Phaeomarinobacter, Parvibaculum, Tepidicaulis, etc.
+
+## Kordia
+Final round (?) of Kordia corrections ongoing
 
 
 

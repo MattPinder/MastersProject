@@ -16821,6 +16821,38 @@ rplB and BLASTn against 'Parvi', in case the problem is misannotation
 Final round (?) of Kordia corrections ongoing
 
 
+# 26 April 2018
+
+## Kordia
+Running round 11...
+
+## Fucus
+
+* _15_01
+  * (118*(169,847,154*2))/1,200,000,000		33.4x
+  * 88.4% of reads retained
+
+* _15_17
+  * (151*(239,284,098*2))/1,200,000,000		60.2x
+  * 66.8% of reads retained
+
+* _16_07
+  * (285*(18,991,545*2))/1,200,000,000		9.0x
+  * 26.6% of reads retained
+
+  * (285*(19,377,875*2))/1,200,000,000		9.2x
+  * 27.5% of reads retained
+    * Increase to 260+?
+
+## Attempting GGDC of Parvi vs. other species
+* Alpha proteobacterium Mf 1.05b.01 (NZ_BAOK01000001-NZ_BAOK01000002)
+* Tepidicaulis marinus (NZ_BBIO01000001-NZ_BBIO01000046)
+* Candidatus Phaeomarinobacter ectocarpi (NZ_HG966617)
+* Parvibaculum lavamentivorans (NC_009719)
+
+Calculated ANI value for Parvi vs 'Alpha'; need to calculate for the other close species
+
+
 
 
 

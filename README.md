@@ -16853,6 +16853,45 @@ Running round 11...
 Calculated ANI value for Parvi vs 'Alpha'; need to calculate for the other close species
 
 
+# 27 April 2018
+
+## Fucus
+
+* _16_07
+  * (260*(33,972,889*2))/1,200,000,000		14.7x
+    * 47.6% of reads retained
+  * (260*(34,408,807*2))/1,200,000,000		14.9x
+    * 48.9% of reads retained
+
+  * Looking at the full FastQC graphs, retry with 240+
+
+## Kordia
+
+Round 12 corrections showed only 19 corrections; running round 13...
+
+## Parvi classification
+
+Calculate ANI values vs other close species
+* 'Alpha' - 87.82%
+* T. marinus - 69.06%
+* Ca. P. ectocarpi - 67.02%
+* P. lavamentivorans - 68.17%
+
+Appears to be a new species, though need to find a good metric for genus determination
+* POCP? http://jb.asm.org/content/196/12/2210.full
+* Based on differences between marker genes, seems likely to be a new genus
+
+
+* Run the (uncorrected) GenBank file through Pathway Tools and look for anything from which to draw a genus name
+* Continue comparing the 16S results
+
+
+
+
+
+
+
+
 
 
 

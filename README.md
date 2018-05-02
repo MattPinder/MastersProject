@@ -16886,15 +16886,70 @@ Appears to be a new species, though need to find a good metric for genus determi
 * Continue comparing the 16S results
 
 
+# 1 May 2018
+
+## Fucus
+
+_16_07
+  * (240*(44,383,475*2))/1,200,000,000          17.7x
+  * 62.2% of reads retained
+
+  * (240*(44,462,709*2))/1,200,000,000          17.7x
+  * 63.1% of reads retained
+    * Reduce to 200?
 
 
+# 2 May 2018
+
+## Kordia
+Number of corrections is going up again; try one more, and if they don't go down again, choose an assembly
+* BLASTx of Kordia Q5 3617700-3621400 to see the region still being changed
+  * Seems to be okay...?
+* Check Kordia Q13 3617400-3621100
+  * Seems to be okay
+* Check Kordia Q15 3616100-3619800
+  * Seems to be okay
+
+## Fucus
+_16_07
+  * (200*(57,089,147*2))/1,200,000,000          19.0x
+  * 80.0% of reads retained
+
+  * (200*(56,615,053*2))/1,200,000,000          18.8x
+  * 80.3% of reads retained
+
+Try keeping all data; otherwise the coverage will probably become too low...
+* Attempting a rerun of the assembly
+
+## Parvi
+
+While 16S vs. Tepidicaulis seems to be within the bounds of the same genus, dnaJ is as dissimilar as between
+the other genera under comparison, so fairly sure this is a new genus
+* G+C % is also very different
+* PhyloPhlAn placed it squarely within the Rhizobiales (check), so pretty certain of higher-level placement
+
+Running uncorrected GenBank file through Pathway Tools to try and get a good genus name
+
+Are taxa like this known to associate with diatoms?
+* Alphaproteobacteria - yes (primarily Rhodobacteraceae/Roseobacter-clade)
+* Rhizobiales - yes (Mesorhizobium)
+* Rhodobiaceae - yes (http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0059977)
+  * Very low proportion
+
+16S analysis of all Tepidicaulis vs. Parvi shows clear separation (i.e. the Tepidicaulis form their own group
+apart from Parvi+'Alpha'), but given the lack of additional information, it is hard to justify proposing a
+new genus, and therefore a new species.
+* Name should be Rhodobiaceae sp. strain SMS8?
+  * Or 'Uncultured Rhodobiaceae bacterium clone SMS8'?
+  * Follows on from A. heliothermus SMS3 and A. algicola SMS7
 
 
+Re: Kordia - use format of Ca. Phaeomarinobacter ectocarpi announcement to structure announcement of
+K. septentrionalis
 
+REPORT EXTRA HOLIDAY DAYS
 
-
-
-
+START ON POSTER
 
 
 

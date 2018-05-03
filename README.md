@@ -16939,7 +16939,7 @@ Are taxa like this known to associate with diatoms?
 16S analysis of all Tepidicaulis vs. Parvi shows clear separation (i.e. the Tepidicaulis form their own group
 apart from Parvi+'Alpha'), but given the lack of additional information, it is hard to justify proposing a
 new genus, and therefore a new species.
-* Name should be Rhodobiaceae sp. strain SMS8?
+* Name should be Rhodobiaceae bacterium strain SMS8?
   * Or 'Uncultured Rhodobiaceae bacterium clone SMS8'?
   * Follows on from A. heliothermus SMS3 and A. algicola SMS7
 
@@ -16951,6 +16951,42 @@ REPORT EXTRA HOLIDAY DAYS
 
 START ON POSTER
 
+
+# 3 May 2018
+
+## Parvi/Rhodobiaceae
+Gather data for paper, check format for a not-fully-classified announcement
+* Also need to re-work the relevant files to include the new classification
+  * Rhodobiaceae bacterium strain SMS8
+  * BioSample should be ready to submit
+
+## Poster
+Start formatting Skeletonema poster for Marine Evolution 2018
+
+## Admin
+* Book extra days
+* Reapply for position
+
+## Fucus
+Retrying assembly with smaller dataset; may have crashed again...
+
+## Kordia
+Check latest corrections, otherwise find the best so far and go with that,
+then proceed to annotation
+
+* One of the three 16S sequences is very divergent; if this is true sequence,
+  this is one of the most extreme examples of within-genome 16S divergence
+
+* Discard Q5; this splits a Calx-beta domain protein in two parts, unlike Q13 and Q15
+* Q13 is a local minimum in terms of # of 'top corrections', so go with this?
+  * Comparing K. algicida rRNA operons; the three should not be too dissimilar...
+  * Only ~82% similarity between 1/3 and 2... This seems to be the case regardless of the # of corrections...
+
+* Run Metaxa2 on the other assemblies to test how divergent they are?
+  * This only finds a single instance in each genome... Any other way to automate?
+  * Search using Kordia algicida 16S?
+    * BLASTn?
+  * Only K. algicida and K. septentrionalis seem to have 3 rRNA operons...
 
 
 

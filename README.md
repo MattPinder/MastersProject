@@ -16989,6 +16989,45 @@ then proceed to annotation
   * Only K. algicida and K. septentrionalis seem to have 3 rRNA operons...
 
 
+# 4 May 2018
+
+## Rhodobiaceae bacterium strain SMS8
+
+## Poster
+
+## Admin
+
+## Fucus
+Still ongoing... Keep an eye on this in case it crashes again
+
+## Kordia
+Quivered sequences retain identical 16S sequences, as does Pilon 2; after this point, they begin to diverge
+* Test annotation of Pilon1 and Pilon2, check differences? If Pilon1 is inferior, accept Pilon2?
+
+* The only difference between Q5P1 and Q5P2 is the CalX region
+  * Minor differences between gene number between Q13P1/2 and Q15P1/2
+
+* Accept P1; which Quiver version?
+  * Quiver5? Would bring it in line with Parvi
+  * Proceed with annotation checks of this one, and if there are any obvious issues switch to another
+
+* Going with Quiver5 Pilon1
+
+
+* Check changes required in KorSepSMS9 annotation
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

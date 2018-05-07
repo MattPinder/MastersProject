@@ -17017,11 +17017,30 @@ Quivered sequences retain identical 16S sequences, as does Pilon 2; after this p
 * Check changes required in KorSepSMS9 annotation
 
 
+# 7 May 2018
 
+## Kordia
 
+Coninue checking KorSepSMS9 annotation
+* Double-check marker genes to be 100% certain that this is a new species!!!
+  * Other marker genes are the same between the initial Kordia annotation and the new one, but 16Ss differ,
+    so re-check 16S sequence differences
+  * Running consistency checker...
 
+## Fucus
 
+Still going, albeit slowly; 2 days remaining, but hopefully it has almost passed the slowest steps
 
+## Rhodo SMS8
+
+Ensure details are correct and submit this
+
+## Poster
+
+POSTER!
+
+## To do
+* Check results of submission checker for Kordia
 
 
 

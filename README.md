@@ -17043,6 +17043,42 @@ POSTER!
 * Check results of submission checker for Kordia
 
 
+# 8 May 2018
+
+## Kordia
+Consistency checker still queued...
+* Check manually using results of tbl2asn?
+* Continue checking overlapping genes
+
+## Poster
+Designed altered to try and optimise use of space
+
+## RhodoSMS8
+Still requires submission
+
+## Fucus
+Time in danger of running out...
+* Extension request sent to C3SE support
+* 3 day extension granted
+
+K=92 added to assembly log at 14:38 (May 8)
+* This is 7/14 on the KMER_EXTENSION table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

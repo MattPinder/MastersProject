@@ -17063,19 +17063,22 @@ Time in danger of running out...
 
 K=92 added to assembly log at 14:38 (May 8)
 * This is 7/14 on the KMER_EXTENSION table
+(Connecting kmers for K=92 at 20:54 (May 8))
 
 
+# 9 May 2018
+
+K=132 added to assembly log at 09:06 (May 9)
+Connecting kmers for K=132 at 10:39 (May 9)
 
 
+K=142 added to assembly log at 12:55 (May 9)
 
+K=146 added to assembly log at 16:45 (May 9)
 
+## Kordia
 
-
-
-
-
-
-
+Overlap checks done up to ~01000
 
 
 

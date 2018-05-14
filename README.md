@@ -17081,6 +17081,31 @@ K=146 added to assembly log at 16:45 (May 9)
 Overlap checks done up to ~01000
 
 
+# 14 May 2018
+
+## Fucus
+Assembly - complete
+Scaffolding - complete
+Gap-filling - queued
+
+## Note on local BLAST databases
+Databases can be combined - see .nal file format
+
+## Kordia
+Have checked overlaps in the first ~2,000,000 bp, continue checking the rest
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

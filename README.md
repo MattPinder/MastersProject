@@ -17095,15 +17095,90 @@ Databases can be combined - see .nal file format
 Have checked overlaps in the first ~2,000,000 bp, continue checking the rest
 
 
+# 16 May 2018
+Something to check: Is it possible to extract information from Falcon about which reads were used to assemble
+the primary sequence vs. the associated contigs?
+If so, is it then possible to assemble ONLY the reads which generated the primary sequence, i.e. simulate a
+haploid data set?
 
 
+# 17 May 2018
+Checking progress of Fucus assembly
+* May 17 06:23 - K=42, extracting reads
 
 
+# 18 May 2018
+
+## Fucus
+Progress:
+* May 18 05:33 - K=52, extracting reads
+
+Install AllPaths-LG on Hebbe, run with 550bp library and MP libraries
+* Issues getting AllPaths-LG to install...
+  * Possibly the same issue as before
+    * Installed(?) Picard and graphviz
+    * Loaded GCC
+  * make[1]: *** [CleanEfasta.o] Error 1
+  * make[1]: Leaving directory `/c3se/users/pinder/Hebbe/Assemblers/allpathslg-52488/src'
+  * make: *** [all-recursive] Error 1
+
+## Strange sequence
+Very high coverage sequence found in power plant samples, but what is it?
+* Still not sure... possibly a novel virus...?
+  * Are there any signatures of marine viruses?
 
 
+# 21 May 2018
+
+## Fucus
+Progress: May 20 12:22 - K=72, extracting reads
+Progress: May 21 09:35 - K=82, saving additional kmers
+Progress: May 21 11:18 - K=82, COVERAGE_CUTOFF = 32
+Progress: May 21 15:02 - K-82, loading kmers...
+* 1.5 days remaining; at this rate, may need to retrim the data...
+
+Retry installation of AllPaths-LG
+* To get dependencies, load:
+  * `module load GCC/6.4.0-2.28`
+  * `module load GMP/6.1.2`
+  * `module load Java/1.8.0_162`
+  * dot from the graphviz package is installed
+* Same error as previously...
+  * Internet search suggests that perhaps GCC is too new? But older versions of GCC don't allow me to load GMP
+
+  * Errors from within `make` output:
+    * `error: reference to 'align' is ambiguous`
+      * Very frequent error
+    * `error: 'align' has not been declared`
+    * `error: template argument 1 is invalid`
+    * `error: 'a' was not declared in this scope`
+    * `error: ambiguous overload for 'operator<<' (operand types are 'std::ostream 
+      {aka std::basic_ostream<char>}' and 'int')`
+    * `error: request for member 'pos1' in 'al', which is of non-class type 'const int'`
+      * Several similar errors to this
+    * `error: 'int Bandwidth(alignment&)' redeclared as different kind of symbol`
+    * `error: variable or field 'TrimAlignmentFront' declared void`
+    * `error: expected primary-expression before 'int'`
+    * `error: variable or field 'TrimAlignmentBack' declared void`
+    * ...
+    * `make[1]: *** [CleanEfasta.o] Error 1`
+    * `make[1]: Leaving directory `/c3se/users/pinder/Hebbe/Assemblers/allpathslg-52488/src'`
+    * `make: *** [all-recursive] Error 1`
+
+* Compressing some of the uncompressed Fucus files to save space on data21
+
+## Strange sequence
+Copy Skele Illumina data at `/proj/data5/Skeletonema_marinoi_12kbp_sequence/00_data/A.Blomberg_17_16-P8511`
+to data21
+* Filter/trim this data and assemble it in e.g. Platanus, and look for strange sequence
+
+* Compressing some of the uncompressed data to save space before transfer
+
+* Library is PCR-free, but sequence duplication levels are very high...
+  * Is it worth running remove_PCR_duplicates anyway?
 
 
-
+(Backup to data21 ongoing in `screen`)
 
 
 

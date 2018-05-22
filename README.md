@@ -17134,7 +17134,8 @@ Very high coverage sequence found in power plant samples, but what is it?
 Progress: May 20 12:22 - K=72, extracting reads
 Progress: May 21 09:35 - K=82, saving additional kmers
 Progress: May 21 11:18 - K=82, COVERAGE_CUTOFF = 32
-Progress: May 21 15:02 - K-82, loading kmers...
+Progress: May 21 15:02 - K=82, loading kmers...
+Progress: May 21 20:17 - K=82, extracting reads
 * 1.5 days remaining; at this rate, may need to retrim the data...
 
 Retry installation of AllPaths-LG
@@ -17177,8 +17178,67 @@ to data21
 * Library is PCR-free, but sequence duplication levels are very high...
   * Is it worth running remove_PCR_duplicates anyway?
 
-
 (Backup to data21 ongoing in `screen`)
+
+
+# 22 May 2018
+
+## Fucus
+Progress: May 21 20:17 - K=82, extracting reads
+* 15 hours remaining, unlikely to finish...
+
+Run FastQC on the trimmed data and, as before, try to reduce the amount...
+
+AllPaths-LG installation...
+
+## 12 kbp sequence
+PCR-free protocol, but should 'PCR duplicates' be removed?
+
+Check for 12k sequence in all MetaBAT contigs from 'adaptation to warming'
+* BLASTn of 12k sequence vs. all _143 sample bins
+  * Is transposon leaving parts of itself behind as it jumps? Might explain the shorter sequences, perhaps?
+  * Is this a Loviisa-specific element? It doesn't seem to appear in the reference genome...
+
+* When BLASTing, the termini of the query in particular show configurations in other samples which are suggestive of both a circular molecule, and termini with the centre missing
+  * Is this an example of excision of a plant transposon? 'Staggered nicks' are created (~141bp?), the element jumps out, and the nicks are sealed again via mechanisms of DSB repair
+    * Or would the hanging bases be removed rather than repaired...?
+      * Misunderstanding how the repair mechanism works... Nicks generated aren't THAT long
+    * Does this allow for a circular molecule interpretation though? cccDNA?
+  * Reversals happening in middle of query sequence as well
+    * See P8352_115_k141_91228 as an example
+  * The BLAST hits often show 100% identity between samples, which implies conservation between individuals? Which implies functionality?
+    * Or recent origin...
+    * But, appears in both old and new samples
+
+* Cut + reversal of the 12k sequence to check whether the reads support a circular molecule
+
+* Try aligning the 12k and 11k sequences?
+
+* Check two apparent S. marinoi (bacterial?) genes in the sequence (based on mapping reads)
+  * 6300-6950 (hits middle of protein 7)
+  * 8350-9250 (overlaps proteins 9 and 10)
+
+* Use splice-aware aligner (TopHat) to map RO5 transcriptome data to the strange sequence
+
+## Ongoing
+* FastQC of the filtered Fucus data for further filtering
+  * Job unlikely to complete...
+* Pre-emptive 'PCR deduplication' of RO5 Illumina data
+* TopHat of RO5 RNAseq vs. 12kbp sequence
+
+* Kordia manual annotation correction
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -17229,6 +17229,26 @@ Check for 12k sequence in all MetaBAT contigs from 'adaptation to warming'
 * Kordia manual annotation correction
 
 
+# 23 May 2018
+
+## 'PCR deduplication' of RO5 Illumina data
+Still ongoing; evidence of just how many 'duplicates' were present
+
+## FastQC of filtered Fucus data
+Length filtering the (contaminant filtered) AB_15_01 and AB_15_17 libraries, trying to get Platanus to assemble
+
+## TopHat of RO5 RNAseq vs. 12kbp sequence
+A single read mapped to the 12k region
+* Seems that this region may not exist in RO5?
+
+Check for presence or absence of 12kbp region in
+* A.Blomberg 17 16 = RO5 (Illumina for Pilon)
+* A.Godhe 16 01 = Eutrophication (Mariager)
+* A.Godhe 17 01 = Warming (Loviisa)
+(* A.Godhe 15 01 is also eutrophication, but low coverage; try mapping later?)
+
+* Map to the entirety of the _143 dataset (not just the 12kbp)
+
 
 
 

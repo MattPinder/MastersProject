@@ -17250,21 +17250,70 @@ Check for presence or absence of 12kbp region in
 * Map to the entirety of the _143 dataset (not just the 12kbp)
 
 
+# 24 May 2018
+
+## 'PCR deduplication' of RO5 Illumina data
+
+Drive ran out of space before this could be completed...
+* Should it be retried elsewhere?
+
+## Length filtering of contaminant-filtered Fucus data
+* Ongoing...
+
+## 12kbp sequence
+Try and identify the 'islands' of high coverage in the sequence
+* Also check coverage/islands in Eutrophication and RO5 Illumina data
+* Note: Region seems to be consistently absent from the Loviisa Warm data; the other groups show inconsistent
+  results
+
+In IGV, compare results of 'mapping to 12kbp only' vs. 'mapping to whole assembly'
+* Does coverage change, i.e. is it inserted in the genome as well?
+  * Interesting pattern - where there is coverage across the whole 12kbp region, the terminal ~100bp shows
+    around double coverage in the 12kbp-only mappinng than when mapped to the whole assembly
+    * Footprints? The phenomenon was noted of the termini appearing fused together in some of the contigs...
+    * _102 - identical coverage(?) from 167-12,477
+      * [166]---[156-9]
+
+Map RO5 data (PacBio, Illumina) to [?] (RO5 ref? A2W refs?)
+
+
+BLAST the end regions with differing coverage (~150bp) to the entire metagenome assembly for that sample
+
+
+(ORI?)
+
+Confirm circularity of S. marinoi circular sequences
+* Cut+reverse + remap
 
 
 
 
 
+Gene models on >376
+* PCD protein 2?
+  * Hits of >97% query cover + 30-60% id to predicted proteins/'pre-rRNA-processing protein TSR4' in diatoms
+  * Hits to PCD protein 2 in e.g. Ectocarpus siliculosus, and NCBI reports a partial conserved domain hit
+* DUF3084 domain-containing protein?
+  * Diatom hits only - T. pseudonana, T. oceanica, P. tricornutum, F. solaris + F. cylindrus
+* Hypothetical protein (no conserved domains)
+  * Best hits to diatoms, some lesser hits to other organisms
+(* Polysaccharide pyruvyl transferase? Mainly hits to bacteria...)
+  (* <70% cover, ~30% id to bacteria)
+* Pyroglutamyl peptidase (PGP)
+  * Hits of 80-90% cover and 30-40% id in diatoms, plants, molds, alga...
+[* Coverage peak corresponds with lack of gene models]
+* Hypothetical protein (no conserved domains)
+  * Two hits - one to T. pseudonana (95% cover/48% id), one to F. solaris (21% cover/34% id)
+(* WD40 domain-containing(?) predicted protein)
+  (* 99% cover/41% id match to T. pseudonana, poorer matches to other organisms)
+(* Many hits to hypothetical proteins in T. oceanica [one hit to T. pseudonana])
+
+(Add organisms!)
 
 
 
 
-
-
-
-
-
-
+Check other diatom genomes for PCD proteins
 
 
 

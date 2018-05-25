@@ -17310,10 +17310,49 @@ Gene models on >376
 
 (Add organisms!)
 
-
-
-
 Check other diatom genomes for PCD proteins
+
+
+# 25 May 2018
+
+## Length filtering of contaminant-filtered Fucus data
+Rerunning in case the two first runs conflicted
+* 
+
+## 12kbp sequence
+
+
+## Potential RO5 circular sequences
+Cut+reverse circular contigs and remap Illumina reads to confirm they're feasibly circular, or just
+misassembled
+* 376 may be the only true circle, looking at my notes...
+
+
+
+BLAST microbiome vs RO5!
+* Most matches very short; except for organelles...
+
+* BLASTx of Skeletonema genome vs. microbiome .faa files
+
+PlasFlow?
+
+.bed file made for location of associated contigs
+Complete Mapping results table!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

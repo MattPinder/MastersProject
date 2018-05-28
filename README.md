@@ -17340,6 +17340,53 @@ PlasFlow?
 Complete Mapping results table!
 
 
+# 28 May 2018
+
+## Fucus
+
+The contaminant+length trims of the Fucus data are the smallest versions of the file thus far; as the previous
+completion took just over the 7-day limit, hopefully this will finish in time...?
+
+## 12kbp circular sequence mapping
+
+In A2W samples where the full 12kbp sequence exists, the 12k-only mapping has higher coverage at the termini
+compared to when mapping to the whole assembly. This seems to imply that the termini are also present in the
+whole assembly - a point where the circular sequence integrates into the genome.
+* Where?
+  * Take an example of this phenomenon - P8352_102
+  * BLAST the terminal ~150bp against the whole assembly to determine the locations
+    * First 150bp + final 150bp
+  * Upload the entire P8352_143 assembly to the Ubuntu machine and compare the mappings
+
+UNABLE TO IDENTIFY WHERE THE SEQUENCE INSERTS RELATIVE TO RO5...
+* The difference in mapping at the ends of the contigs appears to be due to short (~282bp) contigs
+  consisting of ONLY the ends of the 12kb sequence
+
+## Fucus
+
+Update READMEs!
+
+Run AllPaths-LG on Albiorix
+* 512Gb memory for a mammalian size genome, the Annotation nodes should be able to run it as
+  Fucus is ~half the size of the human genome!
+* The sequence prep apparently requires standard deviations of fragment/insert size;
+  I've left these blank for now, but are they required...?
+
+STILL RUNNING IN SCREEN!
+
+## Misassemblies
+Go through read mapping of S. marinoi v1.1.1 and determine possible misassemblies; note these in .bed file
+* Possibly tweak Bamboozle to automatically look for these regions
+
+* Continue checking!
+
+## Start writing supplementary regarding these circular sequences
+
+
+
+
+
+
 
 
 

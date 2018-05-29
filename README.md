@@ -17383,10 +17383,28 @@ Go through read mapping of S. marinoi v1.1.1 and determine possible misassemblie
 ## Start writing supplementary regarding these circular sequences
 
 
+# 29 May 2018
+
+## Fucus
+Prep script for AllPathsLG input appears to have errored; retrying
+
+Platanus on Hebbe:
+* May 29 04:32	K = 42, extracting reads
+* 
+
+## Misassemblies
+Is it possible to alter Bamboozle for this purpose?
+* Calculate average read coverage of a contig (excluding the terminal Nbp)
+* Flag regions deviating from this average by >X%
+
+Another thing for Bamboozle - locating heterozygous insertion events
+* PacBio vs Illumina RO5 (~1 year)
 
 
 
-
+* Take full v1.1.1 assembly
+* Reverse the 'circular' contigs and remove originals
+* Bowtie2 mapping
 
 
 

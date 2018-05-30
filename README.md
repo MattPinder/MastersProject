@@ -17400,11 +17400,35 @@ Is it possible to alter Bamboozle for this purpose?
 Another thing for Bamboozle - locating heterozygous insertion events
 * PacBio vs Illumina RO5 (~1 year)
 
-
-
 * Take full v1.1.1 assembly
 * Reverse the 'circular' contigs and remove originals
 * Bowtie2 mapping
+
+
+# 30 May 2018
+
+# Fucus
+Platanus progress:
+* May 29 21:27	K = 52, extracting reads
+* May 30 15:44	K = 62, extracting reads
+
+AllPathsLG progress:
+The problem was arising from trying to pair all four files from the 550 library;
+the input files have now been rewritten so it should work now...
+
+
+# Remapping 'circular' contigs
+Has this worked?
+* Disk ran out of space; rerunning in a temporary directory on another partition
+* Now exceeding memory limit; submitting to Annotation-3 (all 40 cores so no competition with memory)
+
+# To do
+* Continue checking for misassemblies
+* Write up circular sequence checks
+* Write up Fucus READMEs
+* Work on Bamboozle code; incorporate coverage test
+  * Done
+
 
 
 

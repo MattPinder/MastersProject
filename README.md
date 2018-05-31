@@ -17407,7 +17407,7 @@ Another thing for Bamboozle - locating heterozygous insertion events
 
 # 30 May 2018
 
-# Fucus
+## Fucus
 Platanus progress:
 * May 29 21:27	K = 52, extracting reads
 * May 30 15:44	K = 62, extracting reads
@@ -17417,18 +17417,30 @@ The problem was arising from trying to pair all four files from the 550 library;
 the input files have now been rewritten so it should work now...
 
 
-# Remapping 'circular' contigs
+## Remapping 'circular' contigs
 Has this worked?
 * Disk ran out of space; rerunning in a temporary directory on another partition
 * Now exceeding memory limit; submitting to Annotation-3 (all 40 cores so no competition with memory)
 
-# To do
+## To do
 * Continue checking for misassemblies
 * Write up circular sequence checks
 * Write up Fucus READMEs
 * Work on Bamboozle code; incorporate coverage test
   * Done
 
+
+# 31 May 2018
+
+## Circular check
+* Job has completed; rsync to Ubuntu and check
+
+## Fucus
+No movement on the Platanus assembly since May 30 15:44...
+* May 31 15:40	K = 72, loading kmers
+
+Still need to fix 180 library issue in AllPathsLG prep...
+* Seems to be running now...
 
 
 

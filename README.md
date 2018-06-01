@@ -17443,9 +17443,17 @@ Still need to fix 180 library issue in AllPathsLG prep...
 * Seems to be running now...
 
 
+# 1 June 2018
 
+## Circular check
+CHECK THIS!
 
+## Fucus
+* Platanus
+  * May 31 23:12	 K = 72, extracting reads
 
+* AllPathsLG
+  * Still running
 
 
 

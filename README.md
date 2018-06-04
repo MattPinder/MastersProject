@@ -17456,6 +17456,35 @@ CHECK THIS!
   * Still running
 
 
+# 4 June 2018
+
+## Circular checks
+CHECK THIS!
+
+## Fucus
+* Platanus failed AGAIN
+
+* AllPathsLG errored at the step for gap filling
+  * Unzip the fasta files, get read lengths/insert sizes and calculate standard deviations
+    to include in input data...
+  * Perform the calculation for the first library, start unzipping and processing the
+    second when this is done
+
+
+## Sulfitobacter paper
+Prepare for Journal of Genomics for submission at the end of the month
+* Start ~from scratch so as not to risk too much similarity to the Antarctobacter paper
+
+## Checking read coverage of RO5 reference
+Now into the largest 100 contigs...
+
+
+
+
+
+
+
+
 
 
 

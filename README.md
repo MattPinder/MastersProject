@@ -17479,6 +17479,33 @@ Prepare for Journal of Genomics for submission at the end of the month
 Now into the largest 100 contigs...
 
 
+# 5 June 2018
+
+## Check circular contigs
+
+## Fucus
+Calculate relevant standard deviation values
+* 180 library - 6.492137 (mean - 118.9)
+* 180 library (length filtered) - 0.7836127 (mean - 120.4)
+
+* 550 library 1 - 51.87538 (mean - 263)
+* 550 library 2 - 51.7201 (mean - 263.5)
+
+* MPL library - ?
+* MPS library - ?
+
+Regarding file limit on Hebbe - move compressed 'completed' versions to $SNIC_BACKUP?
+
+STILL RUNNING PREP OF FUCUS DATA; CHECK THIS TOMORROW AND PROCEED WITH ASSEMBLY ITSELF
+* One screen still running gzip; check this too
+
+## Sulfitobacter paper
+
+## RO5 read coverage
+
+
+
+
 
 
 

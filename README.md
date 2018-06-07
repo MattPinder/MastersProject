@@ -17504,7 +17504,24 @@ STILL RUNNING PREP OF FUCUS DATA; CHECK THIS TOMORROW AND PROCEED WITH ASSEMBLY 
 ## RO5 read coverage
 
 
+# 6 June 2018
 
+AllPaths-LG queued
+
+
+# 7 June 2018
+
+## Fucus
+
+AllPathsLG running
+* Re: mate pair library stats - map to a previous assembly to obtain
+  insert size and standard deviation
+  * Mapping will be performed when the previous assembly is complete
+
+## Something to consider
+Work on a coccolithophore has suggested that DMSP production is likely to decline
+with increased oceanic CO2 concentration; if this pattern holds true for diatoms,
+is it likely that this will affect the interactions with the microbiome?
 
 
 

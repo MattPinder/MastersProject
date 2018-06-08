@@ -17506,7 +17506,7 @@ STILL RUNNING PREP OF FUCUS DATA; CHECK THIS TOMORROW AND PROCEED WITH ASSEMBLY 
 
 # 6 June 2018
 
-AllPaths-LG queued
+AllPathsLG queued
 
 
 # 7 June 2018
@@ -17522,6 +17522,35 @@ AllPathsLG running
 Work on a coccolithophore has suggested that DMSP production is likely to decline
 with increased oceanic CO2 concentration; if this pattern holds true for diatoms,
 is it likely that this will affect the interactions with the microbiome?
+
+
+# 8 June 2018
+
+## Fucus
+
+AllPathsLG still running
+
+
+
+## Excel
+
+2.5 - 2010
+9.5 - 1970
+19.5 - 1930
+
+Ensure values match /proj/data17/pierre/lowCov_angsd_Dec2017/genic/Results_SNPfilt/*_codingRegs.fst.wins
+
+Tell Anna when this is checked (given that date = depth...)
+* Contigs not labelled as 'revcomp'/'dbAK' in spreadsheet (except top line), but values are correct
+  * Is this a problem?
+
+* contig_8335 and contig_10096_revcomp not in *_codingRegs.fst.wins
+  * Both present in *_exons.fst.wins; do values match up?
+
+
+
+
+
 
 
 

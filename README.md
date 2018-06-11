@@ -17530,8 +17530,6 @@ is it likely that this will affect the interactions with the microbiome?
 
 AllPathsLG still running
 
-
-
 ## Excel
 
 2.5 - 2010
@@ -17547,6 +17545,30 @@ Tell Anna when this is checked (given that date = depth...)
 * contig_8335 and contig_10096_revcomp not in *_codingRegs.fst.wins
   * Both present in *_exons.fst.wins; do values match up?
 
+
+# 11 June 2018
+
+## Fucus
+* Check AllPathsLG - encountered a make error but unclear why...
+  * Deleting results to make space for the mate pair mapping; when complete, enter values values for
+    mate pairs and start again
+  * Note - assembly takes ~2 days
+* Read mapping - database specified incorrectly; retry
+  * `picard CollectJumpingLibraryMetrics I=AB_16_15_MPS.sorted.bam O=AB_16_15_MPS.metrics.txt`
+  * `picard CollectJumpingLibraryMetrics I=AB_15_20_MPL.sorted.bam O=AB_15_20_MPL.metrics.txt`
+  * Claiming that the reads are chimeras, however cannot set CHIMERA_KB_MIN to 'null' as claimed
+    in the documentation
+    * Attempt setting ludicrously high value instead - 999999999
+    * Makes very little difference...
+
+
+## Pieces to write
+* Skeletonema circular contigs supplement
+  * Something to double-check - check the MegaBLAST to see whether any of the 'linear' contigs are
+    actually circular
+
+* Sulfitobacter announcement for JoG
+  * Generate up-to-date Sulfitobacter tree (remember to include an outgroup) - copy Hyphomonas .faa files
 
 
 

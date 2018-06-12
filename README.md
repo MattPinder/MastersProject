@@ -17571,6 +17571,26 @@ Tell Anna when this is checked (given that date = depth...)
   * Generate up-to-date Sulfitobacter tree (remember to include an outgroup) - copy Hyphomonas .faa files
 
 
+# 12 June 2018
+
+## Fucus
+Why is picard not showing statistics for the mate pair libraries...?
+* Try using `CollectInsertSizeMetrics` instead
+  * This seems to have worked! Altered values in `in_libs.csv`
+  * Rerunning library prep prior to retrying AllPathsLG
+
+AllPathsLG queued on Annotation-3
+
+## Pieces to write
+* Continue Skeletonema circular contigs supplement by checking the self-BLAST filtered file
+* Figure out more interesting points to include in the Sulfitobacter paper
+
+
+
+
+
+
+
 
 
 

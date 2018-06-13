@@ -17586,11 +17586,33 @@ AllPathsLG queued on Annotation-3
 * Figure out more interesting points to include in the Sulfitobacter paper
 
 
+# 13 June 2018
 
+## Fucus
+AllPathsLG still queued...
 
+## Sulfitobacter paper
+Determine the percentage similarity of contigs to the other S. pseudonitzschiae genomes,
+to determine novelty of the plasmids vs. existing sequences
 
+## Circular sequences
+Check Megablast to see whether any of the other sequences are likely to be circular (aside from those
+noted by Falcon as such)
+* This won't work! Falcon doesn't produce overlaps so it won't be apparent from self-BLASTing...
+  * Reverse all contigs and remap reads...?
+    * Is there anything to gain from this? Considering the read coverage of many of the existing contigs
+      and assuming from this that there is a lot of misassembly, could we even be confident in the result...?
 
+Considering how widespread the peaks and troughs in contigs are, am I being too harsh in marking these
+features as possible misassemblies...?
+* Should only the very extreme examples be masked as possible misassemblies?
+  * e.g. <20x or >5000x coverage
 
+## To do
+* Update READMEs in Fucus repository
+* Update READMEs in Skeletonema repository
+
+* Continue working on improving the average_coverage_NEW function in Bamboozle to replace average_coverage
 
 
 

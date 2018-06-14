@@ -17615,12 +17615,29 @@ features as possible misassemblies...?
 * Continue working on improving the average_coverage_NEW function in Bamboozle to replace average_coverage
 
 
+# 14 June 2018
+
+## Fucus
+AllPathsLG has now started; should finish ~end of Friday? Possibly longer if the job is successful
+
+## Bamboozle
+Testing whether the new +/- 50% of mode function gives good results
+* Problem - in e.g. 000060F-001-01 and 000047F-001-01, because the mode seems to be 0, ~the whole contig is
+  labelled as 'high coverage'...
+  * Experiment with median instead? This would circumvent this problem, but may create new ones
+  * Or, if the mode is 0, go for the next most common value?
+
+* Running an 'averages' check in `screen`
+  * Might be better to go with the median...?
+
+## Sulfitobacter paper
+Double-check which annotations/pathways are supported by both Prokka and NCBI's pipeline,
+and use these in the paper
 
 
+## To do
 
-
-
-
+Compress Skeletonema data to free up space, if able
 
 
 

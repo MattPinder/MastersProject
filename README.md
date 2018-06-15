@@ -17634,10 +17634,46 @@ Testing whether the new +/- 50% of mode function gives good results
 Double-check which annotations/pathways are supported by both Prokka and NCBI's pipeline,
 and use these in the paper
 
-
 ## To do
 
 Compress Skeletonema data to free up space, if able
+
+
+# 15 June 2018
+
+## Bamboozle
+
+Altered 'mode' features to use 'median' instead
+* Currently redoing the S. marinoi analysis using median
+* Check this vs. mode version and own eyeballing of contigs
+
+## Sulfitobacter
+
+Double-check interesting pathways in NCBI's version
+* Should Mauve analysis be included?
+* Should any other figures be included?
+
+## Fucus
+
+The same module has again killed the pipeline; retrying by disabling this module and using a simpler one
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

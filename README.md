@@ -17658,9 +17658,52 @@ Double-check interesting pathways in NCBI's version
 The same module has again killed the pipeline; retrying by disabling this module and using a simpler one
 
 
+# 18 June 2018
+
+## Fucus
+
+AllPathsLG failed even with the simpler module - why?
+* Error appears to revolve around the simpler module...
+* Rerun the data prep step and ZIP UP A RESERVE COPY, rather than rerunning it 
+  every time you rerun the analysis...
+
+Decontaminate Platanus assembly 3
+* Download MEGAN
+* Queued BLASTn on Annotation-1
+
+Downsample data to shorten Assembly step time
+* Figure out how much can be removed while retaining as good a level of coverage as possible
+  * Don't dip below 20x coverage
+* Probably leave 550 library as-is, and remove from the shorter PE libraries
+  * Length filter 550 library?
+* Note - can't rerun yet, as Hebbe will be going down within the next week
+
+## Skeletonema
+
+When the new annotation has been uploaded, transfer the custom annotations from Skeletonema_10_June_2017
+to the new version
+* ~161 of these, ensure the transfer is accurate while accounting for altered coordinates
+
+* Publications - Work on the remaining bacterial genome announcements (check publication strategy list)
+* Meta papers - Anna as last author, Kordia as Kordia sp.
+  * May need to do additional work on Kordia to enable classification of new species
+* Submit Rhodobiaceae; complete Kordia and submit
 
 
+## Ongoing
+* Annotation-1 - Running prep on Fucus data
+* Annotation-4 - BLASTn on Platanus assembly
+* node0 - Running length filtration on 550 library, a step to downsample the data
+* Hebbe - Subsampling _15_01 (180bp library) and _15_17 (350bp library)
 
+
+## Fucus on Hebbe
+Length filter the 550bp PE library, then downsample as appropriate
+* Note: As the length distribution of the R2 reads is weird due to additional trimming, BOTH reads
+  must be below the threshold in order for the pair to be discarded
+
+* Subsampling first 100,000,000 reads of both _15_01 files on Hebbe
+* Subsampling first  79,470,199 reads of both _15_17 files on Hebbe
 
 
 

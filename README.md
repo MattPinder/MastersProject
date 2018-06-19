@@ -17689,13 +17689,11 @@ to the new version
   * May need to do additional work on Kordia to enable classification of new species
 * Submit Rhodobiaceae; complete Kordia and submit
 
-
 ## Ongoing
 * Annotation-1 - Running prep on Fucus data
 * Annotation-4 - BLASTn on Platanus assembly
 * node0 - Running length filtration on 550 library, a step to downsample the data
 * Hebbe - Subsampling _15_01 (180bp library) and _15_17 (350bp library)
-
 
 ## Fucus on Hebbe
 Length filter the 550bp PE library, then downsample as appropriate
@@ -17706,12 +17704,35 @@ Length filter the 550bp PE library, then downsample as appropriate
 * Subsampling first  79,470,199 reads of both _15_17 files on Hebbe
 
 
+# 19 June 2018
 
+## Fucus on Hebbe
+* Re-subsampled _15_17 R2; process ran out of space
 
+## Fucus on Albiorix
+* Fucus prep complete; copy and compress, then retry assembly
+  * Backup copy being compressed in `screen`
 
+## Fucus BLASTn
+Run BLAST result through MEGAN and filter out contaminants
+* May need to run overnight as it's taking a very long time to complete...
 
+## Length filtering of 550bp library
+* The added length of the longest reads appears to be down to a GGGGGGG at the end of the R1 files...
+  * Rerun after trimming this 7G ending? Although it only appears in ~156,000 reads out of 35,000,000
+  * Remove the 7G from the ends of the R1 files (this appears to be making up the extra length), then filter 294+?
+    * Use the previous strategy of `--pair-filter=any`, rather than filter `--pair-filter=both`
 
+## Rhodobiaceae
+Annotation uploaded to NCBI...
+* Upload to SRA and methylation data?
+  * As this is a metagenome assembly, this would involve uploading the ENTIRE S. marinoi dataset...
 
+## Kordia
+Running consistency checker
+
+## To do
+* 'Circular contigs' - note the BLAST results/findings in the table
 
 
 

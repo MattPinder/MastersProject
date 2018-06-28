@@ -17735,6 +17735,72 @@ Running consistency checker
 * 'Circular contigs' - note the BLAST results/findings in the table
 
 
+# 20 June 2018
+
+## Fucus - subsampling
+Check results of retrimming + length filtering of 550bp library
+* This only preserved about 13% of reads, but it highlighted that only ~5% of the reads contained the 3' GGGGGGG sequence
+* In addition, the previous attempt was too strict on length, as it removed about 10M too many reads...
+* Pin the GGGGGGG adapter removal to the 3' end (`GGGGGG$`), and ensure both reads are >280?
+  * Platanus doesn't require overlapping reads, so can retain more reads... Try 250
+  * Running on node0
+
+## Fucus - AllPathsLG
+Attempt to run AllPathsLG without the CLOSE_UNIPATH_GAPS module, and without any replacement modules
+* See if/where it fails
+* Running on Annotation-4
+
+## Kordia
+Running final Kordia checks on NCBI; should be ready for submission afterwards
+
+## MEGAN
+Still taking a long time to run; may need to rerun overnight AGAIN while running nothing else to avoid memory issues
+
+## 'Circular contigs'
+Note the BLAST results/findings in the table
+
+
+MOVE SERVERS OFF OF THE FLOOR IN PREPARATION FOR POLISHING!
+
+
+# 28 June 2018
+
+* Reply to NCBI
+  * Done
+* Move servers onto desk
+  * Done
+
+* Check results of AllPathsLG
+  * Process killed again... Different step but same error (137)
+* Check Fucus subsample data, transfer to Hebbe and rerun Platanus
+  * Subsampled data only gave ~35M reads, need at least ~45M
+  * More reads were shown to have other adapters
+  * Rerun with 245 size limits, no adapter removal
+
+* Contig in BGI Skeletonema data
+  * Prokka - preliminary annotation to provide .faa file for PhyloPhlAn
+  * PhyloPhlAn - inserting into bacterial tree shows the contig to belong to Hyphomonas
+    * Metaxa2 16S analysis supports this
+
+* Manuscripts
+  * Sulfitobacter - waiting on feedback
+  * Marinobacter - talk to Oskar
+  * Arenibacter - prepare for Genome Announcements
+  * Sphingorhabdus - ?
+  * Rhodobiaceae - ?
+  * Kordia - ?
+
+* Check the genome browser test data
+  * Check the Repeats track (see Slack thread)
+  * Doesn't seem to be any consistent conflict with other tracks...
+
+* REMINDER - RNAseq tutorial for Albiorix
+
+* Rerun MEGAN overnight tonight!
+
+
+
+
 
 
 

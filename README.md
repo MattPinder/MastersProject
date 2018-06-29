@@ -17799,6 +17799,33 @@ MOVE SERVERS OFF OF THE FLOOR IN PREPARATION FOR POLISHING!
 * Rerun MEGAN overnight tonight!
 
 
+# 29 June 2018
+
+## Contig in BGI Skeletonema data
+* Contig 528 in Skeletonema tropicum
+* Same procedure as used for S. costatum contig
+  * Prokka submitted, waiting for Annotation-4 to become available
+  * Metaxa running...
+
+## MEGAN
+Completed on Ubuntu machine
+* Started with ~5,000,000 contigs, ended with ~11,000
+
+## Fucus
+Cutadapt yielded ~38M reads (needs 45M)
+* Move down from 245 to 230?
+
+## Kordia
+Seems to be okay; get confirmation and then submit
+
+## Genome browser
+Waiting for feedback from Tomas
+
+## Manuscripts
+Confirm final details for Arenibacter paper
+
+
+
 
 
 

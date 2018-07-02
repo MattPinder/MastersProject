@@ -17825,7 +17825,42 @@ Waiting for feedback from Tomas
 Confirm final details for Arenibacter paper
 
 
+# 02 July 2018
 
+
+## BGI data
+482-costatum
+900-dohrnii
+475-tropicum
+
+Try looking for viral sequences?
+* Check MEGAN
+  * S. dohrnii (currently a very preliminary assembly) seems to contain a single Caudovirales contig
+
+## BGI - costatum contig 528
+Running PhyloPhlAn on .faa file from Prokka
+* In a mixed clade with other Rhodobacteraceae; classification uncertain
+
+## Fucus
+Check cutadapt results
+* Using a 230bp cutoff gives 43.7M reads (need 45.6M)
+  * Perform once more using 225bp cutoff
+  * _16_07_1 displays a CCCCCCC overrepresentation, but this amounts to ~200K reads out of >40M, so will
+    proceed without further attempts to remove this sequence
+
+## Kordia
+Check with Mats
+
+## Genome browser
+Waiting for feedback from Tomas
+
+## Manuscripts
+Still working on Arenibacter
+* Some gaps in the Mauve alignment suggest areas unique to our strain (including the plasmid)
+
+## Loktanella
+L. vestfoldensis has been reclassified as Yoonia vestfoldensis:
+http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.002833
 
 
 

@@ -17827,7 +17827,6 @@ Confirm final details for Arenibacter paper
 
 # 02 July 2018
 
-
 ## BGI data
 482-costatum
 900-dohrnii
@@ -17863,9 +17862,24 @@ L. vestfoldensis has been reclassified as Yoonia vestfoldensis:
 http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.002833
 
 
+# 3 July 2018
 
+## Fucus
+Waiting on cutadapt to finish...
 
+## Kordia
+Waiting on acceptance from NCBI before obtaining BioSample number for upload
 
+## Genome browser
+Waiting for feedback from Tomas
+
+## Manuscripts
+Check antiSMASH and PHASTER results for Rhodobiaceae and Kordia
+* antiSMASH - many results
+* PHASTER - two intact sequences in Rhodobiaceae SMS8, two v. incomplete sequences in Kordia SMS9
+
+Note - check SMS9_vs_All Mauve alignment for regions not matched by any other Kordia, and BLAST them
+* e.g. KORDIASMS9_02962 is only very poorly matched by K. periserrulae
 
 
 

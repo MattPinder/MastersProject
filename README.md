@@ -17882,6 +17882,45 @@ Note - check SMS9_vs_All Mauve alignment for regions not matched by any other Ko
 * e.g. KORDIASMS9_02962 is only very poorly matched by K. periserrulae
 
 
+# 4 July 2018
+
+## Fucus
+Using the 225bp trim, we obtain ~19.9x and ~19.8x coverage, respectively
+* This is using a read length value of 263bp, whereas the read lengths span from 225 to 301
+* Start rsync to Hebbe, then calculate stats (ensure space exists on data13 to unzip the files)
+
+* Terabyte node is offline on Hebbe, and Triolith is also experiencing difficulties...
+  * Wait until one is available to resubmit
+
+## Kordia
+BioSample number still not allocated; unlikely to happen today on account of US holiday...
+
+## Genome browser
+Waiting for feedback from Tomas
+
+## Manuscripts
+* Marinobacter - ask Oskar
+* Arenibacter - 'Genome Announcements' (short format)
+* Sphingorhabdus - Journal of Genomics (long format)
+* Sulfitobacter - Journal of Genomics (long format); retracted from GenomeA
+* Rhodobiaceae - 'Genome Announcements' (short format)
+* Kordia - 'Genome Announcements' (short format)
+
+Generated phylogenetic tree and stats table for Sphingorhabdus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

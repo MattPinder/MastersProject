@@ -17909,20 +17909,38 @@ Waiting for feedback from Tomas
 Generated phylogenetic tree and stats table for Sphingorhabdus
 
 
+# 5 July 2018
 
+## Fucus
+* Submitted to Hebbe
+  * Node doesn't seem to be 100% reliable at the moment; check back
+* Triolith appears to be back up; transferred new data across, will try there
+  * Triolith is still complaining that CPU usage has been exceeded... Will leave job in queue to see
+    if it goes through later in the month (project expires 1st August)
 
+## Kordia
+Acceptance delay is due to 'Kordia sp.' not appearing in the databases; must be manually checked
+* [One 'Kordia sp.' does exist in NCBI, however...](https://www.ncbi.nlm.nih.gov/genome/38158)
 
+## Genome browser
+Waiting for feedback from Tomas
 
+## Manuscripts
+* Marinobacter - go ahead with long format paper
+* Arenibacter - Short
+* Sphingorhabdus - Long
+* Sulfitobacter - Long
+* Rhodobiaceae - Short
+* Kordia - Short
 
+## Sphingorhabdus
+Since the first draft, another Sphingorhabdus (YGSMI21) has been announced, and NCBI sometimes refers to it as S. flavimaris
+* Check 16S
+  * YGSMI21's two 16S sequences are identical to one another
+  * M41's two 16S sequences are identical to one another
+  * SMR4y's two 16S sequences are identical to one another
 
-
-
-
-
-
-
-
-
+Check pigmentation - M41 is white but contains the same contingent of pigment genes; possibly due to media?
 
 
 

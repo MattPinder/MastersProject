@@ -17941,6 +17941,52 @@ Since the first draft, another Sphingorhabdus (YGSMI21) has been announced, and 
   * SMR4y's two 16S sequences are identical to one another
 
 Check pigmentation - M41 is white but contains the same contingent of pigment genes; possibly due to media?
+* Now unsure of the real importance of this obseervation... Is it worth mentioning in the paper as it's an
+  observation on ANOTHER species...?
+
+
+# 6 July 2018
+
+## Fucus
+* Nodes on Hebbe still not cooperating...
+* Check Triolith; maybe run for less than 7 days to get within the core hour limit?
+  * Running job for 3 days, 6 hours; may not finish but otherwise may not fit within the core hours limit...
+  * Should finish on Monday afternoon - CHECK!
+
+* Trying to extract No Hit and Not Assigned contig names from MEGAN for original Platanus assembly, but taking
+  time as almost 5,000,000 contig names are being loaded...
+
+## Rhodo and Kordia
+* Rhodobiaceae bacterium strain SMS8 still hasn't been released, despite the reply from NCBI saying July 3rd...
+* Kordia sp. strain SMS9 is still undergoing review...
+
+## Manuscripts
+* Should Sphingo paper be kept as a short-form paper...?
+
+* Arenibacter paper ready for checks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

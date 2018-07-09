@@ -17966,7 +17966,21 @@ Check pigmentation - M41 is white but contains the same contingent of pigment ge
 * Arenibacter paper ready for checks
 
 
+# 9 July 2018
 
+## Fucus
+* Triolith job still only ~halfway complete, unlikely to finish in time, BUT may bode well for completion on
+  Hebbe when its 1Tb node is operational again (although Triolith has over double the CPUs...)
+  * Note - usage graph on SNIC has not changed since the job was started...
+  * Backup plan - if all else fails, wait until ~a week and a half before the project is due to end, and
+    resubmit to Hebbe for the full 7 days, to see whether it can complete in time
+  * CHECK JOB AT ~2PM
+
+* Hebbe node still not operational...
+
+## Manuscripts
+* Sulfitobacter just about ready for checks
+* Expand Marinobacter paper...
 
 
 

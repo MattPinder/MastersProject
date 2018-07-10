@@ -17983,12 +17983,27 @@ Check pigmentation - M41 is white but contains the same contingent of pigment ge
 * Expand Marinobacter paper...
 
 
+# 10 July 2018
 
+## Skeletonema annotation
 
+`Skeletonema_9_July_2018`
+* Check overlap of gene models and repeat regions
+  * BLAST gene models vs. Florian's repeats + nt/refseq
 
+* Still issues appearing; repeats are showing up in the gene models, and models track is not displaying
+  correctly on longer contigs (histogram view even in regions with few gene models)
 
+## Fucus
+* Still waiting on Hebbe
+* Re: Triolith - occasionally try submitting the 7 day job, see if it will be accepted before the
+  August 1st deadline (must start before July 24th)
+  * Queued with a 'group limit exceeded' message, check later in the week
 
-
+## Manuscripts
+* Marinobacter paper
+  * Need to strengthen the case for auxin synthesis genes...
+  * Nitrilase worth mentioning...?
 
 
 

@@ -18006,10 +18006,19 @@ Check pigmentation - M41 is white but contains the same contingent of pigment ge
   * Nitrilase worth mentioning...?
 
 
+# 11 July 2018
 
+## Fucus
+* Still waiting...
 
+## Manuscripts
+* Marinobacter
+  * Mention alternative interactions with the diatom...
 
-
+## Skeletonema annotation
+`Skeletonema_round1_11_July_2018`
+* Check annotation
+  * Seems okay
 
 
 

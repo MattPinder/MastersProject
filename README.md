@@ -4891,8 +4891,6 @@ of known function.
 
 ## Blast server
 Blasting pb_359_2 assembly vs. Skeletonema on the Blast server
-* Username: skeletonema
-* Password: b******a
 
 Best match: ATP synthase subunit beta atpD
 * Another strong match to ATP synthase subunit alpha atpA
@@ -7035,11 +7033,6 @@ Double-check metadata for pb_359_2 sequence run
 
 * Double-check metadata tomorrow...
 * Double-check rules for ftp; file created at NCBI ftp site but unable to submit
-  * `ftp ftp-private.ncbi.nlm.nih.gov`
-    * Username: subftp
-    * Password: w4pYB9VQ
-  * `cd uploads/matt_pinder13@hotmail.com_n7ATBk2o/SAMN06564448_RosMucSMR3`
-  * `put ~/MastersProject/Roseovarius_mucosus_SMR3_assembly.tar.gz`
 
 # 29 March 2017
 
@@ -18019,6 +18012,27 @@ Check pigmentation - M41 is white but contains the same contingent of pigment ge
 `Skeletonema_round1_11_July_2018`
 * Check annotation
   * Seems okay
+
+
+# 12 July 2018
+
+## Fucus
+* Still waiting...
+
+## BGI Skeletonema
+* Any further analyses to be done on my end?
+
+## Manuscripts
+* Marinobacter
+  * Mention other interactions with host
+
+
+
+
+
+
+
+
 
 
 

@@ -18027,6 +18027,23 @@ Check pigmentation - M41 is white but contains the same contingent of pigment ge
   * Mention other interactions with host
 
 
+# 13 July 2018
+
+## Fucus
+* Job has started on Hebbe
+* No movement on Triolith
+
+## Manuscripts
+* Sphingorhabdus - any convincing evidence of diatom association?
+  * If not, stick with short form
+
+## BGI Skeletonema
+* Question - what's the plan for correcting these assemblies?
+  * Pilon, as with S. marinoi?
+
+## Genome browser
+Should be ready to go now, proceed with moving across the gene models
+
 
 
 

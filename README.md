@@ -18045,6 +18045,20 @@ Check pigmentation - M41 is white but contains the same contingent of pigment ge
 Should be ready to go now, proceed with moving across the gene models
 
 
+# 16 July 2018
+
+## Fucus
+* Hebbe - K=62 after ~3 days...
+  * Job usually speeds up later on
+
+## Manunscripts
+* All ready for review except for Rhodo and Kordia, which are still being
+  reviewed by NCBI
+
+## Genome browser
+Proceed with transferring gene models (even if the annotation itself is wrong,
+I can confirm whether changes need to be made to the models
+* Making notes in /proj/data5/Skeletonema_marinoi_genome_project/14_genomic_features/AnnotationTransfer.md
 
 
 

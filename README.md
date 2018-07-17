@@ -18051,7 +18051,7 @@ Should be ready to go now, proceed with moving across the gene models
 * Hebbe - K=62 after ~3 days...
   * Job usually speeds up later on
 
-## Manunscripts
+## Manuscripts
 * All ready for review except for Rhodo and Kordia, which are still being
   reviewed by NCBI
 
@@ -18061,15 +18061,43 @@ I can confirm whether changes need to be made to the models
 * Making notes in /proj/data5/Skeletonema_marinoi_genome_project/14_genomic_features/AnnotationTransfer.md
 
 
+# 17 July 2018
+
+## Fucus
+* Hebbe - K=72, ~3 days remaining
+
+## Genome browser
+Check Repeats track to see if ANY have records in them
+
+|   Contig   | Repeats | RepeatRunner | RepeatMasker |
+|------------|---------|--------------|--------------|
+| Sm_000001F |    0    |      0       |     Many     |
+| Sm_000196F |    0    |      0       |       5      |
+| Sm_000253F |    0    |      0       |       0      |
+| Sm_000160F |    0    |      0       |       1      |
+| Sm_000341F |    0    |      1       |       6      |
+| Sm_000269F |    0    |      0       |       6      |
+| Sm_000159F |    0    |      0       |     Many     |
+| Sm_000170F |    0    |      0       |       6      |
+| Sm_000294F |    0    |      0       |       0      |
+| Sm_000362F |    0    |      0       |       1      |
+| Sm_000129F |    0    |      0       |     Many     |
+| Sm_000040F |    0    |      1       |     Many     |
+| Sm_000078F |    0    |      0       |     Many     |
+| Sm_000055F |    0    |      0       |     Many     |
+| Sm_000135F |    0    |      0       |       5      |
+| Sm_000022F |    0    |      0       |     Many     |
+| Sm_000034F |    0    |      0       |     Many     |
+| Sm_000006F |    0    |      0       |     Many     |
+| Sm_000010F |    0    |      0       |     Many     |
+| Sm_000015F |    0    |      3       |     Many     |
+| Sm_000000F |    0    |      2       |     Many     |
+
+Nothing in Repeats, few in RepeatRunner
 
 
-
-
-
-
-
-
-
+* Alterations have been made for the coordinates, but metadata hasn't been transferred
+  * Download the original gff files and copy across other data, e.g. user who created the annotation
 
 
 

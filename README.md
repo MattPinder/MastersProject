@@ -18095,15 +18095,19 @@ Check Repeats track to see if ANY have records in them
 
 Nothing in Repeats, few in RepeatRunner
 
-
 * Alterations have been made for the coordinates, but metadata hasn't been transferred
   * Download the original gff files and copy across other data, e.g. user who created the annotation
 
 
+# 18 July 2018
 
+## Genome browser
+Continue transferring custom annotations from previous database
+* Remember to obtain CDS coords and metadata from original gff as well
 
-
-
+## NCBI
+Kordia has been accepted; can upload annotation data
+* Uploaded
 
 
 

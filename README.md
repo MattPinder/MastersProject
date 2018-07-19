@@ -18110,6 +18110,52 @@ Kordia has been accepted; can upload annotation data
 * Uploaded
 
 
+# 19 July 2018
+
+## Fucus
+Job unlikely to finish... Check this afternoon
+
+## Genome browser
+Continue transferring records, remember to get CDS and metadata from original gff too
+
+## BGI
+
+Obtain .gfa files with sequence info
+* BLAST the longer contigs to the assembly graph and determine which are part of the circular sequences
+* Map reads to these contigs to determine how much of the data is likely Skeletonema vs. contaminant
+* /usr/local/git/FALCON-code/sg_sequences_to_GFA.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

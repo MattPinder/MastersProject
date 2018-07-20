@@ -18126,8 +18126,15 @@ Obtain .gfa files with sequence info
 * /usr/local/git/FALCON-code/sg_sequences_to_GFA.py
 
 
+# 20 July 2018
 
+## Fucus
+Assemply step completed!
+Proceed to next steps
 
+Make annotation as faithful a reproduction as possible, unless it's blatantly wrong!
+* Check Sm_000000F:2137421-2139242 - 3 maker models!?
+* Get a count of gene numbers (excluding splice variants)
 
 
 

@@ -18137,8 +18137,11 @@ Make annotation as faithful a reproduction as possible, unless it's blatantly wr
 * Get a count of gene numbers (excluding splice variants)
 
 
+# 23 July 2018
 
-
+## BGI
+Large circular sequences appear to be bacteria, as suspected, along with some of the linear sequences
+* Strangely, the diatom sequences are apparently better hits to Phaeodactylum than to Thalassiosira pseudonana...
 
 
 

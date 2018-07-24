@@ -18144,6 +18144,66 @@ Large circular sequences appear to be bacteria, as suspected, along with some of
 * Strangely, the diatom sequences are apparently better hits to Phaeodactylum than to Thalassiosira pseudonana...
 
 
+# 24 July 2018
+
+## BGI
+Compare dohrnii sequences with marinoi
+* Phaeodactylum sequences a better hit in BLASTn than any Thalassiosirales... Try comparing chloroplast rpoA?
+  * https://www.ncbi.nlm.nih.gov/pubmed/14733439
+
+Definitely seems closer to Phaeodactylum...
+* What about the preliminary assemblies of costatum and tropicum?
+  * costatum hits Skeletonema sequences
+  * tropicum seems to hit Skeletonema/Thalassiosira sequences
+
+Run read mapping for other two
+* identify bacteria
+
+Make database of marinoi + Phaeo, and BLAST vs. dohrnii
+* If not closest to marinoi, expand to all sequenced diatoms and retry...
+
+Map PacBio data back to dohrnii assembly
+* PBalign? Part of SMRTanalysis
+  * Need to install as standalone module? Use latest Python2
+    * Load as module in module file
+    * Must install blasr
+
+Follow instructions [here](https://github.com/PacificBiosciences/pbalign/blob/master/doc/howto.rst)
+* Skip step 1
+  * blasr directory failing to clone...
+
+* If following the instructions in the [blasr FAQ](https://github.com/PacificBiosciences/blasr/wiki/Blasr-Installation-Qs-&-As),
+  (i.e. using the command `conda install -c bioconda blasr`), this would result in a downgrade of several packages...
+  * E.g. numpy, matplotlib
+
+
+Attempt with BWA-MEM first to get a ballpark figure
+* Note - the md5sum for the fasta.gz file failed... Could this just be because of unzipping/rezipping?
+* Just over 50% of the reads map to Eukaryote-derived sequences
+
+
+## To do
+* Identify bacteria and bacterial contigs in costatum and tropicum assemblies
+* Check results of BWA-MEM and calculate how much data maps to Skeletonema
+
+* Generate a database of all sequenced diatoms on NCBI (inc. organelles and S. marinoi)
+  and BLAST the dohrnii assembly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -18190,9 +18190,24 @@ Attempt with BWA-MEM first to get a ballpark figure
   and BLAST the dohrnii assembly
 
 
+# 25 July 2018
+
+## Skeletonema costatum
+Check costatum alpha proteobacteria vs. RhodoSMS8
+* Also check similarity of contigs to S. flavimaris SMR4y
+
+## Skeletonema tropicum
+Started classifying the non-eukaryote contigs of 100kb+; need to finish later
 
 
+## To do
+* Decontaminate all 3 datasets (remove all known bacterial reads)
 
+* Check ITS and other marker genes for dohrnii vs other diatoms
+  * ITS 1 and 2 present
+  * phylogeny.fr
+
+  * Based on BLAST, choose the ITS2 sequences to use
 
 
 

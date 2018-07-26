@@ -18210,12 +18210,19 @@ Started classifying the non-eukaryote contigs of 100kb+; need to finish later
   * Based on BLAST, choose the ITS2 sequences to use
 
 
+# 26 July 2018
 
+## ITS2 region
+Check BLAST results
+* After extensive subsampling of data, preliminary attempt at phylogenetic analysis is underway
+  * http://www.phylogeny.fr/simple_phylogeny.cgi?workflow_id=5131148e33ef496d2e57a6c4c0c48b99&tab_index=last
+  * http://www.phylogeny.fr/simple_phylogeny.cgi?workflow_id=5131148e33ef496dc27ceb060211ae1b&tab_index=last
 
+## Decontaminate datasets
+Trying to determine the relevant reads to remove using `samtools flagstat` on S. dohrnii; check if this works
+* Didn't work; only provides basic stats...
 
-
-
-
+* Try opening the bam in IGV, see whether a list of reads can be extracted from there?
 
 
 

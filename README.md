@@ -18225,6 +18225,40 @@ Trying to determine the relevant reads to remove using `samtools flagstat` on S.
 * Try opening the bam in IGV, see whether a list of reads can be extracted from there?
 
 
+# 27 July 2018
+Skype w/ Xiamen at 10:30
+
+## Decontamination
+* Checking where reads map can be achieved by checking the original .sam file
+  * `samtools view` can read the .bam and reproduce a .sam file
+  * Need to check for multimappers...
+
+
+Calculate % of reads mapping to bacteria (cf. mapping to diatoms)
+* i.e. not just 'not eukaryote'
+How many bases of data in each sample are from diatom reads (compare vs. S. marinoi)?
+Continue decontaminating data
+
+* Done for dohrnii, currently working through for costatum
+
+
+Include ALL dohrnii sequences in the phylogeny
+* Done - definitely not Skeletonema...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

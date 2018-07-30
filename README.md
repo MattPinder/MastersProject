@@ -18246,8 +18246,15 @@ Include ALL dohrnii sequences in the phylogeny
 * Done - definitely not Skeletonema...
 
 
+# 30 July 2018
 
+Continue checking costatum contigs, then work on decontamination
+* Then repeat for tropicum
+* Decontamination and statistics done for costatum and tropicum
 
+BLASTing costatum against some members of the S. marinoi microbiome which showed
+similarity during initial BLASTs
+* Check results
 
 
 

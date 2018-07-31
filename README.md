@@ -18257,7 +18257,14 @@ similarity during initial BLASTs
 * Check results
 
 
+# 31 July 2018
 
+Check BLASTn results for costatum bacteria
+* Made list of contigs for S. marinoi bacteria
+
+tropicum doesn't appear to contain known S. marinoi bacteria
+
+Need to access SMRT Portal to check the number of bases from reads mapped to S. marinoi
 
 
 

@@ -18267,10 +18267,18 @@ tropicum doesn't appear to contain known S. marinoi bacteria
 Need to access SMRT Portal to check the number of bases from reads mapped to S. marinoi
 
 
+# 1 August 2018
+
+## S. marinoi remapping
+Remapping S. marinoi reads to v1.1.1 to compare to the BGI Skeletonema
+
+When short read data for dohrnii arrives, map back to 'dohrnii' assembly to confirm contamination
 
 
+Put BGI projects on hold until Friday's meeting; return to fixing and transferring the marinoi annotations
 
-
+Also - any ideas for improving the Fucus assembly?
+* Any way to use more of the subsampled data?
 
 
 

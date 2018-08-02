@@ -18281,6 +18281,11 @@ Also - any ideas for improving the Fucus assembly?
 * Any way to use more of the subsampled data?
 
 
+# 2 August 2018
+
+Check S. marinoi annotations; specifically, ensure correct CDS, and transfer relevant details to .gff file
+Fix last CDS in 000006F
+
 
 
 

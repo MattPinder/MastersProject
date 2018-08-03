@@ -18287,8 +18287,18 @@ Check S. marinoi annotations; specifically, ensure correct CDS, and transfer rel
 Fix last CDS in 000006F
 
 
+# 3 August 2018
+
+Continue checking S. marinoi annotations
+* Begin with contig 21 next time
+
+Note: If installing a program that requires zlib:
+1. change all occurrences of <libz.h> to </usr/local/include/libz.h> in the *.c files.
+2. Add /usr/local/lib64 to `LD_LIBRARY_PATH`.
+3. Chance gcc version to 4.8.1
 
 
+New Falcon version should now be installed (inc. Falcon-unzip?); any way to compare a previous result?
 
 
 

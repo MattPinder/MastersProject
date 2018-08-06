@@ -18297,12 +18297,17 @@ Note: If installing a program that requires zlib:
 2. Add /usr/local/lib64 to `LD_LIBRARY_PATH`.
 3. Chance gcc version to 4.8.1
 
-
 New Falcon version should now be installed (inc. Falcon-unzip?); any way to compare a previous result?
 
 
+# 4 August 2018
+
+New Falcon installation - where is `las.fofn` in output?
+* Should be in `1-preads_ovl/merge-gather/`
+* Found at [add location]
 
 
+Check final set of CDSs for S. marinoi primary contigs
 
 
 

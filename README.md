@@ -18300,14 +18300,67 @@ Note: If installing a program that requires zlib:
 New Falcon version should now be installed (inc. Falcon-unzip?); any way to compare a previous result?
 
 
-# 4 August 2018
+# 6 August 2018
 
 New Falcon installation - where is `las.fofn` in output?
 * Should be in `1-preads_ovl/merge-gather/`
-* Found at [add location]
-
+* New location - `1-preads_ovl/las-gather/las_fofn.json`
+  * Despite the new format, the `fc_ovlp_stats` command accepts it as normal
 
 Check final set of CDSs for S. marinoi primary contigs
+
+
+# 7 August 2018
+
+## Skeletonema marinoi annotation
+Check final primary contig's CDSs
+* Done
+
+## Kordia
+NCBI have run Kordia SMS9 through PGAP; put this into Pathway Tools
+* Add checked NCBI/Prokka versions of the annotations into Pathway Tools as well, for comparison
+
+May also be a good idea to ensure entire microbiome repository is correctly structured
+
+## BGI
+Best parameters for assemblies? From Falcon FAQ:
+"If the overall coverage of the error corrected reads longer than the length cut off is known and reasonable high (e.g. greater than 20x), it might be safe to set min_cov to be 5,
+max_cov to be three times of the average coverage and the max_diff to be twice of the average coverage. However, in low coverage case, it might better to set min_cov to be one or two.
+A helper script called fc_ovlp_stats.py can help to dump the number of the 3' and 5' overlap of a given length cutoff, you can plot the distribution of the number of overlaps to make a better decision.
+One can also set the max_diff and max_cov to be really high to avoid any filtering if that is preferred in some cases."
+
+## Gamma
+
+Any further ideas on how to complete this genome?
+* SILVA designates it as Sinobacterium, but no complete genome sequences to compare to
+* NCBI still gives Dasania marina as the closest match (94% identity)
+  * D. marina genome size = 4.1 Mb, vs. 'Gamma''s current size of 3.6 Mb
+  * D. marina GC: 47.4% ('Gamma' GC: 43.8%)
+* Latest Gamma had ~228.5x coverage; use these stats with the new Falcon?
+  * Using pb_77; will try adding pb_0066 if no good results obtained
+  * Running 5k SRL with default parameters to establish a baseline
+
+Check https://pb-falcon.readthedocs.io/en/latest/parameters.html#configuration
+* Maybe use Falcon unzip config file?
+* Or adjust settings used?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

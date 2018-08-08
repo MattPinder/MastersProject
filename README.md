@@ -18345,6 +18345,23 @@ Check https://pb-falcon.readthedocs.io/en/latest/parameters.html#configuration
 * Or adjust settings used?
 
 
+# 8 August 2018
+
+## Gamma
+Try more parameters, also try adding pb_0066 data?
+
+* "length_cutoff <int> - Raw reads shorter than this cutoff won't be considered in the assembly process.
+  If '-1', then auto-calculate the cutoff based on genome_size and seed_coverage."
+  * This doesn't work in the version I've downloaded...
+
+
+
+
+
+
+
+
+
 
 
 

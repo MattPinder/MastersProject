@@ -18350,12 +18350,23 @@ Check https://pb-falcon.readthedocs.io/en/latest/parameters.html#configuration
 ## Gamma
 Try more parameters, also try adding pb_0066 data?
 
-* "length_cutoff <int> - Raw reads shorter than this cutoff won't be considered in the assembly process.
-  If '-1', then auto-calculate the cutoff based on genome_size and seed_coverage."
+* "length_cutoff <int> - Raw reads shorter than this cutoff won't be considered
+   in the assembly process.   If '-1', then auto-calculate the cutoff based on
+   genome_size and seed_coverage."
   * This doesn't work in the version I've downloaded...
 
 
+# 9 August 2018
 
+## Gamma
+After testing many different parameter permutations, the results are still roughly the same as for
+the previous attempts, albeit starting at a different place along the chromosome (which in itself
+may imply circularity, as the start-stop of the previous assembly attempts appear side-by-side in
+the new assembly.
+* In this assembly, the molecule starts and stops in a repeat region; using Quiver to try and resolve
+  this region
+  * Check results of annotations; compare with other genomes of similar size
+  * Check 16S results for corrected sequence, in case they differ from the original assembly
 
 
 

@@ -18369,14 +18369,29 @@ the new assembly.
   * Check 16S results for corrected sequence, in case they differ from the original assembly
 
 
+# 10 August 2018
+
+## Gamma
+Check annotations and 16S sequences for the Falcon and Falcon+Quiver sequences, and see whether they look
+reasonable
+
+* When Annotation nodes are available again, run another Quiver correction to ensure that the sequence looks OK
+  * When complete, perhaps shift repeat region to the end of the sequence?
 
 
+# 13 August 2018
 
+## Triolith files
+Check files on Triolith when the system come back online
 
+## Gamma
+Realigned the start of the Quiver1 contig with the stop codon of histidinol dehydrogenase
+* The predicted CDS seems to be the correct length (BLASTp gives ~70% identity to Pseudomonas species, and roughly the same no. of AAs, +/- 1bp in some cases)
 
+* Running second Quiver
 
-
-
+* Running Pilon on the fourth Quiver of Gamma, just in case
+  * First Pilon made several hundred substitutions; running a second time to see whether more are made
 
 
 

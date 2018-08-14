@@ -18394,6 +18394,15 @@ Realigned the start of the Quiver1 contig with the stop codon of histidinol dehy
   * First Pilon made several hundred substitutions; running a second time to see whether more are made
 
 
+# 14 August 2018
+
+## Triolith files
+As expected, all data files on Triolith were present on Albiorix; log files for failed runs were transferred
+just in case
+
+## Gamma
+Check second Pilon run; are further runs required?
+* Still ~70 corrections being made; keep running Pilon for now
 
 
 

@@ -16480,6 +16480,7 @@ Work on abstract for VR application, make it more exciting
 * Running Pilon round 1 on Parvi; consider running some Pilon tests on Kordia as it is unlikely to reach a steady state...
 
 
+
 # 10 April 2018
 
 ## Kordia and Parvi
@@ -16489,7 +16490,7 @@ Work on abstract for VR application, make it more exciting
   * Running round 2
 
 * Figure out what to do with Kordia
-  * Chosen three to go forward with, to see whether corrections convergee
+  * Chosen three to go forward with, to see whether corrections converge
     * Shortest
     * The one with the least number of corrections in the subsequent round
     * One of the joint longest
@@ -18404,6 +18405,15 @@ just in case
 Check second Pilon run; are further runs required?
 * Still ~70 corrections being made; keep running Pilon for now
 
+
+# 14 August 2018
+
+## Gamma
+
+Decided on Quiver4_Pilon0 version of Gamma (Pilon was adding discrepancies between 16S sequences, implying
+addition of errors
+
+Continue formatting of GenBank file; _# of gene names currently being removed
 
 
 

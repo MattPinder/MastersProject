@@ -18416,17 +18416,29 @@ addition of errors
 Continue formatting of GenBank file; _# of gene names currently being removed
 
 
+# 15 August 2018
 
+## Gamma
+Continue formatting; can a more precise classification be obtained...?
 
+## Eutrophication
+Find additional samples and map as before
+* Ensure that the BAM files included are correct (so the old ones aren't counted twice in the analysis)
 
+* BED file containing coordinates of genes/regions being analysed
+  * Should contain contig/locus name, start + stop positions of coding region
+    * Must correspond to tables checked previously
+* contig_2985_revcomp missing from reference; ensure this is present in reference
 
+Data present in skeletonema_resequencing/data/A.Godhe_16_01
+* Quality trimming etc. must be performed first (check each sample just in case)
 
+* Ensure same bam file naming convention, with a suffix of e.g. _deep
 
+Try using sandbox queues
 
-
-
-
-
+Need more space to run quality control jobs; trying to compress unzipped fastq files in the `data` directory
+* Check `screen` later
 
 
 

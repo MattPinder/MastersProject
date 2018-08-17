@@ -18406,7 +18406,7 @@ Check second Pilon run; are further runs required?
 * Still ~70 corrections being made; keep running Pilon for now
 
 
-# 14 August 2018
+# 15 August 2018
 
 ## Gamma
 
@@ -18416,7 +18416,7 @@ addition of errors
 Continue formatting of GenBank file; _# of gene names currently being removed
 
 
-# 15 August 2018
+# 16 August 2018
 
 ## Gamma
 Continue formatting; can a more precise classification be obtained...?
@@ -18439,6 +18439,30 @@ Try using sandbox queues
 
 Need more space to run quality control jobs; trying to compress unzipped fastq files in the `data` directory
 * Check `screen` later
+
+
+## 17 August 2018
+
+Check compressions on `screen`
+* Differences in mapping reference(s) of previous data may cause complications in comparison
+* Redo mapping of previous sequences as well
+  * Using the `--no-unal` flag makes the output files **much** more manageable
+
+
+Check on progress of quality checks!
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

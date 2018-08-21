@@ -18441,7 +18441,7 @@ Need more space to run quality control jobs; trying to compress unzipped fastq f
 * Check `screen` later
 
 
-## 17 August 2018
+# 17 August 2018
 
 Check compressions on `screen`
 * Differences in mapping reference(s) of previous data may cause complications in comparison
@@ -18452,7 +18452,28 @@ Check compressions on `screen`
 Check on progress of quality checks!
 
 
+# 20 August 2018
 
+## Eutrophication mapping
+
+After having to restart the correction job at the weekend, currently waiting for the rerun to finish
+
+## Gamma annotation check
+
+Start from 00411-2
+
+
+# 21 August 2018
+
+## Eutrophication
+
+One job has finished, the rest are ongoing
+* Check progress
+
+Memory error broke pairseq.py in, it seems, all jobs
+Rerunning separately using 40 cores on Annotation-3 (P4005_1015 first as a test, as this had 'finished')
+
+Check README on data11 temp directory for progress notes; a lot of PairSeq will probably have to be redone...
 
 
 

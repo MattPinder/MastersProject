@@ -18476,6 +18476,32 @@ Rerunning separately using 40 cores on Annotation-3 (P4005_1015 first as a test,
 Check README on data11 temp directory for progress notes; a lot of PairSeq will probably have to be redone...
 
 
+# 3 September 2018
+
+## Eutrophication
+
+CONTINUE WORKING ON QC BEFORE PROCEEDING TO MAPPING!
+
+Note - a majority of the deep sequencing samples had low-quality first bases on the _1 reads; some had no
+poor-quality bases, others had 2-3. May be a good idea to remove the first base from all samples as standard
+procedure, in the interests of time.
+* Suggest to Mats?
+* Also - check other datasets to see whether the opening TGGCCCGGGGGA appears; it only occurs in a few thousand
+  samples (~0.1% of the dataset), but in the interests of time, this should be left this time around.
+  * Perhaps this should be removed in future as standard procedure too?
+
+
+## Application
+
+Read through and comment on application shared on Google Docs
+
+
+## To do
+
+See when _1012 is complete, rsync, run mapping, then report to Pierre
+
+
+
 
 
 

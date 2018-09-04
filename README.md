@@ -18490,15 +18490,32 @@ procedure, in the interests of time.
   samples (~0.1% of the dataset), but in the interests of time, this should be left this time around.
   * Perhaps this should be removed in future as standard procedure too?
 
-
 ## Application
 
 Read through and comment on application shared on Google Docs
 
-
 ## To do
 
 See when _1012 is complete, rsync, run mapping, then report to Pierre
+* Done
+
+
+# 4 September 2018
+
+## Skeletonema meeting
+Bjorn suggested setting up a meeting to select a marker region for his competition experiment
+* Also suggested including a bacterial component; competition between different strains' microbiomes
+  in response to the metal stress?
+
+## Read QC procedure
+* Automatic removal of first base from some reads?
+* Removal of TGGCCCGGGGGA sequence?
+
+## Application
+Read through and comment on application shared on Google Docs
+
+## To do
+Regenerate figures for genome announcement papers with improved clarity!
 
 
 

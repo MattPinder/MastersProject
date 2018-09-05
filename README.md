@@ -18518,6 +18518,14 @@ Read through and comment on application shared on Google Docs
 Regenerate figures for genome announcement papers with improved clarity!
 
 
+# 5 September 2018
+
+See Slack conversations with Mats and Pierre
+* Recheck the application
+* Check Pierre's new spreadsheet vs. the relevant paper (see previous conversations...)
+
+
+
 
 
 

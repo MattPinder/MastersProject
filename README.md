@@ -18525,6 +18525,13 @@ See Slack conversations with Mats and Pierre
 * Check Pierre's new spreadsheet vs. the relevant paper (see previous conversations...)
 
 
+# 6 September 2018
+
+Continue work on application
+
+
+
+
 
 
 

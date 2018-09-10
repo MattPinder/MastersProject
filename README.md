@@ -18530,7 +18530,21 @@ See Slack conversations with Mats and Pierre
 Continue work on application
 
 
+# 7 September 2018
 
+Continue work on application
+
+Look into Bjorn's chloroplast question  
+To do:
+* Map reads to v1.1.1 chloroplast, and see whether there are any potentially suitable regions?
+
+
+# 10 September 2018
+
+Continue work on application
+
+## To do
+Save to MS Word, and ensure that formatting etc. is OK, then send Word files to Mats
 
 
 

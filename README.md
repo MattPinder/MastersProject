@@ -18547,6 +18547,30 @@ Continue work on application
 Save to MS Word, and ensure that formatting etc. is OK, then send Word files to Mats
 
 
+# 11 September 2018
+
+## Adaptation to warming
+Sample 104 shows a poorly-aligned ITS sequence vs. other samples. Why?
+* 104 has the lowest alignment % of all samples (1.15%)
+  * Closely followed by 105 (1.70%)
+
+Location in genome - 000330F:1769-4826
+* Several other sites, but the same half of the sequence always has a gappy alignment
+  (albeit better coverage on 000195F:20393-23450 and 000195F:39879-42936 [43x and 45x])
+
+## A2W microsatellites
+
+BLASTn concatenated primers vs. RO5 reference sequence
+* Eutro data only had 3/8 primer sites; A2W has 7, albeit only one is wholly convincing
+
+Check - is 000330F a circular contig??
+
+
+Any feedback from Anna/Kai re: microsats?
+
+
+
+
 
 
 

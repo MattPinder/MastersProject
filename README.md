@@ -18566,12 +18566,19 @@ BLASTn concatenated primers vs. RO5 reference sequence
 Check - is 000330F a circular contig??
 
 
+# 12 September 2018
+
 Any feedback from Anna/Kai re: microsats?
+* Try to determine lengths of microsat fragments where possible
+  * Length of primers included
+
+Note: Where possible, associated contigs should be checked too
+* Double-checked the annotation for the associated contigs; they hit the same gene predictions as their primary
 
 
-
-
-
+Question - where primer pairs are hitting multiple loci, is this the result of gene duplication in RO5 vs.
+the strains used previously?
+* Confirming with Anna that the primers weren't generated from RO5
 
 
 

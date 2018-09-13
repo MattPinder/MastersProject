@@ -18581,6 +18581,52 @@ the strains used previously?
 * Confirming with Anna that the primers weren't generated from RO5
 
 
+# 13 September 2018
+
+Investigate WHY some of the primers hit multiple locations, when the regions are supposed to be unique
+* RO5AC is the strain which the primers were BLASTed against, **but** not the one from which they were chosen
+* ST54 was the strain which was previously searched
+
+
+Note - where multiple alternative sequences exist when a consensus sequence is generated, ALL of these
+will be printed in the output file of Bamboozle... Any way to get around this, or alter the display somehow?
+
+Note 2 - if there are multibase deletions/substitutions relative to the reference sequence, these are displayed
+as a block, but then the subsequent bases are displayed a second time, e.g. 
+
+000000F 646618  .       CAGCTAGC        .
+000000F 646619  .       A       .
+000000F 646620  .       G       .
+000000F 646621  .       C       .
+000000F 646622  .       T       .
+000000F 646623  .       A       .
+000000F 646624  .       G       .
+000000F 646625  .       C       .
+
+Bamboozle's interpretation of bcftools' output will print this as CAGCTAGCAGCTAGC; the sequence is actually
+just CAGCTAGC
+* Can Mats' code in Bamboozle be altered to print this as just CAGCTAGC?
+
+* Newer version of BCFtools has a `consensus` command, but getting it to work is non-trivial...
+
+
+Current 'long' options:
+* Use `samtools mpileup` and `bcftools view/check` to manually check each sample and region
+* Use `igv` to visually check each sample and region; may be trickier to figure out than `samtools` but can
+  visualise multiple samples at once
+* Perhaps test `samtools mpileup -uf Skeletonema_marinoi_Ref_v1.1.1.fst P8352_101_sorted.bam | bcftools call -c | vcfutils.pl vcf2fq > test.fq`
+  followed by a fastq to fasta conversion? (example saved to test directory in Bamboozle but needs adjustment)
+
+* While each of these would probably be faster than the wet-lab method, automation is the aim...
+  * Still have to contend with issues such as low coverage, multimapping, etc.
+
+* How exactly was this data extracted from the mapping performed on the eutrophication data?
+  * Should a similar approach be taken here? Remap reads to the primer hit regions +/- 500bp, and figure it out from there?
+    * Allelic variation could be determined visually in igv; multimappers could be compared using an aligner
+
+Discuss with Mats how to proceed
+* Also need to discuss how to proceed re: Bjorn's experiment
+
 
 
 

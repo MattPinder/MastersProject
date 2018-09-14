@@ -18628,7 +18628,44 @@ Discuss with Mats how to proceed
 * Also need to discuss how to proceed re: Bjorn's experiment
 
 
+# 14 September 2018
 
+Try mapping the data to each individual microsat region as was done with the eutrophication data
+* Try with one (good) example first as a test case
+
+* P8352_112 was mapped to the 7 (primary contig) microsat regions (+/-500bp to allow more reads to map)
+  * Just by eyeballing the results (Smar4), it appears to be consistent with previous attempts,
+    taking both alleles into account
+  * Smar6, which appeared to be heavily multicopy based on BLAST, has much better coverage this way
+    * However, with a depth of ~2000 reads, it becomes a little harder to eyeball
+
+Running mappings on all samples; all queued
+* Also running mapping using RO5 reads, as a comparison
+
+
+Microsats - report back and request alternative suggestions to explore
+* Email sent - any feedback?
+
+Re: Bjorn - hypervariable regions for strain determination in competition experiments
+* Check deep-sequenced datasets
+
+Pick two papers - genomeA and jog - to submit next
+* Circular genome map generation for bacteria
+
+Monday - Fucus genome - how to proceed?
+Wednesday - Skeletonema annotation
+
+
+
+
+
+
+
+
+
+
+
+(Read up on MetaBAT, MegaHit, CheckEm)
 
 
 

@@ -14461,7 +14461,7 @@ Once _16_07 QC is complete, check C3SE script and try submitting to the queue
 * Does average insert size need to be included in the script?
 * How does setting variables (FILE1, FILE2, etc...) work on this system?
   * Must these be stated when submitting the command?
-* FILE NAMES ANDN LOCATIONS MUST BE CHANGED TO A.) AVOID DUPLICATIONS, AND B.) STILL WORK WHEN THE FILES ARE MOVED TO $TMPDIR, AS THE FILE PATHS WILL HAVE CHANGED
+* FILE NAMES AND LOCATIONS MUST BE CHANGED TO A.) AVOID DUPLICATIONS, AND B.) STILL WORK WHEN THE FILES ARE MOVED TO $TMPDIR, AS THE FILE PATHS WILL HAVE CHANGED
 * Check path to Platanus
 
 
@@ -18655,30 +18655,121 @@ Pick two papers - genomeA and jog - to submit next
 Monday - Fucus genome - how to proceed?
 Wednesday - Skeletonema annotation
 
-
-
-
-
-
-
-
-
-
-
 (Read up on MetaBAT, MegaHit, CheckEm)
 
 
+# 17 September 2018
+
+* Microsats - hold fire until feedback obtained from the others
+* Hypervariable regions for competition experiment - where to check?
+* Pick two papers to submit to genomeA and JoG; generate circular genome maps for these
+* Fucus genome - how to proceed?
+* Read genome paper to prepare for ~journal club meeting
 
 
+## Hypervariable region
+* Check (V4?) 18S rRNA (rbcL is chloroplastic, therefore unsuitable for quantification purposes)
+  * Find in annotation (BLAST vs. T. pseudonana?)
+  * Align in deep-sequenced strains
+    * Problem - these strains aren't mapped to the reference genome
+      * Search in RO5-mapped strains first, maybe map deep-sequenced strains to RO5 later?
+  * Possible problem - 18S appears to be multi-copy. If the copy number is consistent between
+    strains this shouldn't be an issue
+    * BLASTing the 18S of T. pseudonana against RO5 shows it to be VERY multi-copy...
+  * Note - NONE of the strains so far appear to have been mapped to the full RO5 genome...
+  * Based on 'Comparison of potential diatom 'barcode' genes (the 18S rRNA gene and ITS, COI, rbcL)
+    and their effectiveness in discriminating and determining species taxonomy in the Bacillariophyta',
+    this may have too little within-species variation...
+
+ITS is a possibility
+* This appears to show differences between strains, however also suffers from being multicopy...
+  * Assuming that copy number within the species is consistent, this shouldn't be a big issue
+* Check a few of the loci:
+  * 000336F - 4109-4562 (reverse)
+  * 000224F - 27336-27789
+  * 000224F - 17990-18443 - End is a little iffy vs. other 4, but otherwise perfect match
+  * 000223F - 11983-12436 (reverse)
+  * 000223F - 20363-20816 (reverse)
+* Different combinations exist between strains, but they're heterozygous
+  * However, even in multicopy the differences are consistent within the strain
+* Problem - 1002 and 1004 appear to be the same...
 
 
+Investigate 28S
+* Looking at AJ633532 vs AJ633533, 28S may not be enough
+  * BLASTn hit identical to RO5; not good enough to differentiate between strains
+
+rbcL unsuitable, even without the copy number issue; 1001-1005 all the same in that region
+* 99173-99818
 
 
+Mapping deep-sequenced eutro samples to RO5, so the results can be viewed in IGV
+* Start with first ~5 and take it from there
+  * Note - in sample _1001, just over 50% of the reads mapped; is this an issue?
+
+Possible complicating factor - these diatoms are going to be under stress; what's to stop them
+cross-breeding?
 
 
+## Genome publications
+Review these two papers for submission:
+* Submit Arenibacter to Microbiology Resource Announcements (formerly Genome Announcements)
+* Submit Sulfitobacter to Journal of Genomics
+
+* Generate better-quality figures, and a circular genome map (for chromosome at least...)
+  * Circos downloaded to home directory on Albiorix but requires additional Perl modules to run
+
+## Curious observations
+* Even in the deep-sequenced strains, some of the microsat regions have very poor mapping coverage; why?
+* In the Loviisa strains, those with low mapping coverage have consistent cp-genome variants relative to the
+  better-mapped strains; why?
+  * e.g. 101, 103, 123 and 124 match the reference in the cp-genome at 16,206-18,205, but 102, 125 and 138 don't
+  * Coverage is also lower; mapped read depth in the hundreds rather than the thousands
+  * 138 has ~1000x coverage, BUT is from Loviisa fjord, whereas 102 and 125 are from the control fjord, yet
+    the SNPs are (largely) consistent
+    * BLASTing a small fragment of rbcL (with the SNPs substituted) matches Skeletonema subsalsum
+    * BLASTing part of the 28S rRNA also yields results consistent with S. subsalsum
+
+Find a region for which we have a sequence in both RO5 and subsalsum, use as BLAST query(s) to extract
+signature sequences from `/proj/data17/Skeletonema_marinoi_adaptation_to_warming_project/06_MetaBAT/samples`,
+and check vs. other diatom sequences as well
+
+## To do
+
+Use DQ512448 (LSU) and DQ514820 (rbcL) as a query sequences to BLAST the metagenome assemblies
 
 
+# 18 September 2018
 
+## Fucus
+
+Run SOAP with decontaminated data, adjust config file accordingly and add MPS to the list of libraries (above MPL)
+* Is there space on data13 for the decompressed data?
+  * 750G remaining on data13
+    * Decompressing _15_01 decontaminated fastq files leaves 680G
+    * May need to run the analysis in another directory as space will soon be used up...
+  * AllPathsLG failed attempt was taking up over 1T of space; this has now been deleted, space shouldn't be
+    an issue now
+
+Note - getting insert size stat for PE libraries will require mapping (only fragment size was calculated
+       previously); try first SOAP attempt with previous figures, and map alongside this for next attempt
+Note 2 - all input files need to be decompressed before the job can be run...
+
+* Decompression added to sge script
+* Mapping of the first set of PE data (so far the only one decompressed) started; uncomment the other lines when complete
+
+## Skeletonema
+
+Looking at the microsat locus results vs. the mapping %, the species with missing microsats
+are those with the very low mapping %, as expected
+
+Based on rbcL vs. the Skeletonema genus, it appears that the low cov species are in the subsalsum clade and the
+high cov species are in the marinoi clade, as expected
+* One outlier - _105
+* Eleven others didn't have an rbcL hit in the metagenome assembly
+
+SplitsTree
+* Rename samples used for alignment so that the .nxs file output is easier to read
 
 
 

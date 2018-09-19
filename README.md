@@ -18772,6 +18772,32 @@ SplitsTree
 * Rename samples used for alignment so that the .nxs file output is easier to read
 
 
+# 19 September 2018
+
+Install BUSCO in home directory(?)
+
+---
+
+When rerunning SOAP, round genome size est. to 1.2G
+
+Skeletonema transcriptome details for transformation paper!
+
+Check what the standard AED threshold is; what is a *good* AED?
+
+Bedtools; way to script a resolution to cluster problem; would merge work better?
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

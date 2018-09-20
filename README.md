@@ -18787,9 +18787,54 @@ Check what the standard AED threshold is; what is a *good* AED?
 Bedtools; way to script a resolution to cluster problem; would merge work better?
 
 
+# 20 September 2018
+
+Check on progress of Fucus mapping; when possible, obtain insert size stats
+
+Transcriptome assembly details
+* Run Trinity v2.5.1
+* Run Transrate v1.0.1
+* Run CD-Hit v4.6.5 on good transcripts (from each separate assembly, not the AllSamples dataset)
+* Run Transrate again
+
+Try to script a resolution to the clustering problem (ask Tomas for a copy of the input files)
+* Does the resolution hold true for associated contigs?
+  * Eyeballing a few examples, the lowest AED model in the primary appears to match the
+    lowest AED model in the associated
+* What about splice variants?
+  * Sm_000000F:1408921..1429960 - two gene models which appear to be splice variants, with identical AED;
+    they are also labelled as such (maker-Sm_000000F-exonerate_est2genome-gene-14.15-mRNA-1
+    and maker-Sm_000000F-exonerate_est2genome-gene-14.15-mRNA-2)
 
 
+## FST pipeline
+Pipeline for automatic extraction of FST values etc. from e.g. different sediment layers (time points)
 
+1. Map reads
+2. SNP calling
+3. Calculate FST stats
+4. Report points of interest
+* Report peaks in FST graph based on deviation from median?
+  * Small deviation may not be interesting in a gene where change is common,
+    but may be very interesting in a more conserved gene
+* Report non-synonymous mutations in coding regions?
+  * Requires comparison to a well-curated annotation
+* Allele frequencies?
+* Unidirectional movement over time?
+  * SNP becomes continuously more abundant, vs. those which become more abundant
+    for a time and then become rare again
+* Can be used on any number of time points
+  * Eutrophication data contains 3 time points, adaptation to warming contains 2,
+    should be usable on both, and datasets with more time points
+* Output tables and plots as required
+
+
+ARE INSERT SIZE FIGURES PROVIDED BY SOAP?
+* `scaff.err` in SOAP output
+
+* Has preqc genome size estimate been done on the decontaminated data?
+
+TRANSCRIPTOME ASSEMBLY FOR PAPER
 
 
 

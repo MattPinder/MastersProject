@@ -18838,6 +18838,41 @@ TRANSCRIPTOME ASSEMBLY FOR PAPER
 
 
 
+# 21 September 2018
+
+## Fucus
+For calculating NG50 - `/usr/local/packages/amos-3.1.0/bin/getN50`
+Run gap-filling only on the assembly(s)
+
+A few files have been overwritten; has this made any difference?
+
+## Clustering problem
+
+Three lists have been generated - Singletons, Doubles (inc. AED scores) and 3+ clusters (inc. AED scores)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

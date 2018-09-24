@@ -18851,12 +18851,34 @@ A few files have been overwritten; has this made any difference?
 Three lists have been generated - Singletons, Doubles (inc. AED scores) and 3+ clusters (inc. AED scores)
 
 
+# 24 September 2018
+
+## Fucus
+Check newly-gap filled assemblies
+Once an assembly has been decided on:
+* Generate 3 files
+  * Scaffolds/contigs longer than 10K
+  * Scaffolds/contigs longer than 1K
+  * All scaffolds/contigs
+* Run Maker, followed by BUSCO
+
+Looks as though the gap filling made no difference to the NG50
+
+Results from both runs are comparable; second run has more longer scaffolds/contigs, but the first one has
+more in the mid-range
+* Second run is longer overall
 
 
+## Skeletonema clusters
+Problem with Singles file...?
+* Some of the features in the Maker track were not labelled as mRNA, therefore didn't appear in the clusters...
+* Double-check Mats' Doubles list
 
-
-
-
+## Transcriptome method
+(Note: typo on P9 - 'and believed to the caused by')
+* Input from RO5AC
+* Run Trinity v2.5.1
+* Run Transrate v1.0.1
 
 
 

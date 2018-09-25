@@ -18881,14 +18881,29 @@ Problem with Singles file...?
 * Run Transrate v1.0.1
 
 
+# 25 September 2018
 
+## Fucus
 
+Map RAD sequencing data to second SOAP assembly
+* Whole assembly
+* 10k+
+* 1k+
 
+Bowtie2Build in progress for these files
+* Waiting for location of the RAD reads...
 
+* Run BUSCO on the assembly when installed
+* When input has been decided on, run Maker assembly
 
+Rerun AllPaths-LG on decontaminated dataset with stats taken from SOAP
+* Rerunning the preparation step; when this is complete, rerun AllPaths-LG itself
 
+Rewriting the previous pipeline into a script
 
-
+* The *.sam files from the previous RADseq analyses can be removed
+* The previous *.bam, *.bai and *.intervals files can also be removed
+* RETAIN THE *.trim FILES, AS THESE ARE THE RAW DATA
 
 
 

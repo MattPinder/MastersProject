@@ -18906,6 +18906,43 @@ Rewriting the previous pipeline into a script
 * RETAIN THE *.trim FILES, AS THESE ARE THE RAW DATA
 
 
+# 26 September 2018
+
+Fucus pipeline
+Skeletonema annotation
+
+
+# 27 September 2018
+
+Copy organellar supplementary sections to the relevant document on Google Docs
+* Are the organellar fragments still present in v1.1? If so, these models should
+  be removed from the annotation so they don't affect gene number figures
+
+## To do
+
+Upload RO5 transcriptome to NCBI (and raw reads?)
+* Will have to make a new BioProject for this
+
+Work on Supplementary Material for S. marinoi genome manuscript
+* Continue work on overlapping gene models
+
+Restarted AllPaths-LG; check progress in the morning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

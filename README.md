@@ -18929,11 +18929,24 @@ Work on Supplementary Material for S. marinoi genome manuscript
 Restarted AllPaths-LG; check progress in the morning
 
 
+# 28 September 2018
 
+* AllPaths-LG still running (check at the weekend/on Monday, as previously it took two days for the assembly to crash)
 
+* Continue with annotation model clusters
+* Continue with Fucus pipeline
 
+* Make a new BioProject for RO5 transcriptome
+  * Is this just for the transcriptome, or eventually also for the genome?
+* Check through the remaining microbiome publications, and write up the Kordia/Rhodo ones
+  * Continue with Gamma manual corrections
 
-
+## Transcriptome upload
+* BioProject PRJNA493755 created for RO5
+* BioSample SAMN10141990 created for RO5
+* SRA required for downstream upload
+  * Complete metadata spreadsheet (on laptop)
+* TSA partially complete; requires SRA upload
 
 
 

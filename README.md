@@ -18949,6 +18949,12 @@ Restarted AllPaths-LG; check progress in the morning
 * TSA partially complete; requires SRA upload
 
 
+# 30 September 2018
+
+AllPaths-LG assembly for Fucus failed because no space was left on the disc.
+* Decompressed fastq files in `04_contaminants` are being rezipped in `screen`
+* Consider deleting raw data and sym-linking to data21
+
 
 
 

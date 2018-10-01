@@ -18956,6 +18956,48 @@ AllPaths-LG assembly for Fucus failed because no space was left on the disc.
 * Consider deleting raw data and sym-linking to data21
 
 
+# 1 October 2018
+
+## To do
+* Continue trying to upload RO5 transcriptome
+  * SRA raw reads uploaded
+* Try to clear some space for the AllPaths-LG assembly
+  * Most data from Fucus 00_data directory symlinked to data21;
+    some has been left from previous trim attempts, check before removing
+* Fucus pipeline
+* Check the remaining gene model clusters
+
+* Converting RO5 organelle curated GenBanks to GFF format for upload to genome browser
+  * GFF3 generated but fields need adjustment
+    * ID required in final field
+    * First field should be replaced with the correct contig name
+    * Final field should be 'ID=LOCUS_TAG;Name=LOCUS_TAG' (is this sufficient?)
+      * Include product? Check documentation about what is required
+      * Maker directory should have a `genemark_gtf2gff3` script which may work
+
+
+1. prepare-refseqs.pl
+2. flatfile-to-json.pl (write to same output dir; give details of 'new' track [Prokka])
+* Try this directly on GenBank file
+3. generate-names.pl
+4. THEN MOVE DIRECTORY TO WEBAPOLLO DIRECTORY
+
+Prokka needs to be given as the entry in field 2 of the gff
+
+Trying to run flatfile-to-json.pl on a gff gives the error:  
+`/proj/data5/Skeletonema_marinoi_genome_project/08_RO5_Organelles/Provisional_cp-genome_Annotation.gff:3: type mRNA is not the same as previous type gene for ID 'SMARCHLO_00001'
+at /state/partition1/home/local/packages/JBrowse-1.12.3/bin/../src/perl5/Bio/JBrowse/FeatureStream/GFF3_LowLevel.pm line 16.`
+* prepare-refseqs.pl worked fine; see ~/SMar_Chloro_JBrowse_Test
+
+Trying to run generate-names.pl on a gbk file gives the error:  
+`No reference sequences defined in configuration, nothing to do.`
+* flatfile-to-json.pl worked fine; see JBrowseTest on data5
+
+Ask Tomas about these errors tomorrow?
+
+
+
+
 
 
 

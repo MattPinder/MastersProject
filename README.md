@@ -18996,7 +18996,31 @@ Trying to run generate-names.pl on a gbk file gives the error:
 Ask Tomas about these errors tomorrow?
 
 
+# 2 October 2018
 
+Retrying the above JBrowse commands in ~/SMar_JBrowse_Tests/
+* GFF attempt generates data/seq directory, but flatfile-to-json fails
+* GBK attempt generates data/tracks directory, but generate-names.pl fails
+
+GFF needs to be reformatted so that field 9 contains the relevant -mrna-1 suffixes
+* Python script to tweak it?
+
+Use gene naming convention from genome: instead of e.g. SMARCHLO, use Sm_plastid_000001
+* Also manually add ncRNAs to gff3, and make a new ncRNA track
+* Transfer relevant info from previous cp-genome database
+
+Both organellar genomes now uploaded to the genome browser
+
+## To do
+* Annotate organellar genomes on browser
+* Finalise transcriptome upload on NCBI
+* Check AllPaths progress
+* Rick's pipeline
+* ?
+
+
+
+Check - does 'sediment core' principle apply to ice cores for arctic/antarctic diatoms?
 
 
 

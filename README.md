@@ -19018,11 +19018,44 @@ Both organellar genomes now uploaded to the genome browser
 * Rick's pipeline
 * ?
 
-
-
 Check - does 'sediment core' principle apply to ice cores for arctic/antarctic diatoms?
 
 
+# 3 October 2018
+
+## AllPaths-LG
+Job likely to crash again due to lack of space...
+* Another ~300G has been freed
+
+Job crashed, not due to lack of space, but due to 'Segmentation violation'; the job has been resumed from the
+point of failure; the job took ~6 hours at the current step before failing, check again in the morning
+
+## RO5 transcriptome
+Uploading the file revealed another 44 'good' transcripts to be removed due to similarity to Illumina adapters;
+this should be noted in the manuscript.
+
+* Something like:
+ "During the upload process to NCBI's Transcriptome Shotgun Assembly (TSA) sequence database, a number of
+  potential contaminant sequences were identified, bearing strong similarity to various adapters or bacteria.
+  In total, 30 transcripts were removed and a further 90 trimmed, giving a final sequenced transcriptome
+  containing 36,570 transcripts."
+
+* Additional errors remaining; other contaminants
+  * Trimmed and readded the Illumina contaminants (except two which fell below NCBI's 200bp length limit)
+  * Trimmed/removed the other contaminants as recommended by NCBI
+  * Resubmitted
+
+## RO5 organelles
+Annotate in browser
+* Any way to account for the different organellar translation table? (i.e. different start codons)
+
+
+## To do
+* Check on progress of AllPaths-LG
+* Check on progress of transcriptome upload, then forward details to Adrian + Mats along with recommendations
+* Should it be noted in the browser that the codon tables cause the current annotations to display incorrectly?
+* Rick's pipeline
+  * A few comment lines added; check these before continuing
 
 
 

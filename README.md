@@ -19058,6 +19058,53 @@ Annotate in browser
   * A few comment lines added; check these before continuing
 
 
+# 4 October 2018
+
+## AllPaths-LG
+Job still going, seems to have passed the previous stopping point
+
+## RO5 transcriptome
+Still waiting for upload to be processed; as it hasn't been rejected yet, it appears to have passed the
+contamination checks this time
+
+## Genome browser
+Where appropriate, note divergence from the standard codon table
+* Future versions of WebApollo should have the option to select alternative translation tables
+
+* Move the custom annotations from the first round of annotation into User-created Annotations of v1.1
+  * Also check comments from Chloroplast genome v1.0 and transfer as appropriate to v1.1
+
+
+
+## To do
+* Genome publications
+  * Check Arenibacter paper for MRA, and Sulfitobacter paper for JoG
+  * Need to work on Kordia and Rhodobiaceae papers
+* Bacterial genomes
+  * Continue manual work on Gamma
+  * Any further evidence of Rhodobacteraceae bacteria?
+* Google Drive
+  * Tidy up the publications folder, making the system more consistent and understandable
+* Genome browser
+  * See above
+
+Contigs up to Sm_0000007F transferred; continue with Sm_0000008F tomorrow
+* And work on bacterial genome papers, addressing Mats' comments
+
+AllPaths-LG reporting a memory error; address this and resume job
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -19075,7 +19075,6 @@ Where appropriate, note divergence from the standard codon table
   * Also check comments from Chloroplast genome v1.0 and transfer as appropriate to v1.1
 
 
-
 ## To do
 * Genome publications
   * Check Arenibacter paper for MRA, and Sulfitobacter paper for JoG
@@ -19088,10 +19087,38 @@ Where appropriate, note divergence from the standard codon table
 * Genome browser
   * See above
 
-Contigs up to Sm_0000007F transferred; continue with Sm_0000008F tomorrow
+Contigs up to Sm_000007F transferred; continue with Sm_000008F tomorrow
 * And work on bacterial genome papers, addressing Mats' comments
 
 AllPaths-LG reporting a memory error; address this and resume job
+
+
+# 5 October 2018
+
+## AllPaths-LG
+Job resumed on Annotation-1. Memory almost full on Annotation-4; is this data from AllPaths stuck in memory?
+
+## Genome papers
+
+
+Need to go to Chalmers and get a password reset...
+
+Sulfitobacter paper
+* Figure 1 - 2dp
+  * Colour + Bold 'Strain SMR1' to make it stand out more
+    * Change the figure legend accordingly
+* Circular genome figure generator for graphical abstract + new figure? (ask Tomas?)
+  * HiCharts?
+
+
+WHEN READY, RUN runBUSCO_1000.sge in:
+/proj/data13/Fucus_vesiculosus_genome_project/01_Assembly/SOAP_assembly_decontaminated_Test2/BUSCO_Analyses_1000
+
+
+
+
+
+
 
 
 

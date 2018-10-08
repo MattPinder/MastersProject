@@ -19110,16 +19110,52 @@ Sulfitobacter paper
 * Circular genome figure generator for graphical abstract + new figure? (ask Tomas?)
   * HiCharts?
 
-
 WHEN READY, RUN runBUSCO_1000.sge in:
 /proj/data13/Fucus_vesiculosus_genome_project/01_Assembly/SOAP_assembly_decontaminated_Test2/BUSCO_Analyses_1000
 
 
+# 8 October 2018
+
+## Chalmers
+Account reactivated
+* Fastq files transferred, need to install AllPaths-LG
+
+* Try moving binaries from Albiorix?
+
+## Genome papers
+Figure 1 of Sulfitobacter paper re-generated
+* Check with Tomas about circular genome figure
+
+## BUSCO
+Some aspect of the analyses appear to have failed...?
+* hmmsearch - Error: Failed to open sequence file [] for reading
+  * Out of several hundred files, only ~half a dozen fail
+  * This doesn't appear to be a problematic error (see https://gitlab.com/ezlab/busco/issues/77)
+* Results are not promising... Only around 50% BUSCOs found
+
+Retry with another organism database; database could be too far taxonomically
+* Run on Ectocarpus assembly as a test, for comparison
+* `/proj/data13/Fucus_vesiculosus_genome_project/00_Data/Ectocarpus_siliculosus/Ectsi_genome_V2_cleaned.tfa`
+
+* Start a BUSCO analysis for Skeletonema (same database)
+
+## Annotation transfer
 
 
+## To do
 
+* Install AllPaths-LG on Hebbe
+  * Try moving binaries from Albiorix
+  * Otherwise, retry installation and note any errors
+* Contact NCBI - change RO5AC to R05AC (O to zero)
+* Circular genome figure
+* Check BUSCO analyses for Skeletonema assembly and Fucus Platanus assembly
+* Continue annotation transfer
+* Other genome papers
+  * Kordia, in particular
+  * Waiting for co-author comments on other papers
 
-
+* Rick's pipeline
 
 
 

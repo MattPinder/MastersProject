@@ -19158,10 +19158,46 @@ Retry with another organism database; database could be too far taxonomically
 * Rick's pipeline
 
 
+# 9 October 2018
+
+## Fucus
+Albiorix binaries copied to Hebbe; attempting to run PrepareAllPathsInputs.pl
+* Should any additional modules have been loaded in...?
+
+Running BUSCO analyses on subsets of the Platanus assembly
+* The decontaminated Platanus assembly appears to be better than SOAP
 
 
+Run BUSCO analysis on a non-decontaminated dataset
+* Platanus_NEW
+* Use Eukaryote rather than Tetrahymena database
+  * Redo previous analyses using Eukaryote database (full assemblies only)
 
+* Skeletonema - rerun with Eukaryote database too
 
+AllPaths-LG
+* Space could be an issue; run the AllPaths job directly after the prep step, as 1T storage on
+  Hebbe but 1.6T on scratch disk
+* `ls -lR` at the end to get a list of all files; if the job is run again, know what to retain
+
+Waiting for data preparation to complete; script to run the main job is ready
+
+## Circos
+
+Try again to set up Circos, to generate circular genome maps
+* Locally installed missing Perl modules
+* Need to determine exactly what should be displayed
+
+## Annotation transfer
+Note - Sm_000029F:556347-558310, some details of a NEW annotation were lost when the previous
+one was transferred...
+
+Continue from Sm_000041F
+
+## To do
+* Check on AllPaths-LG progress on Hebbe
+* Figure out what to display in Circos
+* Continue annotation transfer
 
 
 

@@ -19200,11 +19200,29 @@ Continue from Sm_000041F
 * Continue annotation transfer
 
 
+# 10 October 2018
 
+## AllPaths-LG
+AllPaths-LG is failing to recognise the input files as FASTQ format...?
+* Try rsync-ing the already-prepped data from Albiorix and running the assembly directly
+  * May have to remove the fastq files from Hebbe for the sake of space
 
+## Annotation transfer
+All custom annotations from v1.0 should now be present in v1.1
 
+## Circos
+What do we need to show?
+* Genes, RNAs, etc
+* GC content?
 
+Try CGView Server?
 
+## Other genome announcements
+Focus on Kordia paper!
+* Compare to other Kordia genomes (e.g. table of stats)
+
+* Download all relevant marker genes from all sequenced Kordia species for a full comparison table
+  * Continue tomorrow
 
 
 

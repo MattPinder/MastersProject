@@ -19225,6 +19225,43 @@ Focus on Kordia paper!
   * Continue tomorrow
 
 
+# 11 October 2018
+
+## AllPaths-LG
+Prepped files compressed, running md5sum before transfer
+
+## Kordia paper
+Continue downloading marker genes
+
+## Evolution of Kordia
+Read papers, consider possibility
+* Is Kordia found in other strains outside Oresund?
+
+* Set up a WhatIsIt run for eutrophication data
+
+* Map reads to Kordia reference sequence (retain SAM files), and generate a comparative plot using BRIG
+  * https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-402
+
+## Skeletonema marinoi sequence data metadata
+
+Run Bowtie to generate mapping % for remaining deep-sequenced strains
+* Need to do the same for all shallow-sequenced strains, as none have been mapped to the full R05 reference
+* Run this once deep-sequenced WhatIsIt has completed, so `data17` doesn't fill up
+
+* Remove zero-size ShallowSequenced files
+* Remove remaining DeepSequenced *.unmapped.FASTQ files when run is complete
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

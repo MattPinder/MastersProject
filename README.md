@@ -19252,11 +19252,30 @@ Run Bowtie to generate mapping % for remaining deep-sequenced strains
 * Remove remaining DeepSequenced *.unmapped.FASTQ files when run is complete
 
 
+# 12 October 2018
+
+## Eutrophication - WhatIsIt
+P4005_1023 being rerun as data17 ran out of space (around 500G freed up)
+* Where a significant proportion (?) of reads hit Kordia, map to the Kordia reference genome and keep SAM file
+* Then generate a plot in BRIG
+
+Generating SAM file for P1872_420 first as proof of principle 
 
 
+## AllPaths-LG
+Still waiting...
+* May need to resubmit
 
+## Skeletonema marinoi sequence data metadata
+Still need to run Bowtie2 on remaining deep-sequenced strains and ALL shallow-sequenced strains
+* Deep-sequenced bam files are ~2.5G each, remaining ones will be ~20G total
+* Remaining deep-sequenced mapping jobs queued
+* Scripts prepped for the 140 shallow-sequenced strains
+  * As there are ~10x more reads in deep- than shallow-sequenced files, assume 10% file size for shallow bams
+  * 140*250M = 35,000M = ~35G
 
-
+## Trim words from Arenibacter paper
+Check word count of accepted papers for strictness
 
 
 

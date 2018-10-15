@@ -19278,6 +19278,35 @@ Still need to run Bowtie2 on remaining deep-sequenced strains and ALL shallow-se
 Check word count of accepted papers for strictness
 
 
+# 15 October 2018
+
+## Arenibacter paper
+Check word counts of most-recent five papers published by MRA (in MS Word):
+* 564
+* 612
+* 651
+* 671
+* 513
+
+* Arenibacter paper is currently at 532 words; should be acceptable
+
+## AllPaths-LG
+Node apparently not available? Waiting for job to submit...
+
+## Skeletonema marinoi sequence data metadata
+Continue mapping eutrophication data to R05 reference
+
+## BRIG
+Try to generate a Kordia similarity map using BRIG
+* Settings will require some adjustment; should try generating a figure with more samples
+
+## Kordia paper
+Is the marker gene comparison really proving anything?
+* Perhaps just describe OrthoANI + GGDC results?
+
+
+
+
 
 
 

@@ -19295,6 +19295,7 @@ Node apparently not available? Waiting for job to submit...
 
 ## Skeletonema marinoi sequence data metadata
 Continue mapping eutrophication data to R05 reference
+* Done
 
 ## BRIG
 Try to generate a Kordia similarity map using BRIG
@@ -19303,6 +19304,73 @@ Try to generate a Kordia similarity map using BRIG
 ## Kordia paper
 Is the marker gene comparison really proving anything?
 * Perhaps just describe OrthoANI + GGDC results?
+
+
+# 16 October 2018
+## AllPaths-LG
+Waiting for priority...
+
+## BRIG
+Copy across the other two .sam files to laptop and try again
+* Copy sorted bams to Ubuntu machine for comparison
+
+* Checking mapping
+  * Some subs in the 23S rRNA gene
+  * One sub in 2/3 of samples in a hypothetical protein
+  * V. low coverage at ~1,205,000
+  * High coverage and subs between ~2,645,000-2,655,000 (various hypothetical proteins)
+  * V. low coverage at ~2,658,000
+  * One sub in "bifunctional (p)ppGpp synthetase/guanosine-3',5'-bis(diphosphate) 3'-pyrophosphohydrolase"
+  * One sub in 2/3 of samples in aminoacyl-histidine dipeptidase
+  * Sharp coverage drop at ~3,405,950
+  * V. low coverage and subs at ~3,615,000-3,625,000 (rRNA cluster)
+  * One sub in 2/3 of samples in a hypothetical protein
+  * V. low coverage at ~4,325,000 (esp. in _420 and _492)
+  * High coverage and subs between ~4,970,000-4,975,000 (hypothetical protein)
+  * Some subs between ~5,040,000-5,045,000 (rRNA cluster)
+  * Low coverage dips between ~5,085,000-5,095,000
+  * V. low coverage at ~5,247,500
+
+  * Substitutions in rRNA cluster may be due to mapping of other bacterial reads?
+
+P1872_567 matches SMS9 closer than _420 and _492
+
+Running P1872_539 to see comparison between high and lower mapping samples
+* P1872_539 has more substitutions than the previous three samples
+
+Considering time and distance, shouldn't these bacteria be more dissimilar...?
+* There were low-coverage areas which may suggest that SMS9 lacks regions present in other strains
+  * Reference-based assembly...?
+
+* **Set the max coverage option to ~200 for the Kordia samples**
+
+## Something to check
+[StrainPhlAn?](https://genome.cshlp.org/content/27/4/626.full)
+
+## Note
+Even though some of them have very low mapping percentages, the eutrophication strains checked in IGV  
+didn't show the same potential S. subsalsum signature as the low-mapping temperature strains
+
+## Genome browser
+Look into generating a Features-like track for the RO5 associated contigs
+
+Generating a new all-vs-all megablast for RO5, with frame hit included; ensure that +/- strandedness
+is included correctly in the Associated_contigs.gff file
+* Also complete column 9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

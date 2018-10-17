@@ -19342,7 +19342,7 @@ Considering time and distance, shouldn't these bacteria be more dissimilar...?
 * There were low-coverage areas which may suggest that SMS9 lacks regions present in other strains
   * Reference-based assembly...?
 
-* **Set the max coverage option to ~200 for the Kordia samples**
+* **Set the max coverage option to ~400 for the Kordia samples**
 
 ## Something to check
 [StrainPhlAn?](https://genome.cshlp.org/content/27/4/626.full)
@@ -19357,6 +19357,65 @@ Look into generating a Features-like track for the RO5 associated contigs
 Generating a new all-vs-all megablast for RO5, with frame hit included; ensure that +/- strandedness
 is included correctly in the Associated_contigs.gff file
 * Also complete column 9
+
+
+# 17 October 2018
+
+## Kordia
+Running the remaining 'High Kordia' strains through Bowtie2
+* Can `.sam` files be removed once the `.sam.graph` files have been generated?
+
+
+## Genome browser
+Rerunning the new megablast, as `frames` didn't provide the desired information
+* Retrying using `sstrand`
+
+All correct strand (although there shouldn't have been any on the opposite strand anyway,
+considering the assembly...)
+
+* Run the `flatfile-to-json.pl` (should `prepare-refseqs.pl` be run first?)
+* Copy `data/tracks/[trackname]` directory to the relevant location in the webapollodb subdirectory
+* Copy the bottom chunk of text from the json file into the main json track file in the webapollodb subdirectory
+
+## data5
+Check root of data5 for notes on files to remove/compress
+* Removed `.sorted.bam` and `.sorted.bai` files from
+`/proj/data5/Skeletonema_marinoi_genome_project/09_error_correction/Organelles`
+* Regenerate these files using the `--no-unal` flag at a later date
+
+In `/proj/data5/data` there are a lot of big Skeletonema data files which should also  
+be on `data21`; ensure they are present on `data21`, then delete and symlink fromm `data5`
+
+* Data in `skeletonema_2` doesn't seem to match the uncompressed md5sum of the equivalent
+  on data5
+  * `data21` equivalent has some form of log file so more likely to be reproducible?
+
+The `/proj/data5/data/skeletonema/reads/A.Blomberg_17_16-P8511/` directory appears to be the complete version of
+`/proj/data21/Skeletonema_marinoi/Needs_Moving/A.Blomberg_17_16-P8511/`, which was never completely transferred
+from sparc due to permission issues
+* Check some md5sums to ensure the files are correct, then rsync directly from data5 to data21?
+  * Double-check remaining file sizes on sparc
+
+(md5sum for `/proj/data21/Skeletonema_marinoi/Needs_Moving/A.Blomberg_17_16-P8511/01-QC/P8511_101/fastq_trimmed/P8511_101_S1_L001_R1_001.fastq` (decompressed) = dbdd9910d3cbe968744b4dac71f76f36)
+* Check screen for data5 equivalent
+
+
+## Note
+Useful command to check md5sum of compressed files without having to decompress them first
+* `gzip -d -c myfile.gz | md5sum`
+  * Useful as unzipping and rezipping alters the md5sum
+
+
+
+
+
+
+
+
+
+Find journal club article
+
+
 
 
 

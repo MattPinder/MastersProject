@@ -19399,11 +19399,63 @@ from sparc due to permission issues
 (md5sum for `/proj/data21/Skeletonema_marinoi/Needs_Moving/A.Blomberg_17_16-P8511/01-QC/P8511_101/fastq_trimmed/P8511_101_S1_L001_R1_001.fastq` (decompressed) = dbdd9910d3cbe968744b4dac71f76f36)
 * Check screen for data5 equivalent
 
-
 ## Note
 Useful command to check md5sum of compressed files without having to decompress them first
 * `gzip -d -c myfile.gz | md5sum`
   * Useful as unzipping and rezipping alters the md5sum
+
+
+# 18 October 2018
+
+## FSTs
+Check to see whether the data in the most recent spreadsheet is correct
+* `/proj/data17/pierre/lowCov_angsd/genic/Results_SNPfilt` vs. Skeletonema_lowCov_Sept4_2018_Summary_noNegatives.xlsx
+
+* Window data matches, but individual SNPs don't
+  * Assuming `.fst.idx` files contain the same information as `.fst.txt` files, if this differs from the
+    spreadsheet before window calculations are made, could this cause the disconnect...?
+
+* None of the 'Window 100, step 25' columns appear to have been switched around
+
+* In `realSFS fst stats2`, is the `-r` flag set correctly?
+  * Corresponds to the start-stop of the gene on the contig
+
+* Weighted vs. unweighted FST?
+  * ANGSD version used is 0.913-52-gae40176
+  * Current version is 0.923
+* From [FAQ](http://www.popgen.dk/angsd/index.php/Fst):
+  * "We have removed the very unuseful unweighted fst estimator in the output, and have included a header."
+
+* How were pooled data results generated?
+  * Check previous directory linked by Pierre
+
+* Reply to Pierre with questions/comments
+
+
+
+## HighCharts
+Look into HighCharts (need to learn JavaScript) with a view to implementing it in Bamboozle
+
+## data5
+A.Blomberg_17_16-P8511 on data5 appears to be the complete version, but there isn't enough space on data21
+* Compressing what can be compressed; 'temporary' filtering files which should be in A.Blomberg_17_16-P8511...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19414,7 +19466,6 @@ Useful command to check md5sum of compressed files without having to decompress 
 
 
 Find journal club article
-
 
 
 

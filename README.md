@@ -19431,8 +19431,6 @@ Check to see whether the data in the most recent spreadsheet is correct
 
 * Reply to Pierre with questions/comments
 
-
-
 ## HighCharts
 Look into HighCharts (need to learn JavaScript) with a view to implementing it in Bamboozle
 
@@ -19441,8 +19439,19 @@ A.Blomberg_17_16-P8511 on data5 appears to be the complete version, but there is
 * Compressing what can be compressed; 'temporary' filtering files which should be in A.Blomberg_17_16-P8511...
 
 
+# 19 October 2018
 
+## data5
+Shuffling some files around; `Temporary_Matt_Filtering` into `A.Blomberg_17_16-P8511/02-Filtering`, then
+rsync `A.Blomberg_17_16-P8511` to `data21` and set up symlinks
 
+Should be a good amount of space on `data21` and `data5` now
+* Compression jobs still running on Annotation-2/3/4 and `screen`
+* Currently 761G free on `data5`
+* Currently 1.2T free on `data21`
+
+## Kordia
+How to proceed with article?
 
 
 

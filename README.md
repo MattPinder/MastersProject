@@ -19454,6 +19454,53 @@ Should be a good amount of space on `data21` and `data5` now
 How to proceed with article?
 
 
+# 22 October 2018
+
+* Free space on `data5` - 753G
+* Free space on `data21` - 1.9T
+
+## Fucus
+AllPaths-LG failed almost immediately; try to fix
+* Seems to be missing libraries; must the application be installed from scratch?
+
+## FST data
+Check Pierre's response and determine if anything is wrong
+1. Individual SNPs in Excel don't match those from Pierre's files
+  * FST = column 3/column 4 (see spreadsheet and link)
+  * No obvious problems with the spreadsheet or calculations
+2. No switched columns...
+3. Pooled data link from left-hand plots - `/proj/data17/pierre/pop_data/*.fst`
+  * However, Pierre doesn't trust the data, 'as it assumes equal coverage across all individuals in each layer for each SNP'
+4. Was weighted or (unuseful) unweighted data used?
+  * Weighted was used; no issue
+
+## S. marinoi repeats
+Figure out percentage of S. marinoi genome which is repeats, based on Florian's .gff file
+* Location - `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_annotation_2018/Skeletonema_REPET_FM/Skm_REPETfull.gff3`
+* Are ALL repeats represented in the browser...?
+  * Based on Skm_REPETfull.gff3 (`match` rows only), 42.77% of the genome is composed of repeats
+
+## Locus names for Skeletonema
+Possible confusion arising from `match` field being used by Maker rather than `gene`; would a `sed` replacement solve the issue?
+* Possible overkill, but the next step involves grepping out the parts we need only, so would that fix the issue?
+
+## AllPaths-LG
+Trying to compile...
+Requirements:
+* GCC 4.7.0+
+* GMP (if not included in GCC)
+* Picard
+* dot from the graphviz package
+
+Try loading `GCC/7.3.0-2.30` (latest GCC)
+
+On hold...
+
+## Kordia
+Check the regions from mapped eutrophication data which show SNPs
+* Running `bcftools` (adapted from Vilma's pipeline) on all samples
+  * Note - some SNPS in e.g. low coverage areas aren't shown... Should this be rerun with different settings?
+  * Check results tomorrow
 
 
 

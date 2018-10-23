@@ -19503,6 +19503,32 @@ Check the regions from mapped eutrophication data which show SNPs
   * Check results tomorrow
 
 
+# 23 October 2018
+
+## Kordia
+
+Check results
+* Results graphed in R - position of SNP vs. frequency, across all HighKordia samples
+* Do these represent signatures of time/location?
+(Note: can't move all SAM files to Ubuntu machine; not enough space. Run BRIG on Albiorix?)
+
+
+## Contamination
+To determine whether any other of our bacteria are contaminants, rather than true associated bacteria,
+map reads from all eutrophication samples to all nine bacteria
+* Then run bcftools to check SNPs
+* Scripts are ready to run; Antarctobacter, Arenibacter and Kordia mapping runs are all queued to Annotation
+nodes; check the rest later and run Loktanella, Marinobacter and Rhodo when possible; then Roseo, Sphingo and
+Sulfito (then bcftools)
+
+
+
+
+Via Egencia - 0317738715
+* Use code BAMATL
+
+
+
 
 
 

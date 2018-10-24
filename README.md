@@ -19512,7 +19512,6 @@ Check results
 * Do these represent signatures of time/location?
 (Note: can't move all SAM files to Ubuntu machine; not enough space. Run BRIG on Albiorix?)
 
-
 ## Contamination
 To determine whether any other of our bacteria are contaminants, rather than true associated bacteria,
 map reads from all eutrophication samples to all nine bacteria
@@ -19521,12 +19520,26 @@ map reads from all eutrophication samples to all nine bacteria
 nodes; check the rest later and run Loktanella, Marinobacter and Rhodo when possible; then Roseo, Sphingo and
 Sulfito (then bcftools)
 
-
-
-
 Via Egencia - 0317738715
 * Use code BAMATL
 
+
+# 24 October 2018
+
+## Contamination
+Antarctobacter, Arenibacter and Kordia complete; Loktanella, Marinobacter and Rhodobiaceae submitted
+
+## Strange gff issue
+What do match/match_part correspond to?
+* match_part corresponds to exon
+* match corresponds to mRNA
+
+## To think about
+If one Illumina lane is ~200G (uncompressed), and many samples are taken at many time points, storing all of the data
+soon becomes unfeasible...  
+Is there a way to generate a signature for various taxa (family, genus, species, etc) in order to classify reads?
+* Store unknowns for later classification
+* Generate hashes of a given window of the reference sequence and compare to windows in the read?
 
 
 

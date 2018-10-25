@@ -19542,19 +19542,24 @@ Is there a way to generate a signature for various taxa (family, genus, species,
 * Generate hashes of a given window of the reference sequence and compare to windows in the read?
 
 
+# 25 October 2018
+
+* Start more bacterial contaminant jobs
+* Continue looking through gene clusters
+
+## Browser
+Upload 'Unique models per locus' track to browser
+
+**Will need to make the new names searchable in the browser...**
+* Consult Tomas; will the generate-names.pl script need to be rerun for the whole dataset
+
+* Also fix display issues in browser
+  * Names now displaying correctly but exons are not
+
+* Check gene at end of 000236F
 
 
-
-
-
-
-
-
-
-
-
-
-
+Submit the last three batches of BCFtools jobs tomorrow; can probably run on Annotation nodes?
 
 
 

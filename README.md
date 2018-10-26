@@ -19558,8 +19558,33 @@ Upload 'Unique models per locus' track to browser
 
 * Check gene at end of 000236F
 
-
 Submit the last three batches of BCFtools jobs tomorrow; can probably run on Annotation nodes?
+
+
+# 26 October 2018
+
+## GFF file
+
+Check 'double 3' UTR' region' gene in latest Skeletonema gff
+
+Not all clusters were checked first time around  
+Additionally, features shared by multiple mRNAs of the same gene were removed!
+* Ensure that all relevant features are retained - one-ofs, and relevant entries from both cluster checks
+* Use a positive selection of mRNA features (`grep '-mRNA-1;'`, NOT `grep -v '-mRNA-2;'`, etc.)
+
+
+## Contamination
+
+Submit final jobs for BCFtools
+* Add mapping % to README results files
+
+
+## To do
+As above, plus work on GFF file
+
+
+
+
 
 
 

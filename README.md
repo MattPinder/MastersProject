@@ -19572,18 +19572,30 @@ Additionally, features shared by multiple mRNAs of the same gene were removed!
 * Ensure that all relevant features are retained - one-ofs, and relevant entries from both cluster checks
 * Use a positive selection of mRNA features (`grep '-mRNA-1;'`, NOT `grep -v '-mRNA-2;'`, etc.)
 
-
 ## Contamination
 
 Submit final jobs for BCFtools
 * Add mapping % to README results files
 
-
 ## To do
 As above, plus work on GFF file
 
 
+# 29 October 2018
 
+## GFF file
+Complete Python script to extract the relevant records from the ORIGINAL .gff file
+* Script appears to be working; running in `screen`
+* Still need to fix the number-colon-genename issue; this is still appearing in the last field
+  despite all attempts to fix
+* Is there a finite number of permutations such that a string of `sed` commands would fix it?
+  * Solved(?) using Python script
+    * Check results tomorrow
+
+## Contamination
+Continue checking for possible signals of contamination in eutrophication data
+* Kordia SMS9 and Rhodobiaceae SMS8 are very likely contaminants
+* Sulfitobacter is also a potential contaminant...
 
 
 

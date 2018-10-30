@@ -19520,7 +19520,7 @@ map reads from all eutrophication samples to all nine bacteria
 nodes; check the rest later and run Loktanella, Marinobacter and Rhodo when possible; then Roseo, Sphingo and
 Sulfito (then bcftools)
 
-Via Egencia - 0317738715
+Egentia - 0317738715
 * Use code BAMATL
 
 
@@ -19598,6 +19598,31 @@ Continue checking for possible signals of contamination in eutrophication data
 * Sulfitobacter is also a potential contaminant...
 
 
+# 30 October 2018
+
+## GFF file
+Check results from yesterday
+
+GFF file should now be fixed and ready
+* Still shows weird display issues in the browser, however...
+
+## Contamination
+Check the Sulfitobacter results more closely; is there a consistent pattern within subgroups (core slices)
+* No consistent patterns noted during my search, and some pockets of SNPs could be explained by mapping of
+  reads from other bacteria
+* Most likely conclusion is that Sulfitobacter is a contaminant...
+
+## Skeletonema costatum
+Read paper; any interesting info?
+* Genes for oxidative stress response and response to cytokinin involved in blooms; multi-copy and/or
+  high expression in S. marinoi?
+
+## A2W samples
+Recheck the poorly-mapped samples; continue to check for evidence of S. subsalsum misidentification
+* Note: S. subsalsum reported in the Baltic
+
+Continue extracting 'cyclo' sequences from bins to generate a phylogeny, to see if the samples separate as
+expected (marinoi vs. subsalsum)
 
 
 

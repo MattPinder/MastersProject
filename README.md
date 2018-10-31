@@ -19625,9 +19625,23 @@ Continue extracting 'cyclo' sequences from bins to generate a phylogeny, to see 
 expected (marinoi vs. subsalsum)
 
 
+# 31 October 2018
+
+## GFF
+Need to figure out searchable 'names' (see Slack discussion)
+
+## A2W samples
+Some evidence of cyclo clustering, but not AS clear-cut as with other markers
+
+
+
+
 
 
 Find journal club article
+
+
+
 
 
 

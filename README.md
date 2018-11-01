@@ -19629,9 +19629,41 @@ expected (marinoi vs. subsalsum)
 
 ## GFF
 Need to figure out searchable 'names' (see Slack discussion)
+* Command used - `/usr/local/packages/JBrowse-1.12.3/bin/generate-names.pl --out . -i --tracks Unique_models_per_locus --verbose`
+* Submitted as a script from a copy of the `Skeletonema_marinoi_Ref_v1.1_Primary_upload` directory
 
 ## A2W samples
 Some evidence of cyclo clustering, but not AS clear-cut as with other markers
+
+
+# 1 November 2018
+
+## Mapping
+Map two ST54 datasets (one PE and one MP) to one of the bacterial genomes, and extract the reads
+* Use `mapping_aligning.sh`
+  * Use Antarctobacter genome
+  * Ensure that MP library runs; may not be paired, and doesn't seem to have undergone QC...
+
+## A2W
+Add outgroup to cyclo tree; rename samples to include suspected 'marinoi' or 'subsalsum' identity?
+* Outgrouping to T. pseudonana, this appears to confirm the suspicion
+
+## GFF - DONE
+Figure out naming (check yesterday's trial in home directory)
+* The process is killed if run on the login node, but submitting to the queue appears to work
+  * As this poses permissions issues, the whole directory for the R05 primary database was copied
+    to my home directory, the `generate-names.pl` command submitted to the queue, and copied back
+    to the R05 directory in `/db/webapollodbs/`
+
+## To do
+
+ZIP the `/proj/data5/Skeletonema_marinoi_microbiome_project/12_mapping/` files which claim to be .gz but aren't!
+* Mate pair mapping to Antarctobacter was poor...
+  * Retry with Arenibacter!
+  * Double-check the paired-end mapping for Antarctobacter and redo for Arenibacter
+
+Check the emails regarding the genome assembly course and perform the required steps
+
 
 
 

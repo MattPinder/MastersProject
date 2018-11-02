@@ -19665,8 +19665,25 @@ ZIP the `/proj/data5/Skeletonema_marinoi_microbiome_project/12_mapping/` files w
 Check the emails regarding the genome assembly course and perform the required steps
 
 
+# 2 November 2018
 
+## Mapping
 
+Rerunning ST54 mapping with Arenibacter, as Antarctobacter was so poor
+* If this fails, is it worth retrying with Sulfitobacter...?
+* Arenibacter also appears to have poor results
+* Sulfitobacter is marginally better, but still not ideal...
+* Kordia may be the best alternative...
+  * Kordia MPL has *very* high coverage; wait for completion of PE library
+
+## S. subsalsum
+Try running a phylogenetic analysis on the SIT gene?
+* "The SIT gene phylogeny was grossly similar to the underlying species phylogeny inferred from
+  nuclear and chloroplast DNA (Alverson 2006)"
+  * From 'Strong purifying selection in the silicon transporters of marine and freshwater diatom'
+  * Alverson, A.J., 2007
+
+Concatenate coxI sequences and perform analysis
 
 
 

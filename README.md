@@ -19686,6 +19686,23 @@ Try running a phylogenetic analysis on the SIT gene?
 Concatenate coxI sequences and perform analysis
 
 
+# 5 November 2018
+
+DON'T QUEUE TO ANNOTATION NODES
+
+## Mapping
+
+These results appear to have been checked already
+
+## S. subsalsum
+
+coxI, 16S and psbC analyses have been run; SIT analysis still needs to be run
+
+## LoF project
+VR application rejected; need to improve
+
+
+
 
 Find journal club article
 

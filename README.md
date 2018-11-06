@@ -19702,6 +19702,32 @@ coxI, 16S and psbC analyses have been run; SIT analysis still needs to be run
 VR application rejected; need to improve
 
 
+# 6 November 2018
+
+## S. subsalsum
+Few SIT results were found, but those that were adhered to the expected pattern
+* Any other useful analyses that could be performed...?
+* Limited by the fact that so few sequences exist for S. subsalsum...
+* Outliers in the data
+  * rbcL - _105 on its own branch
+  * cyclo - none
+  * coxI - _104 and _105 on their own branch
+  * 16S - _104 and _105 on their own branch
+  * psbC - _105 on its own branch
+  * SIT - none
+* Where _104 and _105 are not listed as outliers, they had no sequence in the analysis
+  * What are they?
+    * Hypothesis: a Thalassiosira sp.?
+
+* Note: When searching for cyclo with T. pseudonana as a query, found sequences for _104 and _105
+  * Rerun this phylogenetic analysis and search for other missing genes using the same approach?
+
+## Bamboozle
+How to proceed and improve?
+
+
+
+
 
 
 Find journal club article

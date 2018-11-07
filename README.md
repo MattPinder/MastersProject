@@ -19726,7 +19726,25 @@ Few SIT results were found, but those that were adhered to the expected pattern
 How to proceed and improve?
 
 
+# 7 November 2018
 
+## Eutrophication
+Double-checked the eutrophication data; no obvious mistaken identity in the low-mapping samples
+* Most poorly-mapped samples in the 0-1% range, and checking the regions of 'high' (~20x) coverage,
+  this appears to be bacterial
+
+## S. subsalsum
+Tried looking for the missing marker genes using T. pseudonana queries, but no success aside from cyclo
+
+## Bamboozle
+
+Updating the user options to make them more intuitive. Need to update some expressions in the code to
+work with the new format:
+`if args.mode == "deletion-3":`
+`	args.events = True`
+
+`if args.mode == "deletion-2":`
+`	args.deletion = True`
 
 
 

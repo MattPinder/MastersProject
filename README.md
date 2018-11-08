@@ -19747,9 +19747,23 @@ work with the new format:
 `	args.deletion = True`
 
 
+# 8 November 2018
+
+## Annotation
+* Double-check the UTR issue
+* Manually check the gene models in the browser and flag ones which look suspicious
+
+The UTR problem is still present...
+* Is there so such thing as an intron in a UTR? - [Yes](https://onlinelibrary.wiley.com/doi/full/10.1002/bies.201200073)
+  * These broken-up UTRs are also labelled as exons
+  * I don't think this is problematic, just a slightly clumsy representation by Maker?
+
+Note - what about ncRNAs; tRNAs and rRNAs?
+
+
 
 Find journal club article
-
+* Check UTR intron paper - journal club-worthy?
 
 
 

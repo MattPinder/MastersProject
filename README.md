@@ -19761,6 +19761,11 @@ The UTR problem is still present...
 Note - what about ncRNAs; tRNAs and rRNAs?
 
 
+# 9 November 2018
+
+Write a script, or find an existing tool, to automate the process of checking the gene models
+* `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/NEW_Unique_models_per_locus/ModelQualityChecks`
+
 
 Find journal club article
 * Check UTR intron paper - journal club-worthy?

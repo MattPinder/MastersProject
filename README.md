@@ -19767,6 +19767,25 @@ Write a script, or find an existing tool, to automate the process of checking th
 * `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/NEW_Unique_models_per_locus/ModelQualityChecks`
 
 
+# 12 November 2018
+
+## Annotation
+`gffcompare` has been run to compare the 'unique models per locus' with the Trinity transcripts. Over half of
+the models are supported well by a transcript.
+* Lists have also been made of the first and last models on each contig, in case any information can be gleaned
+  about partial models
+
+## Bamboozle
+* Continue updating the code?
+
+* `coverage` function works, but slow when checking contigs late in the .bam file
+* `consensus` function still needs work
+  * `[bcf_sync] incorrect number of fields (0 != 5) at 0:0`
+* `zero` function seems to be working
+
+
+
+
 Find journal club article
 * Check UTR intron paper - journal club-worthy?
 

@@ -19784,6 +19784,28 @@ the models are supported well by a transcript.
 * `zero` function seems to be working
 
 
+# 13 November 2018
+
+## Annotation
+What next?
+* New Google Doc with gffcompare results; can check models with questionable class codes
+* Another new Google Doc with models to remove
+
+* Recheck user annotated models; update model names and make adjustments to gff (v1.1) based on these comments
+
+
+
+## Bamboozle
+Continue working on testing functions, particularly if there's any way to speed the process up
+* SPEED-UP CAN BE ACHIEVED USING `samtools depth -aa -r`
+
+Double-check overnight that the whole-genome versions of each function work
+
+
+
+
+
+
 
 
 Find journal club article

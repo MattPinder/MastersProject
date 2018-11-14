@@ -19793,8 +19793,6 @@ What next?
 
 * Recheck user annotated models; update model names and make adjustments to gff (v1.1) based on these comments
 
-
-
 ## Bamboozle
 Continue working on testing functions, particularly if there's any way to speed the process up
 * SPEED-UP CAN BE ACHIEVED USING `samtools depth -aa -r`
@@ -19802,15 +19800,37 @@ Continue working on testing functions, particularly if there's any way to speed 
 Double-check overnight that the whole-genome versions of each function work
 
 
+# 14 November 2018
+
+## Sulfitobacter
+Check genome paper for errors
+* Graphical abstract...?
+
+## Annotation
+Continue checking gene models; come up with a definite strategy
+
+* [Nested intronic genes?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2747821/)
+
+----------------[       ]--------------->
+<-----[     ]~~~~~~~~~~~~~~~[      ]-----
+
+  * See Sm_t00001736-RA and Sm_t00001737-RA
+    * Both have decent BLASTp hits, although Sm_t00001736-RA contains non-canonical splice sites...
+
+Note - many models flagged as 'Fully contained within a reference intron' appear within improbably long introns
+
+* Check models which overlap on opposite strands
 
 
-
-
+## Epigenetics in diatoms?
+Run RS_Modification_Detection.1 (SMRT Portal) on R05 reference (pb_354 cells)
+* Then run AgIn on modifications.csv file, using parameters for P6-C4 chemistry
 
 
 Find journal club article
 * Check UTR intron paper - journal club-worthy?
 
+Newest version of SMRT Portal?
 
 
 

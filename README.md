@@ -19833,6 +19833,16 @@ Find journal club article
 Newest version of SMRT Portal?
 
 
+# 15 November 2018
+
+
+
+For tomorrow - contact Mats re: checking more models (morning)
+
+Note - a lot of 'SNAP models' in the Transcripts track now show no SNAP evidence...
+
+Continue converting names of user-annotated model names
+
 
 
 

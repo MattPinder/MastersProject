@@ -19835,13 +19835,20 @@ Newest version of SMRT Portal?
 
 # 15 November 2018
 
-
-
 For tomorrow - contact Mats re: checking more models (morning)
 
 Note - a lot of 'SNAP models' in the Transcripts track now show no SNAP evidence...
 
 Continue converting names of user-annotated model names
+
+
+# 16 November 2018
+
+Keep models with any kind of support except for SNAP
+* Continue checking gene names starting from Sm_000031F
+
+
+
 
 
 

@@ -19848,6 +19848,10 @@ Keep models with any kind of support except for SNAP
 * Continue checking gene names starting from Sm_000031F
 
 
+# 19 November 2018
+
+Continue checking models; continue through the user curated models (continue from Sm_t00004953-RA)
+
 
 
 

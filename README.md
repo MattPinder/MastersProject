@@ -19853,8 +19853,18 @@ Keep models with any kind of support except for SNAP
 Continue checking models; continue through the user curated models (continue from Sm_t00004953-RA)
 
 
+# 20-22 November 2018
+
+GENOME ASSEMBLY COURSE
 
 
+# 23 November 2018
+
+Check `/proj/data5/Skeletonema_marinoi_genome_project/14_genomic_features/WeirdGeneModelCoverage.bed` and
+reformat; this will give an indication of potentially unreliable gene models based on high/low coverage
+
+Ensure *ALL* nodes are transferred to new annotation!
+* Add DB references etc. which were missed previously!
 
 
 

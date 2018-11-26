@@ -19867,6 +19867,12 @@ Ensure *ALL* nodes are transferred to new annotation!
 * Add DB references etc. which were missed previously!
 
 
+# 26 November 2018
+
+When final checks have been made on the gff file, email to Emilien and determine if any further details are needed
+* Done
+
+GRAPHICAL ABSTRACT!
 
 
 

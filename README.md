@@ -19869,10 +19869,47 @@ Ensure *ALL* nodes are transferred to new annotation!
 
 # 26 November 2018
 
-When final checks have been made on the gff file, email to Emilien and determine if any further details are needed
+When final checks have been made on the gff file, email to Emmelien and determine if any further details are needed
 * Done
 
 GRAPHICAL ABSTRACT!
+
+
+# 27 November 2018
+
+## Sulfitobacter
+
+Graphical abstract figures generated; awaiting feedback
+
+Notes on using BRIG:
+1. Set a GenBank file as the Reference/Database sequence, *not* a fasta file
+2. In Preferences>Image options>Label settings>Global label color, set this to black for ease of reading
+3. When making the CDS ring, don't add the GenBank file from 'Data pool' to 'Data shown on this ring',
+   as this will cause BLAST hits to appear amongst the labels
+
+## Fucus
+
+Things to retry in the Fucus assembly:
+* Use untrimmed reads; AllPaths-LG expects untrimmed input
+* Subsample using `seqtk sample` rather than `head`, this should give truly randomised input
+* To implement the above, will have to extract the non-contaminant reads from the *original*
+  file, as decontamination was performed on the trimmed sequences
+
+## To do?
+* Examine gene models at the ends of contigs and see whether any S. marinoi contigs can be joined?
+* Run a BUSCO analysis on the Sulfitobacter chromosome vs. the full assembly for further
+  confirmation(?) that the chromosome is, indeed, complete, and the plasmids aren't miscircularised
+  fragments
+* Continue manual curation - would this be constructive or just overly time-consuming?
+* Work on Bamboozle
+* Work on Skeletonema manuscript
+
+Check BUSCO results, and start expanding the bullet point on Annotation in the supplementary (consult other papers for advice on wording)
+
+
+
+
+
 
 
 

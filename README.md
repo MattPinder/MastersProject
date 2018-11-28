@@ -19904,15 +19904,32 @@ Things to retry in the Fucus assembly:
 * Work on Bamboozle
 * Work on Skeletonema manuscript
 
-Check BUSCO results, and start expanding the bullet point on Annotation in the supplementary (consult other papers for advice on wording)
+Check BUSCO results, and start expanding the bullet point on Annotation in the supplementary (consult other
+papers for advice on wording)
 
 
+# 28 November 2018
 
+## Sulfitobacter
+The only difference between the chromosome and whole-assembly versions of the Sulfitobacter BUSCO analysis is
+that the whole-assembly version contains one additional duplicated BUSCO hit (cf. a single-copy hit in the
+chromosome version)
 
+## Diatom BUSCO
+Running BUSCO analysis on other diatom genomes present on NCBI, for comparison with R05
+* Results of BUSCO show that S. marinoi results are in the right ballpark, albeit many duplicated BUSCOs
 
+## Annotation
+Compare models with transcript evidence to the BLASTX result, to try and identify novel S. marinoi genes
+* Manually checked the first 19 models, 5 may be worth checking, including 2 with short *bacterial* hits
+  * Any chance of horizontal gene transfer...?
 
+~5% (1,275) of the gene models with transcript evidence don't have BLASTx evidence
 
-
+* BLASTP vs nr of the above models (running on node0), determine from this how many genes are worth
+  investigating further
+  * Some of these genes do still give BLASTp hits, but must occur below a certain threshold if they're
+    not appearing in the BLASTX track
 
 
 

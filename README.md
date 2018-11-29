@@ -19928,15 +19928,35 @@ Compare models with transcript evidence to the BLASTX result, to try and identif
 
 * BLASTP vs nr of the above models (running on node0), determine from this how many genes are worth
   investigating further
-  * Some of these genes do still give BLASTp hits, but must occur below a certain threshold if they're
+  * Some of these genes do still give BLASTp hits, but must have a relatively poor score if they're
     not appearing in the BLASTX track
 
 
+# 29 November 2018
 
+## BLASTP
+Running on Annotation-1, 40 cores
+* If this completes before the node0 run, cancel
 
+## Gene model data
+Require some way to collect all of the scattered details on each gene model
+* MySQL database?
 
+## Mauve
+Aligning R05 to T. pseudonana CCMP1335; any insight?
+* Evolutionary distance probably too great to make this a meaningful test...
 
+## Associated contigs
+Any analysis to be done with these, e.g. compare gene models vs. primary contigs?
 
+## Accuracy check
+Check that mapped (Illumina PE) reads are the correct distance apart, to confirm accuracy (Use FRCBam or PicardTools?)
+* Have I mapped the PacBio data to the assembly...?
+
+* Check PicardTools results
+
+## Gene models
+Should gene models be checked and extended where transcripts suggest UTRs?
 
 
 

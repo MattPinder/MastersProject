@@ -19959,9 +19959,35 @@ Check that mapped (Illumina PE) reads are the correct distance apart, to confirm
 Should gene models be checked and extended where transcripts suggest UTRs?
 
 
+# 30 November 2018
+
+## BLASTP
+
+77 models don't have a BLASTP hit
+* Domain search to try and determine function?
+
+Rerunning analysis to generate output with regular output
+* On hold until BLAST databases are updated on Albiorix
+
+## Graphical abstract
+Redo figures without legends, labels or annotation - just genes and GC content
 
 
+## Things to check in R05
 
+Average length of:
+Intergenic regions
+Genes
+Introns
+
+Telomeres? https://www.future-science.com/doi/pdf/10.2144/btn-2018-0057
+
+Mapping distances of PE reads
+
+See Trello board
+
+## Bioserf
+Sk3...
 
 
 

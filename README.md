@@ -19990,6 +19990,38 @@ See Trello board
 Sk3...
 
 
+# 3 December 2018
+
+## Sign up to Bioserf
+Trying to run telomere analysis...
+* Page seems to be hanging; either the file import has failed,
+  or the large files are just taking a long time to import...
+  * If it hasn't started by the end of the day, try 'Upload Files' at bottom of page,
+    as these should become accessible from the 'Existing FASTQ/FASTA file' dropdown
+* FASTQ and FASTA files probably don't need to be uploaded simultaneously...
+  * But, would have to concatenate and/or uncompress the FASTQ files
+
+## Waiting for BLAST results
+* How does MEGAN classify results? - Lowest common ancestor
+* BLAST done, ready for analysis
+
+## K-mer analysis
+Trying to install KAT, but encountering errors...
+* Use Jellyfish instead?
+  * Which reads to use? Raw? Filtered?
+* Will probably have to wait until an Annotation node frees up; handling large files
+  will require a lot of disk space...
+
+## Primary vs. Associated contig models BLAST
+Grepping the Maker models from the Associated GFF file;
+need to generate fasta file from the result and run BLAST
+
+## gffutils
+Python 3-compatible library for parsing GFF files
+
+
+
+
 
 
 

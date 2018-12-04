@@ -20012,7 +20012,7 @@ Trying to install KAT, but encountering errors...
 * Will probably have to wait until an Annotation node frees up; handling large files
   will require a lot of disk space...
 
-## Primary vs. Associated contig models BLAST
+## Primary vs. associated contig models BLAST
 Grepping the Maker models from the Associated GFF file;
 need to generate fasta file from the result and run BLAST
 
@@ -20020,9 +20020,23 @@ need to generate fasta file from the result and run BLAST
 Python 3-compatible library for parsing GFF files
 
 
+# 4 December 2018
 
+## Primary vs. associated contigs
+BLASTn of whole genes; can assess differences in UTRs, introns, etc., not just coding sequences
+* How to process this information?
 
+## BLAST results
+1.) BLASTn of `No Hits` results, in case these are non-coding regions
+  * Maybe try `Not Assigned` results later?
+2.) Manually inspect the bacterial results, as some have very good hits
 
+* Sm_t00012042-RA - why would Skeletonema encode a potential erythromycin resistance gene?
+  * Doesn't appear to be secreted
+
+Continue checking bacterial results (`/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/gffcompare/BLAST`)
+
+Check BLASTN results of 'No hit' models
 
 
 

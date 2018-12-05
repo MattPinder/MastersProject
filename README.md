@@ -20033,10 +20033,55 @@ BLASTn of whole genes; can assess differences in UTRs, introns, etc., not just c
 
 * Sm_t00012042-RA - why would Skeletonema encode a potential erythromycin resistance gene?
   * Doesn't appear to be secreted
+  * Description said that the family *contains* erythromycin esterases, not that *all* members were erythromycin esterases
 
 Continue checking bacterial results (`/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/gffcompare/BLAST`)
 
 Check BLASTN results of 'No hit' models
+
+
+# 5 December 2018
+
+## 'No hits'
+Check BLASTN results for 'no hits' models from the BLASTX/BLASTP analyses
+
+## BLAST
+BLAST the whole unique models dataset?
+* Which BLAST? N/P/X?
+* P. tricornutum study of horizontal gene transfer was performed using BLASTP
+  * BLASTP would also provide a preliminary functional annotation?
+
+## Kmer analysis
+* KAT is now installed (locally); concatenating all (QC'd) reads from R05 Illumina, then run `kat hist`
+  * `/proj/data5/Skeletonema_marinoi_genome_project/10_genome_size/KAT`
+
+## Primary vs. associated contigs
+* What to do with this information?
+
+## Telomeres
+* How to use BioSerf to find telomeres?
+  * `zcat` the (raw) Illumina reads, output both files to a single combined file, gzip and upload?
+  * Running in `screen`
+
+## Mapping distance
+* How to interpret graph?
+  * Main peak appears to make sense, spikes on the right-hand side... mapping problems?
+    * Any way to locate these (presumably) incorrectly-mapped reads?
+
+## Waiting for...
+* BLASTP of all Smar unique models
+  * high_mem
+* Concatenation of all Illumina reads
+  * `screen`
+    * BioSerf telomere analysis
+    * `kat hist`
+
+
+
+
+
+
+
 
 
 

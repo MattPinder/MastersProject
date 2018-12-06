@@ -20077,6 +20077,72 @@ BLAST the whole unique models dataset?
     * `kat hist`
 
 
+# 6 December 2018
+
+## BLASTP
+Job started 13:31 yesterday, 946 models completed by 9:00 today
+22,440 models total
+* At this speed, the BLAST should take another 17.5 days
+
+## Concatenation of R05 Illumina reads
+* Compressing the file for upload to BioSerf
+* Running `kat hist`
+  * Note - considering the amount of data this is processing, it may overload node0; if so, rerun on Annotation when able
+
+## Mapping distance
+* Can the location of the incorrectly(?) mapped reads be extracted?
+  * This doesn't appear to be straightforward...
+
+## Mapping
+Interesting observation - around 000000F:114000, several reads have their mates mapped to arond 000050F:371700
+* There is no model at this position, but a model adjacent to it has no good BLAST hits...
+* Poor coverage at the 000000F position, but not at the 000050F position...
+* Some reads on 000050F near this position also have a mate mapping to 000000F-011-01, which itself is close to 000000F:114000
+
+## Horizontal gene transfer
+Contigs 25 + 198?
+* Based on the 'no BLASTX hits' result, two models on contig 25 had best hits to bacteria, and contig 198 had none
+  * Retry after BLASTP of **all** models is complete
+
+## Bandage
+Can the regions of the assembly graph be labelled in Bandage?
+* See notes from course
+
+Observations:
+* 000047F should end in a telomere (tail on assembly graph), but continues into unlabelled nodes
+  * This then moves into 000278F
+* The telomere tail ends of 000056F and 000090F branch from one another in the graph
+  * How far back does the sequence go? Do they branch **before** the telomere starts?
+* The telomere tail end of 000122F branches off from 000091F
+  * Does this occur before the telomeres?
+* The telomere tail end of 000137F branches off from 000015F
+  * Appears to occur distantly from 000015F's telomere?
+* The telomere tail end of 000145F continues into 000100F and 000201F, neither of which has obvious telomeres
+* 000230F appears to be its own, unattached strand on the graph
+* 000336F constitutes a single node on the graph, paired with one other (unlabelled) node
+
+515 nodes shared by multiple contigs; could these be clues for assembling the larger contigs?
+* Continue to compress these down into single combined entries
+
+## KAT results
+Get # of bases in dataset, and determine genome size
+* Trying to get this figure in `screen`
+  * Two different methods running in different screens; compare results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

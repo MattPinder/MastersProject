@@ -20130,14 +20130,35 @@ Get # of bases in dataset, and determine genome size
   * Two different methods running in different screens; compare results
 
 
+# 7 November 2018
 
+## To do
 
+1. Check # of bases from the two screens, and use to determine genome size
+  * Something has gone wrong; running `kat comp`
+2. Upload reads files to BioSerf for telomere analysis
+  * Upload started
+3. Continue combining entries in nodes CSV file
+  * Done
+4. Suitable marker(s) for Bjorn's selection experiment?
+5. Inspect difference between primary and associated models
 
+## KAT
+Something has gone wrong; the Kmer estimates show very poor results (estimated gene size of ~430Kb, tiny number
+of Kmers in assembly, etc.)
+* Retry with uncorrected assembly v1.0?
+  * But, this will compare the (Quiver-corrected) PacBio assembly with Illumina reads...
 
+However, after double-checking peaks in the `kat cov` output, the estimated genome size is more reasonable
 
+Contact Thomas Mock re: aneuploidy (cc Mats)
 
+Double-check details of kmer estimate of genome size
+How to interpret the tall heterozygous(?) peak?
+* What about the mini peak at ~3,000? Aneuploidy?
 
-
+Can per-contig average coverage be calculated?
+* Difference in coverage (+50%) would indicate trisomy?
 
 
 

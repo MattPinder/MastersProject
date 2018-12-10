@@ -20137,7 +20137,7 @@ Get # of bases in dataset, and determine genome size
 1. Check # of bases from the two screens, and use to determine genome size
   * Something has gone wrong; running `kat comp`
 2. Upload reads files to BioSerf for telomere analysis
-  * Upload started
+  * Upload started; failed
 3. Continue combining entries in nodes CSV file
   * Done
 4. Suitable marker(s) for Bjorn's selection experiment?
@@ -20161,22 +20161,50 @@ Can per-contig average coverage be calculated?
 * Difference in coverage (+50%) would indicate trisomy?
 
 
+# 10 December 2018
+
+## Kmer count
+How should the graph from KAT be interpreted?
+* Is it possible to extract the Kmers from near the peaks?
+
+Tried to run `kat_distanalysis.py`, but there appears to be a problem with dependencies...
+* `kat.spectra`? Seems to be a component of the non-Bioconda installation
+* Attempting to run `kat plot` instead, but this has produced unhelpful output
+
+## Per-contig average coverage
+Should be a function in Bamboozle for this
+* No, this was a function that I was planning to add...
+* This function is more-or-less implemented already in the `median-all` function
+  * Have written a stripped-down version which just reports median coverage
+
+## Kmer graph
+Is the mini peak at ~3,000 likely to be an aneuploid peak? Or just repeats?
+* Repeats would just be a tail on the graph...?
+* Note - there is also peak at ~4,000 
+
+## Primary vs. Associated models
+Still need to check results of this analysis...
+* How to succinctly interpret these?
+  * Possibility to create two BED files?
+    1. Convert the GFF file of primary models, displaying all gene features
+    2. Showing positions where the primary and associated models differ
+  * This would make it easier to visualise which feature contains the mismatch
+* Any way to make this comparison without manually inspecting every model?
+
+## Extracting Kmers
+From Mats - "Is it possible to extract the k-mers that occur around the 3000 and 4000 peaks?"
+* Try KMC3, however this may require rather a lot of memory, so best to run this on an
+  Annotation node when available?
+
+## For February Skeletonema meeting
+1. Prepare details of primary vs. associated models
+2. Prepare details of potential HGT events
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## To do
+1. Check results of KMC analysis attempt
+2. Check the results of the rerun Bamboozle analysis
+3. Any more thoughts on the primary vs. secondary models analysis?
 
 
 

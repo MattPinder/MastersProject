@@ -20207,6 +20207,32 @@ From Mats - "Is it possible to extract the k-mers that occur around the 3000 and
 3. Any more thoughts on the primary vs. secondary models analysis?
 
 
+# 11 December 2018
+
+Run mapping_filtering script to extract Illumina reads which map to the v1.1.1 assembly, then
+rerun the Kmer analysis; this will be more representative of the data which *actually* assembled
+* May also be indicative of assembly completeness
+* Needs to be run on unzipped files...
+
+Find a way to present a human-readable Kmer table from KMC output (or other Kmer analysis tool)
+to extract the Kmers from the 3k + 4k peaks
+* `kmc_dump` command
+* Note: rerunning `kmc` as the limit of reported frequency was auto-capped at 255; needed to set this with a
+  flag, so have set to 6000 (as the graph from KAT stopped at ~5500 and our peaks of interest are 1/2/3/4000
+
+Plotting results of Bamboozle coverage analysis showed most contigs at ~1000x coverage, with some around 2000x,
+but many others were scattered around the plot; some at ~8000x coverage corresponded to sequences which have
+been removed from v1.1.1 because they correspond to parts of the plastid and mitochondrial genomes
+* Would clustering in this graph be indicative of components of a replicated chromosome?
+
+* The presence of the contigs removed from v1.1.1 makes the plot appear as though there are more high-coverage
+  contigs than there actually are; rerun analysis with the mapping results from v1.1.1, with these contigs
+  removed and the organellar genomes added (the latter can be removed from the plotting if required)
+* Also ensure that this graph is plotted in reverse, i.e. with the shorter contigs first
+
+Check Bamboozle, KMC output sorting and mapping/filtering of R05 reads
+
+
 
 
 

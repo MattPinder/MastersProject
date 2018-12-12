@@ -20233,6 +20233,48 @@ been removed from v1.1.1 because they correspond to parts of the plastid and mit
 Check Bamboozle, KMC output sorting and mapping/filtering of R05 reads
 
 
+# 12 December 2018
+
+## mapping_filtering
+This is going to fill data5... If this happens, move to data21 and retry
+* Rerunning on data21 (over 1Tb space, should be sufficient)
+
+## kmc
+Find an elegant way to extract the required reads from the *very* large kmer table
+* Using regular expressions to grep all Kmers with between 2900-3100 and 3900-4100 coverage
+* The contigs contaning the highest numbers of overrepresented Kmers *do* seem to have high coverage
+
+## Average coverage
+Remap results of Bamboozle analysis now that v1.1.1 has been checked
+* Very similar pattern; a few clusters at higher coverages
+
+## Altair
+Attempted to run Altair visualisation software via Jupyter Lab, but the page wouldn't load
+* Investigate
+
+## R package for mothuR
+Respond to email; any other ideas?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

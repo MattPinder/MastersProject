@@ -20256,14 +20256,68 @@ Attempted to run Altair visualisation software via Jupyter Lab, but the page wou
 Respond to email; any other ideas?
 
 
+# 13 December 2018
+
+## Ongoing jobs
+* mapping_filtering of R05 reads
+* BLAST of all primary models
+
+## KAT
+Is there any value in repeating the analysis with different Kmer sizes?
+* Try a longer Kmer length to see what happens?
+  * Attempting K=37
+  * This looks a lot like the 
+
+## Average coverage
+Considering the presence and length of associated contigs, should base coverage of contigs be 1500-2000, not 1000?
+* As associated contigs are complicating the issue of full-contig coverage, rerun the mapping analysis to
+  primaries *only*
+  * Will this cause an issue with reads mapping where they ought to, given the differences in alleles?
+  * Run on `data21` for space reasons
+
+## Heterozygosity
+Contig 000013F is not reported to have an associated contig, *but* looking at the mapped reads in IGV
+(e.g. 646,800-648,400), there appears to be a lot of heterozygosity (i.e. bases appearing in a 50/50 ratio)
+* Why were these not flagged as associated contigs?
+* Any way to quickly determine if there are any loci where there are 3/4 equally frequent bases?
+  * `samtools mpileup`?
+  * Some loci appear right off the bat to have a 2:1 ratio of base frequency (triploidy)
+  * A few also seem to have a 3:1 ratio (tetraploidy), but on the same contig?
+    * How reliable is this? Could this be just variation between individuals?
+
+## mapping_filtering
+A `sort` command in the script errored out; is this a problem?
+* May have something to do with running the process on the `sandbox`?
+* May have to wait until an Annotation node is free...
+
+## Something to consider
+"Compared to their diploid progenitors, for example, polyploid Arabidopsis have increased tolerance to
+salinity (Chao et al., 2013), which is one of the principal ecological divides in diatoms and other microbial
+eukaryotes (Round and Sims, 1980; Mann, 1999a; Logares et al., 2009)."
+* 'From Phylogenomics reveals an extensive history of genome duplication in diatoms (Bacillariophyta)'
+  * Parks et al, 2018
+
+* Try running a Kmer analysis on resequenced strains from less-saline locations, and look for similar patterns
+  in mapping coverage, Kmers, etc.
+  * Loviisa; salinity 5-10 units lower than Oresund
+  * https://www.researchgate.net/figure/Map-of-the-salinity-gradient-The-locations-of-the-11-sampling-areas-in-the-Baltic-Sea_fig12_266401013
+  * Running zcat of the relevant reads files in `screen`; can run `kat hist` tomorrow
 
 
+## Running jobs
 
+high_mem	BLASTp of all unique models	`/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/AllUniqueModelsBLASTP`
 
+node0		mpileup of R05 mapped reads	`/proj/data5/Skeletonema_marinoi_genome_project/15_mapping_stats/EvidenceOfPloidy`
 
+sandbox(10)	Bowtie2 of primary contigs	`/proj/data21/Skeletonema_marinoi/PrimaryBowtieTemp`
 
+Annotation-4	mapping_filtering of R05	`/proj/data21/Skeletonema_marinoi/MappingTemp`
+	THIS FAILED ON SANDBOX AND IS BEING RERUN ON ANNOTATION-4
 
-
+## To do
+Run `kat hist` on A2W sample _111
+See above
 
 
 

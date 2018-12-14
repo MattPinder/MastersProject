@@ -20303,21 +20303,66 @@ eukaryotes (Round and Sims, 1980; Mann, 1999a; Logares et al., 2009)."
   * https://www.researchgate.net/figure/Map-of-the-salinity-gradient-The-locations-of-the-11-sampling-areas-in-the-Baltic-Sea_fig12_266401013
   * Running zcat of the relevant reads files in `screen`; can run `kat hist` tomorrow
 
-
-## Running jobs
-
-high_mem	BLASTp of all unique models	`/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/AllUniqueModelsBLASTP`
-
-node0		mpileup of R05 mapped reads	`/proj/data5/Skeletonema_marinoi_genome_project/15_mapping_stats/EvidenceOfPloidy`
-
-sandbox(10)	Bowtie2 of primary contigs	`/proj/data21/Skeletonema_marinoi/PrimaryBowtieTemp`
-
-Annotation-4	mapping_filtering of R05	`/proj/data21/Skeletonema_marinoi/MappingTemp`
-	THIS FAILED ON SANDBOX AND IS BEING RERUN ON ANNOTATION-4
-
 ## To do
 Run `kat hist` on A2W sample _111
 See above
+
+
+# 14 December 2018
+
+Both mapping jobs have resulted in a filled-up `data21`, will have to rerun *again*
+* Cancelled mapping_filtering of R05; *WAIT UNTIL BOWTIE2 OF PRIMARY CONTIGS IS COMPLETE!*
+
+Running `kat hist` of P8352_111 to look for any potential difference in ploidy related to the different salinity
+* Still appear to be small peaks at the 'triploid/tetraploid' positions...
+* Preparing files to rerun the analysis on a representative of the other three time/location subsets
+
+* Nodes are all full; wait for space to free up...
+
+Should `kat hist` be run on some of the eutrophication strains, especially the deep-sequenced ones?
+* Running on one sample from each depth of the deep-sequenced strains (MF)
+  * Once this is run, try on some (shallow-sequenced) HF strains?
+    * Most have very low mapping %, so probably wouldn't give reliable results...
+* **DATA WAS CONTAMINATED! SHOULD DATA BE CLEANED IN ORDER TO OBTAIN A MROE RELIABLE RESULT??**
+
+
+## Running jobs
+
+sandbox(10)	Bowtie2 of primary contigs	`/proj/data21/Skeletonema_marinoi/PrimaryBowtieTemp`
+	*The STDERR file has reported problems; the results of this analysis may be incorrect...*
+	This may have to be rerun on the Annotation nodes when available...
+
+node0		mpileup of R05 mapped reads	`/proj/data5/Skeletonema_marinoi_genome_project/15_mapping_stats/EvidenceOfPloidy`
+
+high_mem	BLASTp of all unique models	`/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/AllUniqueModelsBLASTP`
+
+
+## Jobs to (re)submit
+
+mapping_filtering of R05		`/proj/data21/Skeletonema_marinoi/MappingTemp`
+	*Waiting for `PrimaryBowtieTemp` job to complete, so data21 doesn't run out of space again*
+
+## Kmer tables
+Using BLAST tab output, extract relevant columns in order to generate plots of high-frequency Kmer occurence
+* HiCharts
+* BED file?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

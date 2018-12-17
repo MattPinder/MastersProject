@@ -20323,7 +20323,7 @@ Should `kat hist` be run on some of the eutrophication strains, especially the d
 * Running on one sample from each depth of the deep-sequenced strains (MF)
   * Once this is run, try on some (shallow-sequenced) HF strains?
     * Most have very low mapping %, so probably wouldn't give reliable results...
-* **DATA WAS CONTAMINATED! SHOULD DATA BE CLEANED IN ORDER TO OBTAIN A MROE RELIABLE RESULT??**
+* **DATA WAS CONTAMINATED! SHOULD DATA BE CLEANED IN ORDER TO OBTAIN A MORE RELIABLE RESULT??**
 
 
 ## Running jobs
@@ -20348,16 +20348,35 @@ Using BLAST tab output, extract relevant columns in order to generate plots of h
 * BED file?
 
 
+# 17 December 2018
+
+## Kmer tables
+Generate a CSV file with Contig,Start,Value (1 for presence, 0 for absence) for the 3k and 4k peaks
+* Then generate one which only includes the present Kmers
+
+Present-only CSV file is simple; generating one with present *and* absent positions will be more complicated
+* Running bedtools generates a file which notes every position; can use this somehow
+* Written a short Python script which reads in the file of all positions, and the file of ',1' positions,
+  and can produce an output with *all* positions and the relevant ',0' or ',1'
+
+## mpileup of R05 mapped reads
+How to check whether there are positions which suggest higher ploidy levels
+* BCFtools seems to have trouble interpreting the mpileup output...
+* Problem may have emerged from a merger of STDOUT and STDERR
+  * Problem may also have arisen from using a newer version of Samtools...?
+* Rerunning...
 
 
+## Jobs that need to be (re)run
+* mapping_filtering of R05 - `/proj/data21/Skeletonema_marinoi/MappingTemp`
+* Bowtie2 of primary contigs - `/proj/data21/Skeletonema_marinoi/PrimaryBowtieTemp`
+
+* These should be run on Annotation nodes when available, as sandbox seems to have an issue with them...
 
 
-
-
-
-
-
-
+## To do
+* Check mpileup results
+* Check MergeCSVdetails results
 
 
 

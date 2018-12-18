@@ -20379,10 +20379,31 @@ How to check whether there are positions which suggest higher ploidy levels
 * Check MergeCSVdetails results
 
 
+# 18 December 2018
 
+## MergeCSVdetails
+Rerunning because I forgot to load Python 3...
 
+### Inclusion of sequence
+Is there any way to include the Kmer sequence in the `contig,position,presence/absence` CSV file?
+* This would enable the Kmer to be included as a tooltip in a HiCharts plot
 
+## samtools mpileup
+Correctly parsed by BCFtools, now check the output
+* Output *very* truncated...
+* Might be able to find signals using the DP4 subsection of column 8 of the vcf file
+  * Need to find the best way to parse these files. Python?
 
+## Assembly of Kmer peaks???
+Convert 3k and 4k peak fasta files to fastq
+Run SOAP assembly and look for large 'contigs'
+BLAST contigs vs. R05; should come up with 3/4 hits
+
+## Diploidisation/Polyploidisation
+Any way to account for the pattern of diploid/triploid/tetraploid(?) variants?
+
+## Pipeline
+Write up whole process of checking Kmers
 
 
 

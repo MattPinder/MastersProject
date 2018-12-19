@@ -20406,6 +20406,16 @@ Any way to account for the pattern of diploid/triploid/tetraploid(?) variants?
 Write up whole process of checking Kmers
 
 
+# 19 December 2018
+* Convert Kmer BLAST results to a GFF file, and upload to the Genome Browser
+  * Done
+
+* Write up the Kmer pipeline
+  * Done
+
+## Generating figures for bacterial genomes
+Kordia is erroring out:
+`value for 'sequenceLength' attribute in cgview element must be greater than 10 in null at line 1 column 1090`
 
 
 

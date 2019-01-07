@@ -20418,6 +20418,81 @@ Kordia is erroring out:
 `value for 'sequenceLength' attribute in cgview element must be greater than 10 in null at line 1 column 1090`
 
 
+#####
+
+
+# 7 January 2019
+
+## Check details for A2W project re: marinoi vs. subsalsum
+
+Where reference sequences for S. subsalsum are available, these were analysed vs. S. marinoi, and phylogenies
+were generated. The low-mapping samples consistently clustered with S. subsalsum, and the high-mapping samples
+clustered with S. marinoi
+* There were a couple of exceptions, however
+* Generate PDF output for all tests?
+
+* Results have been summarised and tabulated in `08_Skeletonema/Results.md`
+
+Assuming that identifications in the literature are correct, S. marinoi and S. subsalsum seem to fall in
+different clades of the Skeletonema phylogenetic tree (e.g. in Sarno et al. [2007], S. marinoi appears in
+clade III, whereas S. subsalsum appears in clade IV)
+
+## Check CSVmerge script; why is it still running?
+
+* v1 is still running, v2 crashed with the sandbox
+  * v1 has printed out coordinates for every position in the genome because I didn't comment out a line
+  * This line was commented out in the crashed v2
+
+When rerunning this analysis, run on `data26` instead of `data5`
+
+Each line will take progressively longer to generate as the script has to check further through the list
+* Added a new line to remove each line from the Positions list as it is checked off
+* This doesn't address the issue of records which don't appear; the script still has to check the whole list
+  * This could be addressed but the code would be messy...
+* THE CURRENTLY RUNNING SCRIPT ALSO ISN'T WORKING!
+  * The formatting in the list of positions is incorrect; convert to csv format (currently tsv) and rerun
+  * The jobs have been stopped, as the output was therefore incorrect
+* As both inputs are sorted, the process can probably be sped up with a nested `for` loop, deleting each
+  entry in the list as we go so that early entries aren't redundantly rechecked
+  * Nested `for` loops have proven difficult to implement in the past...
+  * The nested `for` loop idea didn't work as intended; trying the script by reading both lists into memory,
+    but unsure if this will make any difference...
+    * Re: nested loop - deleting absent entries as the script goes along results in skipping of entries
+      * Is there any way to get around this issue?
+
+## Mapping to primaries only
+* See 13 December 2018
+
+## mapping_filtering
+Rerun when the primary mapping is complete; can rerun Kmer analysis on the reads which map to the assembly,
+to get a better representation of Kmer abundance in the actual assembly(?)
+
+## Re: marinoi vs. subsalsum
+Identify which bins in the metagenome assemblies represent Skeletonema
+* Check coverage - is the poor mapping simply down to low amounts of Skeletonema in the sample?
+
+
+
+
+
+
+---
+
+
+
+* Test installation of ROCKS 7.0
+* Read ROCKS 7.0 manual
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -20471,21 +20471,61 @@ to get a better representation of Kmer abundance in the actual assembly(?)
 Identify which bins in the metagenome assemblies represent Skeletonema
 * Check coverage - is the poor mapping simply down to low amounts of Skeletonema in the sample?
 
-
-
-
-
-
 ---
-
-
 
 * Test installation of ROCKS 7.0
 * Read ROCKS 7.0 manual
 
 
+# 8 January 2019
+
+NB. Work on `data26` instead of `data5` from now on
+
+## Primary mapping
+* 97.01% of paired Illumina reads mapped to the primary contigs (inc. organelles)
+  * 98.31% of paired reads mapped to the entire v1.1.1 assembly
+* 95.90% of unpaired Illumina reads mapped to primary contigs (inc. organelles)
+  * 97.23% of unpaired reads mapped to the entire v1.1.1 assembly
+
+* This smooths some coverage issues, but not others
+
+Moving results to `data26`
+* Also moving to Ubuntu machine to visualise vs. full mapping
+
+## mapping_filtering
+
+Running on `Annotation-3`...
+
+## marinoi vs subsalsum
+Take a low mapping example and tBLASTx (with R05 as query and BLAST database of all bins)
+* Using tBLASTx will account for nucleotide sequence differences, assuming similar AA sequences within the genus
+* Prefix each fasta header with the appropriate bin name
+* Check coverage of the Skeletonema bin
+
+Can number of reads mapping to the Skeletonema bin be calculated (e.g. from the bam files in `06_MetaBAT/samples/`)?
+
+Low-mapping example selected - P8352_110 (8.52% mapping to R05, fewer bins so less prep required)
+* The most likely Skeletonema bin is listed as Archaea... Why?
+  * The program used to check the bin taxonomy - CheckM - only checks Bacteria and Archaea, not Eukaryotes
+
+Map reads to bin.1 and unbinned, and check mapping %
+* Mapping to bin.1 - 46.06%
+* Mapping to unbinned - 26.15%
+* Mapping to other bins is currently >2%; ongoing...
+
+The combined size of bin 1 and unbinned (~59Mb disk space) is smaller than we would expect of S. marinoi
+(genome file size ~77 Mb); unsure how MegaHIT handles repeats, but as we estimate 42% repeats in the R05
+genome, and we are using Illumina reads, it may be underestimating the size of repeat regions
+
+If we assume bin 1 and unbinned both constitute Skeletonema, how complete is this meta-assembly?
+* Run BUSCO on bin 1, unbinned, and both combined
+* Bin 1 reports 79.6% completeness
+* Unbinned errors but appears to have only 3.6% completeness
+* Waiting on combined result...
 
 
+## CSVmerge
+Still ongoing - `/proj/data26/Skeletonema_marinoi_genome_project/10_genome_size/KAT/kmc/tmp/*Attempt/`
 
 
 

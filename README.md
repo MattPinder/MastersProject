@@ -20523,9 +20523,58 @@ If we assume bin 1 and unbinned both constitute Skeletonema, how complete is thi
 * Unbinned errors but appears to have only 3.6% completeness
 * Waiting on combined result...
 
-
 ## CSVmerge
 Still ongoing - `/proj/data26/Skeletonema_marinoi_genome_project/10_genome_size/KAT/kmc/tmp/*Attempt/`
+
+
+# 9 January 2019
+
+## marinoi vs. subsalsum
+
+Perform the BLAST + mapping + BUSCO analysis with the other low-mapping strains
+* If a more complete BUSCO can be found, or a lower number of contigs with a similar filesize (i.e. more complete assembly),
+  use this to generate a subsalsum reference assembly
+
+(Start with _129 or _130)
+
+1. For file in 'bin.*.fa'; sed [append bin # to start of FASTA header], and save to alt-headers.bin.*.fa
+2. Concatenate these files into SAMPLE_alt-header_AllBins.fa
+3. Make BLAST DB of this file
+
+4. Run tBLASTx of R05 v1.1.1 against this database
+5. Check the number of results for each bin (cut, sort, uniq), and stop the analysis when a clear result emerges
+
+6. Use Bowtie2 to map the sample's reads back to the suspected diatom bin
+7. If there's time, check the mapping to the other bins as well
+
+8. Run BUSCO on the diatom bin(s)
+
+Test - rerun the tBLASTx for _110 with a lower `max_target_seqs` parameter
+* Try to cover more contigs, but does it give the same indication of bin hits?
+* Default 500; try 250?
+* Appears to give comparable results
+
+
+Calculate average gene length in R05
+* Figure this out using the gff file, and plot a distribution (length vs. occurrences?)
+
+For A2W - RSYNC concatenated trimmed files from data17 to data21?
+
+
+Check results of `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/AllUniqueModelsBLASTP`
+
+
+CHECK RESULTS FOR _130
+START TABULATING BUSCO RESULTS
+
+RUNNING BOWTIE2 on _104, STILL NEED TO RUN BLAST TO IDENTIFY BINS, AND BUSCO TO CHECK COMPLETENESS
+STILL NEED TO FIGURE OUT AUTOMATION; FIND OUT WHY ~/testbin/MassRename SCRIPT ISN'T WORKING
+
+
+
+
+
+
 
 
 

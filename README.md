@@ -20571,6 +20571,20 @@ RUNNING BOWTIE2 on _104, STILL NEED TO RUN BLAST TO IDENTIFY BINS, AND BUSCO TO 
 STILL NEED TO FIGURE OUT AUTOMATION; FIND OUT WHY ~/testbin/MassRename SCRIPT ISN'T WORKING
 
 
+# 10 January 2019
+
+Still waiting on BUSCO results from
+* 129
+* 130
+* 135
+* 149
+
+Then start Bowtie2 jobs, and finish compiling relevant stats
+
+
+
+
+
 
 
 

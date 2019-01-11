@@ -20581,15 +20581,26 @@ Still waiting on BUSCO results from
 
 Then start Bowtie2 jobs, and finish compiling relevant stats
 
+# 11 January 2019
+
+All BUSCOs complete, all Bowtie2 jobs running
+* Rerunning BLAST job for _130 to clarify whether Bin 8 or Bin 9 had most hits
+
+Assembly attempt being performed on sample _137 - Mats
+
+
+Note - test Bowtie2 - is there a max. efficient number of cores?
+* 40 cores, 20 cores, 10 cores, etc. - How do they scale?
 
 
 
+## To do
 
+* For A2W - RSYNC concatenated trimmed files from data17 to data21
+* Check results of `/proj/data5/Skeletonema_marinoi_genome_project/03_Annotation/Skeletonema_marinoi_Ref_v1.1_Primary/Unique_models_per_locus_ManualCuration/AllUniqueModelsBLASTP`
+* Continue formatting the BUSCO runtime table so the main table can be tidied
 
-
-
-
-
+* ROCKS 7 installation
 
 
 

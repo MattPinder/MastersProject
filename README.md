@@ -20603,6 +20603,20 @@ Note - test Bowtie2 - is there a max. efficient number of cores?
 * ROCKS 7 installation
 
 
+# 14 January 2019
+
+New system installation...
+
+
+
+
+
+
+
+
+
+
+
 
 
 

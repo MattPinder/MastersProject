@@ -20608,6 +20608,12 @@ Note - test Bowtie2 - is there a max. efficient number of cores?
 New system installation...
 
 
+# 15 January 2019
+
+New system installation...
+* HMMER is now installed; can start looking at programs for which this is a dependency, e.g. Prokka
+
+Checking results of Bowtie2 jobs from Friday
 
 
 

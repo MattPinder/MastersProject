@@ -20616,6 +20616,44 @@ New system installation...
 Checking results of Bowtie2 jobs from Friday
 
 
+# 16 January 2019
+
+## A2W - marinoi vs. subsalsum
+Bowtie2 results for subsalsum samples tabulated
+* Next - are the BUSCO hits consistent between samples; i.e. is there a set of diatom genes which never show
+  up in the current BUSCO setup?
+
+## Albiorix 5.0 install
+
+Programs with issues:
+* Prokka - install dependencies first
+  * Test run (rsync a bacterial genome over, not Skeletonema...)
+  * Need to install either Barrnap or RNAmmer installed to predict rRNAs
+
+
+## Subsalsum vs. marinoi
+
+Check the eutrophication strains, if this hasn't been done already
+* Also check the hybridisation project strains (`/proj/data21/Skeletonema_marinoi/Genome/Skeletonema_sexual_reproduction/00_data/A.Godhe_17_02-P9105`)
+
+* Same procedure as A2W checks - metagenome assembly > search for markers > phylogeny
+
+* In `/proj/data17/skeletonema_resequencing/15_Metagenome_Assembly/`, fix all the symlinks (starting from _431)
+  and run Mats' metagenome assembly pipeline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -20642,11 +20642,23 @@ Check the eutrophication strains, if this hasn't been done already
   and run Mats' metagenome assembly pipeline
 
 
+# 17 January 2019
 
+## Subsalsum vs. marinoi
 
+* Metagenome assembly pipeline started for eutrophication strains
+* Make new directory for hybridisation project
+  * Need to perform quality control/trimming
+  * Running quality control on _101 on high_mem, as a test
+    * Aware of potential for space issues on `data21` if all run at once
+  * Running quality control on _102 and _103 on high_mem, to test performance
+    * Unsure how running two jobs on the same node will affect speed, if files are read into memory...
 
+* Note: CheckM results are in `run_metagenomic_pipeline_tweak.sh.o102120`
+  * Manually copying results to a checkM.log file in each subdirectory
 
-
+## BUSCO
+Check BUSCO results - are the diatom results from the tetrahymena dataset consistent, i.e. are certain genes always missing?
 
 
 

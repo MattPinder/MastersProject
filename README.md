@@ -20658,7 +20658,49 @@ Check the eutrophication strains, if this hasn't been done already
   * Manually copying results to a checkM.log file in each subdirectory
 
 ## BUSCO
-Check BUSCO results - are the diatom results from the tetrahymena dataset consistent, i.e. are certain genes always missing?
+Check BUSCO results - are the diatom results from the tetrahymena dataset consistent
+* i.e. Are certain genes always missing?
+
+
+# 18 January 2019
+
+## Eutrophication
+Metagenome pipeline still ongoing; based on the checkM identities of the bins,
+there isn't much Skeletonema present...
+* Start concatenating bins in order to perform BLASTs?
+* Some of the higher mappers do not have 'Archaea' as their first bin...
+
+## Hybrid sex project
+QC still ongoing on both high_mem *and* Annotation-1
+* Is checking for all different adapters increasing the time taken...?
+  * Submitting _104 on high_mem with only Illumina Single End PCR Primer 1 (22 variants...),
+    TruSeq Adapter Index 27 (5 variants...) and Illumina Universal Adapter being searched for
+
+
+## To do/check
+
+* Check progress of metagenome assemblies (should be done by Monday)
+  * Then concatenate bins, makeblastdb and run BLAST
+  * Also extract checkM results from script output file, copying into separate file
+
+* Check results of QC of hybrid sex project samples
+  * If acceptable, run metagenome assembly pipeline on these too
+  * _103 seems to be acceptable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

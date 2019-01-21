@@ -20688,6 +20688,28 @@ QC still ongoing on both high_mem *and* Annotation-1
   * _103 seems to be acceptable
 
 
+# 20 January 2019
+
+Note: `data17` is almost full, so gzipping the .bam files from the completed metagenome assembles
+(`15_Metagenome_Assembly/P1872*/Bowtie2/*.bam`) to try and save some space; can also try to zip the
+*bt2 files later
+
+**MAKE SPACE ON `data17`!**
+
+
+# 21 January 2019
+
+## Eutrophication
+* Still running...
+
+## Hybrid sex project
+* Ongoing
+* Was this a PCR-based method?
+  * Check Ns at start of sequence??
+
+
+
+
 
 
 

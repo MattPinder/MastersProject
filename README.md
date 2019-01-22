@@ -20708,14 +20708,29 @@ Note: `data17` is almost full, so gzipping the .bam files from the completed met
   * Check Ns at start of sequence??
 
 
+# 22 January 2019
+
+## Eutrophication metagenome assembly
+
+All assemblies completed; proceed to BLASTs for markers
+* Assemblies have been BLASTed (few markers...), extract rest of results for taxonomic analysis
+
+Use combination of:
+`while read i; do grep ${i} AllSamples_vs_Skeletonema_markers.BLASTn.txt | cut -f1,2,9,10; done < Marker_cyclo.txt`
+`fp.py --seq P1872_531_Bin1_k141_589 AllSamples_AllBins.fa | cut -c1845-2387 > Marker_BLAST_results/P1872_531_cyclo.fa`
+
+## Hybrid sex project
+
+Three samples still being checked...
+
+## Note
+When using `sed` in a for loop, use speech marks, not inverted commas, to enclose the `sed` expression
 
 
 
 
-
-
-
-
+Contig 198 - worth checking?
+* Genome browser, BLAST server, SMRT Portal need restarting...
 
 
 

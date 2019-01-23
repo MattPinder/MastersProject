@@ -20727,15 +20727,27 @@ Three samples still being checked...
 When using `sed` in a for loop, use speech marks, not inverted commas, to enclose the `sed` expression
 
 
-
-
 Contig 198 - worth checking?
 * Genome browser, BLAST server, SMRT Portal need restarting...
 
 
 
+# 23 January 2019
 
+## Hybrid sex project
+QC of 11 and 12 still ongoing...
+* The rest are queued for Bowtie2 jobs to R05, but keep an eye on the space remaining on `data21`!
 
+## Eutrophication
+* Run eutro metagenome assemblies through Metaxa; this should get some preliminary classifications
+* Run FastTree on the current markers
+
+To Do
+Align All_psbC.fa and generate phylogeny
+
+Check ongoing QC jobs
+
+Check results of remaining bowtie2 jobs
 
 
 

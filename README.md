@@ -20731,7 +20731,6 @@ Contig 198 - worth checking?
 * Genome browser, BLAST server, SMRT Portal need restarting...
 
 
-
 # 23 January 2019
 
 ## Hybrid sex project
@@ -20750,21 +20749,26 @@ Check ongoing QC jobs
 Check results of remaining bowtie2 jobs
 
 
+# 24 January 2019
+
+Redo psbC with trimming...
+
+Update `/etc/motd`(?) on Albiorix 5 to mention that R/Python are part of the Anaconda package
+* Cutadapt is part of Python
+
+* Check samples with cyclo/SIT evidence; spread-out clades so may be worth rechecking for other Skele species...
+  * To-check samples in the metagenome readme
+  * Also check the Metaxa2 results
+
+* The final mapping job for the sex project (sample _111) has been queued on node0 behind the QC job
+  * The QC job only has to compress the remaining files before it completes, so should be ready tomorrow
+  * Then fire up the metagenome assembly...
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+## Hard drive
+Let Urban know if the transfer is done by 4pm tomorrow
 
 
 

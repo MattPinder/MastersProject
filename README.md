@@ -20764,11 +20764,52 @@ Update `/etc/motd`(?) on Albiorix 5 to mention that R/Python are part of the Ana
   * The QC job only has to compress the remaining files before it completes, so should be ready tomorrow
   * Then fire up the metagenome assembly...
 
-
-
-
 ## Hard drive
 Let Urban know if the transfer is done by 4pm tomorrow
+
+
+# 25 January 2019
+
+18S lengths from Metaxa2 don't match well with each other, or the other Skeletonema sequences checked;
+BLASTing instead to find 100% matches
+
+checkM logs for the hybrid project will need to be redone
+* Should have redirected stdout to the log rather than stderr
+
+Locations of the six S. subsalsum genes used as markers:
+* rbcL - plastid
+* cyclo - nucleus
+* coxI - mitochondrion
+* 16S - plastid
+* psbC - plastid
+* SIT - nucleus
+
+18S check on the first two hybrid samples also turn up nothing...
+
+
+Fairly confident that the eutrophication samples are _S. marinoi_, but similarities exist to _S. costatum_...
+Heavy contamination also complicates matters...
+
+When hybrid project metagenome assemblies are complete, run BLAST and Metaxa2...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

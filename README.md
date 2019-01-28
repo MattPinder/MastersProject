@@ -20130,7 +20130,7 @@ Get # of bases in dataset, and determine genome size
   * Two different methods running in different screens; compare results
 
 
-# 7 November 2018
+# 7 December 2018
 
 ## To do
 
@@ -20791,6 +20791,20 @@ Fairly confident that the eutrophication samples are _S. marinoi_, but similarit
 Heavy contamination also complicates matters...
 
 When hybrid project metagenome assemblies are complete, run BLAST and Metaxa2...
+
+
+# 28 January 2019
+
+Check remaining results of hybrid project metagenome assemblies
+
+Despite the reads mapping very well to R05, and all but one sample having at least one bin labelled as 'archaea',
+the only full-length Skeletonema marker which is consistently found (11/13 samples) is cyclo. If the reads map
+so well, why are so few markers found...?
+
+Based on the cycloartenol synthase gene and R05 mapping %, it seems likely that all of the samples *do* belong to marinoi
+(>99% BLASTn hits), but sample _112 is missing a 'cyclo' sequence...
+
+Continue checking eutrophication project samples to confirm marinoi vs. costatum(?)
 
 
 

@@ -20807,22 +20807,71 @@ Based on the cycloartenol synthase gene and R05 mapping %, it seems likely that 
 Continue checking eutrophication project samples to confirm marinoi vs. costatum(?)
 
 
+# 29 January 2019
+
+## Eutrophication project
+Any other markers that can be searched for, particularly in high-mapping strains?
+
+Markers attempted so far:
+* rbcL (chloroplast)
+* cycloartenol synthase (nuclear)
+* coxI (mitochondrial)
+* 16S (chloroplast)
+* psbC (chloroplast)
+* SIT (nuclear)
+* 18S (nuclear)
+
+Try psbA (chloroplast)?
+* 1083bp (or 957bp for costatum)
+* The costatum sequence is the same as the marinoi sequence...
+
+Try 28S/LSU rRNA (nuclear)?
+* 510bp (or 514bp for T. pseudonana)
+* The sequence is different between R05 and costatum
+
+The above still only appear in a handful of samples; a lot of samples, including high mappers (e.g. P1872_115 [53.30%]) still
+have no evidence associated with them...
+
+* P1872_115's Bin 1 is labelled as Archaea, implying potential diatom sequence; what is the best way to filter through this to find species confirmation?
+  * Brute force approach - BLAST the whole bin against a database of available S. costatum sequences, and compare results of these regions against R05
+
+PUT ON HOLD FOR NOW
 
 
+Contact Emmelien re: WGDotPlot - any possibility of higher resolution?
+* See instructions on Plaza page first...
 
+How to interpret Plaza results?
+* There are regions of contigs which seem to match one another, some of which are at the ends of contigs; are these *actual* duplications, or misassembled contigs?
+  * e.g. 000004F + 000026F
+  * These features are also visible on the assembly graph
 
+Compare telomeric regions?
+Contigs to check (all telomeres are at 5' end...):
+* 000013F
+* 000015F
+* 000026F
+* 000035F
+* 000041F
+* 000043F
+* 000047F
+* 000052F
+* 000063F
+* 000089F
+* 000090F
+* 000091F
+* 000101F
+* 000122F
+* 000137F
+* 000145F
+* 000152F
+* 000171F
+* 000221F
+* 000230F
+* 000248F
+* 000366F
 
-
-
-
-
-
-
-
-
-
-
-
+Problem - Plaza analyses appear to be gene-based, not nucleotide-based, so telomeres wouldn't show up...
 
 
 

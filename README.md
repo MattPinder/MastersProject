@@ -20874,6 +20874,37 @@ Contigs to check (all telomeres are at 5' end...):
 Problem - Plaza analyses appear to be gene-based, not nucleotide-based, so telomeres wouldn't show up...
 
 
+# 30 January 2019
+
+Look into the Plaza results
+
+Why is 000162F labelled as a separate contig and not an associated one? (see picture)
+
+Look at the coverage of individual 'missing' genes, rather than just the whole blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

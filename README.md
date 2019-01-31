@@ -20883,18 +20883,32 @@ Why is 000162F labelled as a separate contig and not an associated one? (see pic
 Look at the coverage of individual 'missing' genes, rather than just the whole blocks
 
 
+# 31 January 2019
 
+Contact Adrian re: transcriptome accession - DONE
 
+Normalise length vs. kmer appearance for kmer peaks - DONE
 
+Retry alignment in stretcher using 'pair' output
 
+Flag 000162F as potential associated contig
+* Any others to flag?
 
+* Identify primary contigs with >0.035 score (3K) and >? (4K)
+* Sum their lengths
+* What proportion of the total (primary) assembly is this?
 
+Check the coverage of telomere regions at some point...
 
+A node from 000087F is showing up in the Bandage BLAST vs. telomere sequence, but the sequence doesn't seem
+to be in 000087F...
+* Same with 000017F...
 
-
-
-
-
+Any way to merge the nodes in the assembly graph in order to simplify dissection, while still maintaining labelling?
+* Merging all nodes from each contig individually would be too time-consuming, but merging *all* nodes could cause
+  identification issues
+  * Merge all, then check the first and last node of each merger?
+    * May incorporate unlabelled nodes this way...
 
 
 

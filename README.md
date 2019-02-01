@@ -20894,9 +20894,12 @@ Retry alignment in stretcher using 'pair' output
 Flag 000162F as potential associated contig
 * Any others to flag?
 
-* Identify primary contigs with >0.035 score (3K) and >? (4K)
+* Identify primary contigs with >0.035 score (3K) and >0.0275 (4K)
 * Sum their lengths
 * What proportion of the total (primary) assembly is this?
+  * 3K - roughly 10% of primary assembly
+  * 4K - roughly 1% of primary assembly
+* Based on chromosome sizes in T. pseudonana and P. tricornutum, these could account for one or more full chromosomes
 
 Check the coverage of telomere regions at some point...
 
@@ -20909,6 +20912,30 @@ Any way to merge the nodes in the assembly graph in order to simplify dissection
   identification issues
   * Merge all, then check the first and last node of each merger?
     * May incorporate unlabelled nodes this way...
+
+
+# 1 February 2019
+
+Starting to merge nodes (mergetest.gfa) to simplify the graph
+* need to concatenate mergetest.csv and the original csv in order to get all of the required labels...
+
+Any other eukaryote species in the A2W data?
+* Check other bins...
+* Classification of reads - BLAST -> MEGAN?
+
+* Any other algal species in _118?
+  * Metaxa2? Doesn't mention any other eukaryotes except for Skeletonema
+
+
+Continue working on the MergeTest files on Ubuntu
+Any more strange coverage phenomena suggestive of incorrectly labelled 'primary' contigs?
+
+
+
+
+
+
+
 
 
 

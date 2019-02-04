@@ -20931,18 +20931,38 @@ Continue working on the MergeTest files on Ubuntu
 Any more strange coverage phenomena suggestive of incorrectly labelled 'primary' contigs?
 
 
+# 4 February 2019
+
+Attempting to verify the existence of triploid/tetraploid regions
+* Can we find regions with ~average coverage and 2:1/3:1 ratios of bases?
 
 
 
+Possible triploid region - 000150F:81190-82477
+* Only ~1500 coverage and flanked by two near-zero regions...
+Possible tetraploid region - 000150F:26754-26884
+* ~2500 coverage
 
+000004F:13000-14500 - range of different SNP ratios, but coverage not even
 
+What do these regions look like in the string graph?
 
+000150F may be an associated contig of 000011F?
+* Coverage in IGV seems to support this...
+  * See region 000011F:472000-545821
+* Both contigs are part of the 3K peak; are *all* of the shorter contigs in the 3K peak enrichment
+  just associated contigs of the longer ones, in disguise?
 
+Should each primary contig be investigated in this way...?
+1. Does the contig have a matching block in Plaza?
+2. If yes, compare 'primary only' coverage with the surrounding regions
+3. In Bandage, do any of these contigs branch off from another?
+4. If yes, see step 2
 
+Re: Kat - what is the contaminant data required for?
 
-
-
-
+Kordia paper! - decide on plan of action for publication
+* Double-check findings re: contamination, and perhaps ask Anna + Olga?
 
 
 

@@ -20936,8 +20936,6 @@ Any more strange coverage phenomena suggestive of incorrectly labelled 'primary'
 Attempting to verify the existence of triploid/tetraploid regions
 * Can we find regions with ~average coverage and 2:1/3:1 ratios of bases?
 
-
-
 Possible triploid region - 000150F:81190-82477
 * Only ~1500 coverage and flanked by two near-zero regions...
 Possible tetraploid region - 000150F:26754-26884
@@ -20959,10 +20957,29 @@ Should each primary contig be investigated in this way...?
 3. In Bandage, do any of these contigs branch off from another?
 4. If yes, see step 2
 
+
+# 5 February 2019
+
+Rerun Bowtie2 primary mapping without some of the suspected fake primaries
+
+* `/proj/data26/Skeletonema_marinoi_genome_project/10_genome_size/KAT/kmc/tmp/SecondAttempt/Sm_4K_KmerPeak.full.csv`
+  is complete; plottable?
+
+* Have I used the correct formula for the genome size estimation?
+  * More specifically - have I used the correct peak for a diploid organism?
+
+* Run filtering_trimming of ST54 data vs. R05 ref.	RUNNING
+* Run filtering_trimming of Loviisa marinoi strains vs. R05	RUNNING (space on data17 may be an issue...)
+
+* And rerun kmer analysis
+
+
 Re: Kat - what is the contaminant data required for?
 
 Kordia paper! - decide on plan of action for publication
 * Double-check findings re: contamination, and perhaps ask Anna + Olga?
+
+
 
 
 

@@ -20974,10 +20974,58 @@ Rerun Bowtie2 primary mapping without some of the suspected fake primaries
 * And rerun kmer analysis
 
 
+# 6 February 2019
+
+Bowtie2 rerun without suspected 'fake' primaries
+* Check in IGV
+
+
+## SNPs
+* Find 3x regions where an area of a primary contig has an associated contig
+  of similar length
+* Extract mapping data from these regions (primary + assoc) and identify SNPs
+  between chromosomes (all deep-sequenced strains)
+* Generate a results file as outlined in email
+* Check coverage to ensure region is appropriate!
+* ~10,000 SNPs per region, ~30,000 total
+
+* New plan - obtain SNPs from a collapsed region instead (ensure diploid region...), but tell Marina that this is not necessarily
+  reflective of separate alleles (i.e. the SNPs could come from either allele)
+  * 000000F:1,103,000-1,192,500 (some coverage worries in places; check whether anything BLASTs to 1,124,000-1,126,000 or 1,141,000-1,153,000)
+  * 000001F:516,500-585,000 (some coverage worries in places; check whether anything BLASTs to 525,500-527,500 or 550,000-560,000)
+  * 000002F:89,000-143,000 (check whether anything BLASTs to 113,000-118,000 [peak])
+  * 000005F:260,000-327,500 (check 300,000-305,000)
+  * 000005F:407,000-465,000 (check 418,000-419,500)
+  * 000005F:551,750-621,000 (check 573,000-574,500 + 585,500-591,000)
+  * ...?
+
+`samtools phase`?
+
 Re: Kat - what is the contaminant data required for?
 
 Kordia paper! - decide on plan of action for publication
 * Double-check findings re: contamination, and perhaps ask Anna + Olga?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

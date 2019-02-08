@@ -21022,28 +21022,19 @@ Bowtie2 rerun without suspected 'fake' primaries
 * Mount the relevant disks for Albiorix
   * Ongoing
 * Reply to Kat re: strains
+  * ???
 * Check Kai's email
+  * Meeting on Monday; waiting for Google Sheet
 * Obtain SNP data for Marina
+  * How?
 
+Still working on the decontamination
+* Trying to run mapping_filtering on A2W samples but bowtie failing
+  * Is this an installation problem or a problem with my own setup?
 
 ## Sandbox
-* compute-0-0 - `/state/partition3` exists, but no `state/partition2`
-* compute-0-1 - `/state/partition2` and `3` exist
-* compute-0-2 - as above
-* compute-0-3 - as above
-* compute-0-4 - as above
+All nodes now up-and-running(?)
 
-* compute-0-5 - OK
-* compute-0-6 - 2Tb mounted as `/state/partition1`
-* compute-0-7 - Both disks partitioned but no `/state/partition1`
-* compute-0-8 - `(parted) mktable gpt; Error: Input/output error during read on /dev/sdb`
-  * `Error: /dev/sdb: unrecognised disk label`
-  * `Partition Table: unknown`
-  * Also very slow to respond during `parted` commands
-* compute-0-9 - 2Tb mounted as `/state/partition1`
-* compute-0-10 - OK
-* compute-0-11 - OK
-* compute-0-12 - 2Tb mounted as `/state/partition1`
 
 
 Re: Kat - what is the contaminant data required for?

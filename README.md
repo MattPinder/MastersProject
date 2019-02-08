@@ -21001,6 +21001,51 @@ Bowtie2 rerun without suspected 'fake' primaries
 
 `samtools phase`?
 
+
+# 7 February 2019
+
+* Premature removal of *.sge.p* from `skeletonema_300` seems to have broken the pipeline...
+  * Restart after Albiorix reshuffle
+* `skeletonema_650` may also be broken; restart after Albiorix reshuffle
+  * The pipelines probably broke after accidentally zipping the in-progress files...
+
+* Generation of Kmer CSV files still ongoing, and will be interrupted by the system rebuild
+* Current progress
+  * 3K, 2nd attempt - Up to `000007F,1222679,0`
+  * 4K, 2nd attempt - COMPLETE
+  * 3K, 3rd attempt - Up to `000008F,104619,1`
+  * 4K, 3rd attempt - Up to `000045F,227937,0`
+
+
+# 8 February 2019
+
+* Mount the relevant disks for Albiorix
+  * Ongoing
+* Reply to Kat re: strains
+* Check Kai's email
+* Obtain SNP data for Marina
+
+
+## Sandbox
+* compute-0-0 - `/state/partition3` exists, but no `state/partition2`
+* compute-0-1 - `/state/partition2` and `3` exist
+* compute-0-2 - as above
+* compute-0-3 - as above
+* compute-0-4 - as above
+
+* compute-0-5 - OK
+* compute-0-6 - 2Tb mounted as `/state/partition1`
+* compute-0-7 - Both disks partitioned but no `/state/partition1`
+* compute-0-8 - `(parted) mktable gpt; Error: Input/output error during read on /dev/sdb`
+  * `Error: /dev/sdb: unrecognised disk label`
+  * `Partition Table: unknown`
+  * Also very slow to respond during `parted` commands
+* compute-0-9 - 2Tb mounted as `/state/partition1`
+* compute-0-10 - OK
+* compute-0-11 - OK
+* compute-0-12 - 2Tb mounted as `/state/partition1`
+
+
 Re: Kat - what is the contaminant data required for?
 
 Kordia paper! - decide on plan of action for publication

@@ -21037,18 +21037,48 @@ All nodes now up-and-running(?)
 
 
 
+# 11 February 2019
+
+SNPs and decontamination
+
+## Decontamination
+* _101 is complete
+
+## Meeting
+Compare our results w. microsats (primarily the new set of microsats)
+* Compare to CCMP marinoi - map reads to R05
+
+* tbb library problem with Bowtie2
+
+* Is CCMP assembled? If not, run SOAP, and obtain markers and rerun phylogenetic analyses
+  * Also include ST54 markers
+  * Send new phylogenies to Kai
+* These phylogenies do not seem to contradict the results of the previous phylogenies
+  * The 16S of CCMP1332 does seem removed from the marinoi clade, however...
+
+* Strains where markers conflict with microsats
+  * _102, _106, _110, _127, _140, _144, _148
+  * >50% of markers (4/8) expected to amplify in marinoi
+  * The rerun phylogenies do not contradict these results
+
+Does anything stand out re: fragment sizes/alleles in the marinoi vs. subsalsum microsats?
+* If not, forward the phylogenies to the others
+
+
+## Bowtie2
+`error while loading shared libraries: libtbb.so.2: cannot oen shared object file: No such file or directory`
+* BUT, trying to install the library reveals that it is installed and up-to-date in `/usr/lib64/libtbb.so.2`
+  * `ln -s` to bowtie directory didn't work...
+    * Should it be recompiled?
+
+
+
+
+
 Re: Kat - what is the contaminant data required for?
 
 Kordia paper! - decide on plan of action for publication
 * Double-check findings re: contamination, and perhaps ask Anna + Olga?
-
-
-
-
-
-
-
-
 
 
 

@@ -20981,8 +20981,7 @@ Bowtie2 rerun without suspected 'fake' primaries
 
 
 ## SNPs
-* Find 3x regions where an area of a primary contig has an associated contig
-  of similar length
+* Find 3x regions where an area of a primary contig has an associated contig of similar length
 * Extract mapping data from these regions (primary + assoc) and identify SNPs
   between chromosomes (all deep-sequenced strains)
 * Generate a results file as outlined in email
@@ -21072,6 +21071,30 @@ Does anything stand out re: fragment sizes/alleles in the marinoi vs. subsalsum 
     * Should it be recompiled?
 
 
+# 12 February 2019
+
+## Bowtie2 errors
+No indication in the `make` output as to *why* it shouldn't be working...
+* Installing the program via `conda` seems to have fixed it
+
+## A2W markers vs. microsats
+
+Doesn't appear to be any obvious link between the alleles and the apparent identity
+
+CCMP1332 maps 87.42% to the R05 reference; this strain was taken from the North Atlantic (Long Island Sound)
+in 1956, far removed from our strains geographically
+
+Map reads from the 'subsalsum' Skele bins to confirm that the problem isn't down to contamination?
+* Map the reads to the relevant bin(s) using the mapping_filtering.sh script
+  and retain the mapped (and half-mapped?) reads
+* Then map *these* to R05
+CHECK THESE RESULTS TOMORROW; SO FAR, THE RESULTS SEEM POOR, SUGGESTIVE OF NOT-MARINOI
+
+
+
+## Deep Seq SNPs
+bcftools mpileup still shows vastly different results vs. those visible in IGV. Why?
+* Are the bcftools results reliable enough to use?
 
 
 

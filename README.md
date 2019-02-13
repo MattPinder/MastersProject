@@ -21091,11 +21091,31 @@ Map reads from the 'subsalsum' Skele bins to confirm that the problem isn't down
 CHECK THESE RESULTS TOMORROW; SO FAR, THE RESULTS SEEM POOR, SUGGESTIVE OF NOT-MARINOI
 
 
-
 ## Deep Seq SNPs
 bcftools mpileup still shows vastly different results vs. those visible in IGV. Why?
 * Are the bcftools results reliable enough to use?
 
+
+# 13 February 2019
+
+## A2W markers vs. microsats
+Results of the above decontamination -> R05 mapping pipeline
+* A wide range of mapping % to Skeletonema bins - 19.68% (_142) to 69.50% (_105)
+* However, all decontaminated samples map only 7.X% to R05
+  * With the notable exception of _104 and _105, the two strains belonging to a potential third species
+    (i.e. neither marinoi nor subsalsum)
+
+SOMETHING TO CONSIDER?
+* Where are all of these reads mapping...?
+  * What kind of stats do we get if we map *confirmed* other Skeletonema species to R05?
+    * e.g. `/proj/data26/data/skeletonema/reads/other_species`
+  * What about T. pseudonana?
+
+## Deep Seq SNPs
+How best to extract the results, AND find a region of sufficient coverage
+* Bamboozle, and look for contigs/large regions which aren't mentioned as having funky coverage?
+  * This is flawed; most of the assembly is flagged (_1001 tested)
+* Would it be helpful to have all fake-primary contigs removed from the assembly first...?
 
 
 Re: Kat - what is the contaminant data required for?

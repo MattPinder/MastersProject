@@ -21118,10 +21118,44 @@ How best to extract the results, AND find a region of sufficient coverage
 * Would it be helpful to have all fake-primary contigs removed from the assembly first...?
 
 
+# 14 February 2019
+
+
+## Deep Seq SNPs
+How to find regions of decent coverage?
+* Wrote a depth checker script (merge with Bamboozle) to identify the longest stretch of contig between
+  two defined coverage limits
+  * What are acceptable limits of coverage?
+* Questions:
+  1. Do the regions *have* to be at the ends of contigs? (most are in the middle)
+  2. Confirm - Is it okay to not have allele-specific info?
+  3. Confirm - Is the data to come from the deep-sequenced eutrophication strains?
+  4. Confirm - Number of positions/SNPs? 10,000 SNPs x 3 positions?
+* See email
+
+## A2W
+Any further work to be done, e.g. mapping another Skele/Thala species for comparison?
+* Email the others with the updated phylogenies?
+
+
+## Assembly graph
+
+Continue simplifying + checking relative positions of 'fake' primary contigs?
+
+## Bamboozle
+Merge matt_cleaning onto main branch
+
+CHECK MOUNTING OF NAS ON 4.0 AND TRANSFER THE R05 READS TO KAT
+
+
+
 Re: Kat - what is the contaminant data required for?
 
 Kordia paper! - decide on plan of action for publication
 * Double-check findings re: contamination, and perhaps ask Anna + Olga?
+
+
+
 
 
 

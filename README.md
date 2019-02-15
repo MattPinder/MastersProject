@@ -21148,6 +21148,45 @@ Merge matt_cleaning onto main branch
 CHECK MOUNTING OF NAS ON 4.0 AND TRANSFER THE R05 READS TO KAT
 
 
+# 15 February 2019
+
+## R05 Illumina
+Moving data to Kat's 5.0 repository
+* Inform of new account
+
+## Deep Seq SNPs
+5,000 SNPs would be acceptable, as this is a trial run; this may make it easier to find appropriate regions
+
+## A2W
+
+
+## Assembly Graph
+
+
+## Kordia
+
+Figure out plan for Kordia genome announcement
+* Any other interesting details to add, to make it worth sending to JoG?
+
+
+## Proofreading
+Continue from Discussion
+
+
+Bamboozle merge!
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Re: Kat - what is the contaminant data required for?
 

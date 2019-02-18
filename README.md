@@ -21176,6 +21176,24 @@ Continue from Discussion
 Bamboozle merge!
 
 
+# 18 February 2019
+
+## Bamboozle
+
+1. Merge my branch onto the main branch - done!
+2. Merge with Vilma's Pipeline - done!
+3. Create new branch for Vilma - done!
+
+## Proofreading
+Continue checking eutrophication paper - done!
+
+## Kordia
+Come up with publication plan
+
+
+
+
+
 
 
 

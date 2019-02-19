@@ -21191,12 +21191,45 @@ Continue checking eutrophication paper - done!
 Come up with publication plan
 
 
+# 19 February 2019
+
+## Kordia paper
+Should any note be made of the fact that this may be a lab contaminant?
+* Found in eutrophication strains as well as ST54 - ask Anna/Olga?
+
+Anything else of interest to add to the paper?
+* K. algicida algicidal activity is apparently quorum sensing-dependent, but no auto-inducer pathway
+  components are predicted by Pathway Tools...
+  * antiSMASH?
+  * Does K. algicida show AI pathway in Pathway Tools?
+    * No; so what is responsible for Kordia quorum sensing?
+      * Is this entirely relevant?
+* Comment on unculturability
 
 
+Cyanophycin synthetase + cyanophycinase (cyanophycin is a nitrogen storage compound)
+* Any relevance at all to the nitrogen question in Skeletonema survival?
+
+* [Are all other Kordia eastern hemisphere?]
+  * K. algicida		Korea		Sequenced
+  * K. antarctica	Antarctic	Not sequenced
+  * K. aquimaris	Taiwan		Not sequenced
+  * K. jejudonensis	Korea		Sequenced
+  * K. periserrulae	Korea		Sequenced
+  * K. ulvae		China		Not sequenced
+  * K. zhangzhouensis	China		Sequenced
+  * K. zosterae		Korea		Not sequenced
+
+  * K. sp. NORP58	Atlantic	Sequenced
+
+* [Unique genes vs. other Kordia?]
+`/proj/data26/Skeletonema_marinoi_microbiome_project/05_results/Kordia_PGAP_Comparison`
+
+* [Plasmids?]
+Doesn't appear to be present in any described Kordia species
 
 
-
-
+* Read through proposal for S. subsalsum sequencing
 
 
 

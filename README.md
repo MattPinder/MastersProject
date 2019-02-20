@@ -21229,9 +21229,17 @@ Cyanophycin synthetase + cyanophycinase (cyanophycin is a nitrogen storage compo
 Doesn't appear to be present in any described Kordia species
 
 
+# 20 February 2019
+
 * Read through proposal for S. subsalsum sequencing
 
+Continue trying to align Kordia against SMS9 with Mauve
+* Consider rerunning NORP58; still hasn't finished after 11th iteration
 
+Currently running a convoluted tBLASTn (to avoid segmentation fault errors) in
+`/proj/data26/Skeletonema_marinoi_microbiome_project/05_results/Kordia_PGAP_Comparison`
+* Iterating through the .faa file one sequence at a time with a `while` loop
+* Check for 'No Hits Found' results; this would be the best indication of something unique(?)
 
 
 

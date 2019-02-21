@@ -21242,6 +21242,12 @@ Currently running a convoluted tBLASTn (to avoid segmentation fault errors) in
 * Check for 'No Hits Found' results; this would be the best indication of something unique(?)
 
 
+# 21 February 2019
+
+Rerunning NORP58 in Mauve from the 11th iteration
+* Check the full alignment tomorrow
+
+
 
 
 

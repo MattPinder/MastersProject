@@ -21248,6 +21248,13 @@ Rerunning NORP58 in Mauve from the 11th iteration
 * Check the full alignment tomorrow
 
 
+# 22 February 2019
+
+Phylogenies generated from RefSeq-extracted sequences
+* Would generating them using GenBank sequences make any difference?
+
+
+## Anything further to add to the Kordia paper?
 
 
 

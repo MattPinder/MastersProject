@@ -21257,6 +21257,25 @@ Phylogenies generated from RefSeq-extracted sequences
 ## Anything further to add to the Kordia paper?
 
 
+# 25 February 2019
+
+Double-check lengths of markers used for A2W phylogenies to ensure they were all of a similar length,
+so that this can be disregarded as a factor in the analysis
+
+* 16S - cut down to 1061
+* coxI - cut down to 997
+* cyclo - cut down to 513
+* psbC - cut down to 963
+* rbcL - all at 540
+
+Regenerate trees for the first four markers one more time, to confirm positions
+* Relative positions are all the same
+
+# Eutrophication manuscript
+Calculate average read coverage of all strains (shallow + deep sequenced)
+(Total length of query is 733163; divide all results by this)
+* `/proj/data17/skeletonema_resequencing/07_coverage/AverageCoverage_CorrectReference/Output.txt`
+
 
 
 

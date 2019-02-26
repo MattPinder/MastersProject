@@ -21277,6 +21277,14 @@ Calculate average read coverage of all strains (shallow + deep sequenced)
 * `/proj/data17/skeletonema_resequencing/07_coverage/AverageCoverage_CorrectReference/Output.txt`
 
 
+# 26 February 2019
+
+* Eutrophication coverages figures calculated
+  * `/proj/data17/skeletonema_resequencing/07_coverage/AverageCoverage_CorrectReference`
+* Generate tree figure for Kordia
+
+* Check the Kordia paper in case anything else needs adding
+
 
 
 Re: Kat - what is the contaminant data required for?

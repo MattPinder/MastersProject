@@ -21286,12 +21286,39 @@ Calculate average read coverage of all strains (shallow + deep sequenced)
 * Check the Kordia paper in case anything else needs adding
 
 
+# 27 February 2019
+
+## Kordia paper
+Awaiting Mats' feedback
+
+## Eutro SNPs
+How to proceed?
+* Current test results in `/proj/data17/skeletonema_resequencing/06c_remapping_FullRO5/P4005_1001/160225_AC86M1ANXX`
+  * Either check the regions flagged as long stretches (in which case ensure there are no 'primaries' associated with the region)
+    * Or find long associated contigs of similar lengths to their respective primary regions and align them
+* Attempting to run `GATK HaplotypeCaller` (may encounter problems with parallelisation)
+* According to the eutrophication manuscript, GATK modules `RealignerTargetCreatore` and `IndelRealigner`
+  were run first, but these no longer exist in GATK v4
+
+Note - for HaplotypeCaller, FASTA index and dictionary files are required
+* Testing on P4005_1001; appears to be problems with the BAM file?
+* Try on a BAM file from a different data set, and check whether the same errors occur
+  * Shallow sequenced data gives the same errors
+  * A2W data gives the same errors
+  * R05 data also throwing warnings; contains two of the same errors as the
+    other results...
+
+May have to try an alternative method
+
+Is the data already available from Pierre's analyses...?
+
+## A2W
+Check MMETSP database? (see Anna's email)
+* S. subsalsum is not present in this database (only costatum, marinoi, dohrnii, grethea, japonicum & menzelii)
+  * Therefore we couldn't definitely say from this whether our samples belonged to subsalsum...
+
 
 Re: Kat - what is the contaminant data required for?
-
-Kordia paper! - decide on plan of action for publication
-* Double-check findings re: contamination, and perhaps ask Anna + Olga?
-
 
 
 

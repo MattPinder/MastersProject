@@ -21318,7 +21318,14 @@ Check MMETSP database? (see Anna's email)
   * Therefore we couldn't definitely say from this whether our samples belonged to subsalsum...
 
 
+# 28 February 2019
+
+Check through manuscript from Adrian
+
+
+
 Re: Kat - what is the contaminant data required for?
+
 
 
 

@@ -21323,6 +21323,27 @@ Check MMETSP database? (see Anna's email)
 Check through manuscript from Adrian
 
 
+# 1 March 2019
+
+## SNPs in eutro data
+Try mpileup again and see if any results can be obtained
+* Note - `bcftools mpileup` assumes diploidy
+
+Compare `000343F 415     .       A       .       30.6784 .       DP=96;VDB=0.107455;SGB=-0.693021;RPB=0.656905;MQB=1;MQSB=1;BQB=0.963425;MQ0F=0;AN=2;DP4=34,35,12,15;MQ=1        GT      0/0`
+	`000343F 2854    .       A       .       27.2405 .       DP=155;VDB=0.193008;SGB=-0.693147;RPB=0.986941;MQB=1;MQSB=1;BQB=0.953429;MQ0F=0;AN=2;DP4=53,35,38,23;MQ=1       GT      0/0`
+But not `000343F 2855    .       A       .       7.43011 .       DP=155;VDB=0.126494;SGB=-0.693147;MQSB=1;MQ0F=0;AN=2;DP4=0,0,90,57;MQ=1 GT      0/0`
+
+Although they're bias scores, RPB, MQB and BQB appear in the two positions I'm interested in, and not in the example I'm not
+* Check these to see if this pattern is consistent - doesn't give the result we're looking for
+
+Try the `-v` flag: 'output variant sites only'
+
+Positions to check - 000343F: 415/2854/3074/3076
+
+Check results of the latest iteration (ignoring indels) on Monday
+
+
+
 
 Re: Kat - what is the contaminant data required for?
 

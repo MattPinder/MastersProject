@@ -21343,6 +21343,31 @@ Positions to check - 000343F: 415/2854/3074/3076
 Check results of the latest iteration (ignoring indels) on Monday
 
 
+# 4 March 2019
+
+## SNPs in eutro data
+The results here only show the places where the base differs entirely from the reference...
+Previous attempts to run the script without a reference (using the `--no-reference` flag) were unsuccessful... Retry?
+* Still doesn't produce results
+The 10th field gives details on hetero/homozygosity; can we grep based on this?
+* Still unsure why certain positions as seen in IGV aren't output
+
+Contigs with >5000 heterozygous positions total in P4005_1001:
+* 000003F - 5216
+* 000007F - 6787
+* 000002F - 8253
+* 000005F - 9207
+* 000000F - 11098
+
+Running `bcftools` on all 23 samples to find a contig/region which contains plenty of SNPS
+(preferably with a high/consistent coverage)
+
+Check results tomorrow
+
+## Assembly graph simplification
+## Other microbiome papers?
+
+
 
 
 Re: Kat - what is the contaminant data required for?

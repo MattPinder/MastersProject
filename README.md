@@ -21368,6 +21368,22 @@ Check results tomorrow
 ## Other microbiome papers?
 
 
+# 5 March 2019
+
+Generating files giving number of heterozygous sites reported per sample
+e.g. `grep "0/1" P4005_1017_test_v4.vcf | cut -f1 | sort | uniq -c | sort -h > P4005_1017_hetero_per_contig.txt`
+* Will likely need to adjust for quality; still unsure about issues re: coverage...
+
+* Testing (on 1001+1002) whether a combined approach gives good, easily-interpretable output
+
+Problem(?) still remains that some SNPs visible in IGV aren't reported by
+bcftools; is this a major issue...?
+
+Check all results tomorrow!
+
+
+
+
 
 
 Re: Kat - what is the contaminant data required for?

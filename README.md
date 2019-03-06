@@ -21382,6 +21382,16 @@ bcftools; is this a major issue...?
 Check all results tomorrow!
 
 
+# 6 March 2019
+
+Configure 8Tb drive for Debian1 - done
+
+
+## DeepSeq eutrophication
+Running all-samples BCFtools
+Check results from yesterday
+
+
 
 
 

@@ -21392,6 +21392,28 @@ Running all-samples BCFtools
 Check results from yesterday
 
 
+# 7 March 2019
+
+Check vitamin exchange (non-B12 vitamins) between S. marinoi and microbiome
+* See Cooper et al., 2019
+
+## R05 Kmers
+Apparently the reads sent to Kat before weren't the raw reads; resending what *should* be raw reads:
+`/proj/data26/data/skeletonema/reads/A.Blomberg_17_16-P8511/P8511_101/02-FASTQ/170810_ST-E00214_0172_AH25THCCXY/*.fastq.gz`
+
+## Assembly graph
+Still simplifying...
+
+## DeepSeq eutrophication
+Still running all-samples BCFtools, should be ready on Friday
+
+
+
+
+
+
+
+
 
 
 

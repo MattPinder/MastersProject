@@ -21408,6 +21408,15 @@ Still simplifying...
 Still running all-samples BCFtools, should be ready on Friday
 
 
+# 8 March 2019
+
+## DeepSeq eutrophication
+All results are back, but still very unsure as to *why* there are so many discrepancies between IGV and bcftools outputs...
+
+
+
+
+
 
 
 

@@ -21414,6 +21414,15 @@ Still running all-samples BCFtools, should be ready on Friday
 All results are back, but still very unsure as to *why* there are so many discrepancies between IGV and bcftools outputs...
 
 
+# 11 March 2019
+
+Kordia paper forwarded to co-authors
+
+## DeepSeq eutrophication
+
+Identify diploid/triploid regions in R05; these should be suitable regions to take SNPs from?
+
+
 
 
 

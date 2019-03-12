@@ -21423,6 +21423,17 @@ Kordia paper forwarded to co-authors
 Identify diploid/triploid regions in R05; these should be suitable regions to take SNPs from?
 
 
+# 12 March 2019
+
+Starting to investigate the possible polyploid regions of the genome
+* Tabulate the results for ease of comparison?
+
+All mergeable nodes in the R05 graph appear to have been merged
+* Trim down the CSV file (how to do this simply?), then generate another gfa file with blank nodes
+  removed (shared nodes may have to remain for the sake of connectivity), for further simplification
+
+
+Double-check how to sync files from Albiorix 4.0 to 5.0
 
 
 

@@ -21436,7 +21436,10 @@ All mergeable nodes in the R05 graph appear to have been merged
 Double-check how to sync files from Albiorix 4.0 to 5.0
 
 
+# 13 March 2019
 
+Simplifying assembly graph by removing unlabelled nodes
+* Need to combine new unbranched nodes and generate new CSV file
 
 
 

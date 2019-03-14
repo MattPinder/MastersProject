@@ -21433,19 +21433,25 @@ All mergeable nodes in the R05 graph appear to have been merged
   removed (shared nodes may have to remain for the sake of connectivity), for further simplification
 
 
-Double-check how to sync files from Albiorix 4.0 to 5.0
-
-
 # 13 March 2019
 
 Simplifying assembly graph by removing unlabelled nodes
 * Need to combine new unbranched nodes and generate new CSV file
 
 
+# 14 March 2019
+
+## To troubleshoot
+Annotation-4 may have a hardware issue
+* `bcftools: thread_pool.c:552: tpool_worker: Assertion` j->p == p’ failed.`
+  * But worked on Annotation-3
+* Is this in any way related to the seg. faults when running big BLAST jobs?
+
+## Graph
+Start from 000000F-009-01 > 000000F-014-01
 
 
-
-
+Double-check how to sync files from Albiorix 4.0 to 5.0
 
 
 

@@ -21451,7 +21451,13 @@ Annotation-4 may have a hardware issue
 Start from 000000F-009-01 > 000000F-014-01
 
 
+# 15 March 2019
+
+Completed up to contig 000014F
+
+
 Double-check how to sync files from Albiorix 4.0 to 5.0
+
 
 
 

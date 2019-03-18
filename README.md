@@ -21457,6 +21457,14 @@ Completed up to contig 000014F
 
 
 Double-check how to sync files from Albiorix 4.0 to 5.0
+* Via BACKUP
+
+
+# 18 March 2019
+
+Kordia paper - check outstanding comments + abstract
+
+Improvements to VR application
 
 
 

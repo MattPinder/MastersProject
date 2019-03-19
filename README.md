@@ -21467,8 +21467,20 @@ Kordia paper - check outstanding comments + abstract
 Improvements to VR application
 
 
+# 19 March 2019
 
+Things to do:
+* Continue ploidy work
+  * Get SNP data to Marina asap
+* Look at BLAST problem on nodes
+  * Also look into Vilma's BCFtools problem on Annotation-4
+* Finish and submit Kordia paper
+  * Continue work on other bacterial papers
 
+Started narrowing down the primary contigs to remove from the next remapping
+* `/proj/data26/Skeletonema_marinoi_genome_project/12_remove_redundancy/PrimaryOnly_RemovalTest/README.md`
+
+Regenerated Figure 1 of Kordia paper; ready for submission?
 
 Re: Kat - what is the contaminant data required for?
 

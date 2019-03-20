@@ -21485,6 +21485,28 @@ Regenerated Figure 1 of Kordia paper; ready for submission?
 Re: Kat - what is the contaminant data required for?
 
 
+# 20 March 2019
+
+* Submit Kordia paper
+
+
+* Work on improvements to VR application
+  * Why LoF mutations specifically?
+  * What are the bioinformatic approaches and challenges of the study?
+  * Pilot data...?
+
+* Continue checks on 'primary contigs'
+
+* Install Amber
+
+* Aim to have remaining papers submitted to Genome Announcements asap!
+
+
+
+
+
+
+
 
 
 

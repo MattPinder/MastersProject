@@ -21502,9 +21502,23 @@ Re: Kat - what is the contaminant data required for?
 * Aim to have remaining papers submitted to Genome Announcements asap!
 
 
+# 21 March 2019
 
+## Amber
+Possible problems with installing Amber:
+* Setting the AMBERHOME variable - "[...] be sure that you have write permissions in the directory tree you choose.
+  (In general, you should not install application software, e.g., Amber, as root.)"
 
+* Parallelisation - check specifics here
 
+## VR
+
+Write section on Bamboozle for the application (along with other checks)
+
+## Genome announcements
+* Marinobacter - Journal of Genomics - Figure remade, now work on the text!
+* Sphingorhabdus - Microbiology Resource Announcements (GA) - READY FOR CHECKING
+* Rhodobiaceae - Microbiology Resource Announcements (GA) - Needs ~100 words trimming
 
 
 

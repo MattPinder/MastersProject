@@ -21521,21 +21521,38 @@ Write section on Bamboozle for the application (along with other checks)
 * Rhodobiaceae - Microbiology Resource Announcements (GA) - Needs ~100 words trimming
 
 
+# 22 March 2019
 
+## Sphingorhabdus paper
+Confirm details re: classification of SMR4y and other similar strains
 
+## MrBayes
 
+Testing the 16S sequences of Sphingorhabdus - are M41 and YGSMI21 members of S. flavimaris?
+* Download sequences to test
+* Align sequences (e.g. using Linsi) and save Nexus and Phylip-format files (e.g. using SeaView)
+* Using MrAic - `mraic SMR4y_16S_BLAST_hits.small.linsi.phy`
+* Determine the best model to use based on the output (e.g. GTRI),
+  and copy the MrBayes block from the MrAIC.txt output file
+* Paste the MrBayes block on the bottom of the Nexus file (adjust file if needed, e.g. if there are duplicate sample names)
+* Run MrBayes (optimal - 8 cores)
+  * `mpirun -np 8 mb -i SMR4y_16S_BLAST_hits.small.linsi.nxs`
+* Once run, `sump` to summarise parameters, and `sumt` to summarise trees
 
+## Bamboozle
+Add a function for displaying the mean coverage (currently only median is available)
 
+## Rhodobiaceae
+Rerun PhyloPhlAn analysis so that the 'accessed' data isn't a year in the past on the paper
+* Download outgroup - Roseovarius + Loktanella?
+* Check Candidatus species, may need to DL these individually...
 
+* Files still DLing, run analysis on Monday
+  * Check `screen`
 
+## Marinobacter
 
-
-
-
-
-
-
-
+Check this paper (and ensure new figure is in place)
 
 
 

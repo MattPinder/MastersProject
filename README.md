@@ -21555,9 +21555,36 @@ Rerun PhyloPhlAn analysis so that the 'accessed' data isn't a year in the past o
 Check this paper (and ensure new figure is in place)
 
 
+# 25 March 2019
 
+## Rhodobiaceae
+Candidatus species were DLed as expected
+Outgroup downloaded
+* Requires SciPy? - in Python 2.7 (Anaconda2)
+* Requires muscle? - installed (binary saved to anaconda2 directory
+Complete - one minor alteration added to text re: another Tepidicaulis strain
 
+## Sphingorhabdus
+Waiting on final co-author comments
 
+## Marinobacter
+Full readthrough
+
+A Marinobacter genome was announced in 2018 which mentions auxin - ANT_B65
+
+## Amber
+
+Use `--prefix=/usr/local/ubin/Amber` for config command when installing Amber
+* Global installation for dependencies
+  * Flex installed using rpm
+* openmpi as compiler choice
+
+* Failed tests...
+  * Seems that some Perl problems occurred; install Test::Pod
+    * If the program doesn't work properly later on, try this; may be unnecessary
+
+* Installing MPI version now. Configure did throw a warning but trying `make install`
+  * Installation running in `screen`
 
 
 

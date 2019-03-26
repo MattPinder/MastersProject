@@ -21587,6 +21587,53 @@ Use `--prefix=/usr/local/ubin/Amber` for config command when installing Amber
   * Installation running in `screen`
 
 
+# 26 March 2019
+
+## Amber
+Installing MPI version seems to have worked
+* Running `make test`s now
+
+* Note that when making the module file, the following lines should be included:
+  * `export AMBERHOME=/usr/local/ubin/amber18/`
+  * `source /usr/local/ubin/amber18/amber.sh`
+  * Add AMBERHOME to path?
+  * May also need to load the Anaconda2 module for a more complete version of Python
+    * `--with-python` flag was specified during installation, so shouldn't be necessary?
+
+* 2-core tests worked; trying with 8 cores
+  * If this works, should be ready to go
+  * Two possible failures - check pimd_LGV.out.dif and pimd_ADS.out.dif
+
+* Unsure whether `source` in the module file will work
+
+## Sphingorhabdus
+Manuscript should be ready for submission
+
+## Rhodobiaceae
+Manuscript needs some work; get feedback on it in its current state
+
+## Marinobacter
+As the previous analysis is almost a year old, will rerun the analysis
+just in case it needs updating
+* One slight difference
+
+## Formas application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

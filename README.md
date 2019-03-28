@@ -21629,6 +21629,19 @@ Final checks
 ## VR
 Continue
 
+
+# 28 March 2019
+
+## Marinobacter
+Figure out how to proceed; check antiSMASH
+Note - siderophore no longer predicted in latest version of antiSMASH; chejuenolide A/B?
+
+## VR
+Continue
+
+## Amber
+`source` command may not be working correctly in module file...
+
 ## SNPS!
 
 

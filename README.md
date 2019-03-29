@@ -21642,7 +21642,27 @@ Continue
 ## Amber
 `source` command may not be working correctly in module file...
 
+
+# 29 March 2019
+
+## VR
+Continue
+
+## compute-0-12
+how to run docker on startup?
+
+## PhyloPhlAn
+An alpha build of PhyloPhlAn2 is now available: https://bitbucket.org/nsegata/phylophlan/wiki/phylophlan2
+* Try this out and see how it compares to v0.99
+
+## Amber
+Problem still occurring; sander.MPI seems to hang...
+
 ## SNPS!
+
+
+
+
 
 
 

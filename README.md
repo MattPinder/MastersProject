@@ -21658,10 +21658,25 @@ An alpha build of PhyloPhlAn2 is now available: https://bitbucket.org/nsegata/ph
 ## Amber
 Problem still occurring; sander.MPI seems to hang...
 
+
+
+# 1 April 2019
+
+## Amber
+Try to solve problem
+* Running the test dataset from the tutorial on 20 cores, the job freezes up after 250 steps
+  (should run to 500)
+
+* Test output was as expected when run with `sander` instead of `sander.MPI`; some later steps seem to
+  be running as expected using MPI, so await feedback before trying to adjust the isntallation
+
+## VR
+Continue
+
 ## SNPS!
-
-
-
+Checking which regions of the reference genome have consistent diploid/triploid-level coverage, rather
+than testing the coverage of the deep-sequenced samples
+* Found three candidate regions; check how many SNPs are there
 
 
 

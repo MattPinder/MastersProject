@@ -21679,7 +21679,20 @@ than testing the coverage of the deep-sequenced samples
 * Found three candidate regions; check how many SNPs are there
 
 
+# 2 April 2019
 
+## Amber
+After the first steps hung, the later steps appear to be progressing
+* If the remainder of the job completes, run troubleshooting after completion
+
+## VR
+Continue
+* Citations still need to be renumbered; see new document re: references
+
+## SNPs
+Check number of SNPs in the three candidate regions
+* None look promising; >2,000 SNPs in each (according to the all-samples VCF) but 5,000 required per region
+* Separating the file into per-contig sub-files to ease parsing
 
 
 

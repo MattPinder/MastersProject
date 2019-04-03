@@ -21695,6 +21695,15 @@ Check number of SNPs in the three candidate regions
 * Separating the file into per-contig sub-files to ease parsing
 
 
+# 3 April 2019
+
+## VR
+Cut down
+
+## SNPs
+Widen the window even further...
+* Currently running Bamboozle in `screen`
+
 
 
 

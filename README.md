@@ -21705,7 +21705,39 @@ Widen the window even further...
 * Currently running Bamboozle in `screen`
 
 
+# 6 April 2019
 
+## PhyloPhlAn
+New version available - PhyloPhlAn2
+* Installing trimAl dependency - done
+* Install PhyloPhlAn2 via Conda
+  * Not currently available on Conda...
+  * Currently requires Mercurial to download; wait until PhyloPhlAn2 is out of alpha,
+    then install via Conda?
+    * Last updates were made a few days ago, so still in active development...
+
+## Docker
+
+## Ploidy/coverage
+Running Bowtie2 second round with 10 additional contigs removed
+Meanwhile, check the results of the previous mapping (ensure that the removed contigs were justified)
+
+## System performance
+* System very laggy; e.g. `qstat` occasionally gives the following error:
+`error: failed receiving gdi request response for mid=1 (got syncron message receive timeout error).`
+
+## Home directory
+XZ compress the BGI directory when lag issues have finished
+* Also the `Skeletonema_marinoi_Directories` subdirectories
+
+## Microbiome papers
+Check Marinobacter details and continue work on Rhodobiaceae paper
+
+## Deep Sequenced strains
+Some of the BAM files show high numbers of mismatched bases in chloroplast-mapped reads
+* Data is QCed so most shouldn't be error-related
+* How different are chloroplasts within the same culture?
+* How likely is it that there are bacterial reads present, given the prokaryote origin of the organelle?
 
 
 

@@ -21705,7 +21705,7 @@ Widen the window even further...
 * Currently running Bamboozle in `screen`
 
 
-# 6 April 2019
+# 8 April 2019
 
 ## PhyloPhlAn
 New version available - PhyloPhlAn2
@@ -21739,22 +21739,44 @@ Some of the BAM files show high numbers of mismatched bases in chloroplast-mappe
 * How different are chloroplasts within the same culture?
 * How likely is it that there are bacterial reads present, given the prokaryote origin of the organelle?
 
+# 9 April 2019
 
+Login *very* slow. When login process cancelled:
+`Traceback (most recent call last):`
+`  File "/usr/local/git/albiorix/homeSize.py", line 5, in <module>`
+`    homeSize = subprocess.Popen("du -hs /home/$USER", shell=True, stdout=subprocess.PIPE).stdout.read().split()[0]`
+`KeyboardInterrupt`
 
+## Home directory
+BGI folder compressing...
 
+## Ploidy/coverage
+Check results of previous and new mapping jobs re: contig removal
+* 000287F should be restored; its removal had no effect on the suspected 'true primary'
 
+Is it possible to look at read pairs to assess whether the contigs are correctly placed or not?
+* Unfortunately the method described in https://dx.doi.org/10.1186%2Fgb-2010-11-3-r28
 
+## IGV
+Can this be installed on Albiorix...? Ubuntu machine struggles to display without running out of memory...
 
+Re: funky chloroplasts
+* The colours don't seem to correspond to mismatched bases, but to reads with higher insert size...
+  * Why do these seem to be enriched in certain regions of the chloroplast of e.g. _1009, and is this problematic?
+  * Why would this occur in certain samples and not others...?
+    * Also, why is this pattern enriched in organelles (seems to be present in mitochondrion too) but not in nuclear genome?
+* _1002 and _1009 are problematic, and also have the lowest `Mreads` and `>=Q30` of all deep-sequenced samples
+  (see `/proj/data17/skeletonema_resequencing/data/A.Godhe_16_01/reports/A.Godhe_16_01_sample_info.txt`
+  * _1018 may also be worth investigating (no quality issues)
+  * _1006 and _1007 also stand out a little
 
-
-
-
-
-
-
-
-
-
+* Lower quality reads -> more trimming -> longer inserts ???
+  * _1002 and _1009 do have fewer bases written post-Cutadapt
+    * 97.7% of forward-read bases in these two samples are retained after Cutadapt
+      * 98.2% and above in the other samples
+    * 95.5% and 95.9% of reverse-read bases in these two samples are retained after Cutadapt
+      * 96.0% and above in the other samples
+* Still doesn't explain the enrichment in those specific areas...
 
 
 

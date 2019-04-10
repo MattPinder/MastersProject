@@ -21704,6 +21704,8 @@ Cut down
 Widen the window even further...
 * Currently running Bamboozle in `screen`
 
+# 4/5 April 2019
+*Records lost due to accidental deletion of readme file, and restoration from backup*
 
 # 8 April 2019
 
@@ -21756,6 +21758,7 @@ Check results of previous and new mapping jobs re: contig removal
 
 Is it possible to look at read pairs to assess whether the contigs are correctly placed or not?
 * Unfortunately the method described in https://dx.doi.org/10.1186%2Fgb-2010-11-3-r28
+  wouldn't work for us as it requires a chromosome-level reference
 
 ## IGV
 Can this be installed on Albiorix...? Ubuntu machine struggles to display without running out of memory...
@@ -21778,6 +21781,34 @@ Re: funky chloroplasts
       * 96.0% and above in the other samples
 * Still doesn't explain the enrichment in those specific areas...
 
+
+# 10 April 2019
+
+## Ploidy/Primaries
+
+Can mates mapped to other contigs be used to add justification to the removal of certain 'primaries'?
+* E.g. contig 000302F: many reads whose mates map to 000008F, as expected
+  * These primarily appear at the 3' end and in the middle of the contig
+  * BUT, also many reads in the 5' end which map to other contigs
+    * 000000F, 000004F, 000035F, and several others, inc. assoc. contigs
+    * What is this indicative of?
+* Contig 000303F - many reads paired to 000014F/000014F-002-01, as expected
+* Contig 000287F - it was noted that this contig *shouldn't* be removed, but there are a lot of reads
+  paired to 000000F as I would have expected if it really were a fake primary...
+  * Re-examine 000000F
+
+Can this data be extracted from the BAM file?
+* Try `samtools flagstat`
+  * This just gives a number; trying additional `samtools` commands
+* Can visualise with the 'Group alignments by > Chromosome of mate' option in IGV
+  * This gives a very vivid signal in 000000F at the site of 000222F, at least
+  * Similar signal is seen in 000000F at the site of 000287F; signal is also seen for 000267 at the same place
+
+Ubuntu has 32G RAM - currently IGV is using ~7G?
+* Edited `/usr/bin/igv` to include a 20G maximum
+
+Try pre-generating a coverage file using igvtools?
+Also continue with `/proj/data26/Skeletonema_marinoi_genome_project/12_remove_redundancy/PrimaryOnly_RemovalTest/Results.md`
 
 
 

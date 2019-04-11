@@ -21811,6 +21811,20 @@ Try pre-generating a coverage file using igvtools?
 Also continue with `/proj/data26/Skeletonema_marinoi_genome_project/12_remove_redundancy/PrimaryOnly_RemovalTest/Results.md`
 
 
+# 11 April 2019
+
+# IGVtools
+Program doesn't seem to be working on Ubuntu machine... Issue with Java?
+* Try on Albiorix
+* Same problem; igvtools v2.4.19 seems to work, so downgrading from 2.5.0
+
+Running three jobs on Albiorix, one on Ubuntu
+
+IGV now freezes up rather than crashing; lower memory to 15G
+
+Still having performance issues, but continue interrogating (see BLAST results too; `/proj/data26/Skeletonema_marinoi_genome_project/02_Blast/Ref_v1.1.1_to_Ref_v1.1.1/SelfBlast_HitLengthSorted.tab`)
+
+
 
 
 

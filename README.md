@@ -21822,7 +21822,22 @@ Running three jobs on Albiorix, one on Ubuntu
 
 IGV now freezes up rather than crashing; lower memory to 15G
 
-Still having performance issues, but continue interrogating (see BLAST results too; `/proj/data26/Skeletonema_marinoi_genome_project/02_Blast/Ref_v1.1.1_to_Ref_v1.1.1/SelfBlast_HitLengthSorted.tab`)
+Still having performance issues, but continue interrogating
+(see BLAST results too; `/proj/data26/Skeletonema_marinoi_genome_project/02_Blast/Ref_v1.1.1_to_Ref_v1.1.1/SelfBlast_HitLengthSorted.tab`)
+
+
+# 12 April 2019
+
+Continue checking fake primaries
+* Is there any significance to high numbers of reads from other contigs mapping to a thin section of a longer primary?
+  * E.g. some of the shorter contigs map to 000000F at the very edge of where 000222F is predicted to map
+
+
+
+
+
+
+
 
 
 

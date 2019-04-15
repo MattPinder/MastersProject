@@ -21833,6 +21833,23 @@ Continue checking fake primaries
   * E.g. some of the shorter contigs map to 000000F at the very edge of where 000222F is predicted to map
 
 
+# 15 April 2019
+
+## Install SGA
+Requirements:
+* Google sparse hash library
+* Bamtools library
+* zlib
+* Jemalloc: `/usr/local/packages/jemalloc-5.2.0`
+* (Python) pysam
+* (Python) ruffus
+
+## Genome announcements
+* Confirm ST54 DNA extraction method (for Rhodobiaceae)
+* Confirm details on # of cells and # of bases in reads for Rhodobiaceae
+* Confirm DNA extraction method for Marinobacter
+
+## Docker
 
 
 

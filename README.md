@@ -21852,6 +21852,48 @@ Requirements:
 ## Docker
 
 
+# 16 April 2019
+
+## Docker
+
+Re: dada2; v1.10 now supports PacBio data
+Continue work at `/home/matt/SequenceIt/PacBio_dada2-analysis`
+* Trying to get bash/Python scripts to run...
+* And then try to get dada2 working with PacBio input data (this appears to be in BAM format...?)
+
+## S. marinoi ST54 DNA extraction
+See email
+
+## Other
+
+Check permissions for checkM
+* Relevant files should now be in the DB folder...
+Check loading of HMMER
+* Need to load the module file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

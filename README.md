@@ -21872,12 +21872,41 @@ Check loading of HMMER
 * Need to load the module file
 
 
+# 17 April 2019
+
+## Docker
+
+Note: Can run interactively within a Docker container; use this to explore architecture
+* `docker run -i -t ubuntu:16.04 /bin/bash`
+
+Require newer versions of R, Bioconductor and dada2
+* R - requires the use of a different repository, and installation of a few additional dependencies
+* Bioconductor - download BiocManager in R instead of biocLite
+* dada2 - turned off 'suppressUpdate'
+
+May need to refine this to lock in specific versions, to prevent compatability issues down the line
+
+## dada2
+"PacBio CCS reads up to 3 kilobases are now supported.
+See also PacBioErrfun, the new and recommended error-estimation function for PacBio CCS data"
+
+No real tutorial on how specifically to use CSS reads with dada2...
+* Try and start up the prepared Docker image in interactive mode and play around
+
+* Are the reads free from primers, adapters, etc.?
+
+* `docker run --mount` doesn't seem to work; how to export created files out of the container?
+
+* Is arbitrary read-trimming necessary for the PacBio CCS data?
+
+REBUILD AND RERUN THE dada2testing CONTAINER (-0-9) AND REFINE THE NEW R SCRIPT
 
 
+## ST54
+See email; CTAB?
 
-
-
-
+## Other
+Southpole re: NAS
 
 
 

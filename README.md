@@ -21909,6 +21909,27 @@ See email; CTAB?
 Southpole re: NAS
 
 
+# 18 April 2019
+
+## Kordia paper
+Review, adjust and resubmit
+* Improve quality of Figure 1; perhaps reduce the number of species?
+* Font and line thickness increased
+
+## NAS
+Check power supply
+* Reseating it seems to have done the trick; label photographed just in case
+
+## Docker
+Continue
+
+## CheckM
+
+Database directory on sandbox-5 is in partition1, not partition2 as elsewhere. Is this a problem?
+
+
+
+
 
 
 

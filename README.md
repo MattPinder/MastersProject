@@ -21924,8 +21924,22 @@ Check power supply
 Continue
 
 ## CheckM
-
 Database directory on sandbox-5 is in partition1, not partition2 as elsewhere. Is this a problem?
+
+
+# 23 April 2019
+
+## Docker
+Encountering issues in the rarefication step of the pipeline
+
+When using a full-length file, also having issues with the `learnErrors` step
+* 3kb is length limit for dada2; input file has a >12k sequence
+* Reinstate the truncation step?
+  * But how to guarantee that this won't remove sequence of interest?
+
+error_fwd being rerun with the '3k and under' fastq file, but need to retry as took too long
+
+
 
 
 

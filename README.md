@@ -21940,7 +21940,51 @@ When using a full-length file, also having issues with the `learnErrors` step
 error_fwd being rerun with the '3k and under' fastq file, but need to retry as took too long
 
 
+# 24 April 2019
 
+## Docker
+Rerun the pipeline; try to complete the error_fwd step
+
+Things to fix:
+* Should long sequences be trimmed to 3k to be compatible with dada2 1.10?
+  * If so, how?
+
+* Re: chimeras - this *is* a necessary step in the PacBio CCS pipeline
+  * Check the effects of this step by examining `seqtab.nochim`
+
+* Sequences are being trimmed too short for the `assignTaxonomy` step - need to be at least 50 bp
+  * This seems to occur during the denoising (`dada`) step
+  * Checking result of adding `BAND_SIZE=32` parameter to denoising and learnError steps
+    * This is done in the dada2 PacBio tutorials; default value is 16
+    * Still getting short sequences...
+      * Are short inputs causing a problem? If the program is looking for the overlap of *all* input
+        sequences in a given cluster, are short sequences causing everything else to be truncated?
+
+* Is dada2 correctly reading the quality scores?
+  * Which arguments are accepted in qualityType under 'filter and trim'?
+  * From dada2 manual: ""Auto" (the default) means to attempt to auto-detect the encoding.
+    This may fail for PacBio files with uniformly high quality scores, in which case use "FastqQuality"."
+
+* The main dada2 documentation (which uses Illumina) puts learnErrors before dereplication (as in our current pipeline), but two
+  of the examples linked from the github page (which use PacBio) put dereplication first. Any advantage to reversing this order?
+  * Try it the other way around (see below)
+
+Try the following lines instead, to run dereplication *before* learning errors:
+* derepF <- derepFastq(filtered_fwd[["ps"]])
+  * Or `derepF <- derepFastq(filtered_fwd)` ?
+* error_fwd <- learnErrors(derepF, nbases=1e8, BAND_SIZE=32, errorEstimationFunction=PacBioErrfun, multithread=TRUE)
+* ddF <- dada(derepF, err=error_fwd, BAND_SIZE=32, multithread=TRUE)
+* dada_fwd[["ps"]] <- ddF
+  * Or `dada_fwd <- ddF` ?
+
+THIS MADE NO DIFFERENCE...
+
+Double-check the above syntax; if it works - scale back up to be usable with multiple samples
+
+
+## Genome announcements
+* Marinobacter - any improvements to be made? Co-author input
+* Rhodobiaceae - confirm details re: DNA extraction
 
 
 

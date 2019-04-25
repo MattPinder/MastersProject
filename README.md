@@ -21987,6 +21987,51 @@ Double-check the above syntax; if it works - scale back up to be usable with mul
 * Rhodobiaceae - confirm details re: DNA extraction
 
 
+# 25 April 2019
+
+## Docker
+
+Is the data multiplexed?
+
+16S sequences shouldn't be as long as 3 Kb; try running the pipeline on sequences <= 1700 bp
+* Trimming steps must be incorporated into the actual pipeline,
+  either in the dada2 `truncLength` parameter or in a preprocessing step
+
+Orientation of the 16S sequences isn't consistent! Can the removePrimers step be run purely for the orient command?
+* Or is there a similar command to specifically orient reads?
+
+Read orientation may be the major problem in the current pipeline
+* BUT, doesn't appear to be any primer sequence in the fastq file, so can't easily realign...
+
+RUN a reorientation Python script as part of the Dockerfile...
+* Also add a maxlength and minlength to the trim step in R
+
+USEARCH would work but can't be redistibuted under its license agreement
+* Pythonic solution?
+* DECIPHER package?
+  * How will this work with FASTQ input...?
+  * Pass the results to another program like fastx_toolkit?
+
+Using OrientNucleotides reverses the sequence but not the quality scores...
+* Review readDNAStringSet/writeDNAStringSet?
+
+Most sequences are around ~1,545 bp; second peak at ~3,073 bp; how should this be treated?
+
+
+# 26 April 2019
+
+Conference
+
+## Docker
+
+The problem with truncated sequences after denoising seems to arise from sequences being in random orientations.
+Primers are missing so I can't orient based on those, and the ends of sequences aren't consistent.
+(They're also a variety of different lengths, so length thresholds will have to be adjusted accordingly)
+Currently, DECIPHER's `OrientNucleotides` function seems like a promising bet, but it can only reorient the sequence,
+ not the quality scores
+Any other, more effective ways of manipulating fastq files in this instance?
+
+
 
 
 

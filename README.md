@@ -22032,6 +22032,12 @@ Currently, DECIPHER's `OrientNucleotides` function seems like a promising bet, b
 Any other, more effective ways of manipulating fastq files in this instance?
 
 
+Using BioPython and R's DECIPHER, I've managed to get a (slightly clumsy) working solution
+* Need to install BioPython in the Docker image
+
+* *Next build of the Docker image should contain pip, and THIS should be used to install BioPython*
+
+
 
 
 

@@ -22038,6 +22038,37 @@ Using BioPython and R's DECIPHER, I've managed to get a (slightly clumsy) workin
 * *Next build of the Docker image should contain pip, and THIS should be used to install BioPython*
 
 
+# 29 April - 1 May 2019
+
+OUT OF OFFICE
+
+
+# 2 May 2019
+
+## Sphingorhabdus
+Check review comments
+* Check re: classification (physical characteristics)
+* Check re: microbiome vs. randomly co-cultured
+
+SHOULD WE RECLASSIFY AS S. SP.? IF SO, CONTACT NCBI
+SHOULD WE DEFEND ASSERTION THAT S. BELONGS TO THE MICROBIOME?
+* Calculate Fst values between Oresund/Mariager/Loviisa populations?
+* Some other metric that would serve to prove this?
+
+## dada2
+Check re: possible ideas
+
+## Kmers
+Read through email thread
+* Check coverages of 3K/4K contigs
+  * `/proj/data26/Skeletonema_marinoi_genome_project/10_genome_size/KAT/kmc/CheckingCoverage.md`
+
+# BLASTViewer
+Fix me
+
+
+
+
 
 
 

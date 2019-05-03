@@ -22063,8 +22063,26 @@ Read through email thread
 * Check coverages of 3K/4K contigs
   * `/proj/data26/Skeletonema_marinoi_genome_project/10_genome_size/KAT/kmc/CheckingCoverage.md`
 
-# BLASTViewer
+## BLASTViewer
 Fix me
+
+
+# 3 May 2019
+
+## Sphingorhabdus
+Find a metric to prove that the Loviisa and Mariager strains aren't contaminants
+* Map the reads to the reference first
+  * Already done for eutrophication - `/proj/data17/skeletonema_resequencing/11_ContaminantCheck/Sphingorhabdus_flavimaris_SMR4y`
+  * Running for Loviisa (keep an eye on disk space...)
+* All mappings complete; also ran same BCFtools script as was run on the eutrophication strains
+
+
+## Microbiome
+Check manuscript - Done
+
+## Kmers
+
+## dada2
 
 
 
